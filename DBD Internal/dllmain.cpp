@@ -343,8 +343,6 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 		}
 	}
 
-	if (AcknowledgedPawn && AcknowledgedPawn->CurrentWeapon)
-	{
 		if (jew::settings.bSkid)
 		{
 			float radius = jew::settings.fAimFOV;
@@ -364,7 +362,6 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 				ZeroGUI::Draw_Line(point1, point2, 1.6f, FLinearColor(0.5f, 0.0f, 0.5f, 1.0f));
 			}
 		}
-	}
 
 		if (jew::settings.bNoSpread)
 		{
