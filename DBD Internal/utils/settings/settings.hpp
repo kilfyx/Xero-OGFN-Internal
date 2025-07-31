@@ -7,17 +7,17 @@ namespace jew
 	public:
 
 		bool bBox = false;
-		bool bSkeleton = true;
-		bool bPenisaim = true;
+		bool bSkeleton = false;
+		bool bPenisaim = false;
 		bool bDemoSpeed = false;
-		bool bDistance = true;
-		bool bPlayerName = true;
-		bool bTracers = true;
-		bool bWaterMark = true;
+		bool bDistance = false;
+		bool bPlayerName = false;
+		bool bTracers = false;
+		bool bWaterMark = false;
 		bool bGun = false;
 		bool bTeam = false;
 		bool bShowMenu = false;
-		bool bSkid = true;
+		bool bSkid = false;
 		bool bDebug = false;
 		bool bBulletTeleport = false;
 		bool bNoEquipAnimation = false;
@@ -26,16 +26,16 @@ namespace jew
 		bool bReloadWhileAiming = false;
 		bool bAutoWeapons = false;
 		int iMaxDistance = 280;
-		bool bSkipKnocked = true;
+		bool bSkipKnocked = false;
 		bool bEditEnemyBuilds = false;
 		bool bNoRecoil = false;
 		bool bSAIM = false;
 		bool bNoReload = false;
 		bool bOnbro = false;
 		bool bFa = false;
-		bool bStorm = false;
-		bool bAimbot = true;
-		bool bPrediction = true;
+		bool bStorm = true;
+		bool bAimbot = false;
+		bool bPrediction = false;
 		bool bNoSpread = false;
 		int iAimbotKey = VK_SHIFT;
 

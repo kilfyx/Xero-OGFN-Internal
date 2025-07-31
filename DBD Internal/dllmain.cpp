@@ -184,7 +184,7 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 			if (gender == Male)    genderStr = "Male";
 			else if (gender == Female)  genderStr = "Female";
 			else if (gender == Both)    genderStr = "Trans/Bi";
-			else if (gender == Invalid) genderStr = "???";
+			else if (gender == Invalid) genderStr = "Unknown";
 
 			Canvas->K2_DrawText(
 				UE->DrawingFont,
