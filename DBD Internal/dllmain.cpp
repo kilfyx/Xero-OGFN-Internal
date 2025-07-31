@@ -45,9 +45,11 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 	if (!PlayerController) return;
 	UE->PlayerController = PlayerController;
 
+
 	if (PlayerController->WasInputKeyJustPressed(UE->Insert))
 	{
 		jew::settings.bShowMenu = !jew::settings.bShowMenu;
+
 	}
 
 	jew::menu.DrawMenu(Canvas, jew::settings.bShowMenu);
@@ -67,6 +69,7 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 
 	SDK::TArray<SDK::AActor*> Players;
 
+
 	if (jew::settings.bStorm)
 	{
 		if (UE->PlayerController && UE->World)
@@ -84,318 +87,264 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 	}
 
 
-		if (jew::settings.bWaterMark)
+	UE->GameplayStatics->GetAllActorsOfClass(UE->World, AFortPlayerPawn::StaticClass(), &Players);
+
+	ClosestPlayer = nullptr;
+	ClosestDistanceToCenter = FLT_MAX;
+
+	for (int i = 0; i < Players.Num(); i++)
+	{
+		if (!Players.IsValidIndex(i)) continue;
+		auto Player = (SDK::AFortPlayerPawn*)Players[i];
+		if (!Player) continue;
+
+		auto Mesh = Player->Mesh; if (!Mesh) continue;
+		auto PlayerState = reinterpret_cast<SDK::AFortPlayerPawn*>(Player->PlayerState); if (!PlayerState) continue;
+		auto RootComponent = Player->RootComponent; if (!RootComponent) continue;
+
+		if (Player == AcknowledgedPawn)
+			continue;
+
+		bool IsVisible = Player->WasRecentlyRendered(0.f);
+
+		auto HeadBone = Mesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(L"head"));
+
+		auto RootBone = Mesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(L"root"));
+
+		auto vHeadScreen = Utils::Project(FVector(HeadBone.X, HeadBone.Y, HeadBone.Z + 15), Canvas);
+
+		auto vRootScreen = Utils::Project(RootBone, Canvas);
+
+		float BoxHeight = (float)(vRootScreen.Y - vHeadScreen.Y);
+		float BoxWidth = BoxHeight * 0.40f;
+
+		float BottomLeftX = (float)vHeadScreen.X - BoxWidth / 2;
+		float BottomLeftY = (float)vRootScreen.Y;
+
+		float BottomRightX = (float)vHeadScreen.X + BoxWidth / 2;
+		float BottomRightY = (float)vRootScreen.Y;
+
+		float TopRightX = (float)vHeadScreen.X + BoxWidth / 2;
+		float TopRightY = (float)vHeadScreen.Y;
+
+		float TopLeftX = (float)vHeadScreen.X - BoxWidth / 2;
+		float TopLeftY = (float)vHeadScreen.Y;
+
+		FLinearColor iColor = IsVisible ? FLinearColor(1.0f, 1.0f, 1.0f, 1.0f) : FLinearColor(0.5f, 0.0f, 0.5f, 1.0f);
+
+		if (jew::settings.bPlayerName)
 		{
-			FString Line1 = L"Goochhair";
+			auto PlayerName = Player->PlayerState->GetPlayerName();
 
-			char fpsText[64];
-			static int FrameCount = 0;
-			static float FPS = 0.0f;
+			Canvas->K2_DrawText(UE->DrawingFont, PlayerName, FVector2D(vHeadScreen.X, vHeadScreen.Y - 15), FVector2D(1.0, 1.0), FLinearColor(1.0f, 1.0f, 1.0f, 1.0f), 0, FLinearColor(0.0f, 0.f, 0.f, 0.f), FVector2D(0, 0), true, false, true, FLinearColor(0.0f, 0.0f, 0.0f, 1.0f));
+		}
 
-			float CurrentTime = UKismetSystemLibrary::GetGameTimeInSeconds(UE->World);
-			FrameCount++;
 
-			sprintf_s(fpsText, " ", FPS);
-			FString Line2(fpsText);
+		if (jew::settings.bDistance)
+		{
+			float Distance = Utils::Vector_Distance(Player->K2_GetActorLocation(), CameraLocation) * 0.01;
 
-			float BoxX = 15.0f;
-			float BoxY = 60.0f;
-			float PaddingX = 10.0f;
-			float PaddingY = 8.0f;
-			float LineHeight = 15.0f;
-			float BoxWidth = 180.0f;
-			float BoxHeight = 2 * LineHeight + 2 * PaddingY + 5.0f;
+			auto DistanceText = UE->KismetStringLibrary->BuildString_Float(L"", L"", UE->KismetMathLibrary->Round(Distance), L"m");
+
+			Canvas->K2_DrawText(UE->DrawingFont, DistanceText, FVector2D(vRootScreen.X, vRootScreen.Y + 10), FVector2D(1.0, 1.0), FLinearColor(1.0f, 1.0f, 1.0f, 1.0f), 0, FLinearColor(0.0f, 0.f, 0.f, 0.f), FVector2D(0, 0), true, false, true, FLinearColor(0.0f, 0.0f, 0.0f, 1.0f));
+		}
+
+		if (jew::settings.bGun)
+		{
+			FString WeaponName = _(L"No Item");
+			SDK::FLinearColor RenderColor = SDK::FLinearColor(1.0f, 1.0f, 1.0f, 1.0f);
+
+			if (Player->CurrentWeapon)
+			{
+				auto DisplayName = Player->CurrentWeapon->WeaponData->DisplayName;
+				auto Tier = Player->CurrentWeapon->WeaponData->Tier;
+				RenderColor = Utils::GetColorByTier(Tier);
+				WeaponName = UKismetTextLibrary::Conv_TextToString(DisplayName);
+			}
+
+			Canvas->K2_DrawText(UE->DrawingFont, WeaponName, FVector2D(vRootScreen.X, vRootScreen.Y + 25), FVector2D(1.0, 1.0), RenderColor, 0, FLinearColor(0.0f, 0.f, 0.f, 0.f), FVector2D(0, 0), true, false, true, FLinearColor(0.0f, 0.0f, 0.0f, 1.0f));
+		}
+
+		if (jew::settings.bOnbro)
+		{
+
+			enum EFortCustomGender : uint8_t {
+				Invalid = 0,
+				Male = 1,
+				Female = 2,
+				Both = 3
+			};
+
+			auto PlayerState = Player->PlayerState;
+			if (!PlayerState) return;
+
+			uint8_t gender = *(uint8_t*)((uintptr_t)PlayerState + 0x5D8);
+
+			const char* genderStr = "???";
+			if (gender == Male)    genderStr = "Male";
+			else if (gender == Female)  genderStr = "Female";
+			else if (gender == Both)    genderStr = "Trans/Bi";
+			else if (gender == Invalid) genderStr = "???";
 
 			Canvas->K2_DrawText(
 				UE->DrawingFont,
-				Line1,
-				FVector2D(BoxX + PaddingX, BoxY + PaddingY),
-				FVector2D(1.f, 1.f),
-				FLinearColor(1.f, 1.f, 1.f, 1.f),
-				1.0f,
-				FLinearColor(0, 0, 0, 1),
-				FVector2D(0, 0),
-				false,
-				false,
-				true,
-				FLinearColor(0, 0, 0, 1)
-			);
-
-			Canvas->K2_DrawText(
-				UE->DrawingFont,
-				Line2,
-				FVector2D(BoxX + PaddingX, BoxY + PaddingY + LineHeight + 5.0f),
-				FVector2D(1.f, 1.f),
-				FLinearColor(1.f, 1.f, 1.f, 1.f),
-				1.0f,
-				FLinearColor(0, 0, 0, 1),
-				FVector2D(0, 0),
-				false,
-				false,
-				true,
-				FLinearColor(0, 0, 0, 1)
+				FString(genderStr),
+				FVector2D(vHeadScreen.X, vHeadScreen.Y + 25),
+				FVector2D(1.0f, 1.0f),
+				FLinearColor(1.0f, 1.0f, 1.0f, 1.0f),
+				0.0f,
+				FLinearColor(0.0f, 0.0f, 0.0f, 1.0f),
+				FVector2D(0.0f, 0.0f),
+				true, false, true,
+				FLinearColor(0.0f, 0.0f, 0.0f, 1.0f)
 			);
 		}
 
-		int VisibleEnemyCount = 0;
 
-
-		UE->GameplayStatics->GetAllActorsOfClass(UE->World, AFortPlayerPawn::StaticClass(), &Players);
-
-		ClosestPlayer = nullptr;
-		ClosestDistanceToCenter = FLT_MAX;
-
-		for (int i = 0; i < Players.Num(); i++)
+		if (jew::settings.bSkeleton)
 		{
-			if (!Players.IsValidIndex(i)) continue;
-			auto Player = (SDK::AFortPlayerPawn*)Players[i];
-			if (!Player) continue;
-
-			auto Mesh = Player->Mesh; if (!Mesh) continue;
-			auto PlayerState = reinterpret_cast<SDK::AFortPlayerPawn*>(Player->PlayerState); if (!PlayerState) continue;
-			auto RootComponent = Player->RootComponent; if (!RootComponent) continue;
-
-			if (Player == AcknowledgedPawn)
-				continue;
-
-			bool IsVisible = Player->WasRecentlyRendered(0.f);
-
-			auto HeadBone = Mesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(L"head"));
-
-			auto RootBone = Mesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(L"root"));
-
-			auto vHeadScreen = Utils::Project(FVector(HeadBone.X, HeadBone.Y, HeadBone.Z + 15), Canvas);
-
-			auto vRootScreen = Utils::Project(RootBone, Canvas);
-
-			float BoxHeight = (float)(vRootScreen.Y - vHeadScreen.Y);
-			float BoxWidth = BoxHeight * 0.40f;
-
-			float BottomLeftX = (float)vHeadScreen.X - BoxWidth / 2;
-			float BottomLeftY = (float)vRootScreen.Y;
-
-			float BottomRightX = (float)vHeadScreen.X + BoxWidth / 2;
-			float BottomRightY = (float)vRootScreen.Y;
-
-			float TopRightX = (float)vHeadScreen.X + BoxWidth / 2;
-			float TopRightY = (float)vHeadScreen.Y;
-
-			float TopLeftX = (float)vHeadScreen.X - BoxWidth / 2;
-			float TopLeftY = (float)vHeadScreen.Y;
-
-			FLinearColor iColor = IsVisible ? FLinearColor(1.0f, 1.0f, 1.0f, 1.0f) : FLinearColor(0.5f, 0.0f, 0.5f, 1.0f);
-
-			if (jew::settings.bPlayerName)
+			const std::pair<const wchar_t*, const wchar_t*> BonePairs[] =
 			{
-				auto PlayerName = Player->PlayerState->GetPlayerName();
+				{L"head", L"neck_01"},
+				{L"neck_01", L"upperarm_r"},
+				{L"neck_01", L"upperarm_l"},
+				{L"upperarm_l", L"lowerarm_l"},
+				{L"lowerarm_l", L"hand_l"},
+				{L"upperarm_r", L"lowerarm_r"},
+				{L"lowerarm_r", L"hand_r"},
+				{L"neck_01", L"pelvis"},
+				{L"pelvis", L"thigh_r"},
+				{L"pelvis", L"thigh_l"},
+				{L"thigh_r", L"calf_r"},
+				{L"calf_r", L"ik_foot_r"},
+				{L"thigh_l", L"calf_l"},
+				{L"calf_l", L"ik_foot_l"}
+			};
 
-				Canvas->K2_DrawText(UE->DrawingFont, PlayerName, FVector2D(vHeadScreen.X, vHeadScreen.Y - 15), FVector2D(1.0, 1.0), FLinearColor(1.0f, 1.0f, 1.0f, 1.0f), 0, FLinearColor(0.0f, 0.f, 0.f, 0.f), FVector2D(0, 0), true, false, true, FLinearColor(0.0f, 0.0f, 0.0f, 1.0f));
+			const size_t Count = sizeof(BonePairs) / sizeof(BonePairs[0]);
+
+			for (size_t i = 0; i < Count; ++i)
+			{
+				FVector2D FirstBone2D = Utils::Project(Mesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(BonePairs[i].first)), Canvas);
+				FVector2D SecondBone2D = Utils::Project(Mesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(BonePairs[i].second)), Canvas);
+
+				ZeroGUI::Draw_Line(FirstBone2D, SecondBone2D, 1.3f, iColor);
 			}
+		}
 
+		if (jew::settings.bTracers)
+		{
+			ZeroGUI::Draw_Line(UE->ScreenCenter, vRootScreen, 1.7f, iColor);
+		}
 
-			if (jew::settings.bDistance)
+		if (jew::settings.bBox)
+		{
+			if (IsVisible)
 			{
-				float Distance = Utils::Vector_Distance(Player->K2_GetActorLocation(), CameraLocation) * 0.01;
-
-				auto DistanceText = UE->KismetStringLibrary->BuildString_Float(L"", L"", UE->KismetMathLibrary->Round(Distance), L"m");
-
-				Canvas->K2_DrawText(UE->DrawingFont, DistanceText, FVector2D(vRootScreen.X, vRootScreen.Y + 10), FVector2D(1.0, 1.0), FLinearColor(1.0f, 1.0f, 1.0f, 1.0f), 0, FLinearColor(0.0f, 0.f, 0.f, 0.f), FVector2D(0, 0), true, false, true, FLinearColor(0.0f, 0.0f, 0.0f, 1.0f));
+				ZeroGUI::Draw_Line(FVector2D(BottomLeftX, BottomLeftY), FVector2D(BottomRightX, BottomRightY), 2.f, iColor);
+				ZeroGUI::Draw_Line(FVector2D(BottomRightX, BottomRightY), FVector2D(TopRightX, TopRightY), 2.f, iColor);
+				ZeroGUI::Draw_Line(FVector2D(TopRightX, TopRightY), FVector2D(TopLeftX, TopLeftY), 2.f, iColor);
+				ZeroGUI::Draw_Line(FVector2D(TopLeftX, TopLeftY), FVector2D(BottomLeftX, BottomLeftY), 2.f, iColor);
 			}
-
-			if (jew::settings.bGun)
+			else
 			{
-				FString WeaponName = _(L"No Item");
-				SDK::FLinearColor RenderColor = SDK::FLinearColor(1.0f, 1.0f, 1.0f, 1.0f);
-
-				if (Player->CurrentWeapon)
-				{
-					auto DisplayName = Player->CurrentWeapon->WeaponData->DisplayName;
-					auto Tier = Player->CurrentWeapon->WeaponData->Tier;
-					RenderColor = Utils::GetColorByTier(Tier);
-					WeaponName = UKismetTextLibrary::Conv_TextToString(DisplayName);
-				}
-
-				Canvas->K2_DrawText(UE->DrawingFont, WeaponName, FVector2D(vRootScreen.X, vRootScreen.Y + 25), FVector2D(1.0, 1.0), RenderColor, 0, FLinearColor(0.0f, 0.f, 0.f, 0.f), FVector2D(0, 0), true, false, true, FLinearColor(0.0f, 0.0f, 0.0f, 1.0f));
+				ZeroGUI::Draw_Line(FVector2D(BottomLeftX, BottomLeftY), FVector2D(BottomRightX, BottomRightY), 2.f, FLinearColorPalette::Purple);
+				ZeroGUI::Draw_Line(FVector2D(BottomRightX, BottomRightY), FVector2D(TopRightX, TopRightY), 2.f, FLinearColorPalette::Purple);
+				ZeroGUI::Draw_Line(FVector2D(TopRightX, TopRightY), FVector2D(TopLeftX, TopLeftY), 2.f, FLinearColorPalette::Purple);
+				ZeroGUI::Draw_Line(FVector2D(TopLeftX, TopLeftY), FVector2D(BottomLeftX, BottomLeftY), 2.f, FLinearColorPalette::Purple);
 			}
+		}
 
-			if (jew::settings.bOnbro)
+		if (jew::settings.bSAIM)
+		{
+			UTexture2D* DefaultTexture = Canvas->DefaultTexture;
+
+			float BoxX = TopLeftX;
+			float BoxY = TopLeftY;
+			float BoxWidth = BottomRightX - TopLeftX;
+			float BoxHeight = BottomRightY - TopLeftY;
+
+			FLinearColor FillColor = IsVisible ? FLinearColor(1.0f, 1.0f, 1.0f, 0.3f) : FLinearColor(0.5f, 0.0f, 0.5f, 0.3f);
+
+			for (float y = 0.0f; y < BoxHeight; y++)
 			{
-
-				enum EFortCustomGender : uint8_t {
-					Invalid = 0,
-					Male = 1,
-					Female = 2,
-					Both = 3
-				};
-
-				auto PlayerState = Player->PlayerState;
-				if (!PlayerState) return;
-
-				uint8_t gender = *(uint8_t*)((uintptr_t)PlayerState + 0x5D8);
-
-				const char* genderStr = "???";
-				if (gender == Male)    genderStr = "Male";
-				else if (gender == Female)  genderStr = "Female";
-				else if (gender == Both)    genderStr = "Trans/Bi";
-				else if (gender == Invalid) genderStr = "???";
-
-				Canvas->K2_DrawText(
-					UE->DrawingFont,
-					FString(genderStr),
-					FVector2D(vHeadScreen.X, vHeadScreen.Y + 25),
+				Canvas->K2_DrawTexture(
+					DefaultTexture,
+					FVector2D(BoxX, BoxY + y),
+					FVector2D(BoxWidth, 1.0f),
+					FVector2D(),
 					FVector2D(1.0f, 1.0f),
-					FLinearColor(1.0f, 1.0f, 1.0f, 1.0f),
+					FillColor,
+					EBlendMode::BLEND_Translucent,
 					0.0f,
-					FLinearColor(0.0f, 0.0f, 0.0f, 1.0f),
-					FVector2D(0.0f, 0.0f),
-					true, false, true,
-					FLinearColor(0.0f, 0.0f, 0.0f, 1.0f)
+					FVector2D()
 				);
 			}
+		}
 
-
-			if (jew::settings.bSkeleton)
+		if (jew::settings.bFa)
+		{
+			if (Player != AcknowledgedPawn)
 			{
-				const std::pair<const wchar_t*, const wchar_t*> BonePairs[] =
-				{
-					{L"head", L"neck_01"},
-					{L"neck_01", L"upperarm_r"},
-					{L"neck_01", L"upperarm_l"},
-					{L"upperarm_l", L"lowerarm_l"},
-					{L"lowerarm_l", L"hand_l"},
-					{L"upperarm_r", L"lowerarm_r"},
-					{L"lowerarm_r", L"hand_r"},
-					{L"neck_01", L"pelvis"},
-					{L"pelvis", L"thigh_r"},
-					{L"pelvis", L"thigh_l"},
-					{L"thigh_r", L"calf_r"},
-					{L"calf_r", L"ik_foot_r"},
-					{L"thigh_l", L"calf_l"},
-					{L"calf_l", L"ik_foot_l"}
-				};
+				FVector2D center = UE->ScreenCenter;
 
-				const size_t Count = sizeof(BonePairs) / sizeof(BonePairs[0]);
+				float dx = vHeadScreen.X - center.X;
+				float dy = vHeadScreen.Y - center.Y;
 
-				for (size_t i = 0; i < Count; ++i)
-				{
-					FVector2D FirstBone2D = Utils::Project(Mesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(BonePairs[i].first)), Canvas);
-					FVector2D SecondBone2D = Utils::Project(Mesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(BonePairs[i].second)), Canvas);
+				float angle = std::atan2(dy, dx);
+				float arrowDistance = jew::settings.fAimFOV + 20.0f;
+				float arrowSize = 10.0f;
 
-					ZeroGUI::Draw_Line(FirstBone2D, SecondBone2D, 1.3f, iColor);
-				}
-			}
+				FVector2D ArrowPosition = FVector2D(
+					center.X + std::cos(angle) * arrowDistance,
+					center.Y + std::sin(angle) * arrowDistance
+				);
 
-			if (jew::settings.bTracers)
-			{
-				ZeroGUI::Draw_Line(UE->ScreenCenter, vRootScreen, 1.7f, iColor);
-			}
+				FVector2D tip = FVector2D(
+					ArrowPosition.X + std::cos(angle) * arrowSize,
+					ArrowPosition.Y + std::sin(angle) * arrowSize
+				);
 
-			if (jew::settings.bBox)
-			{
-				if (IsVisible)
-				{
-					ZeroGUI::Draw_Line(FVector2D(BottomLeftX, BottomLeftY), FVector2D(BottomRightX, BottomRightY), 2.f, iColor);
-					ZeroGUI::Draw_Line(FVector2D(BottomRightX, BottomRightY), FVector2D(TopRightX, TopRightY), 2.f, iColor);
-					ZeroGUI::Draw_Line(FVector2D(TopRightX, TopRightY), FVector2D(TopLeftX, TopLeftY), 2.f, iColor);
-					ZeroGUI::Draw_Line(FVector2D(TopLeftX, TopLeftY), FVector2D(BottomLeftX, BottomLeftY), 2.f, iColor);
-				}
-				else
-				{
-					ZeroGUI::Draw_Line(FVector2D(BottomLeftX, BottomLeftY), FVector2D(BottomRightX, BottomRightY), 2.f, FLinearColorPalette::Purple);
-					ZeroGUI::Draw_Line(FVector2D(BottomRightX, BottomRightY), FVector2D(TopRightX, TopRightY), 2.f, FLinearColorPalette::Purple);
-					ZeroGUI::Draw_Line(FVector2D(TopRightX, TopRightY), FVector2D(TopLeftX, TopLeftY), 2.f, FLinearColorPalette::Purple);
-					ZeroGUI::Draw_Line(FVector2D(TopLeftX, TopLeftY), FVector2D(BottomLeftX, BottomLeftY), 2.f, FLinearColorPalette::Purple);
-				}
-			}
+				FVector2D left = FVector2D(
+					ArrowPosition.X + std::cos(angle - 2.5f) * arrowSize * 0.8f,
+					ArrowPosition.Y + std::sin(angle - 2.5f) * arrowSize * 0.8f
+				);
 
-			if (jew::settings.bSAIM)
-			{
-				UTexture2D* DefaultTexture = Canvas->DefaultTexture;
+				FVector2D right = FVector2D(
+					ArrowPosition.X + std::cos(angle + 2.5f) * arrowSize * 0.8f,
+					ArrowPosition.Y + std::sin(angle + 2.5f) * arrowSize * 0.8f
+				);
 
-				float BoxX = TopLeftX;
-				float BoxY = TopLeftY;
-				float BoxWidth = BottomRightX - TopLeftX;
-				float BoxHeight = BottomRightY - TopLeftY;
+				FLinearColor ArrowColor = IsVisible
+					? FLinearColor(1, 1, 1, 1)
+					: FLinearColor(0.5f, 0.f, 0.5f, 1);
 
-				FLinearColor FillColor = IsVisible ? FLinearColor(1.0f, 1.0f, 1.0f, 0.3f) : FLinearColor(0.5f, 0.0f, 0.5f, 0.3f);
-
-				for (float y = 0.0f; y < BoxHeight; y++)
-				{
-					Canvas->K2_DrawTexture(
-						DefaultTexture,
-						FVector2D(BoxX, BoxY + y),
-						FVector2D(BoxWidth, 1.0f),
-						FVector2D(),
-						FVector2D(1.0f, 1.0f),
-						FillColor,
-						EBlendMode::BLEND_Translucent,
-						0.0f,
-						FVector2D()
-					);
-				}
-			}
-
-			if (jew::settings.bFa)
-			{
-				if (Player != AcknowledgedPawn)
-				{
-					FVector2D center = UE->ScreenCenter;
-
-					float dx = vHeadScreen.X - center.X;
-					float dy = vHeadScreen.Y - center.Y;
-
-					float angle = std::atan2(dy, dx);
-					float arrowDistance = jew::settings.fAimFOV + 20.0f;
-					float arrowSize = 10.0f;
-
-					FVector2D ArrowPosition = FVector2D(
-						center.X + std::cos(angle) * arrowDistance,
-						center.Y + std::sin(angle) * arrowDistance
-					);
-
-					FVector2D tip = FVector2D(
-						ArrowPosition.X + std::cos(angle) * arrowSize,
-						ArrowPosition.Y + std::sin(angle) * arrowSize
-					);
-
-					FVector2D left = FVector2D(
-						ArrowPosition.X + std::cos(angle - 2.5f) * arrowSize * 0.8f,
-						ArrowPosition.Y + std::sin(angle - 2.5f) * arrowSize * 0.8f
-					);
-
-					FVector2D right = FVector2D(
-						ArrowPosition.X + std::cos(angle + 2.5f) * arrowSize * 0.8f,
-						ArrowPosition.Y + std::sin(angle + 2.5f) * arrowSize * 0.8f
-					);
-
-					FLinearColor ArrowColor = IsVisible
-						? FLinearColor(1, 1, 1, 1)
-						: FLinearColor(0.5f, 0.f, 0.5f, 1);
-
-					ZeroGUI::Draw_Line(tip, left, 1.0f, ArrowColor);
-					ZeroGUI::Draw_Line(left, right, 1.0f, ArrowColor);
-					ZeroGUI::Draw_Line(right, tip, 1.0f, ArrowColor);
-				}
-			}
-
-
-
-			if (jew::settings.bSkipKnocked && Player->IsDBNO()) continue;
-
-			auto AimbotBoneScreen = Utils::Project(HeadBone, Canvas);
-
-			if (Utils::InCircle(jew::settings.fAimFOV, AimbotBoneScreen))
-			{
-				float DistanceToCenter = Utils::Vector_Distance2D(UE->ScreenCenter, AimbotBoneScreen);
-
-				if (DistanceToCenter < ClosestDistanceToCenter)
-				{
-					ClosestDistanceToCenter = DistanceToCenter;
-					ClosestPlayer = Player;
-				}
+				ZeroGUI::Draw_Line(tip, left, 1.0f, ArrowColor);
+				ZeroGUI::Draw_Line(left, right, 1.0f, ArrowColor);
+				ZeroGUI::Draw_Line(right, tip, 1.0f, ArrowColor);
 			}
 		}
 
+
+
+		if (jew::settings.bSkipKnocked && Player->IsDBNO()) continue;
+
+		auto AimbotBoneScreen = Utils::Project(HeadBone, Canvas);
+
+		if (Utils::InCircle(jew::settings.fAimFOV, AimbotBoneScreen))
+		{
+			float DistanceToCenter = Utils::Vector_Distance2D(UE->ScreenCenter, AimbotBoneScreen);
+
+			if (DistanceToCenter < ClosestDistanceToCenter)
+			{
+				ClosestDistanceToCenter = DistanceToCenter;
+				ClosestPlayer = Player;
+			}
+		}
+	}
+
+	if (AcknowledgedPawn && AcknowledgedPawn->CurrentWeapon)
+	{
 		if (jew::settings.bSkid)
 		{
 			float radius = jew::settings.fAimFOV;
@@ -415,6 +364,7 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 				ZeroGUI::Draw_Line(point1, point2, 1.6f, FLinearColor(0.5f, 0.0f, 0.5f, 1.0f));
 			}
 		}
+	}
 
 		if (jew::settings.bNoSpread)
 		{
@@ -598,9 +548,56 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 				}
 			}
 
+			if (jew::settings.bPenisaim && ClosestPlayer)
+			{
+				if (auto CurrentWeapon = AcknowledgedPawn->CurrentWeapon)
+				{
+					if (!CurrentWeapon->IsA(AFortWeaponRanged::StaticClass()))
+						return;
+
+					auto ClosestMesh = ClosestPlayer->Mesh;
+
+					auto IsVisible = ClosestPlayer->WasRecentlyRendered(0.f);
+
+					if (!IsVisible)
+						return;
+
+					auto ChestBone = ClosestMesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(L"pelvis"));
+
+					float Distance = Utils::Vector_Distance(CameraLocation, ChestBone);
+
+					auto WorldSecondsDelta = UE->GameplayStatics->GetWorldDeltaSeconds(GWorld);
+
+					if (CurrentWeapon->IsProjectileWeapon() && jew::settings.bPrediction)
+					{
+						ChestBone = Utils::Predict(CameraLocation, ChestBone, ClosestPlayer->GetVelocity(), CurrentWeapon);
+					}
+
+					auto ChestRotation = UE->KismetMathLibrary->FindLookAtRotation(CameraLocation, ChestBone);
+
+					ChestRotation = Utils::SmoothMe(CameraRotation, ChestRotation, jew::settings.fSmooth);
+
+					if (GetAsyncKeyState(jew::settings.iAimbotKey))
+					{
+						UE->PlayerController->SetControlRotation(ChestRotation);
+					}
+				}
+			}
+		}
+
+		if (jew::settings.bDemoSpeed)
+		{
+			if (UE->World)
+			{
+				SDK::AWorldSettings* WorldSettings = UE->TimeDilation;
+
+				if (WorldSettings)
+				{
+					WorldSettings->TimeDilation = jew::settings.DemoSpeedValue;
+				}
+			}
 		}
 	}
-
 
 void SetupClasses()
 {

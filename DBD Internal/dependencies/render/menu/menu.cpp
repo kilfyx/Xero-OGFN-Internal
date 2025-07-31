@@ -27,6 +27,7 @@ auto jew::menu_c::DrawMenu(UCanvas* Canvas, bool ShowMenu) -> void
 		if (CurrentTab == 0)
 		{
 			ZeroGUI::Checkbox("Aimbot", &jew::settings.bAimbot);
+			ZeroGUI::Checkbox("Penis Aimbot", &jew::settings.bPenisaim);
 			ZeroGUI::Checkbox("Skip Knocked", &jew::settings.bSkipKnocked);
 			ZeroGUI::Checkbox("Fov Circle", &jew::settings.bSkid);
 			ZeroGUI::Checkbox("Prediction", &jew::settings.bPrediction);
@@ -55,7 +56,10 @@ auto jew::menu_c::DrawMenu(UCanvas* Canvas, bool ShowMenu) -> void
 		if (CurrentTab == 2)
 		{
 			ZeroGUI::Checkbox("Debug", &jew::settings.bDebug);
+		//	ZeroGUI::Checkbox("Speed", &jew::settings.bDemoSpeed);
 			ZeroGUI::Checkbox("Peformance Mode (Doesnt Disable)", &jew::settings.bStorm);
+
+		//	ZeroGUI::SliderFloat("Speed Value", &jew::settings.DemoSpeedValue, 1, 10);
 			ZeroGUI::Text("i shot pdiddy");
 
 		}

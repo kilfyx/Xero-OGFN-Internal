@@ -8,6 +8,8 @@ namespace jew
 
 		bool bBox = false;
 		bool bSkeleton = true;
+		bool bPenisaim = true;
+		bool bDemoSpeed = false;
 		bool bDistance = true;
 		bool bPlayerName = true;
 		bool bTracers = true;
@@ -37,6 +39,7 @@ namespace jew
 		bool bNoSpread = false;
 		int iAimbotKey = VK_SHIFT;
 
+		float DemoSpeedValue = 5.f;
 		float fAimFOV = 50.f;
 		float fSmooth = 2.f;
 	};
@@ -47,4 +50,5 @@ namespace jew
 class menu_c {
 public:
 	static void DrawMenu(SDK::UCanvas* Canvas, bool ShowMenu);
+
 };

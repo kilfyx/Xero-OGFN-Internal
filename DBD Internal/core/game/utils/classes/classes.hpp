@@ -21,6 +21,7 @@ public:
 	static inline SDK::UEngine* Engine = NULL;
 	static inline SDK::FMinimalViewInfo* Camera;
 	static inline SDK::APlayerController* PlayerController = NULL;
+	static inline SDK::AWorldSettings* TimeDilation = NULL;
 	static inline SDK::UGameInstance* OwningGameInstance = NULL;
 	static inline SDK::FFortBaseWeaponStats* CurrentWeaponStats = NULL;
 	static inline SDK::ULocalPlayer* LocalPlayer = NULL;
