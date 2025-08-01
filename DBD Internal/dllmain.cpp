@@ -205,20 +205,19 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 		{
 			const std::pair<const wchar_t*, const wchar_t*> BonePairs[] =
 			{
-				{L"head", L"neck_01"},
-				{L"neck_01", L"upperarm_r"},
-				{L"neck_01", L"upperarm_l"},
-				{L"upperarm_l", L"lowerarm_l"},
-				{L"lowerarm_l", L"hand_l"},
-				{L"upperarm_r", L"lowerarm_r"},
-				{L"lowerarm_r", L"hand_r"},
-				{L"neck_01", L"pelvis"},
-				{L"pelvis", L"thigh_r"},
-				{L"pelvis", L"thigh_l"},
-				{L"thigh_r", L"calf_r"},
-				{L"calf_r", L"ik_foot_r"},
-				{L"thigh_l", L"calf_l"},
-				{L"calf_l", L"ik_foot_l"}
+	{L"neck_01", L"upperarm_r"},
+	{L"neck_01", L"upperarm_l"},
+	{L"upperarm_l", L"lowerarm_l"},
+	{L"lowerarm_l", L"hand_l"},
+	{L"upperarm_r", L"lowerarm_r"},
+	{L"lowerarm_r", L"hand_r"},
+	{L"neck_01", L"pelvis"},
+	{L"pelvis", L"thigh_r"},
+	{L"pelvis", L"thigh_l"},
+	{L"thigh_r", L"calf_r"},
+	{L"calf_r", L"ik_foot_r"},
+	{L"thigh_l", L"calf_l"},
+	{L"calf_l", L"ik_foot_l"}
 			};
 
 			const size_t Count = sizeof(BonePairs) / sizeof(BonePairs[0]);
@@ -545,42 +544,7 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 				}
 			}
 
-			if (jew::settings.bPenisaim && ClosestPlayer)
-			{
-				if (auto CurrentWeapon = AcknowledgedPawn->CurrentWeapon)
-				{
-					if (!CurrentWeapon->IsA(AFortWeaponRanged::StaticClass()))
-						return;
-
-					auto ClosestMesh = ClosestPlayer->Mesh;
-
-					auto IsVisible = ClosestPlayer->WasRecentlyRendered(0.f);
-
-					if (!IsVisible)
-						return;
-
-					auto ChestBone = ClosestMesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(L"pelvis"));
-
-					float Distance = Utils::Vector_Distance(CameraLocation, ChestBone);
-
-					auto WorldSecondsDelta = UE->GameplayStatics->GetWorldDeltaSeconds(GWorld);
-
-					if (CurrentWeapon->IsProjectileWeapon() && jew::settings.bPrediction)
-					{
-						ChestBone = Utils::Predict(CameraLocation, ChestBone, ClosestPlayer->GetVelocity(), CurrentWeapon);
-					}
-
-					auto ChestRotation = UE->KismetMathLibrary->FindLookAtRotation(CameraLocation, ChestBone);
-
-					ChestRotation = Utils::SmoothMe(CameraRotation, ChestRotation, jew::settings.fSmooth);
-
-					if (GetAsyncKeyState(jew::settings.iAimbotKey))
-					{
-						UE->PlayerController->SetControlRotation(ChestRotation);
-					}
-				}
 			}
-		}
 
 		if (jew::settings.bDemoSpeed)
 		{
