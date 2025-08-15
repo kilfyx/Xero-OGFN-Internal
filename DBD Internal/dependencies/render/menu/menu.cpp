@@ -52,7 +52,6 @@ auto jew::menu_c::DrawMenu(UCanvas* Canvas, bool ShowMenu) -> void
         if (CurrentTab == 2)
         {
             ZeroGUI::Checkbox("Debug", &jew::settings.bDebug);
-            ZeroGUI::Checkbox("Magic Bullet", &jew::settings.bBulletTeleport);
             ZeroGUI::Checkbox("Peformance Mode (Doesnt Disable)", &jew::settings.bStorm);
             ZeroGUI::Text("i shot pdiddy");
         } 
