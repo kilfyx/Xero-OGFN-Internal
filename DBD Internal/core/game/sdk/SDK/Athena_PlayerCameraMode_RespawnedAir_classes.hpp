@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Athena_PlayerCameraMode_RespawnedAir.Athena_PlayerCameraMode_RespawnedAir_C
-// 0x0000 (0x0EA0 - 0x0EA0)
+// 0x0000 (0x0DD0 - 0x0DD0)
 class UAthena_PlayerCameraMode_RespawnedAir_C final : public UFortCameraMode_RespawnedAir
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UAthena_PlayerCameraMode_RespawnedAir_C>();
 	}
 };
+static_assert(alignof(UAthena_PlayerCameraMode_RespawnedAir_C) == 0x000010, "Wrong alignment on UAthena_PlayerCameraMode_RespawnedAir_C");
+static_assert(sizeof(UAthena_PlayerCameraMode_RespawnedAir_C) == 0x000DD0, "Wrong size on UAthena_PlayerCameraMode_RespawnedAir_C");
 
 }
 

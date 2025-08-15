@@ -19,16 +19,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaTemperature.AthenaTemperature_C
-// 0x0008 (0x02A8 - 0x02A0)
+// 0x0008 (0x02A0 - 0x0298)
 class UAthenaTemperature_C final : public UAthenaTemperatureBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ShowTemperatureChanged(bool bShowTemperature);
-	void ExecuteUbergraph_AthenaTemperature(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_AthenaTemperature(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -41,8 +41,8 @@ public:
 	}
 };
 static_assert(alignof(UAthenaTemperature_C) == 0x000008, "Wrong alignment on UAthenaTemperature_C");
-static_assert(sizeof(UAthenaTemperature_C) == 0x0002A8, "Wrong size on UAthenaTemperature_C");
-static_assert(offsetof(UAthenaTemperature_C, UberGraphFrame) == 0x0002A0, "Member 'UAthenaTemperature_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(UAthenaTemperature_C) == 0x0002A0, "Wrong size on UAthenaTemperature_C");
+static_assert(offsetof(UAthenaTemperature_C, UberGraphFrame) == 0x000298, "Member 'UAthenaTemperature_C::UberGraphFrame' has a wrong offset!");
 
 }
 

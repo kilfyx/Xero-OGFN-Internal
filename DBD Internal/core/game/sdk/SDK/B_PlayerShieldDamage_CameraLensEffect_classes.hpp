@@ -38,6 +38,9 @@ public:
 		return GetDefaultObjImpl<AB_PlayerShieldDamage_CameraLensEffect_C>();
 	}
 };
+static_assert(alignof(AB_PlayerShieldDamage_CameraLensEffect_C) == 0x000010, "Wrong alignment on AB_PlayerShieldDamage_CameraLensEffect_C");
+static_assert(sizeof(AB_PlayerShieldDamage_CameraLensEffect_C) == 0x0002F0, "Wrong size on AB_PlayerShieldDamage_CameraLensEffect_C");
+static_assert(offsetof(AB_PlayerShieldDamage_CameraLensEffect_C, UberGraphFrame_B_PlayerShieldDamage_CameraLensEffect_C) == 0x0002E8, "Member 'AB_PlayerShieldDamage_CameraLensEffect_C::UberGraphFrame_B_PlayerShieldDamage_CameraLensEffect_C' has a wrong offset!");
 
 }
 

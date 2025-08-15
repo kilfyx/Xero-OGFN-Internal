@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PBWA_S1_RoofWall.PBWA_S1_RoofWall_C
-// 0x0000 (0x0DF8 - 0x0DF8)
+// 0x0000 (0x0C28 - 0x0C28)
 class APBWA_S1_RoofWall_C final : public ABuildingWall
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<APBWA_S1_RoofWall_C>();
 	}
 };
+static_assert(alignof(APBWA_S1_RoofWall_C) == 0x000008, "Wrong alignment on APBWA_S1_RoofWall_C");
+static_assert(sizeof(APBWA_S1_RoofWall_C) == 0x000C28, "Wrong size on APBWA_S1_RoofWall_C");
 
 }
 

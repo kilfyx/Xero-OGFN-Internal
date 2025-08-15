@@ -17,54 +17,6 @@
 namespace SDK
 {
 
-// Function UserListHeaderEntry.UserListHeaderEntry_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UUserListHeaderEntry_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserListHeaderEntry_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UserListHeaderEntry.UserListHeaderEntry_C.BP_OnItemExpansionChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UUserListHeaderEntry_C::BP_OnItemExpansionChanged(bool bIsExpanded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserListHeaderEntry_C", "BP_OnItemExpansionChanged");
-
-	Params::UserListHeaderEntry_C_BP_OnItemExpansionChanged Parms{};
-
-	Parms.bIsExpanded = bIsExpanded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function UserListHeaderEntry.UserListHeaderEntry_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void UUserListHeaderEntry_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserListHeaderEntry_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function UserListHeaderEntry.UserListHeaderEntry_C.ExecuteUbergraph_UserListHeaderEntry
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -122,6 +74,54 @@ void UUserListHeaderEntry_C::OnListItemObjectSet_1(class UObject* ListItemObject
 	Parms.ListItemObject = ListItemObject;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UserListHeaderEntry.UserListHeaderEntry_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UUserListHeaderEntry_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UserListHeaderEntry_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UserListHeaderEntry.UserListHeaderEntry_C.BP_OnItemExpansionChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UUserListHeaderEntry_C::BP_OnItemExpansionChanged(bool bIsExpanded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UserListHeaderEntry_C", "BP_OnItemExpansionChanged");
+
+	Params::UserListHeaderEntry_C_BP_OnItemExpansionChanged Parms{};
+
+	Parms.bIsExpanded = bIsExpanded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UserListHeaderEntry.UserListHeaderEntry_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UUserListHeaderEntry_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UserListHeaderEntry_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

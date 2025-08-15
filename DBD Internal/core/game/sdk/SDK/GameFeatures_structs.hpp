@@ -14,17 +14,6 @@
 namespace SDK
 {
 
-// Enum GameFeatures.EGameFeatureTargetState
-// NumValues: 0x0005
-enum class EGameFeatureTargetState : uint8
-{
-	Installed                                = 0,
-	Registered                               = 1,
-	Loaded                                   = 2,
-	Active                                   = 3,
-	EGameFeatureTargetState_MAX              = 4,
-};
-
 // ScriptStruct GameFeatures.GameFeatureComponentEntry
 // 0x0058 (0x0058 - 0x0000)
 struct FGameFeatureComponentEntry final
@@ -36,30 +25,22 @@ public:
 	uint8                                         bServerComponent : 1;                              // 0x0050(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// ScriptStruct GameFeatures.DataRegistrySourceToAdd
-// 0x0060 (0x0060 - 0x0000)
-struct FDataRegistrySourceToAdd final
-{
-public:
-	class FName                                   RegistryToAddTo;                                   // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AssetPriority;                                     // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bClientSource : 1;                                 // 0x000C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bServerSource : 1;                                 // 0x000C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UDataTable>              DataTableToAdd;                                    // 0x0010(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UCurveTable>             CurveTableToAdd;                                   // 0x0038(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FGameFeatureComponentEntry) == 0x000008, "Wrong alignment on FGameFeatureComponentEntry");
+static_assert(sizeof(FGameFeatureComponentEntry) == 0x000058, "Wrong size on FGameFeatureComponentEntry");
+static_assert(offsetof(FGameFeatureComponentEntry, ActorClass) == 0x000000, "Member 'FGameFeatureComponentEntry::ActorClass' has a wrong offset!");
+static_assert(offsetof(FGameFeatureComponentEntry, ComponentClass) == 0x000028, "Member 'FGameFeatureComponentEntry::ComponentClass' has a wrong offset!");
 
 // ScriptStruct GameFeatures.GameFeaturePluginStateMachineProperties
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct FGameFeaturePluginStateMachineProperties final
 {
 public:
-	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameFeatureData*                       GameFeatureData;                                   // 0x0050(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_58[0x48];                                      // 0x0058(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x68];                                       // 0x0000(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameFeatureData*                       GameFeatureData;                                   // 0x0068(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FGameFeaturePluginStateMachineProperties) == 0x000008, "Wrong alignment on FGameFeaturePluginStateMachineProperties");
+static_assert(sizeof(FGameFeaturePluginStateMachineProperties) == 0x000070, "Wrong size on FGameFeaturePluginStateMachineProperties");
+static_assert(offsetof(FGameFeaturePluginStateMachineProperties, GameFeatureData) == 0x000068, "Member 'FGameFeaturePluginStateMachineProperties::GameFeatureData' has a wrong offset!");
 
 }
 

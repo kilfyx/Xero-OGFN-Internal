@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function GameFeatureStatus.GameFeatureStatus_C.ExecuteUbergraph_GameFeatureStatus
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGameFeatureStatus_C::ExecuteUbergraph_GameFeatureStatus(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_GameFeatureStatus");
-
-	Params::GameFeatureStatus_C_ExecuteUbergraph_GameFeatureStatus Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GameFeatureStatus.GameFeatureStatus_C.HandleStatusChanged
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -45,9 +25,9 @@ void UGameFeatureStatus_C::ExecuteUbergraph_GameFeatureStatus(int32 EntryPoint)
 void UGameFeatureStatus_C::HandleStatusChanged(EAthenaGameFeatureStatus CurrentStatus)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HandleStatusChanged");
+		Func = Class->GetFunction("GameFeatureStatus_C", "HandleStatusChanged");
 
 	Params::GameFeatureStatus_C_HandleStatusChanged Parms{};
 
@@ -65,13 +45,33 @@ void UGameFeatureStatus_C::HandleStatusChanged(EAthenaGameFeatureStatus CurrentS
 void UGameFeatureStatus_C::OnStatusChanged(EAthenaGameFeatureStatus NewStatus)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnStatusChanged");
+		Func = Class->GetFunction("GameFeatureStatus_C", "OnStatusChanged");
 
 	Params::GameFeatureStatus_C_OnStatusChanged Parms{};
 
 	Parms.NewStatus = NewStatus;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GameFeatureStatus.GameFeatureStatus_C.ExecuteUbergraph_GameFeatureStatus
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGameFeatureStatus_C::ExecuteUbergraph_GameFeatureStatus(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameFeatureStatus_C", "ExecuteUbergraph_GameFeatureStatus");
+
+	Params::GameFeatureStatus_C_ExecuteUbergraph_GameFeatureStatus Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -20,7 +20,7 @@ namespace SDK
 // Function GooglePAD.GooglePADFunctionLibrary.CancelDownload
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// const TArray<class FString>&            AssetPacks                                             (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            AssetPacks                                             (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EGooglePADErrorCode                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 EGooglePADErrorCode UGooglePADFunctionLibrary::CancelDownload(const TArray<class FString>& AssetPacks)
@@ -331,7 +331,7 @@ void UGooglePADFunctionLibrary::ReleaseDownloadState(const int32 State)
 // Function GooglePAD.GooglePADFunctionLibrary.RequestDownload
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// const TArray<class FString>&            AssetPacks                                             (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            AssetPacks                                             (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EGooglePADErrorCode                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 EGooglePADErrorCode UGooglePADFunctionLibrary::RequestDownload(const TArray<class FString>& AssetPacks)
@@ -359,7 +359,7 @@ EGooglePADErrorCode UGooglePADFunctionLibrary::RequestDownload(const TArray<clas
 // Function GooglePAD.GooglePADFunctionLibrary.RequestInfo
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// const TArray<class FString>&            AssetPacks                                             (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            AssetPacks                                             (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EGooglePADErrorCode                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 EGooglePADErrorCode UGooglePADFunctionLibrary::RequestInfo(const TArray<class FString>& AssetPacks)

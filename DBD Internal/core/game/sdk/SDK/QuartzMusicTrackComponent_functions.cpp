@@ -17,21 +17,23 @@
 namespace SDK
 {
 
-// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.ExecuteUbergraph_QuartzMusicTrackComponent
-// (Final, UbergraphFunction)
+// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.SetTrackParameter
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ParameterIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   InFloat                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UQuartzMusicTrackComponent_C::ExecuteUbergraph_QuartzMusicTrackComponent(int32 EntryPoint)
+void UQuartzMusicTrackComponent_C::SetTrackParameter(int32 ParameterIndex, float InFloat)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "ExecuteUbergraph_QuartzMusicTrackComponent");
+		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "SetTrackParameter");
 
-	Params::QuartzMusicTrackComponent_C_ExecuteUbergraph_QuartzMusicTrackComponent Parms{};
+	Params::QuartzMusicTrackComponent_C_SetTrackParameter Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.ParameterIndex = ParameterIndex;
+	Parms.InFloat = InFloat;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -58,48 +60,6 @@ void UQuartzMusicTrackComponent_C::GetAudioComponent(class UAudioComponent** Aud
 }
 
 
-// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.GetClockHandle
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UQuartzClockHandle**              Clock_Handle                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UQuartzMusicTrackComponent_C::GetClockHandle(class UQuartzClockHandle** Clock_Handle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "GetClockHandle");
-
-	Params::QuartzMusicTrackComponent_C_GetClockHandle Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Clock_Handle != nullptr)
-		*Clock_Handle = Parms.Clock_Handle;
-}
-
-
-// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.GetIsPlaying
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   Is_Playing                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UQuartzMusicTrackComponent_C::GetIsPlaying(bool* Is_Playing)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "GetIsPlaying");
-
-	Params::QuartzMusicTrackComponent_C_GetIsPlaying Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Is_Playing != nullptr)
-		*Is_Playing = Parms.Is_Playing;
-}
-
-
 // Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.GetPlayState
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -120,46 +80,24 @@ EAudioComponentPlayState UQuartzMusicTrackComponent_C::GetPlayState()
 }
 
 
-// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.GetTrackPriority
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.GetIsPlaying
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float*                                  Priority                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Is_Playing                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UQuartzMusicTrackComponent_C::GetTrackPriority(float* Priority)
+void UQuartzMusicTrackComponent_C::GetIsPlaying(bool* Is_Playing)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "GetTrackPriority");
+		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "GetIsPlaying");
 
-	Params::QuartzMusicTrackComponent_C_GetTrackPriority Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Priority != nullptr)
-		*Priority = Parms.Priority;
-}
-
-
-// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.OnQuartzClockDelegate
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EQuartzCommandDelegateSubType           EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UQuartzMusicTrackComponent_C::OnQuartzClockDelegate(EQuartzCommandDelegateSubType EventType, class FName Name_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "OnQuartzClockDelegate");
-
-	Params::QuartzMusicTrackComponent_C_OnQuartzClockDelegate Parms{};
-
-	Parms.EventType = EventType;
-	Parms.Name_0 = Name_0;
+	Params::QuartzMusicTrackComponent_C_GetIsPlaying Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Is_Playing != nullptr)
+		*Is_Playing = Parms.Is_Playing;
 }
 
 
@@ -191,17 +129,25 @@ void UQuartzMusicTrackComponent_C::OnQuartzQuantizationEvent(class FName ClockNa
 }
 
 
-// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.QueueTrackStart
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.OnQuartzClockDelegate
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EQuartzCommandDelegateSubType           EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UQuartzMusicTrackComponent_C::QueueTrackStart()
+void UQuartzMusicTrackComponent_C::OnQuartzClockDelegate(EQuartzCommandDelegateSubType EventType, class FName Name_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "QueueTrackStart");
+		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "OnQuartzClockDelegate");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::QuartzMusicTrackComponent_C_OnQuartzClockDelegate Parms{};
+
+	Parms.EventType = EventType;
+	Parms.Name_0 = Name_0;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -216,6 +162,61 @@ void UQuartzMusicTrackComponent_C::QueueTrackStop()
 		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "QueueTrackStop");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.QueueTrackStart
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UQuartzMusicTrackComponent_C::QueueTrackStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "QueueTrackStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.GetTrackPriority
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float*                                  Priority                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UQuartzMusicTrackComponent_C::GetTrackPriority(float* Priority)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "GetTrackPriority");
+
+	Params::QuartzMusicTrackComponent_C_GetTrackPriority Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Priority != nullptr)
+		*Priority = Parms.Priority;
+}
+
+
+// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.SetDebugEnabled
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Debug                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UQuartzMusicTrackComponent_C::SetDebugEnabled(bool Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "SetDebugEnabled");
+
+	Params::QuartzMusicTrackComponent_C_SetDebugEnabled Parms{};
+
+	Parms.Debug = Debug;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -253,26 +254,6 @@ void UQuartzMusicTrackComponent_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 }
 
 
-// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.SetDebugEnabled
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Debug                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UQuartzMusicTrackComponent_C::SetDebugEnabled(bool Debug)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "SetDebugEnabled");
-
-	Params::QuartzMusicTrackComponent_C_SetDebugEnabled Parms{};
-
-	Parms.Debug = Debug;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.SetStemVolume
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -295,23 +276,21 @@ void UQuartzMusicTrackComponent_C::SetStemVolume(int32 Index_0, float Value)
 }
 
 
-// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.SetTrackParameter
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function QuartzMusicTrackComponent.QuartzMusicTrackComponent_C.ExecuteUbergraph_QuartzMusicTrackComponent
+// (Final, UbergraphFunction)
 // Parameters:
-// int32                                   ParameterIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   InFloat                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UQuartzMusicTrackComponent_C::SetTrackParameter(int32 ParameterIndex, float InFloat)
+void UQuartzMusicTrackComponent_C::ExecuteUbergraph_QuartzMusicTrackComponent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "SetTrackParameter");
+		Func = Class->GetFunction("QuartzMusicTrackComponent_C", "ExecuteUbergraph_QuartzMusicTrackComponent");
 
-	Params::QuartzMusicTrackComponent_C_SetTrackParameter Parms{};
+	Params::QuartzMusicTrackComponent_C_ExecuteUbergraph_QuartzMusicTrackComponent Parms{};
 
-	Parms.ParameterIndex = ParameterIndex;
-	Parms.InFloat = InFloat;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

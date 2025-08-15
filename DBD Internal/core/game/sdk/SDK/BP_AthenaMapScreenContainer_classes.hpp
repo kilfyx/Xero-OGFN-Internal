@@ -19,30 +19,25 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass BP_AthenaMapScreenContainer.BP_AthenaMapScreenContainer_C
-// 0x0058 (0x0500 - 0x04A8)
+// 0x0038 (0x0488 - 0x0450)
 class UBP_AthenaMapScreenContainer_C final : public UAthenaMapScreenContainer
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       DamageTaken;                                       // 0x04B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UFortQuestMenuAutoRunWidget_C*          AutoRunWidget;                                     // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HBox_Tabs;                                         // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    NextTabAction;                                     // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 OnlineStatusIndicator;                             // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    PreviousTabAction;                                 // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class US18_PlayerBattlePassXpAndReward_C*     S18_PlayerBattlePassXpAndReward_310;               // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_TabButtons;                               // 0x04E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_SwitcherContainer;                         // 0x04F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScoreboard_UI_C*                       ScoreboardWidgetRef;                               // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0450(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       DamageTaken;                                       // 0x0458(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UHorizontalBox*                         HBox_Tabs;                                         // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    NextTabAction;                                     // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    PreviousTabAction;                                 // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_TabButtons;                               // 0x0478(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_SwitcherContainer;                         // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnShowTabsSet(bool bShowTabs);
-	void ExecuteUbergraph_BP_AthenaMapScreenContainer(int32 EntryPoint);
-	void OnDamageReceived();
-	void OnInitialized();
-	void OnMinigameEndUI();
-	void OnShowOrHideCreativeScoreboard(bool bShowCreativeScoreboard);
 	void PreConstruct(bool IsDesignTime);
+	void BP_OnShowTabsSet(bool bShowTabs);
+	void OnDamageReceived();
+	void OnShowOrHideCreativeScoreboard(bool bShowCreativeScoreboard);
+	void OnCreativeScoreboardWidgetCreated(class UCommonUserWidget* CreativeScoreboardWidget);
+	void ExecuteUbergraph_BP_AthenaMapScreenContainer(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -54,6 +49,15 @@ public:
 		return GetDefaultObjImpl<UBP_AthenaMapScreenContainer_C>();
 	}
 };
+static_assert(alignof(UBP_AthenaMapScreenContainer_C) == 0x000008, "Wrong alignment on UBP_AthenaMapScreenContainer_C");
+static_assert(sizeof(UBP_AthenaMapScreenContainer_C) == 0x000488, "Wrong size on UBP_AthenaMapScreenContainer_C");
+static_assert(offsetof(UBP_AthenaMapScreenContainer_C, UberGraphFrame) == 0x000450, "Member 'UBP_AthenaMapScreenContainer_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_AthenaMapScreenContainer_C, DamageTaken) == 0x000458, "Member 'UBP_AthenaMapScreenContainer_C::DamageTaken' has a wrong offset!");
+static_assert(offsetof(UBP_AthenaMapScreenContainer_C, HBox_Tabs) == 0x000460, "Member 'UBP_AthenaMapScreenContainer_C::HBox_Tabs' has a wrong offset!");
+static_assert(offsetof(UBP_AthenaMapScreenContainer_C, NextTabAction) == 0x000468, "Member 'UBP_AthenaMapScreenContainer_C::NextTabAction' has a wrong offset!");
+static_assert(offsetof(UBP_AthenaMapScreenContainer_C, PreviousTabAction) == 0x000470, "Member 'UBP_AthenaMapScreenContainer_C::PreviousTabAction' has a wrong offset!");
+static_assert(offsetof(UBP_AthenaMapScreenContainer_C, SafeZone_TabButtons) == 0x000478, "Member 'UBP_AthenaMapScreenContainer_C::SafeZone_TabButtons' has a wrong offset!");
+static_assert(offsetof(UBP_AthenaMapScreenContainer_C, SizeBox_SwitcherContainer) == 0x000480, "Member 'UBP_AthenaMapScreenContainer_C::SizeBox_SwitcherContainer' has a wrong offset!");
 
 }
 

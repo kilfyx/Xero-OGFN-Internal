@@ -17,62 +17,6 @@
 namespace SDK
 {
 
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.Apply Health Bonus
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FActiveGameplayEffectHandle*     EffectHandle                                           (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_AthenaDBNO_C::Apply_Health_Bonus(struct FActiveGameplayEffectHandle* EffectHandle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "Apply Health Bonus");
-
-	Params::GAB_AthenaDBNO_C_Apply_Health_Bonus Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (EffectHandle != nullptr)
-		*EffectHandle = std::move(Parms.EffectHandle);
-}
-
-
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.ApplyBleeding
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FActiveGameplayEffectHandle*     EffectHandle                                           (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_AthenaDBNO_C::ApplyBleeding(struct FActiveGameplayEffectHandle* EffectHandle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "ApplyBleeding");
-
-	Params::GAB_AthenaDBNO_C_ApplyBleeding Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (EffectHandle != nullptr)
-		*EffectHandle = std::move(Parms.EffectHandle);
-}
-
-
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.DropHeldObjects
-// (BlueprintCallable, BlueprintEvent)
-
-void UGAB_AthenaDBNO_C::DropHeldObjects()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "DropHeldObjects");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.ExecuteUbergraph_GAB_AthenaDBNO
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -93,125 +37,35 @@ void UGAB_AthenaDBNO_C::ExecuteUbergraph_GAB_AthenaDBNO(int32 EntryPoint)
 }
 
 
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get Custom Tenacity
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// float*                                  Tenacity                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.DropHeldObjects
+// (BlueprintCallable, BlueprintEvent)
 
-void UGAB_AthenaDBNO_C::Get_Custom_Tenacity(float* Tenacity)
+void UGAB_AthenaDBNO_C::DropHeldObjects()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "Get Custom Tenacity");
+		Func = Class->GetFunction("GAB_AthenaDBNO_C", "DropHeldObjects");
 
-	Params::GAB_AthenaDBNO_C_Get_Custom_Tenacity Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Tenacity != nullptr)
-		*Tenacity = Parms.Tenacity;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get DBNO Montage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UAnimMontage*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-class UAnimMontage* UGAB_AthenaDBNO_C::Get_DBNO_Montage()
+void UGAB_AthenaDBNO_C::K2_OnEndAbility(bool bWasCancelled)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "Get DBNO Montage");
+		Func = Class->GetFunction("GAB_AthenaDBNO_C", "K2_OnEndAbility");
 
-	Params::GAB_AthenaDBNO_C_Get_DBNO_Montage Parms{};
+	Params::GAB_AthenaDBNO_C_K2_OnEndAbility Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get Default Tenacity Amount
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// float*                                  Tenacity                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_AthenaDBNO_C::Get_Default_Tenacity_Amount(float* Tenacity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "Get Default Tenacity Amount");
-
-	Params::GAB_AthenaDBNO_C_Get_Default_Tenacity_Amount Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Tenacity != nullptr)
-		*Tenacity = Parms.Tenacity;
-}
-
-
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get Initial Heal Amount
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float*                                  Health                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_AthenaDBNO_C::Get_Initial_Heal_Amount(float* Health)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "Get Initial Heal Amount");
-
-	Params::GAB_AthenaDBNO_C_Get_Initial_Heal_Amount Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Health != nullptr)
-		*Health = Parms.Health;
-}
-
-
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get Max Health Tenacity
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// float*                                  Tenacity                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_AthenaDBNO_C::Get_Max_Health_Tenacity(float* Tenacity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "Get Max Health Tenacity");
-
-	Params::GAB_AthenaDBNO_C_Get_Max_Health_Tenacity Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Tenacity != nullptr)
-		*Tenacity = Parms.Tenacity;
-}
-
-
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.InitializeDeathHitDirection
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayEventData&        EventHitData                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UGAB_AthenaDBNO_C::InitializeDeathHitDirection(const struct FGameplayEventData& EventHitData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "InitializeDeathHitDirection");
-
-	Params::GAB_AthenaDBNO_C_InitializeDeathHitDirection Parms{};
-
-	Parms.EventHitData = std::move(EventHitData);
+	Parms.bWasCancelled = bWasCancelled;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -237,68 +91,6 @@ void UGAB_AthenaDBNO_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventD
 }
 
 
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_AthenaDBNO_C::K2_OnEndAbility(bool bWasCancelled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "K2_OnEndAbility");
-
-	Params::GAB_AthenaDBNO_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnBlendOut_F0F6785443BD2E74F5591884CB19F35F
-// (BlueprintCallable, BlueprintEvent)
-
-void UGAB_AthenaDBNO_C::OnBlendOut_F0F6785443BD2E74F5591884CB19F35F()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "OnBlendOut_F0F6785443BD2E74F5591884CB19F35F");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnCancelled_F0F6785443BD2E74F5591884CB19F35F
-// (BlueprintCallable, BlueprintEvent)
-
-void UGAB_AthenaDBNO_C::OnCancelled_F0F6785443BD2E74F5591884CB19F35F()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "OnCancelled_F0F6785443BD2E74F5591884CB19F35F");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnCompleted_F0F6785443BD2E74F5591884CB19F35F
-// (BlueprintCallable, BlueprintEvent)
-
-void UGAB_AthenaDBNO_C::OnCompleted_F0F6785443BD2E74F5591884CB19F35F()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "OnCompleted_F0F6785443BD2E74F5591884CB19F35F");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnFinish_4C169D40441E45B462D83CBBA67F6E45
 // (BlueprintCallable, BlueprintEvent)
 
@@ -308,20 +100,6 @@ void UGAB_AthenaDBNO_C::OnFinish_4C169D40441E45B462D83CBBA67F6E45()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GAB_AthenaDBNO_C", "OnFinish_4C169D40441E45B462D83CBBA67F6E45");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnInterrupted_F0F6785443BD2E74F5591884CB19F35F
-// (BlueprintCallable, BlueprintEvent)
-
-void UGAB_AthenaDBNO_C::OnInterrupted_F0F6785443BD2E74F5591884CB19F35F()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "OnInterrupted_F0F6785443BD2E74F5591884CB19F35F");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -352,6 +130,123 @@ void UGAB_AthenaDBNO_C::OnStateInterrupted_C85094F843D5075FE4872C95AFC5D6B6()
 		Func = Class->GetFunction("GAB_AthenaDBNO_C", "OnStateInterrupted_C85094F843D5075FE4872C95AFC5D6B6");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnCompleted_F0F6785443BD2E74F5591884CB19F35F
+// (BlueprintCallable, BlueprintEvent)
+
+void UGAB_AthenaDBNO_C::OnCompleted_F0F6785443BD2E74F5591884CB19F35F()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_AthenaDBNO_C", "OnCompleted_F0F6785443BD2E74F5591884CB19F35F");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnBlendOut_F0F6785443BD2E74F5591884CB19F35F
+// (BlueprintCallable, BlueprintEvent)
+
+void UGAB_AthenaDBNO_C::OnBlendOut_F0F6785443BD2E74F5591884CB19F35F()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_AthenaDBNO_C", "OnBlendOut_F0F6785443BD2E74F5591884CB19F35F");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnInterrupted_F0F6785443BD2E74F5591884CB19F35F
+// (BlueprintCallable, BlueprintEvent)
+
+void UGAB_AthenaDBNO_C::OnInterrupted_F0F6785443BD2E74F5591884CB19F35F()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_AthenaDBNO_C", "OnInterrupted_F0F6785443BD2E74F5591884CB19F35F");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnCancelled_F0F6785443BD2E74F5591884CB19F35F
+// (BlueprintCallable, BlueprintEvent)
+
+void UGAB_AthenaDBNO_C::OnCancelled_F0F6785443BD2E74F5591884CB19F35F()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_AthenaDBNO_C", "OnCancelled_F0F6785443BD2E74F5591884CB19F35F");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.InitializeDeathHitDirection
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayEventData&        EventHitData                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UGAB_AthenaDBNO_C::InitializeDeathHitDirection(const struct FGameplayEventData& EventHitData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_AthenaDBNO_C", "InitializeDeathHitDirection");
+
+	Params::GAB_AthenaDBNO_C_InitializeDeathHitDirection Parms{};
+
+	Parms.EventHitData = std::move(EventHitData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.GetInitialHealAmount
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float*                                  Health                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGAB_AthenaDBNO_C::GetInitialHealAmount(float* Health)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_AthenaDBNO_C", "GetInitialHealAmount");
+
+	Params::GAB_AthenaDBNO_C_GetInitialHealAmount Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Health != nullptr)
+		*Health = Parms.Health;
+}
+
+
+// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get DBNO Montage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UAnimMontage*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UAnimMontage* UGAB_AthenaDBNO_C::Get_DBNO_Montage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_AthenaDBNO_C", "Get DBNO Montage");
+
+	Params::GAB_AthenaDBNO_C_Get_DBNO_Montage Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

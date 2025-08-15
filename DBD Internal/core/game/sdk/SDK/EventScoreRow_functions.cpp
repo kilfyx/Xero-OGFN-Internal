@@ -20,15 +20,15 @@ namespace SDK
 // Function EventScoreRow.EventScoreRow_C.SetData
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Label                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      Label                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
 // int32                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UEventScoreRow_C::SetData(const class FText& Label, int32 Value)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetData");
+		Func = Class->GetFunction("EventScoreRow_C", "SetData");
 
 	Params::EventScoreRow_C_SetData Parms{};
 
@@ -42,14 +42,14 @@ void UEventScoreRow_C::SetData(const class FText& Label, int32 Value)
 // Function EventScoreRow.EventScoreRow_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UEventScoreRow_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PreConstruct");
+		Func = Class->GetFunction("EventScoreRow_C", "PreConstruct");
 
 	Params::EventScoreRow_C_PreConstruct Parms{};
 
@@ -67,9 +67,9 @@ void UEventScoreRow_C::PreConstruct(bool IsDesignTime)
 void UEventScoreRow_C::ExecuteUbergraph_EventScoreRow(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_EventScoreRow");
+		Func = Class->GetFunction("EventScoreRow_C", "ExecuteUbergraph_EventScoreRow");
 
 	Params::EventScoreRow_C_ExecuteUbergraph_EventScoreRow Parms{};
 

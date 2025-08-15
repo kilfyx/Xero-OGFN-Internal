@@ -37,6 +37,20 @@ void UGA_Athena_FallDmgImmune_RemoveFX_C::ExecuteUbergraph_GA_Athena_FallDmgImmu
 }
 
 
+// Function GA_Athena_FallDmgImmune_RemoveFX.GA_Athena_FallDmgImmune_RemoveFX_C.VehicleLandedCheck
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_FallDmgImmune_RemoveFX_C::VehicleLandedCheck()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_FallDmgImmune_RemoveFX_C", "VehicleLandedCheck");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_Athena_FallDmgImmune_RemoveFX.GA_Athena_FallDmgImmune_RemoveFX_C.K2_ActivateAbility
 // (Event, Protected, BlueprintEvent)
 
@@ -88,20 +102,6 @@ void UGA_Athena_FallDmgImmune_RemoveFX_C::OnChange_FD84FE4040E65CB60551DE8433D51
 	Parms.NewMovementMode = NewMovementMode;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Athena_FallDmgImmune_RemoveFX.GA_Athena_FallDmgImmune_RemoveFX_C.VehicleLandedCheck
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_FallDmgImmune_RemoveFX_C::VehicleLandedCheck()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_FallDmgImmune_RemoveFX_C", "VehicleLandedCheck");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -18,21 +18,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SettingsRotator_Narrow.SettingsRotator_Narrow_C
-// 0x0020 (0x0F30 - 0x0F10)
+// 0x0018 (0x0C10 - 0x0BF8)
 class USettingsRotator_Narrow_C final : public UFortSettingsRotator
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       RotatorHover;                                      // 0x0F18(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                Background;                                        // 0x0F20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BF8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       RotatorHover;                                      // 0x0C00(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                Background;                                        // 0x0C08(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_SettingsRotator_Narrow(int32 EntryPoint);
+	void OnUnHover_Animation();
+	void OnHover_Animation();
 	void BP_OnDefaultOptionSpecified(int32 DefaultOptionIndex);
 	void BP_OnOptionSelected(int32 Index_0);
 	void BP_OnOptionsPopulated(int32 Count);
-	void ExecuteUbergraph_SettingsRotator_Narrow(int32 EntryPoint);
-	void OnHover_Animation();
-	void OnUnHover_Animation();
 
 public:
 	static class UClass* StaticClass()
@@ -44,6 +44,11 @@ public:
 		return GetDefaultObjImpl<USettingsRotator_Narrow_C>();
 	}
 };
+static_assert(alignof(USettingsRotator_Narrow_C) == 0x000008, "Wrong alignment on USettingsRotator_Narrow_C");
+static_assert(sizeof(USettingsRotator_Narrow_C) == 0x000C10, "Wrong size on USettingsRotator_Narrow_C");
+static_assert(offsetof(USettingsRotator_Narrow_C, UberGraphFrame) == 0x000BF8, "Member 'USettingsRotator_Narrow_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USettingsRotator_Narrow_C, RotatorHover) == 0x000C00, "Member 'USettingsRotator_Narrow_C::RotatorHover' has a wrong offset!");
+static_assert(offsetof(USettingsRotator_Narrow_C, Background) == 0x000C08, "Member 'USettingsRotator_Narrow_C::Background' has a wrong offset!");
 
 }
 

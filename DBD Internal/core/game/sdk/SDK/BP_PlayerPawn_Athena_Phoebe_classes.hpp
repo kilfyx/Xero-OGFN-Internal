@@ -18,22 +18,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PlayerPawn_Athena_Phoebe.BP_PlayerPawn_Athena_Phoebe_C
-// 0x0020 (0x6070 - 0x6050)
+// 0x0010 (0x43C0 - 0x43B0)
 #pragma pack(push, 0x1)
 class alignas(0x10) ABP_PlayerPawn_Athena_Phoebe_C : public APlayerPawn_Athena_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_PlayerPawn_Athena_Phoebe_C;      // 0x6050(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class FName                                   AIEvaluator_CharacterLaunchedKeyName;              // 0x6058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bUseCosmeticVariants;                              // 0x605C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_605D[0x3];                                     // 0x605D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CosmeticVariantID;                                 // 0x6060(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_PlayerPawn_Athena_Phoebe_C;      // 0x43A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class FName                                   AIEvaluator_CharacterLaunchedKeyName;              // 0x43B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AssignCosmeticVariant();
-	void ComputeCosmeticVariantID();
 	void ExecuteUbergraph_BP_PlayerPawn_Athena_Phoebe(int32 EntryPoint);
-	void OnCharacterCustomizationCompleted(class AFortPlayerPawn* Pawn);
 	void OnLaunched(const struct FVector& LaunchVelocity, bool bXYOverride, bool bZOverride);
 
 public:
@@ -48,11 +42,9 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(ABP_PlayerPawn_Athena_Phoebe_C) == 0x000010, "Wrong alignment on ABP_PlayerPawn_Athena_Phoebe_C");
-static_assert(sizeof(ABP_PlayerPawn_Athena_Phoebe_C) == 0x006070, "Wrong size on ABP_PlayerPawn_Athena_Phoebe_C");
-static_assert(offsetof(ABP_PlayerPawn_Athena_Phoebe_C, UberGraphFrame_BP_PlayerPawn_Athena_Phoebe_C) == 0x006050, "Member 'ABP_PlayerPawn_Athena_Phoebe_C::UberGraphFrame_BP_PlayerPawn_Athena_Phoebe_C' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerPawn_Athena_Phoebe_C, AIEvaluator_CharacterLaunchedKeyName) == 0x006058, "Member 'ABP_PlayerPawn_Athena_Phoebe_C::AIEvaluator_CharacterLaunchedKeyName' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerPawn_Athena_Phoebe_C, bUseCosmeticVariants) == 0x00605C, "Member 'ABP_PlayerPawn_Athena_Phoebe_C::bUseCosmeticVariants' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerPawn_Athena_Phoebe_C, CosmeticVariantID) == 0x006060, "Member 'ABP_PlayerPawn_Athena_Phoebe_C::CosmeticVariantID' has a wrong offset!");
+static_assert(sizeof(ABP_PlayerPawn_Athena_Phoebe_C) == 0x0043C0, "Wrong size on ABP_PlayerPawn_Athena_Phoebe_C");
+static_assert(offsetof(ABP_PlayerPawn_Athena_Phoebe_C, UberGraphFrame_BP_PlayerPawn_Athena_Phoebe_C) == 0x0043A8, "Member 'ABP_PlayerPawn_Athena_Phoebe_C::UberGraphFrame_BP_PlayerPawn_Athena_Phoebe_C' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerPawn_Athena_Phoebe_C, AIEvaluator_CharacterLaunchedKeyName) == 0x0043B0, "Member 'ABP_PlayerPawn_Athena_Phoebe_C::AIEvaluator_CharacterLaunchedKeyName' has a wrong offset!");
 
 }
 

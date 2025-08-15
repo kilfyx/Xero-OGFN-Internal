@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // ScriptStruct EntityFortnite.EntityFortniteStormPhase
-// 0x0050 (0x0050 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct FEntityFortniteStormPhase final
 {
 public:
@@ -33,10 +33,10 @@ public:
 	float                                         MinMovementDistancePercentage;                     // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxMovementDistancePercentage;                     // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector4                               EndLocation;                                       // 0x0030(0x0020)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector4                               EndLocation;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FEntityFortniteStormPhase) == 0x000010, "Wrong alignment on FEntityFortniteStormPhase");
-static_assert(sizeof(FEntityFortniteStormPhase) == 0x000050, "Wrong size on FEntityFortniteStormPhase");
+static_assert(sizeof(FEntityFortniteStormPhase) == 0x000040, "Wrong size on FEntityFortniteStormPhase");
 static_assert(offsetof(FEntityFortniteStormPhase, WaitTime) == 0x000000, "Member 'FEntityFortniteStormPhase::WaitTime' has a wrong offset!");
 static_assert(offsetof(FEntityFortniteStormPhase, ShrinkTime) == 0x000004, "Member 'FEntityFortniteStormPhase::ShrinkTime' has a wrong offset!");
 static_assert(offsetof(FEntityFortniteStormPhase, EndRadius) == 0x000008, "Member 'FEntityFortniteStormPhase::EndRadius' has a wrong offset!");

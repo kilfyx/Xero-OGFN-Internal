@@ -37,23 +37,31 @@ void AB_AthenaPlayerMarker_WithCustomization_C::ExecuteUbergraph_B_AthenaPlayerM
 }
 
 
-// Function B_AthenaPlayerMarker_WithCustomization.B_AthenaPlayerMarker_WithCustomization_C.OnLoaded_8A042AD24DC8A8C0E9D8E0B4BF3B6C37
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TSubclassOf<class UObject>              Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// Function B_AthenaPlayerMarker_WithCustomization.B_AthenaPlayerMarker_WithCustomization_C.OnMarkerPlaced
+// (Event, Protected, BlueprintEvent)
 
-void AB_AthenaPlayerMarker_WithCustomization_C::OnLoaded_8A042AD24DC8A8C0E9D8E0B4BF3B6C37(TSubclassOf<class UObject> Loaded)
+void AB_AthenaPlayerMarker_WithCustomization_C::OnMarkerPlaced()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_AthenaPlayerMarker_WithCustomization_C", "OnLoaded_8A042AD24DC8A8C0E9D8E0B4BF3B6C37");
+		Func = Class->GetFunction("B_AthenaPlayerMarker_WithCustomization_C", "OnMarkerPlaced");
 
-	Params::B_AthenaPlayerMarker_WithCustomization_C_OnLoaded_8A042AD24DC8A8C0E9D8E0B4BF3B6C37 Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Loaded = Loaded;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function B_AthenaPlayerMarker_WithCustomization.B_AthenaPlayerMarker_WithCustomization_C.UpdateTopper
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_AthenaPlayerMarker_WithCustomization_C::UpdateTopper()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AthenaPlayerMarker_WithCustomization_C", "UpdateTopper");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -66,20 +74,6 @@ void AB_AthenaPlayerMarker_WithCustomization_C::OnMarkerHidden()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_AthenaPlayerMarker_WithCustomization_C", "OnMarkerHidden");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_AthenaPlayerMarker_WithCustomization.B_AthenaPlayerMarker_WithCustomization_C.OnMarkerPlaced
-// (Event, Protected, BlueprintEvent)
-
-void AB_AthenaPlayerMarker_WithCustomization_C::OnMarkerPlaced()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_AthenaPlayerMarker_WithCustomization_C", "OnMarkerPlaced");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,17 +99,23 @@ void AB_AthenaPlayerMarker_WithCustomization_C::OnSetupMarker(const struct FFort
 }
 
 
-// Function B_AthenaPlayerMarker_WithCustomization.B_AthenaPlayerMarker_WithCustomization_C.UpdateTopper
+// Function B_AthenaPlayerMarker_WithCustomization.B_AthenaPlayerMarker_WithCustomization_C.OnLoaded_8A042AD24DC8A8C0E9D8E0B4BF3B6C37
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass*                           Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_AthenaPlayerMarker_WithCustomization_C::UpdateTopper()
+void AB_AthenaPlayerMarker_WithCustomization_C::OnLoaded_8A042AD24DC8A8C0E9D8E0B4BF3B6C37(class UClass* Loaded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_AthenaPlayerMarker_WithCustomization_C", "UpdateTopper");
+		Func = Class->GetFunction("B_AthenaPlayerMarker_WithCustomization_C", "OnLoaded_8A042AD24DC8A8C0E9D8E0B4BF3B6C37");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::B_AthenaPlayerMarker_WithCustomization_C_OnLoaded_8A042AD24DC8A8C0E9D8E0B4BF3B6C37 Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

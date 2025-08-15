@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBB_ValetBoost_C>();
 	}
 };
+static_assert(alignof(UBB_ValetBoost_C) == 0x000008, "Wrong alignment on UBB_ValetBoost_C");
+static_assert(sizeof(UBB_ValetBoost_C) == 0x000100, "Wrong size on UBB_ValetBoost_C");
 
 }
 

@@ -23,9 +23,9 @@ namespace SDK
 void UEventLeaderboardEventDetails_C::RefreshDataBP()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshDataBP");
+		Func = Class->GetFunction("EventLeaderboardEventDetails_C", "RefreshDataBP");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -39,9 +39,9 @@ void UEventLeaderboardEventDetails_C::RefreshDataBP()
 void UEventLeaderboardEventDetails_C::ExecuteUbergraph_EventLeaderboardEventDetails(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_EventLeaderboardEventDetails");
+		Func = Class->GetFunction("EventLeaderboardEventDetails_C", "ExecuteUbergraph_EventLeaderboardEventDetails");
 
 	Params::EventLeaderboardEventDetails_C_ExecuteUbergraph_EventLeaderboardEventDetails Parms{};
 

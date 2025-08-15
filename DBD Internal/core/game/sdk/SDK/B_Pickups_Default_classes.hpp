@@ -30,12 +30,13 @@ public:
 
 public:
 	void ExecuteUbergraph_B_Pickups_Default(int32 EntryPoint);
+	void ReceiveBeginPlay();
 	void HideBackgroundAndSpotlight();
 	void OnPickedUp(class AFortPawn* PickupTarget);
 	void OnTossed();
-	void ReceiveBeginPlay();
-	void Set_Initial_BKGD_Param(class UMaterialInstanceDynamic* Mid);
 	void UserConstructionScript();
+	void Setup_Light();
+	void Set_Initial_BKGD_Param(class UMaterialInstanceDynamic* Mid);
 
 public:
 	static class UClass* StaticClass()
@@ -47,6 +48,13 @@ public:
 		return GetDefaultObjImpl<AB_Pickups_Default_C>();
 	}
 };
+static_assert(alignof(AB_Pickups_Default_C) == 0x000008, "Wrong alignment on AB_Pickups_Default_C");
+static_assert(sizeof(AB_Pickups_Default_C) == 0x0004C8, "Wrong size on AB_Pickups_Default_C");
+static_assert(offsetof(AB_Pickups_Default_C, UberGraphFrame_B_Pickups_Default_C) == 0x0004A0, "Member 'AB_Pickups_Default_C::UberGraphFrame_B_Pickups_Default_C' has a wrong offset!");
+static_assert(offsetof(AB_Pickups_Default_C, sm_rare_pickup) == 0x0004A8, "Member 'AB_Pickups_Default_C::sm_rare_pickup' has a wrong offset!");
+static_assert(offsetof(AB_Pickups_Default_C, SpotLight) == 0x0004B0, "Member 'AB_Pickups_Default_C::SpotLight' has a wrong offset!");
+static_assert(offsetof(AB_Pickups_Default_C, Background) == 0x0004B8, "Member 'AB_Pickups_Default_C::Background' has a wrong offset!");
+static_assert(offsetof(AB_Pickups_Default_C, ParticleSystem) == 0x0004C0, "Member 'AB_Pickups_Default_C::ParticleSystem' has a wrong offset!");
 
 }
 

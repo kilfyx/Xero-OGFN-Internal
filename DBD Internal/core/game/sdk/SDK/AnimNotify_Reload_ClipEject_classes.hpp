@@ -24,7 +24,7 @@ public:
 	class UParticleSystem*                        Shell_Eject_Particle;                              // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
+	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation) const;
 
 public:
 	static class UClass* StaticClass()
@@ -36,6 +36,9 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_Reload_ClipEject_C>();
 	}
 };
+static_assert(alignof(UAnimNotify_Reload_ClipEject_C) == 0x000008, "Wrong alignment on UAnimNotify_Reload_ClipEject_C");
+static_assert(sizeof(UAnimNotify_Reload_ClipEject_C) == 0x000040, "Wrong size on UAnimNotify_Reload_ClipEject_C");
+static_assert(offsetof(UAnimNotify_Reload_ClipEject_C, Shell_Eject_Particle) == 0x000038, "Member 'UAnimNotify_Reload_ClipEject_C::Shell_Eject_Particle' has a wrong offset!");
 
 }
 

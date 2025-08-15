@@ -17,42 +17,28 @@
 namespace SDK
 {
 
-// Function BP_HoverDronePawn.BP_HoverDronePawn_C.Update Wind Audio
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_HoverDronePawn_C::Update_Wind_Audio()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoverDronePawn_C", "Update Wind Audio");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_HoverDronePawn.BP_HoverDronePawn_C.SetWindAudioEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_HoverDronePawn.BP_HoverDronePawn_C.ExecuteUbergraph_BP_HoverDronePawn
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    Enabled                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_HoverDronePawn_C::SetWindAudioEnabled(bool Enabled)
+void ABP_HoverDronePawn_C::ExecuteUbergraph_BP_HoverDronePawn(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoverDronePawn_C", "SetWindAudioEnabled");
+		Func = Class->GetFunction("BP_HoverDronePawn_C", "ExecuteUbergraph_BP_HoverDronePawn");
 
-	Params::BP_HoverDronePawn_C_SetWindAudioEnabled Parms{};
+	Params::BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn Parms{};
 
-	Parms.Enabled = Enabled;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function BP_HoverDronePawn.BP_HoverDronePawn_C.ReceiveUnpossessed
-// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AController*                      OldController                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -71,28 +57,8 @@ void ABP_HoverDronePawn_C::ReceiveUnpossessed(class AController* OldController)
 }
 
 
-// Function BP_HoverDronePawn.BP_HoverDronePawn_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_HoverDronePawn_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoverDronePawn_C", "ReceiveTick");
-
-	Params::BP_HoverDronePawn_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_HoverDronePawn.BP_HoverDronePawn_C.ReceivePossessed
-// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AController*                      NewController                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -125,6 +91,60 @@ void ABP_HoverDronePawn_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_HoverDronePawn.BP_HoverDronePawn_C.Update Wind Audio
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_HoverDronePawn_C::Update_Wind_Audio()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HoverDronePawn_C", "Update Wind Audio");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_HoverDronePawn.BP_HoverDronePawn_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_HoverDronePawn_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HoverDronePawn_C", "ReceiveTick");
+
+	Params::BP_HoverDronePawn_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_HoverDronePawn.BP_HoverDronePawn_C.SetWindAudioEnabled
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Enabled                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_HoverDronePawn_C::SetWindAudioEnabled(bool Enabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HoverDronePawn_C", "SetWindAudioEnabled");
+
+	Params::BP_HoverDronePawn_C_SetWindAudioEnabled Parms{};
+
+	Parms.Enabled = Enabled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_HoverDronePawn.BP_HoverDronePawn_C.GetWindVolumeFromAltitude
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -146,26 +166,6 @@ void ABP_HoverDronePawn_C::GetWindVolumeFromAltitude(float Altitude, float* Volu
 
 	if (Volume != nullptr)
 		*Volume = Parms.Volume;
-}
-
-
-// Function BP_HoverDronePawn.BP_HoverDronePawn_C.ExecuteUbergraph_BP_HoverDronePawn
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_HoverDronePawn_C::ExecuteUbergraph_BP_HoverDronePawn(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoverDronePawn_C", "ExecuteUbergraph_BP_HoverDronePawn");
-
-	Params::BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

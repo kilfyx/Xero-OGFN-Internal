@@ -179,6 +179,33 @@ void UEntityActorCollisionComponent::OnRep_PrimitiveComponent()
 }
 
 
+// Function EntityActor.EntityActorRotationComponent.OnRootComponentChanged
+// (Final, Native, Private)
+// Parameters:
+// class USceneComponent*                  InRootComponent                                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsRootComponent                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UEntityActorRotationComponent::OnRootComponentChanged(class USceneComponent* InRootComponent, bool bIsRootComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EntityActorRotationComponent", "OnRootComponentChanged");
+
+	Params::EntityActorRotationComponent_OnRootComponentChanged Parms{};
+
+	Parms.InRootComponent = InRootComponent;
+	Parms.bIsRootComponent = bIsRootComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function EntityActor.EntityActorComponent.OnRep_ActorComponent
 // (Final, Native, Private)
 
@@ -212,33 +239,6 @@ void UEntityActorPositionComponent::OnRootComponentChanged(class USceneComponent
 		Func = Class->GetFunction("EntityActorPositionComponent", "OnRootComponentChanged");
 
 	Params::EntityActorPositionComponent_OnRootComponentChanged Parms{};
-
-	Parms.InRootComponent = InRootComponent;
-	Parms.bIsRootComponent = bIsRootComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function EntityActor.EntityActorRotationComponent.OnRootComponentChanged
-// (Final, Native, Private)
-// Parameters:
-// class USceneComponent*                  InRootComponent                                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bIsRootComponent                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UEntityActorRotationComponent::OnRootComponentChanged(class USceneComponent* InRootComponent, bool bIsRootComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EntityActorRotationComponent", "OnRootComponentChanged");
-
-	Params::EntityActorRotationComponent_OnRootComponentChanged Parms{};
 
 	Parms.InRootComponent = InRootComponent;
 	Parms.bIsRootComponent = bIsRootComponent;

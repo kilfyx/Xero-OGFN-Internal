@@ -18,36 +18,6 @@
 namespace SDK
 {
 
-// Class TimeManagement.FixedFrameRateCustomTimeStep
-// 0x0000 (0x0028 - 0x0028)
-class UFixedFrameRateCustomTimeStep : public UEngineCustomTimeStep
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FixedFrameRateCustomTimeStep">();
-	}
-	static class UFixedFrameRateCustomTimeStep* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFixedFrameRateCustomTimeStep>();
-	}
-};
-
-// Class TimeManagement.GenlockedCustomTimeStep
-// 0x0000 (0x0028 - 0x0028)
-class UGenlockedCustomTimeStep : public UFixedFrameRateCustomTimeStep
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GenlockedCustomTimeStep">();
-	}
-	static class UGenlockedCustomTimeStep* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGenlockedCustomTimeStep>();
-	}
-};
-
 // Class TimeManagement.TimeSynchronizationSource
 // 0x0008 (0x0030 - 0x0028)
 class UTimeSynchronizationSource : public UObject
@@ -67,44 +37,31 @@ public:
 		return GetDefaultObjImpl<UTimeSynchronizationSource>();
 	}
 };
+static_assert(alignof(UTimeSynchronizationSource) == 0x000008, "Wrong alignment on UTimeSynchronizationSource");
+static_assert(sizeof(UTimeSynchronizationSource) == 0x000030, "Wrong size on UTimeSynchronizationSource");
+static_assert(offsetof(UTimeSynchronizationSource, bUseForSynchronization) == 0x000028, "Member 'UTimeSynchronizationSource::bUseForSynchronization' has a wrong offset!");
+static_assert(offsetof(UTimeSynchronizationSource, FrameOffset) == 0x00002C, "Member 'UTimeSynchronizationSource::FrameOffset' has a wrong offset!");
 
-// Class TimeManagement.GenlockedFixedRateCustomTimeStep
-// 0x0020 (0x0048 - 0x0028)
-class UGenlockedFixedRateCustomTimeStep final : public UGenlockedCustomTimeStep
+// Class TimeManagement.FixedFrameRateCustomTimeStep
+// 0x0008 (0x0030 - 0x0028)
+class UFixedFrameRateCustomTimeStep final : public UEngineCustomTimeStep
 {
 public:
-	struct FFrameRate                             FrameRate;                                         // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FFrameRate                             FixedFrameRate;                                    // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GenlockedFixedRateCustomTimeStep">();
+		return StaticClassImpl<"FixedFrameRateCustomTimeStep">();
 	}
-	static class UGenlockedFixedRateCustomTimeStep* GetDefaultObj()
+	static class UFixedFrameRateCustomTimeStep* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UGenlockedFixedRateCustomTimeStep>();
+		return GetDefaultObjImpl<UFixedFrameRateCustomTimeStep>();
 	}
 };
-
-// Class TimeManagement.GenlockedTimecodeProvider
-// 0x0028 (0x0058 - 0x0030)
-class UGenlockedTimecodeProvider final : public UTimecodeProvider
-{
-public:
-	bool                                          bUseGenlockToCount;                                // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x27];                                      // 0x0031(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GenlockedTimecodeProvider">();
-	}
-	static class UGenlockedTimecodeProvider* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGenlockedTimecodeProvider>();
-	}
-};
+static_assert(alignof(UFixedFrameRateCustomTimeStep) == 0x000008, "Wrong alignment on UFixedFrameRateCustomTimeStep");
+static_assert(sizeof(UFixedFrameRateCustomTimeStep) == 0x000030, "Wrong size on UFixedFrameRateCustomTimeStep");
+static_assert(offsetof(UFixedFrameRateCustomTimeStep, FixedFrameRate) == 0x000028, "Member 'UFixedFrameRateCustomTimeStep::FixedFrameRate' has a wrong offset!");
 
 // Class TimeManagement.TimeManagementBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -139,6 +96,8 @@ public:
 		return GetDefaultObjImpl<UTimeManagementBlueprintLibrary>();
 	}
 };
+static_assert(alignof(UTimeManagementBlueprintLibrary) == 0x000008, "Wrong alignment on UTimeManagementBlueprintLibrary");
+static_assert(sizeof(UTimeManagementBlueprintLibrary) == 0x000028, "Wrong size on UTimeManagementBlueprintLibrary");
 
 }
 

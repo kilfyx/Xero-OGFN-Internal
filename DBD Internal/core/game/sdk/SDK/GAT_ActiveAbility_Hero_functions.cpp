@@ -17,29 +17,8 @@
 namespace SDK
 {
 
-// Function GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C.CommitAbilityWithEvent
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   Passed                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAT_ActiveAbility_Hero_C::CommitAbilityWithEvent(bool* Passed)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAT_ActiveAbility_Hero_C", "CommitAbilityWithEvent");
-
-	Params::GAT_ActiveAbility_Hero_C_CommitAbilityWithEvent Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Passed != nullptr)
-		*Passed = Parms.Passed;
-}
-
-
 // Function GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C.ExecuteUbergraph_GAT_ActiveAbility_Hero
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -58,34 +37,6 @@ void UGAT_ActiveAbility_Hero_C::ExecuteUbergraph_GAT_ActiveAbility_Hero(int32 En
 }
 
 
-// Function GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C.IncrementAbilityCostAndCooldown
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Energy_Cost                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Adjust_Cooldown                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Cooldown_Increment                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FActiveGameplayEffectHandle>*Active_Cooldown_Modifiers_0                            (Parm, OutParm)
-
-void UGAT_ActiveAbility_Hero_C::IncrementAbilityCostAndCooldown(float Energy_Cost, bool Adjust_Cooldown, float Cooldown_Increment, TArray<struct FActiveGameplayEffectHandle>* Active_Cooldown_Modifiers_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAT_ActiveAbility_Hero_C", "IncrementAbilityCostAndCooldown");
-
-	Params::GAT_ActiveAbility_Hero_C_IncrementAbilityCostAndCooldown Parms{};
-
-	Parms.Energy_Cost = Energy_Cost;
-	Parms.Adjust_Cooldown = Adjust_Cooldown;
-	Parms.Cooldown_Increment = Cooldown_Increment;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Active_Cooldown_Modifiers_0 != nullptr)
-		*Active_Cooldown_Modifiers_0 = std::move(Parms.Active_Cooldown_Modifiers_0);
-}
-
-
 // Function GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C.K2_ActivateAbility
 // (Event, Protected, BlueprintEvent)
 
@@ -100,23 +51,24 @@ void UGAT_ActiveAbility_Hero_C::K2_ActivateAbility()
 }
 
 
-// Function GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
+// Function GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C.CommitAbilityWithEvent
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Passed                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UGAT_ActiveAbility_Hero_C::K2_OnEndAbility(bool bWasCancelled)
+void UGAT_ActiveAbility_Hero_C::CommitAbilityWithEvent(bool* Passed)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAT_ActiveAbility_Hero_C", "K2_OnEndAbility");
+		Func = Class->GetFunction("GAT_ActiveAbility_Hero_C", "CommitAbilityWithEvent");
 
-	Params::GAT_ActiveAbility_Hero_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
+	Params::GAT_ActiveAbility_Hero_C_CommitAbilityWithEvent Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Passed != nullptr)
+		*Passed = Parms.Passed;
 }
 
 }

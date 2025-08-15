@@ -17,48 +17,6 @@
 namespace SDK
 {
 
-// Function SocialInteraction.SocialInteraction_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void USocialInteraction_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialInteraction_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialInteraction.SocialInteraction_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void USocialInteraction_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialInteraction_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialInteraction.SocialInteraction_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void USocialInteraction_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialInteraction_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function SocialInteraction.SocialInteraction_C.ExecuteUbergraph_SocialInteraction
 // (Final, UbergraphFunction)
 // Parameters:
@@ -88,6 +46,34 @@ void USocialInteraction_C::OnInteractionSet()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("SocialInteraction_C", "OnInteractionSet");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialInteraction.SocialInteraction_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void USocialInteraction_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialInteraction_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialInteraction.SocialInteraction_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void USocialInteraction_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialInteraction_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

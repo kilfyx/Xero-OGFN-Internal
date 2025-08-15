@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "HighTower_Tapas_Axe_AnimBP_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
@@ -20,36 +19,35 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass HighTower_Tapas_Axe_AnimBP.HighTower_Tapas_Axe_AnimBP_C
-// 0x1540 (0x1C40 - 0x0700)
+// 0x1100 (0x15B0 - 0x04B0)
 class UHighTower_Tapas_Axe_AnimBP_C final : public UCustomCharacterPartAnimInstance_HightowerTapasAxe
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0700(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct HighTower_Tapas_Axe_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x0708(0x0002)(HasGetValueTypeHash)
-	uint8                                         Pad_70A[0x6];                                      // 0x070A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0710(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0718(0x0008)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_2;             // 0x0720(0x0020)()
-	struct FAnimNode_CopyPoseFromMesh             AnimGraphNode_CopyPoseFromMesh;                    // 0x0740(0x01D0)(ContainsInstancedReference)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0910(0x0020)()
-	struct FAnimNode_Trail                        AnimGraphNode_Trail;                               // 0x0930(0x02A0)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_1;                        // 0x0BD0(0x0128)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x0CF8(0x0048)()
-	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x0D40(0x0990)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_2;             // 0x16D0(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_1;             // 0x16F0(0x0020)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x1710(0x0100)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x1810(0x0028)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_1;             // 0x1838(0x0020)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x1858(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x1880(0x0028)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x18A8(0x0128)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x19D0(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x19F0(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x1A10(0x0048)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x1A58(0x0100)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x1B58(0x00C0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x1C18(0x0028)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x04B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_2;             // 0x04C0(0x0020)()
+	struct FAnimNode_CopyPoseFromMesh             AnimGraphNode_CopyPoseFromMesh;                    // 0x04E0(0x0140)(ContainsInstancedReference)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0620(0x0030)()
+	struct FAnimNode_Trail                        AnimGraphNode_Trail;                               // 0x0650(0x0260)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_1;                        // 0x08B0(0x0108)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x09B8(0x00A0)()
+	uint8                                         Pad_A58[0x8];                                      // 0x0A58(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x0A60(0x0660)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_2;             // 0x10C0(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_1;             // 0x10E0(0x0020)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x1100(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x11C8(0x0028)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_1;             // 0x11F0(0x0020)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x1210(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x1238(0x0028)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x1260(0x0108)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x1368(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x1388(0x0020)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x13A8(0x0048)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x13F0(0x00C8)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x14B8(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x1580(0x0028)()
 
 public:
 	void ExecuteUbergraph_HighTower_Tapas_Axe_AnimBP(int32 EntryPoint);
@@ -66,32 +64,30 @@ public:
 	}
 };
 static_assert(alignof(UHighTower_Tapas_Axe_AnimBP_C) == 0x000010, "Wrong alignment on UHighTower_Tapas_Axe_AnimBP_C");
-static_assert(sizeof(UHighTower_Tapas_Axe_AnimBP_C) == 0x001C40, "Wrong size on UHighTower_Tapas_Axe_AnimBP_C");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, UberGraphFrame) == 0x000700, "Member 'UHighTower_Tapas_Axe_AnimBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, __AnimBlueprintMutables) == 0x000708, "Member 'UHighTower_Tapas_Axe_AnimBP_C::__AnimBlueprintMutables' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimBlueprintExtension_PropertyAccess) == 0x000710, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimBlueprintExtension_Base) == 0x000718, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_LocalToComponentSpace_2) == 0x000720, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_LocalToComponentSpace_2' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_CopyPoseFromMesh) == 0x000740, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_CopyPoseFromMesh' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_Root) == 0x000910, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_Trail) == 0x000930, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_Trail' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_ModifyBone_1) == 0x000BD0, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_ModifyBone_1' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_BlendListByBool) == 0x000CF8, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_RigidBody) == 0x000D40, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_RigidBody' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_ComponentToLocalSpace_2) == 0x0016D0, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_ComponentToLocalSpace_2' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_ComponentToLocalSpace_1) == 0x0016F0, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_ComponentToLocalSpace_1' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_SaveCachedPose_1) == 0x001710, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_UseCachedPose_3) == 0x001810, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_LocalToComponentSpace_1) == 0x001838, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_LocalToComponentSpace_1' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_UseCachedPose_2) == 0x001858, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_UseCachedPose_1) == 0x001880, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_ModifyBone) == 0x0018A8, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_ModifyBone' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_LocalToComponentSpace) == 0x0019D0, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_ComponentToLocalSpace) == 0x0019F0, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_Slot) == 0x001A10, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_SaveCachedPose) == 0x001A58, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_TwoWayBlend) == 0x001B58, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_TwoWayBlend' has a wrong offset!");
-static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_UseCachedPose) == 0x001C18, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
+static_assert(sizeof(UHighTower_Tapas_Axe_AnimBP_C) == 0x0015B0, "Wrong size on UHighTower_Tapas_Axe_AnimBP_C");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, UberGraphFrame) == 0x0004B0, "Member 'UHighTower_Tapas_Axe_AnimBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimBlueprintClassSubsystem_PropertyAccess) == 0x0004B8, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimBlueprintClassSubsystem_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_LocalToComponentSpace_2) == 0x0004C0, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_LocalToComponentSpace_2' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_CopyPoseFromMesh) == 0x0004E0, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_CopyPoseFromMesh' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_Root) == 0x000620, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_Trail) == 0x000650, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_Trail' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_ModifyBone_1) == 0x0008B0, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_ModifyBone_1' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_BlendListByBool) == 0x0009B8, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_RigidBody) == 0x000A60, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_RigidBody' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_ComponentToLocalSpace_2) == 0x0010C0, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_ComponentToLocalSpace_2' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_ComponentToLocalSpace_1) == 0x0010E0, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_ComponentToLocalSpace_1' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_SaveCachedPose_1) == 0x001100, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_UseCachedPose_3) == 0x0011C8, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_LocalToComponentSpace_1) == 0x0011F0, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_LocalToComponentSpace_1' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_UseCachedPose_2) == 0x001210, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_UseCachedPose_1) == 0x001238, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_ModifyBone) == 0x001260, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_ModifyBone' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_LocalToComponentSpace) == 0x001368, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_ComponentToLocalSpace) == 0x001388, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_Slot) == 0x0013A8, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_Slot' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_SaveCachedPose) == 0x0013F0, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_TwoWayBlend) == 0x0014B8, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_TwoWayBlend' has a wrong offset!");
+static_assert(offsetof(UHighTower_Tapas_Axe_AnimBP_C, AnimGraphNode_UseCachedPose) == 0x001580, "Member 'UHighTower_Tapas_Axe_AnimBP_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
 
 }
 

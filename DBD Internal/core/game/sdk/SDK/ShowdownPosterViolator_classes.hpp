@@ -19,16 +19,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ShowdownPosterViolator.ShowdownPosterViolator_C
-// 0x0030 (0x0308 - 0x02D8)
+// 0x0038 (0x0300 - 0x02C8)
 class UShowdownPosterViolator_C final : public UFortTournamentPosterViolator
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonBorder*                          FutureEventViolator;                               // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          InformationViolator;                               // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          LiveEventViolator;                                 // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULiveViolator_C*                        LiveViolator;                                      // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          NoViolator;                                        // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonWidgetSwitcher*                  EventStateSwitcher;                                // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          FutureEventViolator;                               // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          InformationViolator;                               // 0x02E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          LiveEventViolator;                                 // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULiveViolator_C*                        LiveViolator;                                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          NoViolator;                                        // 0x02F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void OnViolatorStateRefreshed(ETournmentPosterViolatorState NewTimeState);
@@ -45,13 +46,14 @@ public:
 	}
 };
 static_assert(alignof(UShowdownPosterViolator_C) == 0x000008, "Wrong alignment on UShowdownPosterViolator_C");
-static_assert(sizeof(UShowdownPosterViolator_C) == 0x000308, "Wrong size on UShowdownPosterViolator_C");
-static_assert(offsetof(UShowdownPosterViolator_C, UberGraphFrame) == 0x0002D8, "Member 'UShowdownPosterViolator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UShowdownPosterViolator_C, FutureEventViolator) == 0x0002E0, "Member 'UShowdownPosterViolator_C::FutureEventViolator' has a wrong offset!");
-static_assert(offsetof(UShowdownPosterViolator_C, InformationViolator) == 0x0002E8, "Member 'UShowdownPosterViolator_C::InformationViolator' has a wrong offset!");
-static_assert(offsetof(UShowdownPosterViolator_C, LiveEventViolator) == 0x0002F0, "Member 'UShowdownPosterViolator_C::LiveEventViolator' has a wrong offset!");
-static_assert(offsetof(UShowdownPosterViolator_C, LiveViolator) == 0x0002F8, "Member 'UShowdownPosterViolator_C::LiveViolator' has a wrong offset!");
-static_assert(offsetof(UShowdownPosterViolator_C, NoViolator) == 0x000300, "Member 'UShowdownPosterViolator_C::NoViolator' has a wrong offset!");
+static_assert(sizeof(UShowdownPosterViolator_C) == 0x000300, "Wrong size on UShowdownPosterViolator_C");
+static_assert(offsetof(UShowdownPosterViolator_C, UberGraphFrame) == 0x0002C8, "Member 'UShowdownPosterViolator_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UShowdownPosterViolator_C, EventStateSwitcher) == 0x0002D0, "Member 'UShowdownPosterViolator_C::EventStateSwitcher' has a wrong offset!");
+static_assert(offsetof(UShowdownPosterViolator_C, FutureEventViolator) == 0x0002D8, "Member 'UShowdownPosterViolator_C::FutureEventViolator' has a wrong offset!");
+static_assert(offsetof(UShowdownPosterViolator_C, InformationViolator) == 0x0002E0, "Member 'UShowdownPosterViolator_C::InformationViolator' has a wrong offset!");
+static_assert(offsetof(UShowdownPosterViolator_C, LiveEventViolator) == 0x0002E8, "Member 'UShowdownPosterViolator_C::LiveEventViolator' has a wrong offset!");
+static_assert(offsetof(UShowdownPosterViolator_C, LiveViolator) == 0x0002F0, "Member 'UShowdownPosterViolator_C::LiveViolator' has a wrong offset!");
+static_assert(offsetof(UShowdownPosterViolator_C, NoViolator) == 0x0002F8, "Member 'UShowdownPosterViolator_C::NoViolator' has a wrong offset!");
 
 }
 

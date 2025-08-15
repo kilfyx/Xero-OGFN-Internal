@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UF5PlayerFactorySettings>();
 	}
 };
+static_assert(alignof(UF5PlayerFactorySettings) == 0x000008, "Wrong alignment on UF5PlayerFactorySettings");
+static_assert(sizeof(UF5PlayerFactorySettings) == 0x000028, "Wrong size on UF5PlayerFactorySettings");
 
 }
 

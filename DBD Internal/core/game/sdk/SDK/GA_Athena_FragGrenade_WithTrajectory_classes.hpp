@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "GA_Athena_Consumable_Throw_Parent_classes.hpp"
+#include "GA_ThrowConsumable_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_FragGrenade_WithTrajectory.GA_Athena_FragGrenade_WithTrajectory_C
-// 0x0000 (0x0E58 - 0x0E58)
-class UGA_Athena_FragGrenade_WithTrajectory_C final : public UGA_Athena_Consumable_Throw_Parent_C
+// 0x0000 (0x0E48 - 0x0E48)
+class UGA_Athena_FragGrenade_WithTrajectory_C final : public UGA_ThrowConsumable_C
 {
 public:
 	static class UClass* StaticClass()
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_FragGrenade_WithTrajectory_C>();
 	}
 };
+static_assert(alignof(UGA_Athena_FragGrenade_WithTrajectory_C) == 0x000008, "Wrong alignment on UGA_Athena_FragGrenade_WithTrajectory_C");
+static_assert(sizeof(UGA_Athena_FragGrenade_WithTrajectory_C) == 0x000E48, "Wrong size on UGA_Athena_FragGrenade_WithTrajectory_C");
 
 }
 

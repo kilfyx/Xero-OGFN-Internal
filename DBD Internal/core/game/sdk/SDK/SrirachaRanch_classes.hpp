@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // Class SrirachaRanch.RadioContentSourceItemDefinition
-// 0x0018 (0x03E0 - 0x03C8)
+// 0x0018 (0x03C0 - 0x03A8)
 class URadioContentSourceItemDefinition final : public UFortAccountItemDefinition
 {
 public:
-	class FString                                 ResourceID;                                        // 0x03C8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFortStreamMediaSource*                 MediaSource;                                       // 0x03D8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ResourceID;                                        // 0x03A8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFortStreamMediaSource*                 MediaSource;                                       // 0x03B8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -36,6 +36,10 @@ public:
 		return GetDefaultObjImpl<URadioContentSourceItemDefinition>();
 	}
 };
+static_assert(alignof(URadioContentSourceItemDefinition) == 0x000008, "Wrong alignment on URadioContentSourceItemDefinition");
+static_assert(sizeof(URadioContentSourceItemDefinition) == 0x0003C0, "Wrong size on URadioContentSourceItemDefinition");
+static_assert(offsetof(URadioContentSourceItemDefinition, ResourceID) == 0x0003A8, "Member 'URadioContentSourceItemDefinition::ResourceID' has a wrong offset!");
+static_assert(offsetof(URadioContentSourceItemDefinition, MediaSource) == 0x0003B8, "Member 'URadioContentSourceItemDefinition::MediaSource' has a wrong offset!");
 
 // Class SrirachaRanch.StreamingRadioAudioShapeComponent
 // 0x0038 (0x0168 - 0x0130)
@@ -57,6 +61,10 @@ public:
 		return GetDefaultObjImpl<UStreamingRadioAudioShapeComponent>();
 	}
 };
+static_assert(alignof(UStreamingRadioAudioShapeComponent) == 0x000008, "Wrong alignment on UStreamingRadioAudioShapeComponent");
+static_assert(sizeof(UStreamingRadioAudioShapeComponent) == 0x000168, "Wrong size on UStreamingRadioAudioShapeComponent");
+static_assert(offsetof(UStreamingRadioAudioShapeComponent, Radius) == 0x000130, "Member 'UStreamingRadioAudioShapeComponent::Radius' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioAudioShapeComponent, RadioPlayer) == 0x000138, "Member 'UStreamingRadioAudioShapeComponent::RadioPlayer' has a wrong offset!");
 
 // Class SrirachaRanch.SrirachaRanchComponentTemplateWrapper
 // 0x0008 (0x0038 - 0x0030)
@@ -75,9 +83,12 @@ public:
 		return GetDefaultObjImpl<USrirachaRanchComponentTemplateWrapper>();
 	}
 };
+static_assert(alignof(USrirachaRanchComponentTemplateWrapper) == 0x000008, "Wrong alignment on USrirachaRanchComponentTemplateWrapper");
+static_assert(sizeof(USrirachaRanchComponentTemplateWrapper) == 0x000038, "Wrong size on USrirachaRanchComponentTemplateWrapper");
+static_assert(offsetof(USrirachaRanchComponentTemplateWrapper, MediaSoundPlayerTemplate) == 0x000030, "Member 'USrirachaRanchComponentTemplateWrapper::MediaSoundPlayerTemplate' has a wrong offset!");
 
 // Class SrirachaRanch.StreamingRadioPlayerComponent
-// 0x0398 (0x0448 - 0x00B0)
+// 0x0378 (0x0428 - 0x00B0)
 class UStreamingRadioPlayerComponent : public UFortPawnComponent
 {
 public:
@@ -90,12 +101,12 @@ public:
 	TMulticastInlineDelegate<void(class UStreamingRadioPlayerComponent* Component, const struct FAthenaRadioStation& AffectedSource)> OnRadioExplicitStop; // 0x0150(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	float                                         PercentAutostartRadio;                             // 0x0160(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_164[0x4];                                      // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           DisabledVehicleList;                               // 0x0168(0x0010)(ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
+	TArray<class FName>                           DisabledVehicleList;                               // 0x0168(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TMap<class FName, float>                      ExteriorVolumeMultiplierMap;                       // 0x0178(0x0050)(Config, Protected, NativeAccessSpecifierProtected)
 	TMap<class FName, float>                      InteriorVolumeMultiplierMap;                       // 0x01C8(0x0050)(Config, Protected, NativeAccessSpecifierProtected)
 	bool                                          bMinimalStateOnPlatform;                           // 0x0218(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         DisabledStationList;                               // 0x0220(0x0010)(ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
+	TArray<class FString>                         DisabledStationList;                               // 0x0220(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bAutostartOnEntry;                                 // 0x0230(0x0001)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bDisabledForCurrentPlayerState;                    // 0x0231(0x0001)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_232[0x6];                                      // 0x0232(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
@@ -104,35 +115,39 @@ public:
 	class UStreamingRadioAudioShapeComponent*     AudioShape;                                        // 0x0288(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class USrirachaRanchComponentTemplateWrapper* SoundCompTemplateSource;                           // 0x0290(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FAthenaRadioStation                    LastSource;                                        // 0x0298(0x0038)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
-	TArray<class URadioContentSourceItemDefinition*> Sources;                                        // 0x02D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<class URadioContentSourceItemDefinition*> Sources;                                        // 0x02D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FAthenaRadioStation                    FallbackSource;                                    // 0x02E0(0x0038)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
 	TMap<class FName, struct FSrirachaPerClassSpecialSeats> SpecialSeatList;                         // 0x0318(0x0050)(Edit, Protected, NativeAccessSpecifierProtected)
 	class UMediaPlayer*                           MediaPlayer;                                       // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UFortMediaPlayerCtrl*                   MediaController;                                   // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USoundSubmixBase*                       DefaultSoundSubmix;                                // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USoundSubmixBase*                       LicensedSoundSubmix;                               // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UFortStreamMediaSource*                 LastMediaSource;                                   // 0x0388(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UFortStreamMediaSource*                 IncomingMediaSource;                               // 0x0390(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ERadioSource                                  CurrentMode;                                       // 0x0398(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_399[0x3];                                      // 0x0399(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaximumRetries;                                    // 0x039C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         FadeoutWhenUnpoweredInMS;                          // 0x03A0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         FadeoutWhenOwnerBeingDestroyedInMS;                // 0x03A4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         MaxFadeoutTimeMS;                                  // 0x03A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         DefaultPlayingIndex;                               // 0x03AC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USoundMix*                              SoundMixInside;                                    // 0x03B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USoundMix*                              SoundMixOutside;                                   // 0x03B8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3C0[0x4];                                      // 0x03C0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ActivationRadius;                                  // 0x03C4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FName                                   ComponentToAttachTo;                               // 0x03C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FName                                   ComponentSocketAttachTo;                           // 0x03D0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UFortStreamMediaSource*                 MediaSource;                                       // 0x03D8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<struct FAthenaRadioStation>            RadioStationList;                                  // 0x03E0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	class UObject*                                DelegateContextObject;                             // 0x03F0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MediaStartTimeFromInit;                            // 0x03F8(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3FC[0x4C];                                     // 0x03FC(0x004C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UFortStreamMediaSource*                 LastMediaSource;                                   // 0x0378(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UFortStreamMediaSource*                 IncomingMediaSource;                               // 0x0380(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ERadioSource                                  CurrentMode;                                       // 0x0388(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_389[0x3];                                      // 0x0389(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaximumRetries;                                    // 0x038C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         FadeoutWhenUnpoweredInMS;                          // 0x0390(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         FadeoutWhenOwnerBeingDestroyedInMS;                // 0x0394(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         MaxFadeoutTimeMS;                                  // 0x0398(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         DefaultPlayingIndex;                               // 0x039C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USoundMix*                              SoundMixInside;                                    // 0x03A0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USoundMix*                              SoundMixOutside;                                   // 0x03A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3B0[0x4];                                      // 0x03B0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ActivationRadius;                                  // 0x03B4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   ComponentToAttachTo;                               // 0x03B8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   ComponentSocketAttachTo;                           // 0x03C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UFortStreamMediaSource*                 MediaSource;                                       // 0x03C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FAthenaRadioStation>            RadioStationList;                                  // 0x03D0(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UObject*                                DelegateContextObject;                             // 0x03E0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MediaStartTimeFromInit;                            // 0x03E8(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3EC[0x3C];                                     // 0x03EC(0x003C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	void AuthPlayIndex(int32 Index_0);
+	void AuthSaveAutoStart(bool bAutoStart);
+	void AuthSavedSource(const struct FAthenaRadioStation& Source);
+	void AuthSaveFadeOutTime(float FadeoutSeconds);
+	void AuthSetDisabledForCurrentPlayerState(bool bShouldDisableForCurrentPlayerState);
+	void AuthStopRadio();
 	void MediaExplicitClose(bool bReallyExplicit);
 	void MediaFailedToOpen(const class FString& String);
 	void MediaFinishedOrClosed();
@@ -143,7 +158,6 @@ public:
 	void NativeOnPawnEnterVehicle(const TScriptInterface<class IFortVehicleInterface>& Vehicle, class AFortPawn* PlayerPawn, int32 SeatIndex);
 	void NativeOnPawnExitSeat(const TScriptInterface<class IFortVehicleInterface>& Vehicle, class AFortPawn* PlayerPawn, int32 SeatIndex);
 	void NativeOnPawnExitVehicle(const TScriptInterface<class IFortVehicleInterface>& Vehicle, class AFortPawn* PlayerPawn, int32 SeatIndex);
-	void NativeOnVehicleOwnerChanged(const TScriptInterface<class IFortVehicleInterface>& Vehicle, const class AActor* NewOwner, const class AActor* PrevOwner);
 	void OnFailedURL(const class FString& URL);
 	void OnLicensedAudioSettingChanged(class UFortClientSettingsRecord* Settings);
 	void OnOwnerExploded();
@@ -161,12 +175,6 @@ public:
 	void PlayDefaultIndex();
 	void PlayNextIndex();
 	void PlayPrevIndex();
-	void ServerPlayIndex(const int32 InIndex, const EStreamingRadioSourceState InState);
-	void ServerSaveAutoStart(const bool bInAutoStart);
-	void ServerSavedSource(const struct FAthenaRadioStation& InSource);
-	void ServerSaveFadeOutTime(const float InFadeOutSeconds);
-	void ServerSetDisabledForCurrentPlayerState(const bool bInDisableForCurrentPlayerState);
-	void ServerStopRadio();
 	void SetExteriorVolume(const TScriptInterface<class IFortVehicleInterface>& Vehicle);
 	void SetInteriorVolume(const TScriptInterface<class IFortVehicleInterface>& Vehicle);
 	void SoundMixUpdateTargetingState(bool bNewIsTargeting);
@@ -191,6 +199,49 @@ public:
 		return GetDefaultObjImpl<UStreamingRadioPlayerComponent>();
 	}
 };
+static_assert(alignof(UStreamingRadioPlayerComponent) == 0x000008, "Wrong alignment on UStreamingRadioPlayerComponent");
+static_assert(sizeof(UStreamingRadioPlayerComponent) == 0x000428, "Wrong size on UStreamingRadioPlayerComponent");
+static_assert(offsetof(UStreamingRadioPlayerComponent, InputMappingData) == 0x0000C0, "Member 'UStreamingRadioPlayerComponent::InputMappingData' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, OnSourceLoading) == 0x000110, "Member 'UStreamingRadioPlayerComponent::OnSourceLoading' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, OnSourcePlayed) == 0x000120, "Member 'UStreamingRadioPlayerComponent::OnSourcePlayed' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, OnSourceStopped) == 0x000130, "Member 'UStreamingRadioPlayerComponent::OnSourceStopped' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, OnSourceFailed) == 0x000140, "Member 'UStreamingRadioPlayerComponent::OnSourceFailed' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, OnRadioExplicitStop) == 0x000150, "Member 'UStreamingRadioPlayerComponent::OnRadioExplicitStop' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, PercentAutostartRadio) == 0x000160, "Member 'UStreamingRadioPlayerComponent::PercentAutostartRadio' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, DisabledVehicleList) == 0x000168, "Member 'UStreamingRadioPlayerComponent::DisabledVehicleList' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, ExteriorVolumeMultiplierMap) == 0x000178, "Member 'UStreamingRadioPlayerComponent::ExteriorVolumeMultiplierMap' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, InteriorVolumeMultiplierMap) == 0x0001C8, "Member 'UStreamingRadioPlayerComponent::InteriorVolumeMultiplierMap' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, bMinimalStateOnPlatform) == 0x000218, "Member 'UStreamingRadioPlayerComponent::bMinimalStateOnPlatform' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, DisabledStationList) == 0x000220, "Member 'UStreamingRadioPlayerComponent::DisabledStationList' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, bAutostartOnEntry) == 0x000230, "Member 'UStreamingRadioPlayerComponent::bAutostartOnEntry' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, bDisabledForCurrentPlayerState) == 0x000231, "Member 'UStreamingRadioPlayerComponent::bDisabledForCurrentPlayerState' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, ReplicatedRadioSourceData) == 0x000238, "Member 'UStreamingRadioPlayerComponent::ReplicatedRadioSourceData' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, SoundComponent) == 0x000280, "Member 'UStreamingRadioPlayerComponent::SoundComponent' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, AudioShape) == 0x000288, "Member 'UStreamingRadioPlayerComponent::AudioShape' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, SoundCompTemplateSource) == 0x000290, "Member 'UStreamingRadioPlayerComponent::SoundCompTemplateSource' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, LastSource) == 0x000298, "Member 'UStreamingRadioPlayerComponent::LastSource' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, Sources) == 0x0002D0, "Member 'UStreamingRadioPlayerComponent::Sources' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, FallbackSource) == 0x0002E0, "Member 'UStreamingRadioPlayerComponent::FallbackSource' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, SpecialSeatList) == 0x000318, "Member 'UStreamingRadioPlayerComponent::SpecialSeatList' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, MediaPlayer) == 0x000368, "Member 'UStreamingRadioPlayerComponent::MediaPlayer' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, MediaController) == 0x000370, "Member 'UStreamingRadioPlayerComponent::MediaController' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, LastMediaSource) == 0x000378, "Member 'UStreamingRadioPlayerComponent::LastMediaSource' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, IncomingMediaSource) == 0x000380, "Member 'UStreamingRadioPlayerComponent::IncomingMediaSource' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, CurrentMode) == 0x000388, "Member 'UStreamingRadioPlayerComponent::CurrentMode' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, MaximumRetries) == 0x00038C, "Member 'UStreamingRadioPlayerComponent::MaximumRetries' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, FadeoutWhenUnpoweredInMS) == 0x000390, "Member 'UStreamingRadioPlayerComponent::FadeoutWhenUnpoweredInMS' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, FadeoutWhenOwnerBeingDestroyedInMS) == 0x000394, "Member 'UStreamingRadioPlayerComponent::FadeoutWhenOwnerBeingDestroyedInMS' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, MaxFadeoutTimeMS) == 0x000398, "Member 'UStreamingRadioPlayerComponent::MaxFadeoutTimeMS' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, DefaultPlayingIndex) == 0x00039C, "Member 'UStreamingRadioPlayerComponent::DefaultPlayingIndex' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, SoundMixInside) == 0x0003A0, "Member 'UStreamingRadioPlayerComponent::SoundMixInside' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, SoundMixOutside) == 0x0003A8, "Member 'UStreamingRadioPlayerComponent::SoundMixOutside' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, ActivationRadius) == 0x0003B4, "Member 'UStreamingRadioPlayerComponent::ActivationRadius' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, ComponentToAttachTo) == 0x0003B8, "Member 'UStreamingRadioPlayerComponent::ComponentToAttachTo' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, ComponentSocketAttachTo) == 0x0003C0, "Member 'UStreamingRadioPlayerComponent::ComponentSocketAttachTo' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, MediaSource) == 0x0003C8, "Member 'UStreamingRadioPlayerComponent::MediaSource' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, RadioStationList) == 0x0003D0, "Member 'UStreamingRadioPlayerComponent::RadioStationList' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, DelegateContextObject) == 0x0003E0, "Member 'UStreamingRadioPlayerComponent::DelegateContextObject' has a wrong offset!");
+static_assert(offsetof(UStreamingRadioPlayerComponent, MediaStartTimeFromInit) == 0x0003E8, "Member 'UStreamingRadioPlayerComponent::MediaStartTimeFromInit' has a wrong offset!");
 
 }
 

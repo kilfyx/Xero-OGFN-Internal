@@ -25,9 +25,9 @@ namespace SDK
 void UShowdownPosterViolator_C::OnViolatorStateRefreshed(ETournmentPosterViolatorState NewTimeState)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnViolatorStateRefreshed");
+		Func = Class->GetFunction("ShowdownPosterViolator_C", "OnViolatorStateRefreshed");
 
 	Params::ShowdownPosterViolator_C_OnViolatorStateRefreshed Parms{};
 
@@ -45,9 +45,9 @@ void UShowdownPosterViolator_C::OnViolatorStateRefreshed(ETournmentPosterViolato
 void UShowdownPosterViolator_C::ExecuteUbergraph_ShowdownPosterViolator(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_ShowdownPosterViolator");
+		Func = Class->GetFunction("ShowdownPosterViolator_C", "ExecuteUbergraph_ShowdownPosterViolator");
 
 	Params::ShowdownPosterViolator_C_ExecuteUbergraph_ShowdownPosterViolator Parms{};
 

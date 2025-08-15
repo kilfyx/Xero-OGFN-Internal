@@ -25,10 +25,10 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void Owning_Actor_Activated();
 	void ExecuteUbergraph_Creative_DeviceComponent_Parent(int32 EntryPoint);
 	void ReceiveBeginPlay();
 	void Owning_Actor_Initialized();
+	void Owning_Actor_Activated();
 
 public:
 	static class UClass* StaticClass()
@@ -40,6 +40,9 @@ public:
 		return GetDefaultObjImpl<UCreative_DeviceComponent_Parent_C>();
 	}
 };
+static_assert(alignof(UCreative_DeviceComponent_Parent_C) == 0x000008, "Wrong alignment on UCreative_DeviceComponent_Parent_C");
+static_assert(sizeof(UCreative_DeviceComponent_Parent_C) == 0x0000B8, "Wrong size on UCreative_DeviceComponent_Parent_C");
+static_assert(offsetof(UCreative_DeviceComponent_Parent_C, UberGraphFrame) == 0x0000B0, "Member 'UCreative_DeviceComponent_Parent_C::UberGraphFrame' has a wrong offset!");
 
 }
 

@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UHarvest_CameraShake_C>();
 	}
 };
+static_assert(alignof(UHarvest_CameraShake_C) == 0x000010, "Wrong alignment on UHarvest_CameraShake_C");
+static_assert(sizeof(UHarvest_CameraShake_C) == 0x0001B0, "Wrong size on UHarvest_CameraShake_C");
 
 }
 

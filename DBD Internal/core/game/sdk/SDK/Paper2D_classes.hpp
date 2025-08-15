@@ -39,6 +39,11 @@ public:
 		return GetDefaultObjImpl<UPaperRuntimeSettings>();
 	}
 };
+static_assert(alignof(UPaperRuntimeSettings) == 0x000008, "Wrong alignment on UPaperRuntimeSettings");
+static_assert(sizeof(UPaperRuntimeSettings) == 0x000030, "Wrong size on UPaperRuntimeSettings");
+static_assert(offsetof(UPaperRuntimeSettings, bEnableSpriteAtlasGroups) == 0x000028, "Member 'UPaperRuntimeSettings::bEnableSpriteAtlasGroups' has a wrong offset!");
+static_assert(offsetof(UPaperRuntimeSettings, bEnableTerrainSplineEditing) == 0x000029, "Member 'UPaperRuntimeSettings::bEnableTerrainSplineEditing' has a wrong offset!");
+static_assert(offsetof(UPaperRuntimeSettings, bResizeSpriteDataToMatchTextures) == 0x00002A, "Member 'UPaperRuntimeSettings::bResizeSpriteDataToMatchTextures' has a wrong offset!");
 
 // Class Paper2D.MaterialExpressionSpriteTextureSampler
 // 0x0020 (0x00A0 - 0x0080)
@@ -60,13 +65,18 @@ public:
 		return GetDefaultObjImpl<UMaterialExpressionSpriteTextureSampler>();
 	}
 };
+static_assert(alignof(UMaterialExpressionSpriteTextureSampler) == 0x000008, "Wrong alignment on UMaterialExpressionSpriteTextureSampler");
+static_assert(sizeof(UMaterialExpressionSpriteTextureSampler) == 0x0000A0, "Wrong size on UMaterialExpressionSpriteTextureSampler");
+static_assert(offsetof(UMaterialExpressionSpriteTextureSampler, bSampleAdditionalTextures) == 0x000080, "Member 'UMaterialExpressionSpriteTextureSampler::bSampleAdditionalTextures' has a wrong offset!");
+static_assert(offsetof(UMaterialExpressionSpriteTextureSampler, AdditionalSlotIndex) == 0x000084, "Member 'UMaterialExpressionSpriteTextureSampler::AdditionalSlotIndex' has a wrong offset!");
+static_assert(offsetof(UMaterialExpressionSpriteTextureSampler, SlotDisplayName) == 0x000088, "Member 'UMaterialExpressionSpriteTextureSampler::SlotDisplayName' has a wrong offset!");
 
 // Class Paper2D.PaperCharacter
 // 0x0000 (0x04C0 - 0x04C0)
 class APaperCharacter final : public ACharacter
 {
 public:
-	class UPaperFlipbookComponent*                Sprite;                                            // 0x04B8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperFlipbookComponent*                Sprite;                                            // 0x04B8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -78,6 +88,9 @@ public:
 		return GetDefaultObjImpl<APaperCharacter>();
 	}
 };
+static_assert(alignof(APaperCharacter) == 0x000010, "Wrong alignment on APaperCharacter");
+static_assert(sizeof(APaperCharacter) == 0x0004C0, "Wrong size on APaperCharacter");
+static_assert(offsetof(APaperCharacter, Sprite) == 0x0004B8, "Member 'APaperCharacter::Sprite' has a wrong offset!");
 
 // Class Paper2D.PaperFlipbook
 // 0x0028 (0x0050 - 0x0028)
@@ -86,8 +99,8 @@ class UPaperFlipbook final : public UObject
 public:
 	float                                         FramesPerSecond;                                   // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPaperFlipbookKeyFrame>         KeyFrames;                                         // 0x0030(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     DefaultMaterial;                                   // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FPaperFlipbookKeyFrame>         KeyFrames;                                         // 0x0030(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInterface*                     DefaultMaterial;                                   // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EFlipbookCollisionMode                        CollisionSource;                                   // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -110,50 +123,19 @@ public:
 		return GetDefaultObjImpl<UPaperFlipbook>();
 	}
 };
-
-// Class Paper2D.PaperTileMap
-// 0x0080 (0x00A8 - 0x0028)
-class UPaperTileMap final : public UObject
-{
-public:
-	int32                                         MapWidth;                                          // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MapHeight;                                         // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TileWidth;                                         // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TileHeight;                                        // 0x0034(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PixelsPerUnrealUnit;                               // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SeparationPerTileX;                                // 0x003C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SeparationPerTileY;                                // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SeparationPerLayer;                                // 0x0044(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UPaperTileSet>           SelectedTileSet;                                   // 0x0048(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     Material;                                          // 0x0070(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UPaperTileLayer*>                TileLayers;                                        // 0x0078(0x0010)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	float                                         CollisionThickness;                                // 0x0088(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ESpriteCollisionMode                          SpriteCollisionDomain;                             // 0x008C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ETileMapProjectionMode                        ProjectionMode;                                    // 0x008D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8E[0x2];                                       // 0x008E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         HexSideLength;                                     // 0x0090(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBodySetup*                             BodySetup;                                         // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LayerNameIndex;                                    // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PaperTileMap">();
-	}
-	static class UPaperTileMap* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPaperTileMap>();
-	}
-};
+static_assert(alignof(UPaperFlipbook) == 0x000008, "Wrong alignment on UPaperFlipbook");
+static_assert(sizeof(UPaperFlipbook) == 0x000050, "Wrong size on UPaperFlipbook");
+static_assert(offsetof(UPaperFlipbook, FramesPerSecond) == 0x000028, "Member 'UPaperFlipbook::FramesPerSecond' has a wrong offset!");
+static_assert(offsetof(UPaperFlipbook, KeyFrames) == 0x000030, "Member 'UPaperFlipbook::KeyFrames' has a wrong offset!");
+static_assert(offsetof(UPaperFlipbook, DefaultMaterial) == 0x000040, "Member 'UPaperFlipbook::DefaultMaterial' has a wrong offset!");
+static_assert(offsetof(UPaperFlipbook, CollisionSource) == 0x000048, "Member 'UPaperFlipbook::CollisionSource' has a wrong offset!");
 
 // Class Paper2D.PaperFlipbookActor
 // 0x0008 (0x0228 - 0x0220)
 class APaperFlipbookActor final : public AActor
 {
 public:
-	class UPaperFlipbookComponent*                RenderComponent;                                   // 0x0220(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperFlipbookComponent*                RenderComponent;                                   // 0x0220(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -165,24 +147,28 @@ public:
 		return GetDefaultObjImpl<APaperFlipbookActor>();
 	}
 };
+static_assert(alignof(APaperFlipbookActor) == 0x000008, "Wrong alignment on APaperFlipbookActor");
+static_assert(sizeof(APaperFlipbookActor) == 0x000228, "Wrong size on APaperFlipbookActor");
+static_assert(offsetof(APaperFlipbookActor, RenderComponent) == 0x000220, "Member 'APaperFlipbookActor::RenderComponent' has a wrong offset!");
 
 // Class Paper2D.PaperFlipbookComponent
-// 0x0040 (0x04C0 - 0x0480)
+// 0x0050 (0x04C0 - 0x0470)
 class UPaperFlipbookComponent final : public UMeshComponent
 {
 public:
-	class UPaperFlipbook*                         SourceFlipbook;                                    // 0x0478(0x0008)(Edit, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     Material;                                          // 0x0480(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         PlayRate;                                          // 0x0488(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         bLooping : 1;                                      // 0x048C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bReversePlayback : 1;                              // 0x048C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bPlaying : 1;                                      // 0x048C(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_48D[0x3];                                      // 0x048D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AccumulatedTime;                                   // 0x0490(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         CachedFrameIndex;                                  // 0x0494(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FLinearColor                           SpriteColor;                                       // 0x0498(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBodySetup*                             CachedBodySetup;                                   // 0x04A8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void()>              OnFinishedPlaying;                                 // 0x04B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UPaperFlipbook*                         SourceFlipbook;                                    // 0x0470(0x0008)(Edit, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInterface*                     Material;                                          // 0x0478(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         PlayRate;                                          // 0x0480(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         bLooping : 1;                                      // 0x0484(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bReversePlayback : 1;                              // 0x0484(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bPlaying : 1;                                      // 0x0484(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_485[0x3];                                      // 0x0485(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AccumulatedTime;                                   // 0x0488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         CachedFrameIndex;                                  // 0x048C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FLinearColor                           SpriteColor;                                       // 0x0490(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBodySetup*                             CachedBodySetup;                                   // 0x04A0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void()>              OnFinishedPlaying;                                 // 0x04A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4B8[0x8];                                      // 0x04B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class UPaperFlipbook* GetFlipbook();
@@ -206,7 +192,6 @@ public:
 	float GetPlaybackPosition() const;
 	int32 GetPlaybackPositionInFrames() const;
 	float GetPlayRate() const;
-	struct FLinearColor GetSpriteColor() const;
 	bool IsLooping() const;
 	bool IsPlaying() const;
 	bool IsReversing() const;
@@ -221,39 +206,23 @@ public:
 		return GetDefaultObjImpl<UPaperFlipbookComponent>();
 	}
 };
-
-// Class Paper2D.PaperSpriteComponent
-// 0x0020 (0x04A0 - 0x0480)
-class UPaperSpriteComponent final : public UMeshComponent
-{
-public:
-	class UPaperSprite*                           SourceSprite;                                      // 0x0478(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     MaterialOverride;                                  // 0x0480(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FLinearColor                           SpriteColor;                                       // 0x0488(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_498[0x8];                                      // 0x0498(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UPaperSprite* GetSprite();
-	bool SetSprite(class UPaperSprite* NewSprite);
-	void SetSpriteColor(const struct FLinearColor& NewColor);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PaperSpriteComponent">();
-	}
-	static class UPaperSpriteComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPaperSpriteComponent>();
-	}
-};
+static_assert(alignof(UPaperFlipbookComponent) == 0x000010, "Wrong alignment on UPaperFlipbookComponent");
+static_assert(sizeof(UPaperFlipbookComponent) == 0x0004C0, "Wrong size on UPaperFlipbookComponent");
+static_assert(offsetof(UPaperFlipbookComponent, SourceFlipbook) == 0x000470, "Member 'UPaperFlipbookComponent::SourceFlipbook' has a wrong offset!");
+static_assert(offsetof(UPaperFlipbookComponent, Material) == 0x000478, "Member 'UPaperFlipbookComponent::Material' has a wrong offset!");
+static_assert(offsetof(UPaperFlipbookComponent, PlayRate) == 0x000480, "Member 'UPaperFlipbookComponent::PlayRate' has a wrong offset!");
+static_assert(offsetof(UPaperFlipbookComponent, AccumulatedTime) == 0x000488, "Member 'UPaperFlipbookComponent::AccumulatedTime' has a wrong offset!");
+static_assert(offsetof(UPaperFlipbookComponent, CachedFrameIndex) == 0x00048C, "Member 'UPaperFlipbookComponent::CachedFrameIndex' has a wrong offset!");
+static_assert(offsetof(UPaperFlipbookComponent, SpriteColor) == 0x000490, "Member 'UPaperFlipbookComponent::SpriteColor' has a wrong offset!");
+static_assert(offsetof(UPaperFlipbookComponent, CachedBodySetup) == 0x0004A0, "Member 'UPaperFlipbookComponent::CachedBodySetup' has a wrong offset!");
+static_assert(offsetof(UPaperFlipbookComponent, OnFinishedPlaying) == 0x0004A8, "Member 'UPaperFlipbookComponent::OnFinishedPlaying' has a wrong offset!");
 
 // Class Paper2D.PaperGroupedSpriteActor
 // 0x0008 (0x0228 - 0x0220)
 class APaperGroupedSpriteActor final : public AActor
 {
 public:
-	class UPaperGroupedSpriteComponent*           RenderComponent;                                   // 0x0220(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperGroupedSpriteComponent*           RenderComponent;                                   // 0x0220(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -265,15 +234,18 @@ public:
 		return GetDefaultObjImpl<APaperGroupedSpriteActor>();
 	}
 };
+static_assert(alignof(APaperGroupedSpriteActor) == 0x000008, "Wrong alignment on APaperGroupedSpriteActor");
+static_assert(sizeof(APaperGroupedSpriteActor) == 0x000228, "Wrong size on APaperGroupedSpriteActor");
+static_assert(offsetof(APaperGroupedSpriteActor, RenderComponent) == 0x000220, "Member 'APaperGroupedSpriteActor::RenderComponent' has a wrong offset!");
 
 // Class Paper2D.PaperGroupedSpriteComponent
-// 0x0030 (0x04B0 - 0x0480)
+// 0x0030 (0x04A0 - 0x0470)
 class UPaperGroupedSpriteComponent final : public UMeshComponent
 {
 public:
-	TArray<class UMaterialInterface*>             InstanceMaterials;                                 // 0x0478(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TArray<struct FSpriteInstanceData>            PerInstanceSpriteData;                             // 0x0488(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_498[0x18];                                     // 0x0498(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             InstanceMaterials;                                 // 0x0470(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FSpriteInstanceData>            PerInstanceSpriteData;                             // 0x0480(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_490[0x10];                                     // 0x0490(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	int32 AddInstance(const struct FTransform& Transform, class UPaperSprite* Sprite, bool bWorldSpace, const struct FLinearColor& Color);
@@ -296,6 +268,10 @@ public:
 		return GetDefaultObjImpl<UPaperGroupedSpriteComponent>();
 	}
 };
+static_assert(alignof(UPaperGroupedSpriteComponent) == 0x000010, "Wrong alignment on UPaperGroupedSpriteComponent");
+static_assert(sizeof(UPaperGroupedSpriteComponent) == 0x0004A0, "Wrong size on UPaperGroupedSpriteComponent");
+static_assert(offsetof(UPaperGroupedSpriteComponent, InstanceMaterials) == 0x000470, "Member 'UPaperGroupedSpriteComponent::InstanceMaterials' has a wrong offset!");
+static_assert(offsetof(UPaperGroupedSpriteComponent, PerInstanceSpriteData) == 0x000480, "Member 'UPaperGroupedSpriteComponent::PerInstanceSpriteData' has a wrong offset!");
 
 // Class Paper2D.PaperSprite
 // 0x0080 (0x00A8 - 0x0028)
@@ -303,20 +279,20 @@ class UPaperSprite final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UTexture*>                       AdditionalSourceTextures;                          // 0x0038(0x0010)(Edit, ZeroConstructor, AssetRegistrySearchable, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UTexture*>                       AdditionalSourceTextures;                          // 0x0038(0x0010)(Edit, ZeroConstructor, AssetRegistrySearchable, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector2D                              BakedSourceUV;                                     // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector2D                              BakedSourceDimension;                              // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTexture2D*                             BakedSourceTexture;                                // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     DefaultMaterial;                                   // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     AlternateMaterial;                                 // 0x0068(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<struct FPaperSpriteSocket>             Sockets;                                           // 0x0070(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	class UTexture2D*                             BakedSourceTexture;                                // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInterface*                     DefaultMaterial;                                   // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInterface*                     AlternateMaterial;                                 // 0x0068(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FPaperSpriteSocket>             Sockets;                                           // 0x0070(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	ESpriteCollisionMode                          SpriteCollisionDomain;                             // 0x0080(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         PixelsPerUnrealUnit;                               // 0x0084(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBodySetup*                             BodySetup;                                         // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBodySetup*                             BodySetup;                                         // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AlternateMaterialSplitIndex;                       // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVector4>                       BakedRenderData;                                   // 0x0098(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FVector4>                       BakedRenderData;                                   // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -328,31 +304,27 @@ public:
 		return GetDefaultObjImpl<UPaperSprite>();
 	}
 };
-
-// Class Paper2D.PaperTerrainSplineComponent
-// 0x0010 (0x0560 - 0x0550)
-class UPaperTerrainSplineComponent final : public USplineComponent
-{
-public:
-	uint8                                         Pad_548[0x18];                                     // 0x0548(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PaperTerrainSplineComponent">();
-	}
-	static class UPaperTerrainSplineComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPaperTerrainSplineComponent>();
-	}
-};
+static_assert(alignof(UPaperSprite) == 0x000008, "Wrong alignment on UPaperSprite");
+static_assert(sizeof(UPaperSprite) == 0x0000A8, "Wrong size on UPaperSprite");
+static_assert(offsetof(UPaperSprite, AdditionalSourceTextures) == 0x000038, "Member 'UPaperSprite::AdditionalSourceTextures' has a wrong offset!");
+static_assert(offsetof(UPaperSprite, BakedSourceUV) == 0x000048, "Member 'UPaperSprite::BakedSourceUV' has a wrong offset!");
+static_assert(offsetof(UPaperSprite, BakedSourceDimension) == 0x000050, "Member 'UPaperSprite::BakedSourceDimension' has a wrong offset!");
+static_assert(offsetof(UPaperSprite, BakedSourceTexture) == 0x000058, "Member 'UPaperSprite::BakedSourceTexture' has a wrong offset!");
+static_assert(offsetof(UPaperSprite, DefaultMaterial) == 0x000060, "Member 'UPaperSprite::DefaultMaterial' has a wrong offset!");
+static_assert(offsetof(UPaperSprite, AlternateMaterial) == 0x000068, "Member 'UPaperSprite::AlternateMaterial' has a wrong offset!");
+static_assert(offsetof(UPaperSprite, Sockets) == 0x000070, "Member 'UPaperSprite::Sockets' has a wrong offset!");
+static_assert(offsetof(UPaperSprite, SpriteCollisionDomain) == 0x000080, "Member 'UPaperSprite::SpriteCollisionDomain' has a wrong offset!");
+static_assert(offsetof(UPaperSprite, PixelsPerUnrealUnit) == 0x000084, "Member 'UPaperSprite::PixelsPerUnrealUnit' has a wrong offset!");
+static_assert(offsetof(UPaperSprite, BodySetup) == 0x000088, "Member 'UPaperSprite::BodySetup' has a wrong offset!");
+static_assert(offsetof(UPaperSprite, AlternateMaterialSplitIndex) == 0x000090, "Member 'UPaperSprite::AlternateMaterialSplitIndex' has a wrong offset!");
+static_assert(offsetof(UPaperSprite, BakedRenderData) == 0x000098, "Member 'UPaperSprite::BakedRenderData' has a wrong offset!");
 
 // Class Paper2D.PaperSpriteActor
 // 0x0008 (0x0228 - 0x0220)
 class APaperSpriteActor final : public AActor
 {
 public:
-	class UPaperSpriteComponent*                  RenderComponent;                                   // 0x0220(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperSpriteComponent*                  RenderComponent;                                   // 0x0220(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -364,6 +336,9 @@ public:
 		return GetDefaultObjImpl<APaperSpriteActor>();
 	}
 };
+static_assert(alignof(APaperSpriteActor) == 0x000008, "Wrong alignment on APaperSpriteActor");
+static_assert(sizeof(APaperSpriteActor) == 0x000228, "Wrong size on APaperSpriteActor");
+static_assert(offsetof(APaperSpriteActor, RenderComponent) == 0x000220, "Member 'APaperSpriteActor::RenderComponent' has a wrong offset!");
 
 // Class Paper2D.PaperSpriteAtlas
 // 0x0000 (0x0028 - 0x0028)
@@ -379,6 +354,8 @@ public:
 		return GetDefaultObjImpl<UPaperSpriteAtlas>();
 	}
 };
+static_assert(alignof(UPaperSpriteAtlas) == 0x000008, "Wrong alignment on UPaperSpriteAtlas");
+static_assert(sizeof(UPaperSpriteAtlas) == 0x000028, "Wrong size on UPaperSpriteAtlas");
 
 // Class Paper2D.PaperSpriteBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -397,15 +374,47 @@ public:
 		return GetDefaultObjImpl<UPaperSpriteBlueprintLibrary>();
 	}
 };
+static_assert(alignof(UPaperSpriteBlueprintLibrary) == 0x000008, "Wrong alignment on UPaperSpriteBlueprintLibrary");
+static_assert(sizeof(UPaperSpriteBlueprintLibrary) == 0x000028, "Wrong size on UPaperSpriteBlueprintLibrary");
+
+// Class Paper2D.PaperSpriteComponent
+// 0x0020 (0x0490 - 0x0470)
+class UPaperSpriteComponent final : public UMeshComponent
+{
+public:
+	class UPaperSprite*                           SourceSprite;                                      // 0x0470(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInterface*                     MaterialOverride;                                  // 0x0478(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FLinearColor                           SpriteColor;                                       // 0x0480(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	class UPaperSprite* GetSprite();
+	bool SetSprite(class UPaperSprite* NewSprite);
+	void SetSpriteColor(const struct FLinearColor& NewColor);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PaperSpriteComponent">();
+	}
+	static class UPaperSpriteComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPaperSpriteComponent>();
+	}
+};
+static_assert(alignof(UPaperSpriteComponent) == 0x000010, "Wrong alignment on UPaperSpriteComponent");
+static_assert(sizeof(UPaperSpriteComponent) == 0x000490, "Wrong size on UPaperSpriteComponent");
+static_assert(offsetof(UPaperSpriteComponent, SourceSprite) == 0x000470, "Member 'UPaperSpriteComponent::SourceSprite' has a wrong offset!");
+static_assert(offsetof(UPaperSpriteComponent, MaterialOverride) == 0x000478, "Member 'UPaperSpriteComponent::MaterialOverride' has a wrong offset!");
+static_assert(offsetof(UPaperSpriteComponent, SpriteColor) == 0x000480, "Member 'UPaperSpriteComponent::SpriteColor' has a wrong offset!");
 
 // Class Paper2D.PaperTerrainActor
 // 0x0018 (0x0238 - 0x0220)
 class APaperTerrainActor final : public AActor
 {
 public:
-	class USceneComponent*                        DummyRoot;                                         // 0x0220(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPaperTerrainSplineComponent*           SplineComponent;                                   // 0x0228(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPaperTerrainComponent*                 RenderComponent;                                   // 0x0230(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class USceneComponent*                        DummyRoot;                                         // 0x0220(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperTerrainSplineComponent*           SplineComponent;                                   // 0x0228(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperTerrainComponent*                 RenderComponent;                                   // 0x0230(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -417,27 +426,32 @@ public:
 		return GetDefaultObjImpl<APaperTerrainActor>();
 	}
 };
+static_assert(alignof(APaperTerrainActor) == 0x000008, "Wrong alignment on APaperTerrainActor");
+static_assert(sizeof(APaperTerrainActor) == 0x000238, "Wrong size on APaperTerrainActor");
+static_assert(offsetof(APaperTerrainActor, DummyRoot) == 0x000220, "Member 'APaperTerrainActor::DummyRoot' has a wrong offset!");
+static_assert(offsetof(APaperTerrainActor, SplineComponent) == 0x000228, "Member 'APaperTerrainActor::SplineComponent' has a wrong offset!");
+static_assert(offsetof(APaperTerrainActor, RenderComponent) == 0x000230, "Member 'APaperTerrainActor::RenderComponent' has a wrong offset!");
 
 // Class Paper2D.PaperTerrainComponent
-// 0x0060 (0x04B0 - 0x0450)
+// 0x0050 (0x04A0 - 0x0450)
 class UPaperTerrainComponent final : public UPrimitiveComponent
 {
 public:
-	class UPaperTerrainMaterial*                  TerrainMaterial;                                   // 0x0450(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClosedSpline;                                     // 0x0458(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFilledSpline;                                     // 0x0459(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_45A[0x6];                                      // 0x045A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPaperTerrainSplineComponent*           AssociatedSpline;                                  // 0x0460(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RandomSeed;                                        // 0x0468(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SegmentOverlapAmount;                              // 0x046C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           TerrainColor;                                      // 0x0470(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         ReparamStepsPerSegment;                            // 0x0480(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ESpriteCollisionMode                          SpriteCollisionDomain;                             // 0x0484(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_485[0x3];                                      // 0x0485(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CollisionThickness;                                // 0x0488(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_48C[0x4];                                      // 0x048C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBodySetup*                             CachedBodySetup;                                   // 0x0490(0x0008)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_498[0x18];                                     // 0x0498(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UPaperTerrainMaterial*                  TerrainMaterial;                                   // 0x0448(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClosedSpline;                                     // 0x0450(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFilledSpline;                                     // 0x0451(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_452[0x6];                                      // 0x0452(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPaperTerrainSplineComponent*           AssociatedSpline;                                  // 0x0458(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RandomSeed;                                        // 0x0460(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SegmentOverlapAmount;                              // 0x0464(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           TerrainColor;                                      // 0x0468(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         ReparamStepsPerSegment;                            // 0x0478(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ESpriteCollisionMode                          SpriteCollisionDomain;                             // 0x047C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_47D[0x3];                                      // 0x047D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CollisionThickness;                                // 0x0480(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBodySetup*                             CachedBodySetup;                                   // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_490[0x10];                                     // 0x0490(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetTerrainColor(const struct FLinearColor& NewColor);
@@ -452,14 +466,27 @@ public:
 		return GetDefaultObjImpl<UPaperTerrainComponent>();
 	}
 };
+static_assert(alignof(UPaperTerrainComponent) == 0x000010, "Wrong alignment on UPaperTerrainComponent");
+static_assert(sizeof(UPaperTerrainComponent) == 0x0004A0, "Wrong size on UPaperTerrainComponent");
+static_assert(offsetof(UPaperTerrainComponent, TerrainMaterial) == 0x000448, "Member 'UPaperTerrainComponent::TerrainMaterial' has a wrong offset!");
+static_assert(offsetof(UPaperTerrainComponent, bClosedSpline) == 0x000450, "Member 'UPaperTerrainComponent::bClosedSpline' has a wrong offset!");
+static_assert(offsetof(UPaperTerrainComponent, bFilledSpline) == 0x000451, "Member 'UPaperTerrainComponent::bFilledSpline' has a wrong offset!");
+static_assert(offsetof(UPaperTerrainComponent, AssociatedSpline) == 0x000458, "Member 'UPaperTerrainComponent::AssociatedSpline' has a wrong offset!");
+static_assert(offsetof(UPaperTerrainComponent, RandomSeed) == 0x000460, "Member 'UPaperTerrainComponent::RandomSeed' has a wrong offset!");
+static_assert(offsetof(UPaperTerrainComponent, SegmentOverlapAmount) == 0x000464, "Member 'UPaperTerrainComponent::SegmentOverlapAmount' has a wrong offset!");
+static_assert(offsetof(UPaperTerrainComponent, TerrainColor) == 0x000468, "Member 'UPaperTerrainComponent::TerrainColor' has a wrong offset!");
+static_assert(offsetof(UPaperTerrainComponent, ReparamStepsPerSegment) == 0x000478, "Member 'UPaperTerrainComponent::ReparamStepsPerSegment' has a wrong offset!");
+static_assert(offsetof(UPaperTerrainComponent, SpriteCollisionDomain) == 0x00047C, "Member 'UPaperTerrainComponent::SpriteCollisionDomain' has a wrong offset!");
+static_assert(offsetof(UPaperTerrainComponent, CollisionThickness) == 0x000480, "Member 'UPaperTerrainComponent::CollisionThickness' has a wrong offset!");
+static_assert(offsetof(UPaperTerrainComponent, CachedBodySetup) == 0x000488, "Member 'UPaperTerrainComponent::CachedBodySetup' has a wrong offset!");
 
 // Class Paper2D.PaperTerrainMaterial
 // 0x0018 (0x0048 - 0x0030)
 class UPaperTerrainMaterial final : public UDataAsset
 {
 public:
-	TArray<struct FPaperTerrainMaterialRule>      Rules;                                             // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UPaperSprite*                           InteriorFill;                                      // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPaperTerrainMaterialRule>      Rules;                                             // 0x0030(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPaperSprite*                           InteriorFill;                                      // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -471,6 +498,30 @@ public:
 		return GetDefaultObjImpl<UPaperTerrainMaterial>();
 	}
 };
+static_assert(alignof(UPaperTerrainMaterial) == 0x000008, "Wrong alignment on UPaperTerrainMaterial");
+static_assert(sizeof(UPaperTerrainMaterial) == 0x000048, "Wrong size on UPaperTerrainMaterial");
+static_assert(offsetof(UPaperTerrainMaterial, Rules) == 0x000030, "Member 'UPaperTerrainMaterial::Rules' has a wrong offset!");
+static_assert(offsetof(UPaperTerrainMaterial, InteriorFill) == 0x000040, "Member 'UPaperTerrainMaterial::InteriorFill' has a wrong offset!");
+
+// Class Paper2D.PaperTerrainSplineComponent
+// 0x0010 (0x0550 - 0x0540)
+class UPaperTerrainSplineComponent final : public USplineComponent
+{
+public:
+	uint8                                         Pad_538[0x18];                                     // 0x0538(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PaperTerrainSplineComponent">();
+	}
+	static class UPaperTerrainSplineComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPaperTerrainSplineComponent>();
+	}
+};
+static_assert(alignof(UPaperTerrainSplineComponent) == 0x000010, "Wrong alignment on UPaperTerrainSplineComponent");
+static_assert(sizeof(UPaperTerrainSplineComponent) == 0x000550, "Wrong size on UPaperTerrainSplineComponent");
 
 // Class Paper2D.PaperTileLayer
 // 0x0070 (0x0098 - 0x0028)
@@ -491,9 +542,9 @@ public:
 	int32                                         AllocatedWidth;                                    // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         AllocatedHeight;                                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPaperTileInfo>                 AllocatedCells;                                    // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	class UPaperTileSet*                          TileSet;                                           // 0x0080(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<int32>                                 AllocatedGrid;                                     // 0x0088(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
+	TArray<struct FPaperTileInfo>                 AllocatedCells;                                    // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperTileSet*                          TileSet;                                           // 0x0080(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<int32>                                 AllocatedGrid;                                     // 0x0088(0x0010)(ZeroConstructor, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -505,13 +556,82 @@ public:
 		return GetDefaultObjImpl<UPaperTileLayer>();
 	}
 };
+static_assert(alignof(UPaperTileLayer) == 0x000008, "Wrong alignment on UPaperTileLayer");
+static_assert(sizeof(UPaperTileLayer) == 0x000098, "Wrong size on UPaperTileLayer");
+static_assert(offsetof(UPaperTileLayer, LayerName) == 0x000028, "Member 'UPaperTileLayer::LayerName' has a wrong offset!");
+static_assert(offsetof(UPaperTileLayer, LayerWidth) == 0x000040, "Member 'UPaperTileLayer::LayerWidth' has a wrong offset!");
+static_assert(offsetof(UPaperTileLayer, LayerHeight) == 0x000044, "Member 'UPaperTileLayer::LayerHeight' has a wrong offset!");
+static_assert(offsetof(UPaperTileLayer, CollisionThicknessOverride) == 0x00004C, "Member 'UPaperTileLayer::CollisionThicknessOverride' has a wrong offset!");
+static_assert(offsetof(UPaperTileLayer, CollisionOffsetOverride) == 0x000050, "Member 'UPaperTileLayer::CollisionOffsetOverride' has a wrong offset!");
+static_assert(offsetof(UPaperTileLayer, LayerColor) == 0x000054, "Member 'UPaperTileLayer::LayerColor' has a wrong offset!");
+static_assert(offsetof(UPaperTileLayer, AllocatedWidth) == 0x000064, "Member 'UPaperTileLayer::AllocatedWidth' has a wrong offset!");
+static_assert(offsetof(UPaperTileLayer, AllocatedHeight) == 0x000068, "Member 'UPaperTileLayer::AllocatedHeight' has a wrong offset!");
+static_assert(offsetof(UPaperTileLayer, AllocatedCells) == 0x000070, "Member 'UPaperTileLayer::AllocatedCells' has a wrong offset!");
+static_assert(offsetof(UPaperTileLayer, TileSet) == 0x000080, "Member 'UPaperTileLayer::TileSet' has a wrong offset!");
+static_assert(offsetof(UPaperTileLayer, AllocatedGrid) == 0x000088, "Member 'UPaperTileLayer::AllocatedGrid' has a wrong offset!");
+
+// Class Paper2D.PaperTileMap
+// 0x0080 (0x00A8 - 0x0028)
+class UPaperTileMap final : public UObject
+{
+public:
+	int32                                         MapWidth;                                          // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MapHeight;                                         // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TileWidth;                                         // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TileHeight;                                        // 0x0034(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PixelsPerUnrealUnit;                               // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SeparationPerTileX;                                // 0x003C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SeparationPerTileY;                                // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SeparationPerLayer;                                // 0x0044(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UPaperTileSet>           SelectedTileSet;                                   // 0x0048(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     Material;                                          // 0x0070(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UPaperTileLayer*>                TileLayers;                                        // 0x0078(0x0010)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CollisionThickness;                                // 0x0088(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ESpriteCollisionMode                          SpriteCollisionDomain;                             // 0x008C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ETileMapProjectionMode                        ProjectionMode;                                    // 0x008D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8E[0x2];                                       // 0x008E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         HexSideLength;                                     // 0x0090(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBodySetup*                             BodySetup;                                         // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LayerNameIndex;                                    // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PaperTileMap">();
+	}
+	static class UPaperTileMap* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPaperTileMap>();
+	}
+};
+static_assert(alignof(UPaperTileMap) == 0x000008, "Wrong alignment on UPaperTileMap");
+static_assert(sizeof(UPaperTileMap) == 0x0000A8, "Wrong size on UPaperTileMap");
+static_assert(offsetof(UPaperTileMap, MapWidth) == 0x000028, "Member 'UPaperTileMap::MapWidth' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, MapHeight) == 0x00002C, "Member 'UPaperTileMap::MapHeight' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, TileWidth) == 0x000030, "Member 'UPaperTileMap::TileWidth' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, TileHeight) == 0x000034, "Member 'UPaperTileMap::TileHeight' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, PixelsPerUnrealUnit) == 0x000038, "Member 'UPaperTileMap::PixelsPerUnrealUnit' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, SeparationPerTileX) == 0x00003C, "Member 'UPaperTileMap::SeparationPerTileX' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, SeparationPerTileY) == 0x000040, "Member 'UPaperTileMap::SeparationPerTileY' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, SeparationPerLayer) == 0x000044, "Member 'UPaperTileMap::SeparationPerLayer' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, SelectedTileSet) == 0x000048, "Member 'UPaperTileMap::SelectedTileSet' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, Material) == 0x000070, "Member 'UPaperTileMap::Material' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, TileLayers) == 0x000078, "Member 'UPaperTileMap::TileLayers' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, CollisionThickness) == 0x000088, "Member 'UPaperTileMap::CollisionThickness' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, SpriteCollisionDomain) == 0x00008C, "Member 'UPaperTileMap::SpriteCollisionDomain' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, ProjectionMode) == 0x00008D, "Member 'UPaperTileMap::ProjectionMode' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, HexSideLength) == 0x000090, "Member 'UPaperTileMap::HexSideLength' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, BodySetup) == 0x000098, "Member 'UPaperTileMap::BodySetup' has a wrong offset!");
+static_assert(offsetof(UPaperTileMap, LayerNameIndex) == 0x0000A0, "Member 'UPaperTileMap::LayerNameIndex' has a wrong offset!");
 
 // Class Paper2D.PaperTileMapActor
 // 0x0008 (0x0228 - 0x0220)
 class APaperTileMapActor final : public AActor
 {
 public:
-	class UPaperTileMapComponent*                 RenderComponent;                                   // 0x0220(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperTileMapComponent*                 RenderComponent;                                   // 0x0220(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -523,25 +643,27 @@ public:
 		return GetDefaultObjImpl<APaperTileMapActor>();
 	}
 };
+static_assert(alignof(APaperTileMapActor) == 0x000008, "Wrong alignment on APaperTileMapActor");
+static_assert(sizeof(APaperTileMapActor) == 0x000228, "Wrong size on APaperTileMapActor");
+static_assert(offsetof(APaperTileMapActor, RenderComponent) == 0x000220, "Member 'APaperTileMapActor::RenderComponent' has a wrong offset!");
 
 // Class Paper2D.PaperTileMapComponent
-// 0x0050 (0x04D0 - 0x0480)
+// 0x0050 (0x04C0 - 0x0470)
 class UPaperTileMapComponent final : public UMeshComponent
 {
 public:
-	int32                                         MapWidth;                                          // 0x0478(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         MapHeight;                                         // 0x047C(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         TileWidth;                                         // 0x0480(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         TileHeight;                                        // 0x0484(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPaperTileSet*                          DefaultLayerTileSet;                               // 0x0488(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMaterialInterface*                     Material;                                          // 0x0490(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UPaperTileLayer*>                TileLayers;                                        // 0x0498(0x0010)(ZeroConstructor, Deprecated, UObjectWrapper, NativeAccessSpecifierPrivate)
-	struct FLinearColor                           TileMapColor;                                      // 0x04A8(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         UseSingleLayerIndex;                               // 0x04B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bUseSingleLayer;                                   // 0x04BC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_4BD[0x3];                                      // 0x04BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPaperTileMap*                          TileMap;                                           // 0x04C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C8[0x8];                                      // 0x04C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         MapWidth;                                          // 0x0470(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         MapHeight;                                         // 0x0474(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         TileWidth;                                         // 0x0478(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         TileHeight;                                        // 0x047C(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperTileSet*                          DefaultLayerTileSet;                               // 0x0480(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMaterialInterface*                     Material;                                          // 0x0488(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UPaperTileLayer*>                TileLayers;                                        // 0x0490(0x0010)(ZeroConstructor, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FLinearColor                           TileMapColor;                                      // 0x04A0(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         UseSingleLayerIndex;                               // 0x04B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bUseSingleLayer;                                   // 0x04B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_4B5[0x3];                                      // 0x04B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPaperTileMap*                          TileMap;                                           // 0x04B8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	class UPaperTileLayer* AddNewLayer();
@@ -575,6 +697,19 @@ public:
 		return GetDefaultObjImpl<UPaperTileMapComponent>();
 	}
 };
+static_assert(alignof(UPaperTileMapComponent) == 0x000010, "Wrong alignment on UPaperTileMapComponent");
+static_assert(sizeof(UPaperTileMapComponent) == 0x0004C0, "Wrong size on UPaperTileMapComponent");
+static_assert(offsetof(UPaperTileMapComponent, MapWidth) == 0x000470, "Member 'UPaperTileMapComponent::MapWidth' has a wrong offset!");
+static_assert(offsetof(UPaperTileMapComponent, MapHeight) == 0x000474, "Member 'UPaperTileMapComponent::MapHeight' has a wrong offset!");
+static_assert(offsetof(UPaperTileMapComponent, TileWidth) == 0x000478, "Member 'UPaperTileMapComponent::TileWidth' has a wrong offset!");
+static_assert(offsetof(UPaperTileMapComponent, TileHeight) == 0x00047C, "Member 'UPaperTileMapComponent::TileHeight' has a wrong offset!");
+static_assert(offsetof(UPaperTileMapComponent, DefaultLayerTileSet) == 0x000480, "Member 'UPaperTileMapComponent::DefaultLayerTileSet' has a wrong offset!");
+static_assert(offsetof(UPaperTileMapComponent, Material) == 0x000488, "Member 'UPaperTileMapComponent::Material' has a wrong offset!");
+static_assert(offsetof(UPaperTileMapComponent, TileLayers) == 0x000490, "Member 'UPaperTileMapComponent::TileLayers' has a wrong offset!");
+static_assert(offsetof(UPaperTileMapComponent, TileMapColor) == 0x0004A0, "Member 'UPaperTileMapComponent::TileMapColor' has a wrong offset!");
+static_assert(offsetof(UPaperTileMapComponent, UseSingleLayerIndex) == 0x0004B0, "Member 'UPaperTileMapComponent::UseSingleLayerIndex' has a wrong offset!");
+static_assert(offsetof(UPaperTileMapComponent, bUseSingleLayer) == 0x0004B4, "Member 'UPaperTileMapComponent::bUseSingleLayer' has a wrong offset!");
+static_assert(offsetof(UPaperTileMapComponent, TileMap) == 0x0004B8, "Member 'UPaperTileMapComponent::TileMap' has a wrong offset!");
 
 // Class Paper2D.PaperTileSet
 // 0x0080 (0x00A8 - 0x0028)
@@ -582,8 +717,8 @@ class UPaperTileSet final : public UObject
 {
 public:
 	struct FIntPoint                              TileSize;                                          // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UTexture2D*                             TileSheet;                                         // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UTexture*>                       AdditionalSourceTextures;                          // 0x0038(0x0010)(Edit, ZeroConstructor, AssetRegistrySearchable, UObjectWrapper, NativeAccessSpecifierPrivate)
+	class UTexture2D*                             TileSheet;                                         // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UTexture*>                       AdditionalSourceTextures;                          // 0x0038(0x0010)(Edit, ZeroConstructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FIntMargin                             BorderMargin;                                      // 0x0048(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPrivate)
 	struct FIntPoint                              PerTileSpacing;                                    // 0x0058(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FIntPoint                              DrawingOffset;                                     // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -591,8 +726,8 @@ public:
 	int32                                         HeightInTiles;                                     // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         AllocatedWidth;                                    // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         AllocatedHeight;                                   // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FPaperTileMetadata>             PerTileData;                                       // 0x0078(0x0010)(Edit, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FPaperTileSetTerrain>           Terrains;                                          // 0x0088(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FPaperTileMetadata>             PerTileData;                                       // 0x0078(0x0010)(Edit, EditFixedSize, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FPaperTileSetTerrain>           Terrains;                                          // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         TileWidth;                                         // 0x0098(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         TileHeight;                                        // 0x009C(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         Margin;                                            // 0x00A0(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -608,6 +743,24 @@ public:
 		return GetDefaultObjImpl<UPaperTileSet>();
 	}
 };
+static_assert(alignof(UPaperTileSet) == 0x000008, "Wrong alignment on UPaperTileSet");
+static_assert(sizeof(UPaperTileSet) == 0x0000A8, "Wrong size on UPaperTileSet");
+static_assert(offsetof(UPaperTileSet, TileSize) == 0x000028, "Member 'UPaperTileSet::TileSize' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, TileSheet) == 0x000030, "Member 'UPaperTileSet::TileSheet' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, AdditionalSourceTextures) == 0x000038, "Member 'UPaperTileSet::AdditionalSourceTextures' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, BorderMargin) == 0x000048, "Member 'UPaperTileSet::BorderMargin' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, PerTileSpacing) == 0x000058, "Member 'UPaperTileSet::PerTileSpacing' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, DrawingOffset) == 0x000060, "Member 'UPaperTileSet::DrawingOffset' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, WidthInTiles) == 0x000068, "Member 'UPaperTileSet::WidthInTiles' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, HeightInTiles) == 0x00006C, "Member 'UPaperTileSet::HeightInTiles' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, AllocatedWidth) == 0x000070, "Member 'UPaperTileSet::AllocatedWidth' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, AllocatedHeight) == 0x000074, "Member 'UPaperTileSet::AllocatedHeight' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, PerTileData) == 0x000078, "Member 'UPaperTileSet::PerTileData' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, Terrains) == 0x000088, "Member 'UPaperTileSet::Terrains' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, TileWidth) == 0x000098, "Member 'UPaperTileSet::TileWidth' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, TileHeight) == 0x00009C, "Member 'UPaperTileSet::TileHeight' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, Margin) == 0x0000A0, "Member 'UPaperTileSet::Margin' has a wrong offset!");
+static_assert(offsetof(UPaperTileSet, Spacing) == 0x0000A4, "Member 'UPaperTileSet::Spacing' has a wrong offset!");
 
 // Class Paper2D.TileMapBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -629,6 +782,8 @@ public:
 		return GetDefaultObjImpl<UTileMapBlueprintLibrary>();
 	}
 };
+static_assert(alignof(UTileMapBlueprintLibrary) == 0x000008, "Wrong alignment on UTileMapBlueprintLibrary");
+static_assert(sizeof(UTileMapBlueprintLibrary) == 0x000028, "Wrong size on UTileMapBlueprintLibrary");
 
 }
 

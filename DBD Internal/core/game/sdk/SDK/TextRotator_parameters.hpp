@@ -21,6 +21,9 @@ struct TextRotator_C_ExecuteUbergraph_TextRotator final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(TextRotator_C_ExecuteUbergraph_TextRotator) == 0x000004, "Wrong alignment on TextRotator_C_ExecuteUbergraph_TextRotator");
+static_assert(sizeof(TextRotator_C_ExecuteUbergraph_TextRotator) == 0x000004, "Wrong size on TextRotator_C_ExecuteUbergraph_TextRotator");
+static_assert(offsetof(TextRotator_C_ExecuteUbergraph_TextRotator, EntryPoint) == 0x000000, "Member 'TextRotator_C_ExecuteUbergraph_TextRotator::EntryPoint' has a wrong offset!");
 
 }
 

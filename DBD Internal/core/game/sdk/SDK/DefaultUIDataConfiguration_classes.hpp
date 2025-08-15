@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass DefaultUIDataConfiguration.DefaultUIDataConfiguration_C
-// 0x0000 (0x4610 - 0x4610)
+// 0x0000 (0x3D20 - 0x3D20)
 class UDefaultUIDataConfiguration_C final : public UFortUIDataConfiguration
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UDefaultUIDataConfiguration_C>();
 	}
 };
+static_assert(alignof(UDefaultUIDataConfiguration_C) == 0x000008, "Wrong alignment on UDefaultUIDataConfiguration_C");
+static_assert(sizeof(UDefaultUIDataConfiguration_C) == 0x003D20, "Wrong size on UDefaultUIDataConfiguration_C");
 
 }
 

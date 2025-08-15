@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TrapTool.TrapTool_C
-// 0x0000 (0x14C0 - 0x14C0)
+// 0x0000 (0x0D68 - 0x0D68)
 class ATrapTool_C final : public AFortTrapTool
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ATrapTool_C>();
 	}
 };
+static_assert(alignof(ATrapTool_C) == 0x000008, "Wrong alignment on ATrapTool_C");
+static_assert(sizeof(ATrapTool_C) == 0x000D68, "Wrong size on ATrapTool_C");
 
 }
 

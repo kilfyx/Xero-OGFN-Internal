@@ -17,9 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LoginInteractionHost.LoginInteractionHost_C
-// 0x0000 (0x04F8 - 0x04F8)
+// 0x0008 (0x05A8 - 0x05A0)
 class ULoginInteractionHost_C final : public UFortLoginInteractions
 {
+public:
+	class USafeZone*                              SafeZone_0;                                        // 0x05A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -31,7 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ULoginInteractionHost_C) == 0x000008, "Wrong alignment on ULoginInteractionHost_C");
-static_assert(sizeof(ULoginInteractionHost_C) == 0x0004F8, "Wrong size on ULoginInteractionHost_C");
+static_assert(sizeof(ULoginInteractionHost_C) == 0x0005A8, "Wrong size on ULoginInteractionHost_C");
+static_assert(offsetof(ULoginInteractionHost_C, SafeZone_0) == 0x0005A0, "Member 'ULoginInteractionHost_C::SafeZone_0' has a wrong offset!");
 
 }
 

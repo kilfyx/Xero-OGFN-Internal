@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "FortniteAI_classes.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass AI_skill_phoebe_bot_evasiveManeuvers.AI_skill_phoebe_bot_evasiveManeuvers_C
-// 0x0000 (0x06C8 - 0x06C8)
-class UAI_skill_phoebe_bot_evasiveManeuvers_C final : public UFortAthenaAIBotEvasiveManeuversSkillSet
+// 0x0000 (0x0530 - 0x0530)
+class UAI_skill_phoebe_bot_evasiveManeuvers_C : public UFortAthenaAIBotEvasiveManeuversSkillSet
 {
 public:
 	static class UClass* StaticClass()
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UAI_skill_phoebe_bot_evasiveManeuvers_C) == 0x000008, "Wrong alignment on UAI_skill_phoebe_bot_evasiveManeuvers_C");
-static_assert(sizeof(UAI_skill_phoebe_bot_evasiveManeuvers_C) == 0x0006C8, "Wrong size on UAI_skill_phoebe_bot_evasiveManeuvers_C");
+static_assert(sizeof(UAI_skill_phoebe_bot_evasiveManeuvers_C) == 0x000530, "Wrong size on UAI_skill_phoebe_bot_evasiveManeuvers_C");
 
 }
 

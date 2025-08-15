@@ -25,9 +25,9 @@ namespace SDK
 void UPlayerBattlePassXpAndReward_C::ExecuteUbergraph_PlayerBattlePassXpAndReward(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_PlayerBattlePassXpAndReward");
+		Func = Class->GetFunction("PlayerBattlePassXpAndReward_C", "ExecuteUbergraph_PlayerBattlePassXpAndReward");
 
 	Params::PlayerBattlePassXpAndReward_C_ExecuteUbergraph_PlayerBattlePassXpAndReward Parms{};
 
@@ -40,14 +40,14 @@ void UPlayerBattlePassXpAndReward_C::ExecuteUbergraph_PlayerBattlePassXpAndRewar
 // Function PlayerBattlePassXpAndReward.PlayerBattlePassXpAndReward_C.OnAccountInfoChanged
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FFortPublicAccountInfo           Result                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// const struct FFortPublicAccountInfo&    Result                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
 void UPlayerBattlePassXpAndReward_C::OnAccountInfoChanged(const struct FFortPublicAccountInfo& Result)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnAccountInfoChanged");
+		Func = Class->GetFunction("PlayerBattlePassXpAndReward_C", "OnAccountInfoChanged");
 
 	Params::PlayerBattlePassXpAndReward_C_OnAccountInfoChanged Parms{};
 
@@ -60,14 +60,14 @@ void UPlayerBattlePassXpAndReward_C::OnAccountInfoChanged(const struct FFortPubl
 // Function PlayerBattlePassXpAndReward.PlayerBattlePassXpAndReward_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UPlayerBattlePassXpAndReward_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PreConstruct");
+		Func = Class->GetFunction("PlayerBattlePassXpAndReward_C", "PreConstruct");
 
 	Params::PlayerBattlePassXpAndReward_C_PreConstruct Parms{};
 
@@ -80,14 +80,14 @@ void UPlayerBattlePassXpAndReward_C::PreConstruct(bool IsDesignTime)
 // Function PlayerBattlePassXpAndReward.PlayerBattlePassXpAndReward_C.Refresh
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortPublicAccountInfo           FortPublicAccountInfo                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// struct FFortPublicAccountInfo&          FortPublicAccountInfo                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
 void UPlayerBattlePassXpAndReward_C::Refresh(struct FFortPublicAccountInfo& FortPublicAccountInfo)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Refresh");
+		Func = Class->GetFunction("PlayerBattlePassXpAndReward_C", "Refresh");
 
 	Params::PlayerBattlePassXpAndReward_C_Refresh Parms{};
 
@@ -102,19 +102,19 @@ void UPlayerBattlePassXpAndReward_C::Refresh(struct FFortPublicAccountInfo& Fort
 // Function PlayerBattlePassXpAndReward.PlayerBattlePassXpAndReward_C.SetupReward
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget*                          Container                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UTextBlock*                       RewardText                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UDailyQuestRewardInfo_Legacy_C*   RewardInfoWidget                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    HasReward                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FFortItemQuantityPair            RewardItem                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// class UWidget*                          Container                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UTextBlock*                       RewardText                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UDailyQuestRewardInfo_C*          RewardInfoWidget                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    HasReward                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FFortItemQuantityPair&     RewardItem                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // int32                                   LevelRewarded                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPlayerBattlePassXpAndReward_C::SetupReward(class UWidget* Container, class UTextBlock* RewardText, class UDailyQuestRewardInfo_Legacy_C* RewardInfoWidget, bool HasReward, const struct FFortItemQuantityPair& RewardItem, int32 LevelRewarded)
+void UPlayerBattlePassXpAndReward_C::SetupReward(class UWidget* Container, class UTextBlock* RewardText, class UDailyQuestRewardInfo_C* RewardInfoWidget, bool HasReward, const struct FFortItemQuantityPair& RewardItem, int32 LevelRewarded)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetupReward");
+		Func = Class->GetFunction("PlayerBattlePassXpAndReward_C", "SetupReward");
 
 	Params::PlayerBattlePassXpAndReward_C_SetupReward Parms{};
 

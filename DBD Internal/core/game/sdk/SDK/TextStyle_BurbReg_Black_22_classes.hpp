@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TextStyle-BurbReg-Black-22.TextStyle-BurbReg-Black-22_C
-// 0x0000 (0x01A0 - 0x01A0)
+// 0x0000 (0x0148 - 0x0148)
 class UTextStyle_BurbReg_Black_22_C final : public UTextStyle_Base_M_B_C
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<UTextStyle_BurbReg_Black_22_C>();
 	}
 };
-static_assert(alignof(UTextStyle_BurbReg_Black_22_C) == 0x000010, "Wrong alignment on UTextStyle_BurbReg_Black_22_C");
-static_assert(sizeof(UTextStyle_BurbReg_Black_22_C) == 0x0001A0, "Wrong size on UTextStyle_BurbReg_Black_22_C");
+static_assert(alignof(UTextStyle_BurbReg_Black_22_C) == 0x000008, "Wrong alignment on UTextStyle_BurbReg_Black_22_C");
+static_assert(sizeof(UTextStyle_BurbReg_Black_22_C) == 0x000148, "Wrong size on UTextStyle_BurbReg_Black_22_C");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SimpleMaterialProgressBar.SimpleMaterialProgressBar_C
-// 0x0000 (0x0320 - 0x0320)
+// 0x0000 (0x0338 - 0x0338)
 class USimpleMaterialProgressBar_C final : public UFortSimpleMaterialProgressBar
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<USimpleMaterialProgressBar_C>();
 	}
 };
+static_assert(alignof(USimpleMaterialProgressBar_C) == 0x000008, "Wrong alignment on USimpleMaterialProgressBar_C");
+static_assert(sizeof(USimpleMaterialProgressBar_C) == 0x000338, "Wrong size on USimpleMaterialProgressBar_C");
 
 }
 

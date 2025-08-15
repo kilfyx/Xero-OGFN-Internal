@@ -19,66 +19,76 @@ namespace SDK::Params
 {
 
 // Function AthenaLobbyPlayerPanel.AthenaLobbyPlayerPanel_C.ExecuteUbergraph_AthenaLobbyPlayerPanel
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortFriendRequestStatus                      Temp_byte_Variable_2;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortFriendRequestStatus                      Temp_byte_Variable_3;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_5;                              // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0010(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0028(0x0018)()
-	bool                                          K2Node_Event_bHasBattlePass;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsMuted;                             // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_UIKit_ButtonCTA_Base_C*            K2Node_DynamicCast_AsWBP_UIKit_Button_CTA_Base;    // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_1;                           // 0x0058(0x0018)()
-	EFortFriendRequestStatus                      K2Node_Event_FriendRequestStatus;                  // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_2;                           // 0x0078(0x0018)(ConstParm)
-	bool                                          K2Node_Select_Default_3;                           // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_UIKit_ButtonCTA_Base_C*            K2Node_DynamicCast_AsWBP_UIKit_Button_CTA_Base_1;  // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UIconTextButton_C*                      K2Node_DynamicCast_AsIcon_Text_Button;             // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortFriendRequestStatus                      Temp_byte_Variable_2;                              // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortFriendRequestStatus                      Temp_byte_Variable_3;                              // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_1;                              // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_2;                              // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_3;                              // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_4;                              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0038(0x0018)()
+	bool                                          K2Node_Event_bHasBattlePass;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EFortFriendRequestStatus                      K2Node_Event_FriendRequestStatus;                  // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UIconTextButton_C*                      K2Node_DynamicCast_AsIcon_Text_Button_1;           // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_5;                              // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Select_Default;                             // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bIsMuted;                             // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default_2;                           // 0x0068(0x0018)(ConstParm)
+	class FText                                   K2Node_Select_Default_3;                           // 0x0080(0x0018)()
 };
 static_assert(alignof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel) == 0x000008, "Wrong alignment on AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel");
-static_assert(sizeof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel) == 0x0000A8, "Wrong size on AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel");
+static_assert(sizeof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel) == 0x000098, "Wrong size on AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel");
 static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, EntryPoint) == 0x000000, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::EntryPoint' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_bool_Variable) == 0x000004, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_byte_Variable) == 0x000005, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_byte_Variable_1) == 0x000006, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_byte_Variable_2) == 0x000007, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_byte_Variable_3) == 0x000008, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_bool_Variable_1) == 0x000009, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_bool_Variable_2) == 0x00000A, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_bool_Variable_3) == 0x00000B, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_bool_Variable_4) == 0x00000C, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_bool_Variable_5) == 0x00000D, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_bool_Variable_5' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_text_Variable) == 0x000010, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_text_Variable_1) == 0x000028, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Event_bHasBattlePass) == 0x000040, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Event_bHasBattlePass' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Select_Default) == 0x000041, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Event_bIsMuted) == 0x000042, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Event_bIsMuted' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_DynamicCast_AsWBP_UIKit_Button_CTA_Base) == 0x000048, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_DynamicCast_AsWBP_UIKit_Button_CTA_Base' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Select_Default_1) == 0x000058, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Event_FriendRequestStatus) == 0x000070, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Event_FriendRequestStatus' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Select_Default_2) == 0x000078, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Select_Default_3) == 0x000090, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_DynamicCast_AsWBP_UIKit_Button_CTA_Base_1) == 0x000098, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_DynamicCast_AsWBP_UIKit_Button_CTA_Base_1' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_DynamicCast_bSuccess_1) == 0x0000A0, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_byte_Variable) == 0x000004, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_DynamicCast_AsIcon_Text_Button) == 0x000008, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_DynamicCast_AsIcon_Text_Button' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_byte_Variable_1) == 0x000011, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_byte_Variable_2) == 0x000012, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_byte_Variable_2' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_byte_Variable_3) == 0x000013, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_byte_Variable_3' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_bool_Variable) == 0x000014, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_bool_Variable_1) == 0x000015, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_bool_Variable_2) == 0x000016, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_bool_Variable_3) == 0x000017, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_bool_Variable_4) == 0x000018, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_bool_Variable_4' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_text_Variable) == 0x000020, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_text_Variable_1) == 0x000038, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Event_bHasBattlePass) == 0x000050, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Event_bHasBattlePass' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Event_FriendRequestStatus) == 0x000051, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Event_FriendRequestStatus' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_DynamicCast_AsIcon_Text_Button_1) == 0x000058, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_DynamicCast_AsIcon_Text_Button_1' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_DynamicCast_bSuccess_1) == 0x000060, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, Temp_bool_Variable_5) == 0x000061, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::Temp_bool_Variable_5' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Select_Default) == 0x000062, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Select_Default_1) == 0x000063, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Event_bIsMuted) == 0x000064, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Event_bIsMuted' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Select_Default_2) == 0x000068, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel, K2Node_Select_Default_3) == 0x000080, "Member 'AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel::K2Node_Select_Default_3' has a wrong offset!");
+
+// Function AthenaLobbyPlayerPanel.AthenaLobbyPlayerPanel_C.OnIsMutedUpdated
+// 0x0001 (0x0001 - 0x0000)
+struct AthenaLobbyPlayerPanel_C_OnIsMutedUpdated final
+{
+public:
+	bool                                          bIsMuted;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(AthenaLobbyPlayerPanel_C_OnIsMutedUpdated) == 0x000001, "Wrong alignment on AthenaLobbyPlayerPanel_C_OnIsMutedUpdated");
+static_assert(sizeof(AthenaLobbyPlayerPanel_C_OnIsMutedUpdated) == 0x000001, "Wrong size on AthenaLobbyPlayerPanel_C_OnIsMutedUpdated");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_OnIsMutedUpdated, bIsMuted) == 0x000000, "Member 'AthenaLobbyPlayerPanel_C_OnIsMutedUpdated::bIsMuted' has a wrong offset!");
 
 // Function AthenaLobbyPlayerPanel.AthenaLobbyPlayerPanel_C.OnFriendStatusUpdated
 // 0x0001 (0x0001 - 0x0000)
@@ -96,39 +106,28 @@ static_assert(offsetof(AthenaLobbyPlayerPanel_C_OnFriendStatusUpdated, FriendReq
 struct AthenaLobbyPlayerPanel_C_OnHasBattlePassUpdated final
 {
 public:
-	bool                                          bHasBattlePass;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHasBattlePass;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(AthenaLobbyPlayerPanel_C_OnHasBattlePassUpdated) == 0x000001, "Wrong alignment on AthenaLobbyPlayerPanel_C_OnHasBattlePassUpdated");
 static_assert(sizeof(AthenaLobbyPlayerPanel_C_OnHasBattlePassUpdated) == 0x000001, "Wrong size on AthenaLobbyPlayerPanel_C_OnHasBattlePassUpdated");
 static_assert(offsetof(AthenaLobbyPlayerPanel_C_OnHasBattlePassUpdated, bHasBattlePass) == 0x000000, "Member 'AthenaLobbyPlayerPanel_C_OnHasBattlePassUpdated::bHasBattlePass' has a wrong offset!");
 
-// Function AthenaLobbyPlayerPanel.AthenaLobbyPlayerPanel_C.OnIsMutedUpdated
-// 0x0001 (0x0001 - 0x0000)
-struct AthenaLobbyPlayerPanel_C_OnIsMutedUpdated final
-{
-public:
-	bool                                          bIsMuted;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(AthenaLobbyPlayerPanel_C_OnIsMutedUpdated) == 0x000001, "Wrong alignment on AthenaLobbyPlayerPanel_C_OnIsMutedUpdated");
-static_assert(sizeof(AthenaLobbyPlayerPanel_C_OnIsMutedUpdated) == 0x000001, "Wrong size on AthenaLobbyPlayerPanel_C_OnIsMutedUpdated");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_OnIsMutedUpdated, bIsMuted) == 0x000000, "Member 'AthenaLobbyPlayerPanel_C_OnIsMutedUpdated::bIsMuted' has a wrong offset!");
-
 // Function AthenaLobbyPlayerPanel.AthenaLobbyPlayerPanel_C.OnMouseButtonDown_0
-// 0x0248 (0x0248 - 0x0000)
+// 0x0218 (0x0218 - 0x0000)
 struct AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0 final
 {
 public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          MouseEvent;                                        // 0x0040(0x0098)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                            ReturnValue;                                       // 0x00D8(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0190(0x00B8)()
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                            ReturnValue;                                       // 0x00A8(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0160(0x00B8)()
 };
 static_assert(alignof(AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0) == 0x000008, "Wrong alignment on AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0");
-static_assert(sizeof(AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0) == 0x000248, "Wrong size on AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0");
+static_assert(sizeof(AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0) == 0x000218, "Wrong size on AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0");
 static_assert(offsetof(AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0, MyGeometry) == 0x000000, "Member 'AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0::MyGeometry' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0, MouseEvent) == 0x000040, "Member 'AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0::MouseEvent' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0, ReturnValue) == 0x0000D8, "Member 'AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0, CallFunc_Handled_ReturnValue) == 0x000190, "Member 'AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0::CallFunc_Handled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0, MouseEvent) == 0x000038, "Member 'AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0::MouseEvent' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0, ReturnValue) == 0x0000A8, "Member 'AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0::ReturnValue' has a wrong offset!");
+static_assert(offsetof(AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0, CallFunc_Handled_ReturnValue) == 0x000160, "Member 'AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0::CallFunc_Handled_ReturnValue' has a wrong offset!");
 
 }
 

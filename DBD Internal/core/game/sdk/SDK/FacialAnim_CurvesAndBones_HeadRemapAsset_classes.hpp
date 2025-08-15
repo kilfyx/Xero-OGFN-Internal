@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UFacialAnim_CurvesAndBones_HeadRemapAsset_C>();
 	}
 };
+static_assert(alignof(UFacialAnim_CurvesAndBones_HeadRemapAsset_C) == 0x000008, "Wrong alignment on UFacialAnim_CurvesAndBones_HeadRemapAsset_C");
+static_assert(sizeof(UFacialAnim_CurvesAndBones_HeadRemapAsset_C) == 0x000030, "Wrong size on UFacialAnim_CurvesAndBones_HeadRemapAsset_C");
 
 }
 

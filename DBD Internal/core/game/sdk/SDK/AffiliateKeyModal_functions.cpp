@@ -17,52 +17,46 @@
 namespace SDK
 {
 
-// Function AffiliateKeyModal.AffiliateKeyModal_C.BndEvt__AcceptButton_K2Node_ComponentBoundEvent_26_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
+// Function AffiliateKeyModal.AffiliateKeyModal_C.SetupAffiliateField
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    AffilateName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UAffiliateKeyModal_C::BndEvt__AcceptButton_K2Node_ComponentBoundEvent_26_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UAffiliateKeyModal_C::SetupAffiliateField(const class FString& AffilateName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AffiliateKeyModal_C", "BndEvt__AcceptButton_K2Node_ComponentBoundEvent_26_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("AffiliateKeyModal_C", "SetupAffiliateField");
 
-	Params::AffiliateKeyModal_C_BndEvt__AcceptButton_K2Node_ComponentBoundEvent_26_CommonButtonClicked__DelegateSignature Parms{};
+	Params::AffiliateKeyModal_C_SetupAffiliateField Parms{};
 
-	Parms.Button = Button;
+	Parms.AffilateName = std::move(AffilateName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function AffiliateKeyModal.AffiliateKeyModal_C.BndEvt__AffiliateKey_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature
-// (HasOutParams, BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// Function AffiliateKeyModal.AffiliateKeyModal_C.SetMobileButtons
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UAffiliateKeyModal_C::BndEvt__AffiliateKey_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
+void UAffiliateKeyModal_C::SetMobileButtons()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AffiliateKeyModal_C", "BndEvt__AffiliateKey_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature");
+		Func = Class->GetFunction("AffiliateKeyModal_C", "SetMobileButtons");
 
-	Params::AffiliateKeyModal_C_BndEvt__AffiliateKey_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function AffiliateKeyModal.AffiliateKeyModal_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_21_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAffiliateKeyModal_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_21_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UAffiliateKeyModal_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_21_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
@@ -77,19 +71,19 @@ void UAffiliateKeyModal_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_21_Com
 }
 
 
-// Function AffiliateKeyModal.AffiliateKeyModal_C.BndEvt__CloseButton_Mobile_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
+// Function AffiliateKeyModal.AffiliateKeyModal_C.BndEvt__AcceptButton_K2Node_ComponentBoundEvent_26_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAffiliateKeyModal_C::BndEvt__CloseButton_Mobile_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UAffiliateKeyModal_C::BndEvt__AcceptButton_K2Node_ComponentBoundEvent_26_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AffiliateKeyModal_C", "BndEvt__CloseButton_Mobile_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("AffiliateKeyModal_C", "BndEvt__AcceptButton_K2Node_ComponentBoundEvent_26_CommonButtonClicked__DelegateSignature");
 
-	Params::AffiliateKeyModal_C_BndEvt__CloseButton_Mobile_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
+	Params::AffiliateKeyModal_C_BndEvt__AcceptButton_K2Node_ComponentBoundEvent_26_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -97,21 +91,21 @@ void UAffiliateKeyModal_C::BndEvt__CloseButton_Mobile_K2Node_ComponentBoundEvent
 }
 
 
-// Function AffiliateKeyModal.AffiliateKeyModal_C.BndEvt__IconTextButton_C_0_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
+// Function AffiliateKeyModal.AffiliateKeyModal_C.OnSet
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAffiliateKeyModal_C::BndEvt__IconTextButton_C_0_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UAffiliateKeyModal_C::OnSet(bool bSuccess)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AffiliateKeyModal_C", "BndEvt__IconTextButton_C_0_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("AffiliateKeyModal_C", "OnSet");
 
-	Params::AffiliateKeyModal_C_BndEvt__IconTextButton_C_0_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
+	Params::AffiliateKeyModal_C_OnSet Parms{};
 
-	Parms.Button = Button;
+	Parms.bSuccess = bSuccess;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -131,35 +125,21 @@ void UAffiliateKeyModal_C::BP_OnActivated()
 }
 
 
-// Function AffiliateKeyModal.AffiliateKeyModal_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAffiliateKeyModal_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AffiliateKeyModal_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AffiliateKeyModal.AffiliateKeyModal_C.ExecuteUbergraph_AffiliateKeyModal
-// (Final, UbergraphFunction, HasDefaults)
+// Function AffiliateKeyModal.AffiliateKeyModal_C.BndEvt__IconTextButton_C_0_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAffiliateKeyModal_C::ExecuteUbergraph_AffiliateKeyModal(int32 EntryPoint)
+void UAffiliateKeyModal_C::BndEvt__IconTextButton_C_0_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AffiliateKeyModal_C", "ExecuteUbergraph_AffiliateKeyModal");
+		Func = Class->GetFunction("AffiliateKeyModal_C", "BndEvt__IconTextButton_C_0_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
 
-	Params::AffiliateKeyModal_C_ExecuteUbergraph_AffiliateKeyModal Parms{};
+	Params::AffiliateKeyModal_C_BndEvt__IconTextButton_C_0_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -168,8 +148,8 @@ void UAffiliateKeyModal_C::ExecuteUbergraph_AffiliateKeyModal(int32 EntryPoint)
 // Function AffiliateKeyModal.AffiliateKeyModal_C.OnCheckComplete
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bWasValidAffiliateName                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bWasValidAffiliateName                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const class FString&                    AffilateNameChecked                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
 void UAffiliateKeyModal_C::OnCheckComplete(bool bSuccess, bool bWasValidAffiliateName, const class FString& AffilateNameChecked)
@@ -192,7 +172,7 @@ void UAffiliateKeyModal_C::OnCheckComplete(bool bSuccess, bool bWasValidAffiliat
 // Function AffiliateKeyModal.AffiliateKeyModal_C.OnInputModeChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAffiliateKeyModal_C::OnInputModeChanged(bool bUsingGamepad)
 {
@@ -209,55 +189,35 @@ void UAffiliateKeyModal_C::OnInputModeChanged(bool bUsingGamepad)
 }
 
 
-// Function AffiliateKeyModal.AffiliateKeyModal_C.OnSet
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function AffiliateKeyModal.AffiliateKeyModal_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UAffiliateKeyModal_C::OnSet(bool bSuccess)
+void UAffiliateKeyModal_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AffiliateKeyModal_C", "OnSet");
-
-	Params::AffiliateKeyModal_C_OnSet Parms{};
-
-	Parms.bSuccess = bSuccess;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AffiliateKeyModal.AffiliateKeyModal_C.SetMobileButtons
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UAffiliateKeyModal_C::SetMobileButtons()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AffiliateKeyModal_C", "SetMobileButtons");
+		Func = Class->GetFunction("AffiliateKeyModal_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AffiliateKeyModal.AffiliateKeyModal_C.SetupAffiliateField
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function AffiliateKeyModal.AffiliateKeyModal_C.BndEvt__CloseButton_Mobile_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const class FString&                    AffilateName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAffiliateKeyModal_C::SetupAffiliateField(const class FString& AffilateName)
+void UAffiliateKeyModal_C::BndEvt__CloseButton_Mobile_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AffiliateKeyModal_C", "SetupAffiliateField");
+		Func = Class->GetFunction("AffiliateKeyModal_C", "BndEvt__CloseButton_Mobile_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
 
-	Params::AffiliateKeyModal_C_SetupAffiliateField Parms{};
+	Params::AffiliateKeyModal_C_BndEvt__CloseButton_Mobile_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
 
-	Parms.AffilateName = std::move(AffilateName);
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -274,6 +234,26 @@ void UAffiliateKeyModal_C::WidgetAnimationEvt_SuccessAnim_K2Node_WidgetAnimation
 		Func = Class->GetFunction("AffiliateKeyModal_C", "WidgetAnimationEvt_SuccessAnim_K2Node_WidgetAnimationEvent_1");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AffiliateKeyModal.AffiliateKeyModal_C.ExecuteUbergraph_AffiliateKeyModal
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAffiliateKeyModal_C::ExecuteUbergraph_AffiliateKeyModal(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AffiliateKeyModal_C", "ExecuteUbergraph_AffiliateKeyModal");
+
+	Params::AffiliateKeyModal_C_ExecuteUbergraph_AffiliateKeyModal Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

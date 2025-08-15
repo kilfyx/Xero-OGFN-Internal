@@ -17,6 +17,54 @@
 namespace SDK
 {
 
+// Function SettingsRotator_Narrow.SettingsRotator_Narrow_C.ExecuteUbergraph_SettingsRotator_Narrow
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USettingsRotator_Narrow_C::ExecuteUbergraph_SettingsRotator_Narrow(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SettingsRotator_Narrow_C", "ExecuteUbergraph_SettingsRotator_Narrow");
+
+	Params::SettingsRotator_Narrow_C_ExecuteUbergraph_SettingsRotator_Narrow Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SettingsRotator_Narrow.SettingsRotator_Narrow_C.OnUnHover Animation
+// (BlueprintCallable, BlueprintEvent)
+
+void USettingsRotator_Narrow_C::OnUnHover_Animation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SettingsRotator_Narrow_C", "OnUnHover Animation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SettingsRotator_Narrow.SettingsRotator_Narrow_C.OnHover Animation
+// (BlueprintCallable, BlueprintEvent)
+
+void USettingsRotator_Narrow_C::OnHover_Animation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SettingsRotator_Narrow_C", "OnHover Animation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function SettingsRotator_Narrow.SettingsRotator_Narrow_C.BP_OnDefaultOptionSpecified
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -74,54 +122,6 @@ void USettingsRotator_Narrow_C::BP_OnOptionsPopulated(int32 Count)
 	Parms.Count = Count;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SettingsRotator_Narrow.SettingsRotator_Narrow_C.ExecuteUbergraph_SettingsRotator_Narrow
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USettingsRotator_Narrow_C::ExecuteUbergraph_SettingsRotator_Narrow(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsRotator_Narrow_C", "ExecuteUbergraph_SettingsRotator_Narrow");
-
-	Params::SettingsRotator_Narrow_C_ExecuteUbergraph_SettingsRotator_Narrow Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SettingsRotator_Narrow.SettingsRotator_Narrow_C.OnHover Animation
-// (BlueprintCallable, BlueprintEvent)
-
-void USettingsRotator_Narrow_C::OnHover_Animation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsRotator_Narrow_C", "OnHover Animation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SettingsRotator_Narrow.SettingsRotator_Narrow_C.OnUnHover Animation
-// (BlueprintCallable, BlueprintEvent)
-
-void USettingsRotator_Narrow_C::OnUnHover_Animation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsRotator_Narrow_C", "OnUnHover Animation");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

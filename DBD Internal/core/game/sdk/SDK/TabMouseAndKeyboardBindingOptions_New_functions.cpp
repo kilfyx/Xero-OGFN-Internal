@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function TabMouseAndKeyboardBindingOptions_New.TabMouseAndKeyboardBindingOptions_New_C.ExecuteUbergraph_TabMouseAndKeyboardBindingOptions_New
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTabMouseAndKeyboardBindingOptions_New_C::ExecuteUbergraph_TabMouseAndKeyboardBindingOptions_New(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabMouseAndKeyboardBindingOptions_New_C", "ExecuteUbergraph_TabMouseAndKeyboardBindingOptions_New");
+
+	Params::TabMouseAndKeyboardBindingOptions_New_C_ExecuteUbergraph_TabMouseAndKeyboardBindingOptions_New Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function TabMouseAndKeyboardBindingOptions_New.TabMouseAndKeyboardBindingOptions_New_C.BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -34,6 +54,26 @@ void UTabMouseAndKeyboardBindingOptions_New_C::BndEvt__Settings_Panel_K2Node_Com
 
 	Parms.Setting = Setting;
 	Parms.Action = Action;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TabMouseAndKeyboardBindingOptions_New.TabMouseAndKeyboardBindingOptions_New_C.SettingValueChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTabMouseAndKeyboardBindingOptions_New_C::SettingValueChanged(float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabMouseAndKeyboardBindingOptions_New_C", "SettingValueChanged");
+
+	Params::TabMouseAndKeyboardBindingOptions_New_C_SettingValueChanged Parms{};
+
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -75,26 +115,6 @@ void UTabMouseAndKeyboardBindingOptions_New_C::DialogResult_686847584DA2D10A8A0F
 }
 
 
-// Function TabMouseAndKeyboardBindingOptions_New.TabMouseAndKeyboardBindingOptions_New_C.ExecuteUbergraph_TabMouseAndKeyboardBindingOptions_New
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTabMouseAndKeyboardBindingOptions_New_C::ExecuteUbergraph_TabMouseAndKeyboardBindingOptions_New(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabMouseAndKeyboardBindingOptions_New_C", "ExecuteUbergraph_TabMouseAndKeyboardBindingOptions_New");
-
-	Params::TabMouseAndKeyboardBindingOptions_New_C_ExecuteUbergraph_TabMouseAndKeyboardBindingOptions_New Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function TabMouseAndKeyboardBindingOptions_New.TabMouseAndKeyboardBindingOptions_New_C.OnComplete_CABEB38E4A74A3AE7304669F10DD9A94
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -110,26 +130,6 @@ void UTabMouseAndKeyboardBindingOptions_New_C::OnComplete_CABEB38E4A74A3AE730466
 	Params::TabMouseAndKeyboardBindingOptions_New_C_OnComplete_CABEB38E4A74A3AE7304669F10DD9A94 Parms{};
 
 	Parms.UserWidget = UserWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TabMouseAndKeyboardBindingOptions_New.TabMouseAndKeyboardBindingOptions_New_C.SettingValueChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTabMouseAndKeyboardBindingOptions_New_C::SettingValueChanged(float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabMouseAndKeyboardBindingOptions_New_C", "SettingValueChanged");
-
-	Params::TabMouseAndKeyboardBindingOptions_New_C_SettingValueChanged Parms{};
-
-	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -17,48 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.Check Resurrection Active
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   bEnabled                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_SCMachine_Passive_C::Check_Resurrection_Active(bool* bEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_SCMachine_Passive_C", "Check Resurrection Active");
-
-	Params::GA_Athena_SCMachine_Passive_C_Check_Resurrection_Active Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bEnabled != nullptr)
-		*bEnabled = Parms.bEnabled;
-}
-
-
-// Function GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.CheckPlayerChipSpawnEnabled
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   IsChipSpawnEnabled                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_SCMachine_Passive_C::CheckPlayerChipSpawnEnabled(bool* IsChipSpawnEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_SCMachine_Passive_C", "CheckPlayerChipSpawnEnabled");
-
-	Params::GA_Athena_SCMachine_Passive_C_CheckPlayerChipSpawnEnabled Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsChipSpawnEnabled != nullptr)
-		*IsChipSpawnEnabled = Parms.IsChipSpawnEnabled;
-}
-
-
 // Function GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.ExecuteUbergraph_GA_Athena_SCMachine_Passive
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -76,6 +34,20 @@ void UGA_Athena_SCMachine_Passive_C::ExecuteUbergraph_GA_Athena_SCMachine_Passiv
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Athena_SCMachine_Passive_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_SCMachine_Passive_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -99,15 +71,15 @@ void UGA_Athena_SCMachine_Passive_C::HandleOnFortPlayerDied(class AFortPlayerPaw
 }
 
 
-// Function GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
+// Function GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.Spawn
+// (BlueprintCallable, BlueprintEvent)
 
-void UGA_Athena_SCMachine_Passive_C::K2_ActivateAbility()
+void UGA_Athena_SCMachine_Passive_C::Spawn()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_SCMachine_Passive_C", "K2_ActivateAbility");
+		Func = Class->GetFunction("GA_Athena_SCMachine_Passive_C", "Spawn");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -127,17 +99,24 @@ void UGA_Athena_SCMachine_Passive_C::SaveOutPlayer()
 }
 
 
-// Function GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.Spawn
-// (BlueprintCallable, BlueprintEvent)
+// Function GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.Check Resurrection Active
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   bEnabled                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UGA_Athena_SCMachine_Passive_C::Spawn()
+void UGA_Athena_SCMachine_Passive_C::Check_Resurrection_Active(bool* bEnabled)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_SCMachine_Passive_C", "Spawn");
+		Func = Class->GetFunction("GA_Athena_SCMachine_Passive_C", "Check Resurrection Active");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::GA_Athena_SCMachine_Passive_C_Check_Resurrection_Active Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bEnabled != nullptr)
+		*bEnabled = Parms.bEnabled;
 }
 
 }

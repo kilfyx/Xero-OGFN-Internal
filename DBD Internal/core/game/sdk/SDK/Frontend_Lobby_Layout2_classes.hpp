@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Frontend_Lobby_Layout2.Frontend_Lobby_Layout2_C
-// 0x0000 (0x02A0 - 0x02A0)
+// 0x0000 (0x0238 - 0x0238)
 class AFrontend_Lobby_Layout2_C final : public AFortLevelScriptActor
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AFrontend_Lobby_Layout2_C) == 0x000008, "Wrong alignment on AFrontend_Lobby_Layout2_C");
-static_assert(sizeof(AFrontend_Lobby_Layout2_C) == 0x0002A0, "Wrong size on AFrontend_Lobby_Layout2_C");
+static_assert(sizeof(AFrontend_Lobby_Layout2_C) == 0x000238, "Wrong size on AFrontend_Lobby_Layout2_C");
 
 }
 

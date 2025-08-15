@@ -17,54 +17,6 @@
 namespace SDK
 {
 
-// Function UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    bIsOpen                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UUserSearchResultListEntry_XS_C::BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserSearchResultListEntry_XS_C", "BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature");
-
-	Params::UserSearchResultListEntry_XS_C_BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature Parms{};
-
-	Parms.bIsOpen = bIsOpen;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UUserSearchResultListEntry_XS_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserSearchResultListEntry_XS_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void UUserSearchResultListEntry_XS_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserSearchResultListEntry_XS_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.ExecuteUbergraph_UserSearchResultListEntry_XS
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -106,6 +58,54 @@ void UUserSearchResultListEntry_XS_C::SetNamePlatformAndMutuals(const class FTex
 	Parms.MutualCount = MutualCount;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UUserSearchResultListEntry_XS_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UserSearchResultListEntry_XS_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bIsOpen                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UUserSearchResultListEntry_XS_C::BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UserSearchResultListEntry_XS_C", "BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature");
+
+	Params::UserSearchResultListEntry_XS_C_BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature Parms{};
+
+	Parms.bIsOpen = bIsOpen;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UUserSearchResultListEntry_XS_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UserSearchResultListEntry_XS_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

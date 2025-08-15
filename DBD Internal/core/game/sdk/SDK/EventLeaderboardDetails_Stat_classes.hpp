@@ -18,21 +18,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventLeaderboardDetails_Stat.EventLeaderboardDetails_Stat_C
-// 0x0028 (0x0290 - 0x0268)
+// 0x0028 (0x0288 - 0x0260)
 class UEventLeaderboardDetails_Stat_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0268(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       UpdateStat;                                        // 0x0270(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_StatName;                                     // 0x0278(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_StatValue;                                    // 0x0280(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         StatItemIndex;                                     // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       UpdateStat;                                        // 0x0268(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_StatName;                                     // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_StatValue;                                    // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	int32                                         StatItemIndex;                                     // 0x0280(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetStatData(const class FText& Name_0, double Value, int32 NumFractionalDigits);
-	void ExecuteUbergraph_EventLeaderboardDetails_Stat(int32 EntryPoint);
-	void EventStatAnim();
+	void SetStatData(const class FText& Name_0, float Value, int32 NumFractionalDigits);
 	void Construct();
+	void EventStatAnim();
+	void ExecuteUbergraph_EventLeaderboardDetails_Stat(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -45,12 +45,12 @@ public:
 	}
 };
 static_assert(alignof(UEventLeaderboardDetails_Stat_C) == 0x000008, "Wrong alignment on UEventLeaderboardDetails_Stat_C");
-static_assert(sizeof(UEventLeaderboardDetails_Stat_C) == 0x000290, "Wrong size on UEventLeaderboardDetails_Stat_C");
-static_assert(offsetof(UEventLeaderboardDetails_Stat_C, UberGraphFrame) == 0x000268, "Member 'UEventLeaderboardDetails_Stat_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardDetails_Stat_C, UpdateStat) == 0x000270, "Member 'UEventLeaderboardDetails_Stat_C::UpdateStat' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardDetails_Stat_C, Text_StatName) == 0x000278, "Member 'UEventLeaderboardDetails_Stat_C::Text_StatName' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardDetails_Stat_C, Text_StatValue) == 0x000280, "Member 'UEventLeaderboardDetails_Stat_C::Text_StatValue' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardDetails_Stat_C, StatItemIndex) == 0x000288, "Member 'UEventLeaderboardDetails_Stat_C::StatItemIndex' has a wrong offset!");
+static_assert(sizeof(UEventLeaderboardDetails_Stat_C) == 0x000288, "Wrong size on UEventLeaderboardDetails_Stat_C");
+static_assert(offsetof(UEventLeaderboardDetails_Stat_C, UberGraphFrame) == 0x000260, "Member 'UEventLeaderboardDetails_Stat_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardDetails_Stat_C, UpdateStat) == 0x000268, "Member 'UEventLeaderboardDetails_Stat_C::UpdateStat' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardDetails_Stat_C, Text_StatName) == 0x000270, "Member 'UEventLeaderboardDetails_Stat_C::Text_StatName' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardDetails_Stat_C, Text_StatValue) == 0x000278, "Member 'UEventLeaderboardDetails_Stat_C::Text_StatValue' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardDetails_Stat_C, StatItemIndex) == 0x000280, "Member 'UEventLeaderboardDetails_Stat_C::StatItemIndex' has a wrong offset!");
 
 }
 

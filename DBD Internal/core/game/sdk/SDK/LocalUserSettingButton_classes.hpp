@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LocalUserSettingButton.LocalUserSettingButton_C
-// 0x0020 (0x0F30 - 0x0F10)
+// 0x0020 (0x0BD8 - 0x0BB8)
 class ULocalUserSettingButton_C final : public UFortLocalUserSettingButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHover;                                           // 0x0F18(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                Border_InteractionIndicator;                       // 0x0F20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_AnimatedArrow;                               // 0x0F28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHover;                                           // 0x0BC0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                Border_InteractionIndicator;                       // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_AnimatedArrow;                               // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnHovered();
-	void BP_OnUnhovered();
 	void ExecuteUbergraph_LocalUserSettingButton(int32 EntryPoint);
+	void BP_OnUnhovered();
+	void BP_OnHovered();
 
 public:
 	static class UClass* StaticClass()
@@ -42,6 +42,12 @@ public:
 		return GetDefaultObjImpl<ULocalUserSettingButton_C>();
 	}
 };
+static_assert(alignof(ULocalUserSettingButton_C) == 0x000008, "Wrong alignment on ULocalUserSettingButton_C");
+static_assert(sizeof(ULocalUserSettingButton_C) == 0x000BD8, "Wrong size on ULocalUserSettingButton_C");
+static_assert(offsetof(ULocalUserSettingButton_C, UberGraphFrame) == 0x000BB8, "Member 'ULocalUserSettingButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ULocalUserSettingButton_C, OnHover) == 0x000BC0, "Member 'ULocalUserSettingButton_C::OnHover' has a wrong offset!");
+static_assert(offsetof(ULocalUserSettingButton_C, Border_InteractionIndicator) == 0x000BC8, "Member 'ULocalUserSettingButton_C::Border_InteractionIndicator' has a wrong offset!");
+static_assert(offsetof(ULocalUserSettingButton_C, Image_AnimatedArrow) == 0x000BD0, "Member 'ULocalUserSettingButton_C::Image_AnimatedArrow' has a wrong offset!");
 
 }
 

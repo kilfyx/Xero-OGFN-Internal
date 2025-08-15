@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UTeamID_Orange_C>();
 	}
 };
+static_assert(alignof(UTeamID_Orange_C) == 0x000008, "Wrong alignment on UTeamID_Orange_C");
+static_assert(sizeof(UTeamID_Orange_C) == 0x000038, "Wrong size on UTeamID_Orange_C");
 
 }
 

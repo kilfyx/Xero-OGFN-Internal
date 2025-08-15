@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Hotfix_BuildingPropWithLootComp_Parent_classes.hpp"
+#include "Hotfix_Container_Parent_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Couch_parent_Container_Athena_NoSearch.Couch_parent_Container_Athena_NoSearch_C
-// 0x0000 (0x0DD0 - 0x0DD0)
-class ACouch_parent_Container_Athena_NoSearch_C final : public AHotfix_BuildingPropWithLootComp_Parent_C
+// 0x0000 (0x0D80 - 0x0D80)
+class ACouch_parent_Container_Athena_NoSearch_C final : public AHotfix_Container_Parent_C
 {
 public:
 	static class UClass* StaticClass()
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ACouch_parent_Container_Athena_NoSearch_C>();
 	}
 };
+static_assert(alignof(ACouch_parent_Container_Athena_NoSearch_C) == 0x000008, "Wrong alignment on ACouch_parent_Container_Athena_NoSearch_C");
+static_assert(sizeof(ACouch_parent_Container_Athena_NoSearch_C) == 0x000D80, "Wrong size on ACouch_parent_Container_Athena_NoSearch_C");
 
 }
 

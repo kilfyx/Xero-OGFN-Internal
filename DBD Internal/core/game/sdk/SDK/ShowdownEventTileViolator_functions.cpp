@@ -17,15 +17,15 @@
 namespace SDK
 {
 
-// Function ShowdownEventTileViolator.ShowdownEventTileViolator_C.RefreshViolatorData
-// (BlueprintCallable, BlueprintEvent)
+// Function ShowdownEventTileViolator.ShowdownEventTileViolator_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UShowdownEventTileViolator_C::RefreshViolatorData()
+void UShowdownEventTileViolator_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshViolatorData");
+		Func = Class->GetFunction("ShowdownEventTileViolator_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,9 +37,23 @@ void UShowdownEventTileViolator_C::RefreshViolatorData()
 void UShowdownEventTileViolator_C::RefreshDataBP()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshDataBP");
+		Func = Class->GetFunction("ShowdownEventTileViolator_C", "RefreshDataBP");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShowdownEventTileViolator.ShowdownEventTileViolator_C.RefreshViolatorData
+// (BlueprintCallable, BlueprintEvent)
+
+void UShowdownEventTileViolator_C::RefreshViolatorData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownEventTileViolator_C", "RefreshViolatorData");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -53,29 +67,15 @@ void UShowdownEventTileViolator_C::RefreshDataBP()
 void UShowdownEventTileViolator_C::ExecuteUbergraph_ShowdownEventTileViolator(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_ShowdownEventTileViolator");
+		Func = Class->GetFunction("ShowdownEventTileViolator_C", "ExecuteUbergraph_ShowdownEventTileViolator");
 
 	Params::ShowdownEventTileViolator_C_ExecuteUbergraph_ShowdownEventTileViolator Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ShowdownEventTileViolator.ShowdownEventTileViolator_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UShowdownEventTileViolator_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

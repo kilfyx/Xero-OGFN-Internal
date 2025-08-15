@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventMatchHistoryTournamentInfo.EventMatchHistoryTournamentInfo_C
-// 0x0010 (0x0728 - 0x0718)
+// 0x0010 (0x06C8 - 0x06B8)
 class UEventMatchHistoryTournamentInfo_C final : public UFortShowdownDetailView
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0718(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       Text_TournamentInfo;                               // 0x0720(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       Text_TournamentInfo;                               // 0x06C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void RefreshDataBP();
@@ -40,9 +40,9 @@ public:
 	}
 };
 static_assert(alignof(UEventMatchHistoryTournamentInfo_C) == 0x000008, "Wrong alignment on UEventMatchHistoryTournamentInfo_C");
-static_assert(sizeof(UEventMatchHistoryTournamentInfo_C) == 0x000728, "Wrong size on UEventMatchHistoryTournamentInfo_C");
-static_assert(offsetof(UEventMatchHistoryTournamentInfo_C, UberGraphFrame) == 0x000718, "Member 'UEventMatchHistoryTournamentInfo_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventMatchHistoryTournamentInfo_C, Text_TournamentInfo) == 0x000720, "Member 'UEventMatchHistoryTournamentInfo_C::Text_TournamentInfo' has a wrong offset!");
+static_assert(sizeof(UEventMatchHistoryTournamentInfo_C) == 0x0006C8, "Wrong size on UEventMatchHistoryTournamentInfo_C");
+static_assert(offsetof(UEventMatchHistoryTournamentInfo_C, UberGraphFrame) == 0x0006B8, "Member 'UEventMatchHistoryTournamentInfo_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UEventMatchHistoryTournamentInfo_C, Text_TournamentInfo) == 0x0006C0, "Member 'UEventMatchHistoryTournamentInfo_C::Text_TournamentInfo' has a wrong offset!");
 
 }
 

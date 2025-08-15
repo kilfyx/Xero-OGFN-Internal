@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UTeamID_Lime_C>();
 	}
 };
+static_assert(alignof(UTeamID_Lime_C) == 0x000008, "Wrong alignment on UTeamID_Lime_C");
+static_assert(sizeof(UTeamID_Lime_C) == 0x000038, "Wrong size on UTeamID_Lime_C");
 
 }
 

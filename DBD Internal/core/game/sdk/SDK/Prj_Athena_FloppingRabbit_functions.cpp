@@ -17,52 +17,30 @@
 namespace SDK
 {
 
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.WriteNothingCaughtFishingAnalytic
-// (BlueprintCallable, BlueprintEvent)
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ExecuteUbergraph_Prj_Athena_FloppingRabbit
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void APrj_Athena_FloppingRabbit_C::WriteNothingCaughtFishingAnalytic()
+void APrj_Athena_FloppingRabbit_C::ExecuteUbergraph_Prj_Athena_FloppingRabbit(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "WriteNothingCaughtFishingAnalytic");
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ExecuteUbergraph_Prj_Athena_FloppingRabbit");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::Prj_Athena_FloppingRabbit_C_ExecuteUbergraph_Prj_Athena_FloppingRabbit Parms{};
 
+	Parms.EntryPoint = EntryPoint;
 
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.UnRegisterWithGoalManager
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void APrj_Athena_FloppingRabbit_C::UnRegisterWithGoalManager()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "UnRegisterWithGoalManager");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.TryCatch
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void APrj_Athena_FloppingRabbit_C::TryCatch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "TryCatch");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ToggleMiniGameSplashLoop
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    On                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    On                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void APrj_Athena_FloppingRabbit_C::ToggleMiniGameSplashLoop(bool On)
 {
@@ -79,91 +57,15 @@ void APrj_Athena_FloppingRabbit_C::ToggleMiniGameSplashLoop(bool On)
 }
 
 
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.Timeline_0__UpdateFunc
-// (BlueprintEvent)
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ClientReelIn
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 
-void APrj_Athena_FloppingRabbit_C::Timeline_0__UpdateFunc()
+void APrj_Athena_FloppingRabbit_C::ClientReelIn()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "Timeline_0__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.Timeline_0__FinishedFunc
-// (BlueprintEvent)
-
-void APrj_Athena_FloppingRabbit_C::Timeline_0__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "Timeline_0__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.SpawnItemsFX
-// (BlueprintCallable, BlueprintEvent)
-
-void APrj_Athena_FloppingRabbit_C::SpawnItemsFX()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "SpawnItemsFX");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ServerAttemptTether
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class APawn*                            TetherActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APrj_Athena_FloppingRabbit_C::ServerAttemptTether(class APawn* TetherActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ServerAttemptTether");
-
-	Params::Prj_Athena_FloppingRabbit_C_ServerAttemptTether Parms{};
-
-	Parms.TetherActor = TetherActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.RegisterWithGoalManager
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void APrj_Athena_FloppingRabbit_C::RegisterWithGoalManager()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "RegisterWithGoalManager");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ReelIn
-// (BlueprintCallable, BlueprintEvent)
-
-void APrj_Athena_FloppingRabbit_C::ReelIn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ReelIn");
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ClientReelIn");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -189,87 +91,17 @@ void APrj_Athena_FloppingRabbit_C::ReceiveTick(float DeltaSeconds)
 }
 
 
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ReceiveHit
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              MyComp                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Other                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bSelfMoved                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   HitNormal                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.DipFx
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
-void APrj_Athena_FloppingRabbit_C::ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const struct FVector& HitLocation, const struct FVector& HitNormal, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+void APrj_Athena_FloppingRabbit_C::DipFx()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ReceiveHit");
-
-	Params::Prj_Athena_FloppingRabbit_C_ReceiveHit Parms{};
-
-	Parms.MyComp = MyComp;
-	Parms.Other = Other;
-	Parms.OtherComp = OtherComp;
-	Parms.bSelfMoved = bSelfMoved;
-	Parms.HitLocation = std::move(HitLocation);
-	Parms.HitNormal = std::move(HitNormal);
-	Parms.NormalImpulse = std::move(NormalImpulse);
-	Parms.Hit = std::move(Hit);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void APrj_Athena_FloppingRabbit_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ReceiveDestroyed");
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "DipFx");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void APrj_Athena_FloppingRabbit_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.OnExploded
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-
-void APrj_Athena_FloppingRabbit_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "OnExploded");
-
-	Params::Prj_Athena_FloppingRabbit_C_OnExploded Parms{};
-
-	Parms.HitActors = std::move(HitActors);
-	Parms.HitResults = std::move(HitResults);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -287,180 +119,75 @@ void APrj_Athena_FloppingRabbit_C::Minigame_MoveBobber()
 }
 
 
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.IgnoreTetherablePawn
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ServerAttemptTether
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           HitActor                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   isIgnored                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            TetherActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void APrj_Athena_FloppingRabbit_C::IgnoreTetherablePawn(class AActor* HitActor, bool* isIgnored)
+void APrj_Athena_FloppingRabbit_C::ServerAttemptTether(class APawn* TetherActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "IgnoreTetherablePawn");
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ServerAttemptTether");
 
-	Params::Prj_Athena_FloppingRabbit_C_IgnoreTetherablePawn Parms{};
+	Params::Prj_Athena_FloppingRabbit_C_ServerAttemptTether Parms{};
 
-	Parms.HitActor = HitActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (isIgnored != nullptr)
-		*isIgnored = Parms.isIgnored;
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.HitWater
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    FishSpawner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APrj_Athena_FloppingRabbit_C::HitWater(bool FishSpawner)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "HitWater");
-
-	Params::Prj_Athena_FloppingRabbit_C_HitWater Parms{};
-
-	Parms.FishSpawner = FishSpawner;
+	Parms.TetherActor = TetherActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.HideAndKill
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void APrj_Athena_FloppingRabbit_C::HideAndKill()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "HideAndKill");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.GetSheetVals
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void APrj_Athena_FloppingRabbit_C::GetSheetVals()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "GetSheetVals");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.FullDip
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    InWorldSpawner                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APrj_Athena_FloppingRabbit_C::FullDip(bool InWorldSpawner)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "FullDip");
-
-	Params::Prj_Athena_FloppingRabbit_C_FullDip Parms{};
-
-	Parms.InWorldSpawner = InWorldSpawner;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ForceKill
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ReelIn
 // (BlueprintCallable, BlueprintEvent)
 
-void APrj_Athena_FloppingRabbit_C::ForceKill()
+void APrj_Athena_FloppingRabbit_C::ReelIn()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ForceKill");
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ReelIn");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ExecuteUbergraph_Prj_Athena_FloppingRabbit
-// (Final, UbergraphFunction, HasDefaults)
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnExitWater__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortWaterBodyActor*              WaterBody                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortWaterInteractionComponent*   WaterInteractionComponent_0                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsLastBody                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void APrj_Athena_FloppingRabbit_C::ExecuteUbergraph_Prj_Athena_FloppingRabbit(int32 EntryPoint)
+void APrj_Athena_FloppingRabbit_C::BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnExitWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsLastBody)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ExecuteUbergraph_Prj_Athena_FloppingRabbit");
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnExitWater__DelegateSignature");
 
-	Params::Prj_Athena_FloppingRabbit_C_ExecuteUbergraph_Prj_Athena_FloppingRabbit Parms{};
+	Params::Prj_Athena_FloppingRabbit_C_BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnExitWater__DelegateSignature Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.WaterBody = WaterBody;
+	Parms.WaterInteractionComponent_0 = WaterInteractionComponent_0;
+	Parms.bIsLastBody = bIsLastBody;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.DistanceCheck
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.WriteNothingCaughtFishingAnalytic
 // (BlueprintCallable, BlueprintEvent)
 
-void APrj_Athena_FloppingRabbit_C::DistanceCheck()
+void APrj_Athena_FloppingRabbit_C::WriteNothingCaughtFishingAnalytic()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "DistanceCheck");
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "WriteNothingCaughtFishingAnalytic");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.DipFx
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void APrj_Athena_FloppingRabbit_C::DipFx()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "DipFx");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.DetermineFishLootTierNameAndSetLootForSpawner
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bIsExplosion                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class FName APrj_Athena_FloppingRabbit_C::DetermineFishLootTierNameAndSetLootForSpawner(bool bIsExplosion)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "DetermineFishLootTierNameAndSetLootForSpawner");
-
-	Params::Prj_Athena_FloppingRabbit_C_DetermineFishLootTierNameAndSetLootForSpawner Parms{};
-
-	Parms.bIsExplosion = bIsExplosion;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
@@ -484,15 +211,15 @@ void APrj_Athena_FloppingRabbit_C::CustomPickupAttach(class AFortPickup* FortPic
 }
 
 
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ClientReelIn
-// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.SpawnItemsFX
+// (BlueprintCallable, BlueprintEvent)
 
-void APrj_Athena_FloppingRabbit_C::ClientReelIn()
+void APrj_Athena_FloppingRabbit_C::SpawnItemsFX()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ClientReelIn");
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "SpawnItemsFX");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -526,6 +253,132 @@ void APrj_Athena_FloppingRabbit_C::CheckForDip()
 }
 
 
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void APrj_Athena_FloppingRabbit_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.HitWater
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    FishSpawner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void APrj_Athena_FloppingRabbit_C::HitWater(bool FishSpawner)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "HitWater");
+
+	Params::Prj_Athena_FloppingRabbit_C_HitWater Parms{};
+
+	Parms.FishSpawner = FishSpawner;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.OnExploded
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+
+void APrj_Athena_FloppingRabbit_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "OnExploded");
+
+	Params::Prj_Athena_FloppingRabbit_C_OnExploded Parms{};
+
+	Parms.HitActors = std::move(HitActors);
+	Parms.HitResults = std::move(HitResults);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ForceKill
+// (BlueprintCallable, BlueprintEvent)
+
+void APrj_Athena_FloppingRabbit_C::ForceKill()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ForceKill");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.DistanceCheck
+// (BlueprintCallable, BlueprintEvent)
+
+void APrj_Athena_FloppingRabbit_C::DistanceCheck()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "DistanceCheck");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void APrj_Athena_FloppingRabbit_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.HideAndKill
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void APrj_Athena_FloppingRabbit_C::HideAndKill()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "HideAndKill");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.TryCatch
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void APrj_Athena_FloppingRabbit_C::TryCatch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "TryCatch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.CatchWindow
 // (BlueprintCallable, BlueprintEvent)
 
@@ -540,25 +393,21 @@ void APrj_Athena_FloppingRabbit_C::CatchWindow()
 }
 
 
-// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnExitWater__DelegateSignature
-// (BlueprintEvent)
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.FullDip
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFortWaterBodyActor*              WaterBody                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFortWaterInteractionComponent*   WaterInteractionComponent_0                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsLastBody                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    InWorldSpawner                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void APrj_Athena_FloppingRabbit_C::BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnExitWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsLastBody)
+void APrj_Athena_FloppingRabbit_C::FullDip(bool InWorldSpawner)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnExitWater__DelegateSignature");
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "FullDip");
 
-	Params::Prj_Athena_FloppingRabbit_C_BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnExitWater__DelegateSignature Parms{};
+	Params::Prj_Athena_FloppingRabbit_C_FullDip Parms{};
 
-	Parms.WaterBody = WaterBody;
-	Parms.WaterInteractionComponent_0 = WaterInteractionComponent_0;
-	Parms.bIsLastBody = bIsLastBody;
+	Parms.InWorldSpawner = InWorldSpawner;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -571,7 +420,7 @@ void APrj_Athena_FloppingRabbit_C::BndEvt__WaterInteractionComponent_K2Node_Comp
 // class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
 void APrj_Athena_FloppingRabbit_C::BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
@@ -591,6 +440,68 @@ void APrj_Athena_FloppingRabbit_C::BndEvt__CapsuleComponent_K2Node_ComponentBoun
 	Parms.SweepResult = std::move(SweepResult);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.ReceiveHit
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              MyComp                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Other                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSelfMoved                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FVector&                   HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   HitNormal                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void APrj_Athena_FloppingRabbit_C::ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const struct FVector& HitLocation, const struct FVector& HitNormal, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "ReceiveHit");
+
+	Params::Prj_Athena_FloppingRabbit_C_ReceiveHit Parms{};
+
+	Parms.MyComp = MyComp;
+	Parms.Other = Other;
+	Parms.OtherComp = OtherComp;
+	Parms.bSelfMoved = bSelfMoved;
+	Parms.HitLocation = std::move(HitLocation);
+	Parms.HitNormal = std::move(HitNormal);
+	Parms.NormalImpulse = std::move(NormalImpulse);
+	Parms.Hit = std::move(Hit);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.Timeline_0__UpdateFunc
+// (BlueprintEvent)
+
+void APrj_Athena_FloppingRabbit_C::Timeline_0__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "Timeline_0__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.Timeline_0__FinishedFunc
+// (BlueprintEvent)
+
+void APrj_Athena_FloppingRabbit_C::Timeline_0__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "Timeline_0__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -622,11 +533,25 @@ void APrj_Athena_FloppingRabbit_C::BigBob__FinishedFunc()
 }
 
 
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.GetSheetVals
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void APrj_Athena_FloppingRabbit_C::GetSheetVals()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "GetSheetVals");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.AttemptTether
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           HitActor                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   bTethered                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bTethered                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void APrj_Athena_FloppingRabbit_C::AttemptTether(class AActor* HitActor, bool* bTethered)
 {
@@ -643,6 +568,81 @@ void APrj_Athena_FloppingRabbit_C::AttemptTether(class AActor* HitActor, bool* b
 
 	if (bTethered != nullptr)
 		*bTethered = Parms.bTethered;
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.RegisterWithGoalManager
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void APrj_Athena_FloppingRabbit_C::RegisterWithGoalManager()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "RegisterWithGoalManager");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.UnRegisterWithGoalManager
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void APrj_Athena_FloppingRabbit_C::UnRegisterWithGoalManager()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "UnRegisterWithGoalManager");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.IgnoreTetherablePawn
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           HitActor                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   isIgnored                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void APrj_Athena_FloppingRabbit_C::IgnoreTetherablePawn(class AActor* HitActor, bool* isIgnored)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "IgnoreTetherablePawn");
+
+	Params::Prj_Athena_FloppingRabbit_C_IgnoreTetherablePawn Parms{};
+
+	Parms.HitActor = HitActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (isIgnored != nullptr)
+		*isIgnored = Parms.isIgnored;
+}
+
+
+// Function Prj_Athena_FloppingRabbit.Prj_Athena_FloppingRabbit_C.DetermineFishLootTierNameAndSetLootForSpawner
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bIsExplosion                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class FName APrj_Athena_FloppingRabbit_C::DetermineFishLootTierNameAndSetLootForSpawner(bool bIsExplosion)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_FloppingRabbit_C", "DetermineFishLootTierNameAndSetLootForSpawner");
+
+	Params::Prj_Athena_FloppingRabbit_C_DetermineFishLootTierNameAndSetLootForSpawner Parms{};
+
+	Parms.bIsExplosion = bIsExplosion;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

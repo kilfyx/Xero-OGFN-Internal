@@ -17,21 +17,69 @@
 namespace SDK
 {
 
-// Function Lightbox.Lightbox_C.AddContent
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Lightbox.Lightbox_C.ExecuteUbergraph_Lightbox
+// (Final, UbergraphFunction)
 // Parameters:
-// class UCommonUserWidget*                Content_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULightbox_C::AddContent(class UCommonUserWidget* Content_0)
+void ULightbox_C::ExecuteUbergraph_Lightbox(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Lightbox_C", "AddContent");
+		Func = Class->GetFunction("Lightbox_C", "ExecuteUbergraph_Lightbox");
 
-	Params::Lightbox_C_AddContent Parms{};
+	Params::Lightbox_C_ExecuteUbergraph_Lightbox Parms{};
 
-	Parms.Content_0 = Content_0;
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Lightbox.Lightbox_C.WidgetAnimationEvt_FadeOut_K2Node_WidgetAnimationEvent_1
+// (BlueprintEvent)
+
+void ULightbox_C::WidgetAnimationEvt_FadeOut_K2Node_WidgetAnimationEvent_1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lightbox_C", "WidgetAnimationEvt_FadeOut_K2Node_WidgetAnimationEvent_1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Lightbox.Lightbox_C.WidgetAnimationEvt_FadeIn_K2Node_WidgetAnimationEvent_0
+// (BlueprintEvent)
+
+void ULightbox_C::WidgetAnimationEvt_FadeIn_K2Node_WidgetAnimationEvent_0()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lightbox_C", "WidgetAnimationEvt_FadeIn_K2Node_WidgetAnimationEvent_0");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Lightbox.Lightbox_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ULightbox_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lightbox_C", "PreConstruct");
+
+	Params::Lightbox_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -65,26 +113,6 @@ void ULightbox_C::Destruct()
 }
 
 
-// Function Lightbox.Lightbox_C.ExecuteUbergraph_Lightbox
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULightbox_C::ExecuteUbergraph_Lightbox(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Lightbox_C", "ExecuteUbergraph_Lightbox");
-
-	Params::Lightbox_C_ExecuteUbergraph_Lightbox Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function Lightbox.Lightbox_C.Intro
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -113,21 +141,21 @@ void ULightbox_C::Outro()
 }
 
 
-// Function Lightbox.Lightbox_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Lightbox.Lightbox_C.AddContent
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonUserWidget*                Content_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULightbox_C::PreConstruct(bool IsDesignTime)
+void ULightbox_C::AddContent(class UCommonUserWidget* Content_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Lightbox_C", "PreConstruct");
+		Func = Class->GetFunction("Lightbox_C", "AddContent");
 
-	Params::Lightbox_C_PreConstruct Parms{};
+	Params::Lightbox_C_AddContent Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.Content_0 = Content_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -142,34 +170,6 @@ void ULightbox_C::RemoveContent()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("Lightbox_C", "RemoveContent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Lightbox.Lightbox_C.WidgetAnimationEvt_FadeIn_K2Node_WidgetAnimationEvent_0
-// (BlueprintEvent)
-
-void ULightbox_C::WidgetAnimationEvt_FadeIn_K2Node_WidgetAnimationEvent_0()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Lightbox_C", "WidgetAnimationEvt_FadeIn_K2Node_WidgetAnimationEvent_0");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Lightbox.Lightbox_C.WidgetAnimationEvt_FadeOut_K2Node_WidgetAnimationEvent_1
-// (BlueprintEvent)
-
-void ULightbox_C::WidgetAnimationEvt_FadeOut_K2Node_WidgetAnimationEvent_1()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Lightbox_C", "WidgetAnimationEvt_FadeOut_K2Node_WidgetAnimationEvent_1");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

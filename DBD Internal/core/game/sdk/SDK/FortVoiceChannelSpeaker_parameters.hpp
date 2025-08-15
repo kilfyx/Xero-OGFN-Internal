@@ -16,17 +16,6 @@
 namespace SDK::Params
 {
 
-// Function FortVoiceChannelSpeaker.FortVoiceChannelSpeaker_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct FortVoiceChannelSpeaker_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FortVoiceChannelSpeaker_C_PreConstruct) == 0x000001, "Wrong alignment on FortVoiceChannelSpeaker_C_PreConstruct");
-static_assert(sizeof(FortVoiceChannelSpeaker_C_PreConstruct) == 0x000001, "Wrong size on FortVoiceChannelSpeaker_C_PreConstruct");
-static_assert(offsetof(FortVoiceChannelSpeaker_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'FortVoiceChannelSpeaker_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
 // Function FortVoiceChannelSpeaker.FortVoiceChannelSpeaker_C.OnStyleAssigned
 // 0x0001 (0x0001 - 0x0000)
 struct FortVoiceChannelSpeaker_C_OnStyleAssigned final
@@ -38,12 +27,23 @@ static_assert(alignof(FortVoiceChannelSpeaker_C_OnStyleAssigned) == 0x000001, "W
 static_assert(sizeof(FortVoiceChannelSpeaker_C_OnStyleAssigned) == 0x000001, "Wrong size on FortVoiceChannelSpeaker_C_OnStyleAssigned");
 static_assert(offsetof(FortVoiceChannelSpeaker_C_OnStyleAssigned, NewStyle) == 0x000000, "Member 'FortVoiceChannelSpeaker_C_OnStyleAssigned::NewStyle' has a wrong offset!");
 
+// Function FortVoiceChannelSpeaker.FortVoiceChannelSpeaker_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct FortVoiceChannelSpeaker_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(FortVoiceChannelSpeaker_C_PreConstruct) == 0x000001, "Wrong alignment on FortVoiceChannelSpeaker_C_PreConstruct");
+static_assert(sizeof(FortVoiceChannelSpeaker_C_PreConstruct) == 0x000001, "Wrong size on FortVoiceChannelSpeaker_C_PreConstruct");
+static_assert(offsetof(FortVoiceChannelSpeaker_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'FortVoiceChannelSpeaker_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
 // Function FortVoiceChannelSpeaker.FortVoiceChannelSpeaker_C.OnAnimateTalkingChanged
 // 0x0001 (0x0001 - 0x0000)
 struct FortVoiceChannelSpeaker_C_OnAnimateTalkingChanged final
 {
 public:
-	bool                                          bIsNowTalking;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsNowTalking;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(FortVoiceChannelSpeaker_C_OnAnimateTalkingChanged) == 0x000001, "Wrong alignment on FortVoiceChannelSpeaker_C_OnAnimateTalkingChanged");
 static_assert(sizeof(FortVoiceChannelSpeaker_C_OnAnimateTalkingChanged) == 0x000001, "Wrong size on FortVoiceChannelSpeaker_C_OnAnimateTalkingChanged");
@@ -57,13 +57,13 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EChannelSpeakerStyle                          K2Node_Event_NewStyle;                             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsNowTalking;                        // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsAnimationPlaying_ReturnValue;           // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bIsNowTalking;                        // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsAnimationPlaying_ReturnValue;           // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FortVoiceChannelSpeaker_C_ExecuteUbergraph_FortVoiceChannelSpeaker) == 0x000008, "Wrong alignment on FortVoiceChannelSpeaker_C_ExecuteUbergraph_FortVoiceChannelSpeaker");
 static_assert(sizeof(FortVoiceChannelSpeaker_C_ExecuteUbergraph_FortVoiceChannelSpeaker) == 0x000020, "Wrong size on FortVoiceChannelSpeaker_C_ExecuteUbergraph_FortVoiceChannelSpeaker");

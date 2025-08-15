@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBB_HoagieMoveUp_C>();
 	}
 };
+static_assert(alignof(UBB_HoagieMoveUp_C) == 0x000008, "Wrong alignment on UBB_HoagieMoveUp_C");
+static_assert(sizeof(UBB_HoagieMoveUp_C) == 0x0000F8, "Wrong size on UBB_HoagieMoveUp_C");
 
 }
 

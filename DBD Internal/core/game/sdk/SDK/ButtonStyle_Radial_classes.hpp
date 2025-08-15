@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ButtonStyle_Radial.ButtonStyle_Radial_C
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0000 (0x0570 - 0x0570)
 class UButtonStyle_Radial_C final : public UButtonStyle_MediumTransparentNoCues_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_Radial_C>();
 	}
 };
+static_assert(alignof(UButtonStyle_Radial_C) == 0x000008, "Wrong alignment on UButtonStyle_Radial_C");
+static_assert(sizeof(UButtonStyle_Radial_C) == 0x000570, "Wrong size on UButtonStyle_Radial_C");
 
 }
 

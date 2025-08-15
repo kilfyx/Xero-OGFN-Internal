@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PBWA_BG_QuarterWallS.PBWA_BG_QuarterWallS_C
-// 0x0000 (0x0DF8 - 0x0DF8)
+// 0x0000 (0x0C28 - 0x0C28)
 class APBWA_BG_QuarterWallS_C final : public ABuildingWall
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<APBWA_BG_QuarterWallS_C>();
 	}
 };
+static_assert(alignof(APBWA_BG_QuarterWallS_C) == 0x000008, "Wrong alignment on APBWA_BG_QuarterWallS_C");
+static_assert(sizeof(APBWA_BG_QuarterWallS_C) == 0x000C28, "Wrong size on APBWA_BG_QuarterWallS_C");
 
 }
 

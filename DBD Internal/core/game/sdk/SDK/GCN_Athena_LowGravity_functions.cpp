@@ -17,40 +17,6 @@
 namespace SDK
 {
 
-// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.Activated
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           PlayerPawn                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AGCN_Athena_LowGravity_C::Activated(class AActor* PlayerPawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "Activated");
-
-	Params::GCN_Athena_LowGravity_C_Activated Parms{};
-
-	Parms.PlayerPawn = PlayerPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.ClearExpireTell
-// (BlueprintCallable, BlueprintEvent)
-
-void AGCN_Athena_LowGravity_C::ClearExpireTell()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "ClearExpireTell");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.ExecuteUbergraph_GCN_Athena_LowGravity
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -71,15 +37,29 @@ void AGCN_Athena_LowGravity_C::ExecuteUbergraph_GCN_Athena_LowGravity(int32 Entr
 }
 
 
-// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.ExpireTell
+// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.ClearExpireTell
 // (BlueprintCallable, BlueprintEvent)
 
-void AGCN_Athena_LowGravity_C::ExpireTell()
+void AGCN_Athena_LowGravity_C::ClearExpireTell()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "ExpireTell");
+		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "ClearExpireTell");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AGCN_Athena_LowGravity_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -109,31 +89,6 @@ void AGCN_Athena_LowGravity_C::K2_HandleGameplayCue(class AActor* MyTarget, EGam
 }
 
 
-// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.OnRemove
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool AGCN_Athena_LowGravity_C::OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "OnRemove");
-
-	Params::GCN_Athena_LowGravity_C_OnRemove Parms{};
-
-	Parms.MyTarget = MyTarget;
-	Parms.Parameters = std::move(Parameters);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.PlayExpirationSound
 // (BlueprintCallable, BlueprintEvent)
 
@@ -148,15 +103,15 @@ void AGCN_Athena_LowGravity_C::PlayExpirationSound()
 }
 
 
-// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.ExpireTell
+// (BlueprintCallable, BlueprintEvent)
 
-void AGCN_Athena_LowGravity_C::ReceiveBeginPlay()
+void AGCN_Athena_LowGravity_C::ExpireTell()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "ExpireTell");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -167,7 +122,7 @@ void AGCN_Athena_LowGravity_C::ReceiveBeginPlay()
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool AGCN_Athena_LowGravity_C::WhileActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
 {
@@ -177,6 +132,51 @@ bool AGCN_Athena_LowGravity_C::WhileActive(class AActor* MyTarget, const struct 
 		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "WhileActive");
 
 	Params::GCN_Athena_LowGravity_C_WhileActive Parms{};
+
+	Parms.MyTarget = MyTarget;
+	Parms.Parameters = std::move(Parameters);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.Activated
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           PlayerPawn_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AGCN_Athena_LowGravity_C::Activated(class AActor* PlayerPawn_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "Activated");
+
+	Params::GCN_Athena_LowGravity_C_Activated Parms{};
+
+	Parms.PlayerPawn_0 = PlayerPawn_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.OnRemove
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool AGCN_Athena_LowGravity_C::OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "OnRemove");
+
+	Params::GCN_Athena_LowGravity_C_OnRemove Parms{};
 
 	Parms.MyTarget = MyTarget;
 	Parms.Parameters = std::move(Parameters);

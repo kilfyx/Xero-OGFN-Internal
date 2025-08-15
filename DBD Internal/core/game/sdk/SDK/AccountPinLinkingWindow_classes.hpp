@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AccountPinLinkingWindow.AccountPinLinkingWindow_C
-// 0x0018 (0x0630 - 0x0618)
+// 0x0018 (0x05E8 - 0x05D0)
 class UAccountPinLinkingWindow_C final : public UFortAccountPinLinkingWindow
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0618(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Image_255;                                         // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_1;                                        // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Image_83;                                          // 0x05D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_255;                                         // 0x05E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_AccountPinLinkingWindow(int32 EntryPoint);
 	void BndEvt__Switcher_Main_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature(class UWidget* ActiveWidget, int32 ActiveWidgetIndex);
+	void ExecuteUbergraph_AccountPinLinkingWindow(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -41,10 +41,10 @@ public:
 	}
 };
 static_assert(alignof(UAccountPinLinkingWindow_C) == 0x000008, "Wrong alignment on UAccountPinLinkingWindow_C");
-static_assert(sizeof(UAccountPinLinkingWindow_C) == 0x000630, "Wrong size on UAccountPinLinkingWindow_C");
-static_assert(offsetof(UAccountPinLinkingWindow_C, UberGraphFrame) == 0x000618, "Member 'UAccountPinLinkingWindow_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAccountPinLinkingWindow_C, Image_255) == 0x000620, "Member 'UAccountPinLinkingWindow_C::Image_255' has a wrong offset!");
-static_assert(offsetof(UAccountPinLinkingWindow_C, SafeZone_1) == 0x000628, "Member 'UAccountPinLinkingWindow_C::SafeZone_1' has a wrong offset!");
+static_assert(sizeof(UAccountPinLinkingWindow_C) == 0x0005E8, "Wrong size on UAccountPinLinkingWindow_C");
+static_assert(offsetof(UAccountPinLinkingWindow_C, UberGraphFrame) == 0x0005D0, "Member 'UAccountPinLinkingWindow_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAccountPinLinkingWindow_C, Image_83) == 0x0005D8, "Member 'UAccountPinLinkingWindow_C::Image_83' has a wrong offset!");
+static_assert(offsetof(UAccountPinLinkingWindow_C, Image_255) == 0x0005E0, "Member 'UAccountPinLinkingWindow_C::Image_255' has a wrong offset!");
 
 }
 

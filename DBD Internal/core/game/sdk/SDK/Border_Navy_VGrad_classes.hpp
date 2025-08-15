@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Border_Navy_VGrad.Border_Navy_VGrad_C
-// 0x0000 (0x00E0 - 0x00E0)
+// 0x0000 (0x00B0 - 0x00B0)
 class UBorder_Navy_VGrad_C final : public UCommonBorderStyle
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBorder_Navy_VGrad_C>();
 	}
 };
+static_assert(alignof(UBorder_Navy_VGrad_C) == 0x000008, "Wrong alignment on UBorder_Navy_VGrad_C");
+static_assert(sizeof(UBorder_Navy_VGrad_C) == 0x0000B0, "Wrong size on UBorder_Navy_VGrad_C");
 
 }
 

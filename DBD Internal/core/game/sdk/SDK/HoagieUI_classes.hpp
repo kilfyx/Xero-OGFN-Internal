@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // Class HoagieUI.FortHoagieVehicleReticle
-// 0x0008 (0x0348 - 0x0340)
+// 0x0008 (0x0350 - 0x0348)
 class UFortHoagieVehicleReticle final : public UFortAthenaVehicleDashboardWidget
 {
 public:
-	class AFortHoagieVehicle*                     OwningHoagieVehicle;                               // 0x0340(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class AFortHoagieVehicle*                     OwningHoagieVehicle;                               // 0x0348(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	void OnSetupComplete(bool bVehicleUsesFuelSystem);
@@ -36,6 +36,9 @@ public:
 		return GetDefaultObjImpl<UFortHoagieVehicleReticle>();
 	}
 };
+static_assert(alignof(UFortHoagieVehicleReticle) == 0x000008, "Wrong alignment on UFortHoagieVehicleReticle");
+static_assert(sizeof(UFortHoagieVehicleReticle) == 0x000350, "Wrong size on UFortHoagieVehicleReticle");
+static_assert(offsetof(UFortHoagieVehicleReticle, OwningHoagieVehicle) == 0x000348, "Member 'UFortHoagieVehicleReticle::OwningHoagieVehicle' has a wrong offset!");
 
 }
 

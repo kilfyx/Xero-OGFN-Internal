@@ -10,78 +10,36 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "LagerRuntime_structs.hpp"
 #include "Engine_structs.hpp"
+#include "LagerRuntime_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.GetPointProviderLocation
-// 0x000C (0x000C - 0x0000)
-struct FortAthenaLivingWorldPointProviderInterface_GetPointProviderLocation final
+// Function LagerRuntime.FortCheatManager_LivingWorldManager.LivingWorldManagerSpawn
+// 0x0010 (0x0010 - 0x0000)
+struct FortCheatManager_LivingWorldManager_LivingWorldManagerSpawn final
 {
 public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 EventDataName;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortCheatManager_LivingWorldManager_LivingWorldManagerSpawn) == 0x000008, "Wrong alignment on FortCheatManager_LivingWorldManager_LivingWorldManagerSpawn");
+static_assert(sizeof(FortCheatManager_LivingWorldManager_LivingWorldManagerSpawn) == 0x000010, "Wrong size on FortCheatManager_LivingWorldManager_LivingWorldManagerSpawn");
+static_assert(offsetof(FortCheatManager_LivingWorldManager_LivingWorldManagerSpawn, EventDataName) == 0x000000, "Member 'FortCheatManager_LivingWorldManager_LivingWorldManagerSpawn::EventDataName' has a wrong offset!");
 
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.OnSpawnedActor
-// 0x0018 (0x0018 - 0x0000)
-struct FortAthenaLivingWorldPointProviderInterface_OnSpawnedActor final
+// Function LagerRuntime.FortCheatManager_LivingWorldManager.LivingWorldManagerTeleportTo
+// 0x0010 (0x0010 - 0x0000)
+struct FortCheatManager_LivingWorldManager_LivingWorldManagerTeleportTo final
 {
 public:
-	class AActor*                                 SpawnedActor;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PositionFromProvider;                              // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 EventDataName;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.OnSpawnedActorDestroyed
-// 0x0008 (0x0008 - 0x0000)
-struct FortAthenaLivingWorldPointProviderInterface_OnSpawnedActorDestroyed final
-{
-public:
-	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.GetFiltersTags
-// 0x0020 (0x0020 - 0x0000)
-struct FortAthenaLivingWorldPointProviderInterface_GetFiltersTags final
-{
-public:
-	struct FGameplayTagContainer                  FilterTags;                                        // 0x0000(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.GetValidLocation
-// 0x0050 (0x0050 - 0x0000)
-struct FortAthenaLivingWorldPointProviderInterface_GetValidLocation final
-{
-public:
-	struct FFortAthenaLivingWorldPointProviderFilterRules PointFilter;                               // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                OutPosition;                                       // 0x0030(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               OutRotation;                                       // 0x003C(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.IsEnabled
-// 0x0038 (0x0038 - 0x0000)
-struct FortAthenaLivingWorldPointProviderInterface_IsEnabled final
-{
-public:
-	struct FFortAthenaLivingWorldPointProviderFilterRules PointFilter;                               // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldEncounterInstance.GetTotalActorCount
-// 0x0004 (0x0004 - 0x0000)
-struct FortAthenaLivingWorldEncounterInstance_GetTotalActorCount final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FortCheatManager_LivingWorldManager_LivingWorldManagerTeleportTo) == 0x000008, "Wrong alignment on FortCheatManager_LivingWorldManager_LivingWorldManagerTeleportTo");
+static_assert(sizeof(FortCheatManager_LivingWorldManager_LivingWorldManagerTeleportTo) == 0x000010, "Wrong size on FortCheatManager_LivingWorldManager_LivingWorldManagerTeleportTo");
+static_assert(offsetof(FortCheatManager_LivingWorldManager_LivingWorldManagerTeleportTo, EventDataName) == 0x000000, "Member 'FortCheatManager_LivingWorldManager_LivingWorldManagerTeleportTo::EventDataName' has a wrong offset!");
 
 // Function LagerRuntime.FortAthenaLivingWorldManager.LivingWorldManagerRegisterPointProvider
 // 0x0008 (0x0008 - 0x0000)
@@ -90,6 +48,9 @@ struct FortAthenaLivingWorldManager_LivingWorldManagerRegisterPointProvider fina
 public:
 	class AActor*                                 PointProvider;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaLivingWorldManager_LivingWorldManagerRegisterPointProvider) == 0x000008, "Wrong alignment on FortAthenaLivingWorldManager_LivingWorldManagerRegisterPointProvider");
+static_assert(sizeof(FortAthenaLivingWorldManager_LivingWorldManagerRegisterPointProvider) == 0x000008, "Wrong size on FortAthenaLivingWorldManager_LivingWorldManagerRegisterPointProvider");
+static_assert(offsetof(FortAthenaLivingWorldManager_LivingWorldManagerRegisterPointProvider, PointProvider) == 0x000000, "Member 'FortAthenaLivingWorldManager_LivingWorldManagerRegisterPointProvider::PointProvider' has a wrong offset!");
 
 // Function LagerRuntime.FortAthenaLivingWorldManager.LivingWorldManagerUnregisterPointProvider
 // 0x0008 (0x0008 - 0x0000)
@@ -98,14 +59,9 @@ struct FortAthenaLivingWorldManager_LivingWorldManagerUnregisterPointProvider fi
 public:
 	class AActor*                                 PointProvider;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function LagerRuntime.FortAthenaLivingWorldManager.EndEncounter
-// 0x0008 (0x0008 - 0x0000)
-struct FortAthenaLivingWorldManager_EndEncounter final
-{
-public:
-	class UFortAthenaLivingWorldEncounterInstance* EncounterInstance;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FortAthenaLivingWorldManager_LivingWorldManagerUnregisterPointProvider) == 0x000008, "Wrong alignment on FortAthenaLivingWorldManager_LivingWorldManagerUnregisterPointProvider");
+static_assert(sizeof(FortAthenaLivingWorldManager_LivingWorldManagerUnregisterPointProvider) == 0x000008, "Wrong size on FortAthenaLivingWorldManager_LivingWorldManagerUnregisterPointProvider");
+static_assert(offsetof(FortAthenaLivingWorldManager_LivingWorldManagerUnregisterPointProvider, PointProvider) == 0x000000, "Member 'FortAthenaLivingWorldManager_LivingWorldManagerUnregisterPointProvider::PointProvider' has a wrong offset!");
 
 // Function LagerRuntime.FortAthenaLivingWorldManager.LivingWorldManagerProviderDebugActor
 // 0x0004 (0x0004 - 0x0000)
@@ -114,16 +70,9 @@ struct FortAthenaLivingWorldManager_LivingWorldManagerProviderDebugActor final
 public:
 	int32                                         ProviderIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function LagerRuntime.FortAthenaLivingWorldManager.OnActorSpawned
-// 0x0010 (0x0010 - 0x0000)
-struct FortAthenaLivingWorldManager_OnActorSpawned final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RequestID;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+static_assert(alignof(FortAthenaLivingWorldManager_LivingWorldManagerProviderDebugActor) == 0x000004, "Wrong alignment on FortAthenaLivingWorldManager_LivingWorldManagerProviderDebugActor");
+static_assert(sizeof(FortAthenaLivingWorldManager_LivingWorldManagerProviderDebugActor) == 0x000004, "Wrong size on FortAthenaLivingWorldManager_LivingWorldManagerProviderDebugActor");
+static_assert(offsetof(FortAthenaLivingWorldManager_LivingWorldManagerProviderDebugActor, ProviderIndex) == 0x000000, "Member 'FortAthenaLivingWorldManager_LivingWorldManagerProviderDebugActor::ProviderIndex' has a wrong offset!");
 
 // Function LagerRuntime.FortAthenaLivingWorldManager.OnCurrentPlaylistLoaded
 // 0x0028 (0x0028 - 0x0000)
@@ -133,6 +82,10 @@ public:
 	class FName                                   PlaylistName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  PlaylistContextTags;                               // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaLivingWorldManager_OnCurrentPlaylistLoaded) == 0x000008, "Wrong alignment on FortAthenaLivingWorldManager_OnCurrentPlaylistLoaded");
+static_assert(sizeof(FortAthenaLivingWorldManager_OnCurrentPlaylistLoaded) == 0x000028, "Wrong size on FortAthenaLivingWorldManager_OnCurrentPlaylistLoaded");
+static_assert(offsetof(FortAthenaLivingWorldManager_OnCurrentPlaylistLoaded, PlaylistName) == 0x000000, "Member 'FortAthenaLivingWorldManager_OnCurrentPlaylistLoaded::PlaylistName' has a wrong offset!");
+static_assert(offsetof(FortAthenaLivingWorldManager_OnCurrentPlaylistLoaded, PlaylistContextTags) == 0x000008, "Member 'FortAthenaLivingWorldManager_OnCurrentPlaylistLoaded::PlaylistContextTags' has a wrong offset!");
 
 // Function LagerRuntime.FortAthenaLivingWorldManager.OnPatrolPathAdded
 // 0x0008 (0x0008 - 0x0000)
@@ -141,14 +94,9 @@ struct FortAthenaLivingWorldManager_OnPatrolPathAdded final
 public:
 	class AFortAthenaPatrolPath*                  PatrolPath;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function LagerRuntime.FortAthenaLivingWorldManager.OnRep_DebugDensityMinimapIndicator
-// 0x0008 (0x0008 - 0x0000)
-struct FortAthenaLivingWorldManager_OnRep_DebugDensityMinimapIndicator final
-{
-public:
-	class UFortAthenaLivingWorldDebugDensityMiniMapIndicator* OldMapIndicator;                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FortAthenaLivingWorldManager_OnPatrolPathAdded) == 0x000008, "Wrong alignment on FortAthenaLivingWorldManager_OnPatrolPathAdded");
+static_assert(sizeof(FortAthenaLivingWorldManager_OnPatrolPathAdded) == 0x000008, "Wrong size on FortAthenaLivingWorldManager_OnPatrolPathAdded");
+static_assert(offsetof(FortAthenaLivingWorldManager_OnPatrolPathAdded, PatrolPath) == 0x000000, "Member 'FortAthenaLivingWorldManager_OnPatrolPathAdded::PatrolPath' has a wrong offset!");
 
 // Function LagerRuntime.FortAthenaLivingWorldManager.OnSpawnedActorDestroy
 // 0x0008 (0x0008 - 0x0000)
@@ -157,22 +105,9 @@ struct FortAthenaLivingWorldManager_OnSpawnedActorDestroy final
 public:
 	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function LagerRuntime.FortAthenaLivingWorldManager.OnUnmanagedDensityReservoirActorDestroy
-// 0x0008 (0x0008 - 0x0000)
-struct FortAthenaLivingWorldManager_OnUnmanagedDensityReservoirActorDestroy final
-{
-public:
-	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldManager.OnWorldFinishedInitialization
-// 0x0020 (0x0020 - 0x0000)
-struct FortAthenaLivingWorldManager_OnWorldFinishedInitialization final
-{
-public:
-	struct FGameplayTagContainer                  ContextTags;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FortAthenaLivingWorldManager_OnSpawnedActorDestroy) == 0x000008, "Wrong alignment on FortAthenaLivingWorldManager_OnSpawnedActorDestroy");
+static_assert(sizeof(FortAthenaLivingWorldManager_OnSpawnedActorDestroy) == 0x000008, "Wrong size on FortAthenaLivingWorldManager_OnSpawnedActorDestroy");
+static_assert(offsetof(FortAthenaLivingWorldManager_OnSpawnedActorDestroy, DestroyedActor) == 0x000000, "Member 'FortAthenaLivingWorldManager_OnSpawnedActorDestroy::DestroyedActor' has a wrong offset!");
 
 // Function LagerRuntime.FortAthenaLivingWorldManager.QueryEventBudget
 // 0x0020 (0x0020 - 0x0000)
@@ -184,88 +119,65 @@ public:
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortAthenaLivingWorldManager_QueryEventBudget) == 0x000008, "Wrong alignment on FortAthenaLivingWorldManager_QueryEventBudget");
+static_assert(sizeof(FortAthenaLivingWorldManager_QueryEventBudget) == 0x000020, "Wrong size on FortAthenaLivingWorldManager_QueryEventBudget");
+static_assert(offsetof(FortAthenaLivingWorldManager_QueryEventBudget, EventEntry) == 0x000000, "Member 'FortAthenaLivingWorldManager_QueryEventBudget::EventEntry' has a wrong offset!");
+static_assert(offsetof(FortAthenaLivingWorldManager_QueryEventBudget, SpawnLocation) == 0x000010, "Member 'FortAthenaLivingWorldManager_QueryEventBudget::SpawnLocation' has a wrong offset!");
+static_assert(offsetof(FortAthenaLivingWorldManager_QueryEventBudget, ReturnValue) == 0x000018, "Member 'FortAthenaLivingWorldManager_QueryEventBudget::ReturnValue' has a wrong offset!");
 
-// Function LagerRuntime.FortAthenaLivingWorldManager.StartEncounter
-// 0x0048 (0x0048 - 0x0000)
-struct FortAthenaLivingWorldManager_StartEncounter final
+// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.OnSpawnedActor
+// 0x0008 (0x0008 - 0x0000)
+struct FortAthenaLivingWorldPointProviderInterface_OnSpawnedActor final
 {
 public:
-	TSoftObjectPtr<class UFortAthenaLivingWorldEncounter> EncounterType;                             // 0x0000(0x0028)(ConstParm, Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>> EncounterPointProviders; // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, UObjectWrapper, NativeAccessSpecifierPublic)
-	class AActor*                                 ActorDensityReservoir;                             // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFortAthenaLivingWorldEncounterInstance* ReturnValue;                                      // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 SpawnedActor;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaLivingWorldPointProviderInterface_OnSpawnedActor) == 0x000008, "Wrong alignment on FortAthenaLivingWorldPointProviderInterface_OnSpawnedActor");
+static_assert(sizeof(FortAthenaLivingWorldPointProviderInterface_OnSpawnedActor) == 0x000008, "Wrong size on FortAthenaLivingWorldPointProviderInterface_OnSpawnedActor");
+static_assert(offsetof(FortAthenaLivingWorldPointProviderInterface_OnSpawnedActor, SpawnedActor) == 0x000000, "Member 'FortAthenaLivingWorldPointProviderInterface_OnSpawnedActor::SpawnedActor' has a wrong offset!");
 
-// Function LagerRuntime.FortAthenaLivingWorldManager.TrySpawnEvent
-// 0x0060 (0x0060 - 0x0000)
-struct FortAthenaLivingWorldManager_TrySpawnEvent final
-{
-public:
-	struct FDataTableRowHandle                    EventEntry;                                        // 0x0000(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTransform                             SpawnLocation;                                     // 0x0010(0x0030)(ConstParm, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	TDelegate<void(const TArray<class AActor*>& SpawnedActors, bool bSuccess)> OnRequestFinished;    // 0x0040(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0xF];                                       // 0x0051(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.OnCurrentPlaylistLoaded
-// 0x0028 (0x0028 - 0x0000)
-struct FortAthenaLivingWorldPointProvidersEnabler_OnCurrentPlaylistLoaded final
-{
-public:
-	class FName                                   PlaylistName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  PlaylistContextTags;                               // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.RemoveClosestPointProvidersToPoint
-// 0x0014 (0x0014 - 0x0000)
-struct FortAthenaLivingWorldPointProvidersEnabler_RemoveClosestPointProvidersToPoint final
-{
-public:
-	struct FVector                                Point;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaximumDistance;                                   // 0x000C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PointsToDisable;                                   // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.DoesStartEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct FortAthenaLivingWorldPointProvidersEnabler_DoesStartEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.GetEnabledLinkedPointProviders
-// 0x0010 (0x0010 - 0x0000)
-struct FortAthenaLivingWorldPointProvidersEnabler_GetEnabledLinkedPointProviders final
-{
-public:
-	TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>> ReturnValue;        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, UObjectWrapper, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.GetEnablerTags
+// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.GetFiltersTags
 // 0x0020 (0x0020 - 0x0000)
-struct FortAthenaLivingWorldPointProvidersEnabler_GetEnablerTags final
+struct FortAthenaLivingWorldPointProviderInterface_GetFiltersTags final
 {
 public:
-	struct FGameplayTagContainer                  ReturnValue;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  FilterTags;                                        // 0x0000(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaLivingWorldPointProviderInterface_GetFiltersTags) == 0x000008, "Wrong alignment on FortAthenaLivingWorldPointProviderInterface_GetFiltersTags");
+static_assert(sizeof(FortAthenaLivingWorldPointProviderInterface_GetFiltersTags) == 0x000020, "Wrong size on FortAthenaLivingWorldPointProviderInterface_GetFiltersTags");
+static_assert(offsetof(FortAthenaLivingWorldPointProviderInterface_GetFiltersTags, FilterTags) == 0x000000, "Member 'FortAthenaLivingWorldPointProviderInterface_GetFiltersTags::FilterTags' has a wrong offset!");
 
-// Function LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.HasCompletedEvaluation
-// 0x0001 (0x0001 - 0x0000)
-struct FortAthenaLivingWorldPointProvidersEnabler_HasCompletedEvaluation final
+// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.GetValidLocation
+// 0x0020 (0x0020 - 0x0000)
+struct FortAthenaLivingWorldPointProviderInterface_GetValidLocation final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortAthenaLivingWorldPointProviderFilterRules PointFilter;                               // 0x0000(0x0002)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                OutPosition;                                       // 0x0004(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               OutRotation;                                       // 0x0010(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortAthenaLivingWorldPointProviderInterface_GetValidLocation) == 0x000004, "Wrong alignment on FortAthenaLivingWorldPointProviderInterface_GetValidLocation");
+static_assert(sizeof(FortAthenaLivingWorldPointProviderInterface_GetValidLocation) == 0x000020, "Wrong size on FortAthenaLivingWorldPointProviderInterface_GetValidLocation");
+static_assert(offsetof(FortAthenaLivingWorldPointProviderInterface_GetValidLocation, PointFilter) == 0x000000, "Member 'FortAthenaLivingWorldPointProviderInterface_GetValidLocation::PointFilter' has a wrong offset!");
+static_assert(offsetof(FortAthenaLivingWorldPointProviderInterface_GetValidLocation, OutPosition) == 0x000004, "Member 'FortAthenaLivingWorldPointProviderInterface_GetValidLocation::OutPosition' has a wrong offset!");
+static_assert(offsetof(FortAthenaLivingWorldPointProviderInterface_GetValidLocation, OutRotation) == 0x000010, "Member 'FortAthenaLivingWorldPointProviderInterface_GetValidLocation::OutRotation' has a wrong offset!");
+static_assert(offsetof(FortAthenaLivingWorldPointProviderInterface_GetValidLocation, ReturnValue) == 0x00001C, "Member 'FortAthenaLivingWorldPointProviderInterface_GetValidLocation::ReturnValue' has a wrong offset!");
 
-// Function LagerRuntime.FortAthenaLivingWorldSpawnActionBlueprint.K2_OnAllActorSpawned
-// 0x0010 (0x0010 - 0x0000)
-struct FortAthenaLivingWorldSpawnActionBlueprint_K2_OnAllActorSpawned final
+// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.IsEnabled
+// 0x0003 (0x0003 - 0x0000)
+struct FortAthenaLivingWorldPointProviderInterface_IsEnabled final
 {
 public:
-	TArray<class AActor*>                         SpawnedActor;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FFortAthenaLivingWorldPointProviderFilterRules PointFilter;                               // 0x0000(0x0002)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaLivingWorldPointProviderInterface_IsEnabled) == 0x000001, "Wrong alignment on FortAthenaLivingWorldPointProviderInterface_IsEnabled");
+static_assert(sizeof(FortAthenaLivingWorldPointProviderInterface_IsEnabled) == 0x000003, "Wrong size on FortAthenaLivingWorldPointProviderInterface_IsEnabled");
+static_assert(offsetof(FortAthenaLivingWorldPointProviderInterface_IsEnabled, PointFilter) == 0x000000, "Member 'FortAthenaLivingWorldPointProviderInterface_IsEnabled::PointFilter' has a wrong offset!");
+static_assert(offsetof(FortAthenaLivingWorldPointProviderInterface_IsEnabled, ReturnValue) == 0x000002, "Member 'FortAthenaLivingWorldPointProviderInterface_IsEnabled::ReturnValue' has a wrong offset!");
 
 // Function LagerRuntime.FortAthenaLivingWorldVolume.OnCurrentPlaylistLoaded
 // 0x0028 (0x0028 - 0x0000)
@@ -275,55 +187,21 @@ public:
 	class FName                                   PlaylistName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  PlaylistContextTags;                               // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaLivingWorldVolume_OnCurrentPlaylistLoaded) == 0x000008, "Wrong alignment on FortAthenaLivingWorldVolume_OnCurrentPlaylistLoaded");
+static_assert(sizeof(FortAthenaLivingWorldVolume_OnCurrentPlaylistLoaded) == 0x000028, "Wrong size on FortAthenaLivingWorldVolume_OnCurrentPlaylistLoaded");
+static_assert(offsetof(FortAthenaLivingWorldVolume_OnCurrentPlaylistLoaded, PlaylistName) == 0x000000, "Member 'FortAthenaLivingWorldVolume_OnCurrentPlaylistLoaded::PlaylistName' has a wrong offset!");
+static_assert(offsetof(FortAthenaLivingWorldVolume_OnCurrentPlaylistLoaded, PlaylistContextTags) == 0x000008, "Member 'FortAthenaLivingWorldVolume_OnCurrentPlaylistLoaded::PlaylistContextTags' has a wrong offset!");
 
-// Function LagerRuntime.FortAthenaLivingWorldVolume.OnWorldFinishedInitialization
-// 0x0020 (0x0020 - 0x0000)
-struct FortAthenaLivingWorldVolume_OnWorldFinishedInitialization final
-{
-public:
-	struct FGameplayTagContainer                  ContextTags;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldVolume.SetEQSQuery
+// Function LagerRuntime.FortAthenaLivingWorldVolume.OnPointProviderRegistered
 // 0x0008 (0x0008 - 0x0000)
-struct FortAthenaLivingWorldVolume_SetEQSQuery final
+struct FortAthenaLivingWorldVolume_OnPointProviderRegistered final
 {
 public:
-	class UEnvQuery*                              Query;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 PointProvider;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function LagerRuntime.FortAthenaLivingWorldVolume.SetEQSQueryConfigParam
-// 0x000C (0x000C - 0x0000)
-struct FortAthenaLivingWorldVolume_SetEQSQueryConfigParam final
-{
-public:
-	class FName                                   ParameterName;                                     // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldVolume.SetFiltersTags
-// 0x0020 (0x0020 - 0x0000)
-struct FortAthenaLivingWorldVolume_SetFiltersTags final
-{
-public:
-	struct FGameplayTagContainer                  TagContainer;                                      // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldVolume.DoesStartEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct FortAthenaLivingWorldVolume_DoesStartEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortAthenaLivingWorldVolume.IsPointProviderEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct FortAthenaLivingWorldVolume_IsPointProviderEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FortAthenaLivingWorldVolume_OnPointProviderRegistered) == 0x000008, "Wrong alignment on FortAthenaLivingWorldVolume_OnPointProviderRegistered");
+static_assert(sizeof(FortAthenaLivingWorldVolume_OnPointProviderRegistered) == 0x000008, "Wrong size on FortAthenaLivingWorldVolume_OnPointProviderRegistered");
+static_assert(offsetof(FortAthenaLivingWorldVolume_OnPointProviderRegistered, PointProvider) == 0x000000, "Member 'FortAthenaLivingWorldVolume_OnPointProviderRegistered::PointProvider' has a wrong offset!");
 
 // Function LagerRuntime.FortAthenaPatrolPathPointProvider.OnCurrentPlaylistLoaded
 // 0x0028 (0x0028 - 0x0000)
@@ -333,49 +211,21 @@ public:
 	class FName                                   PlaylistName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  PlaylistContextTags;                               // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaPatrolPathPointProvider_OnCurrentPlaylistLoaded) == 0x000008, "Wrong alignment on FortAthenaPatrolPathPointProvider_OnCurrentPlaylistLoaded");
+static_assert(sizeof(FortAthenaPatrolPathPointProvider_OnCurrentPlaylistLoaded) == 0x000028, "Wrong size on FortAthenaPatrolPathPointProvider_OnCurrentPlaylistLoaded");
+static_assert(offsetof(FortAthenaPatrolPathPointProvider_OnCurrentPlaylistLoaded, PlaylistName) == 0x000000, "Member 'FortAthenaPatrolPathPointProvider_OnCurrentPlaylistLoaded::PlaylistName' has a wrong offset!");
+static_assert(offsetof(FortAthenaPatrolPathPointProvider_OnCurrentPlaylistLoaded, PlaylistContextTags) == 0x000008, "Member 'FortAthenaPatrolPathPointProvider_OnCurrentPlaylistLoaded::PlaylistContextTags' has a wrong offset!");
 
-// Function LagerRuntime.FortAthenaPointAroundPlayerProvider.OnCurrentPlaylistLoaded
-// 0x0028 (0x0028 - 0x0000)
-struct FortAthenaPointAroundPlayerProvider_OnCurrentPlaylistLoaded final
+// Function LagerRuntime.FortAthenaPatrolPathPointProvider.OnSpawnedActorDestroyed
+// 0x0008 (0x0008 - 0x0000)
+struct FortAthenaPatrolPathPointProvider_OnSpawnedActorDestroyed final
 {
 public:
-	class FName                                   PlaylistName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  PlaylistContextTags;                               // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function LagerRuntime.FortCheatManager_LivingWorldManager.LivingWorldManagerSpawn
-// 0x0010 (0x0010 - 0x0000)
-struct FortCheatManager_LivingWorldManager_LivingWorldManagerSpawn final
-{
-public:
-	class FString                                 EventDataName;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortCheatManager_LivingWorldManager.LivingWorldManagerSpawnAtLocation
-// 0x0028 (0x0028 - 0x0000)
-struct FortCheatManager_LivingWorldManager_LivingWorldManagerSpawnAtLocation final
-{
-public:
-	class FString                                 EventDataName;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x0010(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               Rotation;                                          // 0x001C(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortCheatManager_LivingWorldManager.LivingWorldManagerTeleportTo
-// 0x0010 (0x0010 - 0x0000)
-struct FortCheatManager_LivingWorldManager_LivingWorldManagerTeleportTo final
-{
-public:
-	class FString                                 EventDataName;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function LagerRuntime.FortCheatManager_LivingWorldManager.LivingWorldManagerTeleportToSpawnPosition
-// 0x0010 (0x0010 - 0x0000)
-struct FortCheatManager_LivingWorldManager_LivingWorldManagerTeleportToSpawnPosition final
-{
-public:
-	class FString                                 EventDataName;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FortAthenaPatrolPathPointProvider_OnSpawnedActorDestroyed) == 0x000008, "Wrong alignment on FortAthenaPatrolPathPointProvider_OnSpawnedActorDestroyed");
+static_assert(sizeof(FortAthenaPatrolPathPointProvider_OnSpawnedActorDestroyed) == 0x000008, "Wrong size on FortAthenaPatrolPathPointProvider_OnSpawnedActorDestroyed");
+static_assert(offsetof(FortAthenaPatrolPathPointProvider_OnSpawnedActorDestroyed, DestroyedActor) == 0x000000, "Member 'FortAthenaPatrolPathPointProvider_OnSpawnedActorDestroyed::DestroyedActor' has a wrong offset!");
 
 }
 

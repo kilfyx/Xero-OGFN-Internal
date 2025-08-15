@@ -18,21 +18,21 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C
-// 0x0010 (0x0AB8 - 0x0AA8)
+// 0x0010 (0x0AC8 - 0x0AB8)
 class UGA_BoostJumpPack_Equip_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_BoostJumpPack_Equip(int32 EntryPoint);
-	void IsAuthority(bool* bAuthority);
 	void K2_ActivateAbility();
+	void IsAuthority(bool* bAuthority);
 
-	class UFortItem* GetGadgetItem(class AFortPlayerPawn* Pawn) const;
-	void GetPlayerController(class AFortPlayerPawn* Pawn, class AFortPlayerControllerZone** AsFort_Player_Controller_Zone) const;
 	bool K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayAbilitySpecHandle& Handle, struct FGameplayTagContainer* RelevantTags) const;
+	void GetPlayerController(class AFortPlayerPawn* Pawn, class AFortPlayerControllerZone** AsFort_Player_Controller_Zone) const;
+	class UFortItem* GetGadgetItem(class AFortPlayerPawn* Pawn) const;
 
 public:
 	static class UClass* StaticClass()
@@ -44,6 +44,10 @@ public:
 		return GetDefaultObjImpl<UGA_BoostJumpPack_Equip_C>();
 	}
 };
+static_assert(alignof(UGA_BoostJumpPack_Equip_C) == 0x000008, "Wrong alignment on UGA_BoostJumpPack_Equip_C");
+static_assert(sizeof(UGA_BoostJumpPack_Equip_C) == 0x000AC8, "Wrong size on UGA_BoostJumpPack_Equip_C");
+static_assert(offsetof(UGA_BoostJumpPack_Equip_C, UberGraphFrame) == 0x000AB8, "Member 'UGA_BoostJumpPack_Equip_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UGA_BoostJumpPack_Equip_C, PlayerPawn) == 0x000AC0, "Member 'UGA_BoostJumpPack_Equip_C::PlayerPawn' has a wrong offset!");
 
 }
 

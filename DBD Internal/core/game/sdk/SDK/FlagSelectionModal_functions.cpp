@@ -17,19 +17,40 @@
 namespace SDK
 {
 
-// Function FlagSelectionModal.FlagSelectionModal_C.BndEvt__FlagSelectionModal_Button_Change_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
+// Function FlagSelectionModal.FlagSelectionModal_C.Handle Back
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool*                                   PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UFlagSelectionModal_C::BndEvt__FlagSelectionModal_Button_Change_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+void UFlagSelectionModal_C::Handle_Back(bool* PassThrough)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__FlagSelectionModal_Button_Change_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::FlagSelectionModal_C_BndEvt__FlagSelectionModal_Button_Change_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("FlagSelectionModal_C", "Handle Back");
+
+	Params::FlagSelectionModal_C_Handle_Back Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (PassThrough != nullptr)
+		*PassThrough = Parms.PassThrough;
+}
+
+
+// Function FlagSelectionModal.FlagSelectionModal_C.BndEvt__Button_Change_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UFlagSelectionModal_C::BndEvt__Button_Change_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FlagSelectionModal_C", "BndEvt__Button_Change_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+
+	Params::FlagSelectionModal_C_BndEvt__Button_Change_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -37,41 +58,21 @@ void UFlagSelectionModal_C::BndEvt__FlagSelectionModal_Button_Change_K2Node_Comp
 }
 
 
-// Function FlagSelectionModal.FlagSelectionModal_C.BndEvt__FlagSelectionModal_Button_ConfirmationCancel_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
+// Function FlagSelectionModal.FlagSelectionModal_C.BndEvt__Button_ConfirmationCancel_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UFlagSelectionModal_C::BndEvt__FlagSelectionModal_Button_ConfirmationCancel_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+void UFlagSelectionModal_C::BndEvt__Button_ConfirmationCancel_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__FlagSelectionModal_Button_ConfirmationCancel_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::FlagSelectionModal_C_BndEvt__FlagSelectionModal_Button_ConfirmationCancel_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("FlagSelectionModal_C", "BndEvt__Button_ConfirmationCancel_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
+
+	Params::FlagSelectionModal_C_BndEvt__Button_ConfirmationCancel_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FlagSelectionModal.FlagSelectionModal_C.BndEvt__FlagSelectionModal_TileView_FlagOptions_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UFlagSelectionModal_C::BndEvt__FlagSelectionModal_TileView_FlagOptions_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__FlagSelectionModal_TileView_FlagOptions_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature");
-
-	Params::FlagSelectionModal_C_BndEvt__FlagSelectionModal_TileView_FlagOptions_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature Parms{};
-
-	Parms.Item = Item;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -83,9 +84,9 @@ void UFlagSelectionModal_C::BndEvt__FlagSelectionModal_TileView_FlagOptions_K2No
 void UFlagSelectionModal_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
+		Func = Class->GetFunction("FlagSelectionModal_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -99,36 +100,15 @@ void UFlagSelectionModal_C::BP_OnActivated()
 void UFlagSelectionModal_C::ExecuteUbergraph_FlagSelectionModal(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_FlagSelectionModal");
+		Func = Class->GetFunction("FlagSelectionModal_C", "ExecuteUbergraph_FlagSelectionModal");
 
 	Params::FlagSelectionModal_C_ExecuteUbergraph_FlagSelectionModal Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FlagSelectionModal.FlagSelectionModal_C.Handle Back
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UFlagSelectionModal_C::Handle_Back(bool* PassThrough)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Handle Back");
-
-	Params::FlagSelectionModal_C_Handle_Back Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (PassThrough != nullptr)
-		*PassThrough = Parms.PassThrough;
 }
 
 }

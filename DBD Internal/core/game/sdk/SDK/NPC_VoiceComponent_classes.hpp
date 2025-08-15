@@ -17,22 +17,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass NPC_VoiceComponent.NPC_VoiceComponent_C
-// 0x0028 (0x00E0 - 0x00B8)
+// 0x0020 (0x00D8 - 0x00B8)
 class UNPC_VoiceComponent_C final : public UFortAIComponent_Voice
 {
 public:
 	class UFortTaggedSoundBank*                   DeprecatedBPSoundBank;                             // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        AttachComponent;                                   // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggerTimeThreshold;                              // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LastTriggerTime;                                   // 0x00CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        Audio_Component;                                   // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundEffectSourcePresetChain*          SourceChainToApply;                                // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        AudioComponent;                                    // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        AttachComponent;                                   // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggerTimeThreshold;                              // 0x00D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LastTriggerTime;                                   // 0x00D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void PlayVoiceLine(const struct FGameplayTag& Gameplay_Tag, class UAudioComponent* AudioComponent_0);
 	void Deprecated_Set_Sound_Bank(class UFortTaggedSoundBank* SoundBank);
 	void Internal_Get_Voice_Sound_Bank(class UFortTaggedSoundBank** Sound_Bank);
-	void PlayVoiceLine(const struct FGameplayTag& Gameplay_Tag, class UAudioComponent* AudioComponent, bool* Success);
-	void SetSourceEffectChainToApply(class USoundEffectSourcePresetChain* SourceEffectChain);
 
 public:
 	static class UClass* StaticClass()
@@ -44,6 +42,13 @@ public:
 		return GetDefaultObjImpl<UNPC_VoiceComponent_C>();
 	}
 };
+static_assert(alignof(UNPC_VoiceComponent_C) == 0x000008, "Wrong alignment on UNPC_VoiceComponent_C");
+static_assert(sizeof(UNPC_VoiceComponent_C) == 0x0000D8, "Wrong size on UNPC_VoiceComponent_C");
+static_assert(offsetof(UNPC_VoiceComponent_C, DeprecatedBPSoundBank) == 0x0000B8, "Member 'UNPC_VoiceComponent_C::DeprecatedBPSoundBank' has a wrong offset!");
+static_assert(offsetof(UNPC_VoiceComponent_C, AudioComponent) == 0x0000C0, "Member 'UNPC_VoiceComponent_C::AudioComponent' has a wrong offset!");
+static_assert(offsetof(UNPC_VoiceComponent_C, AttachComponent) == 0x0000C8, "Member 'UNPC_VoiceComponent_C::AttachComponent' has a wrong offset!");
+static_assert(offsetof(UNPC_VoiceComponent_C, TriggerTimeThreshold) == 0x0000D0, "Member 'UNPC_VoiceComponent_C::TriggerTimeThreshold' has a wrong offset!");
+static_assert(offsetof(UNPC_VoiceComponent_C, LastTriggerTime) == 0x0000D4, "Member 'UNPC_VoiceComponent_C::LastTriggerTime' has a wrong offset!");
 
 }
 

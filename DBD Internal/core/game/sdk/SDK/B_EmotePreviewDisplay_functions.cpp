@@ -17,35 +17,55 @@
 namespace SDK
 {
 
-// Function B_EmotePreviewDisplay.B_EmotePreviewDisplay_C.SpecialCaseShoutHandler
-// (BlueprintCallable, BlueprintEvent)
+// Function B_EmotePreviewDisplay.B_EmotePreviewDisplay_C.CleanupDynamicSounds
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AB_EmotePreviewDisplay_C::SpecialCaseShoutHandler()
+void AB_EmotePreviewDisplay_C::CleanupDynamicSounds()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SpecialCaseShoutHandler");
+		Func = Class->GetFunction("B_EmotePreviewDisplay_C", "CleanupDynamicSounds");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_EmotePreviewDisplay.B_EmotePreviewDisplay_C.ReceiveEndPlay
-// (Event, Protected, BlueprintEvent)
+// Function B_EmotePreviewDisplay.B_EmotePreviewDisplay_C.ApplyEmoteToPet
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsRemoval                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_EmotePreviewDisplay_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+void AB_EmotePreviewDisplay_C::ApplyEmoteToPet(bool IsRemoval)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveEndPlay");
+		Func = Class->GetFunction("B_EmotePreviewDisplay_C", "ApplyEmoteToPet");
 
-	Params::B_EmotePreviewDisplay_C_ReceiveEndPlay Parms{};
+	Params::B_EmotePreviewDisplay_C_ApplyEmoteToPet Parms{};
 
-	Parms.EndPlayReason = EndPlayReason;
+	Parms.IsRemoval = IsRemoval;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_EmotePreviewDisplay.B_EmotePreviewDisplay_C.OnLoaded_638F148342254A777E929B88915A8958
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_EmotePreviewDisplay_C::OnLoaded_638F148342254A777E929B88915A8958(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_EmotePreviewDisplay_C", "OnLoaded_638F148342254A777E929B88915A8958");
+
+	Params::B_EmotePreviewDisplay_C_OnLoaded_638F148342254A777E929B88915A8958 Parms{};
+
+	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -54,14 +74,14 @@ void AB_EmotePreviewDisplay_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 // Function B_EmotePreviewDisplay.B_EmotePreviewDisplay_C.PreviewEmote
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class UFortMontageItemDefinitionBase*   Emote                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class UFortMontageItemDefinitionBase*Emote                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AB_EmotePreviewDisplay_C::PreviewEmote(const class UFortMontageItemDefinitionBase* Emote)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PreviewEmote");
+		Func = Class->GetFunction("B_EmotePreviewDisplay_C", "PreviewEmote");
 
 	Params::B_EmotePreviewDisplay_C_PreviewEmote Parms{};
 
@@ -79,9 +99,9 @@ void AB_EmotePreviewDisplay_C::PreviewEmote(const class UFortMontageItemDefiniti
 void AB_EmotePreviewDisplay_C::PerformSpecialAction(class FName ActionName)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PerformSpecialAction");
+		Func = Class->GetFunction("B_EmotePreviewDisplay_C", "PerformSpecialAction");
 
 	Params::B_EmotePreviewDisplay_C_PerformSpecialAction Parms{};
 
@@ -91,23 +111,37 @@ void AB_EmotePreviewDisplay_C::PerformSpecialAction(class FName ActionName)
 }
 
 
-// Function B_EmotePreviewDisplay.B_EmotePreviewDisplay_C.OnLoaded_638F148342254A777E929B88915A8958
-// (BlueprintCallable, BlueprintEvent)
+// Function B_EmotePreviewDisplay.B_EmotePreviewDisplay_C.ReceiveEndPlay
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_EmotePreviewDisplay_C::OnLoaded_638F148342254A777E929B88915A8958(class UObject* Loaded)
+void AB_EmotePreviewDisplay_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnLoaded_638F148342254A777E929B88915A8958");
+		Func = Class->GetFunction("B_EmotePreviewDisplay_C", "ReceiveEndPlay");
 
-	Params::B_EmotePreviewDisplay_C_OnLoaded_638F148342254A777E929B88915A8958 Parms{};
+	Params::B_EmotePreviewDisplay_C_ReceiveEndPlay Parms{};
 
-	Parms.Loaded = Loaded;
+	Parms.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_EmotePreviewDisplay.B_EmotePreviewDisplay_C.SpecialCaseShoutHandler
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_EmotePreviewDisplay_C::SpecialCaseShoutHandler()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_EmotePreviewDisplay_C", "SpecialCaseShoutHandler");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -119,47 +153,13 @@ void AB_EmotePreviewDisplay_C::OnLoaded_638F148342254A777E929B88915A8958(class U
 void AB_EmotePreviewDisplay_C::ExecuteUbergraph_B_EmotePreviewDisplay(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_B_EmotePreviewDisplay");
+		Func = Class->GetFunction("B_EmotePreviewDisplay_C", "ExecuteUbergraph_B_EmotePreviewDisplay");
 
 	Params::B_EmotePreviewDisplay_C_ExecuteUbergraph_B_EmotePreviewDisplay Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_EmotePreviewDisplay.B_EmotePreviewDisplay_C.CleanupDynamicSounds
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_EmotePreviewDisplay_C::CleanupDynamicSounds()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("CleanupDynamicSounds");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_EmotePreviewDisplay.B_EmotePreviewDisplay_C.ApplyEmoteToPet
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsRemoval                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_EmotePreviewDisplay_C::ApplyEmoteToPet(bool IsRemoval)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ApplyEmoteToPet");
-
-	Params::B_EmotePreviewDisplay_C_ApplyEmoteToPet Parms{};
-
-	Parms.IsRemoval = IsRemoval;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

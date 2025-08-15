@@ -25,9 +25,9 @@ namespace SDK
 void UMatchmakingInputIndicator_C::OnInputSourceTypeChanged(ECommonInputType InputType)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnInputSourceTypeChanged");
+		Func = Class->GetFunction("MatchmakingInputIndicator_C", "OnInputSourceTypeChanged");
 
 	Params::MatchmakingInputIndicator_C_OnInputSourceTypeChanged Parms{};
 
@@ -45,9 +45,9 @@ void UMatchmakingInputIndicator_C::OnInputSourceTypeChanged(ECommonInputType Inp
 void UMatchmakingInputIndicator_C::ExecuteUbergraph_MatchmakingInputIndicator(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_MatchmakingInputIndicator");
+		Func = Class->GetFunction("MatchmakingInputIndicator_C", "ExecuteUbergraph_MatchmakingInputIndicator");
 
 	Params::MatchmakingInputIndicator_C_ExecuteUbergraph_MatchmakingInputIndicator Parms{};
 

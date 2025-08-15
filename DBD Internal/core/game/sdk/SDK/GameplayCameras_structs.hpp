@@ -10,35 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-
 
 namespace SDK
 {
 
-// Enum GameplayCameras.ECameraAnimationPlaySpace
-// NumValues: 0x0004
-enum class ECameraAnimationPlaySpace : uint8
+// Enum GameplayCameras.EInitialOscillatorOffset
+// NumValues: 0x0003
+enum class EInitialOscillatorOffset : uint8
 {
-	CameraLocal                              = 0,
-	World                                    = 1,
-	UserDefined                              = 2,
-	ECameraAnimationPlaySpace_MAX            = 3,
-};
-
-// Enum GameplayCameras.ECameraAnimationEasingType
-// NumValues: 0x0009
-enum class ECameraAnimationEasingType : uint8
-{
-	Linear                                   = 0,
-	Sinusoidal                               = 1,
-	Quadratic                                = 2,
-	Cubic                                    = 3,
-	Quartic                                  = 4,
-	Quintic                                  = 5,
-	Exponential                              = 6,
-	Circular                                 = 7,
-	ECameraAnimationEasingType_MAX           = 8,
+	EOO_OffsetRandom                         = 0,
+	EOO_OffsetZero                           = 1,
+	EOO_MAX                                  = 2,
 };
 
 // Enum GameplayCameras.EOscillatorWaveform
@@ -50,15 +32,6 @@ enum class EOscillatorWaveform : uint8
 	EOscillatorWaveform_MAX                  = 2,
 };
 
-// Enum GameplayCameras.EInitialOscillatorOffset
-// NumValues: 0x0003
-enum class EInitialOscillatorOffset : uint8
-{
-	EOO_OffsetRandom                         = 0,
-	EOO_OffsetZero                           = 1,
-	EOO_MAX                                  = 2,
-};
-
 // Enum GameplayCameras.EInitialWaveOscillatorOffsetType
 // NumValues: 0x0003
 enum class EInitialWaveOscillatorOffsetType : uint8
@@ -66,54 +39,6 @@ enum class EInitialWaveOscillatorOffsetType : uint8
 	Random                                   = 0,
 	Zero                                     = 1,
 	EInitialWaveOscillatorOffsetType_MAX     = 2,
-};
-
-// ScriptStruct GameplayCameras.CameraAnimationParams
-// 0x0030 (0x0030 - 0x0000)
-struct FCameraAnimationParams final
-{
-public:
-	float                                         PlayRate;                                          // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECameraAnimationEasingType                    EaseInType;                                        // 0x0008(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         EaseInDuration;                                    // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECameraAnimationEasingType                    EaseOutType;                                       // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         EaseOutDuration;                                   // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLoop;                                             // 0x0018(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRandomStartTime;                                  // 0x0019(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DurationOverride;                                  // 0x001C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECameraAnimationPlaySpace                     Playspace;                                         // 0x0020(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               UserPlaySpaceRot;                                  // 0x0024(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct GameplayCameras.CameraAnimationHandle
-// 0x0004 (0x0004 - 0x0000)
-struct alignas(0x02) FCameraAnimationHandle final
-{
-public:
-	uint8                                         Pad_0[0x4];                                        // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct GameplayCameras.ActiveCameraAnimationInfo
-// 0x0060 (0x0060 - 0x0000)
-struct FActiveCameraAnimationInfo final
-{
-public:
-	class UCameraAnimationSequence*               Sequence;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FCameraAnimationParams                 Params;                                            // 0x0008(0x0030)(NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraAnimationHandle                 Handle;                                            // 0x0038(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCameraAnimationSequencePlayer*         Player;                                            // 0x0040(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCameraAnimationSequenceCameraStandIn*  CameraStandIn;                                     // 0x0048(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EaseInCurrentTime;                                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EaseOutCurrentTime;                                // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsEasingIn;                                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsEasingOut;                                      // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
 // ScriptStruct GameplayCameras.FOscillator
@@ -127,16 +52,12 @@ public:
 	EOscillatorWaveform                           Waveform;                                          // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// ScriptStruct GameplayCameras.ROscillator
-// 0x0024 (0x0024 - 0x0000)
-struct FROscillator final
-{
-public:
-	struct FFOscillator                           Pitch;                                             // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFOscillator                           Yaw;                                               // 0x000C(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFOscillator                           Roll;                                              // 0x0018(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FFOscillator) == 0x000004, "Wrong alignment on FFOscillator");
+static_assert(sizeof(FFOscillator) == 0x00000C, "Wrong size on FFOscillator");
+static_assert(offsetof(FFOscillator, Amplitude) == 0x000000, "Member 'FFOscillator::Amplitude' has a wrong offset!");
+static_assert(offsetof(FFOscillator, Frequency) == 0x000004, "Member 'FFOscillator::Frequency' has a wrong offset!");
+static_assert(offsetof(FFOscillator, InitialOffset) == 0x000008, "Member 'FFOscillator::InitialOffset' has a wrong offset!");
+static_assert(offsetof(FFOscillator, Waveform) == 0x000009, "Member 'FFOscillator::Waveform' has a wrong offset!");
 
 // ScriptStruct GameplayCameras.VOscillator
 // 0x0024 (0x0024 - 0x0000)
@@ -147,6 +68,26 @@ public:
 	struct FFOscillator                           Y;                                                 // 0x000C(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FFOscillator                           Z;                                                 // 0x0018(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FVOscillator) == 0x000004, "Wrong alignment on FVOscillator");
+static_assert(sizeof(FVOscillator) == 0x000024, "Wrong size on FVOscillator");
+static_assert(offsetof(FVOscillator, X) == 0x000000, "Member 'FVOscillator::X' has a wrong offset!");
+static_assert(offsetof(FVOscillator, Y) == 0x00000C, "Member 'FVOscillator::Y' has a wrong offset!");
+static_assert(offsetof(FVOscillator, Z) == 0x000018, "Member 'FVOscillator::Z' has a wrong offset!");
+
+// ScriptStruct GameplayCameras.ROscillator
+// 0x0024 (0x0024 - 0x0000)
+struct FROscillator final
+{
+public:
+	struct FFOscillator                           Pitch;                                             // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFOscillator                           Yaw;                                               // 0x000C(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFOscillator                           Roll;                                              // 0x0018(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FROscillator) == 0x000004, "Wrong alignment on FROscillator");
+static_assert(sizeof(FROscillator) == 0x000024, "Wrong size on FROscillator");
+static_assert(offsetof(FROscillator, Pitch) == 0x000000, "Member 'FROscillator::Pitch' has a wrong offset!");
+static_assert(offsetof(FROscillator, Yaw) == 0x00000C, "Member 'FROscillator::Yaw' has a wrong offset!");
+static_assert(offsetof(FROscillator, Roll) == 0x000018, "Member 'FROscillator::Roll' has a wrong offset!");
 
 // ScriptStruct GameplayCameras.PerlinNoiseShaker
 // 0x0008 (0x0008 - 0x0000)
@@ -156,6 +97,10 @@ public:
 	float                                         Amplitude;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Frequency;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FPerlinNoiseShaker) == 0x000004, "Wrong alignment on FPerlinNoiseShaker");
+static_assert(sizeof(FPerlinNoiseShaker) == 0x000008, "Wrong size on FPerlinNoiseShaker");
+static_assert(offsetof(FPerlinNoiseShaker, Amplitude) == 0x000000, "Member 'FPerlinNoiseShaker::Amplitude' has a wrong offset!");
+static_assert(offsetof(FPerlinNoiseShaker, Frequency) == 0x000004, "Member 'FPerlinNoiseShaker::Frequency' has a wrong offset!");
 
 // ScriptStruct GameplayCameras.WaveOscillator
 // 0x000C (0x000C - 0x0000)
@@ -167,6 +112,11 @@ public:
 	EInitialWaveOscillatorOffsetType              InitialOffsetType;                                 // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FWaveOscillator) == 0x000004, "Wrong alignment on FWaveOscillator");
+static_assert(sizeof(FWaveOscillator) == 0x00000C, "Wrong size on FWaveOscillator");
+static_assert(offsetof(FWaveOscillator, Amplitude) == 0x000000, "Member 'FWaveOscillator::Amplitude' has a wrong offset!");
+static_assert(offsetof(FWaveOscillator, Frequency) == 0x000004, "Member 'FWaveOscillator::Frequency' has a wrong offset!");
+static_assert(offsetof(FWaveOscillator, InitialOffsetType) == 0x000008, "Member 'FWaveOscillator::InitialOffsetType' has a wrong offset!");
 
 }
 

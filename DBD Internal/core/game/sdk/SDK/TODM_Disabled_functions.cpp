@@ -23,11 +23,31 @@ namespace SDK
 void ATODM_Disabled_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UserConstructionScript");
+		Func = Class->GetFunction("TODM_Disabled_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TODM_Disabled.TODM_Disabled_C.DisableLightAndFog
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ATODM_Disabled_C::DisableLightAndFog(bool Enable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TODM_Disabled_C", "DisableLightAndFog");
+
+	Params::TODM_Disabled_C_DisableLightAndFog Parms{};
+
+	Parms.Enable = Enable;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -37,9 +57,9 @@ void ATODM_Disabled_C::UserConstructionScript()
 void ATODM_Disabled_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveBeginPlay");
+		Func = Class->GetFunction("TODM_Disabled_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -53,33 +73,13 @@ void ATODM_Disabled_C::ReceiveBeginPlay()
 void ATODM_Disabled_C::ExecuteUbergraph_TODM_Disabled(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_TODM_Disabled");
+		Func = Class->GetFunction("TODM_Disabled_C", "ExecuteUbergraph_TODM_Disabled");
 
 	Params::TODM_Disabled_C_ExecuteUbergraph_TODM_Disabled Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TODM_Disabled.TODM_Disabled_C.DisableLightAndFog
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ATODM_Disabled_C::DisableLightAndFog(bool Enable)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("DisableLightAndFog");
-
-	Params::TODM_Disabled_C_DisableLightAndFog Parms{};
-
-	Parms.Enable = Enable;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

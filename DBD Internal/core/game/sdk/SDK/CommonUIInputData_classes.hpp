@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UCommonUIInputData_C>();
 	}
 };
+static_assert(alignof(UCommonUIInputData_C) == 0x000008, "Wrong alignment on UCommonUIInputData_C");
+static_assert(sizeof(UCommonUIInputData_C) == 0x000048, "Wrong size on UCommonUIInputData_C");
 
 }
 

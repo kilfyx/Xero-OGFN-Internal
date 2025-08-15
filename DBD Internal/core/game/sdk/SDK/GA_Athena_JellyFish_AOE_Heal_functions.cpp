@@ -17,40 +17,88 @@
 namespace SDK
 {
 
-// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.ApplyCurieWater
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.ExecuteUbergraph_GA_Athena_JellyFish_AOE_Heal
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const struct FVector&                   InputPin                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Athena_JellyFish_AOE_Heal_C::ApplyCurieWater(const struct FVector& InputPin)
+void UGA_Athena_JellyFish_AOE_Heal_C::ExecuteUbergraph_GA_Athena_JellyFish_AOE_Heal(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "ApplyCurieWater");
+		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "ExecuteUbergraph_GA_Athena_JellyFish_AOE_Heal");
 
-	Params::GA_Athena_JellyFish_AOE_Heal_C_ApplyCurieWater Parms{};
+	Params::GA_Athena_JellyFish_AOE_Heal_C_ExecuteUbergraph_GA_Athena_JellyFish_AOE_Heal Parms{};
 
-	Parms.InputPin = std::move(InputPin);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.Cancelled_39BB44CE4B5ACBFAF09C9C960F1A3644
+// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.K2_CommitExecute
+// (Event, Public, BlueprintEvent)
+
+void UGA_Athena_JellyFish_AOE_Heal_C::K2_CommitExecute()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "K2_CommitExecute");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGA_Athena_JellyFish_AOE_Heal_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "K2_OnEndAbility");
+
+	Params::GA_Athena_JellyFish_AOE_Heal_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Athena_JellyFish_AOE_Heal_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.Targeted_D9F6D24A49ABE8D7AAC30785C1A8DF0C
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Athena_JellyFish_AOE_Heal_C::Cancelled_39BB44CE4B5ACBFAF09C9C960F1A3644(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
+void UGA_Athena_JellyFish_AOE_Heal_C::Targeted_D9F6D24A49ABE8D7AAC30785C1A8DF0C(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "Cancelled_39BB44CE4B5ACBFAF09C9C960F1A3644");
+		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "Targeted_D9F6D24A49ABE8D7AAC30785C1A8DF0C");
 
-	Params::GA_Athena_JellyFish_AOE_Heal_C_Cancelled_39BB44CE4B5ACBFAF09C9C960F1A3644 Parms{};
+	Params::GA_Athena_JellyFish_AOE_Heal_C_Targeted_D9F6D24A49ABE8D7AAC30785C1A8DF0C Parms{};
 
 	Parms.TargetData = std::move(TargetData);
 	Parms.ApplicationTag = std::move(ApplicationTag);
@@ -81,6 +129,50 @@ void UGA_Athena_JellyFish_AOE_Heal_C::Cancelled_D9F6D24A49ABE8D7AAC30785C1A8DF0C
 }
 
 
+// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.Triggered_39BB44CE4B5ACBFAF09C9C960F1A3644
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_JellyFish_AOE_Heal_C::Triggered_39BB44CE4B5ACBFAF09C9C960F1A3644(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "Triggered_39BB44CE4B5ACBFAF09C9C960F1A3644");
+
+	Params::GA_Athena_JellyFish_AOE_Heal_C_Triggered_39BB44CE4B5ACBFAF09C9C960F1A3644 Parms{};
+
+	Parms.TargetData = std::move(TargetData);
+	Parms.ApplicationTag = std::move(ApplicationTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.Cancelled_39BB44CE4B5ACBFAF09C9C960F1A3644
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_JellyFish_AOE_Heal_C::Cancelled_39BB44CE4B5ACBFAF09C9C960F1A3644(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "Cancelled_39BB44CE4B5ACBFAF09C9C960F1A3644");
+
+	Params::GA_Athena_JellyFish_AOE_Heal_C_Cancelled_39BB44CE4B5ACBFAF09C9C960F1A3644 Parms{};
+
+	Parms.TargetData = std::move(TargetData);
+	Parms.ApplicationTag = std::move(ApplicationTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.Completed_39BB44CE4B5ACBFAF09C9C960F1A3644
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -103,23 +195,17 @@ void UGA_Athena_JellyFish_AOE_Heal_C::Completed_39BB44CE4B5ACBFAF09C9C960F1A3644
 }
 
 
-// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.ExecuteUbergraph_GA_Athena_JellyFish_AOE_Heal
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.ShieldCalc
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UGA_Athena_JellyFish_AOE_Heal_C::ExecuteUbergraph_GA_Athena_JellyFish_AOE_Heal(int32 EntryPoint)
+void UGA_Athena_JellyFish_AOE_Heal_C::ShieldCalc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "ExecuteUbergraph_GA_Athena_JellyFish_AOE_Heal");
+		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "ShieldCalc");
 
-	Params::GA_Athena_JellyFish_AOE_Heal_C_ExecuteUbergraph_GA_Athena_JellyFish_AOE_Heal Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -137,51 +223,24 @@ void UGA_Athena_JellyFish_AOE_Heal_C::HealthCalc()
 }
 
 
-// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_Athena_JellyFish_AOE_Heal_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.K2_CommitExecute
-// (Event, Public, BlueprintEvent)
-
-void UGA_Athena_JellyFish_AOE_Heal_C::K2_CommitExecute()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "K2_CommitExecute");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
+// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.SetupGE
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FGameplayEffectSpecHandle*       Effect_Out                                             (Parm, OutParm)
 
-void UGA_Athena_JellyFish_AOE_Heal_C::K2_OnEndAbility(bool bWasCancelled)
+void UGA_Athena_JellyFish_AOE_Heal_C::SetupGE(struct FGameplayEffectSpecHandle* Effect_Out)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "K2_OnEndAbility");
+		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "SetupGE");
 
-	Params::GA_Athena_JellyFish_AOE_Heal_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
+	Params::GA_Athena_JellyFish_AOE_Heal_C_SetupGE Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Effect_Out != nullptr)
+		*Effect_Out = std::move(Parms.Effect_Out);
 }
 
 
@@ -213,92 +272,13 @@ void UGA_Athena_JellyFish_AOE_Heal_C::OnMontageTriggered()
 }
 
 
-// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.SetupGE
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FGameplayEffectSpecHandle*       Effect_Out                                             (Parm, OutParm)
-
-void UGA_Athena_JellyFish_AOE_Heal_C::SetupGE(struct FGameplayEffectSpecHandle* Effect_Out)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "SetupGE");
-
-	Params::GA_Athena_JellyFish_AOE_Heal_C_SetupGE Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Effect_Out != nullptr)
-		*Effect_Out = std::move(Parms.Effect_Out);
-}
-
-
-// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.ShieldCalc
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_JellyFish_AOE_Heal_C::ShieldCalc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "ShieldCalc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.Targeted_D9F6D24A49ABE8D7AAC30785C1A8DF0C
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_JellyFish_AOE_Heal_C::Targeted_D9F6D24A49ABE8D7AAC30785C1A8DF0C(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "Targeted_D9F6D24A49ABE8D7AAC30785C1A8DF0C");
-
-	Params::GA_Athena_JellyFish_AOE_Heal_C_Targeted_D9F6D24A49ABE8D7AAC30785C1A8DF0C Parms{};
-
-	Parms.TargetData = std::move(TargetData);
-	Parms.ApplicationTag = std::move(ApplicationTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.Triggered_39BB44CE4B5ACBFAF09C9C960F1A3644
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_JellyFish_AOE_Heal_C::Triggered_39BB44CE4B5ACBFAF09C9C960F1A3644(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_JellyFish_AOE_Heal_C", "Triggered_39BB44CE4B5ACBFAF09C9C960F1A3644");
-
-	Params::GA_Athena_JellyFish_AOE_Heal_C_Triggered_39BB44CE4B5ACBFAF09C9C960F1A3644 Parms{};
-
-	Parms.TargetData = std::move(TargetData);
-	Parms.ApplicationTag = std::move(ApplicationTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_Athena_JellyFish_AOE_Heal.GA_Athena_JellyFish_AOE_Heal_C.K2_CanActivateAbility
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // const struct FGameplayAbilityActorInfo& ActorInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 // const struct FGameplayAbilitySpecHandle&Handle                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // struct FGameplayTagContainer*           RelevantTags                                           (Parm, OutParm)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UGA_Athena_JellyFish_AOE_Heal_C::K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayAbilitySpecHandle& Handle, struct FGameplayTagContainer* RelevantTags) const
 {

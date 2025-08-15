@@ -17,76 +17,6 @@
 namespace SDK
 {
 
-// Function AthenaFrontend.AthenaFrontend_C.BndEvt__Button_PTT_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UAthenaFrontend_C::BndEvt__Button_PTT_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__Button_PTT_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaFrontend.AthenaFrontend_C.BndEvt__ButtonToggleChat_K2Node_ComponentBoundEvent_39_CommonSelectedStateChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    Selected                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaFrontend_C::BndEvt__ButtonToggleChat_K2Node_ComponentBoundEvent_39_CommonSelectedStateChanged__DelegateSignature(class UCommonButtonLegacy* Button, bool Selected)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__ButtonToggleChat_K2Node_ComponentBoundEvent_39_CommonSelectedStateChanged__DelegateSignature");
-
-	Params::AthenaFrontend_C_BndEvt__ButtonToggleChat_K2Node_ComponentBoundEvent_39_CommonSelectedStateChanged__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-	Parms.Selected = Selected;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaFrontend.AthenaFrontend_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAthenaFrontend_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaFrontend.AthenaFrontend_C.DisplayDebugFlowText
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// class FText                             DebugFlowText                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UAthenaFrontend_C::DisplayDebugFlowText(const class FText& DebugFlowText)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("DisplayDebugFlowText");
-
-	Params::AthenaFrontend_C_DisplayDebugFlowText Parms{};
-
-	Parms.DebugFlowText = std::move(DebugFlowText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function AthenaFrontend.AthenaFrontend_C.ExecuteUbergraph_AthenaFrontend
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -95,9 +25,9 @@ void UAthenaFrontend_C::DisplayDebugFlowText(const class FText& DebugFlowText)
 void UAthenaFrontend_C::ExecuteUbergraph_AthenaFrontend(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaFrontend");
+		Func = Class->GetFunction("AthenaFrontend_C", "ExecuteUbergraph_AthenaFrontend");
 
 	Params::AthenaFrontend_C_ExecuteUbergraph_AthenaFrontend Parms{};
 
@@ -107,45 +37,37 @@ void UAthenaFrontend_C::ExecuteUbergraph_AthenaFrontend(int32 EntryPoint)
 }
 
 
-// Function AthenaFrontend.AthenaFrontend_C.HideDebugFlowText
+// Function AthenaFrontend.AthenaFrontend_C.StopTrailerTransitionAudioCheck
 // (Event, Protected, BlueprintEvent)
 
-void UAthenaFrontend_C::HideDebugFlowText()
+void UAthenaFrontend_C::StopTrailerTransitionAudioCheck()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HideDebugFlowText");
+		Func = Class->GetFunction("AthenaFrontend_C", "StopTrailerTransitionAudioCheck");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaFrontend.AthenaFrontend_C.InitChatVisibilityButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function AthenaFrontend.AthenaFrontend_C.StartTrailerTransitionAudioCheck
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UMediaPlayer*                     MediaPlayer                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaFrontend_C::InitChatVisibilityButton()
+void UAthenaFrontend_C::StartTrailerTransitionAudioCheck(class UMediaPlayer* MediaPlayer)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("InitChatVisibilityButton");
+		Func = Class->GetFunction("AthenaFrontend_C", "StartTrailerTransitionAudioCheck");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::AthenaFrontend_C_StartTrailerTransitionAudioCheck Parms{};
 
+	Parms.MediaPlayer = MediaPlayer;
 
-// Function AthenaFrontend.AthenaFrontend_C.On Can PTT
-// (BlueprintCallable, BlueprintEvent)
-
-void UAthenaFrontend_C::On_Can_PTT()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("On Can PTT");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -157,9 +79,9 @@ void UAthenaFrontend_C::On_Can_PTT()
 void UAthenaFrontend_C::OnSetFrontendVisibilityMode(EFrontendVisibilityMode InFrontendVisibilityMode)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnSetFrontendVisibilityMode");
+		Func = Class->GetFunction("AthenaFrontend_C", "OnSetFrontendVisibilityMode");
 
 	Params::AthenaFrontend_C_OnSetFrontendVisibilityMode Parms{};
 
@@ -169,79 +91,81 @@ void UAthenaFrontend_C::OnSetFrontendVisibilityMode(EFrontendVisibilityMode InFr
 }
 
 
-// Function AthenaFrontend.AthenaFrontend_C.OnTrailerMediaEnded
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function AthenaFrontend.AthenaFrontend_C.BndEvt__Button_PTT_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UAthenaFrontend_C::OnTrailerMediaEnded()
+void UAthenaFrontend_C::BndEvt__Button_PTT_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnTrailerMediaEnded");
+		Func = Class->GetFunction("AthenaFrontend_C", "BndEvt__Button_PTT_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaFrontend.AthenaFrontend_C.OnTrailerMediaOpened
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           OpenedUrl                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// Function AthenaFrontend.AthenaFrontend_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UAthenaFrontend_C::OnTrailerMediaOpened(const class FString& OpenedUrl)
+void UAthenaFrontend_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnTrailerMediaOpened");
+		Func = Class->GetFunction("AthenaFrontend_C", "Construct");
 
-	Params::AthenaFrontend_C_OnTrailerMediaOpened Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.OpenedUrl = std::move(OpenedUrl);
+
+// Function AthenaFrontend.AthenaFrontend_C.On Can PTT
+// (BlueprintCallable, BlueprintEvent)
+
+void UAthenaFrontend_C::On_Can_PTT()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaFrontend_C", "On Can PTT");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaFrontend.AthenaFrontend_C.BndEvt__ButtonToggleChat_K2Node_ComponentBoundEvent_39_CommonSelectedStateChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Selected                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaFrontend_C::BndEvt__ButtonToggleChat_K2Node_ComponentBoundEvent_39_CommonSelectedStateChanged__DelegateSignature(class UCommonButton* Button, bool Selected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaFrontend_C", "BndEvt__ButtonToggleChat_K2Node_ComponentBoundEvent_39_CommonSelectedStateChanged__DelegateSignature");
+
+	Params::AthenaFrontend_C_BndEvt__ButtonToggleChat_K2Node_ComponentBoundEvent_39_CommonSelectedStateChanged__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+	Parms.Selected = Selected;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaFrontend.AthenaFrontend_C.OnTrailerTransitionAudioCheck
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UAthenaFrontend_C::OnTrailerTransitionAudioCheck()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnTrailerTransitionAudioCheck");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaFrontend.AthenaFrontend_C.PlayTrailer
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UAthenaFrontend_C::PlayTrailer()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PlayTrailer");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function AthenaFrontend.AthenaFrontend_C.SetChatWidgetVisibility
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaFrontend_C::SetChatWidgetVisibility(bool Visible)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetChatWidgetVisibility");
+		Func = Class->GetFunction("AthenaFrontend_C", "SetChatWidgetVisibility");
 
 	Params::AthenaFrontend_C_SetChatWidgetVisibility Parms{};
 
@@ -254,54 +178,20 @@ void UAthenaFrontend_C::SetChatWidgetVisibility(bool Visible)
 // Function AthenaFrontend.AthenaFrontend_C.SetOverlayTitleBarVisibility
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaFrontend_C::SetOverlayTitleBarVisibility(bool Visible)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetOverlayTitleBarVisibility");
+		Func = Class->GetFunction("AthenaFrontend_C", "SetOverlayTitleBarVisibility");
 
 	Params::AthenaFrontend_C_SetOverlayTitleBarVisibility Parms{};
 
 	Parms.Visible = Visible;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaFrontend.AthenaFrontend_C.StartTrailerTransitionAudioCheck
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UMediaPlayer*                     MediaPlayer                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaFrontend_C::StartTrailerTransitionAudioCheck(class UMediaPlayer* MediaPlayer)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("StartTrailerTransitionAudioCheck");
-
-	Params::AthenaFrontend_C_StartTrailerTransitionAudioCheck Parms{};
-
-	Parms.MediaPlayer = MediaPlayer;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaFrontend.AthenaFrontend_C.StopTrailerTransitionAudioCheck
-// (Event, Protected, BlueprintEvent)
-
-void UAthenaFrontend_C::StopTrailerTransitionAudioCheck()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("StopTrailerTransitionAudioCheck");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -313,15 +203,91 @@ void UAthenaFrontend_C::StopTrailerTransitionAudioCheck()
 void UAthenaFrontend_C::UpdatePttVisibility(EPTTState PTTState)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UpdatePttVisibility");
+		Func = Class->GetFunction("AthenaFrontend_C", "UpdatePttVisibility");
 
 	Params::AthenaFrontend_C_UpdatePttVisibility Parms{};
 
 	Parms.PTTState = PTTState;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaFrontend.AthenaFrontend_C.InitChatVisibilityButton
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UAthenaFrontend_C::InitChatVisibilityButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaFrontend_C", "InitChatVisibilityButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaFrontend.AthenaFrontend_C.PlayTrailer
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UAthenaFrontend_C::PlayTrailer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaFrontend_C", "PlayTrailer");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaFrontend.AthenaFrontend_C.OnTrailerTransitionAudioCheck
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UAthenaFrontend_C::OnTrailerTransitionAudioCheck()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaFrontend_C", "OnTrailerTransitionAudioCheck");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaFrontend.AthenaFrontend_C.OnTrailerMediaOpened
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    OpenedUrl                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UAthenaFrontend_C::OnTrailerMediaOpened(const class FString& OpenedUrl)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaFrontend_C", "OnTrailerMediaOpened");
+
+	Params::AthenaFrontend_C_OnTrailerMediaOpened Parms{};
+
+	Parms.OpenedUrl = std::move(OpenedUrl);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaFrontend.AthenaFrontend_C.OnTrailerMediaEnded
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UAthenaFrontend_C::OnTrailerMediaEnded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaFrontend_C", "OnTrailerMediaEnded");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TT_Ninja_SwordHitsHeal.TT_Ninja_SwordHitsHeal_C
-// 0x0000 (0x0188 - 0x0188)
+// 0x0000 (0x0180 - 0x0180)
 class UTT_Ninja_SwordHitsHeal_C final : public UFortGameplayAbilityTooltip
 {
 public:
-	bool GetTextForTokenFromAbilityInstanceInternal(const class UGameplayAbility* AbilityInstance, const struct FGameplayTag& Tag, const class UFortTooltipContext* Context, const struct FGameplayTag& Token, class FText* OutText) const;
 	void InitializeAbilityInstanceInternal(const class UGameplayAbility* AbilityInstance, const class UFortTooltipContext* Context) const;
+	bool GetTextForTokenFromAbilityInstanceInternal(const class UGameplayAbility* AbilityInstance, const struct FGameplayTag& Tag, const class UFortTooltipContext* Context, const struct FGameplayTag& Token, class FText* OutText) const;
 
 public:
 	static class UClass* StaticClass()
@@ -34,6 +34,8 @@ public:
 		return GetDefaultObjImpl<UTT_Ninja_SwordHitsHeal_C>();
 	}
 };
+static_assert(alignof(UTT_Ninja_SwordHitsHeal_C) == 0x000008, "Wrong alignment on UTT_Ninja_SwordHitsHeal_C");
+static_assert(sizeof(UTT_Ninja_SwordHitsHeal_C) == 0x000180, "Wrong size on UTT_Ninja_SwordHitsHeal_C");
 
 }
 

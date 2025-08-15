@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TextStyle_Button_Feature_M_Feature_s11.TextStyle_Button_Feature_M_Feature_s11_C
-// 0x0000 (0x0180 - 0x0180)
+// 0x0000 (0x0148 - 0x0148)
 class UTextStyle_Button_Feature_M_Feature_s11_C final : public UCommonTextStyle
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UTextStyle_Button_Feature_M_Feature_s11_C>();
 	}
 };
+static_assert(alignof(UTextStyle_Button_Feature_M_Feature_s11_C) == 0x000008, "Wrong alignment on UTextStyle_Button_Feature_M_Feature_s11_C");
+static_assert(sizeof(UTextStyle_Button_Feature_M_Feature_s11_C) == 0x000148, "Wrong size on UTextStyle_Button_Feature_M_Feature_s11_C");
 
 }
 

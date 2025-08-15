@@ -10,7 +10,7 @@
 
 #include "Basic.hpp"
 
-#include "SoundLibrary_classes.hpp"
+#include "FoleySound_classes.hpp"
 
 
 namespace SDK
@@ -18,7 +18,7 @@ namespace SDK
 
 // BlueprintGeneratedClass FoleyLib_Character_Base.FoleyLib_Character_Base_C
 // 0x0000 (0x00B0 - 0x00B0)
-class UFoleyLib_Character_Base_C : public USoundLibrary
+class UFoleyLib_Character_Base_C : public UFoleySoundLibrary
 {
 public:
 	static class UClass* StaticClass()
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UFoleyLib_Character_Base_C>();
 	}
 };
+static_assert(alignof(UFoleyLib_Character_Base_C) == 0x000008, "Wrong alignment on UFoleyLib_Character_Base_C");
+static_assert(sizeof(UFoleyLib_Character_Base_C) == 0x0000B0, "Wrong size on UFoleyLib_Character_Base_C");
 
 }
 

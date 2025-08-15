@@ -17,45 +17,24 @@
 namespace SDK
 {
 
-// Function MASTER_TODM.MASTER_TODM_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function MASTER_TODM.MASTER_TODM_C.EmptyTransform
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FTransform*                      Transform                                              (Parm, OutParm, IsPlainOldData, NoDestructor)
 
-void AMASTER_TODM_C::UserConstructionScript()
+void AMASTER_TODM_C::EmptyTransform(struct FTransform* Transform)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UserConstructionScript");
+		Func = Class->GetFunction("MASTER_TODM_C", "EmptyTransform");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::MASTER_TODM_C_EmptyTransform Parms{};
 
+	UObject::ProcessEvent(Func, &Parms);
 
-// Function MASTER_TODM.MASTER_TODM_C.UpdateSSAO
-// (BlueprintCallable, BlueprintEvent)
-
-void AMASTER_TODM_C::UpdateSSAO()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateSSAO");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MASTER_TODM.MASTER_TODM_C.StartStorm
-// (BlueprintCallable, BlueprintEvent)
-
-void AMASTER_TODM_C::StartStorm()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("StartStorm");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (Transform != nullptr)
+		*Transform = std::move(Parms.Transform);
 }
 
 
@@ -65,121 +44,23 @@ void AMASTER_TODM_C::StartStorm()
 void AMASTER_TODM_C::SetHeavySSAO()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetHeavySSAO");
+		Func = Class->GetFunction("MASTER_TODM_C", "SetHeavySSAO");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MASTER_TODM.MASTER_TODM_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function MASTER_TODM.MASTER_TODM_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void AMASTER_TODM_C::ReceiveBeginPlay()
+void AMASTER_TODM_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MASTER_TODM.MASTER_TODM_C.OnStormStart
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void AMASTER_TODM_C::OnStormStart()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnStormStart");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MASTER_TODM.MASTER_TODM_C.OnStormEnd
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void AMASTER_TODM_C::OnStormEnd()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnStormEnd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MASTER_TODM.MASTER_TODM_C.New Storm Timeline__UpdateFunc
-// (BlueprintEvent)
-
-void AMASTER_TODM_C::New_Storm_Timeline__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("New Storm Timeline__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MASTER_TODM.MASTER_TODM_C.New Storm Timeline__FireOffRain__EventFunc
-// (BlueprintEvent)
-
-void AMASTER_TODM_C::New_Storm_Timeline__FireOffRain__EventFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("New Storm Timeline__FireOffRain__EventFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MASTER_TODM.MASTER_TODM_C.New Storm Timeline__FinishedFunc
-// (BlueprintEvent)
-
-void AMASTER_TODM_C::New_Storm_Timeline__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("New Storm Timeline__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MASTER_TODM.MASTER_TODM_C.LightningStrike
-// (BlueprintCallable, BlueprintEvent)
-
-void AMASTER_TODM_C::LightningStrike()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("LightningStrike");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MASTER_TODM.MASTER_TODM_C.FlashLightning__UpdateFunc
-// (BlueprintEvent)
-
-void AMASTER_TODM_C::FlashLightning__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("FlashLightning__UpdateFunc");
+		Func = Class->GetFunction("MASTER_TODM_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -191,9 +72,183 @@ void AMASTER_TODM_C::FlashLightning__UpdateFunc()
 void AMASTER_TODM_C::FlashLightning__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("FlashLightning__FinishedFunc");
+		Func = Class->GetFunction("MASTER_TODM_C", "FlashLightning__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MASTER_TODM.MASTER_TODM_C.FlashLightning__UpdateFunc
+// (BlueprintEvent)
+
+void AMASTER_TODM_C::FlashLightning__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MASTER_TODM_C", "FlashLightning__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MASTER_TODM.MASTER_TODM_C.New Storm Timeline__FinishedFunc
+// (BlueprintEvent)
+
+void AMASTER_TODM_C::New_Storm_Timeline__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MASTER_TODM_C", "New Storm Timeline__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MASTER_TODM.MASTER_TODM_C.New Storm Timeline__UpdateFunc
+// (BlueprintEvent)
+
+void AMASTER_TODM_C::New_Storm_Timeline__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MASTER_TODM_C", "New Storm Timeline__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MASTER_TODM.MASTER_TODM_C.New Storm Timeline__FireOffRain__EventFunc
+// (BlueprintEvent)
+
+void AMASTER_TODM_C::New_Storm_Timeline__FireOffRain__EventFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MASTER_TODM_C", "New Storm Timeline__FireOffRain__EventFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MASTER_TODM.MASTER_TODM_C.StartStorm
+// (BlueprintCallable, BlueprintEvent)
+
+void AMASTER_TODM_C::StartStorm()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MASTER_TODM_C", "StartStorm");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MASTER_TODM.MASTER_TODM_C.OnStormStart
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void AMASTER_TODM_C::OnStormStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MASTER_TODM_C", "OnStormStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MASTER_TODM.MASTER_TODM_C.OnStormEnd
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void AMASTER_TODM_C::OnStormEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MASTER_TODM_C", "OnStormEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MASTER_TODM.MASTER_TODM_C.LightningStrike
+// (BlueprintCallable, BlueprintEvent)
+
+void AMASTER_TODM_C::LightningStrike()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MASTER_TODM_C", "LightningStrike");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MASTER_TODM.MASTER_TODM_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AMASTER_TODM_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MASTER_TODM_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MASTER_TODM.MASTER_TODM_C.DisableLightAndFog
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AMASTER_TODM_C::DisableLightAndFog(bool Enable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MASTER_TODM_C", "DisableLightAndFog");
+
+	Params::MASTER_TODM_C_DisableLightAndFog Parms{};
+
+	Parms.Enable = Enable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MASTER_TODM.MASTER_TODM_C.EnableHDRRendering
+// (BlueprintCallable, BlueprintEvent)
+
+void AMASTER_TODM_C::EnableHDRRendering()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MASTER_TODM_C", "EnableHDRRendering");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MASTER_TODM.MASTER_TODM_C.UpdateSSAO
+// (BlueprintCallable, BlueprintEvent)
+
+void AMASTER_TODM_C::UpdateSSAO()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MASTER_TODM_C", "UpdateSSAO");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -207,68 +262,13 @@ void AMASTER_TODM_C::FlashLightning__FinishedFunc()
 void AMASTER_TODM_C::ExecuteUbergraph_MASTER_TODM(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_MASTER_TODM");
+		Func = Class->GetFunction("MASTER_TODM_C", "ExecuteUbergraph_MASTER_TODM");
 
 	Params::MASTER_TODM_C_ExecuteUbergraph_MASTER_TODM Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MASTER_TODM.MASTER_TODM_C.EnableHDRRendering
-// (BlueprintCallable, BlueprintEvent)
-
-void AMASTER_TODM_C::EnableHDRRendering()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EnableHDRRendering");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MASTER_TODM.MASTER_TODM_C.EmptyTransform
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FTransform                       Transform                                              (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AMASTER_TODM_C::EmptyTransform(struct FTransform* Transform)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EmptyTransform");
-
-	Params::MASTER_TODM_C_EmptyTransform Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Transform != nullptr)
-		*Transform = std::move(Parms.Transform);
-}
-
-
-// Function MASTER_TODM.MASTER_TODM_C.DisableLightAndFog
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AMASTER_TODM_C::DisableLightAndFog(bool Enable)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("DisableLightAndFog");
-
-	Params::MASTER_TODM_C_DisableLightAndFog Parms{};
-
-	Parms.Enable = Enable;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

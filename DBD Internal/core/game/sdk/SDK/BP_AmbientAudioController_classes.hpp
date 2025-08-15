@@ -10,71 +10,56 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "PhysicsCore_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_AmbientAudioController.BP_AmbientAudioController_C
-// 0x0110 (0x01E8 - 0x00D8)
+// 0x0090 (0x0170 - 0x00E0)
 class UBP_AmbientAudioController_C final : public UFortAmbientAudioController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         CheckFrequency;                                    // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bInSnowCurrent;                                    // 0x00E4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E5[0x3];                                       // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAmbientAudioDataAsset*                 WinterAudioBank;                                   // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSnowEnabled;                                      // 0x00F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAmbientAudioDataAsset*                 StormAudioBank;                                    // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           AmbientAudioInsideTag;                             // 0x0100(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAmbientAudioDataAsset*                 CurieAudioBank;                                    // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                SnowOriginWorldLoc;                                // 0x0110(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SnowRadius;                                        // 0x011C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FGameplayTag>                   SnowTagsToApply;                                   // 0x0120(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FName                                   SnowEntryName;                                     // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         IndoorInterpTime;                                  // 0x0138(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         IndoorStateChangedTime;                            // 0x013C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsIndoors;                                        // 0x0140(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         IsPlayerIndoorsInterp;                             // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CurrViewTarget;                                    // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FGameplayTag>                   GenericTagsToApply;                                // 0x0150(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bTagApplicationEnabled;                            // 0x0160(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteriorAudioState                           Current_State;                                     // 0x0161(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_162[0x2];                                      // 0x0162(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           Current_Room_Size_Tag;                             // 0x0164(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FGameplayTag, class UReverbEffect*> Reverbs;                                         // 0x0170(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UFortGameStateComponent_SurfaceOverride* SnowCoverageComponent;                            // 0x01C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FString>                         SupportedTagLevels;                                // 0x01C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         SpecialSurfacePadding;                             // 0x01D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundMix*                              AmbientAudioSoundMix;                              // 0x01E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         CheckFrequency;                                    // 0x00E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bAboveSnowAltitude;                                // 0x00EC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_ED[0x3];                                       // 0x00ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortPOIAmbientAudioBank*               WinterAudioBank;                                   // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSnowAltitudeEnabled;                              // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortPOIAmbientAudioBank*               StormAudioBank;                                    // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           AmbientAudioInsideTag;                             // 0x0108(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAmbientAudioDataAsset*                 CurieAudioBank;                                    // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                SnowOriginWorldLoc;                                // 0x0118(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SnowRadius;                                        // 0x0124(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FGameplayTag>                   SnowTagsToApply;                                   // 0x0128(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class FName                                   SnowEntryName;                                     // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         IndoorInterpTime;                                  // 0x0140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         IndoorStateChangedTime;                            // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsIndoors;                                        // 0x0148(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_149[0x3];                                      // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         IsPlayerIndoorsInterp;                             // 0x014C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CurrViewTarget;                                    // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FGameplayTag>                   GenericTagsToApply;                                // 0x0158(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          bTagApplicationEnabled;                            // 0x0168(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void ApplyPlayerTags(class AActor* Player, TArray<struct FGameplayTag>& Tag_Array);
-	void CacheViewTarget();
 	void ExecuteUbergraph_BP_AmbientAudioController(int32 EntryPoint);
-	void InitSnowCoverageComponent(class AGameStateBase* Game_State);
-	void InteriorStateChanged(EInteriorAudioState PreviousState, EInteriorAudioState CurrentState);
-	void On_Room_Size_Changed(const struct FGameplayTag& Curr, const struct FGameplayTag& Prev);
-	void On_Room_State_Changed(EInteriorAudioState Curr, EInteriorAudioState Prev);
-	void OnReady_C8AC4F724844E04160BE56BEAB4A2614(class AGameStateBase* GameState);
-	void OnViewTargetChanged(class AActor* New_Target, class AActor* Prev_Target);
-	void ReceiveBeginPlay();
+	void EnableWorldPFXTags();
 	void ReceiveTick(float DeltaSeconds);
-	void RemovePlayerTags(class AActor* Player, TArray<struct FGameplayTag>& Array);
+	void InteriorStateChanged(EInteriorAudioState PreviousState, EInteriorAudioState CurrentState);
 	void Update();
-	void Update_Interior_Audio_Verb();
+	void ReceiveBeginPlay();
 	void UpdateSnowSetupBP();
+	void ApplyPlayerTags(class AActor* Player, TArray<struct FGameplayTag>& Tag_Array);
+	void RemovePlayerTags(class AActor* Player, TArray<struct FGameplayTag>& Array);
+	void CacheViewTarget();
+	void OnViewTargetChanged(class AActor* New_Target, class AActor* Prev_Target);
 
 public:
 	static class UClass* StaticClass()
@@ -86,6 +71,27 @@ public:
 		return GetDefaultObjImpl<UBP_AmbientAudioController_C>();
 	}
 };
+static_assert(alignof(UBP_AmbientAudioController_C) == 0x000008, "Wrong alignment on UBP_AmbientAudioController_C");
+static_assert(sizeof(UBP_AmbientAudioController_C) == 0x000170, "Wrong size on UBP_AmbientAudioController_C");
+static_assert(offsetof(UBP_AmbientAudioController_C, UberGraphFrame) == 0x0000E0, "Member 'UBP_AmbientAudioController_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, CheckFrequency) == 0x0000E8, "Member 'UBP_AmbientAudioController_C::CheckFrequency' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, bAboveSnowAltitude) == 0x0000EC, "Member 'UBP_AmbientAudioController_C::bAboveSnowAltitude' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, WinterAudioBank) == 0x0000F0, "Member 'UBP_AmbientAudioController_C::WinterAudioBank' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, bSnowAltitudeEnabled) == 0x0000F8, "Member 'UBP_AmbientAudioController_C::bSnowAltitudeEnabled' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, StormAudioBank) == 0x000100, "Member 'UBP_AmbientAudioController_C::StormAudioBank' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, AmbientAudioInsideTag) == 0x000108, "Member 'UBP_AmbientAudioController_C::AmbientAudioInsideTag' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, CurieAudioBank) == 0x000110, "Member 'UBP_AmbientAudioController_C::CurieAudioBank' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, SnowOriginWorldLoc) == 0x000118, "Member 'UBP_AmbientAudioController_C::SnowOriginWorldLoc' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, SnowRadius) == 0x000124, "Member 'UBP_AmbientAudioController_C::SnowRadius' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, SnowTagsToApply) == 0x000128, "Member 'UBP_AmbientAudioController_C::SnowTagsToApply' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, SnowEntryName) == 0x000138, "Member 'UBP_AmbientAudioController_C::SnowEntryName' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, IndoorInterpTime) == 0x000140, "Member 'UBP_AmbientAudioController_C::IndoorInterpTime' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, IndoorStateChangedTime) == 0x000144, "Member 'UBP_AmbientAudioController_C::IndoorStateChangedTime' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, bIsIndoors) == 0x000148, "Member 'UBP_AmbientAudioController_C::bIsIndoors' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, IsPlayerIndoorsInterp) == 0x00014C, "Member 'UBP_AmbientAudioController_C::IsPlayerIndoorsInterp' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, CurrViewTarget) == 0x000150, "Member 'UBP_AmbientAudioController_C::CurrViewTarget' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, GenericTagsToApply) == 0x000158, "Member 'UBP_AmbientAudioController_C::GenericTagsToApply' has a wrong offset!");
+static_assert(offsetof(UBP_AmbientAudioController_C, bTagApplicationEnabled) == 0x000168, "Member 'UBP_AmbientAudioController_C::bTagApplicationEnabled' has a wrong offset!");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaVariantTileCustomizationSelector.AthenaVariantTileCustomizationSelector_C
-// 0x0000 (0x0398 - 0x0398)
+// 0x0000 (0x0330 - 0x0330)
 class UAthenaVariantTileCustomizationSelector_C final : public UFortVariantSelector
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UAthenaVariantTileCustomizationSelector_C) == 0x000008, "Wrong alignment on UAthenaVariantTileCustomizationSelector_C");
-static_assert(sizeof(UAthenaVariantTileCustomizationSelector_C) == 0x000398, "Wrong size on UAthenaVariantTileCustomizationSelector_C");
+static_assert(sizeof(UAthenaVariantTileCustomizationSelector_C) == 0x000330, "Wrong size on UAthenaVariantTileCustomizationSelector_C");
 
 }
 

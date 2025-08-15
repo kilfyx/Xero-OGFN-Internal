@@ -10,66 +10,91 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+
 
 namespace SDK::Params
 {
 
-// Function VerseFortnite.VerseFortniteMinigameTeamCollection.OnMinigameDestroyed
-// 0x0008 (0x0008 - 0x0000)
-struct VerseFortniteMinigameTeamCollection_OnMinigameDestroyed final
+// Function VerseFortnite.FortControllerStateHandlerComponent.NotifyOfStateChange
+// 0x0018 (0x0018 - 0x0000)
+struct FortControllerStateHandlerComponent_NotifyOfStateChange final
 {
 public:
-	class AActor*                                 DestroyedMinigame;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 State;                                             // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Active;                                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(VerseFortniteMinigameTeamCollection_OnMinigameDestroyed) == 0x000008, "Wrong alignment on VerseFortniteMinigameTeamCollection_OnMinigameDestroyed");
-static_assert(sizeof(VerseFortniteMinigameTeamCollection_OnMinigameDestroyed) == 0x000008, "Wrong size on VerseFortniteMinigameTeamCollection_OnMinigameDestroyed");
-static_assert(offsetof(VerseFortniteMinigameTeamCollection_OnMinigameDestroyed, DestroyedMinigame) == 0x000000, "Member 'VerseFortniteMinigameTeamCollection_OnMinigameDestroyed::DestroyedMinigame' has a wrong offset!");
+static_assert(alignof(FortControllerStateHandlerComponent_NotifyOfStateChange) == 0x000008, "Wrong alignment on FortControllerStateHandlerComponent_NotifyOfStateChange");
+static_assert(sizeof(FortControllerStateHandlerComponent_NotifyOfStateChange) == 0x000018, "Wrong size on FortControllerStateHandlerComponent_NotifyOfStateChange");
+static_assert(offsetof(FortControllerStateHandlerComponent_NotifyOfStateChange, State) == 0x000000, "Member 'FortControllerStateHandlerComponent_NotifyOfStateChange::State' has a wrong offset!");
+static_assert(offsetof(FortControllerStateHandlerComponent_NotifyOfStateChange, Active) == 0x000010, "Member 'FortControllerStateHandlerComponent_NotifyOfStateChange::Active' has a wrong offset!");
 
-// Function VerseFortnite.VerseFortniteMinigameTeamCollection.OnMinigameSetUp
+// Function VerseFortnite.FortPlayspaceComponentHelper.HandlePlayerDied
 // 0x0008 (0x0008 - 0x0000)
-struct VerseFortniteMinigameTeamCollection_OnMinigameSetUp final
+struct FortPlayspaceComponentHelper_HandlePlayerDied final
 {
 public:
-	class AFortMinigame*                          InMinigame;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AFortPlayerPawnAthena*                  FortPlayerPawnAthena;                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(VerseFortniteMinigameTeamCollection_OnMinigameSetUp) == 0x000008, "Wrong alignment on VerseFortniteMinigameTeamCollection_OnMinigameSetUp");
-static_assert(sizeof(VerseFortniteMinigameTeamCollection_OnMinigameSetUp) == 0x000008, "Wrong size on VerseFortniteMinigameTeamCollection_OnMinigameSetUp");
-static_assert(offsetof(VerseFortniteMinigameTeamCollection_OnMinigameSetUp, InMinigame) == 0x000000, "Member 'VerseFortniteMinigameTeamCollection_OnMinigameSetUp::InMinigame' has a wrong offset!");
+static_assert(alignof(FortPlayspaceComponentHelper_HandlePlayerDied) == 0x000008, "Wrong alignment on FortPlayspaceComponentHelper_HandlePlayerDied");
+static_assert(sizeof(FortPlayspaceComponentHelper_HandlePlayerDied) == 0x000008, "Wrong size on FortPlayspaceComponentHelper_HandlePlayerDied");
+static_assert(offsetof(FortPlayspaceComponentHelper_HandlePlayerDied, FortPlayerPawnAthena) == 0x000000, "Member 'FortPlayspaceComponentHelper_HandlePlayerDied::FortPlayerPawnAthena' has a wrong offset!");
 
-// Function VerseFortnite.VerseFortniteActorWrapper.OnActorDestroyed
+// Function VerseFortnite.FortPlayspaceComponentHelper.HandlePlayerPawnPossessed
 // 0x0008 (0x0008 - 0x0000)
-struct VerseFortniteActorWrapper_OnActorDestroyed final
+struct FortPlayspaceComponentHelper_HandlePlayerPawnPossessed final
 {
 public:
-	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APawn*                                  Pawn;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(VerseFortniteActorWrapper_OnActorDestroyed) == 0x000008, "Wrong alignment on VerseFortniteActorWrapper_OnActorDestroyed");
-static_assert(sizeof(VerseFortniteActorWrapper_OnActorDestroyed) == 0x000008, "Wrong size on VerseFortniteActorWrapper_OnActorDestroyed");
-static_assert(offsetof(VerseFortniteActorWrapper_OnActorDestroyed, DestroyedActor) == 0x000000, "Member 'VerseFortniteActorWrapper_OnActorDestroyed::DestroyedActor' has a wrong offset!");
+static_assert(alignof(FortPlayspaceComponentHelper_HandlePlayerPawnPossessed) == 0x000008, "Wrong alignment on FortPlayspaceComponentHelper_HandlePlayerPawnPossessed");
+static_assert(sizeof(FortPlayspaceComponentHelper_HandlePlayerPawnPossessed) == 0x000008, "Wrong size on FortPlayspaceComponentHelper_HandlePlayerPawnPossessed");
+static_assert(offsetof(FortPlayspaceComponentHelper_HandlePlayerPawnPossessed, Pawn) == 0x000000, "Member 'FortPlayspaceComponentHelper_HandlePlayerPawnPossessed::Pawn' has a wrong offset!");
 
-// Function VerseFortnite.VerseFortniteCharacter.HandlePawnEliminated
+// Function VerseFortnite.HUDGameOverComponentBase.GetIsDraw
+// 0x0001 (0x0001 - 0x0000)
+struct HUDGameOverComponentBase_GetIsDraw final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(HUDGameOverComponentBase_GetIsDraw) == 0x000001, "Wrong alignment on HUDGameOverComponentBase_GetIsDraw");
+static_assert(sizeof(HUDGameOverComponentBase_GetIsDraw) == 0x000001, "Wrong size on HUDGameOverComponentBase_GetIsDraw");
+static_assert(offsetof(HUDGameOverComponentBase_GetIsDraw, ReturnValue) == 0x000000, "Member 'HUDGameOverComponentBase_GetIsDraw::ReturnValue' has a wrong offset!");
+
+// Function VerseFortnite.HUDGameOverComponentBase.GetWinningTeam
+// 0x0004 (0x0004 - 0x0000)
+struct HUDGameOverComponentBase_GetWinningTeam final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(HUDGameOverComponentBase_GetWinningTeam) == 0x000004, "Wrong alignment on HUDGameOverComponentBase_GetWinningTeam");
+static_assert(sizeof(HUDGameOverComponentBase_GetWinningTeam) == 0x000004, "Wrong size on HUDGameOverComponentBase_GetWinningTeam");
+static_assert(offsetof(HUDGameOverComponentBase_GetWinningTeam, ReturnValue) == 0x000000, "Member 'HUDGameOverComponentBase_GetWinningTeam::ReturnValue' has a wrong offset!");
+
+// Function VerseFortnite.HUDMapComponentBase.HandleMapBoundsChanged
+// 0x001C (0x001C - 0x0000)
+struct HUDMapComponentBase_HandleMapBoundsChanged final
+{
+public:
+	struct FBox                                   newBounds;                                         // 0x0000(0x001C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(HUDMapComponentBase_HandleMapBoundsChanged) == 0x000004, "Wrong alignment on HUDMapComponentBase_HandleMapBoundsChanged");
+static_assert(sizeof(HUDMapComponentBase_HandleMapBoundsChanged) == 0x00001C, "Wrong size on HUDMapComponentBase_HandleMapBoundsChanged");
+static_assert(offsetof(HUDMapComponentBase_HandleMapBoundsChanged, newBounds) == 0x000000, "Member 'HUDMapComponentBase_HandleMapBoundsChanged::newBounds' has a wrong offset!");
+
+// Function VerseFortnite.VerseFortniteInputComponentBase.ServerTriggerAction
 // 0x0008 (0x0008 - 0x0000)
-struct VerseFortniteCharacter_HandlePawnEliminated final
+struct VerseFortniteInputComponentBase_ServerTriggerAction final
 {
 public:
-	class AFortPlayerPawnAthena*                  EliminatedPawn;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ActionName;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(VerseFortniteCharacter_HandlePawnEliminated) == 0x000008, "Wrong alignment on VerseFortniteCharacter_HandlePawnEliminated");
-static_assert(sizeof(VerseFortniteCharacter_HandlePawnEliminated) == 0x000008, "Wrong size on VerseFortniteCharacter_HandlePawnEliminated");
-static_assert(offsetof(VerseFortniteCharacter_HandlePawnEliminated, EliminatedPawn) == 0x000000, "Member 'VerseFortniteCharacter_HandlePawnEliminated::EliminatedPawn' has a wrong offset!");
-
-// Function VerseFortnite.VerseFortniteCharacter.HandlePosessedPawnChanged
-// 0x0010 (0x0010 - 0x0000)
-struct VerseFortniteCharacter_HandlePosessedPawnChanged final
-{
-public:
-	class APawn*                                  OldPawn;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APawn*                                  NewPawn;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VerseFortniteCharacter_HandlePosessedPawnChanged) == 0x000008, "Wrong alignment on VerseFortniteCharacter_HandlePosessedPawnChanged");
-static_assert(sizeof(VerseFortniteCharacter_HandlePosessedPawnChanged) == 0x000010, "Wrong size on VerseFortniteCharacter_HandlePosessedPawnChanged");
-static_assert(offsetof(VerseFortniteCharacter_HandlePosessedPawnChanged, OldPawn) == 0x000000, "Member 'VerseFortniteCharacter_HandlePosessedPawnChanged::OldPawn' has a wrong offset!");
-static_assert(offsetof(VerseFortniteCharacter_HandlePosessedPawnChanged, NewPawn) == 0x000008, "Member 'VerseFortniteCharacter_HandlePosessedPawnChanged::NewPawn' has a wrong offset!");
+static_assert(alignof(VerseFortniteInputComponentBase_ServerTriggerAction) == 0x000004, "Wrong alignment on VerseFortniteInputComponentBase_ServerTriggerAction");
+static_assert(sizeof(VerseFortniteInputComponentBase_ServerTriggerAction) == 0x000008, "Wrong size on VerseFortniteInputComponentBase_ServerTriggerAction");
+static_assert(offsetof(VerseFortniteInputComponentBase_ServerTriggerAction, ActionName) == 0x000000, "Member 'VerseFortniteInputComponentBase_ServerTriggerAction::ActionName' has a wrong offset!");
 
 }
 

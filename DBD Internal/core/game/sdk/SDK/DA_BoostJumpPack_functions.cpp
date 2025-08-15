@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function DA_BoostJumpPack.DA_BoostJumpPack_C.BPPressTrigger
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortDecoHelper*                  FortDecoHelper                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ADA_BoostJumpPack_C::BPPressTrigger(class AFortDecoHelper* FortDecoHelper)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DA_BoostJumpPack_C", "BPPressTrigger");
-
-	Params::DA_BoostJumpPack_C_BPPressTrigger Parms{};
-
-	Parms.FortDecoHelper = FortDecoHelper;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function DA_BoostJumpPack.DA_BoostJumpPack_C.ExecuteUbergraph_DA_BoostJumpPack
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -57,24 +37,23 @@ void ADA_BoostJumpPack_C::ExecuteUbergraph_DA_BoostJumpPack(int32 EntryPoint)
 }
 
 
-// Function DA_BoostJumpPack.DA_BoostJumpPack_C.IsOnGround
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function DA_BoostJumpPack.DA_BoostJumpPack_C.BPPressTrigger
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// bool*                                   bOnGround                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortDecoHelper*                  FortDecoHelper                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ADA_BoostJumpPack_C::IsOnGround(bool* bOnGround)
+void ADA_BoostJumpPack_C::BPPressTrigger(class AFortDecoHelper* FortDecoHelper)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DA_BoostJumpPack_C", "IsOnGround");
+		Func = Class->GetFunction("DA_BoostJumpPack_C", "BPPressTrigger");
 
-	Params::DA_BoostJumpPack_C_IsOnGround Parms{};
+	Params::DA_BoostJumpPack_C_BPPressTrigger Parms{};
+
+	Parms.FortDecoHelper = FortDecoHelper;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (bOnGround != nullptr)
-		*bOnGround = Parms.bOnGround;
 }
 
 
@@ -95,6 +74,27 @@ void ADA_BoostJumpPack_C::RaiseUsageError(const struct FGameplayTagContainer& Fa
 	Parms.FailedReason = std::move(FailedReason);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DA_BoostJumpPack.DA_BoostJumpPack_C.IsOnGround
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   bOnGround                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ADA_BoostJumpPack_C::IsOnGround(bool* bOnGround)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DA_BoostJumpPack_C", "IsOnGround");
+
+	Params::DA_BoostJumpPack_C_IsOnGround Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bOnGround != nullptr)
+		*bOnGround = Parms.bOnGround;
 }
 
 }

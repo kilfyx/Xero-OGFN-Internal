@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "B_AthenaMapMarkerBase_classes.hpp"
 
 
@@ -19,22 +19,22 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_AthenaPlayerMarker_WithCustomization.B_AthenaPlayerMarker_WithCustomization_C
-// 0x0048 (0x0610 - 0x05C8)
+// 0x0048 (0x05A0 - 0x0558)
 class AB_AthenaPlayerMarker_WithCustomization_C final : public AB_AthenaMapMarkerBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_AthenaPlayerMarker_WithCustomization_C; // 0x05C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UClass*                                 TopperClass;                                       // 0x05D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortMapMarkerTopperActor*              TopperInstance;                                    // 0x05D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             TopperTransform;                                   // 0x05E0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_AthenaPlayerMarker_WithCustomization_C; // 0x0558(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UClass*                                 TopperClass;                                       // 0x0560(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortMapMarkerTopperActor*              TopperInstance;                                    // 0x0568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             TopperTransform;                                   // 0x0570(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_B_AthenaPlayerMarker_WithCustomization(int32 EntryPoint);
-	void OnLoaded_8A042AD24DC8A8C0E9D8E0B4BF3B6C37(TSubclassOf<class UObject> Loaded);
-	void OnMarkerHidden();
 	void OnMarkerPlaced();
-	void OnSetupMarker(const struct FFortWorldMarkerData& MarkerData_0);
 	void UpdateTopper();
+	void OnMarkerHidden();
+	void OnSetupMarker(const struct FFortWorldMarkerData& MarkerData_0);
+	void OnLoaded_8A042AD24DC8A8C0E9D8E0B4BF3B6C37(class UClass* Loaded);
 
 public:
 	static class UClass* StaticClass()
@@ -46,6 +46,12 @@ public:
 		return GetDefaultObjImpl<AB_AthenaPlayerMarker_WithCustomization_C>();
 	}
 };
+static_assert(alignof(AB_AthenaPlayerMarker_WithCustomization_C) == 0x000010, "Wrong alignment on AB_AthenaPlayerMarker_WithCustomization_C");
+static_assert(sizeof(AB_AthenaPlayerMarker_WithCustomization_C) == 0x0005A0, "Wrong size on AB_AthenaPlayerMarker_WithCustomization_C");
+static_assert(offsetof(AB_AthenaPlayerMarker_WithCustomization_C, UberGraphFrame_B_AthenaPlayerMarker_WithCustomization_C) == 0x000558, "Member 'AB_AthenaPlayerMarker_WithCustomization_C::UberGraphFrame_B_AthenaPlayerMarker_WithCustomization_C' has a wrong offset!");
+static_assert(offsetof(AB_AthenaPlayerMarker_WithCustomization_C, TopperClass) == 0x000560, "Member 'AB_AthenaPlayerMarker_WithCustomization_C::TopperClass' has a wrong offset!");
+static_assert(offsetof(AB_AthenaPlayerMarker_WithCustomization_C, TopperInstance) == 0x000568, "Member 'AB_AthenaPlayerMarker_WithCustomization_C::TopperInstance' has a wrong offset!");
+static_assert(offsetof(AB_AthenaPlayerMarker_WithCustomization_C, TopperTransform) == 0x000570, "Member 'AB_AthenaPlayerMarker_WithCustomization_C::TopperTransform' has a wrong offset!");
 
 }
 

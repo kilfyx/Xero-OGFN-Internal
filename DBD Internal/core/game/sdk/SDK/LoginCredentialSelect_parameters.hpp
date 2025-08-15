@@ -21,7 +21,7 @@ struct LoginCredentialSelect_C_ExecuteUbergraph_LoginCredentialSelect final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(LoginCredentialSelect_C_ExecuteUbergraph_LoginCredentialSelect) == 0x000008, "Wrong alignment on LoginCredentialSelect_C_ExecuteUbergraph_LoginCredentialSelect");
 static_assert(sizeof(LoginCredentialSelect_C_ExecuteUbergraph_LoginCredentialSelect) == 0x000010, "Wrong size on LoginCredentialSelect_C_ExecuteUbergraph_LoginCredentialSelect");

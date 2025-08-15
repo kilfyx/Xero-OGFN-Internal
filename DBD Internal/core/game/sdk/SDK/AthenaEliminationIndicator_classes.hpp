@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaEliminationIndicator.AthenaEliminationIndicator_C
-// 0x0028 (0x0540 - 0x0518)
+// 0x0028 (0x04E8 - 0x04C0)
 class UAthenaEliminationIndicator_C final : public UAthenaEliminationIndicator
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0518(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Outro;                                             // 0x0520(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Intro;                                             // 0x0528(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Arrow;                                             // 0x0530(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Diamondpulse;                                // 0x0538(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Outro;                                             // 0x04C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Intro;                                             // 0x04D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Arrow;                                             // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Diamondpulse;                                // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void Construct();
 	void ExecuteUbergraph_AthenaEliminationIndicator(int32 EntryPoint);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()
@@ -42,6 +42,13 @@ public:
 		return GetDefaultObjImpl<UAthenaEliminationIndicator_C>();
 	}
 };
+static_assert(alignof(UAthenaEliminationIndicator_C) == 0x000008, "Wrong alignment on UAthenaEliminationIndicator_C");
+static_assert(sizeof(UAthenaEliminationIndicator_C) == 0x0004E8, "Wrong size on UAthenaEliminationIndicator_C");
+static_assert(offsetof(UAthenaEliminationIndicator_C, UberGraphFrame) == 0x0004C0, "Member 'UAthenaEliminationIndicator_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaEliminationIndicator_C, Outro) == 0x0004C8, "Member 'UAthenaEliminationIndicator_C::Outro' has a wrong offset!");
+static_assert(offsetof(UAthenaEliminationIndicator_C, Intro) == 0x0004D0, "Member 'UAthenaEliminationIndicator_C::Intro' has a wrong offset!");
+static_assert(offsetof(UAthenaEliminationIndicator_C, Arrow) == 0x0004D8, "Member 'UAthenaEliminationIndicator_C::Arrow' has a wrong offset!");
+static_assert(offsetof(UAthenaEliminationIndicator_C, Image_Diamondpulse) == 0x0004E0, "Member 'UAthenaEliminationIndicator_C::Image_Diamondpulse' has a wrong offset!");
 
 }
 

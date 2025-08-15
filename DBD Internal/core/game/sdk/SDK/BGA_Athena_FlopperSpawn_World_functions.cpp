@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function BGA_Athena_FlopperSpawn_World.BGA_Athena_FlopperSpawn_World_C.SpawnJumpingFish
-// (BlueprintCallable, BlueprintEvent)
+// Function BGA_Athena_FlopperSpawn_World.BGA_Athena_FlopperSpawn_World_C.ExecuteUbergraph_BGA_Athena_FlopperSpawn_World
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABGA_Athena_FlopperSpawn_World_C::SpawnJumpingFish()
+void ABGA_Athena_FlopperSpawn_World_C::ExecuteUbergraph_BGA_Athena_FlopperSpawn_World(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_World_C", "SpawnJumpingFish");
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_World_C", "ExecuteUbergraph_BGA_Athena_FlopperSpawn_World");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BGA_Athena_FlopperSpawn_World_C_ExecuteUbergraph_BGA_Athena_FlopperSpawn_World Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -48,6 +54,84 @@ void ABGA_Athena_FlopperSpawn_World_C::SpawnFromExplosion(class AActor* Instigat
 
 	Parms.Instigator_0 = Instigator_0;
 	Parms.DamageCauser = DamageCauser;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_FlopperSpawn_World.BGA_Athena_FlopperSpawn_World_C.OnDamageServer
+// (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTagContainer&     DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayEffectContextHandle&EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABGA_Athena_FlopperSpawn_World_C::OnDamageServer(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_World_C", "OnDamageServer");
+
+	Params::BGA_Athena_FlopperSpawn_World_C_OnDamageServer Parms{};
+
+	Parms.Damage = Damage;
+	Parms.DamageTags = std::move(DamageTags);
+	Parms.Momentum = std::move(Momentum);
+	Parms.HitInfo = std::move(HitInfo);
+	Parms.InstigatedBy = InstigatedBy;
+	Parms.DamageCauser = DamageCauser;
+	Parms.EffectContext = std::move(EffectContext);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_FlopperSpawn_World.BGA_Athena_FlopperSpawn_World_C.SpawnJumpingFish
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_FlopperSpawn_World_C::SpawnJumpingFish()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_World_C", "SpawnJumpingFish");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_FlopperSpawn_World.BGA_Athena_FlopperSpawn_World_C.OnDeathPlayEffects
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTagContainer&     DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// class AFortPawn*                        InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayEffectContextHandle&EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABGA_Athena_FlopperSpawn_World_C::OnDeathPlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_World_C", "OnDeathPlayEffects");
+
+	Params::BGA_Athena_FlopperSpawn_World_C_OnDeathPlayEffects Parms{};
+
+	Parms.Damage = Damage;
+	Parms.DamageTags = std::move(DamageTags);
+	Parms.Momentum = std::move(Momentum);
+	Parms.HitInfo = std::move(HitInfo);
+	Parms.InstigatedBy = InstigatedBy;
+	Parms.DamageCauser = DamageCauser;
+	Parms.EffectContext = std::move(EffectContext);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -101,96 +185,6 @@ void ABGA_Athena_FlopperSpawn_World_C::OnRep_FortWaterBody()
 }
 
 
-// Function BGA_Athena_FlopperSpawn_World.BGA_Athena_FlopperSpawn_World_C.OnDeathPlayEffects
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTagContainer&     DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-// class AFortPawn*                        InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayEffectContextHandle&EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void ABGA_Athena_FlopperSpawn_World_C::OnDeathPlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_World_C", "OnDeathPlayEffects");
-
-	Params::BGA_Athena_FlopperSpawn_World_C_OnDeathPlayEffects Parms{};
-
-	Parms.Damage = Damage;
-	Parms.DamageTags = std::move(DamageTags);
-	Parms.Momentum = std::move(Momentum);
-	Parms.HitInfo = std::move(HitInfo);
-	Parms.InstigatedBy = InstigatedBy;
-	Parms.DamageCauser = DamageCauser;
-	Parms.EffectContext = std::move(EffectContext);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_FlopperSpawn_World.BGA_Athena_FlopperSpawn_World_C.OnDamageServer
-// (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTagContainer&     DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayEffectContextHandle&EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void ABGA_Athena_FlopperSpawn_World_C::OnDamageServer(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_World_C", "OnDamageServer");
-
-	Params::BGA_Athena_FlopperSpawn_World_C_OnDamageServer Parms{};
-
-	Parms.Damage = Damage;
-	Parms.DamageTags = std::move(DamageTags);
-	Parms.Momentum = std::move(Momentum);
-	Parms.HitInfo = std::move(HitInfo);
-	Parms.InstigatedBy = InstigatedBy;
-	Parms.DamageCauser = DamageCauser;
-	Parms.EffectContext = std::move(EffectContext);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_FlopperSpawn_World.BGA_Athena_FlopperSpawn_World_C.GetLootTier
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsExplosion                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsProFishingRod                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName*                            Output_Get                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_FlopperSpawn_World_C::GetLootTier(bool IsExplosion, bool IsProFishingRod, class FName* Output_Get)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_World_C", "GetLootTier");
-
-	Params::BGA_Athena_FlopperSpawn_World_C_GetLootTier Parms{};
-
-	Parms.IsExplosion = IsExplosion;
-	Parms.IsProFishingRod = IsProFishingRod;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Output_Get != nullptr)
-		*Output_Get = Parms.Output_Get;
-}
-
-
 // Function BGA_Athena_FlopperSpawn_World.BGA_Athena_FlopperSpawn_World_C.ExplosionQuestProgress
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -213,23 +207,29 @@ void ABGA_Athena_FlopperSpawn_World_C::ExplosionQuestProgress(class AActor* Inst
 }
 
 
-// Function BGA_Athena_FlopperSpawn_World.BGA_Athena_FlopperSpawn_World_C.ExecuteUbergraph_BGA_Athena_FlopperSpawn_World
-// (Final, UbergraphFunction, HasDefaults)
+// Function BGA_Athena_FlopperSpawn_World.BGA_Athena_FlopperSpawn_World_C.GetLootTier
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsExplosion                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsProFishingRod                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class FName*                            Output_Get                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABGA_Athena_FlopperSpawn_World_C::ExecuteUbergraph_BGA_Athena_FlopperSpawn_World(int32 EntryPoint)
+void ABGA_Athena_FlopperSpawn_World_C::GetLootTier(bool IsExplosion, bool IsProFishingRod, class FName* Output_Get)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_World_C", "ExecuteUbergraph_BGA_Athena_FlopperSpawn_World");
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_World_C", "GetLootTier");
 
-	Params::BGA_Athena_FlopperSpawn_World_C_ExecuteUbergraph_BGA_Athena_FlopperSpawn_World Parms{};
+	Params::BGA_Athena_FlopperSpawn_World_C_GetLootTier Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsExplosion = IsExplosion;
+	Parms.IsProFishingRod = IsProFishingRod;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Output_Get != nullptr)
+		*Output_Get = Parms.Output_Get;
 }
 
 }

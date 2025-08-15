@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Commando_ClusterBombDamage_C>();
 	}
 };
+static_assert(alignof(UGE_Commando_ClusterBombDamage_C) == 0x000008, "Wrong alignment on UGE_Commando_ClusterBombDamage_C");
+static_assert(sizeof(UGE_Commando_ClusterBombDamage_C) == 0x000800, "Wrong size on UGE_Commando_ClusterBombDamage_C");
 
 }
 

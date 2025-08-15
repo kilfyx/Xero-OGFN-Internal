@@ -17,31 +17,6 @@
 namespace SDK
 {
 
-// Function NetworkPrediction.NetworkPhysicsComponent.GetNetworkPredictionLOD
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UNetworkPhysicsComponent::GetNetworkPredictionLOD() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NetworkPhysicsComponent", "GetNetworkPredictionLOD");
-
-	Params::NetworkPhysicsComponent_GetNetworkPredictionLOD Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function NetworkPrediction.NetworkPredictionComponent.ServerReceiveClientInput
 // (Net, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:

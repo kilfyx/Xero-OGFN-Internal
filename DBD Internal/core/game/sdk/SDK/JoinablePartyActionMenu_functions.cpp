@@ -54,7 +54,7 @@ void UJoinablePartyActionMenu_C::OnOpened()
 // Function JoinablePartyActionMenu.JoinablePartyActionMenu_C.OnToggleConfirmation
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsVisible                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsVisible                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UJoinablePartyActionMenu_C::OnToggleConfirmation(bool bIsVisible)
 {

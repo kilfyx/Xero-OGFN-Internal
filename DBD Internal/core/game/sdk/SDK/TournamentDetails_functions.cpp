@@ -17,65 +17,21 @@
 namespace SDK
 {
 
-// Function TournamentDetails.TournamentDetails_C.AnimTransition
-// (BlueprintCallable, BlueprintEvent)
+// Function TournamentDetails.TournamentDetails_C.ExecuteUbergraph_TournamentDetails
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    In                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidgetAnimation*                 Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  PlaySpeed                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTournamentDetails_C::AnimTransition(bool In, class UWidgetAnimation* Animation, double PlaySpeed)
+void UTournamentDetails_C::ExecuteUbergraph_TournamentDetails(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("AnimTransition");
+		Func = Class->GetFunction("TournamentDetails_C", "ExecuteUbergraph_TournamentDetails");
 
-	Params::TournamentDetails_C_AnimTransition Parms{};
+	Params::TournamentDetails_C_ExecuteUbergraph_TournamentDetails Parms{};
 
-	Parms.In = In;
-	Parms.Animation = Animation;
-	Parms.PlaySpeed = PlaySpeed;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.BndEvt__BackButton2_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UTournamentDetails_C::BndEvt__BackButton2_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__BackButton2_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
-
-	Params::TournamentDetails_C_BndEvt__BackButton2_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.BndEvt__Button_EnableMFA_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UTournamentDetails_C::BndEvt__Button_EnableMFA_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__Button_EnableMFA_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature");
-
-	Params::TournamentDetails_C_BndEvt__Button_EnableMFA_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -84,224 +40,18 @@ void UTournamentDetails_C::BndEvt__Button_EnableMFA_K2Node_ComponentBoundEvent_4
 // Function TournamentDetails.TournamentDetails_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_6_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTournamentDetails_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_6_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UTournamentDetails_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_6_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__CloseButton_K2Node_ComponentBoundEvent_6_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("TournamentDetails_C", "BndEvt__CloseButton_K2Node_ComponentBoundEvent_6_CommonButtonClicked__DelegateSignature");
 
 	Params::TournamentDetails_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_6_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.BndEvt__DetailsPanelButton2_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UTournamentDetails_C::BndEvt__DetailsPanelButton2_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__DetailsPanelButton2_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
-
-	Params::TournamentDetails_C_BndEvt__DetailsPanelButton2_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.BndEvt__OverviewPanelButton2_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UTournamentDetails_C::BndEvt__OverviewPanelButton2_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__OverviewPanelButton2_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature");
-
-	Params::TournamentDetails_C_BndEvt__OverviewPanelButton2_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.BndEvt__TournamentDetails_FloatingLeaderboardButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UTournamentDetails_C::BndEvt__TournamentDetails_FloatingLeaderboardButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__TournamentDetails_FloatingLeaderboardButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
-
-	Params::TournamentDetails_C_BndEvt__TournamentDetails_FloatingLeaderboardButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.CloseEventWindowDetails
-// (BlueprintCallable, BlueprintEvent)
-
-void UTournamentDetails_C::CloseEventWindowDetails()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("CloseEventWindowDetails");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.CloseTournamentDetails
-// (BlueprintCallable, BlueprintEvent)
-
-void UTournamentDetails_C::CloseTournamentDetails()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("CloseTournamentDetails");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UTournamentDetails_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.CreateScoringWidgets
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           TournamentSeriesId                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           TournamentId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UTournamentDetails_C::CreateScoringWidgets(const class FString& TournamentSeriesId, const class FString& TournamentId)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("CreateScoringWidgets");
-
-	Params::TournamentDetails_C_CreateScoringWidgets Parms{};
-
-	Parms.TournamentSeriesId = std::move(TournamentSeriesId);
-	Parms.TournamentId = std::move(TournamentId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.EventBackoutLiveGames
-// (BlueprintCallable, BlueprintEvent)
-
-void UTournamentDetails_C::EventBackoutLiveGames()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventBackoutLiveGames");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.EventCenterEventWindow
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UTournamentDetails_C::EventCenterEventWindow(class UWidget* Widget)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventCenterEventWindow");
-
-	Params::TournamentDetails_C_EventCenterEventWindow Parms{};
-
-	Parms.Widget = Widget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.EventCloseLeaderboard
-// (BlueprintCallable, BlueprintEvent)
-
-void UTournamentDetails_C::EventCloseLeaderboard()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventCloseLeaderboard");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.EventclosePayout
-// (BlueprintCallable, BlueprintEvent)
-
-void UTournamentDetails_C::EventclosePayout()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventclosePayout");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.EventDeselectWindows
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          SelectedWidget                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UTournamentDetails_C::EventDeselectWindows(class UWidget* SelectedWidget)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventDeselectWindows");
-
-	Params::TournamentDetails_C_EventDeselectWindows Parms{};
-
-	Parms.SelectedWidget = SelectedWidget;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -313,27 +63,119 @@ void UTournamentDetails_C::EventDeselectWindows(class UWidget* SelectedWidget)
 void UTournamentDetails_C::EventFullScreenAnimOutFinished()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("EventFullScreenAnimOutFinished");
+		Func = Class->GetFunction("TournamentDetails_C", "EventFullScreenAnimOutFinished");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function TournamentDetails.TournamentDetails_C.EventShowWindowDetails
+// Function TournamentDetails.TournamentDetails_C.EventBackoutLiveGames
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UTournamentDetails_C::EventShowWindowDetails(class UCommonButtonLegacy* Button)
+void UTournamentDetails_C::EventBackoutLiveGames()
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventShowWindowDetails");
 
-	Params::TournamentDetails_C_EventShowWindowDetails Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "EventBackoutLiveGames");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.EventViewLiveGames
+// (BlueprintCallable, BlueprintEvent)
+
+void UTournamentDetails_C::EventViewLiveGames()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "EventViewLiveGames");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.OnActivateScreen
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UTournamentDetails_C::OnActivateScreen()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "OnActivateScreen");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.No payouts
+// (BlueprintCallable, BlueprintEvent)
+
+void UTournamentDetails_C::No_payouts()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "No payouts");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.EventclosePayout
+// (BlueprintCallable, BlueprintEvent)
+
+void UTournamentDetails_C::EventclosePayout()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "EventclosePayout");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.EventViewPayout
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    EventWindowId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    EventId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UTournamentDetails_C::EventViewPayout(const class FString& EventWindowId, const class FString& EventId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "EventViewPayout");
+
+	Params::TournamentDetails_C_EventViewPayout Parms{};
+
+	Parms.EventWindowId = std::move(EventWindowId);
+	Parms.EventId = std::move(EventId);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.BndEvt__Button_EnableMFA_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTournamentDetails_C::BndEvt__Button_EnableMFA_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "BndEvt__Button_EnableMFA_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature");
+
+	Params::TournamentDetails_C_BndEvt__Button_EnableMFA_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -341,29 +183,15 @@ void UTournamentDetails_C::EventShowWindowDetails(class UCommonButtonLegacy* But
 }
 
 
-// Function TournamentDetails.TournamentDetails_C.EventStartCentering
+// Function TournamentDetails.TournamentDetails_C.EventCloseLeaderboard
 // (BlueprintCallable, BlueprintEvent)
 
-void UTournamentDetails_C::EventStartCentering()
+void UTournamentDetails_C::EventCloseLeaderboard()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("EventStartCentering");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.EventStopCentering
-// (BlueprintCallable, BlueprintEvent)
-
-void UTournamentDetails_C::EventStopCentering()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventStopCentering");
+		Func = Class->GetFunction("TournamentDetails_C", "EventCloseLeaderboard");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -372,14 +200,14 @@ void UTournamentDetails_C::EventStopCentering()
 // Function TournamentDetails.TournamentDetails_C.EventToggleFullScreenContent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    In                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    In                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UTournamentDetails_C::EventToggleFullScreenContent(bool In)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("EventToggleFullScreenContent");
+		Func = Class->GetFunction("TournamentDetails_C", "EventToggleFullScreenContent");
 
 	Params::TournamentDetails_C_EventToggleFullScreenContent Parms{};
 
@@ -392,15 +220,15 @@ void UTournamentDetails_C::EventToggleFullScreenContent(bool In)
 // Function TournamentDetails.TournamentDetails_C.EventViewFullLeaderboard
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           TournamentId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           EventId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    TournamentId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    EventId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
 void UTournamentDetails_C::EventViewFullLeaderboard(const class FString& TournamentId, const class FString& EventId)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("EventViewFullLeaderboard");
+		Func = Class->GetFunction("TournamentDetails_C", "EventViewFullLeaderboard");
 
 	Params::TournamentDetails_C_EventViewFullLeaderboard Parms{};
 
@@ -411,165 +239,251 @@ void UTournamentDetails_C::EventViewFullLeaderboard(const class FString& Tournam
 }
 
 
-// Function TournamentDetails.TournamentDetails_C.EventViewLiveGames
-// (BlueprintCallable, BlueprintEvent)
+// Function TournamentDetails.TournamentDetails_C.BndEvt__OverviewPanelButton2_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTournamentDetails_C::EventViewLiveGames()
+void UTournamentDetails_C::BndEvt__OverviewPanelButton2_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("EventViewLiveGames");
+		Func = Class->GetFunction("TournamentDetails_C", "BndEvt__OverviewPanelButton2_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature");
+
+	Params::TournamentDetails_C_BndEvt__OverviewPanelButton2_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.BndEvt__DetailsPanelButton2_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTournamentDetails_C::BndEvt__DetailsPanelButton2_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "BndEvt__DetailsPanelButton2_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
+
+	Params::TournamentDetails_C_BndEvt__DetailsPanelButton2_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.BndEvt__BackButton2_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTournamentDetails_C::BndEvt__BackButton2_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "BndEvt__BackButton2_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
+
+	Params::TournamentDetails_C_BndEvt__BackButton2_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.EventStopCentering
+// (BlueprintCallable, BlueprintEvent)
+
+void UTournamentDetails_C::EventStopCentering()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "EventStopCentering");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function TournamentDetails.TournamentDetails_C.EventViewPayout
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           EventWindowId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           EventId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UTournamentDetails_C::EventViewPayout(const class FString& EventWindowId, const class FString& EventId)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventViewPayout");
-
-	Params::TournamentDetails_C_EventViewPayout Parms{};
-
-	Parms.EventWindowId = std::move(EventWindowId);
-	Parms.EventId = std::move(EventId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.ExecuteUbergraph_TournamentDetails
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTournamentDetails_C::ExecuteUbergraph_TournamentDetails(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_TournamentDetails");
-
-	Params::TournamentDetails_C_ExecuteUbergraph_TournamentDetails Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.Handle_Back
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTournamentDetails_C::Handle_Back(bool* PassThrough)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Handle_Back");
-
-	Params::TournamentDetails_C_Handle_Back Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (PassThrough != nullptr)
-		*PassThrough = Parms.PassThrough;
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.Is Scoring Rule Valid
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FFortShowdownScoringRuleInfo     ScoringRuleInfo                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTournamentDetails_C::Is_Scoring_Rule_Valid(const struct FFortShowdownScoringRuleInfo& ScoringRuleInfo, bool* IsValid)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Is Scoring Rule Valid");
-
-	Params::TournamentDetails_C_Is_Scoring_Rule_Valid Parms{};
-
-	Parms.ScoringRuleInfo = std::move(ScoringRuleInfo);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsValid != nullptr)
-		*IsValid = Parms.IsValid;
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.No payouts
+// Function TournamentDetails.TournamentDetails_C.EventStartCentering
 // (BlueprintCallable, BlueprintEvent)
 
-void UTournamentDetails_C::No_payouts()
+void UTournamentDetails_C::EventStartCentering()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("No payouts");
+		Func = Class->GetFunction("TournamentDetails_C", "EventStartCentering");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function TournamentDetails.TournamentDetails_C.OnActivateScreen
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function TournamentDetails.TournamentDetails_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTournamentDetails_C::OnActivateScreen()
+void UTournamentDetails_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnActivateScreen");
+		Func = Class->GetFunction("TournamentDetails_C", "Tick");
+
+	Params::TournamentDetails_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.EventCenterEventWindow
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTournamentDetails_C::EventCenterEventWindow(class UWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "EventCenterEventWindow");
+
+	Params::TournamentDetails_C_EventCenterEventWindow Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.EventDeselectWindows
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          SelectedWidget                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTournamentDetails_C::EventDeselectWindows(class UWidget* SelectedWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "EventDeselectWindows");
+
+	Params::TournamentDetails_C_EventDeselectWindows Parms{};
+
+	Parms.SelectedWidget = SelectedWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.CloseEventWindowDetails
+// (BlueprintCallable, BlueprintEvent)
+
+void UTournamentDetails_C::CloseEventWindowDetails()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "CloseEventWindowDetails");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function TournamentDetails.TournamentDetails_C.OnHandleBack
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bResult                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function TournamentDetails.TournamentDetails_C.CloseTournamentDetails
+// (BlueprintCallable, BlueprintEvent)
 
-void UTournamentDetails_C::OnHandleBack(bool* bResult)
+void UTournamentDetails_C::CloseTournamentDetails()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnHandleBack");
+		Func = Class->GetFunction("TournamentDetails_C", "CloseTournamentDetails");
 
-	Params::TournamentDetails_C_OnHandleBack Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bResult != nullptr)
-		*bResult = Parms.bResult;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function TournamentDetails.TournamentDetails_C.OnInitialized
+// Function TournamentDetails.TournamentDetails_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UTournamentDetails_C::OnInitialized()
+void UTournamentDetails_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnInitialized");
+		Func = Class->GetFunction("TournamentDetails_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.AnimTransition
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    In                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UWidgetAnimation*                 Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   PlaySpeed                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTournamentDetails_C::AnimTransition(bool In, class UWidgetAnimation* Animation, float PlaySpeed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "AnimTransition");
+
+	Params::TournamentDetails_C_AnimTransition Parms{};
+
+	Parms.In = In;
+	Parms.Animation = Animation;
+	Parms.PlaySpeed = PlaySpeed;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.EventShowWindowDetails
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTournamentDetails_C::EventShowWindowDetails(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "EventShowWindowDetails");
+
+	Params::TournamentDetails_C_EventShowWindowDetails Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.RefreshDataBP
+// (Event, Protected, BlueprintEvent)
+
+void UTournamentDetails_C::RefreshDataBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "RefreshDataBP");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -581,37 +495,9 @@ void UTournamentDetails_C::OnInitialized()
 void UTournamentDetails_C::Refresh()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Refresh");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.RefreshDataBP
-// (Event, Protected, BlueprintEvent)
-
-void UTournamentDetails_C::RefreshDataBP()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshDataBP");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.RefreshDetailsPanel
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UTournamentDetails_C::RefreshDetailsPanel()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshDetailsPanel");
+		Func = Class->GetFunction("TournamentDetails_C", "Refresh");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -623,23 +509,9 @@ void UTournamentDetails_C::RefreshDetailsPanel()
 void UTournamentDetails_C::RefreshEvents()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshEvents");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.RefreshOverviewPanel
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UTournamentDetails_C::RefreshOverviewPanel()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshOverviewPanel");
+		Func = Class->GetFunction("TournamentDetails_C", "RefreshEvents");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -651,11 +523,60 @@ void UTournamentDetails_C::RefreshOverviewPanel()
 void UTournamentDetails_C::RefreshScoringRules()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshScoringRules");
+		Func = Class->GetFunction("TournamentDetails_C", "RefreshScoringRules");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.RefreshOverviewPanel
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UTournamentDetails_C::RefreshOverviewPanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "RefreshOverviewPanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.RefreshDetailsPanel
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UTournamentDetails_C::RefreshDetailsPanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "RefreshDetailsPanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TournamentDetails.TournamentDetails_C.Handle_Back
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UTournamentDetails_C::Handle_Back(bool* PassThrough)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDetails_C", "Handle_Back");
+
+	Params::TournamentDetails_C_Handle_Back Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (PassThrough != nullptr)
+		*PassThrough = Parms.PassThrough;
 }
 
 
@@ -665,81 +586,54 @@ void UTournamentDetails_C::RefreshScoringRules()
 void UTournamentDetails_C::RefreshViolators()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshViolators");
+		Func = Class->GetFunction("TournamentDetails_C", "RefreshViolators");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function TournamentDetails.TournamentDetails_C.RemoveInvalidScoringRules
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function TournamentDetails.TournamentDetails_C.OnHandleBack
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FFortShowdownScoringRuleInfo>UnfilteredScoringRules                                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<struct FFortShowdownScoringRuleInfo>FilteredScoringRules                                   (Parm, OutParm)
+// bool*                                   bResult                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UTournamentDetails_C::RemoveInvalidScoringRules(TArray<struct FFortShowdownScoringRuleInfo>& UnfilteredScoringRules, TArray<struct FFortShowdownScoringRuleInfo>* FilteredScoringRules)
+void UTournamentDetails_C::OnHandleBack(bool* bResult)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("RemoveInvalidScoringRules");
+		Func = Class->GetFunction("TournamentDetails_C", "OnHandleBack");
 
-	Params::TournamentDetails_C_RemoveInvalidScoringRules Parms{};
-
-	Parms.UnfilteredScoringRules = std::move(UnfilteredScoringRules);
+	Params::TournamentDetails_C_OnHandleBack Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	UnfilteredScoringRules = std::move(Parms.UnfilteredScoringRules);
-
-	if (FilteredScoringRules != nullptr)
-		*FilteredScoringRules = std::move(Parms.FilteredScoringRules);
+	if (bResult != nullptr)
+		*bResult = Parms.bResult;
 }
 
 
-// Function TournamentDetails.TournamentDetails_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function TournamentDetails.TournamentDetails_C.CreateScoringWidgets
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    TournamentSeriesId                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    TournamentId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UTournamentDetails_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UTournamentDetails_C::CreateScoringWidgets(const class FString& TournamentSeriesId, const class FString& TournamentId)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Tick");
+		Func = Class->GetFunction("TournamentDetails_C", "CreateScoringWidgets");
 
-	Params::TournamentDetails_C_Tick Parms{};
+	Params::TournamentDetails_C_CreateScoringWidgets Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
+	Parms.TournamentSeriesId = std::move(TournamentSeriesId);
+	Parms.TournamentId = std::move(TournamentId);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TournamentDetails.TournamentDetails_C.UpdateDefaultTournamentEvent
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class FString>                   TournamentEvents                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UTournamentDetails_C::UpdateDefaultTournamentEvent(TArray<class FString>& TournamentEvents)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateDefaultTournamentEvent");
-
-	Params::TournamentDetails_C_UpdateDefaultTournamentEvent Parms{};
-
-	Parms.TournamentEvents = std::move(TournamentEvents);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	TournamentEvents = std::move(Parms.TournamentEvents);
 }
 
 }

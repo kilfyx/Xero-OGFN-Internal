@@ -33,6 +33,9 @@ public:
 		return GetDefaultObjImpl<ABP_CameraLens_CrackExit_C>();
 	}
 };
+static_assert(alignof(ABP_CameraLens_CrackExit_C) == 0x000010, "Wrong alignment on ABP_CameraLens_CrackExit_C");
+static_assert(sizeof(ABP_CameraLens_CrackExit_C) == 0x0002F0, "Wrong size on ABP_CameraLens_CrackExit_C");
+static_assert(offsetof(ABP_CameraLens_CrackExit_C, Portal) == 0x0002E0, "Member 'ABP_CameraLens_CrackExit_C::Portal' has a wrong offset!");
 
 }
 

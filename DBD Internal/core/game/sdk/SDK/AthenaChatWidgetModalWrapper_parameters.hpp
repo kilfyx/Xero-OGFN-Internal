@@ -20,10 +20,10 @@ struct AthenaChatWidgetModalWrapper_C_ExecuteUbergraph_AthenaChatWidgetModalWrap
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UChatContainer_C*                       K2Node_DynamicCast_AsChat_Container;               // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UChatContainer_C*                       K2Node_DynamicCast_AsChat_Container;               // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(AthenaChatWidgetModalWrapper_C_ExecuteUbergraph_AthenaChatWidgetModalWrapper) == 0x000008, "Wrong alignment on AthenaChatWidgetModalWrapper_C_ExecuteUbergraph_AthenaChatWidgetModalWrapper");
 static_assert(sizeof(AthenaChatWidgetModalWrapper_C_ExecuteUbergraph_AthenaChatWidgetModalWrapper) == 0x000018, "Wrong size on AthenaChatWidgetModalWrapper_C_ExecuteUbergraph_AthenaChatWidgetModalWrapper");
@@ -32,29 +32,29 @@ static_assert(offsetof(AthenaChatWidgetModalWrapper_C_ExecuteUbergraph_AthenaCha
 static_assert(offsetof(AthenaChatWidgetModalWrapper_C_ExecuteUbergraph_AthenaChatWidgetModalWrapper, K2Node_DynamicCast_AsChat_Container) == 0x000008, "Member 'AthenaChatWidgetModalWrapper_C_ExecuteUbergraph_AthenaChatWidgetModalWrapper::K2Node_DynamicCast_AsChat_Container' has a wrong offset!");
 static_assert(offsetof(AthenaChatWidgetModalWrapper_C_ExecuteUbergraph_AthenaChatWidgetModalWrapper, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'AthenaChatWidgetModalWrapper_C_ExecuteUbergraph_AthenaChatWidgetModalWrapper::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
-// Function AthenaChatWidgetModalWrapper.AthenaChatWidgetModalWrapper_C.FocusChat
-// 0x0010 (0x0010 - 0x0000)
-struct AthenaChatWidgetModalWrapper_C_FocusChat final
-{
-public:
-	class UChatContainer_C*                       K2Node_DynamicCast_AsChat_Container;               // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(AthenaChatWidgetModalWrapper_C_FocusChat) == 0x000008, "Wrong alignment on AthenaChatWidgetModalWrapper_C_FocusChat");
-static_assert(sizeof(AthenaChatWidgetModalWrapper_C_FocusChat) == 0x000010, "Wrong size on AthenaChatWidgetModalWrapper_C_FocusChat");
-static_assert(offsetof(AthenaChatWidgetModalWrapper_C_FocusChat, K2Node_DynamicCast_AsChat_Container) == 0x000000, "Member 'AthenaChatWidgetModalWrapper_C_FocusChat::K2Node_DynamicCast_AsChat_Container' has a wrong offset!");
-static_assert(offsetof(AthenaChatWidgetModalWrapper_C_FocusChat, K2Node_DynamicCast_bSuccess) == 0x000008, "Member 'AthenaChatWidgetModalWrapper_C_FocusChat::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
 // Function AthenaChatWidgetModalWrapper.AthenaChatWidgetModalWrapper_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
 struct AthenaChatWidgetModalWrapper_C_PreConstruct final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(AthenaChatWidgetModalWrapper_C_PreConstruct) == 0x000001, "Wrong alignment on AthenaChatWidgetModalWrapper_C_PreConstruct");
 static_assert(sizeof(AthenaChatWidgetModalWrapper_C_PreConstruct) == 0x000001, "Wrong size on AthenaChatWidgetModalWrapper_C_PreConstruct");
 static_assert(offsetof(AthenaChatWidgetModalWrapper_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'AthenaChatWidgetModalWrapper_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function AthenaChatWidgetModalWrapper.AthenaChatWidgetModalWrapper_C.FocusChat
+// 0x0010 (0x0010 - 0x0000)
+struct AthenaChatWidgetModalWrapper_C_FocusChat final
+{
+public:
+	class UChatContainer_C*                       K2Node_DynamicCast_AsChat_Container;               // 0x0000(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(AthenaChatWidgetModalWrapper_C_FocusChat) == 0x000008, "Wrong alignment on AthenaChatWidgetModalWrapper_C_FocusChat");
+static_assert(sizeof(AthenaChatWidgetModalWrapper_C_FocusChat) == 0x000010, "Wrong size on AthenaChatWidgetModalWrapper_C_FocusChat");
+static_assert(offsetof(AthenaChatWidgetModalWrapper_C_FocusChat, K2Node_DynamicCast_AsChat_Container) == 0x000000, "Member 'AthenaChatWidgetModalWrapper_C_FocusChat::K2Node_DynamicCast_AsChat_Container' has a wrong offset!");
+static_assert(offsetof(AthenaChatWidgetModalWrapper_C_FocusChat, K2Node_DynamicCast_bSuccess) == 0x000008, "Member 'AthenaChatWidgetModalWrapper_C_FocusChat::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 }
 

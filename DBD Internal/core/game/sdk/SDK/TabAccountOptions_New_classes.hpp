@@ -18,19 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TabAccountOptions_New.TabAccountOptions_New_C
-// 0x0008 (0x0380 - 0x0378)
+// 0x0008 (0x0370 - 0x0368)
 class UTabAccountOptions_New_C final : public UFortTabAccountOptions_TempNew
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature(class UFortSetting* Setting, class FName Action);
-	void CenterOnTab();
 	void ExecuteUbergraph_TabAccountOptions_New(int32 EntryPoint);
+	void BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature(class UFortSetting* Setting, class FName Action);
+	void SettingValueChanged(float Value);
+	void CenterOnTab();
+	void OnComplete_E454F9624DC58E051C39D9813595C807(class UUserWidget* UserWidget);
 	void OnComplete_1192BA0E41F4707FF3E3A4A4C72B2024(class UUserWidget* UserWidget);
 	void OnComplete_DB10A9674F5CF800B883C79A4229D87C(class UUserWidget* UserWidget);
-	void SettingValueChanged(float Value);
 
 public:
 	static class UClass* StaticClass()
@@ -42,6 +43,9 @@ public:
 		return GetDefaultObjImpl<UTabAccountOptions_New_C>();
 	}
 };
+static_assert(alignof(UTabAccountOptions_New_C) == 0x000008, "Wrong alignment on UTabAccountOptions_New_C");
+static_assert(sizeof(UTabAccountOptions_New_C) == 0x000370, "Wrong size on UTabAccountOptions_New_C");
+static_assert(offsetof(UTabAccountOptions_New_C, UberGraphFrame) == 0x000368, "Member 'UTabAccountOptions_New_C::UberGraphFrame' has a wrong offset!");
 
 }
 

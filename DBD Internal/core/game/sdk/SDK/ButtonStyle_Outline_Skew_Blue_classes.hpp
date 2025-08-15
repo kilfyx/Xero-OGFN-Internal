@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ButtonStyle-Outline-Skew-Blue.ButtonStyle-Outline-Skew-Blue_C
-// 0x0000 (0x0730 - 0x0730)
+// 0x0000 (0x0570 - 0x0570)
 class UButtonStyle_Outline_Skew_Blue_C final : public UCommonButtonStyle
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_Outline_Skew_Blue_C>();
 	}
 };
-static_assert(alignof(UButtonStyle_Outline_Skew_Blue_C) == 0x000010, "Wrong alignment on UButtonStyle_Outline_Skew_Blue_C");
-static_assert(sizeof(UButtonStyle_Outline_Skew_Blue_C) == 0x000730, "Wrong size on UButtonStyle_Outline_Skew_Blue_C");
+static_assert(alignof(UButtonStyle_Outline_Skew_Blue_C) == 0x000008, "Wrong alignment on UButtonStyle_Outline_Skew_Blue_C");
+static_assert(sizeof(UButtonStyle_Outline_Skew_Blue_C) == 0x000570, "Wrong size on UButtonStyle_Outline_Skew_Blue_C");
 
 }
 

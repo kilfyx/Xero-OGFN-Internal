@@ -37,6 +37,26 @@ void USettingEntryBackground_C::ExecuteUbergraph_SettingEntryBackground(int32 En
 }
 
 
+// Function SettingEntryBackground.SettingEntryBackground_C.OnMouseLeave
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void USettingEntryBackground_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SettingEntryBackground_C", "OnMouseLeave");
+
+	Params::SettingEntryBackground_C_OnMouseLeave Parms{};
+
+	Parms.MouseEvent = std::move(MouseEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function SettingEntryBackground.SettingEntryBackground_C.OnMouseEnter
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -53,26 +73,6 @@ void USettingEntryBackground_C::OnMouseEnter(const struct FGeometry& MyGeometry,
 	Params::SettingEntryBackground_C_OnMouseEnter Parms{};
 
 	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SettingEntryBackground.SettingEntryBackground_C.OnMouseLeave
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void USettingEntryBackground_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SettingEntryBackground_C", "OnMouseLeave");
-
-	Params::SettingEntryBackground_C_OnMouseLeave Parms{};
-
 	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);

@@ -24,6 +24,12 @@ public:
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(MinigameStat_PlayerLivesLeft_C_Compare) == 0x000004, "Wrong alignment on MinigameStat_PlayerLivesLeft_C_Compare");
+static_assert(sizeof(MinigameStat_PlayerLivesLeft_C_Compare) == 0x000010, "Wrong size on MinigameStat_PlayerLivesLeft_C_Compare");
+static_assert(offsetof(MinigameStat_PlayerLivesLeft_C_Compare, FirstScore) == 0x000000, "Member 'MinigameStat_PlayerLivesLeft_C_Compare::FirstScore' has a wrong offset!");
+static_assert(offsetof(MinigameStat_PlayerLivesLeft_C_Compare, SecondScore) == 0x000004, "Member 'MinigameStat_PlayerLivesLeft_C_Compare::SecondScore' has a wrong offset!");
+static_assert(offsetof(MinigameStat_PlayerLivesLeft_C_Compare, ReturnValue) == 0x000008, "Member 'MinigameStat_PlayerLivesLeft_C_Compare::ReturnValue' has a wrong offset!");
+static_assert(offsetof(MinigameStat_PlayerLivesLeft_C_Compare, CallFunc_Subtract_IntInt_ReturnValue) == 0x00000C, "Member 'MinigameStat_PlayerLivesLeft_C_Compare::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
 
 }
 

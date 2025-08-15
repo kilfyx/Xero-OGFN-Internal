@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ControllerActionsMenuEntry.ControllerActionsMenuEntry_C
-// 0x0000 (0x0F00 - 0x0F00)
+// 0x0000 (0x0BA8 - 0x0BA8)
 class UControllerActionsMenuEntry_C final : public UFortControllerActionsMenuEntry
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UControllerActionsMenuEntry_C>();
 	}
 };
+static_assert(alignof(UControllerActionsMenuEntry_C) == 0x000008, "Wrong alignment on UControllerActionsMenuEntry_C");
+static_assert(sizeof(UControllerActionsMenuEntry_C) == 0x000BA8, "Wrong size on UControllerActionsMenuEntry_C");
 
 }
 

@@ -11,20 +11,20 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonInput_structs.hpp"
 #include "FortniteUI_classes.hpp"
+#include "CommonInput_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MatchmakingInputIndicator.MatchmakingInputIndicator_C
-// 0x0010 (0x02E8 - 0x02D8)
+// 0x0010 (0x02D8 - 0x02C8)
 class UMatchmakingInputIndicator_C final : public UMatchmakingInputIndicatorBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 InputIcon;                                         // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 InputIcon;                                         // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void OnInputSourceTypeChanged(ECommonInputType InputType);
@@ -41,9 +41,9 @@ public:
 	}
 };
 static_assert(alignof(UMatchmakingInputIndicator_C) == 0x000008, "Wrong alignment on UMatchmakingInputIndicator_C");
-static_assert(sizeof(UMatchmakingInputIndicator_C) == 0x0002E8, "Wrong size on UMatchmakingInputIndicator_C");
-static_assert(offsetof(UMatchmakingInputIndicator_C, UberGraphFrame) == 0x0002D8, "Member 'UMatchmakingInputIndicator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMatchmakingInputIndicator_C, InputIcon) == 0x0002E0, "Member 'UMatchmakingInputIndicator_C::InputIcon' has a wrong offset!");
+static_assert(sizeof(UMatchmakingInputIndicator_C) == 0x0002D8, "Wrong size on UMatchmakingInputIndicator_C");
+static_assert(offsetof(UMatchmakingInputIndicator_C, UberGraphFrame) == 0x0002C8, "Member 'UMatchmakingInputIndicator_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UMatchmakingInputIndicator_C, InputIcon) == 0x0002D0, "Member 'UMatchmakingInputIndicator_C::InputIcon' has a wrong offset!");
 
 }
 

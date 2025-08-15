@@ -18,7 +18,7 @@ namespace SDK::Params
 {
 
 // Function GA_Athena_ChillBronco.GA_Athena_ChillBronco_C.ExecuteUbergraph_GA_Athena_ChillBronco
-// 0x0038 (0x0038 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco final
 {
 public:
@@ -27,12 +27,19 @@ public:
 	class AActor*                                 CallFunc_GetAvatarActorFromActorInfo_ReturnValue;  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AFortProjectileBase*                    K2Node_Event_SpawnedProjectile;                    // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortQuestManager*                      CallFunc_GetQuestManager_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SendComplexCustomStatEvent_QuestActive;   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SendComplexCustomStatEvent_QuestCompleted; // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortQuestManager*                      CallFunc_GetQuestManager_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SendComplexCustomStatEvent_QuestActive;   // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SendComplexCustomStatEvent_QuestCompleted; // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco) == 0x000008, "Wrong alignment on GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco");
+static_assert(sizeof(GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco) == 0x000030, "Wrong size on GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco");
+static_assert(offsetof(GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco, EntryPoint) == 0x000000, "Member 'GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco::EntryPoint' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco, CallFunc_GetAvatarActorFromActorInfo_ReturnValue) == 0x000008, "Member 'GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco::CallFunc_GetAvatarActorFromActorInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco, CallFunc_GetFortPlayerControllerFromActor_ReturnValue) == 0x000010, "Member 'GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco::CallFunc_GetFortPlayerControllerFromActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco, K2Node_Event_SpawnedProjectile) == 0x000018, "Member 'GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco::K2Node_Event_SpawnedProjectile' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco, CallFunc_GetQuestManager_ReturnValue) == 0x000020, "Member 'GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco::CallFunc_GetQuestManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco, CallFunc_SendComplexCustomStatEvent_QuestActive) == 0x000028, "Member 'GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco::CallFunc_SendComplexCustomStatEvent_QuestActive' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco, CallFunc_SendComplexCustomStatEvent_QuestCompleted) == 0x000029, "Member 'GA_Athena_ChillBronco_C_ExecuteUbergraph_GA_Athena_ChillBronco::CallFunc_SendComplexCustomStatEvent_QuestCompleted' has a wrong offset!");
 
 // Function GA_Athena_ChillBronco.GA_Athena_ChillBronco_C.OnProjectileSpawned
 // 0x0008 (0x0008 - 0x0000)
@@ -41,6 +48,9 @@ struct GA_Athena_ChillBronco_C_OnProjectileSpawned final
 public:
 	class AFortProjectileBase*                    SpawnedProjectile_0;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(GA_Athena_ChillBronco_C_OnProjectileSpawned) == 0x000008, "Wrong alignment on GA_Athena_ChillBronco_C_OnProjectileSpawned");
+static_assert(sizeof(GA_Athena_ChillBronco_C_OnProjectileSpawned) == 0x000008, "Wrong size on GA_Athena_ChillBronco_C_OnProjectileSpawned");
+static_assert(offsetof(GA_Athena_ChillBronco_C_OnProjectileSpawned, SpawnedProjectile_0) == 0x000000, "Member 'GA_Athena_ChillBronco_C_OnProjectileSpawned::SpawnedProjectile_0' has a wrong offset!");
 
 // Function GA_Athena_ChillBronco.GA_Athena_ChillBronco_C.SpawnThrownProjectile
 // 0x01D8 (0x01D8 - 0x0000)
@@ -63,8 +73,27 @@ public:
 	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x01C8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x01D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x01D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(GA_Athena_ChillBronco_C_SpawnThrownProjectile) == 0x000008, "Wrong alignment on GA_Athena_ChillBronco_C_SpawnThrownProjectile");
+static_assert(sizeof(GA_Athena_ChillBronco_C_SpawnThrownProjectile) == 0x0001D8, "Wrong size on GA_Athena_ChillBronco_C_SpawnThrownProjectile");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, ProjectileClass_0) == 0x000000, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::ProjectileClass_0' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, ProjectileSpawnLocation) == 0x000008, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::ProjectileSpawnLocation' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, ProjectileSpawnDirection) == 0x000014, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::ProjectileSpawnDirection' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, HitEffectContainerSpec_0) == 0x000020, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::HitEffectContainerSpec_0' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, ExplosionEffectContainerSpec_0) == 0x0000D8, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::ExplosionEffectContainerSpec_0' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, ProjectileInitialSpeed) == 0x000190, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::ProjectileInitialSpeed' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, ProjectileGravityScale_0) == 0x000194, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::ProjectileGravityScale_0' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, SpawnedProjectile_0) == 0x000198, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::SpawnedProjectile_0' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, CallFunc_SpawnThrownProjectile_SpawnedProjectile) == 0x0001A0, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::CallFunc_SpawnThrownProjectile_SpawnedProjectile' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, CallFunc_K2_GetActorRotation_ReturnValue) == 0x0001A8, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, CallFunc_BreakRotator_Roll) == 0x0001B4, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, CallFunc_BreakRotator_Pitch) == 0x0001B8, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, CallFunc_BreakRotator_Yaw) == 0x0001BC, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, CallFunc_Add_FloatFloat_ReturnValue) == 0x0001C0, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x0001C4, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, CallFunc_MakeRotator_ReturnValue) == 0x0001C8, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Athena_ChillBronco_C_SpawnThrownProjectile, CallFunc_K2_SetActorRotation_ReturnValue) == 0x0001D4, "Member 'GA_Athena_ChillBronco_C_SpawnThrownProjectile::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
 
 }
 

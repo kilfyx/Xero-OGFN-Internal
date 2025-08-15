@@ -23,9 +23,9 @@ namespace SDK
 void UEventMatchHistoryTournamentInfo_C::RefreshDataBP()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshDataBP");
+		Func = Class->GetFunction("EventMatchHistoryTournamentInfo_C", "RefreshDataBP");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -39,9 +39,9 @@ void UEventMatchHistoryTournamentInfo_C::RefreshDataBP()
 void UEventMatchHistoryTournamentInfo_C::ExecuteUbergraph_EventMatchHistoryTournamentInfo(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_EventMatchHistoryTournamentInfo");
+		Func = Class->GetFunction("EventMatchHistoryTournamentInfo_C", "ExecuteUbergraph_EventMatchHistoryTournamentInfo");
 
 	Params::EventMatchHistoryTournamentInfo_C_ExecuteUbergraph_EventMatchHistoryTournamentInfo Parms{};
 

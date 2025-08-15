@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "GA_Athena_MedConsumable_Parent_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_Flopper.GA_Athena_Flopper_C
-// 0x0008 (0x0C78 - 0x0C70)
+// 0x0008 (0x0C18 - 0x0C10)
 class UGA_Athena_Flopper_C final : public UGA_Athena_MedConsumable_Parent_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_Flopper_C;                // 0x0C70(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_Flopper_C;                // 0x0C10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_GA_Athena_Flopper(int32 EntryPoint);
@@ -38,6 +38,9 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_Flopper_C>();
 	}
 };
+static_assert(alignof(UGA_Athena_Flopper_C) == 0x000008, "Wrong alignment on UGA_Athena_Flopper_C");
+static_assert(sizeof(UGA_Athena_Flopper_C) == 0x000C18, "Wrong size on UGA_Athena_Flopper_C");
+static_assert(offsetof(UGA_Athena_Flopper_C, UberGraphFrame_GA_Athena_Flopper_C) == 0x000C10, "Member 'UGA_Athena_Flopper_C::UberGraphFrame_GA_Athena_Flopper_C' has a wrong offset!");
 
 }
 

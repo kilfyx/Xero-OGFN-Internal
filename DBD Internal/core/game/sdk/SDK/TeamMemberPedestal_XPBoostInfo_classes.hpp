@@ -20,16 +20,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TeamMemberPedestal_XPBoostInfo.TeamMemberPedestal_XPBoostInfo_C
-// 0x0010 (0x1480 - 0x1470)
+// 0x0010 (0x0BF0 - 0x0BE0)
 class UTeamMemberPedestal_XPBoostInfo_C final : public UFortTeamMemberXPBoostInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1470(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UOverlay*                               PrimaryOvr;                                        // 0x1478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UOverlay*                               PrimaryOvr;                                        // 0x0BE8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void OnCameraChanged(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera);
 	void ExecuteUbergraph_TeamMemberPedestal_XPBoostInfo(int32 EntryPoint);
+	void OnCameraChanged(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera);
 	void Construct();
 
 public:
@@ -42,10 +42,10 @@ public:
 		return GetDefaultObjImpl<UTeamMemberPedestal_XPBoostInfo_C>();
 	}
 };
-static_assert(alignof(UTeamMemberPedestal_XPBoostInfo_C) == 0x000010, "Wrong alignment on UTeamMemberPedestal_XPBoostInfo_C");
-static_assert(sizeof(UTeamMemberPedestal_XPBoostInfo_C) == 0x001480, "Wrong size on UTeamMemberPedestal_XPBoostInfo_C");
-static_assert(offsetof(UTeamMemberPedestal_XPBoostInfo_C, UberGraphFrame) == 0x001470, "Member 'UTeamMemberPedestal_XPBoostInfo_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_XPBoostInfo_C, PrimaryOvr) == 0x001478, "Member 'UTeamMemberPedestal_XPBoostInfo_C::PrimaryOvr' has a wrong offset!");
+static_assert(alignof(UTeamMemberPedestal_XPBoostInfo_C) == 0x000008, "Wrong alignment on UTeamMemberPedestal_XPBoostInfo_C");
+static_assert(sizeof(UTeamMemberPedestal_XPBoostInfo_C) == 0x000BF0, "Wrong size on UTeamMemberPedestal_XPBoostInfo_C");
+static_assert(offsetof(UTeamMemberPedestal_XPBoostInfo_C, UberGraphFrame) == 0x000BE0, "Member 'UTeamMemberPedestal_XPBoostInfo_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UTeamMemberPedestal_XPBoostInfo_C, PrimaryOvr) == 0x000BE8, "Member 'UTeamMemberPedestal_XPBoostInfo_C::PrimaryOvr' has a wrong offset!");
 
 }
 

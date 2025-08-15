@@ -17,12 +17,32 @@
 namespace SDK
 {
 
+// Function MiniPartyBar.MiniPartyBar_C.ExecuteUbergraph_MiniPartyBar
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMiniPartyBar_C::ExecuteUbergraph_MiniPartyBar(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MiniPartyBar_C", "ExecuteUbergraph_MiniPartyBar");
+
+	Params::MiniPartyBar_C_ExecuteUbergraph_MiniPartyBar Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function MiniPartyBar.MiniPartyBar_C.BndEvt__ButtonLocalPlayer_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMiniPartyBar_C::BndEvt__ButtonLocalPlayer_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UMiniPartyBar_C::BndEvt__ButtonLocalPlayer_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
@@ -51,21 +71,23 @@ void UMiniPartyBar_C::Construct()
 }
 
 
-// Function MiniPartyBar.MiniPartyBar_C.ExecuteUbergraph_MiniPartyBar
-// (Final, UbergraphFunction, HasDefaults)
+// Function MiniPartyBar.MiniPartyBar_C.HandlePartybarUIFeatureChanged
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFortUIFeature                          Feature                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFortUIFeatureState                     FeatureState                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMiniPartyBar_C::ExecuteUbergraph_MiniPartyBar(int32 EntryPoint)
+void UMiniPartyBar_C::HandlePartybarUIFeatureChanged(EFortUIFeature Feature, EFortUIFeatureState FeatureState)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MiniPartyBar_C", "ExecuteUbergraph_MiniPartyBar");
+		Func = Class->GetFunction("MiniPartyBar_C", "HandlePartybarUIFeatureChanged");
 
-	Params::MiniPartyBar_C_ExecuteUbergraph_MiniPartyBar Parms{};
+	Params::MiniPartyBar_C_HandlePartybarUIFeatureChanged Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Feature = Feature;
+	Parms.FeatureState = FeatureState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -88,28 +110,6 @@ class UWidget* UMiniPartyBar_C::Get_Banners_Tooltip_Widget()
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function MiniPartyBar.MiniPartyBar_C.HandlePartybarUIFeatureChanged
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EFortUIFeature                          Feature                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EFortUIFeatureState                     FeatureState                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMiniPartyBar_C::HandlePartybarUIFeatureChanged(EFortUIFeature Feature, EFortUIFeatureState FeatureState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MiniPartyBar_C", "HandlePartybarUIFeatureChanged");
-
-	Params::MiniPartyBar_C_HandlePartybarUIFeatureChanged Parms{};
-
-	Parms.Feature = Feature;
-	Parms.FeatureState = FeatureState;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

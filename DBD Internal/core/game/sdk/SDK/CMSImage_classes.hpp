@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass CMSImage.CMSImage_C
-// 0x0008 (0x0270 - 0x0268)
+// 0x0008 (0x0268 - 0x0260)
 class UCMSImage_C final : public UUserWidget
 {
 public:
-	class UEpicCMSImage*                          Image;                                             // 0x0268(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEpicCMSImage*                          Image;                                             // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void SetMediaURL(const class FString& MediaUrl);
@@ -37,8 +37,8 @@ public:
 	}
 };
 static_assert(alignof(UCMSImage_C) == 0x000008, "Wrong alignment on UCMSImage_C");
-static_assert(sizeof(UCMSImage_C) == 0x000270, "Wrong size on UCMSImage_C");
-static_assert(offsetof(UCMSImage_C, Image) == 0x000268, "Member 'UCMSImage_C::Image' has a wrong offset!");
+static_assert(sizeof(UCMSImage_C) == 0x000268, "Wrong size on UCMSImage_C");
+static_assert(offsetof(UCMSImage_C, Image) == 0x000260, "Member 'UCMSImage_C::Image' has a wrong offset!");
 
 }
 

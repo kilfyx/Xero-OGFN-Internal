@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Shotgun_DoubleDouble_Knockback_C>();
 	}
 };
+static_assert(alignof(UGE_Shotgun_DoubleDouble_Knockback_C) == 0x000008, "Wrong alignment on UGE_Shotgun_DoubleDouble_Knockback_C");
+static_assert(sizeof(UGE_Shotgun_DoubleDouble_Knockback_C) == 0x000800, "Wrong size on UGE_Shotgun_DoubleDouble_Knockback_C");
 
 }
 

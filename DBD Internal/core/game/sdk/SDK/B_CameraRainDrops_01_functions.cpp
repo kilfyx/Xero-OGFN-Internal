@@ -17,6 +17,34 @@
 namespace SDK
 {
 
+// Function B_CameraRainDrops_01.B_CameraRainDrops_01_C.Alpha__FinishedFunc
+// (BlueprintEvent)
+
+void AB_CameraRainDrops_01_C::Alpha__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_CameraRainDrops_01_C", "Alpha__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_CameraRainDrops_01.B_CameraRainDrops_01_C.Alpha__UpdateFunc
+// (BlueprintEvent)
+
+void AB_CameraRainDrops_01_C::Alpha__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_CameraRainDrops_01_C", "Alpha__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_CameraRainDrops_01.B_CameraRainDrops_01_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -48,34 +76,6 @@ void AB_CameraRainDrops_01_C::ExecuteUbergraph_B_CameraRainDrops_01(int32 EntryP
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_CameraRainDrops_01.B_CameraRainDrops_01_C.Alpha__UpdateFunc
-// (BlueprintEvent)
-
-void AB_CameraRainDrops_01_C::Alpha__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_CameraRainDrops_01_C", "Alpha__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_CameraRainDrops_01.B_CameraRainDrops_01_C.Alpha__FinishedFunc
-// (BlueprintEvent)
-
-void AB_CameraRainDrops_01_C::Alpha__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_CameraRainDrops_01_C", "Alpha__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

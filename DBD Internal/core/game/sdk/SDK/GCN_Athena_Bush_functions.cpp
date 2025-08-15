@@ -37,53 +37,13 @@ void AGCN_Athena_Bush_C::ExecuteUbergraph_GCN_Athena_Bush(int32 EntryPoint)
 }
 
 
-// Function GCN_Athena_Bush.GCN_Athena_Bush_C.On Player Step
-// (BlueprintCallable, BlueprintEvent)
-
-void AGCN_Athena_Bush_C::On_Player_Step()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Athena_Bush_C", "On Player Step");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GCN_Athena_Bush.GCN_Athena_Bush_C.OnLoopingStart
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-
-void AGCN_Athena_Bush_C::OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Athena_Bush_C", "OnLoopingStart");
-
-	Params::GCN_Athena_Bush_C_OnLoopingStart Parms{};
-
-	Parms.MyTarget = MyTarget;
-	Parms.Parameters = std::move(Parameters);
-	Parms.ParticleComponents = std::move(ParticleComponents);
-	Parms.AudioComponents = std::move(AudioComponents);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GCN_Athena_Bush.GCN_Athena_Bush_C.OnRemoval
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 // class UMatineeCameraShake*              BurstCameraShakeInstance                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ADecalActor*                      BurstDecalInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -107,29 +67,41 @@ void AGCN_Athena_Bush_C::OnRemoval(class AActor* MyTarget, const struct FGamepla
 }
 
 
-// Function GCN_Athena_Bush.GCN_Athena_Bush_C.OpacityFade__FinishedFunc
-// (BlueprintEvent)
+// Function GCN_Athena_Bush.GCN_Athena_Bush_C.OnLoopingStart
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 
-void AGCN_Athena_Bush_C::OpacityFade__FinishedFunc()
+void AGCN_Athena_Bush_C::OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Athena_Bush_C", "OpacityFade__FinishedFunc");
+		Func = Class->GetFunction("GCN_Athena_Bush_C", "OnLoopingStart");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::GCN_Athena_Bush_C_OnLoopingStart Parms{};
+
+	Parms.MyTarget = MyTarget;
+	Parms.Parameters = std::move(Parameters);
+	Parms.ParticleComponents = std::move(ParticleComponents);
+	Parms.AudioComponents = std::move(AudioComponents);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GCN_Athena_Bush.GCN_Athena_Bush_C.OpacityFade__UpdateFunc
-// (BlueprintEvent)
+// Function GCN_Athena_Bush.GCN_Athena_Bush_C.On Player Step
+// (BlueprintCallable, BlueprintEvent)
 
-void AGCN_Athena_Bush_C::OpacityFade__UpdateFunc()
+void AGCN_Athena_Bush_C::On_Player_Step()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Athena_Bush_C", "OpacityFade__UpdateFunc");
+		Func = Class->GetFunction("GCN_Athena_Bush_C", "On Player Step");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -152,6 +124,34 @@ void AGCN_Athena_Bush_C::ReceiveTick(float DeltaSeconds)
 	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GCN_Athena_Bush.GCN_Athena_Bush_C.OpacityFade__UpdateFunc
+// (BlueprintEvent)
+
+void AGCN_Athena_Bush_C::OpacityFade__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_Bush_C", "OpacityFade__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_Athena_Bush.GCN_Athena_Bush_C.OpacityFade__FinishedFunc
+// (BlueprintEvent)
+
+void AGCN_Athena_Bush_C::OpacityFade__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_Bush_C", "OpacityFade__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

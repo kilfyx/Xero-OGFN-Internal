@@ -17,15 +17,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass RejoinWindow.RejoinWindow_C
-// 0x0038 (0x0590 - 0x0558)
+// 0x0038 (0x0508 - 0x04D0)
 class URejoinWindow_C final : public UFortRejoinWindowBase
 {
 public:
-	class UCommonTextBlock*                       AutorejoinText;                                    // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         ButtonBox;                                         // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Title;                                             // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnRequestAbandon;                                  // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              OnRequestRejoinRetry;                              // 0x0580(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UCommonTextBlock*                       AutorejoinText;                                    // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         ButtonBox;                                         // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Title;                                             // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnRequestAbandon;                                  // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnRequestRejoinRetry;                              // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	static class UClass* StaticClass()
@@ -38,12 +38,12 @@ public:
 	}
 };
 static_assert(alignof(URejoinWindow_C) == 0x000008, "Wrong alignment on URejoinWindow_C");
-static_assert(sizeof(URejoinWindow_C) == 0x000590, "Wrong size on URejoinWindow_C");
-static_assert(offsetof(URejoinWindow_C, AutorejoinText) == 0x000558, "Member 'URejoinWindow_C::AutorejoinText' has a wrong offset!");
-static_assert(offsetof(URejoinWindow_C, ButtonBox) == 0x000560, "Member 'URejoinWindow_C::ButtonBox' has a wrong offset!");
-static_assert(offsetof(URejoinWindow_C, Title) == 0x000568, "Member 'URejoinWindow_C::Title' has a wrong offset!");
-static_assert(offsetof(URejoinWindow_C, OnRequestAbandon) == 0x000570, "Member 'URejoinWindow_C::OnRequestAbandon' has a wrong offset!");
-static_assert(offsetof(URejoinWindow_C, OnRequestRejoinRetry) == 0x000580, "Member 'URejoinWindow_C::OnRequestRejoinRetry' has a wrong offset!");
+static_assert(sizeof(URejoinWindow_C) == 0x000508, "Wrong size on URejoinWindow_C");
+static_assert(offsetof(URejoinWindow_C, AutorejoinText) == 0x0004D0, "Member 'URejoinWindow_C::AutorejoinText' has a wrong offset!");
+static_assert(offsetof(URejoinWindow_C, ButtonBox) == 0x0004D8, "Member 'URejoinWindow_C::ButtonBox' has a wrong offset!");
+static_assert(offsetof(URejoinWindow_C, Title) == 0x0004E0, "Member 'URejoinWindow_C::Title' has a wrong offset!");
+static_assert(offsetof(URejoinWindow_C, OnRequestAbandon) == 0x0004E8, "Member 'URejoinWindow_C::OnRequestAbandon' has a wrong offset!");
+static_assert(offsetof(URejoinWindow_C, OnRequestRejoinRetry) == 0x0004F8, "Member 'URejoinWindow_C::OnRequestRejoinRetry' has a wrong offset!");
 
 }
 

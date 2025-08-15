@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ShowdownDivisionPayoutInfo.ShowdownDivisionPayoutInfo_C
-// 0x0000 (0x0758 - 0x0758)
+// 0x0000 (0x06F8 - 0x06F8)
 class UShowdownDivisionPayoutInfo_C final : public UFortDivisionPayoutInfo
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UShowdownDivisionPayoutInfo_C) == 0x000008, "Wrong alignment on UShowdownDivisionPayoutInfo_C");
-static_assert(sizeof(UShowdownDivisionPayoutInfo_C) == 0x000758, "Wrong size on UShowdownDivisionPayoutInfo_C");
+static_assert(sizeof(UShowdownDivisionPayoutInfo_C) == 0x0006F8, "Wrong size on UShowdownDivisionPayoutInfo_C");
 
 }
 

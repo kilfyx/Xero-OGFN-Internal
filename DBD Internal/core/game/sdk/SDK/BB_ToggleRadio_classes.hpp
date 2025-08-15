@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBB_ToggleRadio_C>();
 	}
 };
+static_assert(alignof(UBB_ToggleRadio_C) == 0x000008, "Wrong alignment on UBB_ToggleRadio_C");
+static_assert(sizeof(UBB_ToggleRadio_C) == 0x000108, "Wrong size on UBB_ToggleRadio_C");
 
 }
 

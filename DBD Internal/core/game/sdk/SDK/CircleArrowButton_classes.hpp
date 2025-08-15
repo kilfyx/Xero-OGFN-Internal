@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUILegacy_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "CommonUI_classes.hpp"
 #include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 
@@ -21,34 +21,33 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass CircleArrowButton.CircleArrowButton_C
-// 0x0080 (0x14B0 - 0x1430)
-class UCircleArrowButton_C final : public UCommonButtonLegacy
+// 0x0078 (0x0C18 - 0x0BA0)
+class UCircleArrowButton_C final : public UCommonButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1430(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Click;                                             // 0x1438(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hover;                                             // 0x1440(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_Arrow;                                       // 0x1448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Shadow;                                      // 0x1450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_ButtonContainer;                           // 0x1458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               Sizebox_InputAction;                               // 0x1460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          Flip;                                              // 0x1468(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1469[0x3];                                     // 0x1469(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           ArrowColor;                                        // 0x146C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FLinearColor                           ShadowColor;                                       // 0x147C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_148C[0x4];                                     // 0x148C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        EdgeSoftness;                                      // 0x1490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           HoverColor;                                        // 0x1498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          UseShadow;                                         // 0x14A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InputActionOnSide;                                 // 0x14A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Click;                                             // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover;                                             // 0x0BB0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_Arrow;                                       // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Shadow;                                      // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_ButtonContainer;                           // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               Sizebox_InputAction;                               // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          Flip;                                              // 0x0BD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BD9[0x3];                                      // 0x0BD9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           ArrowColor;                                        // 0x0BDC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FLinearColor                           ShadowColor;                                       // 0x0BEC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         EdgeSoftness;                                      // 0x0BFC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           HoverColor;                                        // 0x0C00(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          UseShadow;                                         // 0x0C10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          InputActionOnSide;                                 // 0x0C11(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void BP_OnClicked();
+	void UpdateArrowColor(const struct FLinearColor& Color, const struct FLinearColor& HoverColor_0);
+	void PreConstruct(bool IsDesignTime);
 	void BP_OnHovered();
 	void BP_OnUnhovered();
+	void BP_OnClicked();
 	void ExecuteUbergraph_CircleArrowButton(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
-	void UpdateArrowColor(const struct FLinearColor& Color, const struct FLinearColor& HoverColor_0);
 
 public:
 	static class UClass* StaticClass()
@@ -60,22 +59,22 @@ public:
 		return GetDefaultObjImpl<UCircleArrowButton_C>();
 	}
 };
-static_assert(alignof(UCircleArrowButton_C) == 0x000010, "Wrong alignment on UCircleArrowButton_C");
-static_assert(sizeof(UCircleArrowButton_C) == 0x0014B0, "Wrong size on UCircleArrowButton_C");
-static_assert(offsetof(UCircleArrowButton_C, UberGraphFrame) == 0x001430, "Member 'UCircleArrowButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UCircleArrowButton_C, Click) == 0x001438, "Member 'UCircleArrowButton_C::Click' has a wrong offset!");
-static_assert(offsetof(UCircleArrowButton_C, Hover) == 0x001440, "Member 'UCircleArrowButton_C::Hover' has a wrong offset!");
-static_assert(offsetof(UCircleArrowButton_C, Image_Arrow) == 0x001448, "Member 'UCircleArrowButton_C::Image_Arrow' has a wrong offset!");
-static_assert(offsetof(UCircleArrowButton_C, Image_Shadow) == 0x001450, "Member 'UCircleArrowButton_C::Image_Shadow' has a wrong offset!");
-static_assert(offsetof(UCircleArrowButton_C, Overlay_ButtonContainer) == 0x001458, "Member 'UCircleArrowButton_C::Overlay_ButtonContainer' has a wrong offset!");
-static_assert(offsetof(UCircleArrowButton_C, Sizebox_InputAction) == 0x001460, "Member 'UCircleArrowButton_C::Sizebox_InputAction' has a wrong offset!");
-static_assert(offsetof(UCircleArrowButton_C, Flip) == 0x001468, "Member 'UCircleArrowButton_C::Flip' has a wrong offset!");
-static_assert(offsetof(UCircleArrowButton_C, ArrowColor) == 0x00146C, "Member 'UCircleArrowButton_C::ArrowColor' has a wrong offset!");
-static_assert(offsetof(UCircleArrowButton_C, ShadowColor) == 0x00147C, "Member 'UCircleArrowButton_C::ShadowColor' has a wrong offset!");
-static_assert(offsetof(UCircleArrowButton_C, EdgeSoftness) == 0x001490, "Member 'UCircleArrowButton_C::EdgeSoftness' has a wrong offset!");
-static_assert(offsetof(UCircleArrowButton_C, HoverColor) == 0x001498, "Member 'UCircleArrowButton_C::HoverColor' has a wrong offset!");
-static_assert(offsetof(UCircleArrowButton_C, UseShadow) == 0x0014A8, "Member 'UCircleArrowButton_C::UseShadow' has a wrong offset!");
-static_assert(offsetof(UCircleArrowButton_C, InputActionOnSide) == 0x0014A9, "Member 'UCircleArrowButton_C::InputActionOnSide' has a wrong offset!");
+static_assert(alignof(UCircleArrowButton_C) == 0x000008, "Wrong alignment on UCircleArrowButton_C");
+static_assert(sizeof(UCircleArrowButton_C) == 0x000C18, "Wrong size on UCircleArrowButton_C");
+static_assert(offsetof(UCircleArrowButton_C, UberGraphFrame) == 0x000BA0, "Member 'UCircleArrowButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UCircleArrowButton_C, Click) == 0x000BA8, "Member 'UCircleArrowButton_C::Click' has a wrong offset!");
+static_assert(offsetof(UCircleArrowButton_C, Hover) == 0x000BB0, "Member 'UCircleArrowButton_C::Hover' has a wrong offset!");
+static_assert(offsetof(UCircleArrowButton_C, Image_Arrow) == 0x000BB8, "Member 'UCircleArrowButton_C::Image_Arrow' has a wrong offset!");
+static_assert(offsetof(UCircleArrowButton_C, Image_Shadow) == 0x000BC0, "Member 'UCircleArrowButton_C::Image_Shadow' has a wrong offset!");
+static_assert(offsetof(UCircleArrowButton_C, Overlay_ButtonContainer) == 0x000BC8, "Member 'UCircleArrowButton_C::Overlay_ButtonContainer' has a wrong offset!");
+static_assert(offsetof(UCircleArrowButton_C, Sizebox_InputAction) == 0x000BD0, "Member 'UCircleArrowButton_C::Sizebox_InputAction' has a wrong offset!");
+static_assert(offsetof(UCircleArrowButton_C, Flip) == 0x000BD8, "Member 'UCircleArrowButton_C::Flip' has a wrong offset!");
+static_assert(offsetof(UCircleArrowButton_C, ArrowColor) == 0x000BDC, "Member 'UCircleArrowButton_C::ArrowColor' has a wrong offset!");
+static_assert(offsetof(UCircleArrowButton_C, ShadowColor) == 0x000BEC, "Member 'UCircleArrowButton_C::ShadowColor' has a wrong offset!");
+static_assert(offsetof(UCircleArrowButton_C, EdgeSoftness) == 0x000BFC, "Member 'UCircleArrowButton_C::EdgeSoftness' has a wrong offset!");
+static_assert(offsetof(UCircleArrowButton_C, HoverColor) == 0x000C00, "Member 'UCircleArrowButton_C::HoverColor' has a wrong offset!");
+static_assert(offsetof(UCircleArrowButton_C, UseShadow) == 0x000C10, "Member 'UCircleArrowButton_C::UseShadow' has a wrong offset!");
+static_assert(offsetof(UCircleArrowButton_C, InputActionOnSide) == 0x000C11, "Member 'UCircleArrowButton_C::InputActionOnSide' has a wrong offset!");
 
 }
 

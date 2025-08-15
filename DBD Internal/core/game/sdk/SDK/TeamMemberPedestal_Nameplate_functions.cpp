@@ -17,153 +17,21 @@
 namespace SDK
 {
 
-// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.UpdateInputActionVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UTeamMemberPedestal_Nameplate_C::UpdateInputActionVisibility()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateInputActionVisibility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.Update Add Friend Button Visuals
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.ExecuteUbergraph_TeamMemberPedestal_Nameplate
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    IsUsingTouch                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTeamMemberPedestal_Nameplate_C::Update_Add_Friend_Button_Visuals(bool IsUsingTouch)
+void UTeamMemberPedestal_Nameplate_C::ExecuteUbergraph_TeamMemberPedestal_Nameplate(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Update Add Friend Button Visuals");
+		Func = Class->GetFunction("TeamMemberPedestal_Nameplate_C", "ExecuteUbergraph_TeamMemberPedestal_Nameplate");
 
-	Params::TeamMemberPedestal_Nameplate_C_Update_Add_Friend_Button_Visuals Parms{};
+	Params::TeamMemberPedestal_Nameplate_C_ExecuteUbergraph_TeamMemberPedestal_Nameplate Parms{};
 
-	Parms.IsUsingTouch = IsUsingTouch;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.OnReadyStatusChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// EGameReadiness                          GameReadiness                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsDownloading                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTeamMemberPedestal_Nameplate_C::OnReadyStatusChanged(EGameReadiness GameReadiness, bool bIsDownloading)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnReadyStatusChanged");
-
-	Params::TeamMemberPedestal_Nameplate_C_OnReadyStatusChanged Parms{};
-
-	Parms.GameReadiness = GameReadiness;
-	Parms.bIsDownloading = bIsDownloading;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.OnPlayReadyAudio
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsReadyForMatchmaking                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTeamMemberPedestal_Nameplate_C::OnPlayReadyAudio(bool bIsReadyForMatchmaking)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnPlayReadyAudio");
-
-	Params::TeamMemberPedestal_Nameplate_C_OnPlayReadyAudio Parms{};
-
-	Parms.bIsReadyForMatchmaking = bIsReadyForMatchmaking;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.OnInputChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ECommonInputType                        bNewInputType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTeamMemberPedestal_Nameplate_C::OnInputChanged(ECommonInputType bNewInputType)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnInputChanged");
-
-	Params::TeamMemberPedestal_Nameplate_C_OnInputChanged Parms{};
-
-	Parms.bNewInputType = bNewInputType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UTeamMemberPedestal_Nameplate_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.OnFrontEndCameraChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EFrontEndCamera                         NewCamera                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EFrontEndCamera                         OldCamera                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTeamMemberPedestal_Nameplate_C::OnFrontEndCameraChanged(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnFrontEndCameraChanged");
-
-	Params::TeamMemberPedestal_Nameplate_C_OnFrontEndCameraChanged Parms{};
-
-	Parms.NewCamera = NewCamera;
-	Parms.OldCamera = OldCamera;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.OnFriendStatusUpdated
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// EFortFriendRequestStatus                FriendRequestStatus                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTeamMemberPedestal_Nameplate_C::OnFriendStatusUpdated(const EFortFriendRequestStatus FriendRequestStatus)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnFriendStatusUpdated");
-
-	Params::TeamMemberPedestal_Nameplate_C_OnFriendStatusUpdated Parms{};
-
-	Parms.FriendRequestStatus = FriendRequestStatus;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -177,9 +45,9 @@ void UTeamMemberPedestal_Nameplate_C::OnFriendStatusUpdated(const EFortFriendReq
 void UTeamMemberPedestal_Nameplate_C::OnCurrentSubGameChanged(ESubGame NewSubGame)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnCurrentSubGameChanged");
+		Func = Class->GetFunction("TeamMemberPedestal_Nameplate_C", "OnCurrentSubGameChanged");
 
 	Params::TeamMemberPedestal_Nameplate_C_OnCurrentSubGameChanged Parms{};
 
@@ -189,77 +57,45 @@ void UTeamMemberPedestal_Nameplate_C::OnCurrentSubGameChanged(ESubGame NewSubGam
 }
 
 
-// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.HandleInputMethodChanged
+// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.OnPlayReadyAudio
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsReadyForMatchmaking                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UTeamMemberPedestal_Nameplate_C::OnPlayReadyAudio(bool bIsReadyForMatchmaking)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_Nameplate_C", "OnPlayReadyAudio");
+
+	Params::TeamMemberPedestal_Nameplate_C_OnPlayReadyAudio Parms{};
+
+	Parms.bIsReadyForMatchmaking = bIsReadyForMatchmaking;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.OnFrontEndCameraChanged
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ECommonInputType                        bNewInputType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFrontEndCamera                         NewCamera                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFrontEndCamera                         OldCamera                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTeamMemberPedestal_Nameplate_C::HandleInputMethodChanged(ECommonInputType bNewInputType)
+void UTeamMemberPedestal_Nameplate_C::OnFrontEndCameraChanged(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HandleInputMethodChanged");
+		Func = Class->GetFunction("TeamMemberPedestal_Nameplate_C", "OnFrontEndCameraChanged");
 
-	Params::TeamMemberPedestal_Nameplate_C_HandleInputMethodChanged Parms{};
+	Params::TeamMemberPedestal_Nameplate_C_OnFrontEndCameraChanged Parms{};
 
-	Parms.bNewInputType = bNewInputType;
+	Parms.NewCamera = NewCamera;
+	Parms.OldCamera = OldCamera;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.GetInputActionVisibility
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-ESlateVisibility UTeamMemberPedestal_Nameplate_C::GetInputActionVisibility()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("GetInputActionVisibility");
-
-	Params::TeamMemberPedestal_Nameplate_C_GetInputActionVisibility Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.ExecuteUbergraph_TeamMemberPedestal_Nameplate
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTeamMemberPedestal_Nameplate_C::ExecuteUbergraph_TeamMemberPedestal_Nameplate(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_TeamMemberPedestal_Nameplate");
-
-	Params::TeamMemberPedestal_Nameplate_C_ExecuteUbergraph_TeamMemberPedestal_Nameplate Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UTeamMemberPedestal_Nameplate_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -269,9 +105,9 @@ void UTeamMemberPedestal_Nameplate_C::Destruct()
 void UTeamMemberPedestal_Nameplate_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
+		Func = Class->GetFunction("TeamMemberPedestal_Nameplate_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -280,18 +116,38 @@ void UTeamMemberPedestal_Nameplate_C::Construct()
 // Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.BP_OnTeamMemberEstablished
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bHasValidMember                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bHasValidMember                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UTeamMemberPedestal_Nameplate_C::BP_OnTeamMemberEstablished(bool bHasValidMember)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnTeamMemberEstablished");
+		Func = Class->GetFunction("TeamMemberPedestal_Nameplate_C", "BP_OnTeamMemberEstablished");
 
 	Params::TeamMemberPedestal_Nameplate_C_BP_OnTeamMemberEstablished Parms{};
 
 	Parms.bHasValidMember = bHasValidMember;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.OnReadyStatusChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EGameReadiness                          GameReadiness                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTeamMemberPedestal_Nameplate_C::OnReadyStatusChanged(EGameReadiness GameReadiness)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_Nameplate_C", "OnReadyStatusChanged");
+
+	Params::TeamMemberPedestal_Nameplate_C_OnReadyStatusChanged Parms{};
+
+	Parms.GameReadiness = GameReadiness;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

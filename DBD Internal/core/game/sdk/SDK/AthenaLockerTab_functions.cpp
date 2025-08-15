@@ -17,125 +17,35 @@
 namespace SDK
 {
 
-// Function AthenaLockerTab.AthenaLockerTab_C.AnimShowRandomDisclaimerEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function AthenaLockerTab.AthenaLockerTab_C.ExecuteUbergraph_AthenaLockerTab
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    Show                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaLockerTab_C::AnimShowRandomDisclaimerEnabled(bool Show)
+void UAthenaLockerTab_C::ExecuteUbergraph_AthenaLockerTab(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("AnimShowRandomDisclaimerEnabled");
+		Func = Class->GetFunction("AthenaLockerTab_C", "ExecuteUbergraph_AthenaLockerTab");
 
-	Params::AthenaLockerTab_C_AnimShowRandomDisclaimerEnabled Parms{};
+	Params::AthenaLockerTab_C_ExecuteUbergraph_AthenaLockerTab Parms{};
 
-	Parms.Show = Show;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function AthenaLockerTab.AthenaLockerTab_C.AssignAllSlots
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function AthenaLockerTab.AthenaLockerTab_C.TriggerRandomLoopingAnim
+// (BlueprintCallable, BlueprintEvent)
 
-void UAthenaLockerTab_C::AssignAllSlots()
+void UAthenaLockerTab_C::TriggerRandomLoopingAnim()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("AssignAllSlots");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.BeginPickingCustomization
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                WidgetToReturnFocusTo                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// struct FAthenaCustomizationParams       CustomizationParams_0                                  (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UAthenaLockerTab_C::BeginPickingCustomization(class UCommonButtonBase* WidgetToReturnFocusTo, const struct FAthenaCustomizationParams& CustomizationParams_0)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BeginPickingCustomization");
-
-	Params::AthenaLockerTab_C_BeginPickingCustomization Parms{};
-
-	Parms.WidgetToReturnFocusTo = WidgetToReturnFocusTo;
-	Parms.CustomizationParams_0 = std::move(CustomizationParams_0);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.BndEvt__AthenaLockerTab_Button_BackToGame_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaLockerTab_C::BndEvt__AthenaLockerTab_Button_BackToGame_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__AthenaLockerTab_Button_BackToGame_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::AthenaLockerTab_C_BndEvt__AthenaLockerTab_Button_BackToGame_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.BndEvt__AthenaLockerTab_Button_QuickRename2_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaLockerTab_C::BndEvt__AthenaLockerTab_Button_QuickRename2_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__AthenaLockerTab_Button_QuickRename2_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
-
-	Params::AthenaLockerTab_C_BndEvt__AthenaLockerTab_Button_QuickRename2_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.BndEvt__AthenaLockerTab_LockerArchivingTooltip_K2Node_ComponentBoundEvent_0_OnDismissed__DelegateSignature
-// (BlueprintEvent)
-
-void UAthenaLockerTab_C::BndEvt__AthenaLockerTab_LockerArchivingTooltip_K2Node_ComponentBoundEvent_0_OnDismissed__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__AthenaLockerTab_LockerArchivingTooltip_K2Node_ComponentBoundEvent_0_OnDismissed__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UAthenaLockerTab_C::BP_OnActivated()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
+		Func = Class->GetFunction("AthenaLockerTab_C", "TriggerRandomLoopingAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -147,9 +57,23 @@ void UAthenaLockerTab_C::BP_OnActivated()
 void UAthenaLockerTab_C::BP_OnDeactivated()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnDeactivated");
+		Func = Class->GetFunction("AthenaLockerTab_C", "BP_OnDeactivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaLockerTab.AthenaLockerTab_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UAthenaLockerTab_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLockerTab_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -161,74 +85,11 @@ void UAthenaLockerTab_C::BP_OnDeactivated()
 void UAthenaLockerTab_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
+		Func = Class->GetFunction("AthenaLockerTab_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.ExecuteUbergraph_AthenaLockerTab
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaLockerTab_C::ExecuteUbergraph_AthenaLockerTab(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaLockerTab");
-
-	Params::AthenaLockerTab_C_ExecuteUbergraph_AthenaLockerTab Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.LoadoutButtonCustomNavigationDown
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UAthenaLockerTab_C::LoadoutButtonCustomNavigationDown(EUINavigation Navigation_0)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("LoadoutButtonCustomNavigationDown");
-
-	Params::AthenaLockerTab_C_LoadoutButtonCustomNavigationDown Parms{};
-
-	Parms.Navigation_0 = Navigation_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.OnBeginPickingCustomizationSlot
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UAthenaCustomizationSlotSelectorButton*SlotButton                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaLockerTab_C::OnBeginPickingCustomizationSlot(class UAthenaCustomizationSlotSelectorButton* SlotButton)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnBeginPickingCustomizationSlot");
-
-	Params::AthenaLockerTab_C_OnBeginPickingCustomizationSlot Parms{};
-
-	Parms.SlotButton = SlotButton;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -238,9 +99,9 @@ void UAthenaLockerTab_C::OnBeginPickingCustomizationSlot(class UAthenaCustomizat
 void UAthenaLockerTab_C::OnBeginPickingLoadouts()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnBeginPickingLoadouts");
+		Func = Class->GetFunction("AthenaLockerTab_C", "OnBeginPickingLoadouts");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -252,73 +113,29 @@ void UAthenaLockerTab_C::OnBeginPickingLoadouts()
 void UAthenaLockerTab_C::OnBeginSavingLoadouts()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnBeginSavingLoadouts");
+		Func = Class->GetFunction("AthenaLockerTab_C", "OnBeginSavingLoadouts");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaLockerTab.AthenaLockerTab_C.OnModifiedStatusUpdated
+// Function AthenaLockerTab.AthenaLockerTab_C.OnBeginPickingCustomizationSlot
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsModified                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bCanShowToolTip                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAthenaCustomizationSlotSelectorButton*SlotButton                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaLockerTab_C::OnModifiedStatusUpdated(bool bIsModified, bool bCanShowToolTip)
+void UAthenaLockerTab_C::OnBeginPickingCustomizationSlot(class UAthenaCustomizationSlotSelectorButton* SlotButton)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnModifiedStatusUpdated");
+		Func = Class->GetFunction("AthenaLockerTab_C", "OnBeginPickingCustomizationSlot");
 
-	Params::AthenaLockerTab_C_OnModifiedStatusUpdated Parms{};
+	Params::AthenaLockerTab_C_OnBeginPickingCustomizationSlot Parms{};
 
-	Parms.bIsModified = bIsModified;
-	Parms.bCanShowToolTip = bCanShowToolTip;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.OnPreviewActionButtonUpdated
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// class FText                             RowDisplayName                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UAthenaLockerTab_C::OnPreviewActionButtonUpdated(const class FText& RowDisplayName)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnPreviewActionButtonUpdated");
-
-	Params::AthenaLockerTab_C_OnPreviewActionButtonUpdated Parms{};
-
-	Parms.RowDisplayName = std::move(RowDisplayName);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.OnQuickRenameStatusUpdated
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// bool                                    bIsAvailable                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             LoadoutName                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UAthenaLockerTab_C::OnQuickRenameStatusUpdated(bool bIsAvailable, const class FText& LoadoutName)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnQuickRenameStatusUpdated");
-
-	Params::AthenaLockerTab_C_OnQuickRenameStatusUpdated Parms{};
-
-	Parms.bIsAvailable = bIsAvailable;
-	Parms.LoadoutName = std::move(LoadoutName);
+	Parms.SlotButton = SlotButton;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -327,20 +144,62 @@ void UAthenaLockerTab_C::OnQuickRenameStatusUpdated(bool bIsAvailable, const cla
 // Function AthenaLockerTab.AthenaLockerTab_C.OnRefreshForNewLoadout
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class FString                           LoadoutName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    bIsShuffleTile                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    LoadoutName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    bIsShuffleTile                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaLockerTab_C::OnRefreshForNewLoadout(const class FString& LoadoutName, bool bIsShuffleTile)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnRefreshForNewLoadout");
+		Func = Class->GetFunction("AthenaLockerTab_C", "OnRefreshForNewLoadout");
 
 	Params::AthenaLockerTab_C_OnRefreshForNewLoadout Parms{};
 
 	Parms.LoadoutName = std::move(LoadoutName);
 	Parms.bIsShuffleTile = bIsShuffleTile;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaLockerTab.AthenaLockerTab_C.BeginPickingCustomization
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    WidgetToReturnFocusTo                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FAthenaCustomizationParams&CustomizationParams_0                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UAthenaLockerTab_C::BeginPickingCustomization(class UCommonButton* WidgetToReturnFocusTo, const struct FAthenaCustomizationParams& CustomizationParams_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLockerTab_C", "BeginPickingCustomization");
+
+	Params::AthenaLockerTab_C_BeginPickingCustomization Parms{};
+
+	Parms.WidgetToReturnFocusTo = WidgetToReturnFocusTo;
+	Parms.CustomizationParams_0 = std::move(CustomizationParams_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaLockerTab.AthenaLockerTab_C.PlaySlotClickedAnimation
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAthenaCustomizationSlotButton_C* SlotToPlayAnimOn                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaLockerTab_C::PlaySlotClickedAnimation(class UAthenaCustomizationSlotButton_C* SlotToPlayAnimOn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLockerTab_C", "PlaySlotClickedAnimation");
+
+	Params::AthenaLockerTab_C_PlaySlotClickedAnimation Parms{};
+
+	Parms.SlotToPlayAnimOn = SlotToPlayAnimOn;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -352,9 +211,9 @@ void UAthenaLockerTab_C::OnRefreshForNewLoadout(const class FString& LoadoutName
 void UAthenaLockerTab_C::PlayEquippedLockerMusic_STW()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PlayEquippedLockerMusic_STW");
+		Func = Class->GetFunction("AthenaLockerTab_C", "PlayEquippedLockerMusic_STW");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -366,80 +225,9 @@ void UAthenaLockerTab_C::PlayEquippedLockerMusic_STW()
 void UAthenaLockerTab_C::PlaySlotAnimationAndCenterSlot()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PlaySlotAnimationAndCenterSlot");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.PlaySlotClickedAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAthenaCustomizationSlotButton_C* SlotToPlayAnimOn                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaLockerTab_C::PlaySlotClickedAnimation(class UAthenaCustomizationSlotButton_C* SlotToPlayAnimOn)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PlaySlotClickedAnimation");
-
-	Params::AthenaLockerTab_C_PlaySlotClickedAnimation Parms{};
-
-	Parms.SlotToPlayAnimOn = SlotToPlayAnimOn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.TopRowCustomNavigationUp
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UAthenaLockerTab_C::TopRowCustomNavigationUp(EUINavigation Navigation_0)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("TopRowCustomNavigationUp");
-
-	Params::AthenaLockerTab_C_TopRowCustomNavigationUp Parms{};
-
-	Parms.Navigation_0 = Navigation_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.TriggerModifiedLoopingAnim
-// (BlueprintCallable, BlueprintEvent)
-
-void UAthenaLockerTab_C::TriggerModifiedLoopingAnim()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("TriggerModifiedLoopingAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaLockerTab.AthenaLockerTab_C.TriggerRandomLoopingAnim
-// (BlueprintCallable, BlueprintEvent)
-
-void UAthenaLockerTab_C::TriggerRandomLoopingAnim()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("TriggerRandomLoopingAnim");
+		Func = Class->GetFunction("AthenaLockerTab_C", "PlaySlotAnimationAndCenterSlot");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -453,13 +241,33 @@ void UAthenaLockerTab_C::TriggerRandomLoopingAnim()
 void UAthenaLockerTab_C::UpdatePresetButtonStyles(ECommonInputType InputPin)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UpdatePresetButtonStyles");
+		Func = Class->GetFunction("AthenaLockerTab_C", "UpdatePresetButtonStyles");
 
 	Params::AthenaLockerTab_C_UpdatePresetButtonStyles Parms{};
 
 	Parms.InputPin = InputPin;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaLockerTab.AthenaLockerTab_C.AnimShowRandomDisclaimerEnabled
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Show                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaLockerTab_C::AnimShowRandomDisclaimerEnabled(bool Show)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLockerTab_C", "AnimShowRandomDisclaimerEnabled");
+
+	Params::AthenaLockerTab_C_AnimShowRandomDisclaimerEnabled Parms{};
+
+	Parms.Show = Show;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

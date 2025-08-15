@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass PurchaseUnavailable.PurchaseUnavailable_C
-// 0x0020 (0x0548 - 0x0528)
+// 0x0020 (0x04C0 - 0x04A0)
 class UPurchaseUnavailable_C final : public UFortPurchaseUnavailableModal
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0528(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x0530(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonRichTextBlock*                   RichText_Details;                                  // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonRichTextBlock*                   RichText_HeaderText;                               // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro;                                             // 0x04A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   RichText_Details;                                  // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   RichText_HeaderText;                               // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void OnUpdateTextStyle(const class FText& OfferDisplayName);
@@ -42,11 +42,11 @@ public:
 	}
 };
 static_assert(alignof(UPurchaseUnavailable_C) == 0x000008, "Wrong alignment on UPurchaseUnavailable_C");
-static_assert(sizeof(UPurchaseUnavailable_C) == 0x000548, "Wrong size on UPurchaseUnavailable_C");
-static_assert(offsetof(UPurchaseUnavailable_C, UberGraphFrame) == 0x000528, "Member 'UPurchaseUnavailable_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UPurchaseUnavailable_C, Intro) == 0x000530, "Member 'UPurchaseUnavailable_C::Intro' has a wrong offset!");
-static_assert(offsetof(UPurchaseUnavailable_C, RichText_Details) == 0x000538, "Member 'UPurchaseUnavailable_C::RichText_Details' has a wrong offset!");
-static_assert(offsetof(UPurchaseUnavailable_C, RichText_HeaderText) == 0x000540, "Member 'UPurchaseUnavailable_C::RichText_HeaderText' has a wrong offset!");
+static_assert(sizeof(UPurchaseUnavailable_C) == 0x0004C0, "Wrong size on UPurchaseUnavailable_C");
+static_assert(offsetof(UPurchaseUnavailable_C, UberGraphFrame) == 0x0004A0, "Member 'UPurchaseUnavailable_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UPurchaseUnavailable_C, Intro) == 0x0004A8, "Member 'UPurchaseUnavailable_C::Intro' has a wrong offset!");
+static_assert(offsetof(UPurchaseUnavailable_C, RichText_Details) == 0x0004B0, "Member 'UPurchaseUnavailable_C::RichText_Details' has a wrong offset!");
+static_assert(offsetof(UPurchaseUnavailable_C, RichText_HeaderText) == 0x0004B8, "Member 'UPurchaseUnavailable_C::RichText_HeaderText' has a wrong offset!");
 
 }
 

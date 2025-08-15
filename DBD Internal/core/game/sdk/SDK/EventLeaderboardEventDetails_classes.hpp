@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventLeaderboardEventDetails.EventLeaderboardEventDetails_C
-// 0x0020 (0x0738 - 0x0718)
+// 0x0020 (0x06D8 - 0x06B8)
 class UEventLeaderboardEventDetails_C final : public UFortShowdownDetailView
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0718(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       Text_EventName;                                    // 0x0720(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_RegionName;                                   // 0x0728(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_SessionName;                                  // 0x0730(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       Text_EventName;                                    // 0x06C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_RegionName;                                   // 0x06C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_SessionName;                                  // 0x06D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void RefreshDataBP();
@@ -42,11 +42,11 @@ public:
 	}
 };
 static_assert(alignof(UEventLeaderboardEventDetails_C) == 0x000008, "Wrong alignment on UEventLeaderboardEventDetails_C");
-static_assert(sizeof(UEventLeaderboardEventDetails_C) == 0x000738, "Wrong size on UEventLeaderboardEventDetails_C");
-static_assert(offsetof(UEventLeaderboardEventDetails_C, UberGraphFrame) == 0x000718, "Member 'UEventLeaderboardEventDetails_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEventDetails_C, Text_EventName) == 0x000720, "Member 'UEventLeaderboardEventDetails_C::Text_EventName' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEventDetails_C, Text_RegionName) == 0x000728, "Member 'UEventLeaderboardEventDetails_C::Text_RegionName' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEventDetails_C, Text_SessionName) == 0x000730, "Member 'UEventLeaderboardEventDetails_C::Text_SessionName' has a wrong offset!");
+static_assert(sizeof(UEventLeaderboardEventDetails_C) == 0x0006D8, "Wrong size on UEventLeaderboardEventDetails_C");
+static_assert(offsetof(UEventLeaderboardEventDetails_C, UberGraphFrame) == 0x0006B8, "Member 'UEventLeaderboardEventDetails_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardEventDetails_C, Text_EventName) == 0x0006C0, "Member 'UEventLeaderboardEventDetails_C::Text_EventName' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardEventDetails_C, Text_RegionName) == 0x0006C8, "Member 'UEventLeaderboardEventDetails_C::Text_RegionName' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardEventDetails_C, Text_SessionName) == 0x0006D0, "Member 'UEventLeaderboardEventDetails_C::Text_SessionName' has a wrong offset!");
 
 }
 

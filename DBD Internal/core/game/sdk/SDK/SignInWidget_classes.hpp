@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SignInWidget.SignInWidget_C
-// 0x0018 (0x0568 - 0x0550)
+// 0x0018 (0x04E0 - 0x04C8)
 class USignInWidget_C final : public UFortSignInWidget
 {
 public:
-	class UNamedSlot*                             ButtonSlot;                                        // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonLazyImage*                       CommonLazyImage_0;                                 // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           ContentBox;                                        // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNamedSlot*                             ButtonSlot;                                        // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonLazyImage*                       CommonLazyImage_0;                                 // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           ContentBox;                                        // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,10 +36,10 @@ public:
 	}
 };
 static_assert(alignof(USignInWidget_C) == 0x000008, "Wrong alignment on USignInWidget_C");
-static_assert(sizeof(USignInWidget_C) == 0x000568, "Wrong size on USignInWidget_C");
-static_assert(offsetof(USignInWidget_C, ButtonSlot) == 0x000550, "Member 'USignInWidget_C::ButtonSlot' has a wrong offset!");
-static_assert(offsetof(USignInWidget_C, CommonLazyImage_0) == 0x000558, "Member 'USignInWidget_C::CommonLazyImage_0' has a wrong offset!");
-static_assert(offsetof(USignInWidget_C, ContentBox) == 0x000560, "Member 'USignInWidget_C::ContentBox' has a wrong offset!");
+static_assert(sizeof(USignInWidget_C) == 0x0004E0, "Wrong size on USignInWidget_C");
+static_assert(offsetof(USignInWidget_C, ButtonSlot) == 0x0004C8, "Member 'USignInWidget_C::ButtonSlot' has a wrong offset!");
+static_assert(offsetof(USignInWidget_C, CommonLazyImage_0) == 0x0004D0, "Member 'USignInWidget_C::CommonLazyImage_0' has a wrong offset!");
+static_assert(offsetof(USignInWidget_C, ContentBox) == 0x0004D8, "Member 'USignInWidget_C::ContentBox' has a wrong offset!");
 
 }
 

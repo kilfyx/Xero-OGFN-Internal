@@ -124,86 +124,8 @@ void UClothingSimulationInteractor::SetAnimDriveSpringStiffness(float InStiffnes
 }
 
 
-// Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.SetNumIterations
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   NumIterations                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UClothingSimulationInteractor::SetNumIterations(int32 NumIterations)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ClothingSimulationInteractor", "SetNumIterations");
-
-	Params::ClothingSimulationInteractor_SetNumIterations Parms{};
-
-	Parms.NumIterations = NumIterations;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.SetNumSubsteps
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   NumSubsteps                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UClothingSimulationInteractor::SetNumSubsteps(int32 NumSubsteps)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ClothingSimulationInteractor", "SetNumSubsteps");
-
-	Params::ClothingSimulationInteractor_SetNumSubsteps Parms{};
-
-	Parms.NumSubsteps = NumSubsteps;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetClothingInteractor
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class FString&                    ClothingAssetName                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UClothingInteractor*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UClothingInteractor* UClothingSimulationInteractor::GetClothingInteractor(const class FString& ClothingAssetName) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ClothingSimulationInteractor", "GetClothingInteractor");
-
-	Params::ClothingSimulationInteractor_GetClothingInteractor Parms{};
-
-	Parms.ClothingAssetName = std::move(ClothingAssetName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumCloths
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -228,7 +150,7 @@ int32 UClothingSimulationInteractor::GetNumCloths() const
 
 
 // Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumDynamicParticles
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -253,7 +175,7 @@ int32 UClothingSimulationInteractor::GetNumDynamicParticles() const
 
 
 // Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumIterations
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -278,7 +200,7 @@ int32 UClothingSimulationInteractor::GetNumIterations() const
 
 
 // Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumKinematicParticles
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -303,7 +225,7 @@ int32 UClothingSimulationInteractor::GetNumKinematicParticles() const
 
 
 // Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumSubsteps
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -328,7 +250,7 @@ int32 UClothingSimulationInteractor::GetNumSubsteps() const
 
 
 // Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetSimulationTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

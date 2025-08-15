@@ -13,34 +13,38 @@
 #include "Engine_structs.hpp"
 #include "FortniteUI_structs.hpp"
 #include "FortniteUI_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass CosmeticLoadoutScreen.CosmeticLoadoutScreen_C
-// 0x00A8 (0x06D8 - 0x0630)
+// 0x00B8 (0x0660 - 0x05A8)
 class UCosmeticLoadoutScreen_C final : public UFortCosmeticLoadoutScreen
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0630(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x0638(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UVerticalBox*                           LeftSideButtons;                                   // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Panel;                                             // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       PresetHeader;                                      // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_BackButton;                               // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_CloseButton;                              // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       SaveSubHeader;                                     // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_Mobile;                                    // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   BrowseHeaderText;                                  // 0x0678(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   SaveHeaderText;                                    // 0x0690(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   ApplyButtonText;                                   // 0x06A8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   SaveButtonText;                                    // 0x06C0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro;                                             // 0x05B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UVerticalBox*                           LeftSideButtons;                                   // 0x05B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       NewPresetDisclaimerText;                           // 0x05C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Panel;                                             // 0x05C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       PresetHeader;                                      // 0x05D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       RandomDisclaimertext;                              // 0x05D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       SaveSubHeader;                                     // 0x05E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USoloButton_C*                          xButton_DeleteLoadout;                             // 0x05E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USoloButton_C*                          xButton_RenameLoadout;                             // 0x05F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USimpleFeatured_YellowButton_C*         xSimpleFeatured_YellowButton;                      // 0x05F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   BrowseHeaderText;                                  // 0x0600(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   SaveHeaderText;                                    // 0x0618(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   ApplyButtonText;                                   // 0x0630(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   SaveButtonText;                                    // 0x0648(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void BP_OnActivated();
 	void ExecuteUbergraph_CosmeticLoadoutScreen(int32 EntryPoint);
 	void OnFlavorForScreenMode(EFortCosmeticLoadoutScreenMode NewMode);
+	void OnPreviewTile(EFortLoadoutCardType CardType);
+	void BP_OnActivated();
 
 public:
 	static class UClass* StaticClass()
@@ -53,20 +57,22 @@ public:
 	}
 };
 static_assert(alignof(UCosmeticLoadoutScreen_C) == 0x000008, "Wrong alignment on UCosmeticLoadoutScreen_C");
-static_assert(sizeof(UCosmeticLoadoutScreen_C) == 0x0006D8, "Wrong size on UCosmeticLoadoutScreen_C");
-static_assert(offsetof(UCosmeticLoadoutScreen_C, UberGraphFrame) == 0x000630, "Member 'UCosmeticLoadoutScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutScreen_C, Intro) == 0x000638, "Member 'UCosmeticLoadoutScreen_C::Intro' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutScreen_C, LeftSideButtons) == 0x000640, "Member 'UCosmeticLoadoutScreen_C::LeftSideButtons' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutScreen_C, Panel) == 0x000648, "Member 'UCosmeticLoadoutScreen_C::Panel' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutScreen_C, PresetHeader) == 0x000650, "Member 'UCosmeticLoadoutScreen_C::PresetHeader' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutScreen_C, SafeZone_BackButton) == 0x000658, "Member 'UCosmeticLoadoutScreen_C::SafeZone_BackButton' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutScreen_C, SafeZone_CloseButton) == 0x000660, "Member 'UCosmeticLoadoutScreen_C::SafeZone_CloseButton' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutScreen_C, SaveSubHeader) == 0x000668, "Member 'UCosmeticLoadoutScreen_C::SaveSubHeader' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutScreen_C, SizeBox_Mobile) == 0x000670, "Member 'UCosmeticLoadoutScreen_C::SizeBox_Mobile' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutScreen_C, BrowseHeaderText) == 0x000678, "Member 'UCosmeticLoadoutScreen_C::BrowseHeaderText' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutScreen_C, SaveHeaderText) == 0x000690, "Member 'UCosmeticLoadoutScreen_C::SaveHeaderText' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutScreen_C, ApplyButtonText) == 0x0006A8, "Member 'UCosmeticLoadoutScreen_C::ApplyButtonText' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutScreen_C, SaveButtonText) == 0x0006C0, "Member 'UCosmeticLoadoutScreen_C::SaveButtonText' has a wrong offset!");
+static_assert(sizeof(UCosmeticLoadoutScreen_C) == 0x000660, "Wrong size on UCosmeticLoadoutScreen_C");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, UberGraphFrame) == 0x0005A8, "Member 'UCosmeticLoadoutScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, Intro) == 0x0005B0, "Member 'UCosmeticLoadoutScreen_C::Intro' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, LeftSideButtons) == 0x0005B8, "Member 'UCosmeticLoadoutScreen_C::LeftSideButtons' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, NewPresetDisclaimerText) == 0x0005C0, "Member 'UCosmeticLoadoutScreen_C::NewPresetDisclaimerText' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, Panel) == 0x0005C8, "Member 'UCosmeticLoadoutScreen_C::Panel' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, PresetHeader) == 0x0005D0, "Member 'UCosmeticLoadoutScreen_C::PresetHeader' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, RandomDisclaimertext) == 0x0005D8, "Member 'UCosmeticLoadoutScreen_C::RandomDisclaimertext' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, SaveSubHeader) == 0x0005E0, "Member 'UCosmeticLoadoutScreen_C::SaveSubHeader' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, xButton_DeleteLoadout) == 0x0005E8, "Member 'UCosmeticLoadoutScreen_C::xButton_DeleteLoadout' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, xButton_RenameLoadout) == 0x0005F0, "Member 'UCosmeticLoadoutScreen_C::xButton_RenameLoadout' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, xSimpleFeatured_YellowButton) == 0x0005F8, "Member 'UCosmeticLoadoutScreen_C::xSimpleFeatured_YellowButton' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, BrowseHeaderText) == 0x000600, "Member 'UCosmeticLoadoutScreen_C::BrowseHeaderText' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, SaveHeaderText) == 0x000618, "Member 'UCosmeticLoadoutScreen_C::SaveHeaderText' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, ApplyButtonText) == 0x000630, "Member 'UCosmeticLoadoutScreen_C::ApplyButtonText' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutScreen_C, SaveButtonText) == 0x000648, "Member 'UCosmeticLoadoutScreen_C::SaveButtonText' has a wrong offset!");
 
 }
 

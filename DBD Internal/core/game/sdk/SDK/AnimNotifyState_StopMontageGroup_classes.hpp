@@ -25,7 +25,7 @@ public:
 	float                                         BlendOutTime;                                      // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, const struct FAnimNotifyEventReference& EventReference) const;
+	bool Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration) const;
 
 public:
 	static class UClass* StaticClass()
@@ -37,6 +37,10 @@ public:
 		return GetDefaultObjImpl<UAnimNotifyState_StopMontageGroup_C>();
 	}
 };
+static_assert(alignof(UAnimNotifyState_StopMontageGroup_C) == 0x000008, "Wrong alignment on UAnimNotifyState_StopMontageGroup_C");
+static_assert(sizeof(UAnimNotifyState_StopMontageGroup_C) == 0x000040, "Wrong size on UAnimNotifyState_StopMontageGroup_C");
+static_assert(offsetof(UAnimNotifyState_StopMontageGroup_C, GroupNameToStop) == 0x000030, "Member 'UAnimNotifyState_StopMontageGroup_C::GroupNameToStop' has a wrong offset!");
+static_assert(offsetof(UAnimNotifyState_StopMontageGroup_C, BlendOutTime) == 0x000038, "Member 'UAnimNotifyState_StopMontageGroup_C::BlendOutTime' has a wrong offset!");
 
 }
 

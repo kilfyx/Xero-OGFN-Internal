@@ -17,120 +17,23 @@
 namespace SDK
 {
 
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.UnlockOpenDoor
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_Lock_Parent_C::UnlockOpenDoor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "UnlockOpenDoor");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.TimedRelock
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_Lock_Parent_C::TimedRelock()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "TimedRelock");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ShouldDie
-// (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ExecuteUbergraph_BGA_Athena_Lock_Parent
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AController*                      EventInstigator                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool ABGA_Athena_Lock_Parent_C::ShouldDie(float Damage, class AController* EventInstigator, class AActor* DamageCauser)
+void ABGA_Athena_Lock_Parent_C::ExecuteUbergraph_BGA_Athena_Lock_Parent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "ShouldDie");
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "ExecuteUbergraph_BGA_Athena_Lock_Parent");
 
-	Params::BGA_Athena_Lock_Parent_C_ShouldDie Parms{};
+	Params::BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent Parms{};
 
-	Parms.Damage = Damage;
-	Parms.EventInstigator = EventInstigator;
-	Parms.DamageCauser = DamageCauser;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.SetupMultipleLocks
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_Lock_Parent_C::SetupMultipleLocks()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "SetupMultipleLocks");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.SetLockVisuals
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_Lock_Parent_C::SetLockVisuals()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "SetLockVisuals");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.SetLock
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// Enum_Athena_Lock                        LockState_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_Lock_Parent_C::SetLock(Enum_Athena_Lock LockState_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "SetLock");
-
-	Params::BGA_Athena_Lock_Parent_C_SetLock Parms{};
-
-	Parms.LockState_0 = LockState_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABGA_Athena_Lock_Parent_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -168,6 +71,48 @@ void ABGA_Athena_Lock_Parent_C::ParentActorDied(class AActor* DamagedActor, floa
 }
 
 
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.NotEnabled
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_Lock_Parent_C::NotEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "NotEnabled");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.UnlockOpenDoor
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_Lock_Parent_C::UnlockOpenDoor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "UnlockOpenDoor");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.LockCloseDoor
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_Lock_Parent_C::LockCloseDoor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "LockCloseDoor");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OpenContainers
 // (BlueprintCallable, BlueprintEvent)
 
@@ -177,6 +122,118 @@ void ABGA_Athena_Lock_Parent_C::OpenContainers()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "OpenContainers");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABGA_Athena_Lock_Parent_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BlueprintOnInteract
+// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
+// Parameters:
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_Athena_Lock_Parent_C::BlueprintOnInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "BlueprintOnInteract");
+
+	Params::BGA_Athena_Lock_Parent_C_BlueprintOnInteract Parms{};
+
+	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.TimedRelock
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_Lock_Parent_C::TimedRelock()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "TimedRelock");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.SetLock
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// Enum_Athena_Lock                        LockState_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_Athena_Lock_Parent_C::SetLock(Enum_Athena_Lock LockState_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "SetLock");
+
+	Params::BGA_Athena_Lock_Parent_C_SetLock Parms{};
+
+	Parms.LockState_0 = LockState_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ApplyFailCheckEffect
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_Lock_Parent_C::ApplyFailCheckEffect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "ApplyFailCheckEffect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.HideAndKill
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_Lock_Parent_C::HideAndKill()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "HideAndKill");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_0_OnLinkedActorDestroyed__DelegateSignature
+// (BlueprintEvent)
+
+void ABGA_Athena_Lock_Parent_C::BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_0_OnLinkedActorDestroyed__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_0_OnLinkedActorDestroyed__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -193,78 +250,6 @@ void ABGA_Athena_Lock_Parent_C::OnUnLocked()
 		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "OnUnLocked");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnSecondInteract
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortPawn*                        InteractingPawn                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_Lock_Parent_C::OnSecondInteract(class AFortPawn* InteractingPawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "OnSecondInteract");
-
-	Params::BGA_Athena_Lock_Parent_C_OnSecondInteract Parms{};
-
-	Parms.InteractingPawn = InteractingPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnRep_LockState
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_Lock_Parent_C::OnRep_LockState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "OnRep_LockState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnRep_EverInteractSetLock
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_Lock_Parent_C::OnRep_EverInteractSetLock()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "OnRep_EverInteractSetLock");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnReady_19560710434050E125B3ADA0163CD609
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortGameStateAthena*             GameState                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UFortPlaylist*              Playlist                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTagContainer&     PlaylistContextTags                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void ABGA_Athena_Lock_Parent_C::OnReady_19560710434050E125B3ADA0163CD609(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "OnReady_19560710434050E125B3ADA0163CD609");
-
-	Params::BGA_Athena_Lock_Parent_C_OnReady_19560710434050E125B3ADA0163CD609 Parms{};
-
-	Parms.GameState = GameState;
-	Parms.Playlist = Playlist;
-	Parms.PlaylistContextTags = std::move(PlaylistContextTags);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -302,29 +287,73 @@ void ABGA_Athena_Lock_Parent_C::OnFirstInteract(class AFortPawn* InteractingPawn
 }
 
 
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.NotEnabled
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnSecondInteract
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFortPawn*                        InteractingPawn                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABGA_Athena_Lock_Parent_C::NotEnabled()
+void ABGA_Athena_Lock_Parent_C::OnSecondInteract(class AFortPawn* InteractingPawn)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "NotEnabled");
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "OnSecondInteract");
+
+	Params::BGA_Athena_Lock_Parent_C_OnSecondInteract Parms{};
+
+	Parms.InteractingPawn = InteractingPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnReady_19560710434050E125B3ADA0163CD609
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFortGameStateAthena*             GameState                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UFortPlaylist*              Playlist                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTagContainer&     PlaylistContextTags                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void ABGA_Athena_Lock_Parent_C::OnReady_19560710434050E125B3ADA0163CD609(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "OnReady_19560710434050E125B3ADA0163CD609");
+
+	Params::BGA_Athena_Lock_Parent_C_OnReady_19560710434050E125B3ADA0163CD609 Parms{};
+
+	Parms.GameState = GameState;
+	Parms.Playlist = Playlist;
+	Parms.PlaylistContextTags = std::move(PlaylistContextTags);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnRep_LockState
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_Lock_Parent_C::OnRep_LockState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "OnRep_LockState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.LockCloseDoor
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnRep_EverInteractSetLock
 // (BlueprintCallable, BlueprintEvent)
 
-void ABGA_Athena_Lock_Parent_C::LockCloseDoor()
+void ABGA_Athena_Lock_Parent_C::OnRep_EverInteractSetLock()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "LockCloseDoor");
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "OnRep_EverInteractSetLock");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -335,7 +364,7 @@ void ABGA_Athena_Lock_Parent_C::LockCloseDoor()
 // Parameters:
 // const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   CheckPassed                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   CheckPassed                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABGA_Athena_Lock_Parent_C::LockCheck(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, bool* CheckPassed)
 {
@@ -356,10 +385,37 @@ void ABGA_Athena_Lock_Parent_C::LockCheck(const class AFortPawn* InteractingPawn
 }
 
 
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ShouldDie
+// (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AController*                      EventInstigator                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABGA_Athena_Lock_Parent_C::ShouldDie(float Damage, class AController* EventInstigator, class AActor* DamageCauser)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "ShouldDie");
+
+	Params::BGA_Athena_Lock_Parent_C_ShouldDie Parms{};
+
+	Parms.Damage = Damage;
+	Parms.EventInstigator = EventInstigator;
+	Parms.DamageCauser = DamageCauser;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.Lock Set Interact Collision
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    On                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    On                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABGA_Athena_Lock_Parent_C::Lock_Set_Interact_Collision(bool On)
 {
@@ -373,194 +429,6 @@ void ABGA_Athena_Lock_Parent_C::Lock_Set_Interact_Collision(bool On)
 	Parms.On = On;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.HideAndKill
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_Lock_Parent_C::HideAndKill()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "HideAndKill");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.FindOtherLocks
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_Lock_Parent_C::FindOtherLocks()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "FindOtherLocks");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ExecuteValidGC
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              GameplayCueTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_Lock_Parent_C::ExecuteValidGC(const struct FGameplayTag& GameplayCueTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "ExecuteValidGC");
-
-	Params::BGA_Athena_Lock_Parent_C_ExecuteValidGC Parms{};
-
-	Parms.GameplayCueTag = std::move(GameplayCueTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ExecuteUbergraph_BGA_Athena_Lock_Parent
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_Lock_Parent_C::ExecuteUbergraph_BGA_Athena_Lock_Parent(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "ExecuteUbergraph_BGA_Athena_Lock_Parent");
-
-	Params::BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.CallOpenVault
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_Lock_Parent_C::CallOpenVault()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "CallOpenVault");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_0_OnLinkedActorDestroyed__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_Lock_Parent_C::BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_0_OnLinkedActorDestroyed__DelegateSignature(class AActor* DamageCauser)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_0_OnLinkedActorDestroyed__DelegateSignature");
-
-	Params::BGA_Athena_Lock_Parent_C_BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_0_OnLinkedActorDestroyed__DelegateSignature Parms{};
-
-	Parms.DamageCauser = DamageCauser;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BlueprintOnInteract
-// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
-// Parameters:
-// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_Lock_Parent_C::BlueprintOnInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "BlueprintOnInteract");
-
-	Params::BGA_Athena_Lock_Parent_C_BlueprintOnInteract Parms{};
-
-	Parms.InteractingPawn = InteractingPawn;
-	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ApplyFailCheckEffect
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_Lock_Parent_C::ApplyFailCheckEffect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "ApplyFailCheckEffect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.AllLocksUnlocked
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   AllUnlocked                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_Lock_Parent_C::AllLocksUnlocked(bool* AllUnlocked)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "AllLocksUnlocked");
-
-	Params::BGA_Athena_Lock_Parent_C_AllLocksUnlocked Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (AllUnlocked != nullptr)
-		*AllUnlocked = Parms.AllUnlocked;
-}
-
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BlueprintGetInteractionTime
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float*                                  OutInteractionTime                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool ABGA_Athena_Lock_Parent_C::BlueprintGetInteractionTime(const class AFortPawn* InteractingPawn, float* OutInteractionTime, const EInteractionBeingAttempted InteractionBeingAttempted) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "BlueprintGetInteractionTime");
-
-	Params::BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime Parms{};
-
-	Parms.InteractingPawn = InteractingPawn;
-	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutInteractionTime != nullptr)
-		*OutInteractionTime = Parms.OutInteractionTime;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -589,13 +457,42 @@ class FText ABGA_Athena_Lock_Parent_C::BlueprintGetInteractionString(const class
 }
 
 
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BlueprintGetInteractionTime
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  OutInteractionTime                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABGA_Athena_Lock_Parent_C::BlueprintGetInteractionTime(const class AFortPawn* InteractingPawn, float* OutInteractionTime, const EInteractionBeingAttempted InteractionBeingAttempted) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_Lock_Parent_C", "BlueprintGetInteractionTime");
+
+	Params::BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime Parms{};
+
+	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutInteractionTime != nullptr)
+		*OutInteractionTime = Parms.OutInteractionTime;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BlueprintCanInteract
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool ABGA_Athena_Lock_Parent_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
 {

@@ -17,89 +17,15 @@
 namespace SDK
 {
 
-// Function FeatTimelineListEntry.FeatTimelineListEntry_C.BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function FeatTimelineListEntry.FeatTimelineListEntry_C.SetSeasonStyle
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UFeatTimelineListEntry_C::BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UFeatTimelineListEntry_C::SetSeasonStyle()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
-
-	Params::FeatTimelineListEntry_C_BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FeatTimelineListEntry.FeatTimelineListEntry_C.BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UFeatTimelineListEntry_C::BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature");
-
-	Params::FeatTimelineListEntry_C_BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FeatTimelineListEntry.FeatTimelineListEntry_C.ExecuteUbergraph_FeatTimelineListEntry
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UFeatTimelineListEntry_C::ExecuteUbergraph_FeatTimelineListEntry(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_FeatTimelineListEntry");
-
-	Params::FeatTimelineListEntry_C_ExecuteUbergraph_FeatTimelineListEntry Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FeatTimelineListEntry.FeatTimelineListEntry_C.HoverFeat
-// (Event, Public, BlueprintEvent)
-
-void UFeatTimelineListEntry_C::HoverFeat()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("HoverFeat");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FeatTimelineListEntry.FeatTimelineListEntry_C.OnFeatCompletedThisSession
-// (Event, Protected, BlueprintEvent)
-
-void UFeatTimelineListEntry_C::OnFeatCompletedThisSession()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnFeatCompletedThisSession");
+		Func = Class->GetFunction("FeatTimelineListEntry_C", "SetSeasonStyle");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,9 +40,9 @@ void UFeatTimelineListEntry_C::OnFeatCompletedThisSession()
 void UFeatTimelineListEntry_C::OnFeatInfoSet(int32 NumFeatsOnDay, int32 IdxOnDay)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnFeatInfoSet");
+		Func = Class->GetFunction("FeatTimelineListEntry_C", "OnFeatInfoSet");
 
 	Params::FeatTimelineListEntry_C_OnFeatInfoSet Parms{};
 
@@ -135,9 +61,9 @@ void UFeatTimelineListEntry_C::OnFeatInfoSet(int32 NumFeatsOnDay, int32 IdxOnDay
 void UFeatTimelineListEntry_C::OnTimespanInfoSet(int32 NumDays)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnTimespanInfoSet");
+		Func = Class->GetFunction("FeatTimelineListEntry_C", "OnTimespanInfoSet");
 
 	Params::FeatTimelineListEntry_C_OnTimespanInfoSet Parms{};
 
@@ -147,31 +73,17 @@ void UFeatTimelineListEntry_C::OnTimespanInfoSet(int32 NumDays)
 }
 
 
-// Function FeatTimelineListEntry.FeatTimelineListEntry_C.OnWaitingForCompletedTimer
-// (Event, Protected, BlueprintEvent)
-
-void UFeatTimelineListEntry_C::OnWaitingForCompletedTimer()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnWaitingForCompletedTimer");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function FeatTimelineListEntry.FeatTimelineListEntry_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UFeatTimelineListEntry_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PreConstruct");
+		Func = Class->GetFunction("FeatTimelineListEntry_C", "PreConstruct");
 
 	Params::FeatTimelineListEntry_C_PreConstruct Parms{};
 
@@ -181,29 +93,15 @@ void UFeatTimelineListEntry_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function FeatTimelineListEntry.FeatTimelineListEntry_C.SetSeasonStyle
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function FeatTimelineListEntry.FeatTimelineListEntry_C.OnFeatCompletedThisSession
+// (Event, Protected, BlueprintEvent)
 
-void UFeatTimelineListEntry_C::SetSeasonStyle()
+void UFeatTimelineListEntry_C::OnFeatCompletedThisSession()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetSeasonStyle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FeatTimelineListEntry.FeatTimelineListEntry_C.UnHoverFeat
-// (Event, Public, BlueprintEvent)
-
-void UFeatTimelineListEntry_C::UnHoverFeat()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("UnHoverFeat");
+		Func = Class->GetFunction("FeatTimelineListEntry_C", "OnFeatCompletedThisSession");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -215,11 +113,113 @@ void UFeatTimelineListEntry_C::UnHoverFeat()
 void UFeatTimelineListEntry_C::WidgetAnimationEvt_OnShowCompleted_K2Node_WidgetAnimationEvent_0()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("WidgetAnimationEvt_OnShowCompleted_K2Node_WidgetAnimationEvent_0");
+		Func = Class->GetFunction("FeatTimelineListEntry_C", "WidgetAnimationEvt_OnShowCompleted_K2Node_WidgetAnimationEvent_0");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FeatTimelineListEntry.FeatTimelineListEntry_C.OnWaitingForCompletedTimer
+// (Event, Protected, BlueprintEvent)
+
+void UFeatTimelineListEntry_C::OnWaitingForCompletedTimer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FeatTimelineListEntry_C", "OnWaitingForCompletedTimer");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FeatTimelineListEntry.FeatTimelineListEntry_C.BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UFeatTimelineListEntry_C::BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FeatTimelineListEntry_C", "BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
+
+	Params::FeatTimelineListEntry_C_BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FeatTimelineListEntry.FeatTimelineListEntry_C.BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UFeatTimelineListEntry_C::BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FeatTimelineListEntry_C", "BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature");
+
+	Params::FeatTimelineListEntry_C_BndEvt__SimpleButton_ClickArea_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FeatTimelineListEntry.FeatTimelineListEntry_C.HoverFeat
+// (Event, Public, BlueprintEvent)
+
+void UFeatTimelineListEntry_C::HoverFeat()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FeatTimelineListEntry_C", "HoverFeat");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FeatTimelineListEntry.FeatTimelineListEntry_C.UnHoverFeat
+// (Event, Public, BlueprintEvent)
+
+void UFeatTimelineListEntry_C::UnHoverFeat()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FeatTimelineListEntry_C", "UnHoverFeat");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FeatTimelineListEntry.FeatTimelineListEntry_C.ExecuteUbergraph_FeatTimelineListEntry
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UFeatTimelineListEntry_C::ExecuteUbergraph_FeatTimelineListEntry(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FeatTimelineListEntry_C", "ExecuteUbergraph_FeatTimelineListEntry");
+
+	Params::FeatTimelineListEntry_C_ExecuteUbergraph_FeatTimelineListEntry Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

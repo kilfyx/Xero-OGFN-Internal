@@ -22,7 +22,7 @@ namespace SDK
 class ULogOptions final : public UObject
 {
 public:
-	TArray<struct FLogSubmitOptions>              LogOptions;                                        // 0x0028(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FLogSubmitOptions>              LogOptions;                                        // 0x0028(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -34,6 +34,9 @@ public:
 		return GetDefaultObjImpl<ULogOptions>();
 	}
 };
+static_assert(alignof(ULogOptions) == 0x000008, "Wrong alignment on ULogOptions");
+static_assert(sizeof(ULogOptions) == 0x000038, "Wrong size on ULogOptions");
+static_assert(offsetof(ULogOptions, LogOptions) == 0x000028, "Member 'ULogOptions::LogOptions' has a wrong offset!");
 
 }
 

@@ -17,58 +17,6 @@
 namespace SDK
 {
 
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class AFortWaterBodyActor*              WaterBody                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFortWaterInteractionComponent*   WaterInteractionComponent_0                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsFirstBody                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Prj_Athena_Consumable_Thrown_C::BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature");
-
-	Params::B_Prj_Athena_Consumable_Thrown_C_BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature Parms{};
-
-	Parms.WaterBody = WaterBody;
-	Parms.WaterInteractionComponent_0 = WaterInteractionComponent_0;
-	Parms.bIsFirstBody = bIsFirstBody;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.Broadcast Pickup Projectile Created
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Athena_Consumable_Thrown_C::Broadcast_Pickup_Projectile_Created()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "Broadcast Pickup Projectile Created");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.Deactivate Trail FX System
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Athena_Consumable_Thrown_C::Deactivate_Trail_FX_System()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "Deactivate Trail FX System");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.ExecuteUbergraph_B_Prj_Athena_Consumable_Thrown
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -89,24 +37,55 @@ void AB_Prj_Athena_Consumable_Thrown_C::ExecuteUbergraph_B_Prj_Athena_Consumable
 }
 
 
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.Get Spawned Pickup Optional Owner PC
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortPlayerController**           Optional_Owner_PC                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.WaterImpactItemFX
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 
-void AB_Prj_Athena_Consumable_Thrown_C::Get_Spawned_Pickup_Optional_Owner_PC(class AFortPlayerController** Optional_Owner_PC)
+void AB_Prj_Athena_Consumable_Thrown_C::WaterImpactItemFX()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "Get Spawned Pickup Optional Owner PC");
+		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "WaterImpactItemFX");
 
-	Params::B_Prj_Athena_Consumable_Thrown_C_Get_Spawned_Pickup_Optional_Owner_PC Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.SpawnItem
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_Athena_Consumable_Thrown_C::SpawnItem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "SpawnItem");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class AFortWaterBodyActor*              WaterBody                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortWaterInteractionComponent*   WaterInteractionComponent_0                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsFirstBody                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_Prj_Athena_Consumable_Thrown_C::BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature");
+
+	Params::B_Prj_Athena_Consumable_Thrown_C_BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature Parms{};
+
+	Parms.WaterBody = WaterBody;
+	Parms.WaterInteractionComponent_0 = WaterInteractionComponent_0;
+	Parms.bIsFirstBody = bIsFirstBody;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Optional_Owner_PC != nullptr)
-		*Optional_Owner_PC = Parms.Optional_Owner_PC;
 }
 
 
@@ -130,21 +109,37 @@ void AB_Prj_Athena_Consumable_Thrown_C::Mark(class AActor* NewParam)
 }
 
 
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.On Pickup Spawned
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortPickup*                      Spawned_Pickup                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.SpawnedItemFx
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
-void AB_Prj_Athena_Consumable_Thrown_C::On_Pickup_Spawned(class AFortPickup* Spawned_Pickup)
+void AB_Prj_Athena_Consumable_Thrown_C::SpawnedItemFx()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "On Pickup Spawned");
+		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "SpawnedItemFx");
 
-	Params::B_Prj_Athena_Consumable_Thrown_C_On_Pickup_Spawned Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Spawned_Pickup = Spawned_Pickup;
+
+// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.OnExploded
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+
+void AB_Prj_Athena_Consumable_Thrown_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "OnExploded");
+
+	Params::B_Prj_Athena_Consumable_Thrown_C_OnExploded Parms{};
+
+	Parms.HitActors = std::move(HitActors);
+	Parms.HitResults = std::move(HitResults);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -170,25 +165,17 @@ void AB_Prj_Athena_Consumable_Thrown_C::OnBounce(const struct FHitResult& Hit)
 }
 
 
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.OnExploded
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.OnReachedLockTargetDistanceThreshold
+// (Event, Public, BlueprintEvent)
 
-void AB_Prj_Athena_Consumable_Thrown_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
+void AB_Prj_Athena_Consumable_Thrown_C::OnReachedLockTargetDistanceThreshold()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "OnExploded");
+		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "OnReachedLockTargetDistanceThreshold");
 
-	Params::B_Prj_Athena_Consumable_Thrown_C_OnExploded Parms{};
-
-	Parms.HitActors = std::move(HitActors);
-	Parms.HitResults = std::move(HitResults);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -206,15 +193,49 @@ void AB_Prj_Athena_Consumable_Thrown_C::OnHomingPassedTarget()
 }
 
 
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.OnReachedLockTargetDistanceThreshold
-// (Event, Public, BlueprintEvent)
+// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.Timeout
+// (BlueprintCallable, BlueprintEvent)
 
-void AB_Prj_Athena_Consumable_Thrown_C::OnReachedLockTargetDistanceThreshold()
+void AB_Prj_Athena_Consumable_Thrown_C::Timeout()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "OnReachedLockTargetDistanceThreshold");
+		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "Timeout");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.OnStop
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void AB_Prj_Athena_Consumable_Thrown_C::OnStop(const struct FHitResult& Hit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "OnStop");
+
+	Params::B_Prj_Athena_Consumable_Thrown_C_OnStop Parms{};
+
+	Parms.Hit = std::move(Hit);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AB_Prj_Athena_Consumable_Thrown_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -243,130 +264,6 @@ void AB_Prj_Athena_Consumable_Thrown_C::OnRep_Pickup()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "OnRep_Pickup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.OnStop
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void AB_Prj_Athena_Consumable_Thrown_C::OnStop(const struct FHitResult& Hit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "OnStop");
-
-	Params::B_Prj_Athena_Consumable_Thrown_C_OnStop Parms{};
-
-	Parms.Hit = std::move(Hit);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.PlayThrowSound
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Athena_Consumable_Thrown_C::PlayThrowSound()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "PlayThrowSound");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AB_Prj_Athena_Consumable_Thrown_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.SetItemDefinition
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFortWorldItemDefinition*         In_Item_Definition                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Prj_Athena_Consumable_Thrown_C::SetItemDefinition(class UFortWorldItemDefinition* In_Item_Definition)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "SetItemDefinition");
-
-	Params::B_Prj_Athena_Consumable_Thrown_C_SetItemDefinition Parms{};
-
-	Parms.In_Item_Definition = In_Item_Definition;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.SpawnedItemFx
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Athena_Consumable_Thrown_C::SpawnedItemFx()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "SpawnedItemFx");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.SpawnItem
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Athena_Consumable_Thrown_C::SpawnItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "SpawnItem");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.Timeout
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Athena_Consumable_Thrown_C::Timeout()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "Timeout");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_Consumable_Thrown.B_Prj_Athena_Consumable_Thrown_C.WaterImpactItemFX
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Athena_Consumable_Thrown_C::WaterImpactItemFX()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_Consumable_Thrown_C", "WaterImpactItemFX");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -37,10 +37,30 @@ void UUnderwaterAudioComponent_C::ExecuteUbergraph_UnderwaterAudioComponent(int3
 }
 
 
+// Function UnderwaterAudioComponent.UnderwaterAudioComponent_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUnderwaterAudioComponent_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UnderwaterAudioComponent_C", "ReceiveEndPlay");
+
+	Params::UnderwaterAudioComponent_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function UnderwaterAudioComponent.UnderwaterAudioComponent_C.On Camera Underwater State Changed
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bIsUnderWater                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsUnderWater                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // float                                   DepthUnderwater                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UUnderwaterAudioComponent_C::On_Camera_Underwater_State_Changed(bool bIsUnderWater, float DepthUnderwater)
@@ -70,26 +90,6 @@ void UUnderwaterAudioComponent_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("UnderwaterAudioComponent_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UnderwaterAudioComponent.UnderwaterAudioComponent_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UUnderwaterAudioComponent_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UnderwaterAudioComponent_C", "ReceiveEndPlay");
-
-	Params::UnderwaterAudioComponent_C_ReceiveEndPlay Parms{};
-
-	Parms.EndPlayReason = EndPlayReason;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

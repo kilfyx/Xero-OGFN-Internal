@@ -17,8 +17,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_TillLandFallDamageImmunity_NoFX_Parent.GA_Athena_TillLandFallDamageImmunity_NoFX_Parent_C
-// 0x0000 (0x0B00 - 0x0B00)
-class UGA_Athena_TillLandFallDamageImmunity_NoFX_Parent_C : public UGA_Athena_TillLandFallDamageImmunity_Parent_C
+// 0x0000 (0x0B08 - 0x0B08)
+class UGA_Athena_TillLandFallDamageImmunity_NoFX_Parent_C final : public UGA_Athena_TillLandFallDamageImmunity_Parent_C
 {
 public:
 	static class UClass* StaticClass()
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_TillLandFallDamageImmunity_NoFX_Parent_C>();
 	}
 };
+static_assert(alignof(UGA_Athena_TillLandFallDamageImmunity_NoFX_Parent_C) == 0x000008, "Wrong alignment on UGA_Athena_TillLandFallDamageImmunity_NoFX_Parent_C");
+static_assert(sizeof(UGA_Athena_TillLandFallDamageImmunity_NoFX_Parent_C) == 0x000B08, "Wrong size on UGA_Athena_TillLandFallDamageImmunity_NoFX_Parent_C");
 
 }
 

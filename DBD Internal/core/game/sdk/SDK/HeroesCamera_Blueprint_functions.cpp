@@ -17,77 +17,45 @@
 namespace SDK
 {
 
-// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.HandleMousePress
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AHeroesCamera_Blueprint_C::ReceiveTick(float DeltaSeconds)
+void AHeroesCamera_Blueprint_C::HandleMousePress()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveTick");
+		Func = Class->GetFunction("HeroesCamera_Blueprint_C", "HandleMousePress");
 
-	Params::HeroesCamera_Blueprint_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1
-// (BlueprintEvent)
-// Parameters:
-// struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.HandleMouseRelease
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AHeroesCamera_Blueprint_C::InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1(const struct FKey& Key)
+void AHeroesCamera_Blueprint_C::HandleMouseRelease()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1");
+		Func = Class->GetFunction("HeroesCamera_Blueprint_C", "HandleMouseRelease");
 
-	Params::HeroesCamera_Blueprint_C_InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0
-// (BlueprintEvent)
-// Parameters:
-// struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void AHeroesCamera_Blueprint_C::InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0(const struct FKey& Key)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0");
-
-	Params::HeroesCamera_Blueprint_C_InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3
 // (BlueprintEvent)
 // Parameters:
-// struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
 void AHeroesCamera_Blueprint_C::InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3");
+		Func = Class->GetFunction("HeroesCamera_Blueprint_C", "InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3");
 
 	Params::HeroesCamera_Blueprint_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3 Parms{};
 
@@ -100,14 +68,14 @@ void AHeroesCamera_Blueprint_C::InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3
 // Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2
 // (BlueprintEvent)
 // Parameters:
-// struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
 void AHeroesCamera_Blueprint_C::InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2");
+		Func = Class->GetFunction("HeroesCamera_Blueprint_C", "InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2");
 
 	Params::HeroesCamera_Blueprint_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2 Parms{};
 
@@ -117,31 +85,103 @@ void AHeroesCamera_Blueprint_C::InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2
 }
 
 
-// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.HandleMouseRelease
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void AHeroesCamera_Blueprint_C::HandleMouseRelease()
+void AHeroesCamera_Blueprint_C::InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("HandleMouseRelease");
 
-	UObject::ProcessEvent(Func, nullptr);
+	if (Func == nullptr)
+		Func = Class->GetFunction("HeroesCamera_Blueprint_C", "InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1");
+
+	Params::HeroesCamera_Blueprint_C_InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.HandleMousePress
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void AHeroesCamera_Blueprint_C::HandleMousePress()
+void AHeroesCamera_Blueprint_C::InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("HandleMousePress");
 
-	UObject::ProcessEvent(Func, nullptr);
+	if (Func == nullptr)
+		Func = Class->GetFunction("HeroesCamera_Blueprint_C", "InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0");
+
+	Params::HeroesCamera_Blueprint_C_InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.OnActivated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AHeroesCamera_Blueprint_C::OnActivated(class AFortPlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HeroesCamera_Blueprint_C", "OnActivated");
+
+	Params::HeroesCamera_Blueprint_C_OnActivated Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.OnDeactivated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AHeroesCamera_Blueprint_C::OnDeactivated(class AFortPlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HeroesCamera_Blueprint_C", "OnDeactivated");
+
+	Params::HeroesCamera_Blueprint_C_OnDeactivated Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AHeroesCamera_Blueprint_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HeroesCamera_Blueprint_C", "ReceiveTick");
+
+	Params::HeroesCamera_Blueprint_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -153,53 +193,13 @@ void AHeroesCamera_Blueprint_C::HandleMousePress()
 void AHeroesCamera_Blueprint_C::ExecuteUbergraph_HeroesCamera_Blueprint(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_HeroesCamera_Blueprint");
+		Func = Class->GetFunction("HeroesCamera_Blueprint_C", "ExecuteUbergraph_HeroesCamera_Blueprint");
 
 	Params::HeroesCamera_Blueprint_C_ExecuteUbergraph_HeroesCamera_Blueprint Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.BP_OnDeactivated
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AHeroesCamera_Blueprint_C::BP_OnDeactivated(class AFortPlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnDeactivated");
-
-	Params::HeroesCamera_Blueprint_C_BP_OnDeactivated Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function HeroesCamera_Blueprint.HeroesCamera_Blueprint_C.BP_OnActivated
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AHeroesCamera_Blueprint_C::BP_OnActivated(class AFortPlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
-
-	Params::HeroesCamera_Blueprint_C_BP_OnActivated Parms{};
-
-	Parms.PlayerController = PlayerController;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

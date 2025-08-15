@@ -108,8 +108,8 @@ class UMIDIDeviceOutputController* UMIDIDeviceManager::CreateMIDIDeviceOutputCon
 // Function MIDIDevice.MIDIDeviceManager.FindAllMIDIDeviceInfo
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<struct FMIDIDeviceInfo>*         OutMIDIInputDevices                                    (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// TArray<struct FMIDIDeviceInfo>*         OutMIDIOutputDevices                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<struct FMIDIDeviceInfo>*         OutMIDIInputDevices                                    (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMIDIDeviceInfo>*         OutMIDIOutputDevices                                   (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UMIDIDeviceManager::FindAllMIDIDeviceInfo(TArray<struct FMIDIDeviceInfo>* OutMIDIInputDevices, TArray<struct FMIDIDeviceInfo>* OutMIDIOutputDevices)
 {
@@ -138,7 +138,7 @@ void UMIDIDeviceManager::FindAllMIDIDeviceInfo(TArray<struct FMIDIDeviceInfo>* O
 // Function MIDIDevice.MIDIDeviceManager.FindMIDIDevices
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<struct FFoundMIDIDevice>*        OutMIDIDevices                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<struct FFoundMIDIDevice>*        OutMIDIDevices                                         (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UMIDIDeviceManager::FindMIDIDevices(TArray<struct FFoundMIDIDevice>* OutMIDIDevices)
 {
@@ -161,19 +161,19 @@ void UMIDIDeviceManager::FindMIDIDevices(TArray<struct FFoundMIDIDevice>* OutMID
 }
 
 
-// Function MIDIDevice.MIDIDeviceManager.GetDefaultMIDIInputDeviceID
+// Function MIDIDevice.MIDIDeviceManager.GetDefaultIMIDIInputDeviceID
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // int32*                                  DeviceID                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMIDIDeviceManager::GetDefaultMIDIInputDeviceID(int32* DeviceID)
+void UMIDIDeviceManager::GetDefaultIMIDIInputDeviceID(int32* DeviceID)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("MIDIDeviceManager", "GetDefaultMIDIInputDeviceID");
+		Func = StaticClass()->GetFunction("MIDIDeviceManager", "GetDefaultIMIDIInputDeviceID");
 
-	Params::MIDIDeviceManager_GetDefaultMIDIInputDeviceID Parms{};
+	Params::MIDIDeviceManager_GetDefaultIMIDIInputDeviceID Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -187,19 +187,19 @@ void UMIDIDeviceManager::GetDefaultMIDIInputDeviceID(int32* DeviceID)
 }
 
 
-// Function MIDIDevice.MIDIDeviceManager.GetDefaultMIDIOutputDeviceID
+// Function MIDIDevice.MIDIDeviceManager.GetDefaultIMIDIOutputDeviceID
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // int32*                                  DeviceID                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMIDIDeviceManager::GetDefaultMIDIOutputDeviceID(int32* DeviceID)
+void UMIDIDeviceManager::GetDefaultIMIDIOutputDeviceID(int32* DeviceID)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("MIDIDeviceManager", "GetDefaultMIDIOutputDeviceID");
+		Func = StaticClass()->GetFunction("MIDIDeviceManager", "GetDefaultIMIDIOutputDeviceID");
 
-	Params::MIDIDeviceManager_GetDefaultMIDIOutputDeviceID Parms{};
+	Params::MIDIDeviceManager_GetDefaultIMIDIOutputDeviceID Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

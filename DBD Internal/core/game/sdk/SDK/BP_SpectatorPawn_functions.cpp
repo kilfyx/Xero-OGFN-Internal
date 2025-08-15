@@ -17,37 +17,23 @@
 namespace SDK
 {
 
-// Function BP_SpectatorPawn.BP_SpectatorPawn_C.SetSkydivingAudioEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_SpectatorPawn.BP_SpectatorPawn_C.ExecuteUbergraph_BP_SpectatorPawn
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    Enabled                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_SpectatorPawn_C::SetSkydivingAudioEnabled(bool Enabled)
+void ABP_SpectatorPawn_C::ExecuteUbergraph_BP_SpectatorPawn(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SpectatorPawn_C", "SetSkydivingAudioEnabled");
+		Func = Class->GetFunction("BP_SpectatorPawn_C", "ExecuteUbergraph_BP_SpectatorPawn");
 
-	Params::BP_SpectatorPawn_C_SetSkydivingAudioEnabled Parms{};
+	Params::BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn Parms{};
 
-	Parms.Enabled = Enabled;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_SpectatorPawn.BP_SpectatorPawn_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_SpectatorPawn_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SpectatorPawn_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -60,6 +46,20 @@ void ABP_SpectatorPawn_C::Handle_Parachute_Audio_State()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_SpectatorPawn_C", "Handle Parachute Audio State");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SpectatorPawn.BP_SpectatorPawn_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_SpectatorPawn_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SpectatorPawn_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,21 +85,21 @@ class USoundBase* ABP_SpectatorPawn_C::GetSkydivingSound()
 }
 
 
-// Function BP_SpectatorPawn.BP_SpectatorPawn_C.ExecuteUbergraph_BP_SpectatorPawn
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_SpectatorPawn.BP_SpectatorPawn_C.SetSkydivingAudioEnabled
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Enabled                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_SpectatorPawn_C::ExecuteUbergraph_BP_SpectatorPawn(int32 EntryPoint)
+void ABP_SpectatorPawn_C::SetSkydivingAudioEnabled(bool Enabled)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SpectatorPawn_C", "ExecuteUbergraph_BP_SpectatorPawn");
+		Func = Class->GetFunction("BP_SpectatorPawn_C", "SetSkydivingAudioEnabled");
 
-	Params::BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn Parms{};
+	Params::BP_SpectatorPawn_C_SetSkydivingAudioEnabled Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Enabled = Enabled;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

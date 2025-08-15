@@ -26,6 +26,11 @@ public:
 	struct FPoseLink                              InPoseUpperAndLowerCachePose;                      // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FPoseLink                              VehicleFullBodyOverride_0;                         // 0x0020(0x0010)(Parm, OutParm, NoDestructor)
 };
+static_assert(alignof(VehicleAnimLayerInterface_C_VehicleFullBodyOverride) == 0x000008, "Wrong alignment on VehicleAnimLayerInterface_C_VehicleFullBodyOverride");
+static_assert(sizeof(VehicleAnimLayerInterface_C_VehicleFullBodyOverride) == 0x000030, "Wrong size on VehicleAnimLayerInterface_C_VehicleFullBodyOverride");
+static_assert(offsetof(VehicleAnimLayerInterface_C_VehicleFullBodyOverride, InPoseFullBody) == 0x000000, "Member 'VehicleAnimLayerInterface_C_VehicleFullBodyOverride::InPoseFullBody' has a wrong offset!");
+static_assert(offsetof(VehicleAnimLayerInterface_C_VehicleFullBodyOverride, InPoseUpperAndLowerCachePose) == 0x000010, "Member 'VehicleAnimLayerInterface_C_VehicleFullBodyOverride::InPoseUpperAndLowerCachePose' has a wrong offset!");
+static_assert(offsetof(VehicleAnimLayerInterface_C_VehicleFullBodyOverride, VehicleFullBodyOverride_0) == 0x000020, "Member 'VehicleAnimLayerInterface_C_VehicleFullBodyOverride::VehicleFullBodyOverride_0' has a wrong offset!");
 
 // Function VehicleAnimLayerInterface.VehicleAnimLayerInterface_C.VehicleLowerBodyOverride
 // 0x0030 (0x0030 - 0x0000)
@@ -36,6 +41,11 @@ public:
 	struct FPoseLink                              InPoseUpperBody;                                   // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FPoseLink                              VehicleLowerBodyOverride_0;                        // 0x0020(0x0010)(Parm, OutParm, NoDestructor)
 };
+static_assert(alignof(VehicleAnimLayerInterface_C_VehicleLowerBodyOverride) == 0x000008, "Wrong alignment on VehicleAnimLayerInterface_C_VehicleLowerBodyOverride");
+static_assert(sizeof(VehicleAnimLayerInterface_C_VehicleLowerBodyOverride) == 0x000030, "Wrong size on VehicleAnimLayerInterface_C_VehicleLowerBodyOverride");
+static_assert(offsetof(VehicleAnimLayerInterface_C_VehicleLowerBodyOverride, InPoseLowerBodyDefault) == 0x000000, "Member 'VehicleAnimLayerInterface_C_VehicleLowerBodyOverride::InPoseLowerBodyDefault' has a wrong offset!");
+static_assert(offsetof(VehicleAnimLayerInterface_C_VehicleLowerBodyOverride, InPoseUpperBody) == 0x000010, "Member 'VehicleAnimLayerInterface_C_VehicleLowerBodyOverride::InPoseUpperBody' has a wrong offset!");
+static_assert(offsetof(VehicleAnimLayerInterface_C_VehicleLowerBodyOverride, VehicleLowerBodyOverride_0) == 0x000020, "Member 'VehicleAnimLayerInterface_C_VehicleLowerBodyOverride::VehicleLowerBodyOverride_0' has a wrong offset!");
 
 // Function VehicleAnimLayerInterface.VehicleAnimLayerInterface_C.VehicleSplitBodyOverride
 // 0x00B0 (0x00B0 - 0x0000)
@@ -48,6 +58,13 @@ public:
 	struct FPoseLink                              InPoseUpperAndLowerBodyRemoveRoot;                 // 0x0090(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FPoseLink                              VehicleSplitBodyOverride_0;                        // 0x00A0(0x0010)(Parm, OutParm, NoDestructor)
 };
+static_assert(alignof(VehicleAnimLayerInterface_C_VehicleSplitBodyOverride) == 0x000008, "Wrong alignment on VehicleAnimLayerInterface_C_VehicleSplitBodyOverride");
+static_assert(sizeof(VehicleAnimLayerInterface_C_VehicleSplitBodyOverride) == 0x0000B0, "Wrong size on VehicleAnimLayerInterface_C_VehicleSplitBodyOverride");
+static_assert(offsetof(VehicleAnimLayerInterface_C_VehicleSplitBodyOverride, InPoseSplitBody) == 0x000000, "Member 'VehicleAnimLayerInterface_C_VehicleSplitBodyOverride::InPoseSplitBody' has a wrong offset!");
+static_assert(offsetof(VehicleAnimLayerInterface_C_VehicleSplitBodyOverride, InPoseUpperAndLowerBody) == 0x000010, "Member 'VehicleAnimLayerInterface_C_VehicleSplitBodyOverride::InPoseUpperAndLowerBody' has a wrong offset!");
+static_assert(offsetof(VehicleAnimLayerInterface_C_VehicleSplitBodyOverride, TurnInPlace) == 0x000020, "Member 'VehicleAnimLayerInterface_C_VehicleSplitBodyOverride::TurnInPlace' has a wrong offset!");
+static_assert(offsetof(VehicleAnimLayerInterface_C_VehicleSplitBodyOverride, InPoseUpperAndLowerBodyRemoveRoot) == 0x000090, "Member 'VehicleAnimLayerInterface_C_VehicleSplitBodyOverride::InPoseUpperAndLowerBodyRemoveRoot' has a wrong offset!");
+static_assert(offsetof(VehicleAnimLayerInterface_C_VehicleSplitBodyOverride, VehicleSplitBodyOverride_0) == 0x0000A0, "Member 'VehicleAnimLayerInterface_C_VehicleSplitBodyOverride::VehicleSplitBodyOverride_0' has a wrong offset!");
 
 }
 

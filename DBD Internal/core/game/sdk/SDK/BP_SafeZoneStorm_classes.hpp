@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteGame_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -61,23 +61,23 @@ public:
 	class UStaticMeshComponent*                   StormRings;                                        // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   StormQuadMain;                                     // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0370(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          MobileMode;                                        // 0x0378(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShowStorm;                                         // 0x0379(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          MobileMode;                                        // 0x0378(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	bool                                          ShowStorm;                                         // 0x0379(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_37A[0x2];                                      // 0x037A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         StormSize;                                         // 0x037C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                         StormBias;                                         // 0x0380(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                StormCenter;                                       // 0x0384(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseNewStorm;                                       // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseSeason11Storm;                                  // 0x0391(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseVolumetricStorm;                                // 0x0392(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseNewStorm;                                       // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          UseSeason11Storm;                                  // 0x0391(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          UseVolumetricStorm;                                // 0x0392(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void UserConstructionScript();
+	void ExecuteUbergraph_BP_SafeZoneStorm(int32 EntryPoint);
 	void ShowStormScreenEffect(bool Show);
 	void ShowClouds(float Amount);
-	void ReceiveBeginPlay();
 	void MobileClouds(bool Mobile);
-	void ExecuteUbergraph_BP_SafeZoneStorm(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()
@@ -89,6 +89,54 @@ public:
 		return GetDefaultObjImpl<ABP_SafeZoneStorm_C>();
 	}
 };
+static_assert(alignof(ABP_SafeZoneStorm_C) == 0x000008, "Wrong alignment on ABP_SafeZoneStorm_C");
+static_assert(sizeof(ABP_SafeZoneStorm_C) == 0x000398, "Wrong size on ABP_SafeZoneStorm_C");
+static_assert(offsetof(ABP_SafeZoneStorm_C, UberGraphFrame) == 0x000248, "Member 'ABP_SafeZoneStorm_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, SM_CloudBottomBlend) == 0x000250, "Member 'ABP_SafeZoneStorm_C::SM_CloudBottomBlend' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, SM_CloudRing_Mobile) == 0x000258, "Member 'ABP_SafeZoneStorm_C::SM_CloudRing_Mobile' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, SM_CloudRingTopBlend) == 0x000260, "Member 'ABP_SafeZoneStorm_C::SM_CloudRingTopBlend' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, SM_Storm_ScreenEffect) == 0x000268, "Member 'ABP_SafeZoneStorm_C::SM_Storm_ScreenEffect' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, PostProcess) == 0x000270, "Member 'ABP_SafeZoneStorm_C::PostProcess' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, Box) == 0x000278, "Member 'ABP_SafeZoneStorm_C::Box' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, CloudsOuterRing) == 0x000280, "Member 'ABP_SafeZoneStorm_C::CloudsOuterRing' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StaticMesh10) == 0x000288, "Member 'ABP_SafeZoneStorm_C::StaticMesh10' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StaticMesh9) == 0x000290, "Member 'ABP_SafeZoneStorm_C::StaticMesh9' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StaticMesh8) == 0x000298, "Member 'ABP_SafeZoneStorm_C::StaticMesh8' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StaticMesh7) == 0x0002A0, "Member 'ABP_SafeZoneStorm_C::StaticMesh7' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StaticMesh6) == 0x0002A8, "Member 'ABP_SafeZoneStorm_C::StaticMesh6' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StaticMesh5) == 0x0002B0, "Member 'ABP_SafeZoneStorm_C::StaticMesh5' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StaticMesh4) == 0x0002B8, "Member 'ABP_SafeZoneStorm_C::StaticMesh4' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StaticMesh3) == 0x0002C0, "Member 'ABP_SafeZoneStorm_C::StaticMesh3' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StaticMesh2) == 0x0002C8, "Member 'ABP_SafeZoneStorm_C::StaticMesh2' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StaticMesh1) == 0x0002D0, "Member 'ABP_SafeZoneStorm_C::StaticMesh1' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StaticMesh) == 0x0002D8, "Member 'ABP_SafeZoneStorm_C::StaticMesh' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain16) == 0x0002E0, "Member 'ABP_SafeZoneStorm_C::StormQuadMain16' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain15) == 0x0002E8, "Member 'ABP_SafeZoneStorm_C::StormQuadMain15' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain1) == 0x0002F0, "Member 'ABP_SafeZoneStorm_C::StormQuadMain1' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain13) == 0x0002F8, "Member 'ABP_SafeZoneStorm_C::StormQuadMain13' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain12) == 0x000300, "Member 'ABP_SafeZoneStorm_C::StormQuadMain12' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain11) == 0x000308, "Member 'ABP_SafeZoneStorm_C::StormQuadMain11' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain10) == 0x000310, "Member 'ABP_SafeZoneStorm_C::StormQuadMain10' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain9) == 0x000318, "Member 'ABP_SafeZoneStorm_C::StormQuadMain9' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain8) == 0x000320, "Member 'ABP_SafeZoneStorm_C::StormQuadMain8' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain7) == 0x000328, "Member 'ABP_SafeZoneStorm_C::StormQuadMain7' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain6) == 0x000330, "Member 'ABP_SafeZoneStorm_C::StormQuadMain6' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain5) == 0x000338, "Member 'ABP_SafeZoneStorm_C::StormQuadMain5' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain4) == 0x000340, "Member 'ABP_SafeZoneStorm_C::StormQuadMain4' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain3) == 0x000348, "Member 'ABP_SafeZoneStorm_C::StormQuadMain3' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain2) == 0x000350, "Member 'ABP_SafeZoneStorm_C::StormQuadMain2' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain14) == 0x000358, "Member 'ABP_SafeZoneStorm_C::StormQuadMain14' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormRings) == 0x000360, "Member 'ABP_SafeZoneStorm_C::StormRings' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormQuadMain) == 0x000368, "Member 'ABP_SafeZoneStorm_C::StormQuadMain' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, DefaultSceneRoot) == 0x000370, "Member 'ABP_SafeZoneStorm_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, MobileMode) == 0x000378, "Member 'ABP_SafeZoneStorm_C::MobileMode' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, ShowStorm) == 0x000379, "Member 'ABP_SafeZoneStorm_C::ShowStorm' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormSize) == 0x00037C, "Member 'ABP_SafeZoneStorm_C::StormSize' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormBias) == 0x000380, "Member 'ABP_SafeZoneStorm_C::StormBias' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, StormCenter) == 0x000384, "Member 'ABP_SafeZoneStorm_C::StormCenter' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, UseNewStorm) == 0x000390, "Member 'ABP_SafeZoneStorm_C::UseNewStorm' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, UseSeason11Storm) == 0x000391, "Member 'ABP_SafeZoneStorm_C::UseSeason11Storm' has a wrong offset!");
+static_assert(offsetof(ABP_SafeZoneStorm_C, UseVolumetricStorm) == 0x000392, "Member 'ABP_SafeZoneStorm_C::UseVolumetricStorm' has a wrong offset!");
 
 }
 

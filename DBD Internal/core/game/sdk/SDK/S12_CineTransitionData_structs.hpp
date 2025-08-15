@@ -19,7 +19,7 @@ namespace SDK
 struct FS12_CineTransitionData final
 {
 public:
-	class USoundBase*                             Asset_5_259C55D44FF93843FB335A809DA62A60;          // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Asset_5_259C55D44FF93843FB335A809DA62A60;          // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Offset_8_666511AB4581BEDE8FBD39BD6B910118;         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FS12_CineTransitionData) == 0x000008, "Wrong alignment on FS12_CineTransitionData");

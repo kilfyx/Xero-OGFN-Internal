@@ -17,15 +17,55 @@
 namespace SDK
 {
 
-// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.ExecuteUbergraph_BGA_Athena_FlopperSpawn_Parent
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABGA_Athena_FlopperSpawn_Parent_C::UserConstructionScript()
+void ABGA_Athena_FlopperSpawn_Parent_C::ExecuteUbergraph_BGA_Athena_FlopperSpawn_Parent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "UserConstructionScript");
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "ExecuteUbergraph_BGA_Athena_FlopperSpawn_Parent");
+
+	Params::BGA_Athena_FlopperSpawn_Parent_C_ExecuteUbergraph_BGA_Athena_FlopperSpawn_Parent Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.HideAndDelayForRespawn
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   TimeToDelay                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_Athena_FlopperSpawn_Parent_C::HideAndDelayForRespawn(float TimeToDelay)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "HideAndDelayForRespawn");
+
+	Params::BGA_Athena_FlopperSpawn_Parent_C_HideAndDelayForRespawn Parms{};
+
+	Parms.TimeToDelay = TimeToDelay;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.Clear Saved Collection Data
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_FlopperSpawn_Parent_C::Clear_Saved_Collection_Data()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "Clear Saved Collection Data");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -34,13 +74,13 @@ void ABGA_Athena_FlopperSpawn_Parent_C::UserConstructionScript()
 // Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.UpdateCollectionsComponent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bCaughtFish                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bCaughtFish                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class AActor*                           Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UFortItemDefinition*              ItemDefinition                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AFortPickup*                      PickUp                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortPickup*                      Pickup                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   Length                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABGA_Athena_FlopperSpawn_Parent_C::UpdateCollectionsComponent(bool bCaughtFish, class AActor* Player, class UFortItemDefinition* ItemDefinition, class AFortPickup* PickUp, float Length)
+void ABGA_Athena_FlopperSpawn_Parent_C::UpdateCollectionsComponent(bool bCaughtFish, class AActor* Player, class UFortItemDefinition* ItemDefinition, class AFortPickup* Pickup, float Length)
 {
 	static class UFunction* Func = nullptr;
 
@@ -52,7 +92,7 @@ void ABGA_Athena_FlopperSpawn_Parent_C::UpdateCollectionsComponent(bool bCaughtF
 	Parms.bCaughtFish = bCaughtFish;
 	Parms.Player = Player;
 	Parms.ItemDefinition = ItemDefinition;
-	Parms.PickUp = PickUp;
+	Parms.Pickup = Pickup;
 	Parms.Length = Length;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -63,13 +103,13 @@ void ABGA_Athena_FlopperSpawn_Parent_C::UpdateCollectionsComponent(bool bCaughtF
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Hooked                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Hooked                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class USceneComponent*                  HookComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   SpawnLoc                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   ItemSpawnDelay                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CaughtWithFishingRod                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CaughtWithHappyGhost                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CaughtWithFishingRod                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    CaughtWithHappyGhost                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class AActor*                           ItemUsedToFish                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class APrj_Athena_FloppingRabbit_C*     Projectile_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayTagContainer&     Required_Tags                                          (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -99,74 +139,6 @@ void ABGA_Athena_FlopperSpawn_Parent_C::SpawnItem(class AActor* Target, bool Hoo
 }
 
 
-// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.SomethingCaught
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortPickup*                      ItemSpawned                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTagContainer&     RequiredTags                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// class USceneComponent*                  HookComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_FlopperSpawn_Parent_C::SomethingCaught(class AFortPickup* ItemSpawned, class AActor* Player, const struct FGameplayTagContainer& RequiredTags, class USceneComponent* HookComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "SomethingCaught");
-
-	Params::BGA_Athena_FlopperSpawn_Parent_C_SomethingCaught Parms{};
-
-	Parms.ItemSpawned = ItemSpawned;
-	Parms.Player = Player;
-	Parms.RequiredTags = std::move(RequiredTags);
-	Parms.HookComponent = HookComponent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.ShouldKill
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_FlopperSpawn_Parent_C::ShouldKill()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "ShouldKill");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.SetRespawnDelay
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_FlopperSpawn_Parent_C::SetRespawnDelay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "SetRespawnDelay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.SetBalanceValues
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_FlopperSpawn_Parent_C::SetBalanceValues()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "SetBalanceValues");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -176,6 +148,20 @@ void ABGA_Athena_FlopperSpawn_Parent_C::ReceiveBeginPlay()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.FishingComplete
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_FlopperSpawn_Parent_C::FishingComplete()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "FishingComplete");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -198,6 +184,50 @@ void ABGA_Athena_FlopperSpawn_Parent_C::PlaySpawnItemHightier(const struct FVect
 	Parms.Location = std::move(Location);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.BndEvt__OverlapVolume_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
+// (HasOutParams, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void ABGA_Athena_FlopperSpawn_Parent_C::BndEvt__OverlapVolume_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "BndEvt__OverlapVolume_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+
+	Params::BGA_Athena_FlopperSpawn_Parent_C_BndEvt__OverlapVolume_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature Parms{};
+
+	Parms.OverlappedComponent = OverlappedComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
+	Parms.bFromSweep = bFromSweep;
+	Parms.SweepResult = std::move(SweepResult);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.HideAndKill
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_FlopperSpawn_Parent_C::HideAndKill()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "HideAndKill");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -225,37 +255,31 @@ void ABGA_Athena_FlopperSpawn_Parent_C::OnReady_5804F209455A50B3EE64E3AED087DE64
 }
 
 
-// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.HideAndKill
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABGA_Athena_FlopperSpawn_Parent_C::HideAndKill()
+void ABGA_Athena_FlopperSpawn_Parent_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "HideAndKill");
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.HideAndDelayForRespawn
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   TimeToDelay                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.SetBalanceValues
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABGA_Athena_FlopperSpawn_Parent_C::HideAndDelayForRespawn(float TimeToDelay)
+void ABGA_Athena_FlopperSpawn_Parent_C::SetBalanceValues()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "HideAndDelayForRespawn");
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "SetBalanceValues");
 
-	Params::BGA_Athena_FlopperSpawn_Parent_C_HideAndDelayForRespawn Parms{};
-
-	Parms.TimeToDelay = TimeToDelay;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -273,11 +297,25 @@ void ABGA_Athena_FlopperSpawn_Parent_C::HandleUseTracking()
 }
 
 
+// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.ShouldKill
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_FlopperSpawn_Parent_C::ShouldKill()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "ShouldKill");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.GetLootTier
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsExplosion                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsProFishingRod                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsExplosion                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsProFishingRod                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class FName*                            Output_Get                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABGA_Athena_FlopperSpawn_Parent_C::GetLootTier(bool IsExplosion, bool IsProFishingRod, class FName* Output_Get)
@@ -299,79 +337,15 @@ void ABGA_Athena_FlopperSpawn_Parent_C::GetLootTier(bool IsExplosion, bool IsPro
 }
 
 
-// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.FishingComplete
-// (BlueprintCallable, BlueprintEvent)
+// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.SetRespawnDelay
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABGA_Athena_FlopperSpawn_Parent_C::FishingComplete()
+void ABGA_Athena_FlopperSpawn_Parent_C::SetRespawnDelay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "FishingComplete");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.FindFishSize
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const TMap<struct FGameplayTag, struct FScalableFloat>&FishSizeMap_0                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class UFortItemDefinition*              ItemDef                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FScalableFloat*                  FishSize                                               (Parm, OutParm)
-// bool*                                   Found                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_FlopperSpawn_Parent_C::FindFishSize(const TMap<struct FGameplayTag, struct FScalableFloat>& FishSizeMap_0, class UFortItemDefinition* ItemDef, struct FScalableFloat* FishSize, bool* Found)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "FindFishSize");
-
-	Params::BGA_Athena_FlopperSpawn_Parent_C_FindFishSize Parms{};
-
-	Parms.FishSizeMap_0 = std::move(FishSizeMap_0);
-	Parms.ItemDef = ItemDef;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (FishSize != nullptr)
-		*FishSize = std::move(Parms.FishSize);
-
-	if (Found != nullptr)
-		*Found = Parms.Found;
-}
-
-
-// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.ExecuteUbergraph_BGA_Athena_FlopperSpawn_Parent
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_FlopperSpawn_Parent_C::ExecuteUbergraph_BGA_Athena_FlopperSpawn_Parent(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "ExecuteUbergraph_BGA_Athena_FlopperSpawn_Parent");
-
-	Params::BGA_Athena_FlopperSpawn_Parent_C_ExecuteUbergraph_BGA_Athena_FlopperSpawn_Parent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.Clear Saved Collection Data
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_FlopperSpawn_Parent_C::Clear_Saved_Collection_Data()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "Clear Saved Collection Data");
+		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "SetRespawnDelay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -380,7 +354,7 @@ void ABGA_Athena_FlopperSpawn_Parent_C::Clear_Saved_Collection_Data()
 // Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.Can Respawn
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool ABGA_Athena_FlopperSpawn_Parent_C::Can_Respawn()
 {
@@ -397,43 +371,13 @@ bool ABGA_Athena_FlopperSpawn_Parent_C::Can_Respawn()
 }
 
 
-// Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.BndEvt__OverlapVolume_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParams, BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void ABGA_Athena_FlopperSpawn_Parent_C::BndEvt__OverlapVolume_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_FlopperSpawn_Parent_C", "BndEvt__OverlapVolume_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
-
-	Params::BGA_Athena_FlopperSpawn_Parent_C_BndEvt__OverlapVolume_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature Parms{};
-
-	Parms.OverlappedComponent = OverlappedComponent;
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.OtherBodyIndex = OtherBodyIndex;
-	Parms.bFromSweep = bFromSweep;
-	Parms.SweepResult = std::move(SweepResult);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BGA_Athena_FlopperSpawn_Parent.BGA_Athena_FlopperSpawn_Parent_C.BlueprintCanInteract
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool ABGA_Athena_FlopperSpawn_Parent_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
 {

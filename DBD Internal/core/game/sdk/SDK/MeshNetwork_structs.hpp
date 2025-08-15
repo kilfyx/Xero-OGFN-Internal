@@ -36,13 +36,16 @@ enum class EMeshNetworkRelevancy : uint8
 	EMeshNetworkRelevancy_MAX                = 3,
 };
 
-// ScriptStruct MeshNetwork.MeshMetaDataStruct
-// 0x0000 (0x0000 - 0x0000)
-#pragma pack(push, 0x1)
-struct alignas(0x01) FMeshMetaDataStruct
+// ScriptStruct MeshNetwork.NoAggregationParameters
+// 0x0050 (0x0050 - 0x0000)
+struct FNoAggregationParameters final
 {
+public:
+	TSet<class FName>                             Parameters;                                        // 0x0000(0x0050)(Edit, NativeAccessSpecifierPublic)
 };
-#pragma pack(pop)
+static_assert(alignof(FNoAggregationParameters) == 0x000008, "Wrong alignment on FNoAggregationParameters");
+static_assert(sizeof(FNoAggregationParameters) == 0x000050, "Wrong size on FNoAggregationParameters");
+static_assert(offsetof(FNoAggregationParameters, Parameters) == 0x000000, "Member 'FNoAggregationParameters::Parameters' has a wrong offset!");
 
 // ScriptStruct MeshNetwork.AggregatedFunction
 // 0x0028 (0x0028 - 0x0000)
@@ -52,14 +55,19 @@ public:
 	class UFunction*                              Function;                                          // 0x0000(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x20];                                       // 0x0008(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FAggregatedFunction) == 0x000008, "Wrong alignment on FAggregatedFunction");
+static_assert(sizeof(FAggregatedFunction) == 0x000028, "Wrong size on FAggregatedFunction");
+static_assert(offsetof(FAggregatedFunction, Function) == 0x000000, "Member 'FAggregatedFunction::Function' has a wrong offset!");
 
-// ScriptStruct MeshNetwork.NoAggregationParameters
-// 0x0050 (0x0050 - 0x0000)
-struct FNoAggregationParameters final
+// ScriptStruct MeshNetwork.MeshMetaDataStruct
+// 0x0001 (0x0001 - 0x0000)
+struct FMeshMetaDataStruct final
 {
 public:
-	TSet<class FName>                             Parameters;                                        // 0x0000(0x0050)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FMeshMetaDataStruct) == 0x000001, "Wrong alignment on FMeshMetaDataStruct");
+static_assert(sizeof(FMeshMetaDataStruct) == 0x000001, "Wrong size on FMeshMetaDataStruct");
 
 }
 

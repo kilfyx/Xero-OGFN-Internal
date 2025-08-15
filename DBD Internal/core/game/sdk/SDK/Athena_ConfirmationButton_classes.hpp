@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Athena_ConfirmationButton.Athena_ConfirmationButton_C
-// 0x0000 (0x1040 - 0x1040)
+// 0x0000 (0x0CB0 - 0x0CB0)
 class UAthena_ConfirmationButton_C final : public UIconTextButton_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UAthena_ConfirmationButton_C>();
 	}
 };
+static_assert(alignof(UAthena_ConfirmationButton_C) == 0x000008, "Wrong alignment on UAthena_ConfirmationButton_C");
+static_assert(sizeof(UAthena_ConfirmationButton_C) == 0x000CB0, "Wrong size on UAthena_ConfirmationButton_C");
 
 }
 

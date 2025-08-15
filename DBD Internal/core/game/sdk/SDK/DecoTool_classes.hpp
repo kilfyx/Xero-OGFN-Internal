@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass DecoTool.DecoTool_C
-// 0x0000 (0x14B8 - 0x14B8)
+// 0x0000 (0x0D60 - 0x0D60)
 class ADecoTool_C final : public AFortDecoTool
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ADecoTool_C>();
 	}
 };
+static_assert(alignof(ADecoTool_C) == 0x000008, "Wrong alignment on ADecoTool_C");
+static_assert(sizeof(ADecoTool_C) == 0x000D60, "Wrong size on ADecoTool_C");
 
 }
 

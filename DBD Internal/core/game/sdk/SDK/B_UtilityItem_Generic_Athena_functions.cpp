@@ -17,10 +17,30 @@
 namespace SDK
 {
 
+// Function B_UtilityItem_Generic_Athena.B_UtilityItem_Generic_Athena_C.ExecuteUbergraph_B_UtilityItem_Generic_Athena
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_UtilityItem_Generic_Athena_C::ExecuteUbergraph_B_UtilityItem_Generic_Athena(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_UtilityItem_Generic_Athena_C", "ExecuteUbergraph_B_UtilityItem_Generic_Athena");
+
+	Params::B_UtilityItem_Generic_Athena_C_ExecuteUbergraph_B_UtilityItem_Generic_Athena Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_UtilityItem_Generic_Athena.B_UtilityItem_Generic_Athena_C.ThrowConsumableHudActionKey_Visible
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AB_UtilityItem_Generic_Athena_C::ThrowConsumableHudActionKey_Visible(bool Visible)
 {
@@ -40,7 +60,7 @@ void AB_UtilityItem_Generic_Athena_C::ThrowConsumableHudActionKey_Visible(bool V
 // Function B_UtilityItem_Generic_Athena.B_UtilityItem_Generic_Athena_C.ThrowConsumableHudActionKey_Targeting
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Targeting                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Targeting                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AB_UtilityItem_Generic_Athena_C::ThrowConsumableHudActionKey_Targeting(bool Targeting)
 {
@@ -68,26 +88,6 @@ void AB_UtilityItem_Generic_Athena_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("B_UtilityItem_Generic_Athena_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_UtilityItem_Generic_Athena.B_UtilityItem_Generic_Athena_C.ExecuteUbergraph_B_UtilityItem_Generic_Athena
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_UtilityItem_Generic_Athena_C::ExecuteUbergraph_B_UtilityItem_Generic_Athena(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_UtilityItem_Generic_Athena_C", "ExecuteUbergraph_B_UtilityItem_Generic_Athena");
-
-	Params::B_UtilityItem_Generic_Athena_C_ExecuteUbergraph_B_UtilityItem_Generic_Athena Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

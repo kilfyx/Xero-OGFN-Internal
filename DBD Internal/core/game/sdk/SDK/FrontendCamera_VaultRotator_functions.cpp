@@ -25,13 +25,53 @@ namespace SDK
 void AFrontendCamera_VaultRotator_C::SetVaultRotatorLighting(class FName ItemRotatorTag)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetVaultRotatorLighting");
+		Func = Class->GetFunction("FrontendCamera_VaultRotator_C", "SetVaultRotatorLighting");
 
 	Params::FrontendCamera_VaultRotator_C_SetVaultRotatorLighting Parms{};
 
 	Parms.ItemRotatorTag = ItemRotatorTag;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FrontendCamera_VaultRotator.FrontendCamera_VaultRotator_C.OnActivated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AFrontendCamera_VaultRotator_C::OnActivated(class AFortPlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FrontendCamera_VaultRotator_C", "OnActivated");
+
+	Params::FrontendCamera_VaultRotator_C_OnActivated Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FrontendCamera_VaultRotator.FrontendCamera_VaultRotator_C.OnDeactivated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AFrontendCamera_VaultRotator_C::OnDeactivated(class AFortPlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FrontendCamera_VaultRotator_C", "OnDeactivated");
+
+	Params::FrontendCamera_VaultRotator_C_OnDeactivated Parms{};
+
+	Parms.PlayerController = PlayerController;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -45,53 +85,13 @@ void AFrontendCamera_VaultRotator_C::SetVaultRotatorLighting(class FName ItemRot
 void AFrontendCamera_VaultRotator_C::ExecuteUbergraph_FrontendCamera_VaultRotator(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_FrontendCamera_VaultRotator");
+		Func = Class->GetFunction("FrontendCamera_VaultRotator_C", "ExecuteUbergraph_FrontendCamera_VaultRotator");
 
 	Params::FrontendCamera_VaultRotator_C_ExecuteUbergraph_FrontendCamera_VaultRotator Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FrontendCamera_VaultRotator.FrontendCamera_VaultRotator_C.BP_OnDeactivated
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AFrontendCamera_VaultRotator_C::BP_OnDeactivated(class AFortPlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnDeactivated");
-
-	Params::FrontendCamera_VaultRotator_C_BP_OnDeactivated Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FrontendCamera_VaultRotator.FrontendCamera_VaultRotator_C.BP_OnActivated
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AFrontendCamera_VaultRotator_C::BP_OnActivated(class AFortPlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
-
-	Params::FrontendCamera_VaultRotator_C_BP_OnActivated Parms{};
-
-	Parms.PlayerController = PlayerController;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

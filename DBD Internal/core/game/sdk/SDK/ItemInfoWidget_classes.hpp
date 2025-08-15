@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ItemInfoWidget.ItemInfoWidget_C
-// 0x0010 (0x02C0 - 0x02B0)
+// 0x0010 (0x02B8 - 0x02A8)
 class UItemInfoWidget_C final : public UFortItemInfoWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 RarityGlow;                                        // 0x02B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 RarityGlow;                                        // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void SetRarityMaterialValues(class UFortItemDefinition* ItemDefinition);
@@ -41,9 +41,9 @@ public:
 	}
 };
 static_assert(alignof(UItemInfoWidget_C) == 0x000008, "Wrong alignment on UItemInfoWidget_C");
-static_assert(sizeof(UItemInfoWidget_C) == 0x0002C0, "Wrong size on UItemInfoWidget_C");
-static_assert(offsetof(UItemInfoWidget_C, UberGraphFrame) == 0x0002B0, "Member 'UItemInfoWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UItemInfoWidget_C, RarityGlow) == 0x0002B8, "Member 'UItemInfoWidget_C::RarityGlow' has a wrong offset!");
+static_assert(sizeof(UItemInfoWidget_C) == 0x0002B8, "Wrong size on UItemInfoWidget_C");
+static_assert(offsetof(UItemInfoWidget_C, UberGraphFrame) == 0x0002A8, "Member 'UItemInfoWidget_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UItemInfoWidget_C, RarityGlow) == 0x0002B0, "Member 'UItemInfoWidget_C::RarityGlow' has a wrong offset!");
 
 }
 

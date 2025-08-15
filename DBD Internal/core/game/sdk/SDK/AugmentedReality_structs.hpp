@@ -27,210 +27,24 @@ enum class EARTrackingState : uint8
 	EARTrackingState_MAX                     = 4,
 };
 
-// Enum AugmentedReality.EARSessionConfigFlags
-// NumValues: 0x0007
-enum class EARSessionConfigFlags : uint8
-{
-	None                                     = 0,
-	GenerateMeshData                         = 1,
-	RenderMeshDataInWireframe                = 2,
-	GenerateCollisionForMeshData             = 4,
-	GenerateNavMeshForMeshData               = 8,
-	UseMeshDataForOcclusion                  = 16,
-	EARSessionConfigFlags_MAX                = 17,
-};
-
-// Enum AugmentedReality.EPlaneComponentDebugMode
-// NumValues: 0x0004
-enum class EPlaneComponentDebugMode : uint8
-{
-	None                                     = 0,
-	ShowNetworkRole                          = 1,
-	ShowClassification                       = 2,
-	EPlaneComponentDebugMode_MAX             = 3,
-};
-
-// Enum AugmentedReality.EFaceComponentDebugMode
-// NumValues: 0x0004
-enum class EFaceComponentDebugMode : uint8
-{
-	None                                     = 0,
-	ShowEyeVectors                           = 1,
-	ShowFaceMesh                             = 2,
-	EFaceComponentDebugMode_MAX              = 3,
-};
-
-// Enum AugmentedReality.EARFaceTransformMixing
+// Enum AugmentedReality.EARSessionTrackingFeature
 // NumValues: 0x0005
-enum class EARFaceTransformMixing : uint8
+enum class EARSessionTrackingFeature : uint8
 {
-	ComponentOnly                            = 0,
-	ComponentLocationTrackedRotation         = 1,
-	ComponentWithTracked                     = 2,
-	TrackingOnly                             = 3,
-	EARFaceTransformMixing_MAX               = 4,
+	None                                     = 0,
+	PoseDetection2D                          = 1,
+	PersonSegmentation                       = 2,
+	PersonSegmentationWithDepth              = 3,
+	EARSessionTrackingFeature_MAX            = 4,
 };
 
-// Enum AugmentedReality.EImageComponentDebugMode
+// Enum AugmentedReality.EARFaceTrackingUpdate
 // NumValues: 0x0003
-enum class EImageComponentDebugMode : uint8
+enum class EARFaceTrackingUpdate : uint8
 {
-	None                                     = 0,
-	ShowDetectedImage                        = 1,
-	EImageComponentDebugMode_MAX             = 2,
-};
-
-// Enum AugmentedReality.EQRCodeComponentDebugMode
-// NumValues: 0x0003
-enum class EQRCodeComponentDebugMode : uint8
-{
-	None                                     = 0,
-	ShowQRCode                               = 1,
-	EQRCodeComponentDebugMode_MAX            = 2,
-};
-
-// Enum AugmentedReality.EPoseComponentDebugMode
-// NumValues: 0x0003
-enum class EPoseComponentDebugMode : uint8
-{
-	None                                     = 0,
-	ShowSkeleton                             = 1,
-	EPoseComponentDebugMode_MAX              = 2,
-};
-
-// Enum AugmentedReality.EGeoAnchorComponentDebugMode
-// NumValues: 0x0003
-enum class EGeoAnchorComponentDebugMode : uint8
-{
-	None                                     = 0,
-	ShowGeoData                              = 1,
-	EGeoAnchorComponentDebugMode_MAX         = 2,
-};
-
-// Enum AugmentedReality.EARServiceAvailability
-// NumValues: 0x0008
-enum class EARServiceAvailability : uint8
-{
-	UnknownError                             = 0,
-	UnknownChecking                          = 1,
-	UnknownTimedOut                          = 2,
-	UnsupportedDeviceNotCapable              = 3,
-	SupportedNotInstalled                    = 4,
-	SupportedVersionTooOld                   = 5,
-	SupportedInstalled                       = 6,
-	EARServiceAvailability_MAX               = 7,
-};
-
-// Enum AugmentedReality.EARServiceInstallRequestResult
-// NumValues: 0x0005
-enum class EARServiceInstallRequestResult : uint8
-{
-	Installed                                = 0,
-	DeviceNotCompatible                      = 1,
-	UserDeclinedInstallation                 = 2,
-	FatalError                               = 3,
-	EARServiceInstallRequestResult_MAX       = 4,
-};
-
-// Enum AugmentedReality.EARServicePermissionRequestResult
-// NumValues: 0x0003
-enum class EARServicePermissionRequestResult : uint8
-{
-	Granted                                  = 0,
-	Denied                                   = 1,
-	EARServicePermissionRequestResult_MAX    = 2,
-};
-
-// Enum AugmentedReality.EARGeoTrackingState
-// NumValues: 0x0005
-enum class EARGeoTrackingState : uint8
-{
-	Initializing                             = 0,
-	Localized                                = 1,
-	Localizing                               = 2,
-	NotAvailable                             = 3,
-	EARGeoTrackingState_MAX                  = 4,
-};
-
-// Enum AugmentedReality.EARGeoTrackingStateReason
-// NumValues: 0x000A
-enum class EARGeoTrackingStateReason : uint8
-{
-	None                                     = 0,
-	NotAvailableAtLocation                   = 1,
-	NeedLocationPermissions                  = 2,
-	DevicePointedTooLow                      = 3,
-	WorldTrackingUnstable                    = 4,
-	WaitingForLocation                       = 5,
-	GeoDataNotLoaded                         = 6,
-	VisualLocalizationFailed                 = 7,
-	WaitingForAvailabilityCheck              = 8,
-	EARGeoTrackingStateReason_MAX            = 9,
-};
-
-// Enum AugmentedReality.EARGeoTrackingAccuracy
-// NumValues: 0x0005
-enum class EARGeoTrackingAccuracy : uint8
-{
-	Undetermined                             = 0,
-	Low                                      = 1,
-	Medium                                   = 2,
-	High                                     = 3,
-	EARGeoTrackingAccuracy_MAX               = 4,
-};
-
-// Enum AugmentedReality.EARWorldAlignment
-// NumValues: 0x0004
-enum class EARWorldAlignment : uint8
-{
-	Gravity                                  = 0,
-	GravityAndHeading                        = 1,
-	Camera                                   = 2,
-	EARWorldAlignment_MAX                    = 3,
-};
-
-// Enum AugmentedReality.EARSessionType
-// NumValues: 0x0009
-enum class EARSessionType : uint8
-{
-	None                                     = 0,
-	Orientation                              = 1,
-	World                                    = 2,
-	Face                                     = 3,
-	Image                                    = 4,
-	ObjectScanning                           = 5,
-	PoseTracking                             = 6,
-	GeoTracking                              = 7,
-	EARSessionType_MAX                       = 8,
-};
-
-// Enum AugmentedReality.EARPlaneDetectionMode
-// NumValues: 0x0004
-enum class EARPlaneDetectionMode : uint8
-{
-	None                                     = 0,
-	HorizontalPlaneDetection                 = 1,
-	VerticalPlaneDetection                   = 2,
-	EARPlaneDetectionMode_MAX                = 3,
-};
-
-// Enum AugmentedReality.EARLightEstimationMode
-// NumValues: 0x0004
-enum class EARLightEstimationMode : uint8
-{
-	None                                     = 0,
-	AmbientLightEstimate                     = 1,
-	DirectionalLightEstimate                 = 2,
-	EARLightEstimationMode_MAX               = 3,
-};
-
-// Enum AugmentedReality.EARFrameSyncMode
-// NumValues: 0x0003
-enum class EARFrameSyncMode : uint8
-{
-	SyncTickWithCameraImage                  = 0,
-	SyncTickWithoutCameraImage               = 1,
-	EARFrameSyncMode_MAX                     = 2,
+	CurvesAndGeo                             = 0,
+	CurvesOnly                               = 1,
+	EARFaceTrackingUpdate_MAX                = 2,
 };
 
 // Enum AugmentedReality.EAREnvironmentCaptureProbeType
@@ -243,61 +57,57 @@ enum class EAREnvironmentCaptureProbeType : uint8
 	EAREnvironmentCaptureProbeType_MAX       = 3,
 };
 
-// Enum AugmentedReality.EARFaceTrackingUpdate
+// Enum AugmentedReality.EARFrameSyncMode
 // NumValues: 0x0003
-enum class EARFaceTrackingUpdate : uint8
+enum class EARFrameSyncMode : uint8
 {
-	CurvesAndGeo                             = 0,
-	CurvesOnly                               = 1,
-	EARFaceTrackingUpdate_MAX                = 2,
+	SyncTickWithCameraImage                  = 0,
+	SyncTickWithoutCameraImage               = 1,
+	EARFrameSyncMode_MAX                     = 2,
 };
 
-// Enum AugmentedReality.EARSessionTrackingFeature
-// NumValues: 0x0007
-enum class EARSessionTrackingFeature : uint8
+// Enum AugmentedReality.EARLightEstimationMode
+// NumValues: 0x0004
+enum class EARLightEstimationMode : uint8
 {
 	None                                     = 0,
-	PoseDetection2D                          = 1,
-	PersonSegmentation                       = 2,
-	PersonSegmentationWithDepth              = 3,
-	SceneDepth                               = 4,
-	SmoothedSceneDepth                       = 5,
-	EARSessionTrackingFeature_MAX            = 6,
+	AmbientLightEstimate                     = 1,
+	DirectionalLightEstimate                 = 2,
+	EARLightEstimationMode_MAX               = 3,
 };
 
-// Enum AugmentedReality.EARSceneReconstruction
+// Enum AugmentedReality.EARPlaneDetectionMode
 // NumValues: 0x0004
-enum class EARSceneReconstruction : uint8
+enum class EARPlaneDetectionMode : uint8
 {
 	None                                     = 0,
-	MeshOnly                                 = 1,
-	MeshWithClassification                   = 2,
-	EARSceneReconstruction_MAX               = 3,
+	HorizontalPlaneDetection                 = 1,
+	VerticalPlaneDetection                   = 2,
+	EARPlaneDetectionMode_MAX                = 3,
 };
 
-// Enum AugmentedReality.EARTextureType
-// NumValues: 0x0009
-enum class EARTextureType : uint8
+// Enum AugmentedReality.EARSessionType
+// NumValues: 0x0008
+enum class EARSessionType : uint8
 {
-	Unknown                                  = 0,
-	CameraImage                              = 1,
-	CameraDepth                              = 2,
-	EnvironmentCapture                       = 3,
-	PersonSegmentationImage                  = 4,
-	PersonSegmentationDepth                  = 5,
-	SceneDepthMap                            = 6,
-	SceneDepthConfidenceMap                  = 7,
-	EARTextureType_MAX                       = 8,
+	None                                     = 0,
+	Orientation                              = 1,
+	World                                    = 2,
+	Face                                     = 3,
+	Image                                    = 4,
+	ObjectScanning                           = 5,
+	PoseTracking                             = 6,
+	EARSessionType_MAX                       = 7,
 };
 
-// Enum AugmentedReality.EARDepthQuality
+// Enum AugmentedReality.EARWorldAlignment
 // NumValues: 0x0004
-enum class EARDepthQuality : uint8
+enum class EARWorldAlignment : uint8
 {
-	Unkown                                   = 0,
-	Low                                      = 1,
-	High                                     = 2,
-	EARDepthQuality_MAX                      = 3,
+	Gravity                                  = 0,
+	GravityAndHeading                        = 1,
+	Camera                                   = 2,
+	EARWorldAlignment_MAX                    = 3,
 };
 
 // Enum AugmentedReality.EARDepthAccuracy
@@ -310,13 +120,33 @@ enum class EARDepthAccuracy : uint8
 	EARDepthAccuracy_MAX                     = 3,
 };
 
-// Enum AugmentedReality.EARFaceTrackingDirection
-// NumValues: 0x0003
-enum class EARFaceTrackingDirection : uint8
+// Enum AugmentedReality.EARDepthQuality
+// NumValues: 0x0004
+enum class EARDepthQuality : uint8
 {
-	FaceRelative                             = 0,
-	FaceMirrored                             = 1,
-	EARFaceTrackingDirection_MAX             = 2,
+	Unkown                                   = 0,
+	Low                                      = 1,
+	High                                     = 2,
+	EARDepthQuality_MAX                      = 3,
+};
+
+// Enum AugmentedReality.EARTextureType
+// NumValues: 0x0004
+enum class EARTextureType : uint8
+{
+	CameraImage                              = 0,
+	CameraDepth                              = 1,
+	EnvironmentCapture                       = 2,
+	EARTextureType_MAX                       = 3,
+};
+
+// Enum AugmentedReality.EAREye
+// NumValues: 0x0003
+enum class EAREye : uint8
+{
+	LeftEye                                  = 0,
+	RightEye                                 = 1,
+	EAREye_MAX                               = 2,
 };
 
 // Enum AugmentedReality.EARFaceBlendShape
@@ -387,61 +217,71 @@ enum class EARFaceBlendShape : uint8
 	MAX                                      = 61,
 };
 
-// Enum AugmentedReality.EAREye
+// Enum AugmentedReality.EARFaceTrackingDirection
 // NumValues: 0x0003
-enum class EAREye : uint8
+enum class EARFaceTrackingDirection : uint8
 {
-	LeftEye                                  = 0,
-	RightEye                                 = 1,
-	EAREye_MAX                               = 2,
+	FaceRelative                             = 0,
+	FaceMirrored                             = 1,
+	EARFaceTrackingDirection_MAX             = 2,
 };
 
-// Enum AugmentedReality.EARCaptureType
-// NumValues: 0x0006
-enum class EARCaptureType : uint8
+// Enum AugmentedReality.EARCandidateImageOrientation
+// NumValues: 0x0003
+enum class EARCandidateImageOrientation : uint8
 {
-	Camera                                   = 0,
-	QRCode                                   = 1,
-	SpatialMapping                           = 2,
-	SceneUnderstanding                       = 3,
-	HandMesh                                 = 4,
-	EARCaptureType_MAX                       = 5,
+	Landscape                                = 0,
+	Portrait                                 = 1,
+	EARCandidateImageOrientation_MAX         = 2,
 };
 
-// Enum AugmentedReality.EARLineTraceChannels
-// NumValues: 0x0006
-enum class EARLineTraceChannels : uint8
+// Enum AugmentedReality.EARJointTransformSpace
+// NumValues: 0x0003
+enum class EARJointTransformSpace : uint8
 {
-	None                                     = 0,
-	FeaturePoint                             = 1,
-	GroundPlane                              = 2,
-	PlaneUsingExtent                         = 4,
-	PlaneUsingBoundaryPolygon                = 8,
-	EARLineTraceChannels_MAX                 = 9,
+	Model                                    = 0,
+	ParentJoint                              = 1,
+	EARJointTransformSpace_MAX               = 2,
 };
 
-// Enum AugmentedReality.EARTrackingQuality
+// Enum AugmentedReality.EARObjectClassification
+// NumValues: 0x000D
+enum class EARObjectClassification : uint8
+{
+	NotApplicable                            = 0,
+	Unknown                                  = 1,
+	Wall                                     = 2,
+	Ceiling                                  = 3,
+	Floor                                    = 4,
+	Table                                    = 5,
+	Seat                                     = 6,
+	Face                                     = 7,
+	Image                                    = 8,
+	World                                    = 9,
+	SceneObject                              = 10,
+	HandMesh                                 = 11,
+	EARObjectClassification_MAX              = 12,
+};
+
+// Enum AugmentedReality.EARPlaneOrientation
 // NumValues: 0x0004
-enum class EARTrackingQuality : uint8
+enum class EARPlaneOrientation : uint8
 {
-	NotTracking                              = 0,
-	OrientationOnly                          = 1,
-	OrientationAndPosition                   = 2,
-	EARTrackingQuality_MAX                   = 3,
+	Horizontal                               = 0,
+	Vertical                                 = 1,
+	Diagonal                                 = 2,
+	EARPlaneOrientation_MAX                  = 3,
 };
 
-// Enum AugmentedReality.EARTrackingQualityReason
-// NumValues: 0x0008
-enum class EARTrackingQualityReason : uint8
+// Enum AugmentedReality.EARWorldMappingState
+// NumValues: 0x0005
+enum class EARWorldMappingState : uint8
 {
-	None                                     = 0,
-	Initializing                             = 1,
-	Relocalizing                             = 2,
-	ExcessiveMotion                          = 3,
-	InsufficientFeatures                     = 4,
-	InsufficientLight                        = 5,
-	BadState                                 = 6,
-	EARTrackingQualityReason_MAX             = 7,
+	NotAvailable                             = 0,
+	StillMappingNotRelocalizable             = 1,
+	StillMappingRelocalizable                = 2,
+	Mapped                                   = 3,
+	EARWorldMappingState_MAX                 = 4,
 };
 
 // Enum AugmentedReality.EARSessionStatus
@@ -458,219 +298,38 @@ enum class EARSessionStatus : uint8
 	EARSessionStatus_MAX                     = 7,
 };
 
-// Enum AugmentedReality.EARWorldMappingState
-// NumValues: 0x0005
-enum class EARWorldMappingState : uint8
+// Enum AugmentedReality.EARTrackingQualityReason
+// NumValues: 0x0006
+enum class EARTrackingQualityReason : uint8
 {
-	NotAvailable                             = 0,
-	StillMappingNotRelocalizable             = 1,
-	StillMappingRelocalizable                = 2,
-	Mapped                                   = 3,
-	EARWorldMappingState_MAX                 = 4,
+	None                                     = 0,
+	Initializing                             = 1,
+	Relocalizing                             = 2,
+	ExcessiveMotion                          = 3,
+	InsufficientFeatures                     = 4,
+	EARTrackingQualityReason_MAX             = 5,
 };
 
-// Enum AugmentedReality.EARPlaneOrientation
+// Enum AugmentedReality.EARTrackingQuality
 // NumValues: 0x0004
-enum class EARPlaneOrientation : uint8
+enum class EARTrackingQuality : uint8
 {
-	Horizontal                               = 0,
-	Vertical                                 = 1,
-	Diagonal                                 = 2,
-	EARPlaneOrientation_MAX                  = 3,
+	NotTracking                              = 0,
+	OrientationOnly                          = 1,
+	OrientationAndPosition                   = 2,
+	EARTrackingQuality_MAX                   = 3,
 };
 
-// Enum AugmentedReality.EARObjectClassification
-// NumValues: 0x000F
-enum class EARObjectClassification : uint8
+// Enum AugmentedReality.EARLineTraceChannels
+// NumValues: 0x0006
+enum class EARLineTraceChannels : uint8
 {
-	NotApplicable                            = 0,
-	Unknown                                  = 1,
-	Wall                                     = 2,
-	Ceiling                                  = 3,
-	Floor                                    = 4,
-	Table                                    = 5,
-	Seat                                     = 6,
-	Face                                     = 7,
-	Image                                    = 8,
-	World                                    = 9,
-	SceneObject                              = 10,
-	HandMesh                                 = 11,
-	Door                                     = 12,
-	Window                                   = 13,
-	EARObjectClassification_MAX              = 14,
-};
-
-// Enum AugmentedReality.EARSpatialMeshUsageFlags
-// NumValues: 0x0004
-enum class EARSpatialMeshUsageFlags : uint8
-{
-	NotApplicable                            = 0,
-	Visible                                  = 1,
-	Collision                                = 2,
-	EARSpatialMeshUsageFlags_MAX             = 3,
-};
-
-// Enum AugmentedReality.EARJointTransformSpace
-// NumValues: 0x0003
-enum class EARJointTransformSpace : uint8
-{
-	Model                                    = 0,
-	ParentJoint                              = 1,
-	EARJointTransformSpace_MAX               = 2,
-};
-
-// Enum AugmentedReality.EARAltitudeSource
-// NumValues: 0x0005
-enum class EARAltitudeSource : uint8
-{
-	Precise                                  = 0,
-	Coarse                                   = 1,
-	UserDefined                              = 2,
-	Unknown                                  = 3,
-	EARAltitudeSource_MAX                    = 4,
-};
-
-// Enum AugmentedReality.EARCandidateImageOrientation
-// NumValues: 0x0003
-enum class EARCandidateImageOrientation : uint8
-{
-	Landscape                                = 0,
-	Portrait                                 = 1,
-	EARCandidateImageOrientation_MAX         = 2,
-};
-
-// ScriptStruct AugmentedReality.TrackedGeometryGroup
-// 0x0018 (0x0018 - 0x0000)
-struct FTrackedGeometryGroup final
-{
-public:
-	class AARActor*                               ARActor;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UARComponent*                           ARComponent;                                       // 0x0008(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UARTrackedGeometry*                     TrackedGeometry;                                   // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct AugmentedReality.ARSessionPayload
-// 0x0018 (0x0018 - 0x0000)
-struct FARSessionPayload final
-{
-public:
-	int32                                         ConfigFlags;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     DefaultMeshMaterial;                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     DefaultWireframeMeshMaterial;                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct AugmentedReality.ARPlaneUpdatePayload
-// 0x0080 (0x0080 - 0x0000)
-struct FARPlaneUpdatePayload final
-{
-public:
-	struct FARSessionPayload                      SessionPayload;                                    // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             WorldTransform;                                    // 0x0020(0x0030)(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Center;                                            // 0x0050(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Extents;                                           // 0x005C(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        BoundaryVertices;                                  // 0x0068(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	EARObjectClassification                       ObjectClassification;                              // 0x0078(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct AugmentedReality.ARPointUpdatePayload
-// 0x0001 (0x0001 - 0x0000)
-struct FARPointUpdatePayload final
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct AugmentedReality.ARFaceUpdatePayload
-// 0x0040 (0x0040 - 0x0000)
-struct FARFaceUpdatePayload final
-{
-public:
-	struct FARSessionPayload                      SessionPayload;                                    // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                LeftEyePosition;                                   // 0x0018(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                RightEyePosition;                                  // 0x0024(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                LookAtTarget;                                      // 0x0030(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct AugmentedReality.ARImageUpdatePayload
-// 0x0060 (0x0060 - 0x0000)
-struct FARImageUpdatePayload final
-{
-public:
-	struct FARSessionPayload                      SessionPayload;                                    // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             WorldTransform;                                    // 0x0020(0x0030)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class UARCandidateImage*                      DetectedImage;                                     // 0x0050(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              EstimatedSize;                                     // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct AugmentedReality.ARQRCodeUpdatePayload
-// 0x0070 (0x0070 - 0x0000)
-struct FARQRCodeUpdatePayload final
-{
-public:
-	struct FARSessionPayload                      SessionPayload;                                    // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             WorldTransform;                                    // 0x0020(0x0030)(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Extents;                                           // 0x0050(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 QRCode;                                            // 0x0060(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct AugmentedReality.ARPoseUpdatePayload
-// 0x0040 (0x0040 - 0x0000)
-struct FARPoseUpdatePayload final
-{
-public:
-	struct FTransform                             WorldTransform;                                    // 0x0000(0x0030)(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FTransform>                     JointTransforms;                                   // 0x0030(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct AugmentedReality.AREnvironmentProbeUpdatePayload
-// 0x0030 (0x0030 - 0x0000)
-struct FAREnvironmentProbeUpdatePayload final
-{
-public:
-	struct FTransform                             WorldTransform;                                    // 0x0000(0x0030)(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct AugmentedReality.ARObjectUpdatePayload
-// 0x0030 (0x0030 - 0x0000)
-struct FARObjectUpdatePayload final
-{
-public:
-	struct FTransform                             WorldTransform;                                    // 0x0000(0x0030)(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct AugmentedReality.ARMeshUpdatePayload
-// 0x0060 (0x0060 - 0x0000)
-struct FARMeshUpdatePayload final
-{
-public:
-	struct FARSessionPayload                      SessionPayload;                                    // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             WorldTransform;                                    // 0x0020(0x0030)(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	EARObjectClassification                       ObjectClassification;                              // 0x0050(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0xF];                                       // 0x0051(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct AugmentedReality.ARGeoAnchorUpdatePayload
-// 0x0070 (0x0070 - 0x0000)
-struct FARGeoAnchorUpdatePayload final
-{
-public:
-	struct FARSessionPayload                      SessionPayload;                                    // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             WorldTransform;                                    // 0x0020(0x0030)(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         Longitude;                                         // 0x0050(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Latitude;                                          // 0x0054(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AltitudeMeters;                                    // 0x0058(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EARAltitudeSource                             AltitudeSource;                                    // 0x005C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AnchorName;                                        // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	None                                     = 0,
+	FeaturePoint                             = 1,
+	GroundPlane                              = 2,
+	PlaneUsingExtent                         = 4,
+	PlaneUsingBoundaryPolygon                = 8,
+	EARLineTraceChannels_MAX                 = 9,
 };
 
 // ScriptStruct AugmentedReality.ARSharedWorldReplicationState
@@ -681,6 +340,10 @@ public:
 	int32                                         PreviewImageOffset;                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ARWorldOffset;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FARSharedWorldReplicationState) == 0x000004, "Wrong alignment on FARSharedWorldReplicationState");
+static_assert(sizeof(FARSharedWorldReplicationState) == 0x000008, "Wrong size on FARSharedWorldReplicationState");
+static_assert(offsetof(FARSharedWorldReplicationState, PreviewImageOffset) == 0x000000, "Member 'FARSharedWorldReplicationState::PreviewImageOffset' has a wrong offset!");
+static_assert(offsetof(FARSharedWorldReplicationState, ARWorldOffset) == 0x000004, "Member 'FARSharedWorldReplicationState::ARWorldOffset' has a wrong offset!");
 
 // ScriptStruct AugmentedReality.ARTraceResult
 // 0x0060 (0x0060 - 0x0000)
@@ -690,20 +353,65 @@ public:
 	float                                         DistanceFromCamera;                                // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	EARLineTraceChannels                          TraceChannel;                                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_5[0xB];                                        // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             LocalTransform;                                    // 0x0010(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
-	class UARTrackedGeometry*                     TrackedGeometry;                                   // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FTransform                             LocalToTrackingTransform;                          // 0x0010(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+	class UARTrackedGeometry*                     TrackedGeometry;                                   // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_48[0x18];                                      // 0x0048(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FARTraceResult) == 0x000010, "Wrong alignment on FARTraceResult");
+static_assert(sizeof(FARTraceResult) == 0x000060, "Wrong size on FARTraceResult");
+static_assert(offsetof(FARTraceResult, DistanceFromCamera) == 0x000000, "Member 'FARTraceResult::DistanceFromCamera' has a wrong offset!");
+static_assert(offsetof(FARTraceResult, TraceChannel) == 0x000004, "Member 'FARTraceResult::TraceChannel' has a wrong offset!");
+static_assert(offsetof(FARTraceResult, LocalToTrackingTransform) == 0x000010, "Member 'FARTraceResult::LocalToTrackingTransform' has a wrong offset!");
+static_assert(offsetof(FARTraceResult, TrackedGeometry) == 0x000040, "Member 'FARTraceResult::TrackedGeometry' has a wrong offset!");
 
-// ScriptStruct AugmentedReality.ARSessionStatus
-// 0x0018 (0x0018 - 0x0000)
-struct FARSessionStatus final
+// ScriptStruct AugmentedReality.ARSkeletonDefinition
+// 0x0028 (0x0028 - 0x0000)
+struct FARSkeletonDefinition final
 {
 public:
-	class FString                                 AdditionalInfo;                                    // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EARSessionStatus                              Status;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         NumJoints;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           JointNames;                                        // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 ParentIndices;                                     // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FARSkeletonDefinition) == 0x000008, "Wrong alignment on FARSkeletonDefinition");
+static_assert(sizeof(FARSkeletonDefinition) == 0x000028, "Wrong size on FARSkeletonDefinition");
+static_assert(offsetof(FARSkeletonDefinition, NumJoints) == 0x000000, "Member 'FARSkeletonDefinition::NumJoints' has a wrong offset!");
+static_assert(offsetof(FARSkeletonDefinition, JointNames) == 0x000008, "Member 'FARSkeletonDefinition::JointNames' has a wrong offset!");
+static_assert(offsetof(FARSkeletonDefinition, ParentIndices) == 0x000018, "Member 'FARSkeletonDefinition::ParentIndices' has a wrong offset!");
+
+// ScriptStruct AugmentedReality.ARPose3D
+// 0x0050 (0x0050 - 0x0000)
+struct FARPose3D final
+{
+public:
+	struct FARSkeletonDefinition                  SkeletonDefinition;                                // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     JointTransforms;                                   // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<bool>                                  IsJointTracked;                                    // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EARJointTransformSpace                        JointTransformSpace;                               // 0x0048(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FARPose3D) == 0x000008, "Wrong alignment on FARPose3D");
+static_assert(sizeof(FARPose3D) == 0x000050, "Wrong size on FARPose3D");
+static_assert(offsetof(FARPose3D, SkeletonDefinition) == 0x000000, "Member 'FARPose3D::SkeletonDefinition' has a wrong offset!");
+static_assert(offsetof(FARPose3D, JointTransforms) == 0x000028, "Member 'FARPose3D::JointTransforms' has a wrong offset!");
+static_assert(offsetof(FARPose3D, IsJointTracked) == 0x000038, "Member 'FARPose3D::IsJointTracked' has a wrong offset!");
+static_assert(offsetof(FARPose3D, JointTransformSpace) == 0x000048, "Member 'FARPose3D::JointTransformSpace' has a wrong offset!");
+
+// ScriptStruct AugmentedReality.ARPose2D
+// 0x0048 (0x0048 - 0x0000)
+struct FARPose2D final
+{
+public:
+	struct FARSkeletonDefinition                  SkeletonDefinition;                                // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TArray<struct FVector2D>                      JointLocations;                                    // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<bool>                                  IsJointTracked;                                    // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FARPose2D) == 0x000008, "Wrong alignment on FARPose2D");
+static_assert(sizeof(FARPose2D) == 0x000048, "Wrong size on FARPose2D");
+static_assert(offsetof(FARPose2D, SkeletonDefinition) == 0x000000, "Member 'FARPose2D::SkeletonDefinition' has a wrong offset!");
+static_assert(offsetof(FARPose2D, JointLocations) == 0x000028, "Member 'FARPose2D::JointLocations' has a wrong offset!");
+static_assert(offsetof(FARPose2D, IsJointTracked) == 0x000038, "Member 'FARPose2D::IsJointTracked' has a wrong offset!");
 
 // ScriptStruct AugmentedReality.ARVideoFormat
 // 0x000C (0x000C - 0x0000)
@@ -714,49 +422,25 @@ public:
 	int32                                         Width;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Height;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FARVideoFormat) == 0x000004, "Wrong alignment on FARVideoFormat");
+static_assert(sizeof(FARVideoFormat) == 0x00000C, "Wrong size on FARVideoFormat");
+static_assert(offsetof(FARVideoFormat, FPS) == 0x000000, "Member 'FARVideoFormat::FPS' has a wrong offset!");
+static_assert(offsetof(FARVideoFormat, Width) == 0x000004, "Member 'FARVideoFormat::Width' has a wrong offset!");
+static_assert(offsetof(FARVideoFormat, Height) == 0x000008, "Member 'FARVideoFormat::Height' has a wrong offset!");
 
-// ScriptStruct AugmentedReality.ARSkeletonDefinition
-// 0x0028 (0x0028 - 0x0000)
-struct FARSkeletonDefinition final
-{
-public:
-	int32                                         NumJoints;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           JointNames;                                        // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 ParentIndices;                                     // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct AugmentedReality.ARPose2D
-// 0x0048 (0x0048 - 0x0000)
-struct FARPose2D final
-{
-public:
-	struct FARSkeletonDefinition                  SkeletonDefinition;                                // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TArray<struct FVector2D>                      JointLocations;                                    // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<bool>                                  IsJointTracked;                                    // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct AugmentedReality.ARPose3D
-// 0x0050 (0x0050 - 0x0000)
-struct FARPose3D final
-{
-public:
-	struct FARSkeletonDefinition                  SkeletonDefinition;                                // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TArray<struct FTransform>                     JointTransforms;                                   // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<bool>                                  IsJointTracked;                                    // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	EARJointTransformSpace                        JointTransformSpace;                               // 0x0048(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct AugmentedReality.ARCameraIntrinsics
+// ScriptStruct AugmentedReality.ARSessionStatus
 // 0x0018 (0x0018 - 0x0000)
-struct FARCameraIntrinsics final
+struct FARSessionStatus final
 {
 public:
-	struct FIntPoint                              ImageResolution;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              FocalLength;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              PrincipalPoint;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AdditionalInfo;                                    // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EARSessionStatus                              Status;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FARSessionStatus) == 0x000008, "Wrong alignment on FARSessionStatus");
+static_assert(sizeof(FARSessionStatus) == 0x000018, "Wrong size on FARSessionStatus");
+static_assert(offsetof(FARSessionStatus, AdditionalInfo) == 0x000000, "Member 'FARSessionStatus::AdditionalInfo' has a wrong offset!");
+static_assert(offsetof(FARSessionStatus, Status) == 0x000010, "Member 'FARSessionStatus::Status' has a wrong offset!");
 
 }
 

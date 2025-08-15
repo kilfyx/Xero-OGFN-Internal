@@ -17,9 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass WorldLightingMenu.WorldLightingMenu_C
-// 0x0000 (0x02A0 - 0x02A0)
+// 0x0008 (0x0240 - 0x0238)
 class AWorldLightingMenu_C final : public AFortLevelScriptActor
 {
+public:
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0238(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -31,7 +34,8 @@ public:
 	}
 };
 static_assert(alignof(AWorldLightingMenu_C) == 0x000008, "Wrong alignment on AWorldLightingMenu_C");
-static_assert(sizeof(AWorldLightingMenu_C) == 0x0002A0, "Wrong size on AWorldLightingMenu_C");
+static_assert(sizeof(AWorldLightingMenu_C) == 0x000240, "Wrong size on AWorldLightingMenu_C");
+static_assert(offsetof(AWorldLightingMenu_C, DefaultSceneRoot) == 0x000238, "Member 'AWorldLightingMenu_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

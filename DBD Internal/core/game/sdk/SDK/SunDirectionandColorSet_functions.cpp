@@ -23,9 +23,23 @@ namespace SDK
 void ASunDirectionandColorSet_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UserConstructionScript");
+		Func = Class->GetFunction("SunDirectionandColorSet_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SunDirectionandColorSet.SunDirectionandColorSet_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ASunDirectionandColorSet_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SunDirectionandColorSet_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -39,29 +53,15 @@ void ASunDirectionandColorSet_C::UserConstructionScript()
 void ASunDirectionandColorSet_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveTick");
+		Func = Class->GetFunction("SunDirectionandColorSet_C", "ReceiveTick");
 
 	Params::SunDirectionandColorSet_C_ReceiveTick Parms{};
 
 	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SunDirectionandColorSet.SunDirectionandColorSet_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ASunDirectionandColorSet_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -73,9 +73,9 @@ void ASunDirectionandColorSet_C::ReceiveBeginPlay()
 void ASunDirectionandColorSet_C::ExecuteUbergraph_SunDirectionandColorSet(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_SunDirectionandColorSet");
+		Func = Class->GetFunction("SunDirectionandColorSet_C", "ExecuteUbergraph_SunDirectionandColorSet");
 
 	Params::SunDirectionandColorSet_C_ExecuteUbergraph_SunDirectionandColorSet Parms{};
 

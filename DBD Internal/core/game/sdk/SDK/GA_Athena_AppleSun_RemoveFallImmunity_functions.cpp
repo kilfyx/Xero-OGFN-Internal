@@ -37,60 +37,6 @@ void UGA_Athena_AppleSun_RemoveFallImmunity_C::ExecuteUbergraph_GA_Athena_AppleS
 }
 
 
-// Function GA_Athena_AppleSun_RemoveFallImmunity.GA_Athena_AppleSun_RemoveFallImmunity_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_Athena_AppleSun_RemoveFallImmunity_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_AppleSun_RemoveFallImmunity_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_AppleSun_RemoveFallImmunity.GA_Athena_AppleSun_RemoveFallImmunity_C.OnChange_3DD8539A4FF5097BAD1292AD341357CA
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EMovementMode                           NewMovementMode                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_AppleSun_RemoveFallImmunity_C::OnChange_3DD8539A4FF5097BAD1292AD341357CA(EMovementMode NewMovementMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_AppleSun_RemoveFallImmunity_C", "OnChange_3DD8539A4FF5097BAD1292AD341357CA");
-
-	Params::GA_Athena_AppleSun_RemoveFallImmunity_C_OnChange_3DD8539A4FF5097BAD1292AD341357CA Parms{};
-
-	Parms.NewMovementMode = NewMovementMode;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Athena_AppleSun_RemoveFallImmunity.GA_Athena_AppleSun_RemoveFallImmunity_C.OnChange_E50882E9463BCB5DDE04EE8407D66091
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EMovementMode                           NewMovementMode                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_AppleSun_RemoveFallImmunity_C::OnChange_E50882E9463BCB5DDE04EE8407D66091(EMovementMode NewMovementMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_AppleSun_RemoveFallImmunity_C", "OnChange_E50882E9463BCB5DDE04EE8407D66091");
-
-	Params::GA_Athena_AppleSun_RemoveFallImmunity_C_OnChange_E50882E9463BCB5DDE04EE8407D66091 Parms{};
-
-	Parms.NewMovementMode = NewMovementMode;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_Athena_AppleSun_RemoveFallImmunity.GA_Athena_AppleSun_RemoveFallImmunity_C.Remove
 // (Net, NetServer, BlueprintCallable, BlueprintEvent)
 
@@ -116,6 +62,60 @@ void UGA_Athena_AppleSun_RemoveFallImmunity_C::VehicleLandedCheck()
 		Func = Class->GetFunction("GA_Athena_AppleSun_RemoveFallImmunity_C", "VehicleLandedCheck");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_AppleSun_RemoveFallImmunity.GA_Athena_AppleSun_RemoveFallImmunity_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Athena_AppleSun_RemoveFallImmunity_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_AppleSun_RemoveFallImmunity_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_AppleSun_RemoveFallImmunity.GA_Athena_AppleSun_RemoveFallImmunity_C.OnChange_E50882E9463BCB5DDE04EE8407D66091
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EMovementMode                           NewMovementMode                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_AppleSun_RemoveFallImmunity_C::OnChange_E50882E9463BCB5DDE04EE8407D66091(EMovementMode NewMovementMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_AppleSun_RemoveFallImmunity_C", "OnChange_E50882E9463BCB5DDE04EE8407D66091");
+
+	Params::GA_Athena_AppleSun_RemoveFallImmunity_C_OnChange_E50882E9463BCB5DDE04EE8407D66091 Parms{};
+
+	Parms.NewMovementMode = NewMovementMode;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_AppleSun_RemoveFallImmunity.GA_Athena_AppleSun_RemoveFallImmunity_C.OnChange_3DD8539A4FF5097BAD1292AD341357CA
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EMovementMode                           NewMovementMode                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_AppleSun_RemoveFallImmunity_C::OnChange_3DD8539A4FF5097BAD1292AD341357CA(EMovementMode NewMovementMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_AppleSun_RemoveFallImmunity_C", "OnChange_3DD8539A4FF5097BAD1292AD341357CA");
+
+	Params::GA_Athena_AppleSun_RemoveFallImmunity_C_OnChange_3DD8539A4FF5097BAD1292AD341357CA Parms{};
+
+	Parms.NewMovementMode = NewMovementMode;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

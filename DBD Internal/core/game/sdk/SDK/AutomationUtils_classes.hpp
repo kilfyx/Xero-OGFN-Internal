@@ -33,6 +33,8 @@ public:
 		return GetDefaultObjImpl<UAutomationUtilsBlueprintLibrary>();
 	}
 };
+static_assert(alignof(UAutomationUtilsBlueprintLibrary) == 0x000008, "Wrong alignment on UAutomationUtilsBlueprintLibrary");
+static_assert(sizeof(UAutomationUtilsBlueprintLibrary) == 0x000028, "Wrong size on UAutomationUtilsBlueprintLibrary");
 
 }
 

@@ -20,65 +20,67 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass StoreMain_MTXOffer.StoreMain_MTXOffer_C
-// 0x0130 (0x15A0 - 0x1470)
+// 0x0130 (0x0D68 - 0x0C38)
 class UStoreMain_MTXOffer_C final : public UFortRealMoneyOffer
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1470(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Hover_Linear;                                      // 0x1478(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       UnhoverNew;                                        // 0x1480(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       HoverNew;                                          // 0x1488(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Intro;                                             // 0x1490(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnHover;                                           // 0x1498(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UMTXOffer_SpecialBanner_C*              AthenaDirectAcquisitionOffer_SpecialBanner;        // 0x14A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 BaseColor;                                         // 0x14A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                BonusTag;                                          // 0x14B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       BonusText;                                         // 0x14B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Border_Footer;                                     // 0x14C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                BorderAll;                                         // 0x14C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       BundleTotalQuantity;                               // 0x14D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       BundleVBucksText;                                  // 0x14D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CurrencyTotalQuantity;                             // 0x14E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HBox_Price;                                        // 0x14E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 HoverBorder;                                       // 0x14F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 KeyArt;                                            // 0x14F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 OverlayGradient;                                   // 0x1500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OverlaySalePrice;                                  // 0x1508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PlayStationStoreLogo;                              // 0x1510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Plus;                                              // 0x1518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           RMTBundle;                                         // 0x1520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           RMTCurrency;                                       // 0x1528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        RMTTypeSwitcher;                                   // 0x1530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         RMTVBucksHB;                                       // 0x1538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScaleBox*                              ScaleBoxKeyArt;                                    // 0x1540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            Switcher_Price;                                    // 0x1548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextOfferDisplayPrice;                             // 0x1550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextOfferName;                                     // 0x1558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextOfferPurchaseUnvailable;                       // 0x1560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextOriginalPrice;                                 // 0x1568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               TileSize;                                          // 0x1570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       VBucksText;                                        // 0x1578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              AboutToShowDetails;                                // 0x1580(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          bCanSetPrice;                                      // 0x1590(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1591[0x7];                                     // 0x1591(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCatalogMessaging*                      CatalogMessaging;                                  // 0x1598(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C38(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Hover_Linear;                                      // 0x0C40(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       UnhoverNew;                                        // 0x0C48(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       HoverNew;                                          // 0x0C50(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Intro;                                             // 0x0C58(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnHover;                                           // 0x0C60(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UAthenaDirectAcquisitionOffer_SpecialBanner_C* AthenaDirectAcquisitionOffer_SpecialBanner; // 0x0C68(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BaseColor;                                         // 0x0C70(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                BonusTag;                                          // 0x0C78(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       BonusText;                                         // 0x0C80(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                Border_Footer;                                     // 0x0C88(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                BorderAll;                                         // 0x0C90(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       BundleTotalQuantity;                               // 0x0C98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       BundleVBucksText;                                  // 0x0CA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CurrencyTotalQuantity;                             // 0x0CA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HBox_Price;                                        // 0x0CB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HoverBorder;                                       // 0x0CB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 KeyArt;                                            // 0x0CC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 OverlayGradient;                                   // 0x0CC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               OverlaySalePrice;                                  // 0x0CD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PlayStationStoreLogo;                              // 0x0CD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Plus;                                              // 0x0CE0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           RMTBundle;                                         // 0x0CE8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           RMTCurrency;                                       // 0x0CF0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        RMTTypeSwitcher;                                   // 0x0CF8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         RMTVBucksHB;                                       // 0x0D00(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                              ScaleBoxKeyArt;                                    // 0x0D08(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  Switcher_Price;                                    // 0x0D10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextOfferDisplayPrice;                             // 0x0D18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextOfferName;                                     // 0x0D20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextOfferPurchaseUnvailable;                       // 0x0D28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextOriginalPrice;                                 // 0x0D30(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               TileSize;                                          // 0x0D38(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       VBucksText;                                        // 0x0D40(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              AboutToShowDetails;                                // 0x0D48(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          bCanSetPrice;                                      // 0x0D58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D59[0x7];                                      // 0x0D59(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCatalogMessaging*                      CatalogMessaging;                                  // 0x0D60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void TriggerReset();
-	void SetTileSize(EFortMtxOfferDisplaySize DisplaySize);
-	void TriggerIntro();
-	void SetTextOutlineColor(class UTextBlock* Text, const struct FFortMtxGradient& Gradient);
-	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_StoreMain_MTXOffer(int32 EntryPoint);
+	void OnOfferTileBrushLoaded(const struct FSlateBrush& OfferBrush);
 	void OnStoreSelectionOfferSet();
 	void OnUpdateStorePrice(const class FText& InStorePrice);
 	void OnOfferSet();
-	void OnOfferTileBrushLoaded(const struct FSlateBrush& OfferBrush);
-	void InitialReset();
-	void InitOffer();
-	void ExecuteUbergraph_StoreMain_MTXOffer(int32 EntryPoint);
-	void GetBonusText(class UFortStoreFrontOfferInfo* OfferInfo, class FText* BonusText_0);
-	void BP_OnHovered();
+	void PreConstruct(bool IsDesignTime);
 	void BP_OnUnhovered();
+	void BP_OnHovered();
+	void Construct();
+	void InitOffer();
+	void ShowDetails();
+	void TriggerIntro();
+	void InitialReset();
+	void TriggerReset();
+	void SetTileSize(EFortMtxOfferDisplaySize DisplaySize);
+	void SetTextOutlineColor(class UTextBlock* Text, const struct FFortMtxGradient& Gradient);
+	void GetBonusText(class UFortStoreFrontOfferInfo* OfferInfo, class FText* BonusText_0);
 
 public:
 	static class UClass* StaticClass()
@@ -90,45 +92,45 @@ public:
 		return GetDefaultObjImpl<UStoreMain_MTXOffer_C>();
 	}
 };
-static_assert(alignof(UStoreMain_MTXOffer_C) == 0x000010, "Wrong alignment on UStoreMain_MTXOffer_C");
-static_assert(sizeof(UStoreMain_MTXOffer_C) == 0x0015A0, "Wrong size on UStoreMain_MTXOffer_C");
-static_assert(offsetof(UStoreMain_MTXOffer_C, UberGraphFrame) == 0x001470, "Member 'UStoreMain_MTXOffer_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, Hover_Linear) == 0x001478, "Member 'UStoreMain_MTXOffer_C::Hover_Linear' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, UnhoverNew) == 0x001480, "Member 'UStoreMain_MTXOffer_C::UnhoverNew' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, HoverNew) == 0x001488, "Member 'UStoreMain_MTXOffer_C::HoverNew' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, Intro) == 0x001490, "Member 'UStoreMain_MTXOffer_C::Intro' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, OnHover) == 0x001498, "Member 'UStoreMain_MTXOffer_C::OnHover' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, AthenaDirectAcquisitionOffer_SpecialBanner) == 0x0014A0, "Member 'UStoreMain_MTXOffer_C::AthenaDirectAcquisitionOffer_SpecialBanner' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, BaseColor) == 0x0014A8, "Member 'UStoreMain_MTXOffer_C::BaseColor' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, BonusTag) == 0x0014B0, "Member 'UStoreMain_MTXOffer_C::BonusTag' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, BonusText) == 0x0014B8, "Member 'UStoreMain_MTXOffer_C::BonusText' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, Border_Footer) == 0x0014C0, "Member 'UStoreMain_MTXOffer_C::Border_Footer' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, BorderAll) == 0x0014C8, "Member 'UStoreMain_MTXOffer_C::BorderAll' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, BundleTotalQuantity) == 0x0014D0, "Member 'UStoreMain_MTXOffer_C::BundleTotalQuantity' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, BundleVBucksText) == 0x0014D8, "Member 'UStoreMain_MTXOffer_C::BundleVBucksText' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, CurrencyTotalQuantity) == 0x0014E0, "Member 'UStoreMain_MTXOffer_C::CurrencyTotalQuantity' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, HBox_Price) == 0x0014E8, "Member 'UStoreMain_MTXOffer_C::HBox_Price' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, HoverBorder) == 0x0014F0, "Member 'UStoreMain_MTXOffer_C::HoverBorder' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, KeyArt) == 0x0014F8, "Member 'UStoreMain_MTXOffer_C::KeyArt' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, OverlayGradient) == 0x001500, "Member 'UStoreMain_MTXOffer_C::OverlayGradient' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, OverlaySalePrice) == 0x001508, "Member 'UStoreMain_MTXOffer_C::OverlaySalePrice' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, PlayStationStoreLogo) == 0x001510, "Member 'UStoreMain_MTXOffer_C::PlayStationStoreLogo' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, Plus) == 0x001518, "Member 'UStoreMain_MTXOffer_C::Plus' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, RMTBundle) == 0x001520, "Member 'UStoreMain_MTXOffer_C::RMTBundle' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, RMTCurrency) == 0x001528, "Member 'UStoreMain_MTXOffer_C::RMTCurrency' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, RMTTypeSwitcher) == 0x001530, "Member 'UStoreMain_MTXOffer_C::RMTTypeSwitcher' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, RMTVBucksHB) == 0x001538, "Member 'UStoreMain_MTXOffer_C::RMTVBucksHB' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, ScaleBoxKeyArt) == 0x001540, "Member 'UStoreMain_MTXOffer_C::ScaleBoxKeyArt' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, Switcher_Price) == 0x001548, "Member 'UStoreMain_MTXOffer_C::Switcher_Price' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, TextOfferDisplayPrice) == 0x001550, "Member 'UStoreMain_MTXOffer_C::TextOfferDisplayPrice' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, TextOfferName) == 0x001558, "Member 'UStoreMain_MTXOffer_C::TextOfferName' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, TextOfferPurchaseUnvailable) == 0x001560, "Member 'UStoreMain_MTXOffer_C::TextOfferPurchaseUnvailable' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, TextOriginalPrice) == 0x001568, "Member 'UStoreMain_MTXOffer_C::TextOriginalPrice' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, TileSize) == 0x001570, "Member 'UStoreMain_MTXOffer_C::TileSize' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, VBucksText) == 0x001578, "Member 'UStoreMain_MTXOffer_C::VBucksText' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, AboutToShowDetails) == 0x001580, "Member 'UStoreMain_MTXOffer_C::AboutToShowDetails' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, bCanSetPrice) == 0x001590, "Member 'UStoreMain_MTXOffer_C::bCanSetPrice' has a wrong offset!");
-static_assert(offsetof(UStoreMain_MTXOffer_C, CatalogMessaging) == 0x001598, "Member 'UStoreMain_MTXOffer_C::CatalogMessaging' has a wrong offset!");
+static_assert(alignof(UStoreMain_MTXOffer_C) == 0x000008, "Wrong alignment on UStoreMain_MTXOffer_C");
+static_assert(sizeof(UStoreMain_MTXOffer_C) == 0x000D68, "Wrong size on UStoreMain_MTXOffer_C");
+static_assert(offsetof(UStoreMain_MTXOffer_C, UberGraphFrame) == 0x000C38, "Member 'UStoreMain_MTXOffer_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, Hover_Linear) == 0x000C40, "Member 'UStoreMain_MTXOffer_C::Hover_Linear' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, UnhoverNew) == 0x000C48, "Member 'UStoreMain_MTXOffer_C::UnhoverNew' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, HoverNew) == 0x000C50, "Member 'UStoreMain_MTXOffer_C::HoverNew' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, Intro) == 0x000C58, "Member 'UStoreMain_MTXOffer_C::Intro' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, OnHover) == 0x000C60, "Member 'UStoreMain_MTXOffer_C::OnHover' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, AthenaDirectAcquisitionOffer_SpecialBanner) == 0x000C68, "Member 'UStoreMain_MTXOffer_C::AthenaDirectAcquisitionOffer_SpecialBanner' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, BaseColor) == 0x000C70, "Member 'UStoreMain_MTXOffer_C::BaseColor' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, BonusTag) == 0x000C78, "Member 'UStoreMain_MTXOffer_C::BonusTag' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, BonusText) == 0x000C80, "Member 'UStoreMain_MTXOffer_C::BonusText' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, Border_Footer) == 0x000C88, "Member 'UStoreMain_MTXOffer_C::Border_Footer' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, BorderAll) == 0x000C90, "Member 'UStoreMain_MTXOffer_C::BorderAll' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, BundleTotalQuantity) == 0x000C98, "Member 'UStoreMain_MTXOffer_C::BundleTotalQuantity' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, BundleVBucksText) == 0x000CA0, "Member 'UStoreMain_MTXOffer_C::BundleVBucksText' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, CurrencyTotalQuantity) == 0x000CA8, "Member 'UStoreMain_MTXOffer_C::CurrencyTotalQuantity' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, HBox_Price) == 0x000CB0, "Member 'UStoreMain_MTXOffer_C::HBox_Price' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, HoverBorder) == 0x000CB8, "Member 'UStoreMain_MTXOffer_C::HoverBorder' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, KeyArt) == 0x000CC0, "Member 'UStoreMain_MTXOffer_C::KeyArt' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, OverlayGradient) == 0x000CC8, "Member 'UStoreMain_MTXOffer_C::OverlayGradient' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, OverlaySalePrice) == 0x000CD0, "Member 'UStoreMain_MTXOffer_C::OverlaySalePrice' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, PlayStationStoreLogo) == 0x000CD8, "Member 'UStoreMain_MTXOffer_C::PlayStationStoreLogo' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, Plus) == 0x000CE0, "Member 'UStoreMain_MTXOffer_C::Plus' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, RMTBundle) == 0x000CE8, "Member 'UStoreMain_MTXOffer_C::RMTBundle' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, RMTCurrency) == 0x000CF0, "Member 'UStoreMain_MTXOffer_C::RMTCurrency' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, RMTTypeSwitcher) == 0x000CF8, "Member 'UStoreMain_MTXOffer_C::RMTTypeSwitcher' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, RMTVBucksHB) == 0x000D00, "Member 'UStoreMain_MTXOffer_C::RMTVBucksHB' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, ScaleBoxKeyArt) == 0x000D08, "Member 'UStoreMain_MTXOffer_C::ScaleBoxKeyArt' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, Switcher_Price) == 0x000D10, "Member 'UStoreMain_MTXOffer_C::Switcher_Price' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, TextOfferDisplayPrice) == 0x000D18, "Member 'UStoreMain_MTXOffer_C::TextOfferDisplayPrice' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, TextOfferName) == 0x000D20, "Member 'UStoreMain_MTXOffer_C::TextOfferName' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, TextOfferPurchaseUnvailable) == 0x000D28, "Member 'UStoreMain_MTXOffer_C::TextOfferPurchaseUnvailable' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, TextOriginalPrice) == 0x000D30, "Member 'UStoreMain_MTXOffer_C::TextOriginalPrice' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, TileSize) == 0x000D38, "Member 'UStoreMain_MTXOffer_C::TileSize' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, VBucksText) == 0x000D40, "Member 'UStoreMain_MTXOffer_C::VBucksText' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, AboutToShowDetails) == 0x000D48, "Member 'UStoreMain_MTXOffer_C::AboutToShowDetails' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, bCanSetPrice) == 0x000D58, "Member 'UStoreMain_MTXOffer_C::bCanSetPrice' has a wrong offset!");
+static_assert(offsetof(UStoreMain_MTXOffer_C, CatalogMessaging) == 0x000D60, "Member 'UStoreMain_MTXOffer_C::CatalogMessaging' has a wrong offset!");
 
 }
 

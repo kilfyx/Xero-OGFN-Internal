@@ -17,43 +17,83 @@
 namespace SDK
 {
 
-// Function FortniteConversationUI.FortConversationMarker.OnCanInteract
-// (Event, Protected, BlueprintEvent)
+// Function FortniteConversationUI.FortBasicBrief.OnChoiceTextReceived
+// (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// bool                                    bCanInteract                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FText&                      Text                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UFortConversationMarker::OnCanInteract(bool bCanInteract)
+void UFortBasicBrief::OnChoiceTextReceived(const class FText& Text)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortConversationMarker", "OnCanInteract");
+		Func = Class->GetFunction("FortBasicBrief", "OnChoiceTextReceived");
 
-	Params::FortConversationMarker_OnCanInteract Parms{};
+	Params::FortBasicBrief_OnChoiceTextReceived Parms{};
 
-	Parms.bCanInteract = bCanInteract;
+	Parms.Text = std::move(Text);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function FortniteConversationUI.FortConversationMarker.OnConversationActorProximityChanged
+// Function FortniteConversationUI.FortItemTransactionBrief.OnTransactionInfoReceived
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// EInteractionRange                       TargetInteractionRange                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UFortNonPlayerConversationParticipantComponent*ConversationComponent                                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UFortItem*                        Item                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UFortConversationMarker::OnConversationActorProximityChanged(EInteractionRange TargetInteractionRange, class UFortNonPlayerConversationParticipantComponent* ConversationComponent)
+void UFortItemTransactionBrief::OnTransactionInfoReceived(class UFortItem* Item)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortConversationMarker", "OnConversationActorProximityChanged");
+		Func = Class->GetFunction("FortItemTransactionBrief", "OnTransactionInfoReceived");
 
-	Params::FortConversationMarker_OnConversationActorProximityChanged Parms{};
+	Params::FortItemTransactionBrief_OnTransactionInfoReceived Parms{};
 
-	Parms.TargetInteractionRange = TargetInteractionRange;
-	Parms.ConversationComponent = ConversationComponent;
+	Parms.Item = Item;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FortniteConversationUI.FortBuyBrief.OnDisplayUnavailability
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// ECannotBuyReason                        CannotBuyReason                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFortBuyBrief::OnDisplayUnavailability(ECannotBuyReason CannotBuyReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortBuyBrief", "OnDisplayUnavailability");
+
+	Params::FortBuyBrief_OnDisplayUnavailability Parms{};
+
+	Parms.CannotBuyReason = CannotBuyReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FortniteConversationUI.FortBuyBrief.OnPurchaseDataReceived
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// int32                                   StackSize                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   RemainingForSale                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFortBuyBrief::OnPurchaseDataReceived(int32 StackSize, int32 RemainingForSale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortBuyBrief", "OnPurchaseDataReceived");
+
+	Params::FortBuyBrief_OnPurchaseDataReceived Parms{};
+
+	Parms.StackSize = StackSize;
+	Parms.RemainingForSale = RemainingForSale;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -119,21 +159,108 @@ void UFortConversationMarker::OnSetIndicatedActor(class AActor* NewIndicatorActo
 }
 
 
-// Function FortniteConversationUI.FortItemTransactionBrief.OnTransactionInfoReceived
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UFortItem*                        Item                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// Function FortniteConversationUI.FortConversationScreen.EndConversation
+// (Final, Native, Private)
 
-void UFortItemTransactionBrief::OnTransactionInfoReceived(class UFortItem* Item)
+void UFortConversationScreen::EndConversation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortItemTransactionBrief", "OnTransactionInfoReceived");
+		Func = Class->GetFunction("FortConversationScreen", "EndConversation");
 
-	Params::FortItemTransactionBrief_OnTransactionInfoReceived Parms{};
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	Parms.Item = Item;
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function FortniteConversationUI.FortConversationScreen.OnConversationOptionUnavailable
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UFortRadialSlot*                  SelectedEntry                                          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFortConversationScreen::OnConversationOptionUnavailable(class UFortRadialSlot* SelectedEntry)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortConversationScreen", "OnConversationOptionUnavailable");
+
+	Params::FortConversationScreen_OnConversationOptionUnavailable Parms{};
+
+	Parms.SelectedEntry = SelectedEntry;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FortniteConversationUI.FortConversationScreen.OnConversationStarted
+// (Event, Protected, BlueprintEvent)
+
+void UFortConversationScreen::OnConversationStarted()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortConversationScreen", "OnConversationStarted");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FortniteConversationUI.FortConversationScreen.OnItemSelected
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// int32                                   OriginalIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFortConversationScreen::OnItemSelected(int32 OriginalIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortConversationScreen", "OnItemSelected");
+
+	Params::FortConversationScreen_OnItemSelected Parms{};
+
+	Parms.OriginalIndex = OriginalIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FortniteConversationUI.FortConversationScreen.OnOptionsPopulated
+// (Event, Protected, BlueprintEvent)
+
+void UFortConversationScreen::OnOptionsPopulated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortConversationScreen", "OnOptionsPopulated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FortniteConversationUI.FortConversationScreen.OnSelectedItemAvailabilityChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsAvailable                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFortConversationScreen::OnSelectedItemAvailabilityChanged(bool bIsAvailable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortConversationScreen", "OnSelectedItemAvailabilityChanged");
+
+	Params::FortConversationScreen_OnSelectedItemAvailabilityChanged Parms{};
+
+	Parms.bIsAvailable = bIsAvailable;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -231,184 +358,6 @@ void UFortConversationMessageWidget::SetPreviewMessage(const class FText& Messag
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function FortniteConversationUI.FortApplyAbilityBrief.OnAbleToPurchase
-// (Event, Protected, BlueprintEvent)
-
-void UFortApplyAbilityBrief::OnAbleToPurchase()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortApplyAbilityBrief", "OnAbleToPurchase");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FortniteConversationUI.FortApplyAbilityBrief.OnUnableToPurchase
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// EPreventAbilityUseReason                Reason                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortApplyAbilityBrief::OnUnableToPurchase(EPreventAbilityUseReason Reason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortApplyAbilityBrief", "OnUnableToPurchase");
-
-	Params::FortApplyAbilityBrief_OnUnableToPurchase Parms{};
-
-	Parms.Reason = Reason;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortBasicBrief.OnChoiceTextReceived
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UFortBasicBrief::OnChoiceTextReceived(const class FText& Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortBasicBrief", "OnChoiceTextReceived");
-
-	Params::FortBasicBrief_OnChoiceTextReceived Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortBasicItemBrief.OnAbleToUse
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// const bool                              bShowWarningMessage                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortBasicItemBrief::OnAbleToUse(const bool bShowWarningMessage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortBasicItemBrief", "OnAbleToUse");
-
-	Params::FortBasicItemBrief_OnAbleToUse Parms{};
-
-	Parms.bShowWarningMessage = bShowWarningMessage;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortBasicItemBrief.OnItemInfoReceived
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UFortItem*                        Item                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   StackSize                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortBasicItemBrief::OnItemInfoReceived(class UFortItem* Item, int32 StackSize)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortBasicItemBrief", "OnItemInfoReceived");
-
-	Params::FortBasicItemBrief_OnItemInfoReceived Parms{};
-
-	Parms.Item = Item;
-	Parms.StackSize = StackSize;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortBasicItemBrief.OnUnableToUse
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const class FText&                      Reason                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UFortBasicItemBrief::OnUnableToUse(const class FText& Reason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortBasicItemBrief", "OnUnableToUse");
-
-	Params::FortBasicItemBrief_OnUnableToUse Parms{};
-
-	Parms.Reason = std::move(Reason);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortBasicItemBrief.OnUpdateDescriptionText
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const class FText&                      DescriptionText                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UFortBasicItemBrief::OnUpdateDescriptionText(const class FText& DescriptionText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortBasicItemBrief", "OnUpdateDescriptionText");
-
-	Params::FortBasicItemBrief_OnUpdateDescriptionText Parms{};
-
-	Parms.DescriptionText = std::move(DescriptionText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortBuyBrief.OnDisplayUnavailability
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// ECannotBuyReason                        CannotBuyReason                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortBuyBrief::OnDisplayUnavailability(ECannotBuyReason CannotBuyReason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortBuyBrief", "OnDisplayUnavailability");
-
-	Params::FortBuyBrief_OnDisplayUnavailability Parms{};
-
-	Parms.CannotBuyReason = CannotBuyReason;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortBuyBrief.OnPurchaseDataReceived
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// int32                                   StackSize                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   RemainingForSale                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortBuyBrief::OnPurchaseDataReceived(int32 StackSize, int32 RemainingForSale)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortBuyBrief", "OnPurchaseDataReceived");
-
-	Params::FortBuyBrief_OnPurchaseDataReceived Parms{};
-
-	Parms.StackSize = StackSize;
-	Parms.RemainingForSale = RemainingForSale;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -541,196 +490,10 @@ class UPanelSlot* UFortConversationOptionsPanel::AddChildToDynamicPanel(class UW
 }
 
 
-// Function FortniteConversationUI.FortConversationScreen.EndConversation
-// (Final, Native, Protected)
-
-void UFortConversationScreen::EndConversation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortConversationScreen", "EndConversation");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function FortniteConversationUI.FortConversationScreen.OnConversationOptionUnavailable
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UFortRadialSlot*                  SelectedEntry                                          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortConversationScreen::OnConversationOptionUnavailable(class UFortRadialSlot* SelectedEntry)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortConversationScreen", "OnConversationOptionUnavailable");
-
-	Params::FortConversationScreen_OnConversationOptionUnavailable Parms{};
-
-	Parms.SelectedEntry = SelectedEntry;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortConversationScreen.OnConversationStarted
-// (Event, Protected, BlueprintEvent)
-
-void UFortConversationScreen::OnConversationStarted()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortConversationScreen", "OnConversationStarted");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FortniteConversationUI.FortConversationScreen.OnItemSelected
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// int32                                   OriginalIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortConversationScreen::OnItemSelected(int32 OriginalIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortConversationScreen", "OnItemSelected");
-
-	Params::FortConversationScreen_OnItemSelected Parms{};
-
-	Parms.OriginalIndex = OriginalIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortConversationScreen.OnOptionsPopulated
-// (Event, Protected, BlueprintEvent)
-
-void UFortConversationScreen::OnOptionsPopulated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortConversationScreen", "OnOptionsPopulated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FortniteConversationUI.FortConversationScreen.OnSelectedItemAvailabilityChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsAvailable                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortConversationScreen::OnSelectedItemAvailabilityChanged(bool bIsAvailable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortConversationScreen", "OnSelectedItemAvailabilityChanged");
-
-	Params::FortConversationScreen_OnSelectedItemAvailabilityChanged Parms{};
-
-	Parms.bIsAvailable = bIsAvailable;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortConversationScreen.ShouldBlockOptionIntroAnim
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UFortConversationScreen::ShouldBlockOptionIntroAnim()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortConversationScreen", "ShouldBlockOptionIntroAnim");
-
-	Params::FortConversationScreen_ShouldBlockOptionIntroAnim Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function FortniteConversationUI.FortDataDrivenServiceBrief.OnAbleToPurchase
-// (Event, Protected, BlueprintEvent)
-
-void UFortDataDrivenServiceBrief::OnAbleToPurchase()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDataDrivenServiceBrief", "OnAbleToPurchase");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FortniteConversationUI.FortDataDrivenServiceBrief.OnTransactionInfoReceived
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UFortItem*                        Item                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortDataDrivenServiceBrief::OnTransactionInfoReceived(class UFortItem* Item)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDataDrivenServiceBrief", "OnTransactionInfoReceived");
-
-	Params::FortDataDrivenServiceBrief_OnTransactionInfoReceived Parms{};
-
-	Parms.Item = Item;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortDataDrivenServiceBrief.OnUnableToPurchase
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const class FText&                      Reason                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UFortDataDrivenServiceBrief::OnUnableToPurchase(const class FText& Reason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDataDrivenServiceBrief", "OnUnableToPurchase");
-
-	Params::FortDataDrivenServiceBrief_OnUnableToPurchase Parms{};
-
-	Parms.Reason = std::move(Reason);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function FortniteConversationUI.FortDuelBrief.DisplayLootItems
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TArray<class UFortItem*>&         Items                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class UFortItem*>&         Items                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UFortDuelBrief::DisplayLootItems(const TArray<class UFortItem*>& Items)
 {
@@ -744,80 +507,6 @@ void UFortDuelBrief::DisplayLootItems(const TArray<class UFortItem*>& Items)
 	Parms.Items = std::move(Items);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortItemFundBrief.InitializeFromContext
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FConversationContext&      ConversationContext                                    (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-void UFortItemFundBrief::InitializeFromContext(const struct FConversationContext& ConversationContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortItemFundBrief", "InitializeFromContext");
-
-	Params::FortItemFundBrief_InitializeFromContext Parms{};
-
-	Parms.ConversationContext = std::move(ConversationContext);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortItemFundBrief.OnProgressUpdated
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// const float                             CurrentFundingFraction                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortItemFundBrief::OnProgressUpdated(const float CurrentFundingFraction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortItemFundBrief", "OnProgressUpdated");
-
-	Params::FortItemFundBrief_OnProgressUpdated Parms{};
-
-	Parms.CurrentFundingFraction = CurrentFundingFraction;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortMultiItemFundBrief.UpdateSelectedVisuals
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// int32                                   SelectedIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortMultiItemFundBrief::UpdateSelectedVisuals(int32 SelectedIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortMultiItemFundBrief", "UpdateSelectedVisuals");
-
-	Params::FortMultiItemFundBrief_UpdateSelectedVisuals Parms{};
-
-	Parms.SelectedIndex = SelectedIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortNPCTextDisplay.OnTextUpdated
-// (Event, Protected, BlueprintEvent)
-
-void UFortNPCTextDisplay::OnTextUpdated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortNPCTextDisplay", "OnTextUpdated");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -869,95 +558,13 @@ void UFortQuestBrief::OnQuestInformationRecieved(const class FText& Objective, c
 }
 
 
-// Function FortniteConversationUI.FortShowFutureStormCircleBrief.OnAbleToPurchase
-// (Event, Protected, BlueprintEvent)
-
-void UFortShowFutureStormCircleBrief::OnAbleToPurchase()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortShowFutureStormCircleBrief", "OnAbleToPurchase");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FortniteConversationUI.FortShowFutureStormCircleBrief.OnUnableToPurchase
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// EPreventUseStormCircleServiceReason     Reason                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortShowFutureStormCircleBrief::OnUnableToPurchase(EPreventUseStormCircleServiceReason Reason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortShowFutureStormCircleBrief", "OnUnableToPurchase");
-
-	Params::FortShowFutureStormCircleBrief_OnUnableToPurchase Parms{};
-
-	Parms.Reason = Reason;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortniteConversationUI.FortTransactionStrip.HandleOnItemCountChanged
-// (Final, Native, Private)
-// Parameters:
-// TScriptInterface<class IFortInventoryOwnerInterface>InventoryOwner                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UFortItemDefinition*              Definition                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Delta                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortTransactionStrip::HandleOnItemCountChanged(TScriptInterface<class IFortInventoryOwnerInterface> InventoryOwner, class UFortItemDefinition* Definition, int32 Delta)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortTransactionStrip", "HandleOnItemCountChanged");
-
-	Params::FortTransactionStrip_HandleOnItemCountChanged Parms{};
-
-	Parms.InventoryOwner = InventoryOwner;
-	Parms.Definition = Definition;
-	Parms.Delta = Delta;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function FortniteConversationUI.FortTransactionStrip.OnSetTransactionCostVisibility
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// const bool                              bVisible                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortTransactionStrip::OnSetTransactionCostVisibility(const bool bVisible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortTransactionStrip", "OnSetTransactionCostVisibility");
-
-	Params::FortTransactionStrip_OnSetTransactionCostVisibility Parms{};
-
-	Parms.bVisible = bVisible;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function FortniteConversationUI.FortTransactionStrip.OnTransactionInfoReceived
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// const struct FFortServiceTransactionInfo&TransactionInfo                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// int32                                   TransactionCost                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   OwnedCurrency                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UFortTransactionStrip::OnTransactionInfoReceived(const struct FFortServiceTransactionInfo& TransactionInfo)
+void UFortTransactionStrip::OnTransactionInfoReceived(int32 TransactionCost, int32 OwnedCurrency)
 {
 	static class UFunction* Func = nullptr;
 
@@ -966,7 +573,8 @@ void UFortTransactionStrip::OnTransactionInfoReceived(const struct FFortServiceT
 
 	Params::FortTransactionStrip_OnTransactionInfoReceived Parms{};
 
-	Parms.TransactionInfo = std::move(TransactionInfo);
+	Parms.TransactionCost = TransactionCost;
+	Parms.OwnedCurrency = OwnedCurrency;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

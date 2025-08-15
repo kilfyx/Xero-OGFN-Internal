@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteGame_structs.hpp"
 #include "FortniteUI_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -20,82 +20,55 @@ namespace SDK::Params
 {
 
 // Function ShowdownTournamentDetailsScoringRule.ShowdownTournamentDetailsScoringRule_C.SetData
-// 0x0418 (0x0418 - 0x0000)
+// 0x0308 (0x0308 - 0x0000)
 struct ShowdownTournamentDetailsScoringRule_C_SetData final
 {
 public:
-	struct FFortShowdownScoringRuleInfo           ScoreRule;                                         // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FFortTournamentDisplayInfo             TournamentDisplayInfo;                             // 0x0020(0x01D0)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FLinearColor                           Temp_struct_Variable;                              // 0x01F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0200(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0211(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0212(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_213[0x5];                                      // 0x0213(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0228(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x027C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27D[0x3];                                      // 0x027D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_3;          // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_289[0x7];                                      // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0290(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_SelectInt_ReturnValue_1;                  // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E4[0x4];                                      // 0x02E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x02E8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x02F8(0x0018)()
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0311(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0312(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0313(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_314[0x4];                                      // 0x0314(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0318(0x0018)()
-	struct FLinearColor                           K2Node_Select_Default;                             // 0x0330(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0341(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_342[0x6];                                      // 0x0342(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCMSContext*                            CallFunc_GetContext_ReturnValue;                   // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFortShowdownScoringRuleDisplayInfo    CallFunc_GetScoringRuleDisplayInfo_ReturnValue;    // 0x0350(0x0080)(ConstParm)
-	class FText                                   K2Node_Select_Default_1;                           // 0x03D0(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x03E8(0x0018)()
-	class FText                                   K2Node_Select_Default_2;                           // 0x0400(0x0018)()
+	struct FFortShowdownScoringRuleInfo           ScoreRule;                                         // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FFortTournamentDisplayInfo             TournamentDisplayInfo;                             // 0x0018(0x01A8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FLinearColor                           Temp_struct_Variable;                              // 0x01C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x01D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x01E0(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0220(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0238(0x0018)()
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0252(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0253(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_254[0x4];                                      // 0x0254(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0258(0x0018)()
+	struct FLinearColor                           K2Node_Select_Default;                             // 0x0270(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortShowdownScoringRuleDisplayInfo    CallFunc_GetDataTableRowFromName_OutRow;           // 0x0288(0x0048)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x02D8(0x0018)()
+	class FText                                   K2Node_Select_Default_1;                           // 0x02F0(0x0018)()
 };
 static_assert(alignof(ShowdownTournamentDetailsScoringRule_C_SetData) == 0x000008, "Wrong alignment on ShowdownTournamentDetailsScoringRule_C_SetData");
-static_assert(sizeof(ShowdownTournamentDetailsScoringRule_C_SetData) == 0x000418, "Wrong size on ShowdownTournamentDetailsScoringRule_C_SetData");
+static_assert(sizeof(ShowdownTournamentDetailsScoringRule_C_SetData) == 0x000308, "Wrong size on ShowdownTournamentDetailsScoringRule_C_SetData");
 static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, ScoreRule) == 0x000000, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::ScoreRule' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, TournamentDisplayInfo) == 0x000020, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::TournamentDisplayInfo' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, Temp_struct_Variable) == 0x0001F0, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, Temp_struct_Variable_1) == 0x000200, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000210, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000211, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000212, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000218, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_BooleanAND_ReturnValue) == 0x000220, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, K2Node_MakeStruct_FormatArgumentData) == 0x000228, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_SelectInt_ReturnValue) == 0x000278, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x00027C, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000280, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x000288, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, K2Node_MakeStruct_FormatArgumentData_1) == 0x000290, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_SelectInt_ReturnValue_1) == 0x0002E0, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_SelectInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, K2Node_MakeArray_Array) == 0x0002E8, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_Conv_IntToText_ReturnValue) == 0x0002F8, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000310, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000311, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, Temp_bool_Variable) == 0x000312, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_BooleanAND_ReturnValue_1) == 0x000313, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, Temp_text_Variable) == 0x000318, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, K2Node_Select_Default) == 0x000330, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, Temp_bool_Variable_1) == 0x000340, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, Temp_bool_Variable_2) == 0x000341, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_GetContext_ReturnValue) == 0x000348, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_GetContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_GetScoringRuleDisplayInfo_ReturnValue) == 0x000350, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_GetScoringRuleDisplayInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, K2Node_Select_Default_1) == 0x0003D0, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_Format_ReturnValue) == 0x0003E8, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, K2Node_Select_Default_2) == 0x000400, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, TournamentDisplayInfo) == 0x000018, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::TournamentDisplayInfo' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, Temp_struct_Variable) == 0x0001C0, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, Temp_struct_Variable_1) == 0x0001D0, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, K2Node_MakeStruct_FormatArgumentData) == 0x0001E0, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, K2Node_MakeArray_Array) == 0x000220, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000230, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_Conv_IntToText_ReturnValue) == 0x000238, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000250, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000251, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_BooleanAND_ReturnValue) == 0x000252, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, Temp_bool_Variable) == 0x000253, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, Temp_text_Variable) == 0x000258, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, K2Node_Select_Default) == 0x000270, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, Temp_bool_Variable_1) == 0x000280, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_GetDataTableRowFromName_OutRow) == 0x000288, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0002D0, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, CallFunc_Format_ReturnValue) == 0x0002D8, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownTournamentDetailsScoringRule_C_SetData, K2Node_Select_Default_1) == 0x0002F0, "Member 'ShowdownTournamentDetailsScoringRule_C_SetData::K2Node_Select_Default_1' has a wrong offset!");
 
 }
 

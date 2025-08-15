@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ProgressModalWidget.ProgressModalWidget_C
-// 0x0010 (0x05A0 - 0x0590)
+// 0x0010 (0x0568 - 0x0558)
 class UProgressModalWidget_C final : public UFortProgressModal
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class ULightbox_C*                            Lightbox;                                          // 0x0598(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0558(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class ULightbox_C*                            Lightbox;                                          // 0x0560(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void OnBeginOutro();
-	void OnBeginIntro();
 	struct FEventReply OnAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FAnalogInputEvent& InAnalogInputEvent);
-	void HandleOutroEnded();
-	void HandleIntroEnded();
-	void ExecuteUbergraph_ProgressModalWidget(int32 EntryPoint);
-	void Destruct();
 	void Construct();
+	void HandleIntroEnded();
+	void HandleOutroEnded();
+	void OnBeginIntro();
+	void OnBeginOutro();
+	void Destruct();
+	void ExecuteUbergraph_ProgressModalWidget(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -45,6 +45,10 @@ public:
 		return GetDefaultObjImpl<UProgressModalWidget_C>();
 	}
 };
+static_assert(alignof(UProgressModalWidget_C) == 0x000008, "Wrong alignment on UProgressModalWidget_C");
+static_assert(sizeof(UProgressModalWidget_C) == 0x000568, "Wrong size on UProgressModalWidget_C");
+static_assert(offsetof(UProgressModalWidget_C, UberGraphFrame) == 0x000558, "Member 'UProgressModalWidget_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UProgressModalWidget_C, Lightbox) == 0x000560, "Member 'UProgressModalWidget_C::Lightbox' has a wrong offset!");
 
 }
 

@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Store_BannerMessage.Store_BannerMessage_C
-// 0x0010 (0x02A8 - 0x0298)
+// 0x0010 (0x02A0 - 0x0290)
 class UStore_BannerMessage_C final : public UFortStoreBanner
 {
 public:
-	class UWidgetAnimation*                       Ani_Intro;                                         // 0x0298(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 AnimatingBorder;                                   // 0x02A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_Intro;                                         // 0x0290(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 AnimatingBorder;                                   // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void Pulse();
@@ -38,9 +38,9 @@ public:
 	}
 };
 static_assert(alignof(UStore_BannerMessage_C) == 0x000008, "Wrong alignment on UStore_BannerMessage_C");
-static_assert(sizeof(UStore_BannerMessage_C) == 0x0002A8, "Wrong size on UStore_BannerMessage_C");
-static_assert(offsetof(UStore_BannerMessage_C, Ani_Intro) == 0x000298, "Member 'UStore_BannerMessage_C::Ani_Intro' has a wrong offset!");
-static_assert(offsetof(UStore_BannerMessage_C, AnimatingBorder) == 0x0002A0, "Member 'UStore_BannerMessage_C::AnimatingBorder' has a wrong offset!");
+static_assert(sizeof(UStore_BannerMessage_C) == 0x0002A0, "Wrong size on UStore_BannerMessage_C");
+static_assert(offsetof(UStore_BannerMessage_C, Ani_Intro) == 0x000290, "Member 'UStore_BannerMessage_C::Ani_Intro' has a wrong offset!");
+static_assert(offsetof(UStore_BannerMessage_C, AnimatingBorder) == 0x000298, "Member 'UStore_BannerMessage_C::AnimatingBorder' has a wrong offset!");
 
 }
 

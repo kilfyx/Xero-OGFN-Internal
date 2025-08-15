@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function SquadSelection.SquadSelection_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void USquadSelection_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
-
-	Params::SquadSelection_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function SquadSelection.SquadSelection_C.ExecuteUbergraph_SquadSelection
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -45,9 +25,9 @@ void USquadSelection_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonB
 void USquadSelection_C::ExecuteUbergraph_SquadSelection(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_SquadSelection");
+		Func = Class->GetFunction("SquadSelection_C", "ExecuteUbergraph_SquadSelection");
 
 	Params::SquadSelection_C_ExecuteUbergraph_SquadSelection Parms{};
 
@@ -57,17 +37,37 @@ void USquadSelection_C::ExecuteUbergraph_SquadSelection(int32 EntryPoint)
 }
 
 
+// Function SquadSelection.SquadSelection_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USquadSelection_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SquadSelection_C", "BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
+
+	Params::SquadSelection_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function SquadSelection.SquadSelection_C.OnLocalPlayerParticipationChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsParticipating                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsParticipating                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void USquadSelection_C::OnLocalPlayerParticipationChanged(bool bIsParticipating)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnLocalPlayerParticipationChanged");
+		Func = Class->GetFunction("SquadSelection_C", "OnLocalPlayerParticipationChanged");
 
 	Params::SquadSelection_C_OnLocalPlayerParticipationChanged Parms{};
 

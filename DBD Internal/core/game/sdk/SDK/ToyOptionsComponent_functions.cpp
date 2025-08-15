@@ -17,26 +17,23 @@
 namespace SDK
 {
 
-// Function ToyOptionsComponent.ToyOptionsComponent_C.BlueprintOnLocalInteract
-// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function ToyOptionsComponent.ToyOptionsComponent_C.ExecuteUbergraph_ToyOptionsComponent
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class AFortPlayerPawn*                  InteractingPawn                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UToyOptionsComponent_C::BlueprintOnLocalInteract(class AFortPlayerPawn* InteractingPawn)
+void UToyOptionsComponent_C::ExecuteUbergraph_ToyOptionsComponent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ToyOptionsComponent_C", "BlueprintOnLocalInteract");
+		Func = Class->GetFunction("ToyOptionsComponent_C", "ExecuteUbergraph_ToyOptionsComponent");
 
-	Params::ToyOptionsComponent_C_BlueprintOnLocalInteract Parms{};
+	Params::ToyOptionsComponent_C_ExecuteUbergraph_ToyOptionsComponent Parms{};
 
-	Parms.InteractingPawn = InteractingPawn;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
@@ -62,32 +59,12 @@ void UToyOptionsComponent_C::DisplayOptions(class APlayerController* Interacting
 }
 
 
-// Function ToyOptionsComponent.ToyOptionsComponent_C.ExecuteUbergraph_ToyOptionsComponent
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UToyOptionsComponent_C::ExecuteUbergraph_ToyOptionsComponent(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToyOptionsComponent_C", "ExecuteUbergraph_ToyOptionsComponent");
-
-	Params::ToyOptionsComponent_C_ExecuteUbergraph_ToyOptionsComponent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ToyOptionsComponent.ToyOptionsComponent_C.OnLoaded_E8F4D2FB4AB5542DE83E50B51A402D27
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TSubclassOf<class UObject>              Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// class UClass*                           Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UToyOptionsComponent_C::OnLoaded_E8F4D2FB4AB5542DE83E50B51A402D27(TSubclassOf<class UObject> Loaded)
+void UToyOptionsComponent_C::OnLoaded_E8F4D2FB4AB5542DE83E50B51A402D27(class UClass* Loaded)
 {
 	static class UFunction* Func = nullptr;
 
@@ -99,6 +76,29 @@ void UToyOptionsComponent_C::OnLoaded_E8F4D2FB4AB5542DE83E50B51A402D27(TSubclass
 	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ToyOptionsComponent.ToyOptionsComponent_C.BlueprintOnLocalInteract
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFortPlayerPawn*                  InteractingPawn                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UToyOptionsComponent_C::BlueprintOnLocalInteract(class AFortPlayerPawn* InteractingPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ToyOptionsComponent_C", "BlueprintOnLocalInteract");
+
+	Params::ToyOptionsComponent_C_BlueprintOnLocalInteract Parms{};
+
+	Parms.InteractingPawn = InteractingPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

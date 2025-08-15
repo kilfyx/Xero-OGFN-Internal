@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -31,14 +31,19 @@ public:
 	struct FTransform                             LS_Transform;                                      // 0x0240(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
 	struct FIntPoint                              LS_RT_Res;                                         // 0x0270(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              Quad_Size;                                         // 0x0278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Use_Terrain_Velocity_and_Height_Texture;           // 0x0280(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Use_Terrain_Velocity_and_Height_Texture;           // 0x0280(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               External_Water_MID_To_Update;                      // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_LandscapeWaterInfo(int32 EntryPoint);
-	void ReceiveBeginPlay();
 	void Set_Flood_Water_Level();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveBeginPlay();
+	void UserConstructionScript();
+	void Set_Water_MPC_Values();
+	void Update_Water_MID(class UTexture* Texture);
+	void UpdateGameTexture();
 
 public:
 	static class UClass* StaticClass()
@@ -50,6 +55,17 @@ public:
 		return GetDefaultObjImpl<ALandscapeWaterInfo_C>();
 	}
 };
+static_assert(alignof(ALandscapeWaterInfo_C) == 0x000010, "Wrong alignment on ALandscapeWaterInfo_C");
+static_assert(sizeof(ALandscapeWaterInfo_C) == 0x000290, "Wrong size on ALandscapeWaterInfo_C");
+static_assert(offsetof(ALandscapeWaterInfo_C, UberGraphFrame) == 0x000220, "Member 'ALandscapeWaterInfo_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ALandscapeWaterInfo_C, DefaultSceneRoot) == 0x000228, "Member 'ALandscapeWaterInfo_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ALandscapeWaterInfo_C, Flood_Water_Level) == 0x000230, "Member 'ALandscapeWaterInfo_C::Flood_Water_Level' has a wrong offset!");
+static_assert(offsetof(ALandscapeWaterInfo_C, Game_Texture__Water_Velocity_and_Height) == 0x000238, "Member 'ALandscapeWaterInfo_C::Game_Texture__Water_Velocity_and_Height' has a wrong offset!");
+static_assert(offsetof(ALandscapeWaterInfo_C, LS_Transform) == 0x000240, "Member 'ALandscapeWaterInfo_C::LS_Transform' has a wrong offset!");
+static_assert(offsetof(ALandscapeWaterInfo_C, LS_RT_Res) == 0x000270, "Member 'ALandscapeWaterInfo_C::LS_RT_Res' has a wrong offset!");
+static_assert(offsetof(ALandscapeWaterInfo_C, Quad_Size) == 0x000278, "Member 'ALandscapeWaterInfo_C::Quad_Size' has a wrong offset!");
+static_assert(offsetof(ALandscapeWaterInfo_C, Use_Terrain_Velocity_and_Height_Texture) == 0x000280, "Member 'ALandscapeWaterInfo_C::Use_Terrain_Velocity_and_Height_Texture' has a wrong offset!");
+static_assert(offsetof(ALandscapeWaterInfo_C, External_Water_MID_To_Update) == 0x000288, "Member 'ALandscapeWaterInfo_C::External_Water_MID_To_Update' has a wrong offset!");
 
 }
 

@@ -37,6 +37,40 @@ void ALandscapeWaterInfo_C::ExecuteUbergraph_LandscapeWaterInfo(int32 EntryPoint
 }
 
 
+// Function LandscapeWaterInfo.LandscapeWaterInfo_C.Set Flood Water Level
+// (BlueprintCallable, BlueprintEvent)
+
+void ALandscapeWaterInfo_C::Set_Flood_Water_Level()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LandscapeWaterInfo_C", "Set Flood Water Level");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LandscapeWaterInfo.LandscapeWaterInfo_C.ReceiveEndPlay
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ALandscapeWaterInfo_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LandscapeWaterInfo_C", "ReceiveEndPlay");
+
+	Params::LandscapeWaterInfo_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function LandscapeWaterInfo.LandscapeWaterInfo_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -51,15 +85,63 @@ void ALandscapeWaterInfo_C::ReceiveBeginPlay()
 }
 
 
-// Function LandscapeWaterInfo.LandscapeWaterInfo_C.Set Flood Water Level
-// (BlueprintCallable, BlueprintEvent)
+// Function LandscapeWaterInfo.LandscapeWaterInfo_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ALandscapeWaterInfo_C::Set_Flood_Water_Level()
+void ALandscapeWaterInfo_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LandscapeWaterInfo_C", "Set Flood Water Level");
+		Func = Class->GetFunction("LandscapeWaterInfo_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LandscapeWaterInfo.LandscapeWaterInfo_C.Set Water MPC Values
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ALandscapeWaterInfo_C::Set_Water_MPC_Values()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LandscapeWaterInfo_C", "Set Water MPC Values");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LandscapeWaterInfo.LandscapeWaterInfo_C.Update Water MID
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTexture*                         Texture                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ALandscapeWaterInfo_C::Update_Water_MID(class UTexture* Texture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LandscapeWaterInfo_C", "Update Water MID");
+
+	Params::LandscapeWaterInfo_C_Update_Water_MID Parms{};
+
+	Parms.Texture = Texture;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LandscapeWaterInfo.LandscapeWaterInfo_C.UpdateGameTexture
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ALandscapeWaterInfo_C::UpdateGameTexture()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LandscapeWaterInfo_C", "UpdateGameTexture");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

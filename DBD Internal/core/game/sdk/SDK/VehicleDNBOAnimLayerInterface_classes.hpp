@@ -43,6 +43,8 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+static_assert(alignof(IVehicleDNBOAnimLayerInterface_C) == 0x000001, "Wrong alignment on IVehicleDNBOAnimLayerInterface_C");
+static_assert(sizeof(IVehicleDNBOAnimLayerInterface_C) == 0x000001, "Wrong size on IVehicleDNBOAnimLayerInterface_C");
 
 }
 

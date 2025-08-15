@@ -22,6 +22,10 @@ public:
 	class UTimeSynthClip*                         Clip_2_44C8BCC94271C623B7BC899252572F7F;           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTimeSynthVolumeGroup*                  VolumeGroup_5_253738DD4CC1527E3CC6D3A5152321EC;    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(FTimeSynth_TrackStemData) == 0x000008, "Wrong alignment on FTimeSynth_TrackStemData");
+static_assert(sizeof(FTimeSynth_TrackStemData) == 0x000010, "Wrong size on FTimeSynth_TrackStemData");
+static_assert(offsetof(FTimeSynth_TrackStemData, Clip_2_44C8BCC94271C623B7BC899252572F7F) == 0x000000, "Member 'FTimeSynth_TrackStemData::Clip_2_44C8BCC94271C623B7BC899252572F7F' has a wrong offset!");
+static_assert(offsetof(FTimeSynth_TrackStemData, VolumeGroup_5_253738DD4CC1527E3CC6D3A5152321EC) == 0x000008, "Member 'FTimeSynth_TrackStemData::VolumeGroup_5_253738DD4CC1527E3CC6D3A5152321EC' has a wrong offset!");
 
 }
 

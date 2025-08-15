@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function PartyMemberListEntry.PartyMemberListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function PartyMemberListEntry.PartyMemberListEntry_C.ExecuteUbergraph_PartyMemberListEntry
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    bIsOpen                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPartyMemberListEntry_C::BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
+void UPartyMemberListEntry_C::ExecuteUbergraph_PartyMemberListEntry(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PartyMemberListEntry_C", "BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature");
+		Func = Class->GetFunction("PartyMemberListEntry_C", "ExecuteUbergraph_PartyMemberListEntry");
 
-	Params::PartyMemberListEntry_C_BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature Parms{};
+	Params::PartyMemberListEntry_C_ExecuteUbergraph_PartyMemberListEntry Parms{};
 
-	Parms.bIsOpen = bIsOpen;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -51,6 +51,26 @@ void UPartyMemberListEntry_C::BP_OnHovered()
 }
 
 
+// Function PartyMemberListEntry.PartyMemberListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bIsOpen                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UPartyMemberListEntry_C::BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyMemberListEntry_C", "BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature");
+
+	Params::PartyMemberListEntry_C_BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature Parms{};
+
+	Parms.bIsOpen = bIsOpen;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function PartyMemberListEntry.PartyMemberListEntry_C.BP_OnUnhovered
 // (Event, Protected, BlueprintEvent)
 
@@ -62,26 +82,6 @@ void UPartyMemberListEntry_C::BP_OnUnhovered()
 		Func = Class->GetFunction("PartyMemberListEntry_C", "BP_OnUnhovered");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyMemberListEntry.PartyMemberListEntry_C.ExecuteUbergraph_PartyMemberListEntry
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UPartyMemberListEntry_C::ExecuteUbergraph_PartyMemberListEntry(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyMemberListEntry_C", "ExecuteUbergraph_PartyMemberListEntry");
-
-	Params::PartyMemberListEntry_C_ExecuteUbergraph_PartyMemberListEntry Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

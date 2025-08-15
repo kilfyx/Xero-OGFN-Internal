@@ -10,37 +10,28 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function SocialPanel_FriendSearchBar.SocialPanel_FriendSearchBar_C.BndEvt__EditableText_AddFriend_K2Node_ComponentBoundEvent_0_OnEditableTextChangedEvent__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct SocialPanel_FriendSearchBar_C_BndEvt__EditableText_AddFriend_K2Node_ComponentBoundEvent_0_OnEditableTextChangedEvent__DelegateSignature final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-
 // Function SocialPanel_FriendSearchBar.SocialPanel_FriendSearchBar_C.ExecuteUbergraph_SocialPanel_FriendSearchBar
-// 0x0040 (0x0040 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct SocialPanel_FriendSearchBar_C_ExecuteUbergraph_SocialPanel_FriendSearchBar final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortRuntimeOptions*                    CallFunc_GetRuntimeOptions_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x0020(0x0018)(ConstParm)
-	bool                                          CallFunc_LimitTextLength_WasTrimmed;               // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayAnimationByName_ReturnValue;          // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(SocialPanel_FriendSearchBar_C_ExecuteUbergraph_SocialPanel_FriendSearchBar) == 0x000008, "Wrong alignment on SocialPanel_FriendSearchBar_C_ExecuteUbergraph_SocialPanel_FriendSearchBar");
+static_assert(sizeof(SocialPanel_FriendSearchBar_C_ExecuteUbergraph_SocialPanel_FriendSearchBar) == 0x000018, "Wrong size on SocialPanel_FriendSearchBar_C_ExecuteUbergraph_SocialPanel_FriendSearchBar");
+static_assert(offsetof(SocialPanel_FriendSearchBar_C_ExecuteUbergraph_SocialPanel_FriendSearchBar, EntryPoint) == 0x000000, "Member 'SocialPanel_FriendSearchBar_C_ExecuteUbergraph_SocialPanel_FriendSearchBar::EntryPoint' has a wrong offset!");
+static_assert(offsetof(SocialPanel_FriendSearchBar_C_ExecuteUbergraph_SocialPanel_FriendSearchBar, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'SocialPanel_FriendSearchBar_C_ExecuteUbergraph_SocialPanel_FriendSearchBar::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SocialPanel_FriendSearchBar_C_ExecuteUbergraph_SocialPanel_FriendSearchBar, CallFunc_PlayAnimation_ReturnValue_1) == 0x000010, "Member 'SocialPanel_FriendSearchBar_C_ExecuteUbergraph_SocialPanel_FriendSearchBar::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
 
 // Function SocialPanel_FriendSearchBar.SocialPanel_FriendSearchBar_C.On_ClickCapture_MouseButtonDown_0
 // 0x0218 (0x0218 - 0x0000)
@@ -52,6 +43,12 @@ public:
 	struct FEventReply                            ReturnValue;                                       // 0x00A8(0x00B8)(Parm, OutParm, ReturnParm)
 	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0160(0x00B8)()
 };
+static_assert(alignof(SocialPanel_FriendSearchBar_C_On_ClickCapture_MouseButtonDown_0) == 0x000008, "Wrong alignment on SocialPanel_FriendSearchBar_C_On_ClickCapture_MouseButtonDown_0");
+static_assert(sizeof(SocialPanel_FriendSearchBar_C_On_ClickCapture_MouseButtonDown_0) == 0x000218, "Wrong size on SocialPanel_FriendSearchBar_C_On_ClickCapture_MouseButtonDown_0");
+static_assert(offsetof(SocialPanel_FriendSearchBar_C_On_ClickCapture_MouseButtonDown_0, MyGeometry) == 0x000000, "Member 'SocialPanel_FriendSearchBar_C_On_ClickCapture_MouseButtonDown_0::MyGeometry' has a wrong offset!");
+static_assert(offsetof(SocialPanel_FriendSearchBar_C_On_ClickCapture_MouseButtonDown_0, MouseEvent) == 0x000038, "Member 'SocialPanel_FriendSearchBar_C_On_ClickCapture_MouseButtonDown_0::MouseEvent' has a wrong offset!");
+static_assert(offsetof(SocialPanel_FriendSearchBar_C_On_ClickCapture_MouseButtonDown_0, ReturnValue) == 0x0000A8, "Member 'SocialPanel_FriendSearchBar_C_On_ClickCapture_MouseButtonDown_0::ReturnValue' has a wrong offset!");
+static_assert(offsetof(SocialPanel_FriendSearchBar_C_On_ClickCapture_MouseButtonDown_0, CallFunc_Handled_ReturnValue) == 0x000160, "Member 'SocialPanel_FriendSearchBar_C_On_ClickCapture_MouseButtonDown_0::CallFunc_Handled_ReturnValue' has a wrong offset!");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Parent_BuildingWall.Parent_BuildingWall_C
-// 0x0000 (0x0DF8 - 0x0DF8)
+// 0x0000 (0x0C28 - 0x0C28)
 class AParent_BuildingWall_C : public ABuildingWall
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AParent_BuildingWall_C>();
 	}
 };
+static_assert(alignof(AParent_BuildingWall_C) == 0x000008, "Wrong alignment on AParent_BuildingWall_C");
+static_assert(sizeof(AParent_BuildingWall_C) == 0x000C28, "Wrong size on AParent_BuildingWall_C");
 
 }
 

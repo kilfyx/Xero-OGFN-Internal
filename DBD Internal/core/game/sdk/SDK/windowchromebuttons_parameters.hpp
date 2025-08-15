@@ -29,6 +29,25 @@ public:
 	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x00B8(0x0070)(ConstParm)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons) == 0x000008, "Wrong alignment on windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons");
+static_assert(sizeof(windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons) == 0x000130, "Wrong size on windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons");
+static_assert(offsetof(windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons, EntryPoint) == 0x000000, "Member 'windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons::EntryPoint' has a wrong offset!");
+static_assert(offsetof(windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons, K2Node_Event_MyGeometry) == 0x000010, "Member 'windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons, K2Node_Event_MouseEvent_1) == 0x000048, "Member 'windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons::K2Node_Event_MouseEvent_1' has a wrong offset!");
+static_assert(offsetof(windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons, K2Node_Event_MouseEvent) == 0x0000B8, "Member 'windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons::K2Node_Event_MouseEvent' has a wrong offset!");
+static_assert(offsetof(windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons, CallFunc_PlayAnimation_ReturnValue_1) == 0x000128, "Member 'windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
+
+// Function windowchromebuttons.windowchromebuttons_C.OnMouseLeave
+// 0x0070 (0x0070 - 0x0000)
+struct windowchromebuttons_C_OnMouseLeave final
+{
+public:
+	struct FPointerEvent                          MouseEvent;                                        // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(windowchromebuttons_C_OnMouseLeave) == 0x000008, "Wrong alignment on windowchromebuttons_C_OnMouseLeave");
+static_assert(sizeof(windowchromebuttons_C_OnMouseLeave) == 0x000070, "Wrong size on windowchromebuttons_C_OnMouseLeave");
+static_assert(offsetof(windowchromebuttons_C_OnMouseLeave, MouseEvent) == 0x000000, "Member 'windowchromebuttons_C_OnMouseLeave::MouseEvent' has a wrong offset!");
 
 // Function windowchromebuttons.windowchromebuttons_C.OnMouseEnter
 // 0x00A8 (0x00A8 - 0x0000)
@@ -38,14 +57,10 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-
-// Function windowchromebuttons.windowchromebuttons_C.OnMouseLeave
-// 0x0070 (0x0070 - 0x0000)
-struct windowchromebuttons_C_OnMouseLeave final
-{
-public:
-	struct FPointerEvent                          MouseEvent;                                        // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
+static_assert(alignof(windowchromebuttons_C_OnMouseEnter) == 0x000008, "Wrong alignment on windowchromebuttons_C_OnMouseEnter");
+static_assert(sizeof(windowchromebuttons_C_OnMouseEnter) == 0x0000A8, "Wrong size on windowchromebuttons_C_OnMouseEnter");
+static_assert(offsetof(windowchromebuttons_C_OnMouseEnter, MyGeometry) == 0x000000, "Member 'windowchromebuttons_C_OnMouseEnter::MyGeometry' has a wrong offset!");
+static_assert(offsetof(windowchromebuttons_C_OnMouseEnter, MouseEvent) == 0x000038, "Member 'windowchromebuttons_C_OnMouseEnter::MouseEvent' has a wrong offset!");
 
 }
 

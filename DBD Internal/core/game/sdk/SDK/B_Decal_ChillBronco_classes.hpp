@@ -31,9 +31,9 @@ public:
 
 public:
 	void ExecuteUbergraph_B_Decal_ChillBronco(int32 EntryPoint);
-	void FadeIn__FinishedFunc();
-	void FadeIn__UpdateFunc();
 	void ReceiveBeginPlay();
+	void FadeIn__UpdateFunc();
+	void FadeIn__FinishedFunc();
 	void UserConstructionScript();
 
 public:
@@ -46,6 +46,13 @@ public:
 		return GetDefaultObjImpl<AB_Decal_ChillBronco_C>();
 	}
 };
+static_assert(alignof(AB_Decal_ChillBronco_C) == 0x000008, "Wrong alignment on AB_Decal_ChillBronco_C");
+static_assert(sizeof(AB_Decal_ChillBronco_C) == 0x000248, "Wrong size on AB_Decal_ChillBronco_C");
+static_assert(offsetof(AB_Decal_ChillBronco_C, UberGraphFrame) == 0x000228, "Member 'AB_Decal_ChillBronco_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_Decal_ChillBronco_C, FadeIn_NewTrack_0_3A7C89534084CE1CFC71329D5810F1B3) == 0x000230, "Member 'AB_Decal_ChillBronco_C::FadeIn_NewTrack_0_3A7C89534084CE1CFC71329D5810F1B3' has a wrong offset!");
+static_assert(offsetof(AB_Decal_ChillBronco_C, FadeIn__Direction_3A7C89534084CE1CFC71329D5810F1B3) == 0x000234, "Member 'AB_Decal_ChillBronco_C::FadeIn__Direction_3A7C89534084CE1CFC71329D5810F1B3' has a wrong offset!");
+static_assert(offsetof(AB_Decal_ChillBronco_C, FadeIn) == 0x000238, "Member 'AB_Decal_ChillBronco_C::FadeIn' has a wrong offset!");
+static_assert(offsetof(AB_Decal_ChillBronco_C, Decal_MID) == 0x000240, "Member 'AB_Decal_ChillBronco_C::Decal_MID' has a wrong offset!");
 
 }
 

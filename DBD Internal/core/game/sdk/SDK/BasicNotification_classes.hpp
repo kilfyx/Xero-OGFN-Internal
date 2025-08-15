@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBasicNotification_C>();
 	}
 };
+static_assert(alignof(UBasicNotification_C) == 0x000008, "Wrong alignment on UBasicNotification_C");
+static_assert(sizeof(UBasicNotification_C) == 0x0000D0, "Wrong size on UBasicNotification_C");
 
 }
 

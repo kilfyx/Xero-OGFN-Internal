@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_Medkit.GA_Athena_Medkit_C
-// 0x0000 (0x0C70 - 0x0C70)
+// 0x0000 (0x0C10 - 0x0C10)
 class UGA_Athena_Medkit_C final : public UGA_Athena_MedConsumable_Parent_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_Medkit_C>();
 	}
 };
+static_assert(alignof(UGA_Athena_Medkit_C) == 0x000008, "Wrong alignment on UGA_Athena_Medkit_C");
+static_assert(sizeof(UGA_Athena_Medkit_C) == 0x000C10, "Wrong size on UGA_Athena_Medkit_C");
 
 }
 

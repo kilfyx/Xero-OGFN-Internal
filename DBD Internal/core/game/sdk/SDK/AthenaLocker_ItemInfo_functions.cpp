@@ -25,9 +25,9 @@ namespace SDK
 void UAthenaLocker_ItemInfo_C::ExecuteUbergraph_AthenaLocker_ItemInfo(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaLocker_ItemInfo");
+		Func = Class->GetFunction("AthenaLocker_ItemInfo_C", "ExecuteUbergraph_AthenaLocker_ItemInfo");
 
 	Params::AthenaLocker_ItemInfo_C_ExecuteUbergraph_AthenaLocker_ItemInfo Parms{};
 
@@ -37,53 +37,19 @@ void UAthenaLocker_ItemInfo_C::ExecuteUbergraph_AthenaLocker_ItemInfo(int32 Entr
 }
 
 
-// Function AthenaLocker_ItemInfo.AthenaLocker_ItemInfo_C.OnItemDefinitionSet
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UFortItemDefinition*              ItemDefinition                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaLocker_ItemInfo_C::OnItemDefinitionSet(const class UFortItemDefinition* ItemDefinition)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnItemDefinitionSet");
-
-	Params::AthenaLocker_ItemInfo_C_OnItemDefinitionSet Parms{};
-
-	Parms.ItemDefinition = ItemDefinition;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaLocker_ItemInfo.AthenaLocker_ItemInfo_C.OnNoItemSet
-// (Event, Protected, BlueprintEvent)
-
-void UAthenaLocker_ItemInfo_C::OnNoItemSet()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnNoItemSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function AthenaLocker_ItemInfo.AthenaLocker_ItemInfo_C.OnUpdateAccessRestrictionWarning
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// bool                                    bShouldShow                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             WarningText                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    bShouldShow                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const class FText&                      WarningText                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // EAthenaLockerInfoRestrictionWarning     WarningType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAthenaLocker_ItemInfo_C::OnUpdateAccessRestrictionWarning(bool bShouldShow, const class FText& WarningText, EAthenaLockerInfoRestrictionWarning WarningType)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateAccessRestrictionWarning");
+		Func = Class->GetFunction("AthenaLocker_ItemInfo_C", "OnUpdateAccessRestrictionWarning");
 
 	Params::AthenaLocker_ItemInfo_C_OnUpdateAccessRestrictionWarning Parms{};
 
@@ -95,21 +61,35 @@ void UAthenaLocker_ItemInfo_C::OnUpdateAccessRestrictionWarning(bool bShouldShow
 }
 
 
-// Function AthenaLocker_ItemInfo.AthenaLocker_ItemInfo_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function AthenaLocker_ItemInfo.AthenaLocker_ItemInfo_C.OnNoItemSet
+// (Event, Protected, BlueprintEvent)
 
-void UAthenaLocker_ItemInfo_C::PreConstruct(bool IsDesignTime)
+void UAthenaLocker_ItemInfo_C::OnNoItemSet()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PreConstruct");
+		Func = Class->GetFunction("AthenaLocker_ItemInfo_C", "OnNoItemSet");
 
-	Params::AthenaLocker_ItemInfo_C_PreConstruct Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsDesignTime = IsDesignTime;
+
+// Function AthenaLocker_ItemInfo.AthenaLocker_ItemInfo_C.OnItemDefinitionSet
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class UFortItemDefinition*        ItemDefinition                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaLocker_ItemInfo_C::OnItemDefinitionSet(const class UFortItemDefinition* ItemDefinition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLocker_ItemInfo_C", "OnItemDefinitionSet");
+
+	Params::AthenaLocker_ItemInfo_C_OnItemDefinitionSet Parms{};
+
+	Parms.ItemDefinition = ItemDefinition;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -118,17 +98,17 @@ void UAthenaLocker_ItemInfo_C::PreConstruct(bool IsDesignTime)
 // Function AthenaLocker_ItemInfo.AthenaLocker_ItemInfo_C.UpdateRarityWidgets
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortColorPalette                InColor                                                (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FFortColorPalette&         InColor                                                (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // EFortRarity                             InRarity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFortItemSeriesDefinition*        InSeries                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    HideRarity                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortItemSeriesDefinition*        InSeries                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    HideRarity                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaLocker_ItemInfo_C::UpdateRarityWidgets(const struct FFortColorPalette& InColor, EFortRarity InRarity, class UFortItemSeriesDefinition* InSeries, bool HideRarity)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateRarityWidgets");
+		Func = Class->GetFunction("AthenaLocker_ItemInfo_C", "UpdateRarityWidgets");
 
 	Params::AthenaLocker_ItemInfo_C_UpdateRarityWidgets Parms{};
 

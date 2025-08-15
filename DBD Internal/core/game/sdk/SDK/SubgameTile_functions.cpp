@@ -20,14 +20,14 @@ namespace SDK
 // Function SubgameTile.SubgameTile_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void USubgameTile_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PreConstruct");
+		Func = Class->GetFunction("SubgameTile_C", "PreConstruct");
 
 	Params::SubgameTile_C_PreConstruct Parms{};
 
@@ -37,15 +37,57 @@ void USubgameTile_C::PreConstruct(bool IsDesignTime)
 }
 
 
+// Function SubgameTile.SubgameTile_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USubgameTile_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubgameTile_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SubgameTile.SubgameTile_C.BndEvt__Image_KeyArt_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature
+// (BlueprintEvent)
+
+void USubgameTile_C::BndEvt__Image_KeyArt_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubgameTile_C", "BndEvt__Image_KeyArt_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function SubgameTile.SubgameTile_C.BP_OnHovered
 // (Event, Protected, BlueprintEvent)
 
 void USubgameTile_C::BP_OnHovered()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnHovered");
+		Func = Class->GetFunction("SubgameTile_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SubgameTile.SubgameTile_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void USubgameTile_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubgameTile_C", "BP_OnUnhovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -59,57 +101,15 @@ void USubgameTile_C::BP_OnHovered()
 void USubgameTile_C::ExecuteUbergraph_SubgameTile(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_SubgameTile");
+		Func = Class->GetFunction("SubgameTile_C", "ExecuteUbergraph_SubgameTile");
 
 	Params::SubgameTile_C_ExecuteUbergraph_SubgameTile Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SubgameTile.SubgameTile_C.BndEvt__Image_KeyArt_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature
-// (BlueprintEvent)
-
-void USubgameTile_C::BndEvt__Image_KeyArt_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__Image_KeyArt_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SubgameTile.SubgameTile_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void USubgameTile_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SubgameTile.SubgameTile_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void USubgameTile_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

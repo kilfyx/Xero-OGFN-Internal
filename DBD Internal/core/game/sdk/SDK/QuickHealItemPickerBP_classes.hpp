@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UQuickHealItemPickerBP_C>();
 	}
 };
+static_assert(alignof(UQuickHealItemPickerBP_C) == 0x000008, "Wrong alignment on UQuickHealItemPickerBP_C");
+static_assert(sizeof(UQuickHealItemPickerBP_C) == 0x000080, "Wrong size on UQuickHealItemPickerBP_C");
 
 }
 

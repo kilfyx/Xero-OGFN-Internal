@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function SettingsListEntry_SubCollection.SettingsListEntry_SubCollection_C.ExecuteUbergraph_SettingsListEntry_SubCollection
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USettingsListEntry_SubCollection_C::ExecuteUbergraph_SettingsListEntry_SubCollection(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsListEntry_SubCollection_C", "ExecuteUbergraph_SettingsListEntry_SubCollection");
-
-	Params::SettingsListEntry_SubCollection_C_ExecuteUbergraph_SettingsListEntry_SubCollection Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function SettingsListEntry_SubCollection.SettingsListEntry_SubCollection_C.GetPrimaryGamepadFocusWidget
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -54,6 +34,26 @@ class UWidget* USettingsListEntry_SubCollection_C::GetPrimaryGamepadFocusWidget(
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function SettingsListEntry_SubCollection.SettingsListEntry_SubCollection_C.OnSettingAssigned
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      ActionText                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void USettingsListEntry_SubCollection_C::OnSettingAssigned(const class FText& ActionText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SettingsListEntry_SubCollection_C", "OnSettingAssigned");
+
+	Params::SettingsListEntry_SubCollection_C_OnSettingAssigned Parms{};
+
+	Parms.ActionText = std::move(ActionText);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -99,21 +99,21 @@ void USettingsListEntry_SubCollection_C::OnMouseLeave(const struct FPointerEvent
 }
 
 
-// Function SettingsListEntry_SubCollection.SettingsListEntry_SubCollection_C.OnSettingAssigned
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// Function SettingsListEntry_SubCollection.SettingsListEntry_SubCollection_C.ExecuteUbergraph_SettingsListEntry_SubCollection
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const class FText&                      ActionText                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USettingsListEntry_SubCollection_C::OnSettingAssigned(const class FText& ActionText)
+void USettingsListEntry_SubCollection_C::ExecuteUbergraph_SettingsListEntry_SubCollection(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsListEntry_SubCollection_C", "OnSettingAssigned");
+		Func = Class->GetFunction("SettingsListEntry_SubCollection_C", "ExecuteUbergraph_SettingsListEntry_SubCollection");
 
-	Params::SettingsListEntry_SubCollection_C_OnSettingAssigned Parms{};
+	Params::SettingsListEntry_SubCollection_C_ExecuteUbergraph_SettingsListEntry_SubCollection Parms{};
 
-	Parms.ActionText = std::move(ActionText);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

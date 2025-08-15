@@ -21,19 +21,17 @@ namespace SDK
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // float                                   NormalizedValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsLocked                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaFloatSliderVariantPicker_C::OnUpdateValue(float NormalizedValue, bool bIsLocked)
+void UAthenaFloatSliderVariantPicker_C::OnUpdateValue(float NormalizedValue)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateValue");
+		Func = Class->GetFunction("AthenaFloatSliderVariantPicker_C", "OnUpdateValue");
 
 	Params::AthenaFloatSliderVariantPicker_C_OnUpdateValue Parms{};
 
 	Parms.NormalizedValue = NormalizedValue;
-	Parms.bIsLocked = bIsLocked;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -47,9 +45,9 @@ void UAthenaFloatSliderVariantPicker_C::OnUpdateValue(float NormalizedValue, boo
 void UAthenaFloatSliderVariantPicker_C::ExecuteUbergraph_AthenaFloatSliderVariantPicker(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaFloatSliderVariantPicker");
+		Func = Class->GetFunction("AthenaFloatSliderVariantPicker_C", "ExecuteUbergraph_AthenaFloatSliderVariantPicker");
 
 	Params::AthenaFloatSliderVariantPicker_C_ExecuteUbergraph_AthenaFloatSliderVariantPicker Parms{};
 

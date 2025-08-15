@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UB_Medium_Explosion_CameraShake_C>();
 	}
 };
+static_assert(alignof(UB_Medium_Explosion_CameraShake_C) == 0x000010, "Wrong alignment on UB_Medium_Explosion_CameraShake_C");
+static_assert(sizeof(UB_Medium_Explosion_CameraShake_C) == 0x0001B0, "Wrong size on UB_Medium_Explosion_CameraShake_C");
 
 }
 

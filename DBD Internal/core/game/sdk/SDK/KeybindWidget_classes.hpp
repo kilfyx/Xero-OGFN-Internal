@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -18,17 +17,9 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass KeybindWidget.KeybindWidget_C
-// 0x0010 (0x0A60 - 0x0A50)
-class UKeybindWidget_C : public UFortKeybindWidget
+// 0x0000 (0x08E8 - 0x08E8)
+class UKeybindWidget_C final : public UFortKeybindWidget
 {
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Image_Preview;                                     // 0x0A58(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void Construct();
-	void ExecuteUbergraph_KeybindWidget(int32 EntryPoint);
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -39,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UKeybindWidget_C>();
 	}
 };
+static_assert(alignof(UKeybindWidget_C) == 0x000008, "Wrong alignment on UKeybindWidget_C");
+static_assert(sizeof(UKeybindWidget_C) == 0x0008E8, "Wrong size on UKeybindWidget_C");
 
 }
 

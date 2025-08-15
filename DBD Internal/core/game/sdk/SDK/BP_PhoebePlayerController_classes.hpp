@@ -10,21 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "FortniteAI_classes.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PhoebePlayerController.BP_PhoebePlayerController_C
-// 0x0020 (0x13D0 - 0x13B0)
-#pragma pack(push, 0x1)
-class alignas(0x10) ABP_PhoebePlayerController_C : public AFortAthenaAIBotController
+// 0x0010 (0x0DF8 - 0x0DE8)
+class ABP_PhoebePlayerController_C : public AFortAthenaAIBotController
 {
 public:
-	class UFortBlackboardComponent*               Blackboard1;                                       // 0x13B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UFortAthenaAIBotBuildingComponent*      FortAthenaAIBotBuilding;                           // 0x13B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAIPerceptionComponent*                 AIPerception;                                      // 0x13C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAIPerceptionComponent*                 AIPerception;                                      // 0x0DE8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBlackboardComponent*                   Blackboard1;                                       // 0x0DF0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,12 +34,10 @@ public:
 		return GetDefaultObjImpl<ABP_PhoebePlayerController_C>();
 	}
 };
-#pragma pack(pop)
-static_assert(alignof(ABP_PhoebePlayerController_C) == 0x000010, "Wrong alignment on ABP_PhoebePlayerController_C");
-static_assert(sizeof(ABP_PhoebePlayerController_C) == 0x0013D0, "Wrong size on ABP_PhoebePlayerController_C");
-static_assert(offsetof(ABP_PhoebePlayerController_C, Blackboard1) == 0x0013B0, "Member 'ABP_PhoebePlayerController_C::Blackboard1' has a wrong offset!");
-static_assert(offsetof(ABP_PhoebePlayerController_C, FortAthenaAIBotBuilding) == 0x0013B8, "Member 'ABP_PhoebePlayerController_C::FortAthenaAIBotBuilding' has a wrong offset!");
-static_assert(offsetof(ABP_PhoebePlayerController_C, AIPerception) == 0x0013C0, "Member 'ABP_PhoebePlayerController_C::AIPerception' has a wrong offset!");
+static_assert(alignof(ABP_PhoebePlayerController_C) == 0x000008, "Wrong alignment on ABP_PhoebePlayerController_C");
+static_assert(sizeof(ABP_PhoebePlayerController_C) == 0x000DF8, "Wrong size on ABP_PhoebePlayerController_C");
+static_assert(offsetof(ABP_PhoebePlayerController_C, AIPerception) == 0x000DE8, "Member 'ABP_PhoebePlayerController_C::AIPerception' has a wrong offset!");
+static_assert(offsetof(ABP_PhoebePlayerController_C, Blackboard1) == 0x000DF0, "Member 'ABP_PhoebePlayerController_C::Blackboard1' has a wrong offset!");
 
 }
 

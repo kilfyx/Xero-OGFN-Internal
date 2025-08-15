@@ -19,25 +19,25 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass Flopper_Gadget_AnimBP.Flopper_Gadget_AnimBP_C
-// 0x0550 (0x0870 - 0x0320)
+// 0x0560 (0x0820 - 0x02C0)
 class UFlopper_Gadget_AnimBP_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_318[0x8];                                      // 0x0318(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0328(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0330(0x0008)()
-	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x0338(0x0010)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0348(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0368(0x0020)()
-	uint8                                         Pad_388[0x8];                                      // 0x0388(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_Trail                        AnimGraphNode_Trail_1;                             // 0x0390(0x0260)()
-	struct FAnimNode_Trail                        AnimGraphNode_Trail;                               // 0x05F0(0x0260)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0850(0x0020)()
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x02D0(0x0018)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x02E8(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0308(0x0020)()
+	uint8                                         Pad_328[0x8];                                      // 0x0328(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Trail                        AnimGraphNode_Trail_1;                             // 0x0330(0x0260)()
+	struct FAnimNode_Trail                        AnimGraphNode_Trail;                               // 0x0590(0x0260)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x07F0(0x0030)()
 
 public:
-	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void ExecuteUbergraph_Flopper_Gadget_AnimBP(int32 EntryPoint);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -49,6 +49,16 @@ public:
 		return GetDefaultObjImpl<UFlopper_Gadget_AnimBP_C>();
 	}
 };
+static_assert(alignof(UFlopper_Gadget_AnimBP_C) == 0x000010, "Wrong alignment on UFlopper_Gadget_AnimBP_C");
+static_assert(sizeof(UFlopper_Gadget_AnimBP_C) == 0x000820, "Wrong size on UFlopper_Gadget_AnimBP_C");
+static_assert(offsetof(UFlopper_Gadget_AnimBP_C, UberGraphFrame) == 0x0002C0, "Member 'UFlopper_Gadget_AnimBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UFlopper_Gadget_AnimBP_C, AnimBlueprintClassSubsystem_PropertyAccess) == 0x0002C8, "Member 'UFlopper_Gadget_AnimBP_C::AnimBlueprintClassSubsystem_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UFlopper_Gadget_AnimBP_C, AnimGraphNode_LocalRefPose) == 0x0002D0, "Member 'UFlopper_Gadget_AnimBP_C::AnimGraphNode_LocalRefPose' has a wrong offset!");
+static_assert(offsetof(UFlopper_Gadget_AnimBP_C, AnimGraphNode_LocalToComponentSpace) == 0x0002E8, "Member 'UFlopper_Gadget_AnimBP_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UFlopper_Gadget_AnimBP_C, AnimGraphNode_ComponentToLocalSpace) == 0x000308, "Member 'UFlopper_Gadget_AnimBP_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UFlopper_Gadget_AnimBP_C, AnimGraphNode_Trail_1) == 0x000330, "Member 'UFlopper_Gadget_AnimBP_C::AnimGraphNode_Trail_1' has a wrong offset!");
+static_assert(offsetof(UFlopper_Gadget_AnimBP_C, AnimGraphNode_Trail) == 0x000590, "Member 'UFlopper_Gadget_AnimBP_C::AnimGraphNode_Trail' has a wrong offset!");
+static_assert(offsetof(UFlopper_Gadget_AnimBP_C, AnimGraphNode_Root) == 0x0007F0, "Member 'UFlopper_Gadget_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
 
 }
 

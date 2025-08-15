@@ -21,6 +21,9 @@ struct BP_BroadcastSpectatorPC_C_UserConstructionScript final
 public:
 	class UAthenaMarkerComponent*                 CallFunc_GetMarkerComponent_ReturnValue;           // 0x0000(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(BP_BroadcastSpectatorPC_C_UserConstructionScript) == 0x000008, "Wrong alignment on BP_BroadcastSpectatorPC_C_UserConstructionScript");
+static_assert(sizeof(BP_BroadcastSpectatorPC_C_UserConstructionScript) == 0x000008, "Wrong size on BP_BroadcastSpectatorPC_C_UserConstructionScript");
+static_assert(offsetof(BP_BroadcastSpectatorPC_C_UserConstructionScript, CallFunc_GetMarkerComponent_ReturnValue) == 0x000000, "Member 'BP_BroadcastSpectatorPC_C_UserConstructionScript::CallFunc_GetMarkerComponent_ReturnValue' has a wrong offset!");
 
 }
 

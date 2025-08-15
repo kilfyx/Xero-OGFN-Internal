@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass DefaultEditingTool.DefaultEditingTool_C
-// 0x0000 (0x14A8 - 0x14A8)
+// 0x0000 (0x0D50 - 0x0D50)
 class ADefaultEditingTool_C final : public AFortWeap_EditingTool
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ADefaultEditingTool_C>();
 	}
 };
+static_assert(alignof(ADefaultEditingTool_C) == 0x000008, "Wrong alignment on ADefaultEditingTool_C");
+static_assert(sizeof(ADefaultEditingTool_C) == 0x000D50, "Wrong size on ADefaultEditingTool_C");
 
 }
 

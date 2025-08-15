@@ -10,34 +10,25 @@
 
 #include "Basic.hpp"
 
-#include "GAT_ActiveAbility_classes.hpp"
 #include "Engine_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
+#include "GAT_ActiveAbility_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C
-// 0x0030 (0x0B10 - 0x0AE0)
+// 0x0010 (0x0AF8 - 0x0AE8)
 class UGAT_ActiveAbility_Hero_C : public UGAT_ActiveAbility_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_ActiveAbility_Hero_C;           // 0x0AE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          UseHeroLoadoutSystem;                              // 0x0AE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bUseMidAbilityCosts;                               // 0x0AE9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bTriggerCooldownOnAbilityEnd;                      // 0x0AEA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AEB[0x5];                                      // 0x0AEB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySystemComponent*                Owner_ASC;                                         // 0x0AF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GE_CooldownModifier;                               // 0x0AF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FActiveGameplayEffectHandle>    Active_Cooldown_Modifiers;                         // 0x0B00(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_ActiveAbility_Hero_C;           // 0x0AE8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          UseHeroLoadoutSystem;                              // 0x0AF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void CommitAbilityWithEvent(bool* Passed);
 	void ExecuteUbergraph_GAT_ActiveAbility_Hero(int32 EntryPoint);
-	void IncrementAbilityCostAndCooldown(float Energy_Cost, bool Adjust_Cooldown, float Cooldown_Increment, TArray<struct FActiveGameplayEffectHandle>* Active_Cooldown_Modifiers_0);
 	void K2_ActivateAbility();
-	void K2_OnEndAbility(bool bWasCancelled);
+	void CommitAbilityWithEvent(bool* Passed);
 
 public:
 	static class UClass* StaticClass()
@@ -49,6 +40,10 @@ public:
 		return GetDefaultObjImpl<UGAT_ActiveAbility_Hero_C>();
 	}
 };
+static_assert(alignof(UGAT_ActiveAbility_Hero_C) == 0x000008, "Wrong alignment on UGAT_ActiveAbility_Hero_C");
+static_assert(sizeof(UGAT_ActiveAbility_Hero_C) == 0x000AF8, "Wrong size on UGAT_ActiveAbility_Hero_C");
+static_assert(offsetof(UGAT_ActiveAbility_Hero_C, UberGraphFrame_GAT_ActiveAbility_Hero_C) == 0x000AE8, "Member 'UGAT_ActiveAbility_Hero_C::UberGraphFrame_GAT_ActiveAbility_Hero_C' has a wrong offset!");
+static_assert(offsetof(UGAT_ActiveAbility_Hero_C, UseHeroLoadoutSystem) == 0x000AF0, "Member 'UGAT_ActiveAbility_Hero_C::UseHeroLoadoutSystem' has a wrong offset!");
 
 }
 

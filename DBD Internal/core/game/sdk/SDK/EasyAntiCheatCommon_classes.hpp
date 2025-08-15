@@ -37,6 +37,8 @@ public:
 		return GetDefaultObjImpl<UEasyAntiCheatNetComponent>();
 	}
 };
+static_assert(alignof(UEasyAntiCheatNetComponent) == 0x000008, "Wrong alignment on UEasyAntiCheatNetComponent");
+static_assert(sizeof(UEasyAntiCheatNetComponent) == 0x0000B8, "Wrong size on UEasyAntiCheatNetComponent");
 
 }
 

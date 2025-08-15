@@ -18,17 +18,15 @@ namespace SDK
 {
 
 // Class GameplayMessages.AsyncAction_RegisterGameplayMessageReceiver
-// 0x0078 (0x00A8 - 0x0030)
+// 0x0048 (0x0078 - 0x0030)
 class UAsyncAction_RegisterGameplayMessageReceiver final : public UBlueprintAsyncActionBase
 {
 public:
-	TMulticastInlineDelegate<void(class UAsyncAction_RegisterGameplayMessageReceiver* ProxyObject)> OnMessageReceived; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UAsyncAction_RegisterGameplayMessageReceiver* ProxyObject)> HandleSavedState; // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UAsyncAction_RegisterGameplayMessageReceiver* ProxyObject)> HandleStateCleared; // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_60[0x48];                                      // 0x0060(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const class UAsyncAction_RegisterGameplayMessageReceiver* MessageResult)> OnMessageReceived; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0x38];                                      // 0x0040(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static class UAsyncAction_RegisterGameplayMessageReceiver* RegisterGameplayMessageReceiver(class UObject* WorldContextObject, const struct FEventMessageTag& Channel, class UScriptStruct* PayloadType, EGameplayMessageMatchType MatchType, class AActor* ActorContext);
+	static class UAsyncAction_RegisterGameplayMessageReceiver* RegisterGameplayMessageReceiver(class UObject* WorldContextObject, const struct FGameplayTag& Channel, EGameplayMessageMatchType MatchType, bool bTriggerForSaved, class AActor* ActorContext);
 
 	bool GetPayload(int32& OutPayload);
 	void Unregister();
@@ -43,13 +41,16 @@ public:
 		return GetDefaultObjImpl<UAsyncAction_RegisterGameplayMessageReceiver>();
 	}
 };
+static_assert(alignof(UAsyncAction_RegisterGameplayMessageReceiver) == 0x000008, "Wrong alignment on UAsyncAction_RegisterGameplayMessageReceiver");
+static_assert(sizeof(UAsyncAction_RegisterGameplayMessageReceiver) == 0x000078, "Wrong size on UAsyncAction_RegisterGameplayMessageReceiver");
+static_assert(offsetof(UAsyncAction_RegisterGameplayMessageReceiver, OnMessageReceived) == 0x000030, "Member 'UAsyncAction_RegisterGameplayMessageReceiver::OnMessageReceived' has a wrong offset!");
 
 // Class GameplayMessages.GameplayMessageReplicator
 // 0x0000 (0x0220 - 0x0220)
 class AGameplayMessageReplicator final : public AActor
 {
 public:
-	void Multicast_ServerMessageTriggered(const struct FEventMessageTag& Channel, const struct FReplicatedMessage& MessageData);
+	void Multicast_ServerMessageTriggered(const struct FGameplayTag& Channel, const struct FReplicatedMessage& MessageData);
 
 public:
 	static class UClass* StaticClass()
@@ -61,6 +62,8 @@ public:
 		return GetDefaultObjImpl<AGameplayMessageReplicator>();
 	}
 };
+static_assert(alignof(AGameplayMessageReplicator) == 0x000008, "Wrong alignment on AGameplayMessageReplicator");
+static_assert(sizeof(AGameplayMessageReplicator) == 0x000220, "Wrong size on AGameplayMessageReplicator");
 
 // Class GameplayMessages.GameplayMessageRouter
 // 0x00A8 (0x00D8 - 0x0030)
@@ -71,10 +74,8 @@ public:
 	class AGameplayMessageReplicator*             MessageReplicator;                                 // 0x00D0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
-	void ClearSavedMessage(const struct FEventMessageTag& Channel);
-	void K2_BroadcastMessage(const struct FEventMessageTag& Channel, const int32& Message, bool bSaveToChannel, class AActor* ActorContext);
-
-	bool HasValidSavedMessage(const struct FEventMessageTag& Channel) const;
+	void ClearSavedMessage(const struct FGameplayTag& Channel);
+	void K2_BroadcastMessage(const struct FGameplayTag& Channel, const int32& Message, bool bReplicate, bool bSaveToChannel, class AActor* ActorContext);
 
 public:
 	static class UClass* StaticClass()
@@ -86,24 +87,9 @@ public:
 		return GetDefaultObjImpl<UGameplayMessageRouter>();
 	}
 };
-
-// Class GameplayMessages.BlueprintEventMessageTagLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UBlueprintEventMessageTagLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FEventMessageTag GetEventMessageTagFromGameplayTag(const struct FGameplayTag& InTag);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"BlueprintEventMessageTagLibrary">();
-	}
-	static class UBlueprintEventMessageTagLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBlueprintEventMessageTagLibrary>();
-	}
-};
+static_assert(alignof(UGameplayMessageRouter) == 0x000008, "Wrong alignment on UGameplayMessageRouter");
+static_assert(sizeof(UGameplayMessageRouter) == 0x0000D8, "Wrong size on UGameplayMessageRouter");
+static_assert(offsetof(UGameplayMessageRouter, MessageReplicator) == 0x0000D0, "Member 'UGameplayMessageRouter::MessageReplicator' has a wrong offset!");
 
 }
 

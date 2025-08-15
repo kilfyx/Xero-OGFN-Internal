@@ -27,27 +27,6 @@ enum class EMovementType : uint8
 	EMovementType_MAX                        = 3,
 };
 
-// Enum EntityCore.EScriptDiagnosticMessageType
-// NumValues: 0x0007
-enum class EScriptDiagnosticMessageType : uint8
-{
-	Debug                                    = 0,
-	Verbose                                  = 1,
-	Normal                                   = 2,
-	Warning                                  = 3,
-	Error                                    = 4,
-	Fatal                                    = 5,
-	EScriptDiagnosticMessageType_MAX         = 6,
-};
-
-// ScriptStruct EntityCore.EntityComponentContainer
-// 0x0010 (0x0010 - 0x0000)
-struct FEntityComponentContainer final
-{
-public:
-	TArray<class UEntityComponent*>               Array;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-
 // ScriptStruct EntityCore.ComponentData
 // 0x0000 (0x0000 - 0x0000)
 #pragma pack(push, 0x1)
@@ -55,30 +34,8 @@ struct alignas(0x01) FComponentData
 {
 };
 #pragma pack(pop)
-
-// ScriptStruct EntityCore.EntityPositionComponentData
-// 0x000C (0x000C - 0x0000)
-struct FEntityPositionComponentData final : public FComponentData
-{
-public:
-	struct FVector                                WorldPosition;                                     // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct EntityCore.EntityRotationComponentData
-// 0x000C (0x000C - 0x0000)
-struct FEntityRotationComponentData final : public FComponentData
-{
-public:
-	struct FRotator                               WorldRotation;                                     // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct EntityCore.EntityScaleComponentData
-// 0x000C (0x000C - 0x0000)
-struct FEntityScaleComponentData final : public FComponentData
-{
-public:
-	struct FVector                                WorldScale3D;                                      // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FComponentData) == 0x000001, "Wrong alignment on FComponentData");
+static_assert(sizeof(FComponentData) == 0x000001, "Wrong size on FComponentData");
 
 // ScriptStruct EntityCore.EntityCoreSystemRelativePositionComponentData
 // 0x0010 (0x0010 - 0x0000)
@@ -87,6 +44,41 @@ struct alignas(0x04) FEntityCoreSystemRelativePositionComponentData final : publ
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FEntityCoreSystemRelativePositionComponentData) == 0x000004, "Wrong alignment on FEntityCoreSystemRelativePositionComponentData");
+static_assert(sizeof(FEntityCoreSystemRelativePositionComponentData) == 0x000010, "Wrong size on FEntityCoreSystemRelativePositionComponentData");
+
+// ScriptStruct EntityCore.EntityScaleComponentData
+// 0x000C (0x000C - 0x0000)
+struct FEntityScaleComponentData final : public FComponentData
+{
+public:
+	struct FVector                                WorldScale3D;                                      // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FEntityScaleComponentData) == 0x000004, "Wrong alignment on FEntityScaleComponentData");
+static_assert(sizeof(FEntityScaleComponentData) == 0x00000C, "Wrong size on FEntityScaleComponentData");
+static_assert(offsetof(FEntityScaleComponentData, WorldScale3D) == 0x000000, "Member 'FEntityScaleComponentData::WorldScale3D' has a wrong offset!");
+
+// ScriptStruct EntityCore.EntityRotationComponentData
+// 0x000C (0x000C - 0x0000)
+struct FEntityRotationComponentData final : public FComponentData
+{
+public:
+	struct FRotator                               WorldRotation;                                     // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FEntityRotationComponentData) == 0x000004, "Wrong alignment on FEntityRotationComponentData");
+static_assert(sizeof(FEntityRotationComponentData) == 0x00000C, "Wrong size on FEntityRotationComponentData");
+static_assert(offsetof(FEntityRotationComponentData, WorldRotation) == 0x000000, "Member 'FEntityRotationComponentData::WorldRotation' has a wrong offset!");
+
+// ScriptStruct EntityCore.EntityPositionComponentData
+// 0x000C (0x000C - 0x0000)
+struct FEntityPositionComponentData final : public FComponentData
+{
+public:
+	struct FVector                                WorldPosition;                                     // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FEntityPositionComponentData) == 0x000004, "Wrong alignment on FEntityPositionComponentData");
+static_assert(sizeof(FEntityPositionComponentData) == 0x00000C, "Wrong size on FEntityPositionComponentData");
+static_assert(offsetof(FEntityPositionComponentData, WorldPosition) == 0x000000, "Member 'FEntityPositionComponentData::WorldPosition' has a wrong offset!");
 
 // ScriptStruct EntityCore.EntityTickFunction
 // 0x0008 (0x0030 - 0x0028)
@@ -95,27 +87,8 @@ struct FEntityTickFunction final : public FTickFunction
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// ScriptStruct EntityCore.ScriptDiagnosticSourceLocation
-// 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FScriptDiagnosticSourceLocation final
-{
-public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct EntityCore.ScriptDiagnosticMessage
-// 0x0058 (0x0058 - 0x0000)
-struct FScriptDiagnosticMessage final
-{
-public:
-	EScriptDiagnosticMessageType                  MessageType;                                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              Timestamp;                                         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Channel;                                           // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   MessageStr;                                        // 0x0020(0x0018)(NativeAccessSpecifierPublic)
-	struct FScriptDiagnosticSourceLocation        SourceLocation;                                    // 0x0038(0x0020)(NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FEntityTickFunction) == 0x000008, "Wrong alignment on FEntityTickFunction");
+static_assert(sizeof(FEntityTickFunction) == 0x000030, "Wrong size on FEntityTickFunction");
 
 }
 

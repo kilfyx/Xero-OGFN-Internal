@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Border-SolidBG-ToolTipShadow.Border-SolidBG-ToolTipShadow_C
-// 0x0000 (0x00E0 - 0x00E0)
+// 0x0000 (0x00B0 - 0x00B0)
 class UBorder_SolidBG_ToolTipShadow_C final : public UBorder_ShellTopBar_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBorder_SolidBG_ToolTipShadow_C>();
 	}
 };
+static_assert(alignof(UBorder_SolidBG_ToolTipShadow_C) == 0x000008, "Wrong alignment on UBorder_SolidBG_ToolTipShadow_C");
+static_assert(sizeof(UBorder_SolidBG_ToolTipShadow_C) == 0x0000B0, "Wrong size on UBorder_SolidBG_ToolTipShadow_C");
 
 }
 

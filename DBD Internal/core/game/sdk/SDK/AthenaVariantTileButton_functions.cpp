@@ -20,34 +20,20 @@ namespace SDK
 // Function AthenaVariantTileButton.AthenaVariantTileButton_C.OnListItemObjectSet
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAthenaVariantTileButton_C::OnListItemObjectSet(class UObject* ListItemObject)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnListItemObjectSet");
+		Func = Class->GetFunction("AthenaVariantTileButton_C", "OnListItemObjectSet");
 
 	Params::AthenaVariantTileButton_C_OnListItemObjectSet Parms{};
 
 	Parms.ListItemObject = ListItemObject;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaVariantTileButton.AthenaVariantTileButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAthenaVariantTileButton_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -59,29 +45,15 @@ void UAthenaVariantTileButton_C::Construct()
 void UAthenaVariantTileButton_C::ExecuteUbergraph_AthenaVariantTileButton(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaVariantTileButton");
+		Func = Class->GetFunction("AthenaVariantTileButton_C", "ExecuteUbergraph_AthenaVariantTileButton");
 
 	Params::AthenaVariantTileButton_C_ExecuteUbergraph_AthenaVariantTileButton Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaVariantTileButton.AthenaVariantTileButton_C.BP_OnClicked
-// (Event, Protected, BlueprintEvent)
-
-void UAthenaVariantTileButton_C::BP_OnClicked()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnClicked");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

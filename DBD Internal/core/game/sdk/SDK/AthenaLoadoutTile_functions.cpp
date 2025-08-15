@@ -17,29 +17,35 @@
 namespace SDK
 {
 
+// Function AthenaLoadoutTile.AthenaLoadoutTile_C.ExecuteUbergraph_AthenaLoadoutTile
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaLoadoutTile_C::ExecuteUbergraph_AthenaLoadoutTile(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLoadoutTile_C", "ExecuteUbergraph_AthenaLoadoutTile");
+
+	Params::AthenaLoadoutTile_C_ExecuteUbergraph_AthenaLoadoutTile Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function AthenaLoadoutTile.AthenaLoadoutTile_C.BP_OnEntryReleased
 // (Event, Protected, BlueprintEvent)
 
 void UAthenaLoadoutTile_C::BP_OnEntryReleased()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnEntryReleased");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaLoadoutTile.AthenaLoadoutTile_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UAthenaLoadoutTile_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnHovered");
+		Func = Class->GetFunction("AthenaLoadoutTile_C", "BP_OnEntryReleased");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -48,14 +54,14 @@ void UAthenaLoadoutTile_C::BP_OnHovered()
 // Function AthenaLoadoutTile.AthenaLoadoutTile_C.BP_OnItemSelectionChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaLoadoutTile_C::BP_OnItemSelectionChanged(bool bIsSelected)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnItemSelectionChanged");
+		Func = Class->GetFunction("AthenaLoadoutTile_C", "BP_OnItemSelectionChanged");
 
 	Params::AthenaLoadoutTile_C_BP_OnItemSelectionChanged Parms{};
 
@@ -71,31 +77,25 @@ void UAthenaLoadoutTile_C::BP_OnItemSelectionChanged(bool bIsSelected)
 void UAthenaLoadoutTile_C::BP_OnUnhovered()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnUnhovered");
+		Func = Class->GetFunction("AthenaLoadoutTile_C", "BP_OnUnhovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaLoadoutTile.AthenaLoadoutTile_C.ExecuteUbergraph_AthenaLoadoutTile
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function AthenaLoadoutTile.AthenaLoadoutTile_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
 
-void UAthenaLoadoutTile_C::ExecuteUbergraph_AthenaLoadoutTile(int32 EntryPoint)
+void UAthenaLoadoutTile_C::BP_OnHovered()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaLoadoutTile");
+		Func = Class->GetFunction("AthenaLoadoutTile_C", "BP_OnHovered");
 
-	Params::AthenaLoadoutTile_C_ExecuteUbergraph_AthenaLoadoutTile Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

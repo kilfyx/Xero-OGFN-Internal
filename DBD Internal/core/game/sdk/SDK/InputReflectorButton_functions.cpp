@@ -17,92 +17,10 @@
 namespace SDK
 {
 
-// Function InputReflectorButton.InputReflectorButton_C.UpdateTextStyle
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UInputReflectorButton_C::UpdateTextStyle()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "UpdateTextStyle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function InputReflectorButton.InputReflectorButton_C.UpdateTextAndStyle
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ECommonInputType                        CommonInputType                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UInputReflectorButton_C::UpdateTextAndStyle(ECommonInputType CommonInputType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "UpdateTextAndStyle");
-
-	Params::InputReflectorButton_C_UpdateTextAndStyle Parms{};
-
-	Parms.CommonInputType = CommonInputType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function InputReflectorButton.InputReflectorButton_C.UpdateText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UInputReflectorButton_C::UpdateText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "UpdateText");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function InputReflectorButton.InputReflectorButton_C.UpdateStyle
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ECommonInputType                        UsingGamepad                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UInputReflectorButton_C::UpdateStyle(ECommonInputType UsingGamepad)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "UpdateStyle");
-
-	Params::InputReflectorButton_C_UpdateStyle Parms{};
-
-	Parms.UsingGamepad = UsingGamepad;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function InputReflectorButton.InputReflectorButton_C.UpdateContentAlignment
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UInputReflectorButton_C::UpdateContentAlignment()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "UpdateContentAlignment");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function InputReflectorButton.InputReflectorButton_C.ShowIcon
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bShouldShow                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bShouldShow                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UInputReflectorButton_C::ShowIcon(bool bShouldShow)
 {
@@ -139,6 +57,68 @@ void UInputReflectorButton_C::SetTextInternal(const class FText& InButtonText)
 }
 
 
+// Function InputReflectorButton.InputReflectorButton_C.SetInitialMouseKeyboardStyle
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UInputReflectorButton_C::SetInitialMouseKeyboardStyle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InputReflectorButton_C", "SetInitialMouseKeyboardStyle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function InputReflectorButton.InputReflectorButton_C.UpdateTextStyle
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UInputReflectorButton_C::UpdateTextStyle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InputReflectorButton_C", "UpdateTextStyle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function InputReflectorButton.InputReflectorButton_C.SetContentAlignment
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EHorizontalAlignment                    ContentAlignment_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UInputReflectorButton_C::SetContentAlignment(EHorizontalAlignment ContentAlignment_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InputReflectorButton_C", "SetContentAlignment");
+
+	Params::InputReflectorButton_C_SetContentAlignment Parms{};
+
+	Parms.ContentAlignment_0 = ContentAlignment_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function InputReflectorButton.InputReflectorButton_C.UpdateContentAlignment
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UInputReflectorButton_C::UpdateContentAlignment()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InputReflectorButton_C", "UpdateContentAlignment");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function InputReflectorButton.InputReflectorButton_C.SetMouseKeyboardStyle
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -159,35 +139,35 @@ void UInputReflectorButton_C::SetMouseKeyboardStyle(class UClass* ControllerInpu
 }
 
 
-// Function InputReflectorButton.InputReflectorButton_C.SetMobileStyle
+// Function InputReflectorButton.InputReflectorButton_C.UpdateStyle
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           MobileInputStyle_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UsingGamepad                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UInputReflectorButton_C::SetMobileStyle(class UClass* MobileInputStyle_0)
+void UInputReflectorButton_C::UpdateStyle(bool UsingGamepad)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "SetMobileStyle");
+		Func = Class->GetFunction("InputReflectorButton_C", "UpdateStyle");
 
-	Params::InputReflectorButton_C_SetMobileStyle Parms{};
+	Params::InputReflectorButton_C_UpdateStyle Parms{};
 
-	Parms.MobileInputStyle_0 = MobileInputStyle_0;
+	Parms.UsingGamepad = UsingGamepad;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function InputReflectorButton.InputReflectorButton_C.SetInitialMouseKeyboardStyle
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function InputReflectorButton.InputReflectorButton_C.UpdateText
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UInputReflectorButton_C::SetInitialMouseKeyboardStyle()
+void UInputReflectorButton_C::UpdateText()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "SetInitialMouseKeyboardStyle");
+		Func = Class->GetFunction("InputReflectorButton_C", "UpdateText");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -213,21 +193,55 @@ void UInputReflectorButton_C::SetControllerStyle(class UClass* ControllerInputSt
 }
 
 
-// Function InputReflectorButton.InputReflectorButton_C.SetContentAlignment
+// Function InputReflectorButton.InputReflectorButton_C.UpdateTextAndStyle
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EHorizontalAlignment                    ContentAlignment_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UInputReflectorButton_C::SetContentAlignment(EHorizontalAlignment ContentAlignment_0)
+void UInputReflectorButton_C::UpdateTextAndStyle(bool bUsingGamepad)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "SetContentAlignment");
+		Func = Class->GetFunction("InputReflectorButton_C", "UpdateTextAndStyle");
 
-	Params::InputReflectorButton_C_SetContentAlignment Parms{};
+	Params::InputReflectorButton_C_UpdateTextAndStyle Parms{};
 
-	Parms.ContentAlignment_0 = ContentAlignment_0;
+	Parms.bUsingGamepad = bUsingGamepad;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function InputReflectorButton.InputReflectorButton_C.InitializeButton
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UInputReflectorButton_C::InitializeButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InputReflectorButton_C", "InitializeButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function InputReflectorButton.InputReflectorButton_C.Set Icon
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FSlateBrush&               IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UInputReflectorButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InputReflectorButton_C", "Set Icon");
+
+	Params::InputReflectorButton_C_Set_Icon Parms{};
+
+	Parms.IconBrush_0 = std::move(IconBrush_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -253,30 +267,24 @@ void UInputReflectorButton_C::Set_Text(const class FText& ButtonText_0)
 }
 
 
-// Function InputReflectorButton.InputReflectorButton_C.Set Icon
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FSlateBrush&               IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// Function InputReflectorButton.InputReflectorButton_C.OnCurrentTextStyleChanged
+// (Event, Protected, BlueprintEvent)
 
-void UInputReflectorButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
+void UInputReflectorButton_C::OnCurrentTextStyleChanged()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "Set Icon");
+		Func = Class->GetFunction("InputReflectorButton_C", "OnCurrentTextStyleChanged");
 
-	Params::InputReflectorButton_C_Set_Icon Parms{};
-
-	Parms.IconBrush_0 = std::move(IconBrush_0);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function InputReflectorButton.InputReflectorButton_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UInputReflectorButton_C::PreConstruct(bool IsDesignTime)
 {
@@ -288,6 +296,26 @@ void UInputReflectorButton_C::PreConstruct(bool IsDesignTime)
 	Params::InputReflectorButton_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function InputReflectorButton.InputReflectorButton_C.BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UInputReflectorButton_C::BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InputReflectorButton_C", "BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature");
+
+	Params::InputReflectorButton_C_BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature Parms{};
+
+	Parms.bUsingGamepad = bUsingGamepad;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -310,20 +338,6 @@ void UInputReflectorButton_C::OnTriggeredInputActionChanged(const struct FDataTa
 	Parms.NewTriggeredAction = std::move(NewTriggeredAction);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function InputReflectorButton.InputReflectorButton_C.OnCurrentTextStyleChanged
-// (Event, Protected, BlueprintEvent)
-
-void UInputReflectorButton_C::OnCurrentTextStyleChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "OnCurrentTextStyleChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -361,15 +375,29 @@ void UInputReflectorButton_C::OnActionComplete()
 }
 
 
-// Function InputReflectorButton.InputReflectorButton_C.InitializeButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function InputReflectorButton.InputReflectorButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UInputReflectorButton_C::InitializeButton()
+void UInputReflectorButton_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "InitializeButton");
+		Func = Class->GetFunction("InputReflectorButton_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function InputReflectorButton.InputReflectorButton_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UInputReflectorButton_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InputReflectorButton_C", "Destruct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -390,54 +418,6 @@ void UInputReflectorButton_C::ExecuteUbergraph_InputReflectorButton(int32 EntryP
 	Params::InputReflectorButton_C_ExecuteUbergraph_InputReflectorButton Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function InputReflectorButton.InputReflectorButton_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UInputReflectorButton_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function InputReflectorButton.InputReflectorButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UInputReflectorButton_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function InputReflectorButton.InputReflectorButton_C.BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UInputReflectorButton_C::BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InputReflectorButton_C", "BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature");
-
-	Params::InputReflectorButton_C_BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature Parms{};
-
-	Parms.bUsingGamepad = bUsingGamepad;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

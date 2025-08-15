@@ -19,30 +19,22 @@
 namespace SDK
 {
 
-// Class AnimGraphRuntime.AnimExecutionContextLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UAnimExecutionContextLibrary final : public UBlueprintFunctionLibrary
+// Class AnimGraphRuntime.AnimSequencerInstance
+// 0x0000 (0x02C0 - 0x02C0)
+class UAnimSequencerInstance : public UAnimInstance
 {
-public:
-	static struct FAnimComponentSpacePoseContext ConvertToComponentSpacePoseContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* Result);
-	static struct FAnimInitializationContext ConvertToInitializationContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* Result);
-	static struct FAnimPoseContext ConvertToPoseContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* Result);
-	static struct FAnimUpdateContext ConvertToUpdateContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* Result);
-	static class UAnimInstance* GetAnimInstance(const struct FAnimExecutionContext& Context);
-	static struct FAnimNodeReference GetAnimNodeReference(class UAnimInstance* Instance, int32 Index_0);
-	static float GetCurrentWeight(const struct FAnimUpdateContext& Context);
-	static float GetDeltaTime(const struct FAnimUpdateContext& Context);
-
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AnimExecutionContextLibrary">();
+		return StaticClassImpl<"AnimSequencerInstance">();
 	}
-	static class UAnimExecutionContextLibrary* GetDefaultObj()
+	static class UAnimSequencerInstance* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAnimExecutionContextLibrary>();
+		return GetDefaultObjImpl<UAnimSequencerInstance>();
 	}
 };
+static_assert(alignof(UAnimSequencerInstance) == 0x000010, "Wrong alignment on UAnimSequencerInstance");
+static_assert(sizeof(UAnimSequencerInstance) == 0x0002C0, "Wrong size on UAnimSequencerInstance");
 
 // Class AnimGraphRuntime.AnimNotify_PlayMontageNotify
 // 0x0008 (0x0040 - 0x0038)
@@ -61,6 +53,9 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotify>();
 	}
 };
+static_assert(alignof(UAnimNotify_PlayMontageNotify) == 0x000008, "Wrong alignment on UAnimNotify_PlayMontageNotify");
+static_assert(sizeof(UAnimNotify_PlayMontageNotify) == 0x000040, "Wrong size on UAnimNotify_PlayMontageNotify");
+static_assert(offsetof(UAnimNotify_PlayMontageNotify, NotifyName) == 0x000038, "Member 'UAnimNotify_PlayMontageNotify::NotifyName' has a wrong offset!");
 
 // Class AnimGraphRuntime.AnimNotify_PlayMontageNotifyWindow
 // 0x0008 (0x0038 - 0x0030)
@@ -79,28 +74,15 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotifyWindow>();
 	}
 };
-
-// Class AnimGraphRuntime.AnimSequencerInstance
-// 0x0000 (0x0320 - 0x0320)
-class UAnimSequencerInstance final : public UAnimInstance
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AnimSequencerInstance">();
-	}
-	static class UAnimSequencerInstance* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimSequencerInstance>();
-	}
-};
+static_assert(alignof(UAnimNotify_PlayMontageNotifyWindow) == 0x000008, "Wrong alignment on UAnimNotify_PlayMontageNotifyWindow");
+static_assert(sizeof(UAnimNotify_PlayMontageNotifyWindow) == 0x000038, "Wrong size on UAnimNotify_PlayMontageNotifyWindow");
+static_assert(offsetof(UAnimNotify_PlayMontageNotifyWindow, NotifyName) == 0x000030, "Member 'UAnimNotify_PlayMontageNotifyWindow::NotifyName' has a wrong offset!");
 
 // Class AnimGraphRuntime.KismetAnimationLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UKismetAnimationLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static float CalculateDirection(const struct FVector& Velocity, const struct FRotator& BaseRotation);
 	static float K2_CalculateVelocityFromPositionHistory(float DeltaSeconds, const struct FVector& Position, struct FPositionHistory& History, int32 NumberOfSamples, float VelocityMin, float VelocityMax);
 	static float K2_CalculateVelocityFromSockets(float DeltaSeconds, class USkeletalMeshComponent* Component, const class FName SocketOrBoneName, const class FName ReferenceSocketOrBone, ERelativeTransformSpace SocketSpace, const struct FVector& OffsetInBoneSpace, struct FPositionHistory& History, int32 NumberOfSamples, float VelocityMin, float VelocityMax, EEasingFuncType EasingType, const struct FRuntimeFloatCurve& CustomCurve);
 	static struct FVector K2_DirectionBetweenSockets(const class USkeletalMeshComponent* Component, const class FName SocketOrBoneNameFrom, const class FName SocketOrBoneNameTo);
@@ -122,27 +104,8 @@ public:
 		return GetDefaultObjImpl<UKismetAnimationLibrary>();
 	}
 };
-
-// Class AnimGraphRuntime.LinkedAnimGraphLibrary
-// 0x0000 (0x0028 - 0x0028)
-class ULinkedAnimGraphLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FLinkedAnimGraphReference ConvertToLinkedAnimGraph(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToLinkedAnimGraphPure(const struct FAnimNodeReference& Node, struct FLinkedAnimGraphReference* LinkedAnimGraph, bool* Result);
-	static class UAnimInstance* GetLinkedAnimInstance(const struct FLinkedAnimGraphReference& Node);
-	static bool HasLinkedAnimInstance(const struct FLinkedAnimGraphReference& Node);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"LinkedAnimGraphLibrary">();
-	}
-	static class ULinkedAnimGraphLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULinkedAnimGraphLibrary>();
-	}
-};
+static_assert(alignof(UKismetAnimationLibrary) == 0x000008, "Wrong alignment on UKismetAnimationLibrary");
+static_assert(sizeof(UKismetAnimationLibrary) == 0x000028, "Wrong size on UKismetAnimationLibrary");
 
 // Class AnimGraphRuntime.PlayMontageCallbackProxy
 // 0x0080 (0x00A8 - 0x0028)
@@ -174,52 +137,13 @@ public:
 		return GetDefaultObjImpl<UPlayMontageCallbackProxy>();
 	}
 };
-
-// Class AnimGraphRuntime.SequenceEvaluatorLibrary
-// 0x0000 (0x0028 - 0x0028)
-class USequenceEvaluatorLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FSequenceEvaluatorReference ConvertToSequenceEvaluator(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToSequenceEvaluatorPure(const struct FAnimNodeReference& Node, struct FSequenceEvaluatorReference* SequenceEvaluator, bool* Result);
-	static struct FSequenceEvaluatorReference SetExplicitTime(const struct FSequenceEvaluatorReference& SequenceEvaluator, float Time);
-	static struct FSequenceEvaluatorReference SetSequence(const struct FSequenceEvaluatorReference& SequenceEvaluator, class UAnimSequenceBase* Sequence);
-	static struct FSequenceEvaluatorReference SetSequenceWithInertialBlending(const struct FAnimUpdateContext& UpdateContext, const struct FSequenceEvaluatorReference& SequenceEvaluator, class UAnimSequenceBase* Sequence, float BlendTime);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SequenceEvaluatorLibrary">();
-	}
-	static class USequenceEvaluatorLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USequenceEvaluatorLibrary>();
-	}
-};
-
-// Class AnimGraphRuntime.SequencePlayerLibrary
-// 0x0000 (0x0028 - 0x0028)
-class USequencePlayerLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FSequencePlayerReference ConvertToSequencePlayer(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToSequencePlayerPure(const struct FAnimNodeReference& Node, struct FSequencePlayerReference* SequencePlayer, bool* Result);
-	static struct FSequencePlayerReference SetAccumulatedTime(const struct FSequencePlayerReference& SequencePlayer, float Time);
-	static struct FSequencePlayerReference SetPlayRate(const struct FSequencePlayerReference& SequencePlayer, float PlayRate);
-	static struct FSequencePlayerReference SetSequence(const struct FSequencePlayerReference& SequencePlayer, class UAnimSequenceBase* Sequence);
-	static struct FSequencePlayerReference SetSequenceWithInertialBlending(const struct FAnimUpdateContext& UpdateContext, const struct FSequencePlayerReference& SequencePlayer, class UAnimSequenceBase* Sequence, float BlendTime);
-	static struct FSequencePlayerReference SetStartPosition(const struct FSequencePlayerReference& SequencePlayer, float StartPosition);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SequencePlayerLibrary">();
-	}
-	static class USequencePlayerLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USequencePlayerLibrary>();
-	}
-};
+static_assert(alignof(UPlayMontageCallbackProxy) == 0x000008, "Wrong alignment on UPlayMontageCallbackProxy");
+static_assert(sizeof(UPlayMontageCallbackProxy) == 0x0000A8, "Wrong size on UPlayMontageCallbackProxy");
+static_assert(offsetof(UPlayMontageCallbackProxy, OnCompleted) == 0x000028, "Member 'UPlayMontageCallbackProxy::OnCompleted' has a wrong offset!");
+static_assert(offsetof(UPlayMontageCallbackProxy, OnBlendOut) == 0x000038, "Member 'UPlayMontageCallbackProxy::OnBlendOut' has a wrong offset!");
+static_assert(offsetof(UPlayMontageCallbackProxy, OnInterrupted) == 0x000048, "Member 'UPlayMontageCallbackProxy::OnInterrupted' has a wrong offset!");
+static_assert(offsetof(UPlayMontageCallbackProxy, OnNotifyBegin) == 0x000058, "Member 'UPlayMontageCallbackProxy::OnNotifyBegin' has a wrong offset!");
+static_assert(offsetof(UPlayMontageCallbackProxy, OnNotifyEnd) == 0x000068, "Member 'UPlayMontageCallbackProxy::OnNotifyEnd' has a wrong offset!");
 
 // Class AnimGraphRuntime.SequencerAnimationSupport
 // 0x0000 (0x0000 - 0x0000)
@@ -244,27 +168,8 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-
-// Class AnimGraphRuntime.SkeletalControlLibrary
-// 0x0000 (0x0028 - 0x0028)
-class USkeletalControlLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FSkeletalControlReference ConvertToSkeletalControl(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToSkeletalControlPure(const struct FAnimNodeReference& Node, struct FSkeletalControlReference* SkeletalControl, bool* Result);
-	static float GetAlpha(const struct FSkeletalControlReference& SkeletalControl);
-	static struct FSkeletalControlReference SetAlpha(const struct FSkeletalControlReference& SkeletalControl, float Alpha);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SkeletalControlLibrary">();
-	}
-	static class USkeletalControlLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USkeletalControlLibrary>();
-	}
-};
+static_assert(alignof(ISequencerAnimationSupport) == 0x000001, "Wrong alignment on ISequencerAnimationSupport");
+static_assert(sizeof(ISequencerAnimationSupport) == 0x000001, "Wrong size on ISequencerAnimationSupport");
 
 }
 

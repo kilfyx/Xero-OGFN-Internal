@@ -58,16 +58,6 @@ enum class EControllerHand : uint8
 	EControllerHand_MAX                      = 18,
 };
 
-// Enum InputCore.EConsoleForGamepadLabels
-// NumValues: 0x0004
-enum class EConsoleForGamepadLabels : uint8
-{
-	None                                     = 0,
-	XBoxOne                                  = 1,
-	PS4                                      = 2,
-	EConsoleForGamepadLabels_MAX             = 3,
-};
-
 // Enum InputCore.ETouchType
 // NumValues: 0x0008
 enum class ETouchType : uint8
@@ -82,6 +72,16 @@ enum class ETouchType : uint8
 	ETouchType_MAX                           = 7,
 };
 
+// Enum InputCore.EConsoleForGamepadLabels
+// NumValues: 0x0004
+enum class EConsoleForGamepadLabels : uint8
+{
+	None                                     = 0,
+	XBoxOne                                  = 1,
+	PS4                                      = 2,
+	EConsoleForGamepadLabels_MAX             = 3,
+};
+
 // ScriptStruct InputCore.Key
 // 0x0018 (0x0018 - 0x0000)
 struct alignas(0x08) FKey final
@@ -90,6 +90,9 @@ public:
 	class FName                                   KeyName;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FKey) == 0x000008, "Wrong alignment on FKey");
+static_assert(sizeof(FKey) == 0x000018, "Wrong size on FKey");
+static_assert(offsetof(FKey, KeyName) == 0x000000, "Member 'FKey::KeyName' has a wrong offset!");
 
 }
 

@@ -25,13 +25,33 @@ namespace SDK
 void UAthenaLobbyPlayerPanel_C::ExecuteUbergraph_AthenaLobbyPlayerPanel(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaLobbyPlayerPanel");
+		Func = Class->GetFunction("AthenaLobbyPlayerPanel_C", "ExecuteUbergraph_AthenaLobbyPlayerPanel");
 
 	Params::AthenaLobbyPlayerPanel_C_ExecuteUbergraph_AthenaLobbyPlayerPanel Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaLobbyPlayerPanel.AthenaLobbyPlayerPanel_C.OnIsMutedUpdated
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsMuted                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaLobbyPlayerPanel_C::OnIsMutedUpdated(bool bIsMuted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLobbyPlayerPanel_C", "OnIsMutedUpdated");
+
+	Params::AthenaLobbyPlayerPanel_C_OnIsMutedUpdated Parms{};
+
+	Parms.bIsMuted = bIsMuted;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -45,9 +65,9 @@ void UAthenaLobbyPlayerPanel_C::ExecuteUbergraph_AthenaLobbyPlayerPanel(int32 En
 void UAthenaLobbyPlayerPanel_C::OnFriendStatusUpdated(EFortFriendRequestStatus FriendRequestStatus)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnFriendStatusUpdated");
+		Func = Class->GetFunction("AthenaLobbyPlayerPanel_C", "OnFriendStatusUpdated");
 
 	Params::AthenaLobbyPlayerPanel_C_OnFriendStatusUpdated Parms{};
 
@@ -60,14 +80,14 @@ void UAthenaLobbyPlayerPanel_C::OnFriendStatusUpdated(EFortFriendRequestStatus F
 // Function AthenaLobbyPlayerPanel.AthenaLobbyPlayerPanel_C.OnHasBattlePassUpdated
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bHasBattlePass                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bHasBattlePass                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaLobbyPlayerPanel_C::OnHasBattlePassUpdated(bool bHasBattlePass)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnHasBattlePassUpdated");
+		Func = Class->GetFunction("AthenaLobbyPlayerPanel_C", "OnHasBattlePassUpdated");
 
 	Params::AthenaLobbyPlayerPanel_C_OnHasBattlePassUpdated Parms{};
 
@@ -77,39 +97,19 @@ void UAthenaLobbyPlayerPanel_C::OnHasBattlePassUpdated(bool bHasBattlePass)
 }
 
 
-// Function AthenaLobbyPlayerPanel.AthenaLobbyPlayerPanel_C.OnIsMutedUpdated
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsMuted                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaLobbyPlayerPanel_C::OnIsMutedUpdated(bool bIsMuted)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnIsMutedUpdated");
-
-	Params::AthenaLobbyPlayerPanel_C_OnIsMutedUpdated Parms{};
-
-	Parms.bIsMuted = bIsMuted;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function AthenaLobbyPlayerPanel.AthenaLobbyPlayerPanel_C.OnMouseButtonDown_0
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
 struct FEventReply UAthenaLobbyPlayerPanel_C::OnMouseButtonDown_0(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnMouseButtonDown_0");
+		Func = Class->GetFunction("AthenaLobbyPlayerPanel_C", "OnMouseButtonDown_0");
 
 	Params::AthenaLobbyPlayerPanel_C_OnMouseButtonDown_0 Parms{};
 

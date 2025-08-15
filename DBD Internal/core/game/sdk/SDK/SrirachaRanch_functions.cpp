@@ -17,6 +17,150 @@
 namespace SDK
 {
 
+// Function SrirachaRanch.StreamingRadioPlayerComponent.AuthPlayIndex
+// (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
+// Parameters:
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UStreamingRadioPlayerComponent::AuthPlayIndex(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StreamingRadioPlayerComponent", "AuthPlayIndex");
+
+	Params::StreamingRadioPlayerComponent_AuthPlayIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SrirachaRanch.StreamingRadioPlayerComponent.AuthSaveAutoStart
+// (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
+// Parameters:
+// bool                                    bAutoStart                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UStreamingRadioPlayerComponent::AuthSaveAutoStart(bool bAutoStart)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StreamingRadioPlayerComponent", "AuthSaveAutoStart");
+
+	Params::StreamingRadioPlayerComponent_AuthSaveAutoStart Parms{};
+
+	Parms.bAutoStart = bAutoStart;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SrirachaRanch.StreamingRadioPlayerComponent.AuthSavedSource
+// (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
+// Parameters:
+// const struct FAthenaRadioStation&       Source                                                 (Parm, NativeAccessSpecifierPublic)
+
+void UStreamingRadioPlayerComponent::AuthSavedSource(const struct FAthenaRadioStation& Source)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StreamingRadioPlayerComponent", "AuthSavedSource");
+
+	Params::StreamingRadioPlayerComponent_AuthSavedSource Parms{};
+
+	Parms.Source = std::move(Source);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SrirachaRanch.StreamingRadioPlayerComponent.AuthSaveFadeOutTime
+// (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
+// Parameters:
+// float                                   FadeoutSeconds                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UStreamingRadioPlayerComponent::AuthSaveFadeOutTime(float FadeoutSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StreamingRadioPlayerComponent", "AuthSaveFadeOutTime");
+
+	Params::StreamingRadioPlayerComponent_AuthSaveFadeOutTime Parms{};
+
+	Parms.FadeoutSeconds = FadeoutSeconds;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SrirachaRanch.StreamingRadioPlayerComponent.AuthSetDisabledForCurrentPlayerState
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// bool                                    bShouldDisableForCurrentPlayerState                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UStreamingRadioPlayerComponent::AuthSetDisabledForCurrentPlayerState(bool bShouldDisableForCurrentPlayerState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StreamingRadioPlayerComponent", "AuthSetDisabledForCurrentPlayerState");
+
+	Params::StreamingRadioPlayerComponent_AuthSetDisabledForCurrentPlayerState Parms{};
+
+	Parms.bShouldDisableForCurrentPlayerState = bShouldDisableForCurrentPlayerState;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SrirachaRanch.StreamingRadioPlayerComponent.AuthStopRadio
+// (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
+
+void UStreamingRadioPlayerComponent::AuthStopRadio()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StreamingRadioPlayerComponent", "AuthStopRadio");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function SrirachaRanch.StreamingRadioPlayerComponent.MediaExplicitClose
 // (Final, Native, Protected)
 // Parameters:
@@ -152,7 +296,7 @@ void UStreamingRadioPlayerComponent::MediaReady(const class FString& String)
 // Function SrirachaRanch.StreamingRadioPlayerComponent.NativeOnPawnEnterSeat
 // (Final, Native, Protected, HasOutParams)
 // Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 // class AFortPawn*                        PlayerPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   SeatIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -181,7 +325,7 @@ void UStreamingRadioPlayerComponent::NativeOnPawnEnterSeat(const TScriptInterfac
 // Function SrirachaRanch.StreamingRadioPlayerComponent.NativeOnPawnEnterVehicle
 // (Final, Native, Protected, HasOutParams)
 // Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 // class AFortPawn*                        PlayerPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   SeatIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -210,7 +354,7 @@ void UStreamingRadioPlayerComponent::NativeOnPawnEnterVehicle(const TScriptInter
 // Function SrirachaRanch.StreamingRadioPlayerComponent.NativeOnPawnExitSeat
 // (Final, Native, Protected, HasOutParams)
 // Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 // class AFortPawn*                        PlayerPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   SeatIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -239,7 +383,7 @@ void UStreamingRadioPlayerComponent::NativeOnPawnExitSeat(const TScriptInterface
 // Function SrirachaRanch.StreamingRadioPlayerComponent.NativeOnPawnExitVehicle
 // (Final, Native, Protected, HasOutParams)
 // Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 // class AFortPawn*                        PlayerPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   SeatIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -255,35 +399,6 @@ void UStreamingRadioPlayerComponent::NativeOnPawnExitVehicle(const TScriptInterf
 	Parms.Vehicle = Vehicle;
 	Parms.PlayerPawn = PlayerPawn;
 	Parms.SeatIndex = SeatIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SrirachaRanch.StreamingRadioPlayerComponent.NativeOnVehicleOwnerChanged
-// (Final, Native, Protected, HasOutParams)
-// Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class AActor*                     NewOwner                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class AActor*                     PrevOwner                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UStreamingRadioPlayerComponent::NativeOnVehicleOwnerChanged(const TScriptInterface<class IFortVehicleInterface>& Vehicle, const class AActor* NewOwner, const class AActor* PrevOwner)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StreamingRadioPlayerComponent", "NativeOnVehicleOwnerChanged");
-
-	Params::StreamingRadioPlayerComponent_NativeOnVehicleOwnerChanged Parms{};
-
-	Parms.Vehicle = Vehicle;
-	Parms.NewOwner = NewOwner;
-	Parms.PrevOwner = PrevOwner;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -454,7 +569,7 @@ void UStreamingRadioPlayerComponent::OnOwningVehicleDied(class AFortAthenaVehicl
 // Function SrirachaRanch.StreamingRadioPlayerComponent.OnPawnEnterSeat
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 // class AFortPawn*                        PlayerPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   SeatIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -478,7 +593,7 @@ void UStreamingRadioPlayerComponent::OnPawnEnterSeat(const TScriptInterface<clas
 // Function SrirachaRanch.StreamingRadioPlayerComponent.OnPawnEnterVehicle
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 // class AFortPawn*                        PlayerPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   SeatIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -502,7 +617,7 @@ void UStreamingRadioPlayerComponent::OnPawnEnterVehicle(const TScriptInterface<c
 // Function SrirachaRanch.StreamingRadioPlayerComponent.OnPawnExitSeat
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 // class AFortPawn*                        PlayerPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   SeatIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -526,7 +641,7 @@ void UStreamingRadioPlayerComponent::OnPawnExitSeat(const TScriptInterface<class
 // Function SrirachaRanch.StreamingRadioPlayerComponent.OnPawnExitVehicle
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 // class AFortPawn*                        PlayerPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   SeatIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -673,156 +788,10 @@ void UStreamingRadioPlayerComponent::PlayPrevIndex()
 }
 
 
-// Function SrirachaRanch.StreamingRadioPlayerComponent.ServerPlayIndex
-// (Net, NetReliable, Native, Event, Public, NetServer)
-// Parameters:
-// const int32                             InIndex                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const EStreamingRadioSourceState        InState                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UStreamingRadioPlayerComponent::ServerPlayIndex(const int32 InIndex, const EStreamingRadioSourceState InState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StreamingRadioPlayerComponent", "ServerPlayIndex");
-
-	Params::StreamingRadioPlayerComponent_ServerPlayIndex Parms{};
-
-	Parms.InIndex = InIndex;
-	Parms.InState = InState;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SrirachaRanch.StreamingRadioPlayerComponent.ServerSaveAutoStart
-// (Net, NetReliable, Native, Event, Public, NetServer)
-// Parameters:
-// const bool                              bInAutoStart                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UStreamingRadioPlayerComponent::ServerSaveAutoStart(const bool bInAutoStart)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StreamingRadioPlayerComponent", "ServerSaveAutoStart");
-
-	Params::StreamingRadioPlayerComponent_ServerSaveAutoStart Parms{};
-
-	Parms.bInAutoStart = bInAutoStart;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SrirachaRanch.StreamingRadioPlayerComponent.ServerSavedSource
-// (Net, NetReliable, Native, Event, Public, NetServer)
-// Parameters:
-// const struct FAthenaRadioStation&       InSource                                               (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UStreamingRadioPlayerComponent::ServerSavedSource(const struct FAthenaRadioStation& InSource)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StreamingRadioPlayerComponent", "ServerSavedSource");
-
-	Params::StreamingRadioPlayerComponent_ServerSavedSource Parms{};
-
-	Parms.InSource = std::move(InSource);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SrirachaRanch.StreamingRadioPlayerComponent.ServerSaveFadeOutTime
-// (Net, NetReliable, Native, Event, Public, NetServer)
-// Parameters:
-// const float                             InFadeOutSeconds                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UStreamingRadioPlayerComponent::ServerSaveFadeOutTime(const float InFadeOutSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StreamingRadioPlayerComponent", "ServerSaveFadeOutTime");
-
-	Params::StreamingRadioPlayerComponent_ServerSaveFadeOutTime Parms{};
-
-	Parms.InFadeOutSeconds = InFadeOutSeconds;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SrirachaRanch.StreamingRadioPlayerComponent.ServerSetDisabledForCurrentPlayerState
-// (Net, NetReliable, Native, Event, Public, NetServer)
-// Parameters:
-// const bool                              bInDisableForCurrentPlayerState                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UStreamingRadioPlayerComponent::ServerSetDisabledForCurrentPlayerState(const bool bInDisableForCurrentPlayerState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StreamingRadioPlayerComponent", "ServerSetDisabledForCurrentPlayerState");
-
-	Params::StreamingRadioPlayerComponent_ServerSetDisabledForCurrentPlayerState Parms{};
-
-	Parms.bInDisableForCurrentPlayerState = bInDisableForCurrentPlayerState;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SrirachaRanch.StreamingRadioPlayerComponent.ServerStopRadio
-// (Net, NetReliable, Native, Event, Public, NetServer)
-
-void UStreamingRadioPlayerComponent::ServerStopRadio()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StreamingRadioPlayerComponent", "ServerStopRadio");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function SrirachaRanch.StreamingRadioPlayerComponent.SetExteriorVolume
 // (Final, Native, Protected, HasOutParams)
 // Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 
 void UStreamingRadioPlayerComponent::SetExteriorVolume(const TScriptInterface<class IFortVehicleInterface>& Vehicle)
 {
@@ -847,7 +816,7 @@ void UStreamingRadioPlayerComponent::SetExteriorVolume(const TScriptInterface<cl
 // Function SrirachaRanch.StreamingRadioPlayerComponent.SetInteriorVolume
 // (Final, Native, Protected, HasOutParams)
 // Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 
 void UStreamingRadioPlayerComponent::SetInteriorVolume(const TScriptInterface<class IFortVehicleInterface>& Vehicle)
 {
@@ -951,7 +920,7 @@ void UStreamingRadioPlayerComponent::StartRadio(int32 IdxToPlay, bool bFallbackO
 // Function SrirachaRanch.StreamingRadioPlayerComponent.StopIfNoDriver
 // (Final, Native, Protected, HasOutParams)
 // Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 
 void UStreamingRadioPlayerComponent::StopIfNoDriver(const TScriptInterface<class IFortVehicleInterface>& Vehicle)
 {

@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function TopBar.TopBar_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UTopBar_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function TopBar.TopBar_C.ExecuteUbergraph_TopBar
 // (Final, UbergraphFunction)
 // Parameters:
@@ -39,9 +25,9 @@ void UTopBar_C::Construct()
 void UTopBar_C::ExecuteUbergraph_TopBar(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_TopBar");
+		Func = Class->GetFunction("TopBar_C", "ExecuteUbergraph_TopBar");
 
 	Params::TopBar_C_ExecuteUbergraph_TopBar Parms{};
 
@@ -57,31 +43,39 @@ void UTopBar_C::ExecuteUbergraph_TopBar(int32 EntryPoint)
 void UTopBar_C::OnMobileTabLabelChanged()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnMobileTabLabelChanged");
+		Func = Class->GetFunction("TopBar_C", "OnMobileTabLabelChanged");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function TopBar.TopBar_C.SetMainNavVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ESlateVisibility                        NewVisibility                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function TopBar.TopBar_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UTopBar_C::SetMainNavVisibility(ESlateVisibility NewVisibility)
+void UTopBar_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetMainNavVisibility");
+		Func = Class->GetFunction("TopBar_C", "Construct");
 
-	Params::TopBar_C_SetMainNavVisibility Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.NewVisibility = NewVisibility;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function TopBar.TopBar_C.UpdateMTXButton
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UTopBar_C::UpdateMTXButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TopBar_C", "UpdateMTXButton");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -93,29 +87,15 @@ void UTopBar_C::SetMainNavVisibility(ESlateVisibility NewVisibility)
 void UTopBar_C::SetTopTabsVisibility(ESlateVisibility NewVisibility)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetTopTabsVisibility");
+		Func = Class->GetFunction("TopBar_C", "SetTopTabsVisibility");
 
 	Params::TopBar_C_SetTopTabsVisibility Parms{};
 
 	Parms.NewVisibility = NewVisibility;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TopBar.TopBar_C.UpdateMTXButton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UTopBar_C::UpdateMTXButton()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateMTXButton");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

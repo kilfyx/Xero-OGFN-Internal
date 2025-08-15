@@ -17,31 +17,23 @@
 namespace SDK
 {
 
-// Function B_Prj_ThrownConsumable.B_Prj_ThrownConsumable_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function B_Prj_ThrownConsumable.B_Prj_ThrownConsumable_C.ExecuteUbergraph_B_Prj_ThrownConsumable
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Prj_ThrownConsumable_C::ReceiveBeginPlay()
+void AB_Prj_ThrownConsumable_C::ExecuteUbergraph_B_Prj_ThrownConsumable(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_ThrownConsumable_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("B_Prj_ThrownConsumable_C", "ExecuteUbergraph_B_Prj_ThrownConsumable");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::B_Prj_ThrownConsumable_C_ExecuteUbergraph_B_Prj_ThrownConsumable Parms{};
 
+	Parms.EntryPoint = EntryPoint;
 
-// Function B_Prj_ThrownConsumable.B_Prj_ThrownConsumable_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_ThrownConsumable_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_ThrownConsumable_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -79,28 +71,6 @@ void AB_Prj_ThrownConsumable_C::OnStop(const struct FHitResult& Hit)
 }
 
 
-// Function B_Prj_ThrownConsumable.B_Prj_ThrownConsumable_C.OnExploded
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-
-void AB_Prj_ThrownConsumable_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_ThrownConsumable_C", "OnExploded");
-
-	Params::B_Prj_ThrownConsumable_C_OnExploded Parms{};
-
-	Parms.HitActors = std::move(HitActors);
-	Parms.HitResults = std::move(HitResults);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_Prj_ThrownConsumable.B_Prj_ThrownConsumable_C.OnBounce
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -121,23 +91,53 @@ void AB_Prj_ThrownConsumable_C::OnBounce(const struct FHitResult& Hit)
 }
 
 
-// Function B_Prj_ThrownConsumable.B_Prj_ThrownConsumable_C.ExecuteUbergraph_B_Prj_ThrownConsumable
-// (Final, UbergraphFunction, HasDefaults)
+// Function B_Prj_ThrownConsumable.B_Prj_ThrownConsumable_C.OnExploded
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 
-void AB_Prj_ThrownConsumable_C::ExecuteUbergraph_B_Prj_ThrownConsumable(int32 EntryPoint)
+void AB_Prj_ThrownConsumable_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_ThrownConsumable_C", "ExecuteUbergraph_B_Prj_ThrownConsumable");
+		Func = Class->GetFunction("B_Prj_ThrownConsumable_C", "OnExploded");
 
-	Params::B_Prj_ThrownConsumable_C_ExecuteUbergraph_B_Prj_ThrownConsumable Parms{};
+	Params::B_Prj_ThrownConsumable_C_OnExploded Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.HitActors = std::move(HitActors);
+	Parms.HitResults = std::move(HitResults);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Prj_ThrownConsumable.B_Prj_ThrownConsumable_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AB_Prj_ThrownConsumable_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_ThrownConsumable_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_ThrownConsumable.B_Prj_ThrownConsumable_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_ThrownConsumable_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_ThrownConsumable_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

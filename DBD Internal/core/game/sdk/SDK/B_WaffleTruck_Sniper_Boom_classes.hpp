@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WaffleTruck_Sniper_Boom.B_WaffleTruck_Sniper_Boom_C
-// 0x0000 (0x1AB8 - 0x1AB8)
+// 0x0000 (0x12B0 - 0x12B0)
 class AB_WaffleTruck_Sniper_Boom_C final : public AB_Rifle_Sniper_Heavy_Athena_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AB_WaffleTruck_Sniper_Boom_C>();
 	}
 };
+static_assert(alignof(AB_WaffleTruck_Sniper_Boom_C) == 0x000008, "Wrong alignment on AB_WaffleTruck_Sniper_Boom_C");
+static_assert(sizeof(AB_WaffleTruck_Sniper_Boom_C) == 0x0012B0, "Wrong size on AB_WaffleTruck_Sniper_Boom_C");
 
 }
 

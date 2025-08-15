@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Athena_PlayerCameraModeHookGun.Athena_PlayerCameraModeHookGun_C
-// 0x0000 (0x0EA0 - 0x0EA0)
+// 0x0000 (0x0DD0 - 0x0DD0)
 class UAthena_PlayerCameraModeHookGun_C final : public UAthena_PlayerCameraModeRanged_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UAthena_PlayerCameraModeHookGun_C>();
 	}
 };
+static_assert(alignof(UAthena_PlayerCameraModeHookGun_C) == 0x000010, "Wrong alignment on UAthena_PlayerCameraModeHookGun_C");
+static_assert(sizeof(UAthena_PlayerCameraModeHookGun_C) == 0x000DD0, "Wrong size on UAthena_PlayerCameraModeHookGun_C");
 
 }
 

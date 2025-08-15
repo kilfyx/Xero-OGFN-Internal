@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "FieldSystemEngine_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Chaos_structs.hpp"
-#include "FieldSystemEngine_classes.hpp"
 
 
 namespace SDK
@@ -43,7 +43,7 @@ public:
 	float                                         Scale;                                             // 0x028C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Impact_Time;                                       // 0x0290(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Period;                                            // 0x0294(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         WaveLength;                                        // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Wavelength;                                        // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Time_Decay;                                        // 0x029C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	EFieldFalloffType                             Falloff_Type;                                      // 0x02A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2A1[0x3];                                      // 0x02A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -53,10 +53,10 @@ public:
 
 public:
 	void ExecuteUbergraph_FN_RadialForce(int32 EntryPoint);
-	struct FTransform NewFunction_0(float Roll, float Scale_0);
 	void ReceiveBeginPlay();
-	void Timeline_0__FinishedFunc();
 	void Timeline_0__UpdateFunc();
+	void Timeline_0__FinishedFunc();
+	struct FTransform NewFunction_0(float Roll, float Scale_0);
 
 public:
 	static class UClass* StaticClass()
@@ -68,6 +68,33 @@ public:
 		return GetDefaultObjImpl<AFN_RadialForce_C>();
 	}
 };
+static_assert(alignof(AFN_RadialForce_C) == 0x000008, "Wrong alignment on AFN_RadialForce_C");
+static_assert(sizeof(AFN_RadialForce_C) == 0x0002B0, "Wrong size on AFN_RadialForce_C");
+static_assert(offsetof(AFN_RadialForce_C, UberGraphFrame) == 0x000228, "Member 'AFN_RadialForce_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, DistanceFadMult) == 0x000230, "Member 'AFN_RadialForce_C::DistanceFadMult' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, DistanceFalloff) == 0x000238, "Member 'AFN_RadialForce_C::DistanceFalloff' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, DecayScalar) == 0x000240, "Member 'AFN_RadialForce_C::DecayScalar' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, DecayMult) == 0x000248, "Member 'AFN_RadialForce_C::DecayMult' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, RadialFalloffWave) == 0x000250, "Member 'AFN_RadialForce_C::RadialFalloffWave' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, RadialVecMultiplyRadialFallOff) == 0x000258, "Member 'AFN_RadialForce_C::RadialVecMultiplyRadialFallOff' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, RadialVector) == 0x000260, "Member 'AFN_RadialForce_C::RadialVector' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Timeline_0_Radius_CD3BE591473F9A800DF08A8AC8690190) == 0x000268, "Member 'AFN_RadialForce_C::Timeline_0_Radius_CD3BE591473F9A800DF08A8AC8690190' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Timeline_0__Direction_CD3BE591473F9A800DF08A8AC8690190) == 0x00026C, "Member 'AFN_RadialForce_C::Timeline_0__Direction_CD3BE591473F9A800DF08A8AC8690190' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Timeline_0) == 0x000270, "Member 'AFN_RadialForce_C::Timeline_0' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Wave_Period) == 0x000278, "Member 'AFN_RadialForce_C::Wave_Period' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Force_Duration) == 0x00027C, "Member 'AFN_RadialForce_C::Force_Duration' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Radius) == 0x000280, "Member 'AFN_RadialForce_C::Radius' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Magnitude) == 0x000284, "Member 'AFN_RadialForce_C::Magnitude' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, PlayRate) == 0x000288, "Member 'AFN_RadialForce_C::PlayRate' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Scale) == 0x00028C, "Member 'AFN_RadialForce_C::Scale' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Impact_Time) == 0x000290, "Member 'AFN_RadialForce_C::Impact_Time' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Period) == 0x000294, "Member 'AFN_RadialForce_C::Period' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Wavelength) == 0x000298, "Member 'AFN_RadialForce_C::Wavelength' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Time_Decay) == 0x00029C, "Member 'AFN_RadialForce_C::Time_Decay' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Falloff_Type) == 0x0002A0, "Member 'AFN_RadialForce_C::Falloff_Type' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Expansion) == 0x0002A4, "Member 'AFN_RadialForce_C::Expansion' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Impact_Radius) == 0x0002A8, "Member 'AFN_RadialForce_C::Impact_Radius' has a wrong offset!");
+static_assert(offsetof(AFN_RadialForce_C, Strength) == 0x0002AC, "Member 'AFN_RadialForce_C::Strength' has a wrong offset!");
 
 }
 

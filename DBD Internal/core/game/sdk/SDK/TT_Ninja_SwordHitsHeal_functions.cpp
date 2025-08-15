@@ -17,6 +17,28 @@
 namespace SDK
 {
 
+// Function TT_Ninja_SwordHitsHeal.TT_Ninja_SwordHitsHeal_C.InitializeAbilityInstanceInternal
+// (Event, Protected, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// const class UGameplayAbility*           AbilityInstance                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UFortTooltipContext*        Context                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTT_Ninja_SwordHitsHeal_C::InitializeAbilityInstanceInternal(const class UGameplayAbility* AbilityInstance, const class UFortTooltipContext* Context) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TT_Ninja_SwordHitsHeal_C", "InitializeAbilityInstanceInternal");
+
+	Params::TT_Ninja_SwordHitsHeal_C_InitializeAbilityInstanceInternal Parms{};
+
+	Parms.AbilityInstance = AbilityInstance;
+	Parms.Context = Context;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function TT_Ninja_SwordHitsHeal.TT_Ninja_SwordHitsHeal_C.GetTextForTokenFromAbilityInstanceInternal
 // (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -25,7 +47,7 @@ namespace SDK
 // const class UFortTooltipContext*        Context                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayTag&              Token                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // class FText*                            OutText                                                (Parm, OutParm)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UTT_Ninja_SwordHitsHeal_C::GetTextForTokenFromAbilityInstanceInternal(const class UGameplayAbility* AbilityInstance, const struct FGameplayTag& Tag, const class UFortTooltipContext* Context, const struct FGameplayTag& Token, class FText* OutText) const
 {
@@ -47,28 +69,6 @@ bool UTT_Ninja_SwordHitsHeal_C::GetTextForTokenFromAbilityInstanceInternal(const
 		*OutText = std::move(Parms.OutText);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function TT_Ninja_SwordHitsHeal.TT_Ninja_SwordHitsHeal_C.InitializeAbilityInstanceInternal
-// (Event, Protected, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// const class UGameplayAbility*           AbilityInstance                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UFortTooltipContext*        Context                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTT_Ninja_SwordHitsHeal_C::InitializeAbilityInstanceInternal(const class UGameplayAbility* AbilityInstance, const class UFortTooltipContext* Context) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TT_Ninja_SwordHitsHeal_C", "InitializeAbilityInstanceInternal");
-
-	Params::TT_Ninja_SwordHitsHeal_C_InitializeAbilityInstanceInternal Parms{};
-
-	Parms.AbilityInstance = AbilityInstance;
-	Parms.Context = Context;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

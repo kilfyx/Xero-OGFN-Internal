@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function TabMouseAndKeyboardOptions_New.TabMouseAndKeyboardOptions_New_C.CenterOnTab
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UTabMouseAndKeyboardOptions_New_C::CenterOnTab()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabMouseAndKeyboardOptions_New_C", "CenterOnTab");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function TabMouseAndKeyboardOptions_New.TabMouseAndKeyboardOptions_New_C.ExecuteUbergraph_TabMouseAndKeyboardOptions_New
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UTabMouseAndKeyboardOptions_New_C::ExecuteUbergraph_TabMouseAndKeyboardOpti
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TabMouseAndKeyboardOptions_New.TabMouseAndKeyboardOptions_New_C.CenterOnTab
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+
+void UTabMouseAndKeyboardOptions_New_C::CenterOnTab()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabMouseAndKeyboardOptions_New_C", "CenterOnTab");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

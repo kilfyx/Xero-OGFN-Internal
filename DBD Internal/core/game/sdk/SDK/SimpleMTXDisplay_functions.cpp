@@ -25,9 +25,9 @@ namespace SDK
 void USimpleMTXDisplay_C::OnUpdateAvailableMTX(int32 AvailableBalance)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateAvailableMTX");
+		Func = Class->GetFunction("SimpleMTXDisplay_C", "OnUpdateAvailableMTX");
 
 	Params::SimpleMTXDisplay_C_OnUpdateAvailableMTX Parms{};
 
@@ -45,9 +45,9 @@ void USimpleMTXDisplay_C::OnUpdateAvailableMTX(int32 AvailableBalance)
 void USimpleMTXDisplay_C::ExecuteUbergraph_SimpleMTXDisplay(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_SimpleMTXDisplay");
+		Func = Class->GetFunction("SimpleMTXDisplay_C", "ExecuteUbergraph_SimpleMTXDisplay");
 
 	Params::SimpleMTXDisplay_C_ExecuteUbergraph_SimpleMTXDisplay Parms{};
 

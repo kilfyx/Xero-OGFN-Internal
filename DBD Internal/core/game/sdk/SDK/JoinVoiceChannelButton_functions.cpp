@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function JoinVoiceChannelButton.JoinVoiceChannelButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UJoinVoiceChannelButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("JoinVoiceChannelButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function JoinVoiceChannelButton.JoinVoiceChannelButton_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void UJoinVoiceChannelButton_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("JoinVoiceChannelButton_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function JoinVoiceChannelButton.JoinVoiceChannelButton_C.ExecuteUbergraph_JoinVoiceChannelButton
 // (Final, UbergraphFunction)
 // Parameters:
@@ -62,6 +34,34 @@ void UJoinVoiceChannelButton_C::ExecuteUbergraph_JoinVoiceChannelButton(int32 En
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function JoinVoiceChannelButton.JoinVoiceChannelButton_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UJoinVoiceChannelButton_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("JoinVoiceChannelButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function JoinVoiceChannelButton.JoinVoiceChannelButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UJoinVoiceChannelButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("JoinVoiceChannelButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

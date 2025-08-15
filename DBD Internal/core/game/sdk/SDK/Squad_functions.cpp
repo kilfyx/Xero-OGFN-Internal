@@ -25,9 +25,9 @@ namespace SDK
 void USquad_C::ExecuteUbergraph_Squad(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_Squad");
+		Func = Class->GetFunction("Squad_C", "ExecuteUbergraph_Squad");
 
 	Params::Squad_C_ExecuteUbergraph_Squad Parms{};
 
@@ -37,17 +37,59 @@ void USquad_C::ExecuteUbergraph_Squad(int32 EntryPoint)
 }
 
 
+// Function Squad.Squad_C.OnSquadIsEmptyChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bSquadIsEmpty                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bMultipleSquadsPopulated                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void USquad_C::OnSquadIsEmptyChanged(bool bSquadIsEmpty, bool bMultipleSquadsPopulated)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Squad_C", "OnSquadIsEmptyChanged");
+
+	Params::Squad_C_OnSquadIsEmptyChanged Parms{};
+
+	Parms.bSquadIsEmpty = bSquadIsEmpty;
+	Parms.bMultipleSquadsPopulated = bMultipleSquadsPopulated;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Squad.Squad_C.OnSquadAssigned
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FAthenaTeamDisplayInfo&    SquadStyle                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void USquad_C::OnSquadAssigned(const struct FAthenaTeamDisplayInfo& SquadStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Squad_C", "OnSquadAssigned");
+
+	Params::Squad_C_OnSquadAssigned Parms{};
+
+	Parms.SquadStyle = std::move(SquadStyle);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Squad.Squad_C.OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void USquad_C::OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E");
+		Func = Class->GetFunction("Squad_C", "OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E");
 
 	Params::Squad_C_OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E Parms{};
 
@@ -60,60 +102,18 @@ void USquad_C::OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E(class UObject* Loaded)
 // Function Squad.Squad_C.OnLoaded_68F5F01141304474DB5D18BD77CD085C
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void USquad_C::OnLoaded_68F5F01141304474DB5D18BD77CD085C(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnLoaded_68F5F01141304474DB5D18BD77CD085C");
+		Func = Class->GetFunction("Squad_C", "OnLoaded_68F5F01141304474DB5D18BD77CD085C");
 
 	Params::Squad_C_OnLoaded_68F5F01141304474DB5D18BD77CD085C Parms{};
 
 	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Squad.Squad_C.OnSquadAssigned
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// struct FAthenaTeamDisplayInfo           SquadStyle                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void USquad_C::OnSquadAssigned(const struct FAthenaTeamDisplayInfo& SquadStyle)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnSquadAssigned");
-
-	Params::Squad_C_OnSquadAssigned Parms{};
-
-	Parms.SquadStyle = std::move(SquadStyle);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Squad.Squad_C.OnSquadIsEmptyChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bSquadIsEmpty                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bMultipleSquadsPopulated                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USquad_C::OnSquadIsEmptyChanged(bool bSquadIsEmpty, bool bMultipleSquadsPopulated)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnSquadIsEmptyChanged");
-
-	Params::Squad_C_OnSquadIsEmptyChanged Parms{};
-
-	Parms.bSquadIsEmpty = bSquadIsEmpty;
-	Parms.bMultipleSquadsPopulated = bMultipleSquadsPopulated;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

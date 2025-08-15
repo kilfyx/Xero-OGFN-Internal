@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUILegacy_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "CommonUI_classes.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -20,39 +20,39 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventsSimpleButton.EventsSimpleButton_C
-// 0x00E0 (0x1510 - 0x1430)
-class UEventsSimpleButton_C final : public UCommonButtonLegacy
+// 0x00D8 (0x0C78 - 0x0BA0)
+class UEventsSimpleButton_C final : public UCommonButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1430(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Pressed;                                           // 0x1438(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hover;                                             // 0x1440(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x1448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_VariablePadding;                      // 0x1450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_ButtonTop;                                   // 0x1458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Shadow;                                      // 0x1460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_ButtonBG;                                  // 0x1468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          ToUpper;                                           // 0x1470(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          XL;                                                // 0x1471(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1472[0x6];                                     // 0x1472(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ButtonNameText;                                    // 0x1478(0x0018)(Edit, BlueprintVisible)
-	TMap<class FString, struct FLinearColor>      Color;                                             // 0x1490(0x0050)(Edit, BlueprintVisible)
-	struct FLinearColor                           GamepadButtonTextColor;                            // 0x14E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           DefaultTextColor;                                  // 0x14F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              ButtonPadding;                                     // 0x1500(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Pressed;                                           // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover;                                             // 0x0BB0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_VariablePadding;                      // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_ButtonTop;                                   // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Shadow;                                      // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_ButtonBG;                                  // 0x0BD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          ToUpper;                                           // 0x0BE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          XL;                                                // 0x0BE1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BE2[0x6];                                      // 0x0BE2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ButtonNameText;                                    // 0x0BE8(0x0018)(Edit, BlueprintVisible)
+	TMap<class FString, struct FLinearColor>      Color;                                             // 0x0C00(0x0050)(Edit, BlueprintVisible)
+	struct FLinearColor                           GamepadButtonTextColor;                            // 0x0C50(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           DefaultTextColor;                                  // 0x0C60(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              ButtonPadding;                                     // 0x0C70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad);
-	void BP_OnClicked();
+	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void Construct();
 	void BP_OnHovered();
 	void BP_OnUnhovered();
-	void Construct();
-	void ExecuteUbergraph_EventsSimpleButton(int32 EntryPoint);
-	void InputTypeChanged(bool bUsingGamepad);
-	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void BP_OnClicked();
+	void BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad);
 	void PreConstruct(bool IsDesignTime);
+	void InputTypeChanged(bool bUsingGamepad);
 	void UpdateColor(const class FString& ParameterName, const struct FLinearColor& New_Color);
+	void ExecuteUbergraph_EventsSimpleButton(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -64,23 +64,23 @@ public:
 		return GetDefaultObjImpl<UEventsSimpleButton_C>();
 	}
 };
-static_assert(alignof(UEventsSimpleButton_C) == 0x000010, "Wrong alignment on UEventsSimpleButton_C");
-static_assert(sizeof(UEventsSimpleButton_C) == 0x001510, "Wrong size on UEventsSimpleButton_C");
-static_assert(offsetof(UEventsSimpleButton_C, UberGraphFrame) == 0x001430, "Member 'UEventsSimpleButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, Pressed) == 0x001438, "Member 'UEventsSimpleButton_C::Pressed' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, Hover) == 0x001440, "Member 'UEventsSimpleButton_C::Hover' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, CenterButtonTextWidget) == 0x001448, "Member 'UEventsSimpleButton_C::CenterButtonTextWidget' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, CommonBorder_VariablePadding) == 0x001450, "Member 'UEventsSimpleButton_C::CommonBorder_VariablePadding' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, Image_ButtonTop) == 0x001458, "Member 'UEventsSimpleButton_C::Image_ButtonTop' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, Image_Shadow) == 0x001460, "Member 'UEventsSimpleButton_C::Image_Shadow' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, Overlay_ButtonBG) == 0x001468, "Member 'UEventsSimpleButton_C::Overlay_ButtonBG' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, ToUpper) == 0x001470, "Member 'UEventsSimpleButton_C::ToUpper' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, XL) == 0x001471, "Member 'UEventsSimpleButton_C::XL' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, ButtonNameText) == 0x001478, "Member 'UEventsSimpleButton_C::ButtonNameText' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, Color) == 0x001490, "Member 'UEventsSimpleButton_C::Color' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, GamepadButtonTextColor) == 0x0014E0, "Member 'UEventsSimpleButton_C::GamepadButtonTextColor' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, DefaultTextColor) == 0x0014F0, "Member 'UEventsSimpleButton_C::DefaultTextColor' has a wrong offset!");
-static_assert(offsetof(UEventsSimpleButton_C, ButtonPadding) == 0x001500, "Member 'UEventsSimpleButton_C::ButtonPadding' has a wrong offset!");
+static_assert(alignof(UEventsSimpleButton_C) == 0x000008, "Wrong alignment on UEventsSimpleButton_C");
+static_assert(sizeof(UEventsSimpleButton_C) == 0x000C78, "Wrong size on UEventsSimpleButton_C");
+static_assert(offsetof(UEventsSimpleButton_C, UberGraphFrame) == 0x000BA0, "Member 'UEventsSimpleButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, Pressed) == 0x000BA8, "Member 'UEventsSimpleButton_C::Pressed' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, Hover) == 0x000BB0, "Member 'UEventsSimpleButton_C::Hover' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, CenterButtonTextWidget) == 0x000BB8, "Member 'UEventsSimpleButton_C::CenterButtonTextWidget' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, CommonBorder_VariablePadding) == 0x000BC0, "Member 'UEventsSimpleButton_C::CommonBorder_VariablePadding' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, Image_ButtonTop) == 0x000BC8, "Member 'UEventsSimpleButton_C::Image_ButtonTop' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, Image_Shadow) == 0x000BD0, "Member 'UEventsSimpleButton_C::Image_Shadow' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, Overlay_ButtonBG) == 0x000BD8, "Member 'UEventsSimpleButton_C::Overlay_ButtonBG' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, ToUpper) == 0x000BE0, "Member 'UEventsSimpleButton_C::ToUpper' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, XL) == 0x000BE1, "Member 'UEventsSimpleButton_C::XL' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, ButtonNameText) == 0x000BE8, "Member 'UEventsSimpleButton_C::ButtonNameText' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, Color) == 0x000C00, "Member 'UEventsSimpleButton_C::Color' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, GamepadButtonTextColor) == 0x000C50, "Member 'UEventsSimpleButton_C::GamepadButtonTextColor' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, DefaultTextColor) == 0x000C60, "Member 'UEventsSimpleButton_C::DefaultTextColor' has a wrong offset!");
+static_assert(offsetof(UEventsSimpleButton_C, ButtonPadding) == 0x000C70, "Member 'UEventsSimpleButton_C::ButtonPadding' has a wrong offset!");
 
 }
 

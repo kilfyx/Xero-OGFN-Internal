@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBB_Focus_C>();
 	}
 };
+static_assert(alignof(UBB_Focus_C) == 0x000008, "Wrong alignment on UBB_Focus_C");
+static_assert(sizeof(UBB_Focus_C) == 0x000100, "Wrong size on UBB_Focus_C");
 
 }
 

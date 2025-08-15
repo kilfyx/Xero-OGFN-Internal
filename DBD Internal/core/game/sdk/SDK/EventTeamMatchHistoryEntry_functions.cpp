@@ -23,9 +23,9 @@ namespace SDK
 void UEventTeamMatchHistoryEntry_C::BP_OnHovered()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnHovered");
+		Func = Class->GetFunction("EventTeamMatchHistoryEntry_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,11 +37,31 @@ void UEventTeamMatchHistoryEntry_C::BP_OnHovered()
 void UEventTeamMatchHistoryEntry_C::BP_OnUnhovered()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnUnhovered");
+		Func = Class->GetFunction("EventTeamMatchHistoryEntry_C", "BP_OnUnhovered");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function EventTeamMatchHistoryEntry.EventTeamMatchHistoryEntry_C.OnListItemObjectSet
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UEventTeamMatchHistoryEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventTeamMatchHistoryEntry_C", "OnListItemObjectSet");
+
+	Params::EventTeamMatchHistoryEntry_C_OnListItemObjectSet Parms{};
+
+	Parms.ListItemObject = ListItemObject;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -53,33 +73,13 @@ void UEventTeamMatchHistoryEntry_C::BP_OnUnhovered()
 void UEventTeamMatchHistoryEntry_C::ExecuteUbergraph_EventTeamMatchHistoryEntry(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_EventTeamMatchHistoryEntry");
+		Func = Class->GetFunction("EventTeamMatchHistoryEntry_C", "ExecuteUbergraph_EventTeamMatchHistoryEntry");
 
 	Params::EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function EventTeamMatchHistoryEntry.EventTeamMatchHistoryEntry_C.OnListItemObjectSet
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UEventTeamMatchHistoryEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnListItemObjectSet");
-
-	Params::EventTeamMatchHistoryEntry_C_OnListItemObjectSet Parms{};
-
-	Parms.ListItemObject = ListItemObject;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

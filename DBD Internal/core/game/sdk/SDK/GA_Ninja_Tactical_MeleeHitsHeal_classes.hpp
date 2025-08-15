@@ -20,27 +20,27 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Ninja_Tactical_MeleeHitsHeal.GA_Ninja_Tactical_MeleeHitsHeal_C
-// 0x00C8 (0x0C50 - 0x0B88)
+// 0x00C8 (0x0C60 - 0x0B98)
 class UGA_Ninja_Tactical_MeleeHitsHeal_C : public UGAT_GenericTriggeredAbility_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Ninja_Tactical_MeleeHitsHeal_C;  // 0x0B88(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTag                           EventActivation;                                   // 0x0B90(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           EventComplete;                                     // 0x0B98(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GE_Ninja_Tactical_MeleeHitsHeal;                   // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  TC_Melee;                                          // 0x0BA8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         MeleeCount;                                        // 0x0BC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LastHitSwingTime;                                  // 0x0BCC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BaseHealValue;                                     // 0x0BD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FinalHealValue;                                    // 0x0BD4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   DataRowName;                                       // 0x0BD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayAttribute                     Attribute_HealingSourceBaseMultiplier;             // 0x0BE0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FGameplayAttribute                     Attribute_HealingSource;                           // 0x0C18(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Ninja_Tactical_MeleeHitsHeal_C;  // 0x0B98(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTag                           EventActivation;                                   // 0x0BA0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           EventComplete;                                     // 0x0BA8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_Ninja_Tactical_MeleeHitsHeal;                   // 0x0BB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  TC_Melee;                                          // 0x0BB8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         MeleeCount;                                        // 0x0BD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LastHitSwingTime;                                  // 0x0BDC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BaseHealValue;                                     // 0x0BE0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FinalHealValue;                                    // 0x0BE4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   DataRowName;                                       // 0x0BE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayAttribute                     Attribute_HealingSourceBaseMultiplier;             // 0x0BF0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FGameplayAttribute                     Attribute_HealingSource;                           // 0x0C28(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_Ninja_Tactical_MeleeHitsHeal(int32 EntryPoint);
-	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData_0);
 	void K2_OnEndAbility(bool bWasCancelled);
+	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData_0);
 	void SetupAbility(class UAbilitySystemComponent* AbilitySystem);
 
 	bool K2_ShouldAbilityRespondToEvent(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayEventData& Payload) const;
@@ -55,6 +55,20 @@ public:
 		return GetDefaultObjImpl<UGA_Ninja_Tactical_MeleeHitsHeal_C>();
 	}
 };
+static_assert(alignof(UGA_Ninja_Tactical_MeleeHitsHeal_C) == 0x000008, "Wrong alignment on UGA_Ninja_Tactical_MeleeHitsHeal_C");
+static_assert(sizeof(UGA_Ninja_Tactical_MeleeHitsHeal_C) == 0x000C60, "Wrong size on UGA_Ninja_Tactical_MeleeHitsHeal_C");
+static_assert(offsetof(UGA_Ninja_Tactical_MeleeHitsHeal_C, UberGraphFrame_GA_Ninja_Tactical_MeleeHitsHeal_C) == 0x000B98, "Member 'UGA_Ninja_Tactical_MeleeHitsHeal_C::UberGraphFrame_GA_Ninja_Tactical_MeleeHitsHeal_C' has a wrong offset!");
+static_assert(offsetof(UGA_Ninja_Tactical_MeleeHitsHeal_C, EventActivation) == 0x000BA0, "Member 'UGA_Ninja_Tactical_MeleeHitsHeal_C::EventActivation' has a wrong offset!");
+static_assert(offsetof(UGA_Ninja_Tactical_MeleeHitsHeal_C, EventComplete) == 0x000BA8, "Member 'UGA_Ninja_Tactical_MeleeHitsHeal_C::EventComplete' has a wrong offset!");
+static_assert(offsetof(UGA_Ninja_Tactical_MeleeHitsHeal_C, GE_Ninja_Tactical_MeleeHitsHeal) == 0x000BB0, "Member 'UGA_Ninja_Tactical_MeleeHitsHeal_C::GE_Ninja_Tactical_MeleeHitsHeal' has a wrong offset!");
+static_assert(offsetof(UGA_Ninja_Tactical_MeleeHitsHeal_C, TC_Melee) == 0x000BB8, "Member 'UGA_Ninja_Tactical_MeleeHitsHeal_C::TC_Melee' has a wrong offset!");
+static_assert(offsetof(UGA_Ninja_Tactical_MeleeHitsHeal_C, MeleeCount) == 0x000BD8, "Member 'UGA_Ninja_Tactical_MeleeHitsHeal_C::MeleeCount' has a wrong offset!");
+static_assert(offsetof(UGA_Ninja_Tactical_MeleeHitsHeal_C, LastHitSwingTime) == 0x000BDC, "Member 'UGA_Ninja_Tactical_MeleeHitsHeal_C::LastHitSwingTime' has a wrong offset!");
+static_assert(offsetof(UGA_Ninja_Tactical_MeleeHitsHeal_C, BaseHealValue) == 0x000BE0, "Member 'UGA_Ninja_Tactical_MeleeHitsHeal_C::BaseHealValue' has a wrong offset!");
+static_assert(offsetof(UGA_Ninja_Tactical_MeleeHitsHeal_C, FinalHealValue) == 0x000BE4, "Member 'UGA_Ninja_Tactical_MeleeHitsHeal_C::FinalHealValue' has a wrong offset!");
+static_assert(offsetof(UGA_Ninja_Tactical_MeleeHitsHeal_C, DataRowName) == 0x000BE8, "Member 'UGA_Ninja_Tactical_MeleeHitsHeal_C::DataRowName' has a wrong offset!");
+static_assert(offsetof(UGA_Ninja_Tactical_MeleeHitsHeal_C, Attribute_HealingSourceBaseMultiplier) == 0x000BF0, "Member 'UGA_Ninja_Tactical_MeleeHitsHeal_C::Attribute_HealingSourceBaseMultiplier' has a wrong offset!");
+static_assert(offsetof(UGA_Ninja_Tactical_MeleeHitsHeal_C, Attribute_HealingSource) == 0x000C28, "Member 'UGA_Ninja_Tactical_MeleeHitsHeal_C::Attribute_HealingSource' has a wrong offset!");
 
 }
 

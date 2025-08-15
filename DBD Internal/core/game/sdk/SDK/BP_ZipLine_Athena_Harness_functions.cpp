@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Chime Visual
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_ZipLine_Athena_Harness_C::Chime_Visual()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "Chime Visual");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Cleanup On DownhillGCN
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_ZipLine_Athena_Harness_C::Cleanup_On_DownhillGCN()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "Cleanup On DownhillGCN");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ExecuteUbergraph_BP_ZipLine_Athena_Harness
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -62,6 +34,20 @@ void ABP_ZipLine_Athena_Harness_C::ExecuteUbergraph_BP_ZipLine_Athena_Harness(in
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Chime Visual
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_ZipLine_Athena_Harness_C::Chime_Visual()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "Chime Visual");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -99,56 +85,6 @@ void ABP_ZipLine_Athena_Harness_C::HandleOnDied(class AActor* DamagedActor, floa
 }
 
 
-// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.OnRep_AttachedPlayer
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_ZipLine_Athena_Harness_C::OnRep_AttachedPlayer()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "OnRep_AttachedPlayer");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.OrientMotorForZipline
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortAthenaZiplineBase*           Zipline                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   DesiredZiplineOffset                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ZipLine_Athena_Harness_C::OrientMotorForZipline(class AFortAthenaZiplineBase* Zipline, const struct FVector& DesiredZiplineOffset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "OrientMotorForZipline");
-
-	Params::BP_ZipLine_Athena_Harness_C_OrientMotorForZipline Parms{};
-
-	Parms.Zipline = Zipline;
-	Parms.DesiredZiplineOffset = std::move(DesiredZiplineOffset);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_ZipLine_Athena_Harness_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ReceiveDestroyed
 // (Event, Public, BlueprintEvent)
 
@@ -158,34 +94,6 @@ void ABP_ZipLine_Athena_Harness_C::ReceiveDestroyed()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.RotateToZiplineDirection
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_ZipLine_Athena_Harness_C::RotateToZiplineDirection()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "RotateToZiplineDirection");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Start Travel Audio
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_ZipLine_Athena_Harness_C::Start_Travel_Audio()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "Start Travel Audio");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -205,57 +113,29 @@ void ABP_ZipLine_Athena_Harness_C::Stop_Travel_Audio()
 }
 
 
-// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Update Audio and VFXParams
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Start Travel Audio
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_ZipLine_Athena_Harness_C::Update_Audio_and_VFXParams()
+void ABP_ZipLine_Athena_Harness_C::Start_Travel_Audio()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "Update Audio and VFXParams");
+		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "Start Travel Audio");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.UpdateMotorToSpline
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_ZipLine_Athena_Harness_C::UpdateMotorToSpline()
+void ABP_ZipLine_Athena_Harness_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "UpdateMotorToSpline");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.UpdateParamsForAudioAndVFX
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_ZipLine_Athena_Harness_C::UpdateParamsForAudioAndVFX()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "UpdateParamsForAudioAndVFX");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.UpdateZiplineOffsetLocation
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_ZipLine_Athena_Harness_C::UpdateZiplineOffsetLocation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "UpdateZiplineOffsetLocation");
+		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

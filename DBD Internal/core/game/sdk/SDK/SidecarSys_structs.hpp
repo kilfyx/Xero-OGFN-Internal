@@ -14,17 +14,6 @@
 namespace SDK
 {
 
-// Enum SidecarSys.EInventoryPersistenceMode
-// NumValues: 0x0005
-enum class EInventoryPersistenceMode : uint8
-{
-	Normal                                   = 0,
-	Deferred                                 = 1,
-	Disabled                                 = 2,
-	ReadOnly                                 = 3,
-	EInventoryPersistenceMode_MAX            = 4,
-};
-
 // ScriptStruct SidecarSys.SidecarFileInfo
 // 0x0068 (0x0068 - 0x0000)
 struct FSidecarFileInfo final
@@ -36,6 +25,23 @@ public:
 	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CheckoutGuid;                                      // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FSidecarFileInfo) == 0x000008, "Wrong alignment on FSidecarFileInfo");
+static_assert(sizeof(FSidecarFileInfo) == 0x000068, "Wrong size on FSidecarFileInfo");
+static_assert(offsetof(FSidecarFileInfo, Meta) == 0x000000, "Member 'FSidecarFileInfo::Meta' has a wrong offset!");
+static_assert(offsetof(FSidecarFileInfo, bIsCheckedOut) == 0x000050, "Member 'FSidecarFileInfo::bIsCheckedOut' has a wrong offset!");
+static_assert(offsetof(FSidecarFileInfo, bOperationPending) == 0x000051, "Member 'FSidecarFileInfo::bOperationPending' has a wrong offset!");
+static_assert(offsetof(FSidecarFileInfo, CheckoutGuid) == 0x000058, "Member 'FSidecarFileInfo::CheckoutGuid' has a wrong offset!");
+
+// ScriptStruct SidecarSys.InventoryFlushPayload
+// 0x0010 (0x0010 - 0x0000)
+struct FInventoryFlushPayload final
+{
+public:
+	TArray<class FString>                         InventoryNames;                                    // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FInventoryFlushPayload) == 0x000008, "Wrong alignment on FInventoryFlushPayload");
+static_assert(sizeof(FInventoryFlushPayload) == 0x000010, "Wrong size on FInventoryFlushPayload");
+static_assert(offsetof(FInventoryFlushPayload, InventoryNames) == 0x000000, "Member 'FInventoryFlushPayload::InventoryNames' has a wrong offset!");
 
 }
 

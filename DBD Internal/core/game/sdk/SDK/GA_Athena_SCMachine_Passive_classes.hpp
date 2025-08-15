@@ -10,33 +10,30 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteGame_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "GameplayTags_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C
-// 0x0028 (0x0AD0 - 0x0AA8)
+// 0x0020 (0x0AD8 - 0x0AB8)
 class UGA_Athena_SCMachine_Passive_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawnAthena*                  PlayerPawn;                                        // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                SpawnZOffset;                                      // 0x0AB8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           BlockChipSpawnTag;                                 // 0x0AC4(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawnAthena*                  PlayerPawn;                                        // 0x0AC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                SpawnZOffset;                                      // 0x0AC8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Check_Resurrection_Active(bool* bEnabled);
-	void CheckPlayerChipSpawnEnabled(bool* IsChipSpawnEnabled);
 	void ExecuteUbergraph_GA_Athena_SCMachine_Passive(int32 EntryPoint);
-	void HandleOnFortPlayerDied(class AFortPlayerPawnAthena* FortPlayerPawnAthena);
 	void K2_ActivateAbility();
-	void SaveOutPlayer();
+	void HandleOnFortPlayerDied(class AFortPlayerPawnAthena* FortPlayerPawnAthena);
 	void Spawn();
+	void SaveOutPlayer();
+	void Check_Resurrection_Active(bool* bEnabled);
 
 public:
 	static class UClass* StaticClass()
@@ -48,6 +45,11 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_SCMachine_Passive_C>();
 	}
 };
+static_assert(alignof(UGA_Athena_SCMachine_Passive_C) == 0x000008, "Wrong alignment on UGA_Athena_SCMachine_Passive_C");
+static_assert(sizeof(UGA_Athena_SCMachine_Passive_C) == 0x000AD8, "Wrong size on UGA_Athena_SCMachine_Passive_C");
+static_assert(offsetof(UGA_Athena_SCMachine_Passive_C, UberGraphFrame) == 0x000AB8, "Member 'UGA_Athena_SCMachine_Passive_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UGA_Athena_SCMachine_Passive_C, PlayerPawn) == 0x000AC0, "Member 'UGA_Athena_SCMachine_Passive_C::PlayerPawn' has a wrong offset!");
+static_assert(offsetof(UGA_Athena_SCMachine_Passive_C, SpawnZOffset) == 0x000AC8, "Member 'UGA_Athena_SCMachine_Passive_C::SpawnZOffset' has a wrong offset!");
 
 }
 

@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Tiered_Safe_Athena_NonPhysics.Tiered_Safe_Athena_NonPhysics_C
-// 0x0008 (0x0FA0 - 0x0F98)
+// 0x0008 (0x0DE8 - 0x0DE0)
 class ATiered_Safe_Athena_NonPhysics_C final : public ATiered_Safe_Athena_Parent_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Tiered_Safe_Athena_NonPhysics_C;    // 0x0F98(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Tiered_Safe_Athena_NonPhysics_C;    // 0x0DE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ExecuteUbergraph_Tiered_Safe_Athena_NonPhysics(int32 EntryPoint);
 	void ReceiveDestroyed();
+	void ExecuteUbergraph_Tiered_Safe_Athena_NonPhysics(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -38,6 +38,9 @@ public:
 		return GetDefaultObjImpl<ATiered_Safe_Athena_NonPhysics_C>();
 	}
 };
+static_assert(alignof(ATiered_Safe_Athena_NonPhysics_C) == 0x000008, "Wrong alignment on ATiered_Safe_Athena_NonPhysics_C");
+static_assert(sizeof(ATiered_Safe_Athena_NonPhysics_C) == 0x000DE8, "Wrong size on ATiered_Safe_Athena_NonPhysics_C");
+static_assert(offsetof(ATiered_Safe_Athena_NonPhysics_C, UberGraphFrame_Tiered_Safe_Athena_NonPhysics_C) == 0x000DE0, "Member 'ATiered_Safe_Athena_NonPhysics_C::UberGraphFrame_Tiered_Safe_Athena_NonPhysics_C' has a wrong offset!");
 
 }
 

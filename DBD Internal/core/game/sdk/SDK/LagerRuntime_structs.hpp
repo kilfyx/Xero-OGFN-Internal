@@ -10,230 +10,77 @@
 
 #include "Basic.hpp"
 
-#include "GameplayAbilities_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 
 
 namespace SDK
 {
 
-// Enum LagerRuntime.ELivingWorldPointProviderSpawnLimiterBehavior
-// NumValues: 0x0003
-enum class ELivingWorldPointProviderSpawnLimiterBehavior : uint8
-{
-	Lifetime                                 = 0,
-	Concurrent                               = 1,
-	ELivingWorldPointProviderSpawnLimiterBehavior_MAX = 2,
-};
-
-// Enum LagerRuntime.ELivingWorldCalendarEventConditionBehavior
-// NumValues: 0x0003
-enum class ELivingWorldCalendarEventConditionBehavior : uint8
-{
-	IsActive                                 = 0,
-	Ratio                                    = 1,
-	ELivingWorldCalendarEventConditionBehavior_MAX = 2,
-};
-
-// Enum LagerRuntime.ELivingWorldCalendarEventConditionRatioBehavior
-// NumValues: 0x0006
-enum class ELivingWorldCalendarEventConditionRatioBehavior : uint8
-{
-	Less                                     = 0,
-	LessOrEqual                              = 1,
-	Greater                                  = 2,
-	GreaterOrEqual                           = 3,
-	InBetween                                = 4,
-	ELivingWorldCalendarEventConditionRatioBehavior_MAX = 5,
-};
-
-// ScriptStruct LagerRuntime.FortLivingWorldEventTableVariation
-// 0x0050 (0x0050 - 0x0000)
-struct FFortLivingWorldEventTableVariation final
-{
-public:
-	TSoftObjectPtr<class UDataTable>              EventTableVariation;                               // 0x0000(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FScalableFloat                         VariationWeight;                                   // 0x0028(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-};
-
 // ScriptStruct LagerRuntime.FortAthenaLivingWorldCategory
-// 0x00C8 (0x00D0 - 0x0008)
+// 0x0058 (0x0060 - 0x0008)
 struct FFortAthenaLivingWorldCategory final : public FTableRowBase
 {
 public:
 	TSoftObjectPtr<class UDataTable>              EventTable;                                        // 0x0008(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FFortLivingWorldEventTableVariation> EventTableVariations;                         // 0x0030(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	int32                                         MaxCount;                                          // 0x0040(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         MaxSpawnedCount;                                   // 0x0044(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         Priority;                                          // 0x0048(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bExcludeFromGlobalAIBudget;                        // 0x004C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagQuery                      RequirePlaylistTagQuery;                           // 0x0050(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<TSoftObjectPtr<class UFortAthenaLivingWorldEncounter>> Encounters;                        // 0x0098(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         IsEnabled;                                         // 0x00A8(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	int32                                         MaxCount;                                          // 0x0030(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         Priority;                                          // 0x0034(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bExcludeFromGlobalAIBudget;                        // 0x0038(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  RequirePlaylistTags;                               // 0x0040(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
 };
-
-// ScriptStruct LagerRuntime.FortAthenaLivingWorldPointProviderSpawnLimiter
-// 0x0038 (0x0038 - 0x0000)
-struct FFortAthenaLivingWorldPointProviderSpawnLimiter final
-{
-public:
-	uint8                                         Pad_0[0x4];                                        // 0x0000(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	ELivingWorldPointProviderSpawnLimiterBehavior Behavior;                                          // 0x0004(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         MaxNumberOfSpawn;                                  // 0x0008(0x0028)(Edit, NativeAccessSpecifierPrivate)
-	bool                                          bResetLimitWhenEnabling;                           // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct LagerRuntime.FortAthenaLivingWorldTagDensityGridData
-// 0x0030 (0x0030 - 0x0000)
-struct FFortAthenaLivingWorldTagDensityGridData final
-{
-public:
-	struct FGameplayTag                           Tag;                                               // 0x0000(0x0008)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FScalableFloat                         GridCellSize;                                      // 0x0008(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct LagerRuntime.FortAthenaActorDensityDebugInfo
-// 0x0038 (0x0038 - 0x0000)
-struct FFortAthenaActorDensityDebugInfo final
-{
-public:
-	class FString                                 ActorName;                                         // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ActorPosition;                                     // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FIntVector                             MinCellIndex;                                      // 0x001C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FIntVector                             MaxCellIndex;                                      // 0x0028(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DensityValue;                                      // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct LagerRuntime.FortAthenaLivingWorldDensityGrid
-// 0x0098 (0x0108 - 0x0070)
-struct FFortAthenaLivingWorldDensityGrid final : public FFortSpatialGrid
-{
-public:
-	uint8                                         Pad_70[0x98];                                      // 0x0070(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct LagerRuntime.FortAthenaLivingWorldEncounterStage
-// 0x0050 (0x0050 - 0x0000)
-struct FFortAthenaLivingWorldEncounterStage final
-{
-public:
-	TSoftObjectPtr<class UDataTable>              EventTable;                                        // 0x0000(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         MaximumConcurrentNumberOfAI;                       // 0x0028(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct LagerRuntime.FortAthenaLivingWorldEventDespawnCondition
-// 0x0018 (0x0018 - 0x0000)
-struct FFortAthenaLivingWorldEventDespawnCondition final
-{
-public:
-	bool                                          bCanBeDespawned;                                   // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinDistanceToPlayer;                               // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeAsCandidateBeforeDespawn;                      // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAthenaGamePhaseStep                          CanStartDespawningPhaseStep;                       // 0x000C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CanStartDespawningSafeZonePhase;                   // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanDespawnWhenInCombatWithPlayer;                 // 0x0014(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanDespawnInTheStorm;                             // 0x0015(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct LagerRuntime.FortAthenaLivingWorldEventTagDensityCondition
-// 0x0010 (0x0010 - 0x0000)
-struct FFortAthenaLivingWorldEventTagDensityCondition final
-{
-public:
-	struct FGameplayTag                           Tag;                                               // 0x0000(0x0008)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Distance;                                          // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxDensity;                                        // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct LagerRuntime.LivingWorldCalendarEventCondition
-// 0x0014 (0x0014 - 0x0000)
-struct FLivingWorldCalendarEventCondition final
-{
-public:
-	class FName                                   CalendarEventName;                                 // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELivingWorldCalendarEventConditionBehavior    Behavior;                                          // 0x0008(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShouldEventBeActive;                               // 0x0009(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELivingWorldCalendarEventConditionRatioBehavior RatioBehavior;                                   // 0x000A(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RatioValue;                                        // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RatioMaxValue;                                     // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct LagerRuntime.LivingWorldCalendarEventConditions
-// 0x0018 (0x0018 - 0x0000)
-struct FLivingWorldCalendarEventConditions final
-{
-public:
-	TArray<struct FLivingWorldCalendarEventCondition> Conditions;                                    // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	bool                                          IsActiveWithoutSeasonalManager;                    // 0x0010(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+static_assert(alignof(FFortAthenaLivingWorldCategory) == 0x000008, "Wrong alignment on FFortAthenaLivingWorldCategory");
+static_assert(sizeof(FFortAthenaLivingWorldCategory) == 0x000060, "Wrong size on FFortAthenaLivingWorldCategory");
+static_assert(offsetof(FFortAthenaLivingWorldCategory, EventTable) == 0x000008, "Member 'FFortAthenaLivingWorldCategory::EventTable' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldCategory, MaxCount) == 0x000030, "Member 'FFortAthenaLivingWorldCategory::MaxCount' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldCategory, Priority) == 0x000034, "Member 'FFortAthenaLivingWorldCategory::Priority' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldCategory, bExcludeFromGlobalAIBudget) == 0x000038, "Member 'FFortAthenaLivingWorldCategory::bExcludeFromGlobalAIBudget' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldCategory, RequirePlaylistTags) == 0x000040, "Member 'FFortAthenaLivingWorldCategory::RequirePlaylistTags' has a wrong offset!");
 
 // ScriptStruct LagerRuntime.FortAthenaLivingWorldEvent
-// 0x0120 (0x0128 - 0x0008)
+// 0x00D0 (0x00D8 - 0x0008)
 struct FFortAthenaLivingWorldEvent final : public FTableRowBase
 {
 public:
 	TSoftObjectPtr<class UFortAthenaLivingWorldEventData> EventData;                                 // 0x0008(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FScalableFloat                         IsEnabled;                                         // 0x0030(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<float>                                 MaxCount;                                          // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<float>                                 MaxSpawnedCount;                                   // 0x0068(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	TArray<float>                                 MaxCount;                                          // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<float>                                 MaxSpawnedCount;                                   // 0x0068(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         Weight;                                            // 0x0078(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 MinRespawnTime;                                    // 0x0080(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<float>                                 MaxRespawnTime;                                    // 0x0090(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<float>                                 MinRespawnTime;                                    // 0x0080(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<float>                                 MaxRespawnTime;                                    // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bOnlyInSafeZone;                                   // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bOnlyInNextSafeZone;                               // 0x00A1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bOnlyInNextSafeZoneIfStormShrinking;               // 0x00A2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EAthenaGamePhaseStep                          ActivationGamePhaseStep;                           // 0x00A3(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EAthenaGamePhaseStep                          ActivationGamePhaseStep;                           // 0x00A1(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ActivationSafeZoneIndex;                           // 0x00A4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         ActivationMinDelay;                                // 0x00A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         ActivationMaxDelay;                                // 0x00AC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FFortAthenaLivingWorldEventTagDensityCondition> TagDensityConditions;              // 0x00B0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	bool                                          bCheckForActorDensity;                             // 0x00C0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxActorDensityOverride;                           // 0x00C4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         MinDistanceToPlayer;                               // 0x00C8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         MaxDistanceToPlayer;                               // 0x00CC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bCanSpawnWithoutMatchingPlayerDistance;            // 0x00D0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RandomActivationChance;                            // 0x00D4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FFortAthenaLivingWorldEventDespawnCondition DespawnCondition;                             // 0x00D8(0x0018)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FGameplayTagContainer                  RequirePlaylistTags;                               // 0x00F0(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FLivingWorldCalendarEventConditions    CalendarEventConditions;                           // 0x0110(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	bool                                          bCheckForActorDensity;                             // 0x00B0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  RequirePlaylistTags;                               // 0x00B8(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
 };
-
-// ScriptStruct LagerRuntime.PointProviderFilterEntry
-// 0x0088 (0x0088 - 0x0000)
-struct FPointProviderFilterEntry final
-{
-public:
-	struct FGameplayTagQuery                      ProviderFiltersTagQuery;                           // 0x0000(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FLivingWorldCalendarEventConditions    CalendarEventConditions;                           // 0x0048(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FScalableFloat                         Weight;                                            // 0x0060(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct LagerRuntime.FortAthenaLivingWorldEventTagDensityRegistration
-// 0x0058 (0x0058 - 0x0000)
-struct FFortAthenaLivingWorldEventTagDensityRegistration final
-{
-public:
-	struct FGameplayTag                           Tag;                                               // 0x0000(0x0008)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FScalableFloat                         Range;                                             // 0x0008(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FScalableFloat                         DensityValue;                                      // 0x0030(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FFortAthenaLivingWorldEvent) == 0x000008, "Wrong alignment on FFortAthenaLivingWorldEvent");
+static_assert(sizeof(FFortAthenaLivingWorldEvent) == 0x0000D8, "Wrong size on FFortAthenaLivingWorldEvent");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, EventData) == 0x000008, "Member 'FFortAthenaLivingWorldEvent::EventData' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, IsEnabled) == 0x000030, "Member 'FFortAthenaLivingWorldEvent::IsEnabled' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, MaxCount) == 0x000058, "Member 'FFortAthenaLivingWorldEvent::MaxCount' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, MaxSpawnedCount) == 0x000068, "Member 'FFortAthenaLivingWorldEvent::MaxSpawnedCount' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, Weight) == 0x000078, "Member 'FFortAthenaLivingWorldEvent::Weight' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, MinRespawnTime) == 0x000080, "Member 'FFortAthenaLivingWorldEvent::MinRespawnTime' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, MaxRespawnTime) == 0x000090, "Member 'FFortAthenaLivingWorldEvent::MaxRespawnTime' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, bOnlyInSafeZone) == 0x0000A0, "Member 'FFortAthenaLivingWorldEvent::bOnlyInSafeZone' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, ActivationGamePhaseStep) == 0x0000A1, "Member 'FFortAthenaLivingWorldEvent::ActivationGamePhaseStep' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, ActivationSafeZoneIndex) == 0x0000A4, "Member 'FFortAthenaLivingWorldEvent::ActivationSafeZoneIndex' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, ActivationMinDelay) == 0x0000A8, "Member 'FFortAthenaLivingWorldEvent::ActivationMinDelay' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, ActivationMaxDelay) == 0x0000AC, "Member 'FFortAthenaLivingWorldEvent::ActivationMaxDelay' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, bCheckForActorDensity) == 0x0000B0, "Member 'FFortAthenaLivingWorldEvent::bCheckForActorDensity' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEvent, RequirePlaylistTags) == 0x0000B8, "Member 'FFortAthenaLivingWorldEvent::RequirePlaylistTags' has a wrong offset!");
 
 // ScriptStruct LagerRuntime.FortAthenaLivingWorldEventDataActorSpawnDescription
-// 0x0158 (0x0158 - 0x0000)
+// 0x00E8 (0x00E8 - 0x0000)
 struct FFortAthenaLivingWorldEventDataActorSpawnDescription final
 {
 public:
@@ -243,64 +90,52 @@ public:
 	bool                                          bUseProviderTagOverrides;                          // 0x0098(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTagQuery                      ProviderFiltersTagQueryOverride;                   // 0x00A0(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	bool                                          bSpawnAroundDefaultPoint;                          // 0x00E8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateDefaultPosition;                            // 0x00E9(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UEnvQuery*                              SpawnAroundEnvironmentQuery;                       // 0x00F0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FScalableFloat                         ActorDensityValue;                                 // 0x00F8(0x0028)(Edit, NativeAccessSpecifierPublic)
-	struct FScalableFloat                         DensityComputationRangeOverride;                   // 0x0120(0x0028)(Edit, NativeAccessSpecifierPublic)
-	TArray<struct FFortAthenaLivingWorldEventTagDensityRegistration> TagDensityRegistrations;        // 0x0148(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FFortAthenaLivingWorldEventDataActorSpawnDescription) == 0x000008, "Wrong alignment on FFortAthenaLivingWorldEventDataActorSpawnDescription");
+static_assert(sizeof(FFortAthenaLivingWorldEventDataActorSpawnDescription) == 0x0000E8, "Wrong size on FFortAthenaLivingWorldEventDataActorSpawnDescription");
+static_assert(offsetof(FFortAthenaLivingWorldEventDataActorSpawnDescription, ActorClass) == 0x000000, "Member 'FFortAthenaLivingWorldEventDataActorSpawnDescription::ActorClass' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEventDataActorSpawnDescription, SpawnerData) == 0x000028, "Member 'FFortAthenaLivingWorldEventDataActorSpawnDescription::SpawnerData' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEventDataActorSpawnDescription, SpawnerDataTagQuery) == 0x000050, "Member 'FFortAthenaLivingWorldEventDataActorSpawnDescription::SpawnerDataTagQuery' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEventDataActorSpawnDescription, bUseProviderTagOverrides) == 0x000098, "Member 'FFortAthenaLivingWorldEventDataActorSpawnDescription::bUseProviderTagOverrides' has a wrong offset!");
+static_assert(offsetof(FFortAthenaLivingWorldEventDataActorSpawnDescription, ProviderFiltersTagQueryOverride) == 0x0000A0, "Member 'FFortAthenaLivingWorldEventDataActorSpawnDescription::ProviderFiltersTagQueryOverride' has a wrong offset!");
+
+// ScriptStruct LagerRuntime.PointProviderFilterEntry
+// 0x0070 (0x0070 - 0x0000)
+struct FPointProviderFilterEntry final
+{
+public:
+	struct FGameplayTagQuery                      ProviderFiltersTagQuery;                           // 0x0000(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FScalableFloat                         Weight;                                            // 0x0048(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPointProviderFilterEntry) == 0x000008, "Wrong alignment on FPointProviderFilterEntry");
+static_assert(sizeof(FPointProviderFilterEntry) == 0x000070, "Wrong size on FPointProviderFilterEntry");
+static_assert(offsetof(FPointProviderFilterEntry, ProviderFiltersTagQuery) == 0x000000, "Member 'FPointProviderFilterEntry::ProviderFiltersTagQuery' has a wrong offset!");
+static_assert(offsetof(FPointProviderFilterEntry, Weight) == 0x000048, "Member 'FPointProviderFilterEntry::Weight' has a wrong offset!");
 
 // ScriptStruct LagerRuntime.FortLivingWorldConfigOverride
-// 0x0080 (0x0080 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct FFortLivingWorldConfigOverride final
 {
 public:
 	TSoftObjectPtr<class UWorld>                  SourceWorld;                                       // 0x0000(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  PlaylistTag;                                       // 0x0028(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UFortAthenaLivingWorldConfigData> LagerConfig;                              // 0x0048(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortReleaseVersion                    StartVersion;                                      // 0x0070(0x0008)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortReleaseVersion                    EndVersion;                                        // 0x0078(0x0008)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct LagerRuntime.FortAthenaLivingWorldPlayerTracker
-// 0x00B0 (0x00B0 - 0x0000)
-struct FFortAthenaLivingWorldPlayerTracker final
-{
-public:
-	TSet<class AFortAthenaAIBotController*>       TrackedBotControllers;                             // 0x0000(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	TArray<class AFortPlayerPawn*>                TrackedPlayerPawns;                                // 0x0050(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	TArray<class AController*>                    TrackedPlayerControllers;                          // 0x0060(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_70[0x40];                                      // 0x0070(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+static_assert(alignof(FFortLivingWorldConfigOverride) == 0x000008, "Wrong alignment on FFortLivingWorldConfigOverride");
+static_assert(sizeof(FFortLivingWorldConfigOverride) == 0x000070, "Wrong size on FFortLivingWorldConfigOverride");
+static_assert(offsetof(FFortLivingWorldConfigOverride, SourceWorld) == 0x000000, "Member 'FFortLivingWorldConfigOverride::SourceWorld' has a wrong offset!");
+static_assert(offsetof(FFortLivingWorldConfigOverride, PlaylistTag) == 0x000028, "Member 'FFortLivingWorldConfigOverride::PlaylistTag' has a wrong offset!");
+static_assert(offsetof(FFortLivingWorldConfigOverride, LagerConfig) == 0x000048, "Member 'FFortLivingWorldConfigOverride::LagerConfig' has a wrong offset!");
 
 // ScriptStruct LagerRuntime.FortAthenaLivingWorldPointProviderFilterRules
-// 0x0030 (0x0030 - 0x0000)
-struct alignas(0x08) FFortAthenaLivingWorldPointProviderFilterRules final
+// 0x0002 (0x0002 - 0x0000)
+struct FFortAthenaLivingWorldPointProviderFilterRules final
 {
 public:
-	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x2];                                        // 0x0000(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// ScriptStruct LagerRuntime.FortAthenaLivingWorldTaggedSpawnActionClass
-// 0x0010 (0x0010 - 0x0000)
-struct FFortAthenaLivingWorldTaggedSpawnActionClass final
-{
-public:
-	struct FGameplayTag                           SpawnActionTag;                                    // 0x0000(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UFortAthenaLivingWorldSpawnAction> SpawnActionClass;                           // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct LagerRuntime.FortAthenaLivingWorldTagQueryToSeatMapping
-// 0x0050 (0x0050 - 0x0000)
-struct FFortAthenaLivingWorldTagQueryToSeatMapping final
-{
-public:
-	struct FGameplayTagQuery                      TagQuery;                                          // 0x0000(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	int32                                         SeatIndex;                                         // 0x0048(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+static_assert(alignof(FFortAthenaLivingWorldPointProviderFilterRules) == 0x000001, "Wrong alignment on FFortAthenaLivingWorldPointProviderFilterRules");
+static_assert(sizeof(FFortAthenaLivingWorldPointProviderFilterRules) == 0x000002, "Wrong size on FFortAthenaLivingWorldPointProviderFilterRules");
 
 }
 

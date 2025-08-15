@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function BP_SurfaceTypeSoundComponent.BP_SurfaceTypeSoundComponent_C.ActuallyPlaySound
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UBP_SurfaceTypeSoundComponent_C::ActuallyPlaySound()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SurfaceTypeSoundComponent_C", "ActuallyPlaySound");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_SurfaceTypeSoundComponent.BP_SurfaceTypeSoundComponent_C.ExecuteUbergraph_BP_SurfaceTypeSoundComponent
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UBP_SurfaceTypeSoundComponent_C::ExecuteUbergraph_BP_SurfaceTypeSoundCompon
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SurfaceTypeSoundComponent.BP_SurfaceTypeSoundComponent_C.Test Delay
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_SurfaceTypeSoundComponent_C::Test_Delay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SurfaceTypeSoundComponent_C", "Test Delay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -93,15 +93,15 @@ void UBP_SurfaceTypeSoundComponent_C::SetSurfaceType(EPhysicalSurface SurfaceTyp
 }
 
 
-// Function BP_SurfaceTypeSoundComponent.BP_SurfaceTypeSoundComponent_C.Test Delay
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_SurfaceTypeSoundComponent.BP_SurfaceTypeSoundComponent_C.ActuallyPlaySound
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UBP_SurfaceTypeSoundComponent_C::Test_Delay()
+void UBP_SurfaceTypeSoundComponent_C::ActuallyPlaySound()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SurfaceTypeSoundComponent_C", "Test Delay");
+		Func = Class->GetFunction("BP_SurfaceTypeSoundComponent_C", "ActuallyPlaySound");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

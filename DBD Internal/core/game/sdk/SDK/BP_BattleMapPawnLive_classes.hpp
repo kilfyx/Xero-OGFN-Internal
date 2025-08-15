@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BattleMapPawnLive.BP_BattleMapPawnLive_C
-// 0x0000 (0x05B0 - 0x05B0)
+// 0x0000 (0x0578 - 0x0578)
 class ABP_BattleMapPawnLive_C final : public ABattleMapPawnLive
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapPawnLive_C>();
 	}
 };
+static_assert(alignof(ABP_BattleMapPawnLive_C) == 0x000008, "Wrong alignment on ABP_BattleMapPawnLive_C");
+static_assert(sizeof(ABP_BattleMapPawnLive_C) == 0x000578, "Wrong size on ABP_BattleMapPawnLive_C");
 
 }
 

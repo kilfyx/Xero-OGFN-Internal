@@ -17,31 +17,6 @@
 namespace SDK
 {
 
-// Function B_Rifle_Sniper_Heavy_Athena.B_Rifle_Sniper_Heavy_Athena_C.CalculateTraceDistance
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FVector*                         StartPoint                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector*                         EndPoint                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Rifle_Sniper_Heavy_Athena_C::CalculateTraceDistance(struct FVector* StartPoint, struct FVector* EndPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Rifle_Sniper_Heavy_Athena_C", "CalculateTraceDistance");
-
-	Params::B_Rifle_Sniper_Heavy_Athena_C_CalculateTraceDistance Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (StartPoint != nullptr)
-		*StartPoint = std::move(Parms.StartPoint);
-
-	if (EndPoint != nullptr)
-		*EndPoint = std::move(Parms.EndPoint);
-}
-
-
 // Function B_Rifle_Sniper_Heavy_Athena.B_Rifle_Sniper_Heavy_Athena_C.ExecuteUbergraph_B_Rifle_Sniper_Heavy_Athena
 // (Final, UbergraphFunction)
 // Parameters:
@@ -79,6 +54,31 @@ void AB_Rifle_Sniper_Heavy_Athena_C::ReceiveTick(float DeltaSeconds)
 	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Rifle_Sniper_Heavy_Athena.B_Rifle_Sniper_Heavy_Athena_C.CalculateTraceDistance
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FVector*                         StartPoint                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         Endpoint                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Rifle_Sniper_Heavy_Athena_C::CalculateTraceDistance(struct FVector* StartPoint, struct FVector* Endpoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Rifle_Sniper_Heavy_Athena_C", "CalculateTraceDistance");
+
+	Params::B_Rifle_Sniper_Heavy_Athena_C_CalculateTraceDistance Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (StartPoint != nullptr)
+		*StartPoint = std::move(Parms.StartPoint);
+
+	if (Endpoint != nullptr)
+		*Endpoint = std::move(Parms.Endpoint);
 }
 
 }

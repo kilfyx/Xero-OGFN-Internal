@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaStatsRow.AthenaStatsRow_C
-// 0x0008 (0x02D0 - 0x02C8)
+// 0x0008 (0x02C8 - 0x02C0)
 class UAthenaStatsRow_C final : public UFortProfileStatsRow
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void SetStatValueAsText(const class FText& StatValue);
@@ -40,8 +40,8 @@ public:
 	}
 };
 static_assert(alignof(UAthenaStatsRow_C) == 0x000008, "Wrong alignment on UAthenaStatsRow_C");
-static_assert(sizeof(UAthenaStatsRow_C) == 0x0002D0, "Wrong size on UAthenaStatsRow_C");
-static_assert(offsetof(UAthenaStatsRow_C, UberGraphFrame) == 0x0002C8, "Member 'UAthenaStatsRow_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(UAthenaStatsRow_C) == 0x0002C8, "Wrong size on UAthenaStatsRow_C");
+static_assert(offsetof(UAthenaStatsRow_C, UberGraphFrame) == 0x0002C0, "Member 'UAthenaStatsRow_C::UberGraphFrame' has a wrong offset!");
 
 }
 

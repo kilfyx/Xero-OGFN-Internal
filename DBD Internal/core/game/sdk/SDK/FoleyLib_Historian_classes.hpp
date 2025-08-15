@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UFoleyLib_Historian_C>();
 	}
 };
+static_assert(alignof(UFoleyLib_Historian_C) == 0x000008, "Wrong alignment on UFoleyLib_Historian_C");
+static_assert(sizeof(UFoleyLib_Historian_C) == 0x0000B0, "Wrong size on UFoleyLib_Historian_C");
 
 }
 

@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaChatWidgetModalWrapper.AthenaChatWidgetModalWrapper_C
-// 0x0008 (0x03C8 - 0x03C0)
-class UAthenaChatWidgetModalWrapper_C final : public UFortChatModalWrapper
+// 0x0008 (0x0330 - 0x0328)
+class UAthenaChatWidgetModalWrapper_C final : public UAthenaChatModalWrapper
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0328(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_AthenaChatWidgetModalWrapper(int32 EntryPoint);
-	void FocusChat();
 	void OnInitialized();
 	void PreConstruct(bool IsDesignTime);
+	void FocusChat();
 
 public:
 	static class UClass* StaticClass()
@@ -41,8 +41,8 @@ public:
 	}
 };
 static_assert(alignof(UAthenaChatWidgetModalWrapper_C) == 0x000008, "Wrong alignment on UAthenaChatWidgetModalWrapper_C");
-static_assert(sizeof(UAthenaChatWidgetModalWrapper_C) == 0x0003C8, "Wrong size on UAthenaChatWidgetModalWrapper_C");
-static_assert(offsetof(UAthenaChatWidgetModalWrapper_C, UberGraphFrame) == 0x0003C0, "Member 'UAthenaChatWidgetModalWrapper_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(UAthenaChatWidgetModalWrapper_C) == 0x000330, "Wrong size on UAthenaChatWidgetModalWrapper_C");
+static_assert(offsetof(UAthenaChatWidgetModalWrapper_C, UberGraphFrame) == 0x000328, "Member 'UAthenaChatWidgetModalWrapper_C::UberGraphFrame' has a wrong offset!");
 
 }
 

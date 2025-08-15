@@ -10,51 +10,40 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "FortniteGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.UserConstructionScript
-// 0x0060 (0x0060 - 0x0000)
-struct VaultCharacterPlacementHelper_C_UserConstructionScript final
-{
-public:
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0000(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(VaultCharacterPlacementHelper_C_UserConstructionScript) == 0x000010, "Wrong alignment on VaultCharacterPlacementHelper_C_UserConstructionScript");
-static_assert(sizeof(VaultCharacterPlacementHelper_C_UserConstructionScript) == 0x000060, "Wrong size on VaultCharacterPlacementHelper_C_UserConstructionScript");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_UserConstructionScript, CallFunc_GetTransform_ReturnValue) == 0x000000, "Member 'VaultCharacterPlacementHelper_C_UserConstructionScript::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-
 // Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.UpdatePosition For Camera
-// 0x01F0 (0x01F0 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera final
 {
 public:
 	EFrontEndCamera                               FrontEndCamera;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EFrontEndCamera>                       K2Node_MakeArray_Array;                            // 0x0008(0x0010)(ConstParm, ReferenceParm)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x00A0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x0100(0x00E0)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<EFrontEndCamera>                       K2Node_MakeArray_Array;                            // 0x0008(0x0010)(ConstParm, ReferenceParm, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x001C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0028(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0034(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0040(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x004C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0060(0x0030)(IsPlainOldData, NoDestructor)
+	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x0090(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x011C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera) == 0x000010, "Wrong alignment on VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera");
-static_assert(sizeof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera) == 0x0001F0, "Wrong size on VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera");
+static_assert(sizeof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera) == 0x000120, "Wrong size on VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, FrontEndCamera) == 0x000000, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::FrontEndCamera' has a wrong offset!");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000001, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000002, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
@@ -62,14 +51,25 @@ static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera
 static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, K2Node_MakeArray_Array) == 0x000008, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_Not_PreBool_ReturnValue) == 0x000018, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_Array_Contains_ReturnValue) == 0x000019, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_BreakTransform_Location) == 0x000020, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_BreakTransform_Rotation) == 0x000038, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_BreakTransform_Scale) == 0x000050, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_Add_VectorVector_ReturnValue) == 0x000068, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_ComposeRotators_ReturnValue) == 0x000080, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_MakeTransform_ReturnValue) == 0x0000A0, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_K2_SetActorTransform_SweepHitResult) == 0x000100, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_K2_SetActorTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_K2_SetActorTransform_ReturnValue) == 0x0001E0, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_K2_SetActorTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_BreakTransform_Location) == 0x00001C, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_BreakTransform_Rotation) == 0x000028, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_BreakTransform_Scale) == 0x000034, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_Add_VectorVector_ReturnValue) == 0x000040, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_ComposeRotators_ReturnValue) == 0x00004C, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_MakeTransform_ReturnValue) == 0x000060, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_K2_SetActorTransform_SweepHitResult) == 0x000090, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_K2_SetActorTransform_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera, CallFunc_K2_SetActorTransform_ReturnValue) == 0x00011C, "Member 'VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera::CallFunc_K2_SetActorTransform_ReturnValue' has a wrong offset!");
+
+// Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.UserConstructionScript
+// 0x0030 (0x0030 - 0x0000)
+struct VaultCharacterPlacementHelper_C_UserConstructionScript final
+{
+public:
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0000(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(VaultCharacterPlacementHelper_C_UserConstructionScript) == 0x000010, "Wrong alignment on VaultCharacterPlacementHelper_C_UserConstructionScript");
+static_assert(sizeof(VaultCharacterPlacementHelper_C_UserConstructionScript) == 0x000030, "Wrong size on VaultCharacterPlacementHelper_C_UserConstructionScript");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_UserConstructionScript, CallFunc_GetTransform_ReturnValue) == 0x000000, "Member 'VaultCharacterPlacementHelper_C_UserConstructionScript::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
 
 // Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.SubGameChanged_Event_0
 // 0x0001 (0x0001 - 0x0000)
@@ -96,43 +96,43 @@ static_assert(offsetof(VaultCharacterPlacementHelper_C_OnFrontEndCameraChanged, 
 static_assert(offsetof(VaultCharacterPlacementHelper_C_OnFrontEndCameraChanged, OldCamera) == 0x000001, "Member 'VaultCharacterPlacementHelper_C_OnFrontEndCameraChanged::OldCamera' has a wrong offset!");
 
 // Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.ExecuteUbergraph_VaultCharacterPlacementHelper
-// 0x01A0 (0x01A0 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESubGame                                      CallFunc_GetSubGame_ReturnValue;                   // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera)> K2Node_CreateDelegate_OutputDelegate;              // 0x0014(0x000C)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue_1;                 // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera)> K2Node_CreateDelegate_OutputDelegate; // 0x0014(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue_1;                 // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESubGame                                      CallFunc_GetSubGame_ReturnValue_1;                 // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsInZone_ReturnValue;                     // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsInZone_ReturnValue;                     // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESubGame                                      K2Node_CustomEvent_SubGame;                        // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x0038(0x00E0)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortFrontEndContext*                   CallFunc_GetContext_ReturnValue_2;                 // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EFrontEndCamera                               K2Node_CustomEvent_NewCamera;                      // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFrontEndCamera                               K2Node_CustomEvent_OldCamera;                      // 0x0129(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12A[0x2];                                      // 0x012A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(ESubGame SubGame)>             K2Node_CreateDelegate_OutputDelegate_1;            // 0x012C(0x000C)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_138[0x8];                                      // 0x0138(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0140(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x0038(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortFrontEndContext*                   CallFunc_GetContext_ReturnValue_2;                 // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFrontEndCamera                               K2Node_CustomEvent_NewCamera;                      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFrontEndCamera                               K2Node_CustomEvent_OldCamera;                      // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D2[0x2];                                       // 0x00D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(ESubGame SubGame)>             K2Node_CreateDelegate_OutputDelegate_1;            // 0x00D4(0x0010)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_E4[0xC];                                       // 0x00E4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x00F0(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper) == 0x000010, "Wrong alignment on VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper");
-static_assert(sizeof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper) == 0x0001A0, "Wrong size on VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper");
+static_assert(sizeof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper) == 0x000120, "Wrong size on VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, EntryPoint) == 0x000000, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::EntryPoint' has a wrong offset!");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, CallFunc_GetContext_ReturnValue) == 0x000008, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::CallFunc_GetContext_ReturnValue' has a wrong offset!");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, CallFunc_GetSubGame_ReturnValue) == 0x000010, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::CallFunc_GetSubGame_ReturnValue' has a wrong offset!");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, K2Node_CreateDelegate_OutputDelegate) == 0x000014, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, K2Node_SwitchEnum_CmpSuccess) == 0x000020, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, K2Node_SwitchEnum_CmpSuccess) == 0x000024, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, CallFunc_GetContext_ReturnValue_1) == 0x000028, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::CallFunc_GetContext_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, CallFunc_GetSubGame_ReturnValue_1) == 0x000030, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::CallFunc_GetSubGame_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, CallFunc_IsInZone_ReturnValue) == 0x000031, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::CallFunc_IsInZone_ReturnValue' has a wrong offset!");
@@ -140,12 +140,12 @@ static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCha
 static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, K2Node_CustomEvent_SubGame) == 0x000033, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::K2Node_CustomEvent_SubGame' has a wrong offset!");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, CallFunc_BooleanAND_ReturnValue) == 0x000034, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, CallFunc_K2_SetActorTransform_SweepHitResult) == 0x000038, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::CallFunc_K2_SetActorTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, CallFunc_K2_SetActorTransform_ReturnValue) == 0x000118, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::CallFunc_K2_SetActorTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, CallFunc_GetContext_ReturnValue_2) == 0x000120, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::CallFunc_GetContext_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, K2Node_CustomEvent_NewCamera) == 0x000128, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::K2Node_CustomEvent_NewCamera' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, K2Node_CustomEvent_OldCamera) == 0x000129, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::K2Node_CustomEvent_OldCamera' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, K2Node_CreateDelegate_OutputDelegate_1) == 0x00012C, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, CallFunc_GetTransform_ReturnValue) == 0x000140, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, CallFunc_K2_SetActorTransform_ReturnValue) == 0x0000C4, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::CallFunc_K2_SetActorTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, CallFunc_GetContext_ReturnValue_2) == 0x0000C8, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::CallFunc_GetContext_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, K2Node_CustomEvent_NewCamera) == 0x0000D0, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::K2Node_CustomEvent_NewCamera' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, K2Node_CustomEvent_OldCamera) == 0x0000D1, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::K2Node_CustomEvent_OldCamera' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000D4, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper, CallFunc_GetTransform_ReturnValue) == 0x0000F0, "Member 'VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
 
 }
 

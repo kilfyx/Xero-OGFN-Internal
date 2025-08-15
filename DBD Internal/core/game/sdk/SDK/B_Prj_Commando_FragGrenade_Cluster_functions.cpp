@@ -40,8 +40,8 @@ void AB_Prj_Commando_FragGrenade_Cluster_C::ExecuteUbergraph_B_Prj_Commando_Frag
 // Function B_Prj_Commando_FragGrenade_Cluster.B_Prj_Commando_FragGrenade_Cluster_C.OnExploded
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 
 void AB_Prj_Commando_FragGrenade_Cluster_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
 {
@@ -59,23 +59,17 @@ void AB_Prj_Commando_FragGrenade_Cluster_C::OnExploded(const TArray<class AActor
 }
 
 
-// Function B_Prj_Commando_FragGrenade_Cluster.B_Prj_Commando_FragGrenade_Cluster_C.OnStop
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// Function B_Prj_Commando_FragGrenade_Cluster.B_Prj_Commando_FragGrenade_Cluster_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AB_Prj_Commando_FragGrenade_Cluster_C::OnStop(const struct FHitResult& Hit)
+void AB_Prj_Commando_FragGrenade_Cluster_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_Cluster_C", "OnStop");
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_Cluster_C", "ReceiveBeginPlay");
 
-	Params::B_Prj_Commando_FragGrenade_Cluster_C_OnStop Parms{};
-
-	Parms.Hit = std::move(Hit);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -105,17 +99,23 @@ void AB_Prj_Commando_FragGrenade_Cluster_C::ReceiveAnyDamage(float Damage, const
 }
 
 
-// Function B_Prj_Commando_FragGrenade_Cluster.B_Prj_Commando_FragGrenade_Cluster_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function B_Prj_Commando_FragGrenade_Cluster.B_Prj_Commando_FragGrenade_Cluster_C.OnStop
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
-void AB_Prj_Commando_FragGrenade_Cluster_C::ReceiveBeginPlay()
+void AB_Prj_Commando_FragGrenade_Cluster_C::OnStop(const struct FHitResult& Hit)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_Cluster_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_Cluster_C", "OnStop");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::B_Prj_Commando_FragGrenade_Cluster_C_OnStop Parms{};
+
+	Parms.Hit = std::move(Hit);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

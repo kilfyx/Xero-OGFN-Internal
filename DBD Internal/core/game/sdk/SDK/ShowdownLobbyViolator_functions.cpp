@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function ShowdownLobbyViolator.ShowdownLobbyViolator_C.RefreshDataBP
+// (Event, Protected, BlueprintEvent)
+
+void UShowdownLobbyViolator_C::RefreshDataBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownLobbyViolator_C", "RefreshDataBP");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ShowdownLobbyViolator.ShowdownLobbyViolator_C.ExecuteUbergraph_ShowdownLobbyViolator
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -25,29 +39,15 @@ namespace SDK
 void UShowdownLobbyViolator_C::ExecuteUbergraph_ShowdownLobbyViolator(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_ShowdownLobbyViolator");
+		Func = Class->GetFunction("ShowdownLobbyViolator_C", "ExecuteUbergraph_ShowdownLobbyViolator");
 
 	Params::ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ShowdownLobbyViolator.ShowdownLobbyViolator_C.RefreshDataBP
-// (Event, Protected, BlueprintEvent)
-
-void UShowdownLobbyViolator_C::RefreshDataBP()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshDataBP");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

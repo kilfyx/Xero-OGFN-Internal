@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Barrel_FishingRod_Container_Athena.Barrel_FishingRod_Container_Athena_C
-// 0x0000 (0x0F38 - 0x0F38)
+// 0x0000 (0x0D80 - 0x0D80)
 class ABarrel_FishingRod_Container_Athena_C final : public AHotfix_Container_Parent_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ABarrel_FishingRod_Container_Athena_C>();
 	}
 };
+static_assert(alignof(ABarrel_FishingRod_Container_Athena_C) == 0x000008, "Wrong alignment on ABarrel_FishingRod_Container_Athena_C");
+static_assert(sizeof(ABarrel_FishingRod_Container_Athena_C) == 0x000D80, "Wrong size on ABarrel_FishingRod_Container_Athena_C");
 
 }
 

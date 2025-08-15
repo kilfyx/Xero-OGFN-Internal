@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Prj_Athena_Consumable_Thrown_FlopperShield.B_Prj_Athena_Consumable_Thrown_FlopperShield_C
-// 0x0000 (0x0968 - 0x0968)
+// 0x0000 (0x0900 - 0x0900)
 class AB_Prj_Athena_Consumable_Thrown_FlopperShield_C final : public AB_Prj_Athena_Consumable_Thrown_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AB_Prj_Athena_Consumable_Thrown_FlopperShield_C>();
 	}
 };
+static_assert(alignof(AB_Prj_Athena_Consumable_Thrown_FlopperShield_C) == 0x000008, "Wrong alignment on AB_Prj_Athena_Consumable_Thrown_FlopperShield_C");
+static_assert(sizeof(AB_Prj_Athena_Consumable_Thrown_FlopperShield_C) == 0x000900, "Wrong size on AB_Prj_Athena_Consumable_Thrown_FlopperShield_C");
 
 }
 

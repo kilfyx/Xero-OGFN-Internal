@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Ranged_CustomDamage_Parent_C>();
 	}
 };
+static_assert(alignof(UGE_Ranged_CustomDamage_Parent_C) == 0x000008, "Wrong alignment on UGE_Ranged_CustomDamage_Parent_C");
+static_assert(sizeof(UGE_Ranged_CustomDamage_Parent_C) == 0x000800, "Wrong size on UGE_Ranged_CustomDamage_Parent_C");
 
 }
 

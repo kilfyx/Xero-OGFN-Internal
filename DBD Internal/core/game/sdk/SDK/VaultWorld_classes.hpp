@@ -12,27 +12,25 @@
 
 #include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "FortniteGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass VaultWorld.VaultWorld_C
-// 0x0010 (0x0348 - 0x0338)
+// 0x0010 (0x02D0 - 0x02C0)
 class AVaultWorld_C : public AFortItemPreviewWorld
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0338(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          bIsPrimaryBackgroundActive;                        // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          bIsPrimaryBackgroundActive;                        // 0x02C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
+	void GetVaultRotator(class AVaultRotator_C** VaultRotator);
+	void OnSetupBackground(const class UTexture2D* LoadedBackgroundTexture, const struct FTrackDynamicBackground& BackgroundInfo);
+	void OnTransitionBackground(bool bPlayForward);
 	void ReceiveBeginPlay();
 	void OnUpdateDisplay(bool bShowFloor, bool bShowEffects);
-	void OnTransitionBackground(bool bPlayForward, EBackgroundIntensityLevel IntensityTransition);
-	void OnTransitionItemDetails(const bool bShowItemDetails);
-	void OnSetupBackground(const class UTexture2D* LoadedBackgroundTexture, const struct FVaultWorldBackgroundData& BackgroundInfo);
-	void GetVaultRotator(class AVaultRotator_C** VaultRotator);
 	void ExecuteUbergraph_VaultWorld(int32 EntryPoint);
 
 public:
@@ -46,9 +44,9 @@ public:
 	}
 };
 static_assert(alignof(AVaultWorld_C) == 0x000008, "Wrong alignment on AVaultWorld_C");
-static_assert(sizeof(AVaultWorld_C) == 0x000348, "Wrong size on AVaultWorld_C");
-static_assert(offsetof(AVaultWorld_C, UberGraphFrame) == 0x000338, "Member 'AVaultWorld_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AVaultWorld_C, bIsPrimaryBackgroundActive) == 0x000340, "Member 'AVaultWorld_C::bIsPrimaryBackgroundActive' has a wrong offset!");
+static_assert(sizeof(AVaultWorld_C) == 0x0002D0, "Wrong size on AVaultWorld_C");
+static_assert(offsetof(AVaultWorld_C, UberGraphFrame) == 0x0002C0, "Member 'AVaultWorld_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AVaultWorld_C, bIsPrimaryBackgroundActive) == 0x0002C8, "Member 'AVaultWorld_C::bIsPrimaryBackgroundActive' has a wrong offset!");
 
 }
 

@@ -10,8 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "AudioGameplay_classes.hpp"
 #include "AmbientAudio_structs.hpp"
 #include "Engine_classes.hpp"
 #include "GameplayTags_structs.hpp"
@@ -20,41 +18,13 @@
 namespace SDK
 {
 
-// Class AmbientAudio.AmbientAudioComponent
-// 0x0030 (0x00E8 - 0x00B8)
-class UAmbientAudioComponent final : public UAudioGameplayComponent
-{
-public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAmbientAudioDataAsset*                 AmbientAsset;                                      // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         Priority;                                          // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         CrossfadeTime;                                     // 0x00CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FGuid                                  AmbientGuid;                                       // 0x00D0(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FName                                   DisplayName;                                       // 0x00E0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	void SetAmbientAsset(class UAmbientAudioDataAsset* InAmbientAsset);
-	void SetCrossfadeTime(float InCrossfadeTime);
-	void SetPriority(int32 InPriority);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AmbientAudioComponent">();
-	}
-	static class UAmbientAudioComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAmbientAudioComponent>();
-	}
-};
-
 // Class AmbientAudio.AmbientAudioDataAsset
 // 0x0028 (0x0058 - 0x0030)
 class UAmbientAudioDataAsset : public UDataAsset
 {
 public:
-	TArray<struct FAmbientAudioLoop>              LoopingSounds;                                     // 0x0030(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FAmbientAudioOneShot>           OneShotSounds;                                     // 0x0040(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FAmbientAudioLoop>              LoopingSounds;                                     // 0x0030(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FAmbientAudioOneShot>           OneShotSounds;                                     // 0x0040(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TagCrossfadeTime;                                  // 0x0050(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -68,22 +38,51 @@ public:
 		return GetDefaultObjImpl<UAmbientAudioDataAsset>();
 	}
 };
+static_assert(alignof(UAmbientAudioDataAsset) == 0x000008, "Wrong alignment on UAmbientAudioDataAsset");
+static_assert(sizeof(UAmbientAudioDataAsset) == 0x000058, "Wrong size on UAmbientAudioDataAsset");
+static_assert(offsetof(UAmbientAudioDataAsset, LoopingSounds) == 0x000030, "Member 'UAmbientAudioDataAsset::LoopingSounds' has a wrong offset!");
+static_assert(offsetof(UAmbientAudioDataAsset, OneShotSounds) == 0x000040, "Member 'UAmbientAudioDataAsset::OneShotSounds' has a wrong offset!");
+static_assert(offsetof(UAmbientAudioDataAsset, TagCrossfadeTime) == 0x000050, "Member 'UAmbientAudioDataAsset::TagCrossfadeTime' has a wrong offset!");
+
+// Class AmbientAudio.AmbientAudioStatics
+// 0x0000 (0x0028 - 0x0028)
+class UAmbientAudioStatics final : public UBlueprintFunctionLibrary
+{
+public:
+	static void AddAmbientEntry(class UObject* WorldContextObject, class FName AmbientName, class UAmbientAudioDataAsset* Asset, int32 Priority, float CrossfadeTime);
+	static void AddAmbientGameplayTag(class UObject* WorldContextObject, const struct FGameplayTag& GameplayTag);
+	static class UAudioComponent* CreateAudioComponent(class UObject* WorldContextObject, class USoundBase* Sound);
+	static void PlaySoundAtLocation(class UObject* WorldContextObject, class USoundBase* Sound, const struct FVector& Location);
+	static void RemoveAmbientEntry(class UObject* WorldContextObject, class FName AmbientName);
+	static void RemoveAmbientGameplayTag(class UObject* WorldContextObject, const struct FGameplayTag& GameplayTag);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AmbientAudioStatics">();
+	}
+	static class UAmbientAudioStatics* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAmbientAudioStatics>();
+	}
+};
+static_assert(alignof(UAmbientAudioStatics) == 0x000008, "Wrong alignment on UAmbientAudioStatics");
+static_assert(sizeof(UAmbientAudioStatics) == 0x000028, "Wrong size on UAmbientAudioStatics");
 
 // Class AmbientAudio.AmbientAudioSubsystem
-// 0x0220 (0x0250 - 0x0030)
+// 0x01F0 (0x0220 - 0x0030)
 class UAmbientAudioSubsystem final : public UWorldSubsystem
 {
 public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const struct FGameplayTag& GameplayTag, EAmbientAudioTagActionType ActionType)> OnTagChanged; // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName AmbientName, EAmbientAudioEntryActionType ActionType)> OnEntryChanged; // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TArray<class UAmbientAudioComponent*>         AmbientComponents;                                 // 0x0058(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_68[0x1E8];                                     // 0x0068(0x01E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const struct FGameplayTag& GameplayTag, EAmbientAudioTagActionType ActionType)> OnTagChanged; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName AmbientName, EAmbientAudioEntryActionType ActionType)> OnEntryChanged; // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TArray<class AAmbientVolume*>                 GlobalVolumes;                                     // 0x0050(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_60[0x1C0];                                     // 0x0060(0x01C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddAmbientEntry(class FName AmbientName, class UAmbientAudioDataAsset* Asset, int32 Priority, float CrossfadeTime);
 	void AddGameplayTag(const struct FGameplayTag& GameplayTag);
-	void RemoveAmbientEntry(class FName AmbientName, float CrossfadeOverride);
+	void RemoveAmbientEntry(class FName AmbientName);
 	void RemoveGameplayTag(const struct FGameplayTag& GameplayTag);
 
 public:
@@ -96,20 +95,23 @@ public:
 		return GetDefaultObjImpl<UAmbientAudioSubsystem>();
 	}
 };
+static_assert(alignof(UAmbientAudioSubsystem) == 0x000008, "Wrong alignment on UAmbientAudioSubsystem");
+static_assert(sizeof(UAmbientAudioSubsystem) == 0x000220, "Wrong size on UAmbientAudioSubsystem");
+static_assert(offsetof(UAmbientAudioSubsystem, OnTagChanged) == 0x000030, "Member 'UAmbientAudioSubsystem::OnTagChanged' has a wrong offset!");
+static_assert(offsetof(UAmbientAudioSubsystem, OnEntryChanged) == 0x000040, "Member 'UAmbientAudioSubsystem::OnEntryChanged' has a wrong offset!");
+static_assert(offsetof(UAmbientAudioSubsystem, GlobalVolumes) == 0x000050, "Member 'UAmbientAudioSubsystem::GlobalVolumes' has a wrong offset!");
 
 // Class AmbientAudio.AmbientVolume
-// 0x0028 (0x0280 - 0x0258)
+// 0x0018 (0x0270 - 0x0258)
 class AAmbientVolume final : public AVolume
 {
 public:
-	class UAmbientAudioDataAsset*                 AmbientAsset;                                      // 0x0258(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         Priority;                                          // 0x0260(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         CrossfadeTime;                                     // 0x0264(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UAmbientAudioDataAsset*                 AmbientAsset;                                      // 0x0258(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         Priority;                                          // 0x0260(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         CrossfadeTime;                                     // 0x0264(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         bEnabled : 1;                                      // 0x0268(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, Net, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
 	uint8                                         bGlobal : 1;                                       // 0x0268(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         Pad_269[0x3];                                      // 0x0269(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  AmbientGuid;                                       // 0x026C(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_269[0x7];                                      // 0x0269(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnRep_bEnabled();
@@ -128,6 +130,11 @@ public:
 		return GetDefaultObjImpl<AAmbientVolume>();
 	}
 };
+static_assert(alignof(AAmbientVolume) == 0x000008, "Wrong alignment on AAmbientVolume");
+static_assert(sizeof(AAmbientVolume) == 0x000270, "Wrong size on AAmbientVolume");
+static_assert(offsetof(AAmbientVolume, AmbientAsset) == 0x000258, "Member 'AAmbientVolume::AmbientAsset' has a wrong offset!");
+static_assert(offsetof(AAmbientVolume, Priority) == 0x000260, "Member 'AAmbientVolume::Priority' has a wrong offset!");
+static_assert(offsetof(AAmbientVolume, CrossfadeTime) == 0x000264, "Member 'AAmbientVolume::CrossfadeTime' has a wrong offset!");
 
 }
 

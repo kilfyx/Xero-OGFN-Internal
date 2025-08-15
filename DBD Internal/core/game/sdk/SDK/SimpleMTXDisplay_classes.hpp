@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SimpleMTXDisplay.SimpleMTXDisplay_C
-// 0x0010 (0x02A0 - 0x0290)
+// 0x0010 (0x0298 - 0x0288)
 class USimpleMTXDisplay_C final : public UFortSimpleMTXDisplay
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonRichTextBlock*                   AvailableAmountText;                               // 0x0298(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonRichTextBlock*                   AvailableAmountText;                               // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void OnUpdateAvailableMTX(int32 AvailableBalance);
@@ -40,9 +40,9 @@ public:
 	}
 };
 static_assert(alignof(USimpleMTXDisplay_C) == 0x000008, "Wrong alignment on USimpleMTXDisplay_C");
-static_assert(sizeof(USimpleMTXDisplay_C) == 0x0002A0, "Wrong size on USimpleMTXDisplay_C");
-static_assert(offsetof(USimpleMTXDisplay_C, UberGraphFrame) == 0x000290, "Member 'USimpleMTXDisplay_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USimpleMTXDisplay_C, AvailableAmountText) == 0x000298, "Member 'USimpleMTXDisplay_C::AvailableAmountText' has a wrong offset!");
+static_assert(sizeof(USimpleMTXDisplay_C) == 0x000298, "Wrong size on USimpleMTXDisplay_C");
+static_assert(offsetof(USimpleMTXDisplay_C, UberGraphFrame) == 0x000288, "Member 'USimpleMTXDisplay_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USimpleMTXDisplay_C, AvailableAmountText) == 0x000290, "Member 'USimpleMTXDisplay_C::AvailableAmountText' has a wrong offset!");
 
 }
 

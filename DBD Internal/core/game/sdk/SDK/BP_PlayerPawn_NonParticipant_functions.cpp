@@ -17,109 +17,123 @@
 namespace SDK
 {
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.ActivateAlertDBNOCleanUp
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.ExecuteUbergraph_BP_PlayerPawn_NonParticipant
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlayerPawn_NonParticipant_C::ActivateAlertDBNOCleanUp()
+void ABP_PlayerPawn_NonParticipant_C::ExecuteUbergraph_BP_PlayerPawn_NonParticipant(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ActivateAlertDBNOCleanUp");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "ExecuteUbergraph_BP_PlayerPawn_NonParticipant");
+
+	Params::BP_PlayerPawn_NonParticipant_C_ExecuteUbergraph_BP_PlayerPawn_NonParticipant Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.PlayVoiceSoundByTag
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayTag&              SoundBankTag                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PlayerPawn_NonParticipant_C::PlayVoiceSoundByTag(const struct FGameplayTag& SoundBankTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "PlayVoiceSoundByTag");
+
+	Params::BP_PlayerPawn_NonParticipant_C_PlayVoiceSoundByTag Parms{};
+
+	Parms.SoundBankTag = std::move(SoundBankTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.ReLinkAnimLayer
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_PlayerPawn_NonParticipant_C::ReLinkAnimLayer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "ReLinkAnimLayer");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.AlertLevelChanged
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnAnimInputEvent
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// EAlertLevel                             OldAlertLevel_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EAlertLevel                             InputPin                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UFortAnimInputEvent*        AnimInputEvent                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlayerPawn_NonParticipant_C::AlertLevelChanged(EAlertLevel OldAlertLevel_0, EAlertLevel InputPin)
+void ABP_PlayerPawn_NonParticipant_C::OnAnimInputEvent(const class UFortAnimInputEvent* AnimInputEvent)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("AlertLevelChanged");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "OnAnimInputEvent");
 
-	Params::BP_PlayerPawn_NonParticipant_C_AlertLevelChanged Parms{};
+	Params::BP_PlayerPawn_NonParticipant_C_OnAnimInputEvent Parms{};
 
-	Parms.OldAlertLevel_0 = OldAlertLevel_0;
-	Parms.InputPin = InputPin;
+	Parms.AnimInputEvent = AnimInputEvent;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.BndEvt__BP_PlayerPawn_NonParticipant_ConvertComponent_K2Node_ComponentBoundEvent_1_ConvertedEvent__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class AFortPawn*                        InstigatorPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AFortPawn*                        ConvertedPawn                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.LinkOverrideAnimLayer
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_PlayerPawn_NonParticipant_C::BndEvt__BP_PlayerPawn_NonParticipant_ConvertComponent_K2Node_ComponentBoundEvent_1_ConvertedEvent__DelegateSignature(class AFortPawn* InstigatorPawn, class AFortPawn* ConvertedPawn)
+void ABP_PlayerPawn_NonParticipant_C::LinkOverrideAnimLayer()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__BP_PlayerPawn_NonParticipant_ConvertComponent_K2Node_ComponentBoundEvent_1_ConvertedEvent__DelegateSignature");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "LinkOverrideAnimLayer");
 
-	Params::BP_PlayerPawn_NonParticipant_C_BndEvt__BP_PlayerPawn_NonParticipant_ConvertComponent_K2Node_ComponentBoundEvent_1_ConvertedEvent__DelegateSignature Parms{};
-
-	Parms.InstigatorPawn = InstigatorPawn;
-	Parms.ConvertedPawn = ConvertedPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
-// (HasOutParams, BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              HitComponent                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FHitResult                       Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.LinkPatrolAnimLayer
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_PlayerPawn_NonParticipant_C::BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+void ABP_PlayerPawn_NonParticipant_C::LinkPatrolAnimLayer()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "LinkPatrolAnimLayer");
 
-	Params::BP_PlayerPawn_NonParticipant_C_BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature Parms{};
-
-	Parms.HitComponent = HitComponent;
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.NormalImpulse = std::move(NormalImpulse);
-	Parms.Hit = std::move(Hit);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.BndEvt__ConvertComponent_K2Node_ComponentBoundEvent_1_UnconvertedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.SetChallenger
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFortPawn*                        UnconvertedPawn                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// EUnconvertReason                        UnconvertReason                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortPlayerPawn*                  Challenger_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlayerPawn_NonParticipant_C::BndEvt__ConvertComponent_K2Node_ComponentBoundEvent_1_UnconvertedEvent__DelegateSignature(class AFortPawn* UnconvertedPawn, EUnconvertReason UnconvertReason)
+void ABP_PlayerPawn_NonParticipant_C::SetChallenger(class AFortPlayerPawn* Challenger_0)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__ConvertComponent_K2Node_ComponentBoundEvent_1_UnconvertedEvent__DelegateSignature");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "SetChallenger");
 
-	Params::BP_PlayerPawn_NonParticipant_C_BndEvt__ConvertComponent_K2Node_ComponentBoundEvent_1_UnconvertedEvent__DelegateSignature Parms{};
+	Params::BP_PlayerPawn_NonParticipant_C_SetChallenger Parms{};
 
-	Parms.UnconvertedPawn = UnconvertedPawn;
-	Parms.UnconvertReason = UnconvertReason;
+	Parms.Challenger_0 = Challenger_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -128,21 +142,21 @@ void ABP_PlayerPawn_NonParticipant_C::BndEvt__ConvertComponent_K2Node_ComponentB
 // Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.ChallengerDied
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           DamagedActor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamagedActor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              FHitComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              FHitComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             BoneName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_PlayerPawn_NonParticipant_C::ChallengerDied(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ChallengerDied");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "ChallengerDied");
 
 	Params::BP_PlayerPawn_NonParticipant_C_ChallengerDied Parms{};
 
@@ -159,80 +173,40 @@ void ABP_PlayerPawn_NonParticipant_C::ChallengerDied(class AActor* DamagedActor,
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.ClientOnAlertLevelChanged
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnWeaponAttachmentChangedDelegate_Event_0
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EAlertLevel                             OldAlertLevel_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EAlertLevel                             NewAlertLevel                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortWeapon*                      NewWeapon                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortWeapon*                      PrevWeapon                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlayerPawn_NonParticipant_C::ClientOnAlertLevelChanged(EAlertLevel OldAlertLevel_0, EAlertLevel NewAlertLevel)
+void ABP_PlayerPawn_NonParticipant_C::OnWeaponAttachmentChangedDelegate_Event_0(class AFortWeapon* NewWeapon, class AFortWeapon* PrevWeapon)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ClientOnAlertLevelChanged");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "OnWeaponAttachmentChangedDelegate_Event_0");
 
-	Params::BP_PlayerPawn_NonParticipant_C_ClientOnAlertLevelChanged Parms{};
+	Params::BP_PlayerPawn_NonParticipant_C_OnWeaponAttachmentChangedDelegate_Event_0 Parms{};
 
-	Parms.OldAlertLevel_0 = OldAlertLevel_0;
-	Parms.NewAlertLevel = NewAlertLevel;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.DataTrackerSetup
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Is_Registering                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerPawn_NonParticipant_C::DataTrackerSetup(bool Is_Registering)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("DataTrackerSetup");
-
-	Params::BP_PlayerPawn_NonParticipant_C_DataTrackerSetup Parms{};
-
-	Parms.Is_Registering = Is_Registering;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.ExecuteUbergraph_BP_PlayerPawn_NonParticipant
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerPawn_NonParticipant_C::ExecuteUbergraph_BP_PlayerPawn_NonParticipant(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_BP_PlayerPawn_NonParticipant");
-
-	Params::BP_PlayerPawn_NonParticipant_C_ExecuteUbergraph_BP_PlayerPawn_NonParticipant Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.NewWeapon = NewWeapon;
+	Parms.PrevWeapon = PrevWeapon;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.GameplayCue.Player.Interrogation.Voice.PickedUp
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EGameplayCueEvent                       EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayCueParameters           Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const struct FGameplayCueParameters&    Parameters                                             (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 
 void ABP_PlayerPawn_NonParticipant_C::GameplayCue_Player_Interrogation_Voice_PickedUp(EGameplayCueEvent EventType, const struct FGameplayCueParameters& Parameters)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("GameplayCue.Player.Interrogation.Voice.PickedUp");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "GameplayCue.Player.Interrogation.Voice.PickedUp");
 
 	Params::BP_PlayerPawn_NonParticipant_C_GameplayCue_Player_Interrogation_Voice_PickedUp Parms{};
 
@@ -243,180 +217,17 @@ void ABP_PlayerPawn_NonParticipant_C::GameplayCue_Player_Interrogation_Voice_Pic
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.GetCurrentFullbodyHitReactionMontage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAnimMontage*                     CurrentMontage                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerPawn_NonParticipant_C::GetCurrentFullbodyHitReactionMontage(class UAnimMontage** CurrentMontage)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("GetCurrentFullbodyHitReactionMontage");
-
-	Params::BP_PlayerPawn_NonParticipant_C_GetCurrentFullbodyHitReactionMontage Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (CurrentMontage != nullptr)
-		*CurrentMontage = Parms.CurrentMontage;
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.HandleAlertStateUpdates
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_NonParticipant_C::HandleAlertStateUpdates()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("HandleAlertStateUpdates");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.HandlePawnConverted
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortPawn*                        InstigatorPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AFortPawn*                        ConvertedPawn                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerPawn_NonParticipant_C::HandlePawnConverted(class AFortPawn* InstigatorPawn, class AFortPawn* ConvertedPawn)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("HandlePawnConverted");
-
-	Params::BP_PlayerPawn_NonParticipant_C_HandlePawnConverted Parms{};
-
-	Parms.InstigatorPawn = InstigatorPawn;
-	Parms.ConvertedPawn = ConvertedPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.HandlePawnUnconverted
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortPawn*                        UnconvertedPawn                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerPawn_NonParticipant_C::HandlePawnUnconverted(class AFortPawn* UnconvertedPawn)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("HandlePawnUnconverted");
-
-	Params::BP_PlayerPawn_NonParticipant_C_HandlePawnUnconverted Parms{};
-
-	Parms.UnconvertedPawn = UnconvertedPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.InitializeAnimInstanceSettings
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_NonParticipant_C::InitializeAnimInstanceSettings()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("InitializeAnimInstanceSettings");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.LinkOverrideAnimLayer
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_NonParticipant_C::LinkOverrideAnimLayer()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("LinkOverrideAnimLayer");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.LinkPatrolAnimLayer
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_NonParticipant_C::LinkPatrolAnimLayer()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("LinkPatrolAnimLayer");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnAlertLEvelCHangedEvent
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortAthenaAIBotController*       BotController                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// EAlertLevel                             OldAlertLevel_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EAlertLevel                             NewAlertLevel                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerPawn_NonParticipant_C::OnAlertLEvelCHangedEvent(class AFortAthenaAIBotController* BotController, EAlertLevel OldAlertLevel_0, EAlertLevel NewAlertLevel)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnAlertLEvelCHangedEvent");
-
-	Params::BP_PlayerPawn_NonParticipant_C_OnAlertLEvelCHangedEvent Parms{};
-
-	Parms.BotController = BotController;
-	Parms.OldAlertLevel_0 = OldAlertLevel_0;
-	Parms.NewAlertLevel = NewAlertLevel;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnAnimInputEvent
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UFortAnimInputEvent*              AnimInputEvent                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerPawn_NonParticipant_C::OnAnimInputEvent(const class UFortAnimInputEvent* AnimInputEvent)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnAnimInputEvent");
-
-	Params::BP_PlayerPawn_NonParticipant_C_OnAnimInputEvent Parms{};
-
-	Parms.AnimInputEvent = AnimInputEvent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnCharacterCustomizationCompleted
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_PlayerPawn_NonParticipant_C::OnCharacterCustomizationCompleted(class AFortPlayerPawn* Pawn)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnCharacterCustomizationCompleted");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "OnCharacterCustomizationCompleted");
 
 	Params::BP_PlayerPawn_NonParticipant_C_OnCharacterCustomizationCompleted Parms{};
 
@@ -426,47 +237,73 @@ void ABP_PlayerPawn_NonParticipant_C::OnCharacterCustomizationCompleted(class AF
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnDBNOStateChanged_Event
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
+// (HasOutParams, BlueprintEvent)
 // Parameters:
-// class AFortPawn*                        FortPawn                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    bInIsDBNO                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              HitComponent                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
-void ABP_PlayerPawn_NonParticipant_C::OnDBNOStateChanged_Event(class AFortPawn* FortPawn, bool bInIsDBNO)
+void ABP_PlayerPawn_NonParticipant_C::BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnDBNOStateChanged_Event");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
 
-	Params::BP_PlayerPawn_NonParticipant_C_OnDBNOStateChanged_Event Parms{};
+	Params::BP_PlayerPawn_NonParticipant_C_BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature Parms{};
 
-	Parms.FortPawn = FortPawn;
-	Parms.bInIsDBNO = bInIsDBNO;
+	Parms.HitComponent = HitComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.NormalImpulse = std::move(NormalImpulse);
+	Parms.Hit = std::move(Hit);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnDeathPlayEffects
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.ReceiveEndPlay
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayTagContainer            DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FVector                          Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FHitResult                       HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-// class AFortPawn*                        InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayEffectContextHandle     EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlayerPawn_NonParticipant_C::OnDeathPlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
+void ABP_PlayerPawn_NonParticipant_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnDeathPlayEffects");
 
-	Params::BP_PlayerPawn_NonParticipant_C_OnDeathPlayEffects Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "ReceiveEndPlay");
+
+	Params::BP_PlayerPawn_NonParticipant_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnDeathServer
+// (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTagContainer&     DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayEffectContextHandle&EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABP_PlayerPawn_NonParticipant_C::OnDeathServer(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "OnDeathServer");
+
+	Params::BP_PlayerPawn_NonParticipant_C_OnDeathServer Parms{};
 
 	Parms.Damage = Damage;
 	Parms.DamageTags = std::move(DamageTags);
@@ -480,144 +317,18 @@ void ABP_PlayerPawn_NonParticipant_C::OnDeathPlayEffects(float Damage, const str
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnDied_Event
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           DamagedActor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              FHitComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class FName                             BoneName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerPawn_NonParticipant_C::OnDied_Event(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnDied_Event");
-
-	Params::BP_PlayerPawn_NonParticipant_C_OnDied_Event Parms{};
-
-	Parms.DamagedActor = DamagedActor;
-	Parms.Damage = Damage;
-	Parms.InstigatedBy = InstigatedBy;
-	Parms.DamageCauser = DamageCauser;
-	Parms.HitLocation = std::move(HitLocation);
-	Parms.FHitComponent = FHitComponent;
-	Parms.BoneName = BoneName;
-	Parms.Momentum = std::move(Momentum);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnEnteredVehicleEvent
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_NonParticipant_C::OnEnteredVehicleEvent()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnEnteredVehicleEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnExitedVehicle
-// (Event, Public, BlueprintEvent)
-
-void ABP_PlayerPawn_NonParticipant_C::OnExitedVehicle()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnExitedVehicle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnExitedVehicleEvent
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_NonParticipant_C::OnExitedVehicleEvent()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnExitedVehicleEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnRep_AlertLevel
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_NonParticipant_C::OnRep_AlertLevel()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnRep_AlertLevel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnRep_bIsInVehicleThatSupportsNoAlertState
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_NonParticipant_C::OnRep_bIsInVehicleThatSupportsNoAlertState()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnRep_bIsInVehicleThatSupportsNoAlertState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnWeaponAttachmentChangedDelegate_Event_0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortWeapon*                      NewWeapon                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AFortWeapon*                      PrevWeapon                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerPawn_NonParticipant_C::OnWeaponAttachmentChangedDelegate_Event_0(class AFortWeapon* NewWeapon, class AFortWeapon* PrevWeapon)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnWeaponAttachmentChangedDelegate_Event_0");
-
-	Params::BP_PlayerPawn_NonParticipant_C_OnWeaponAttachmentChangedDelegate_Event_0 Parms{};
-
-	Parms.NewWeapon = NewWeapon;
-	Parms.PrevWeapon = PrevWeapon;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnWeaponEquipped
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AFortWeapon*                      NewWeapon                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AFortWeapon*                      PrevWeapon                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AFortWeapon*                      NewWeapon                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortWeapon*                      PrevWeapon                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_PlayerPawn_NonParticipant_C::OnWeaponEquipped(class AFortWeapon* NewWeapon, class AFortWeapon* PrevWeapon)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnWeaponEquipped");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "OnWeaponEquipped");
 
 	Params::BP_PlayerPawn_NonParticipant_C_OnWeaponEquipped Parms{};
 
@@ -628,21 +339,37 @@ void ABP_PlayerPawn_NonParticipant_C::OnWeaponEquipped(class AFortWeapon* NewWea
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.PlayAlertLevelVO
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.TriggerIdleVO
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_PlayerPawn_NonParticipant_C::TriggerIdleVO()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "TriggerIdleVO");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnAlertLEvelCHangedEvent
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
+// class AFortAthenaAIBotController*       BotController                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EAlertLevel                             OldAlertLevel_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EAlertLevel                             NewAlertLevel                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlayerPawn_NonParticipant_C::PlayAlertLevelVO(EAlertLevel OldAlertLevel_0, EAlertLevel NewAlertLevel)
+void ABP_PlayerPawn_NonParticipant_C::OnAlertLEvelCHangedEvent(class AFortAthenaAIBotController* BotController, EAlertLevel OldAlertLevel_0, EAlertLevel NewAlertLevel)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PlayAlertLevelVO");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "OnAlertLEvelCHangedEvent");
 
-	Params::BP_PlayerPawn_NonParticipant_C_PlayAlertLevelVO Parms{};
+	Params::BP_PlayerPawn_NonParticipant_C_OnAlertLEvelCHangedEvent Parms{};
 
+	Parms.BotController = BotController;
 	Parms.OldAlertLevel_0 = OldAlertLevel_0;
 	Parms.NewAlertLevel = NewAlertLevel;
 
@@ -650,47 +377,17 @@ void ABP_PlayerPawn_NonParticipant_C::PlayAlertLevelVO(EAlertLevel OldAlertLevel
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.PlayVoiceComponentSoundByTag
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FGameplayTag                     SoundBankTag                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-// class UAudioComponent*                  AudioComponent                                         (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.ActivateAlertDBNOCleanUp
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_PlayerPawn_NonParticipant_C::PlayVoiceComponentSoundByTag(const struct FGameplayTag& SoundBankTag, class UAudioComponent** AudioComponent)
+void ABP_PlayerPawn_NonParticipant_C::ActivateAlertDBNOCleanUp()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PlayVoiceComponentSoundByTag");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "ActivateAlertDBNOCleanUp");
 
-	Params::BP_PlayerPawn_NonParticipant_C_PlayVoiceComponentSoundByTag Parms{};
-
-	Parms.SoundBankTag = std::move(SoundBankTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (AudioComponent != nullptr)
-		*AudioComponent = Parms.AudioComponent;
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.PlayVoiceSoundByTag
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FGameplayTag                     SoundBankTag                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerPawn_NonParticipant_C::PlayVoiceSoundByTag(const struct FGameplayTag& SoundBankTag)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PlayVoiceSoundByTag");
-
-	Params::BP_PlayerPawn_NonParticipant_C_PlayVoiceSoundByTag Parms{};
-
-	Parms.SoundBankTag = std::move(SoundBankTag);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -700,43 +397,59 @@ void ABP_PlayerPawn_NonParticipant_C::PlayVoiceSoundByTag(const struct FGameplay
 void ABP_PlayerPawn_NonParticipant_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.ReceiveEndPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnDBNOStateChanged_Event
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortPawn*                        FortPawn                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInIsDBNO                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_PlayerPawn_NonParticipant_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+void ABP_PlayerPawn_NonParticipant_C::OnDBNOStateChanged_Event(class AFortPawn* FortPawn, bool bInIsDBNO)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveEndPlay");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "OnDBNOStateChanged_Event");
 
-	Params::BP_PlayerPawn_NonParticipant_C_ReceiveEndPlay Parms{};
+	Params::BP_PlayerPawn_NonParticipant_C_OnDBNOStateChanged_Event Parms{};
 
-	Parms.EndPlayReason = EndPlayReason;
+	Parms.FortPawn = FortPawn;
+	Parms.bInIsDBNO = bInIsDBNO;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.ReLinkAnimLayer
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_PlayerPawn_NonParticipant_C::ReLinkAnimLayer()
+void ABP_PlayerPawn_NonParticipant_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ReLinkAnimLayer");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnRep_AlertLevel
+// (HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_PlayerPawn_NonParticipant_C::OnRep_AlertLevel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "OnRep_AlertLevel");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -745,15 +458,15 @@ void ABP_PlayerPawn_NonParticipant_C::ReLinkAnimLayer()
 // Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.SetAlertedStateGameplayCue
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Alerted                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Combat                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Alerted                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    Combat                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABP_PlayerPawn_NonParticipant_C::SetAlertedStateGameplayCue(bool Alerted, bool Combat)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetAlertedStateGameplayCue");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "SetAlertedStateGameplayCue");
 
 	Params::BP_PlayerPawn_NonParticipant_C_SetAlertedStateGameplayCue Parms{};
 
@@ -764,21 +477,77 @@ void ABP_PlayerPawn_NonParticipant_C::SetAlertedStateGameplayCue(bool Alerted, b
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.SetChallenger
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.PlayVoiceComponentSoundByTag
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFortPlayerPawn*                  Challenger_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              SoundBankTag                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlayerPawn_NonParticipant_C::SetChallenger(class AFortPlayerPawn* Challenger_0)
+void ABP_PlayerPawn_NonParticipant_C::PlayVoiceComponentSoundByTag(const struct FGameplayTag& SoundBankTag)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetChallenger");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "PlayVoiceComponentSoundByTag");
 
-	Params::BP_PlayerPawn_NonParticipant_C_SetChallenger Parms{};
+	Params::BP_PlayerPawn_NonParticipant_C_PlayVoiceComponentSoundByTag Parms{};
 
-	Parms.Challenger_0 = Challenger_0;
+	Parms.SoundBankTag = std::move(SoundBankTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.AlertLevelChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EAlertLevel                             OldAlertLevel_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EAlertLevel                             InputPin                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PlayerPawn_NonParticipant_C::AlertLevelChanged(EAlertLevel OldAlertLevel_0, EAlertLevel InputPin)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "AlertLevelChanged");
+
+	Params::BP_PlayerPawn_NonParticipant_C_AlertLevelChanged Parms{};
+
+	Parms.OldAlertLevel_0 = OldAlertLevel_0;
+	Parms.InputPin = InputPin;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.SetupLootTierNameWithWeapon
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_PlayerPawn_NonParticipant_C::SetupLootTierNameWithWeapon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "SetupLootTierNameWithWeapon");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.DataTrackerSetup
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Is_Registering                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_PlayerPawn_NonParticipant_C::DataTrackerSetup(bool Is_Registering)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "DataTrackerSetup");
+
+	Params::BP_PlayerPawn_NonParticipant_C_DataTrackerSetup Parms{};
+
+	Parms.Is_Registering = Is_Registering;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -792,9 +561,9 @@ void ABP_PlayerPawn_NonParticipant_C::SetChallenger(class AFortPlayerPawn* Chall
 void ABP_PlayerPawn_NonParticipant_C::SetDataTrackerActorStateFromAlertLevel(EAlertLevel AlertLevel_0)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetDataTrackerActorStateFromAlertLevel");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "SetDataTrackerActorStateFromAlertLevel");
 
 	Params::BP_PlayerPawn_NonParticipant_C_SetDataTrackerActorStateFromAlertLevel Parms{};
 
@@ -804,79 +573,38 @@ void ABP_PlayerPawn_NonParticipant_C::SetDataTrackerActorStateFromAlertLevel(EAl
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.SetupLootTierNameWithWeapon
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_NonParticipant_C::SetupLootTierNameWithWeapon()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetupLootTierNameWithWeapon");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.SoundLibrarySetup
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.GetCurrentFullbodyHitReactionMontage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsAdding                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAnimMontage**                    CurrentMontage                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlayerPawn_NonParticipant_C::SoundLibrarySetup(bool IsAdding)
+void ABP_PlayerPawn_NonParticipant_C::GetCurrentFullbodyHitReactionMontage(class UAnimMontage** CurrentMontage)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SoundLibrarySetup");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "GetCurrentFullbodyHitReactionMontage");
 
-	Params::BP_PlayerPawn_NonParticipant_C_SoundLibrarySetup Parms{};
-
-	Parms.IsAdding = IsAdding;
+	Params::BP_PlayerPawn_NonParticipant_C_GetCurrentFullbodyHitReactionMontage Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.TriggerIdleVO
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_NonParticipant_C::TriggerIdleVO()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("TriggerIdleVO");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.UpdateAlertStateVehicleCheck
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_NonParticipant_C::UpdateAlertStateVehicleCheck()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateAlertStateVehicleCheck");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (CurrentMontage != nullptr)
+		*CurrentMontage = Parms.CurrentMontage;
 }
 
 
 // Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.UpdatePatrolAnimSet
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFortWeapon*                      NewWeapon                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AFortWeapon*                      NewWeapon                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_PlayerPawn_NonParticipant_C::UpdatePatrolAnimSet(class AFortWeapon* NewWeapon)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UpdatePatrolAnimSet");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "UpdatePatrolAnimSet");
 
 	Params::BP_PlayerPawn_NonParticipant_C_UpdatePatrolAnimSet Parms{};
 
@@ -886,34 +614,56 @@ void ABP_PlayerPawn_NonParticipant_C::UpdatePatrolAnimSet(class AFortWeapon* New
 }
 
 
-// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.InitializeAnimInstanceSettings
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_PlayerPawn_NonParticipant_C::UserConstructionScript()
+void ABP_PlayerPawn_NonParticipant_C::InitializeAnimInstanceSettings()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UserConstructionScript");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "InitializeAnimInstanceSettings");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.ClientOnAlertLevelChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EAlertLevel                             OldAlertLevel_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EAlertLevel                             NewAlertLevel                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PlayerPawn_NonParticipant_C::ClientOnAlertLevelChanged(EAlertLevel OldAlertLevel_0, EAlertLevel NewAlertLevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "ClientOnAlertLevelChanged");
+
+	Params::BP_PlayerPawn_NonParticipant_C_ClientOnAlertLevelChanged Parms{};
+
+	Parms.OldAlertLevel_0 = OldAlertLevel_0;
+	Parms.NewAlertLevel = NewAlertLevel;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.GetIconPlacement
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class AActor*                           SelfActor                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           ViewingActor                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          OutLocation                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          OutExtents                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class AActor*                     SelfActor                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class AActor*                     ViewingActor                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         OutLocation                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         OutExtents                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_PlayerPawn_NonParticipant_C::GetIconPlacement(const class AActor* SelfActor, const class AActor* ViewingActor, struct FVector* OutLocation, struct FVector* OutExtents) const
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("GetIconPlacement");
+		Func = Class->GetFunction("BP_PlayerPawn_NonParticipant_C", "GetIconPlacement");
 
 	Params::BP_PlayerPawn_NonParticipant_C_GetIconPlacement Parms{};
 

@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBuff_PartyXPBoost_C>();
 	}
 };
+static_assert(alignof(UBuff_PartyXPBoost_C) == 0x000008, "Wrong alignment on UBuff_PartyXPBoost_C");
+static_assert(sizeof(UBuff_PartyXPBoost_C) == 0x000800, "Wrong size on UBuff_PartyXPBoost_C");
 
 }
 

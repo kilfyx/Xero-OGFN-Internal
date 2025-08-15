@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Damage_Explosive_NoLineOfSight_C>();
 	}
 };
+static_assert(alignof(UGE_Damage_Explosive_NoLineOfSight_C) == 0x000008, "Wrong alignment on UGE_Damage_Explosive_NoLineOfSight_C");
+static_assert(sizeof(UGE_Damage_Explosive_NoLineOfSight_C) == 0x000800, "Wrong size on UGE_Damage_Explosive_NoLineOfSight_C");
 
 }
 

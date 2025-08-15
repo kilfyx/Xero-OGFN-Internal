@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass FortSlottedRadialMenu.FortSlottedRadialMenu_C
-// 0x0000 (0x0350 - 0x0350)
+// 0x0000 (0x0330 - 0x0330)
 class UFortSlottedRadialMenu_C final : public UFortSlottedRadialMenu
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UFortSlottedRadialMenu_C>();
 	}
 };
+static_assert(alignof(UFortSlottedRadialMenu_C) == 0x000008, "Wrong alignment on UFortSlottedRadialMenu_C");
+static_assert(sizeof(UFortSlottedRadialMenu_C) == 0x000330, "Wrong size on UFortSlottedRadialMenu_C");
 
 }
 

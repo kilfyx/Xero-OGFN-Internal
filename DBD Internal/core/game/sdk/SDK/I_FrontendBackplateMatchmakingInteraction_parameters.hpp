@@ -19,7 +19,7 @@ namespace SDK::Params
 struct I_FrontendBackplateMatchmakingInteraction_C_MatchmakingEnded final
 {
 public:
-	bool                                          bWasSuccess;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccess;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(I_FrontendBackplateMatchmakingInteraction_C_MatchmakingEnded) == 0x000001, "Wrong alignment on I_FrontendBackplateMatchmakingInteraction_C_MatchmakingEnded");
 static_assert(sizeof(I_FrontendBackplateMatchmakingInteraction_C_MatchmakingEnded) == 0x000001, "Wrong size on I_FrontendBackplateMatchmakingInteraction_C_MatchmakingEnded");
@@ -30,7 +30,7 @@ static_assert(offsetof(I_FrontendBackplateMatchmakingInteraction_C_MatchmakingEn
 struct I_FrontendBackplateMatchmakingInteraction_C_HasMatcmakingInteraction final
 {
 public:
-	bool                                          HasInteraction;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasInteraction;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(I_FrontendBackplateMatchmakingInteraction_C_HasMatcmakingInteraction) == 0x000001, "Wrong alignment on I_FrontendBackplateMatchmakingInteraction_C_HasMatcmakingInteraction");
 static_assert(sizeof(I_FrontendBackplateMatchmakingInteraction_C_HasMatcmakingInteraction) == 0x000001, "Wrong size on I_FrontendBackplateMatchmakingInteraction_C_HasMatcmakingInteraction");

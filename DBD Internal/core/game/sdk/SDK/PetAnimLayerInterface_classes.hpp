@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass PetAnimLayerInterface.PetAnimLayerInterface_C
-// 0x0000 (0x0028 - 0x0028)
-class IPetAnimLayerInterface_C final : public IAnimLayerInterface
+// 0x0000 (0x0000 - 0x0000)
+class IPetAnimLayerInterface_C final
 {
 public:
-	void PetSkeletalControlLayer(const struct FPoseLink& Pose, double LookAtOverrideInput, const struct FVector& LookAtTargetLocationInput, double LegIKAlphaOverride, double HandIKAlphaOverride, struct FPoseLink* PetSkeletalControlLayer_0);
 	void PetFullOverrideLayer(const struct FPoseLink& InPose, struct FPoseLink* PetFullOverrideLayer_0);
+	void PetSkeletalControlLayer(const struct FPoseLink& Pose, float LookAtOverrideInput, const struct FVector& LookAtTargetLocationInput, float LegIKAlphaOverride, float HandIKAlphaOverride, struct FPoseLink* PetSkeletalControlLayer_0);
 
 public:
 	static class UClass* StaticClass()
@@ -33,9 +33,18 @@ public:
 	{
 		return GetDefaultObjImpl<IPetAnimLayerInterface_C>();
 	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
 };
-static_assert(alignof(IPetAnimLayerInterface_C) == 0x000008, "Wrong alignment on IPetAnimLayerInterface_C");
-static_assert(sizeof(IPetAnimLayerInterface_C) == 0x000028, "Wrong size on IPetAnimLayerInterface_C");
+static_assert(alignof(IPetAnimLayerInterface_C) == 0x000001, "Wrong alignment on IPetAnimLayerInterface_C");
+static_assert(sizeof(IPetAnimLayerInterface_C) == 0x000001, "Wrong size on IPetAnimLayerInterface_C");
 
 }
 

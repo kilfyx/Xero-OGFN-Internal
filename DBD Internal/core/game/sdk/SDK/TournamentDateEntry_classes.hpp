@@ -20,26 +20,26 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TournamentDateEntry.TournamentDateEntry_C
-// 0x0058 (0x0770 - 0x0718)
+// 0x0058 (0x0710 - 0x06B8)
 class UTournamentDateEntry_C final : public UFortShowdownDetailView
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0718(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonBorder*                          CommonBorder_DateContent;                          // 0x0720(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_Date;                              // 0x0728(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_Time;                              // 0x0730(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_Title;                             // 0x0738(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            CommonWidgetSwitcher_EntryType;                    // 0x0740(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Strkethrough;                                // 0x0748(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          isTitle;                                           // 0x0750(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_751[0x7];                                      // 0x0751(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Title;                                             // 0x0758(0x0018)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonBorder*                          CommonBorder_DateContent;                          // 0x06C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_Date;                              // 0x06C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_Time;                              // 0x06D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_Title;                             // 0x06D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_EntryType;                    // 0x06E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Strkethrough;                                // 0x06E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          isTitle;                                           // 0x06F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6F1[0x7];                                      // 0x06F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Title;                                             // 0x06F8(0x0018)(Edit, BlueprintVisible)
 
 public:
-	void RefreshDataBP();
 	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_TournamentDateEntry(int32 EntryPoint);
 	void EventColor(const struct FFortTournamentDisplayInfo& showdownData);
+	void RefreshDataBP();
+	void ExecuteUbergraph_TournamentDateEntry(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -52,16 +52,16 @@ public:
 	}
 };
 static_assert(alignof(UTournamentDateEntry_C) == 0x000008, "Wrong alignment on UTournamentDateEntry_C");
-static_assert(sizeof(UTournamentDateEntry_C) == 0x000770, "Wrong size on UTournamentDateEntry_C");
-static_assert(offsetof(UTournamentDateEntry_C, UberGraphFrame) == 0x000718, "Member 'UTournamentDateEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTournamentDateEntry_C, CommonBorder_DateContent) == 0x000720, "Member 'UTournamentDateEntry_C::CommonBorder_DateContent' has a wrong offset!");
-static_assert(offsetof(UTournamentDateEntry_C, CommonTextBlock_Date) == 0x000728, "Member 'UTournamentDateEntry_C::CommonTextBlock_Date' has a wrong offset!");
-static_assert(offsetof(UTournamentDateEntry_C, CommonTextBlock_Time) == 0x000730, "Member 'UTournamentDateEntry_C::CommonTextBlock_Time' has a wrong offset!");
-static_assert(offsetof(UTournamentDateEntry_C, CommonTextBlock_Title) == 0x000738, "Member 'UTournamentDateEntry_C::CommonTextBlock_Title' has a wrong offset!");
-static_assert(offsetof(UTournamentDateEntry_C, CommonWidgetSwitcher_EntryType) == 0x000740, "Member 'UTournamentDateEntry_C::CommonWidgetSwitcher_EntryType' has a wrong offset!");
-static_assert(offsetof(UTournamentDateEntry_C, Image_Strkethrough) == 0x000748, "Member 'UTournamentDateEntry_C::Image_Strkethrough' has a wrong offset!");
-static_assert(offsetof(UTournamentDateEntry_C, isTitle) == 0x000750, "Member 'UTournamentDateEntry_C::isTitle' has a wrong offset!");
-static_assert(offsetof(UTournamentDateEntry_C, Title) == 0x000758, "Member 'UTournamentDateEntry_C::Title' has a wrong offset!");
+static_assert(sizeof(UTournamentDateEntry_C) == 0x000710, "Wrong size on UTournamentDateEntry_C");
+static_assert(offsetof(UTournamentDateEntry_C, UberGraphFrame) == 0x0006B8, "Member 'UTournamentDateEntry_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UTournamentDateEntry_C, CommonBorder_DateContent) == 0x0006C0, "Member 'UTournamentDateEntry_C::CommonBorder_DateContent' has a wrong offset!");
+static_assert(offsetof(UTournamentDateEntry_C, CommonTextBlock_Date) == 0x0006C8, "Member 'UTournamentDateEntry_C::CommonTextBlock_Date' has a wrong offset!");
+static_assert(offsetof(UTournamentDateEntry_C, CommonTextBlock_Time) == 0x0006D0, "Member 'UTournamentDateEntry_C::CommonTextBlock_Time' has a wrong offset!");
+static_assert(offsetof(UTournamentDateEntry_C, CommonTextBlock_Title) == 0x0006D8, "Member 'UTournamentDateEntry_C::CommonTextBlock_Title' has a wrong offset!");
+static_assert(offsetof(UTournamentDateEntry_C, CommonWidgetSwitcher_EntryType) == 0x0006E0, "Member 'UTournamentDateEntry_C::CommonWidgetSwitcher_EntryType' has a wrong offset!");
+static_assert(offsetof(UTournamentDateEntry_C, Image_Strkethrough) == 0x0006E8, "Member 'UTournamentDateEntry_C::Image_Strkethrough' has a wrong offset!");
+static_assert(offsetof(UTournamentDateEntry_C, isTitle) == 0x0006F0, "Member 'UTournamentDateEntry_C::isTitle' has a wrong offset!");
+static_assert(offsetof(UTournamentDateEntry_C, Title) == 0x0006F8, "Member 'UTournamentDateEntry_C::Title' has a wrong offset!");
 
 }
 

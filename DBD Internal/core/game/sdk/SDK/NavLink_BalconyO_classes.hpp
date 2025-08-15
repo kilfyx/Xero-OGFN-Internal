@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UNavLink_BalconyO_C>();
 	}
 };
+static_assert(alignof(UNavLink_BalconyO_C) == 0x000008, "Wrong alignment on UNavLink_BalconyO_C");
+static_assert(sizeof(UNavLink_BalconyO_C) == 0x000080, "Wrong size on UNavLink_BalconyO_C");
 
 }
 

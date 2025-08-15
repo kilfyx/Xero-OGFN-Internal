@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_NPC_Behavior_TargetSlots_Melee_Max_C>();
 	}
 };
+static_assert(alignof(UGE_NPC_Behavior_TargetSlots_Melee_Max_C) == 0x000008, "Wrong alignment on UGE_NPC_Behavior_TargetSlots_Melee_Max_C");
+static_assert(sizeof(UGE_NPC_Behavior_TargetSlots_Melee_Max_C) == 0x000800, "Wrong size on UGE_NPC_Behavior_TargetSlots_Melee_Max_C");
 
 }
 

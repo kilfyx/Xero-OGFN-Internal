@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function TabAudioOptions_New.TabAudioOptions_New_C.CenterOnTab
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UTabAudioOptions_New_C::CenterOnTab()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabAudioOptions_New_C", "CenterOnTab");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function TabAudioOptions_New.TabAudioOptions_New_C.ExecuteUbergraph_TabAudioOptions_New
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UTabAudioOptions_New_C::ExecuteUbergraph_TabAudioOptions_New(int32 EntryPoi
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TabAudioOptions_New.TabAudioOptions_New_C.CenterOnTab
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+
+void UTabAudioOptions_New_C::CenterOnTab()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabAudioOptions_New_C", "CenterOnTab");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

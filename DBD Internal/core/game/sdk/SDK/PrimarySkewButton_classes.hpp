@@ -11,39 +11,38 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUILegacy_classes.hpp"
+#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass PrimarySkewButton.PrimarySkewButton_C
-// 0x0050 (0x0F50 - 0x0F00)
-class UPrimarySkewButton_C final : public UCommonButtonLegacy
+// 0x0050 (0x0BF0 - 0x0BA0)
+class UPrimarySkewButton_C final : public UCommonButton
 {
 public:
-	uint8                                         Pad_EF8[0x8];                                      // 0x0EF8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Pressed;                                           // 0x0F08(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hover;                                             // 0x0F10(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x0F18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_ButtonTop;                                   // 0x0F20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Shadow;                                      // 0x0F28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          ToUpper;                                           // 0x0F30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          XL;                                                // 0x0F31(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F32[0x6];                                      // 0x0F32(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ButtonNameText;                                    // 0x0F38(0x0018)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Pressed;                                           // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover;                                             // 0x0BB0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_ButtonTop;                                   // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Shadow;                                      // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          ToUpper;                                           // 0x0BD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          XL;                                                // 0x0BD1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BD2[0x6];                                      // 0x0BD2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ButtonNameText;                                    // 0x0BD8(0x0018)(Edit, BlueprintVisible)
 
 public:
-	void PreConstruct(bool IsDesignTime);
 	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void ExecuteUbergraph_PrimarySkewButton(int32 EntryPoint);
 	void Construct();
-	void BP_OnUnhovered();
 	void BP_OnHovered();
+	void BP_OnUnhovered();
 	void BP_OnClicked();
 	void BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad);
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_PrimarySkewButton(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -55,6 +54,17 @@ public:
 		return GetDefaultObjImpl<UPrimarySkewButton_C>();
 	}
 };
+static_assert(alignof(UPrimarySkewButton_C) == 0x000008, "Wrong alignment on UPrimarySkewButton_C");
+static_assert(sizeof(UPrimarySkewButton_C) == 0x000BF0, "Wrong size on UPrimarySkewButton_C");
+static_assert(offsetof(UPrimarySkewButton_C, UberGraphFrame) == 0x000BA0, "Member 'UPrimarySkewButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UPrimarySkewButton_C, Pressed) == 0x000BA8, "Member 'UPrimarySkewButton_C::Pressed' has a wrong offset!");
+static_assert(offsetof(UPrimarySkewButton_C, Hover) == 0x000BB0, "Member 'UPrimarySkewButton_C::Hover' has a wrong offset!");
+static_assert(offsetof(UPrimarySkewButton_C, CenterButtonTextWidget) == 0x000BB8, "Member 'UPrimarySkewButton_C::CenterButtonTextWidget' has a wrong offset!");
+static_assert(offsetof(UPrimarySkewButton_C, Image_ButtonTop) == 0x000BC0, "Member 'UPrimarySkewButton_C::Image_ButtonTop' has a wrong offset!");
+static_assert(offsetof(UPrimarySkewButton_C, Image_Shadow) == 0x000BC8, "Member 'UPrimarySkewButton_C::Image_Shadow' has a wrong offset!");
+static_assert(offsetof(UPrimarySkewButton_C, ToUpper) == 0x000BD0, "Member 'UPrimarySkewButton_C::ToUpper' has a wrong offset!");
+static_assert(offsetof(UPrimarySkewButton_C, XL) == 0x000BD1, "Member 'UPrimarySkewButton_C::XL' has a wrong offset!");
+static_assert(offsetof(UPrimarySkewButton_C, ButtonNameText) == 0x000BD8, "Member 'UPrimarySkewButton_C::ButtonNameText' has a wrong offset!");
 
 }
 

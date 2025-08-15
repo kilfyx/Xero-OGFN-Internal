@@ -10,162 +10,130 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
+#include "GameplayAbilities_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_HidingProp.B_HidingProp_C
-// 0x0410 (0x1158 - 0x0D48)
+// 0x02F8 (0x0EA0 - 0x0BA8)
 class AB_HidingProp_C : public ABuildingProp
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        ProjectileLocation_ForwardVector;                  // 0x0D50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   LandedOnCollisionMesh;                             // 0x0D58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       Sphere;                                            // 0x0D60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        HideLocation_ForwardVector;                        // 0x0D68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         Loot_MovementTimeline_Forward_0FC694AE4A45D691CB6BD5A8CD00E521; // 0x0D70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Loot_MovementTimeline_Z_0FC694AE4A45D691CB6BD5A8CD00E521; // 0x0D74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Loot_MovementTimeline__Direction_0FC694AE4A45D691CB6BD5A8CD00E521; // 0x0D78(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D79[0x7];                                      // 0x0D79(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Loot_MovementTimeline;                             // 0x0D80(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         Enabled;                                           // 0x0D88(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         HidingEnabled;                                     // 0x0DB0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         PlayerLimit;                                       // 0x0DD8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         TeleportEnabled;                                   // 0x0E00(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         CanTeleport;                                       // 0x0E28(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class AFortPawn*>                      HidingPlayers;                                     // 0x0E50(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnTemplate, DisableEditOnInstance, RepNotify)
-	struct FGameplayTag                           EnterGameplayCue;                                  // 0x0E60(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           ExitGameplayCue;                                   // 0x0E68(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           LandedOnGameplayCue;                               // 0x0E70(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               Mid;                                               // 0x0E78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           RustleGameplayCue;                                 // 0x0E80(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           ExitGameplayCue_Player;                            // 0x0E88(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           WhileEnteringGameplayCue;                          // 0x0E90(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	float                                         ObstructionTraceLength;                            // 0x0E98(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E9C[0x4];                                      // 0x0E9C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EObjectTypeQuery>                      DestroyObjectTypes;                                // 0x0EA0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class AFortPawn*>                      Array;                                             // 0x0EB0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	int32                                         Int;                                               // 0x0EC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                DeimosPropSpawnerOffset;                           // 0x0EC4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          FixedEntranceDirection;                            // 0x0ED0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_ED1[0x3];                                      // 0x0ED1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxInteractAngle;                                  // 0x0ED4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                WobbleLocationOffset;                              // 0x0ED8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         InteractBelowPropDistance;                         // 0x0EE4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class AFortPawn*, float>                 HiddenPlayersAndEnterTimes;                        // 0x0EE8(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	class AFortPawn*                              LastPawnToInteract;                                // 0x0F38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_HidingProp_C*                        TargetTeleporter;                                  // 0x0F40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           TeleporterEnterGameplayCue;                        // 0x0F48(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           TeleporterExitGameplayCue;                         // 0x0F50(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           LoopingTeleportingCue;                             // 0x0F58(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           GC_Wobble;                                         // 0x0F60(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           WobbleTimerHandle;                                 // 0x0F68(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FGameplayTag>                   BlockEntranceTags;                                 // 0x0F70(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FGameplayTag>                   BlockExitTags;                                     // 0x0F80(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UAnimMontage*                           EnterAnimMontage;                                  // 0x0F90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           ExitAnimMontage;                                   // 0x0F98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPawn*                              LastPawnToHide;                                    // 0x0FA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           TeleportingStateGC;                                // 0x0FA8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          RandomWobbleNormal;                                // 0x0FB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SingleOccupant;                                    // 0x0FB1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Teleporting;                                       // 0x0FB2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          JumpOut;                                           // 0x0FB3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DestroyInNonSpyLTM;                                // 0x0FB4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ActiveInSpyLTM;                                    // 0x0FB5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FB6[0x2];                                      // 0x0FB6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameplayTag>                   ForceAllowInteractTags;                            // 0x0FB8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTag                           IsTeleporter;                                      // 0x0FC8(0x0008)(Edit, BlueprintVisible, Net, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           ContainsPlayerRepNof;                              // 0x0FD0(0x0008)(Edit, BlueprintVisible, Net, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ObstructionTraceExtents;                           // 0x0FD8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ObstructionTraceStartOffSet;                       // 0x0FE4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ExitLaunchVelocity;                                // 0x0FF0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                AdditionalLaunchVelocity;                          // 0x0FF4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                FixedEntraceObstructionTraceEndOffset;             // 0x1000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isActiveTeleportExit;                              // 0x100C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_100D[0x3];                                     // 0x100D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 GE_TeleportAbilityGranted;                         // 0x1010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DisableWhenSubmergedInWater;                       // 0x1018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1019[0x7];                                     // 0x1019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  DisableWhenSubmergedExceptionTags;                 // 0x1020(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class AFortPawn*>                      NonCosmeticPawns;                                  // 0x1040(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	class UClass*                                 CameraModifier;                                    // 0x1050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                NewVar_0;                                          // 0x1058(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1064[0x4];                                     // 0x1064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Pawn;                                              // 0x1068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Loot_CachedActorForward;                           // 0x1070(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_107C[0x4];                                     // 0x107C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVector>                        Loot_VectorOffsets;                                // 0x1080(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          SpawnedLoot;                                       // 0x1090(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1091[0x3];                                     // 0x1091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Loot_MoveForwardDistance;                          // 0x1094(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Loot_MoveUpDistance;                               // 0x1098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Loot_SpawnRadius;                                  // 0x109C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Loot_SpawnOffset;                                  // 0x10A0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldSpawnLoot;                                   // 0x10AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10AD[0x3];                                     // 0x10AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Loot_Tier_Group;                                   // 0x10B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          SetEntranceRotation;                               // 0x10C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10C1[0x7];                                     // 0x10C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UGameplayEffect>            PropSpecificEffectToApplyToHiders;                 // 0x10C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FScalableFloat                         RustlesPerWobble;                                  // 0x10D0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         RustleWobbleRadius;                                // 0x10F8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         EnterWobbleRadius;                                 // 0x1120(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         NonJumpExitDistance;                               // 0x1148(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114C[0x4];                                     // 0x114C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UFortCameraMode>            Camera_Mode;                                       // 0x1150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        ProjectileLocation_ForwardVector;                  // 0x0BB0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   LandedOnCollisionMesh;                             // 0x0BB8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       Sphere;                                            // 0x0BC0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        HideLocation_ForwardVector;                        // 0x0BC8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         Enabled;                                           // 0x0BD0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         HidingEnabled;                                     // 0x0BF8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         PlayerLimit;                                       // 0x0C20(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         TeleportEnabled;                                   // 0x0C48(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         CanTeleport;                                       // 0x0C70(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class AFortPawn*>                      HidingPlayers;                                     // 0x0C98(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnTemplate, DisableEditOnInstance, RepNotify, HasGetValueTypeHash)
+	struct FGameplayTag                           EnterGameplayCue;                                  // 0x0CA8(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           ExitGameplayCue;                                   // 0x0CB0(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           LandedOnGameplayCue;                               // 0x0CB8(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               Mid;                                               // 0x0CC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           RustleGameplayCue;                                 // 0x0CC8(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           ExitGameplayCue_Player;                            // 0x0CD0(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           WhileEnteringGameplayCue;                          // 0x0CD8(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	float                                         ObstructionTraceLength;                            // 0x0CE0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CE4[0x4];                                      // 0x0CE4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EObjectTypeQuery>                      DestroyObjectTypes;                                // 0x0CE8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class AFortPawn*>                      Array;                                             // 0x0CF8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         int_0;                                             // 0x0D08(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DeimosPropSpawnerOffset;                           // 0x0D0C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          FixedEntranceDirection;                            // 0x0D18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D19[0x3];                                      // 0x0D19(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxInteractAngle;                                  // 0x0D1C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                WobbleLocationOffset;                              // 0x0D20(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         InteractBelowPropDistance;                         // 0x0D2C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class AFortPawn*, float>                 HiddenPlayersAndEnterTimes;                        // 0x0D30(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	class AFortPawn*                              LastPawnToInteract;                                // 0x0D80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_HidingProp_C*                        TargetTeleporter;                                  // 0x0D88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           TeleporterEnterGameplayCue;                        // 0x0D90(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           TeleporterExitGameplayCue;                         // 0x0D98(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           LoopingTeleportingCue;                             // 0x0DA0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           GC_Wobble;                                         // 0x0DA8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           WobbleTimerHandle;                                 // 0x0DB0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FGameplayTag>                   BlockEntranceTags;                                 // 0x0DB8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FGameplayTag>                   BlockExitTags;                                     // 0x0DC8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UAnimMontage*                           EnterAnimMontage;                                  // 0x0DD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           ExitAnimMontage;                                   // 0x0DE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPawn*                              LastPawnToHide;                                    // 0x0DE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           TeleportingStateGC;                                // 0x0DF0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          RandomWobbleNormal;                                // 0x0DF8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          SingleOccupant;                                    // 0x0DF9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Teleporting;                                       // 0x0DFA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          JumpOut;                                           // 0x0DFB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          DestroyInNonSpyLTM;                                // 0x0DFC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          ActiveInSpyLTM;                                    // 0x0DFD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_DFE[0x2];                                      // 0x0DFE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameplayTag>                   ForceAllowInteractTags;                            // 0x0E00(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FGameplayTag                           IsTeleporter;                                      // 0x0E10(0x0008)(Edit, BlueprintVisible, Net, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           ContainsPlayerRepNof;                              // 0x0E18(0x0008)(Edit, BlueprintVisible, Net, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ObstructionTraceExtents;                           // 0x0E20(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ObstructionTraceStartOffSet;                       // 0x0E2C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ExitLaunchVelocity;                                // 0x0E38(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                AdditionalLaunchVelocity;                          // 0x0E3C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                FixedEntraceObstructionTraceEndOffset;             // 0x0E48(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isActiveTeleportExit;                              // 0x0E54(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E55[0x3];                                      // 0x0E55(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 GE_TeleportAbilityGranted;                         // 0x0E58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DisableWhenSubmergedInWater;                       // 0x0E60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E61[0x7];                                      // 0x0E61(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  DisableWhenSubmergedExceptionTags;                 // 0x0E68(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class AFortPawn*>                      NonCosmeticPawns;                                  // 0x0E88(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, HasGetValueTypeHash)
+	class UClass*                                 CameraModifier;                                    // 0x0E98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AddGameplayCue(const struct FGameplayTag& GameplayCueTag, const struct FGameplayCueParameters& CueParameters);
-	void AddHiddenPlayer(class AFortPawn* FortPawn);
-	void Allow_Cosmetics_For_Pawn(const class AFortPawn*& Pawn_0, bool* Allow);
-	void BlueprintOnInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted);
-	void BndEvt__S_Athena_Launchpad_Collision_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	bool CheckCanUsePassage(class UObject* Object);
-	void EndHidingAnalyticSession(class AFortPawn* FortPawn, EEnvironmentalItemEndReason EndReason);
-	void ExecuteGameplayCue(const struct FGameplayTag& GameplayCueTag, const struct FGameplayCueParameters& CueParameters);
 	void ExecuteUbergraph_B_HidingProp(int32 EntryPoint);
-	void HidingPlayerCountChanged();
-	void IgnorePawnCollision(class AFortPawn* Target, const float InIgnoreDuration);
-	void InteractEnter();
-	bool IsInInfiltrationLTM();
-	void LandedOnHayStack(class AFortPlayerPawn* PlayerPawn, float Z_Velocity_Mag);
-	void Launch_Pickups(TArray<class AFortPickup*>& Array_0, class AActor* Pawn_0);
-	void LaunchPlayersOffTop(class AFortPlayerPawn* PlayerPawn);
-	void Loot_MovementTimeline__FinishedFunc();
-	void Loot_MovementTimeline__UpdateFunc();
-	void OnCurieActive_F2BFC8C54691C42FB5230BA7B7DEE141();
-	void OnDeathServer(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
 	void OnMatchStarted();
-	void OnReady_64CBF02E419FF250B433D5B2A6E5D744(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags);
-	void OnRep_ContainsPlayer();
-	void OnRep_HidingPlayers();
-	void OnRep_IsTeleporter();
-	void OnRep_Teleporting();
-	void Pawn_Died(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum);
-	void ReceiveActorBeginOverlap(class AActor* OtherActor);
-	void ReceiveBeginPlay();
+	void ExecuteGameplayCue(const struct FGameplayTag& GameplayCueTag, const struct FGameplayCueParameters& CueParameters);
 	void RemoveGameplayCue(const struct FGameplayTag& GameplayCueTag, const struct FGameplayCueParameters& CueParameters);
-	void RemoveHiddenPlayer(class AFortPawn* FortPawn);
-	void StartHiding(class AFortPawn* InteractingPawn);
-	void StopHiding(const class AFortPawn* Pawn_0);
-	void StopHidingLoop();
-	void Teleport(class AActor* Pawn_0);
-	void ToggleCameraCollisionForClients();
+	void AddGameplayCue(const struct FGameplayTag& GameplayCueTag, const struct FGameplayCueParameters& CueParameters);
 	void TurnClientCameraCollisionOn();
+	void StartHiding(class AFortPawn* InteractingPawn);
+	void ToggleCameraCollisionForClients();
+	void IgnorePawnCollision(class AFortPawn* Target, const float InIgnoreDuration);
+	void Teleport(class AActor* Pawn);
+	void ReceiveBeginPlay();
+	void StopHiding(const class AFortPawn* Pawn);
+	void Pawn_Died(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum);
 	void WatchForPlayerDeath(class AFortPawn* FortPawn);
+	void EndHidingAnalyticSession(class AFortPawn* FortPawn, EEnvironmentalItemEndReason EndReason);
+	void InteractEnter();
+	void HidingPlayerCountChanged();
+	void StopHidingLoop();
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void LaunchPlayersOffTop(class AFortPlayerPawn* PlayerPawn);
+	void LandedOnHayStack(class AFortPlayerPawn* PlayerPawn, float Z_Velocity_Mag);
+	void BndEvt__S_Athena_Launchpad_Collision_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void OnDeathServer(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
+	void BlueprintOnInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted);
+	void OnCurieActive_F2BFC8C54691C42FB5230BA7B7DEE141();
+	void OnReady_64CBF02E419FF250B433D5B2A6E5D744(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags);
+	void OnRep_HidingPlayers();
+	void AddHiddenPlayer(class AFortPawn* FortPawn);
+	void RemoveHiddenPlayer(class AFortPawn* FortPawn);
+	void OnRep_Teleporting();
+	bool IsInInfiltrationLTM();
+	bool CheckCanUsePassage(class UObject* Object);
+	void OnRep_IsTeleporter();
+	void OnRep_ContainsPlayer();
+	void Allow_Cosmetics_For_Pawn(const class AFortPawn*& Pawn, bool* Allow);
 
 	bool BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const;
-	class FText BlueprintGetFailedInteractionString(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted) const;
 	class FText BlueprintGetInteractionString(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted) const;
 	bool BlueprintGetInteractionTime(const class AFortPawn* InteractingPawn, float* OutInteractionTime, const EInteractionBeingAttempted InteractionBeingAttempted) const;
+	class FText BlueprintGetFailedInteractionString(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted) const;
 
 public:
 	static class UClass* StaticClass()
@@ -177,6 +145,69 @@ public:
 		return GetDefaultObjImpl<AB_HidingProp_C>();
 	}
 };
+static_assert(alignof(AB_HidingProp_C) == 0x000008, "Wrong alignment on AB_HidingProp_C");
+static_assert(sizeof(AB_HidingProp_C) == 0x000EA0, "Wrong size on AB_HidingProp_C");
+static_assert(offsetof(AB_HidingProp_C, UberGraphFrame) == 0x000BA8, "Member 'AB_HidingProp_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, ProjectileLocation_ForwardVector) == 0x000BB0, "Member 'AB_HidingProp_C::ProjectileLocation_ForwardVector' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, LandedOnCollisionMesh) == 0x000BB8, "Member 'AB_HidingProp_C::LandedOnCollisionMesh' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, Sphere) == 0x000BC0, "Member 'AB_HidingProp_C::Sphere' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, HideLocation_ForwardVector) == 0x000BC8, "Member 'AB_HidingProp_C::HideLocation_ForwardVector' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, Enabled) == 0x000BD0, "Member 'AB_HidingProp_C::Enabled' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, HidingEnabled) == 0x000BF8, "Member 'AB_HidingProp_C::HidingEnabled' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, PlayerLimit) == 0x000C20, "Member 'AB_HidingProp_C::PlayerLimit' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, TeleportEnabled) == 0x000C48, "Member 'AB_HidingProp_C::TeleportEnabled' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, CanTeleport) == 0x000C70, "Member 'AB_HidingProp_C::CanTeleport' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, HidingPlayers) == 0x000C98, "Member 'AB_HidingProp_C::HidingPlayers' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, EnterGameplayCue) == 0x000CA8, "Member 'AB_HidingProp_C::EnterGameplayCue' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, ExitGameplayCue) == 0x000CB0, "Member 'AB_HidingProp_C::ExitGameplayCue' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, LandedOnGameplayCue) == 0x000CB8, "Member 'AB_HidingProp_C::LandedOnGameplayCue' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, Mid) == 0x000CC0, "Member 'AB_HidingProp_C::Mid' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, RustleGameplayCue) == 0x000CC8, "Member 'AB_HidingProp_C::RustleGameplayCue' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, ExitGameplayCue_Player) == 0x000CD0, "Member 'AB_HidingProp_C::ExitGameplayCue_Player' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, WhileEnteringGameplayCue) == 0x000CD8, "Member 'AB_HidingProp_C::WhileEnteringGameplayCue' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, ObstructionTraceLength) == 0x000CE0, "Member 'AB_HidingProp_C::ObstructionTraceLength' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, DestroyObjectTypes) == 0x000CE8, "Member 'AB_HidingProp_C::DestroyObjectTypes' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, Array) == 0x000CF8, "Member 'AB_HidingProp_C::Array' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, int_0) == 0x000D08, "Member 'AB_HidingProp_C::int_0' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, DeimosPropSpawnerOffset) == 0x000D0C, "Member 'AB_HidingProp_C::DeimosPropSpawnerOffset' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, FixedEntranceDirection) == 0x000D18, "Member 'AB_HidingProp_C::FixedEntranceDirection' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, MaxInteractAngle) == 0x000D1C, "Member 'AB_HidingProp_C::MaxInteractAngle' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, WobbleLocationOffset) == 0x000D20, "Member 'AB_HidingProp_C::WobbleLocationOffset' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, InteractBelowPropDistance) == 0x000D2C, "Member 'AB_HidingProp_C::InteractBelowPropDistance' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, HiddenPlayersAndEnterTimes) == 0x000D30, "Member 'AB_HidingProp_C::HiddenPlayersAndEnterTimes' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, LastPawnToInteract) == 0x000D80, "Member 'AB_HidingProp_C::LastPawnToInteract' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, TargetTeleporter) == 0x000D88, "Member 'AB_HidingProp_C::TargetTeleporter' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, TeleporterEnterGameplayCue) == 0x000D90, "Member 'AB_HidingProp_C::TeleporterEnterGameplayCue' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, TeleporterExitGameplayCue) == 0x000D98, "Member 'AB_HidingProp_C::TeleporterExitGameplayCue' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, LoopingTeleportingCue) == 0x000DA0, "Member 'AB_HidingProp_C::LoopingTeleportingCue' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, GC_Wobble) == 0x000DA8, "Member 'AB_HidingProp_C::GC_Wobble' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, WobbleTimerHandle) == 0x000DB0, "Member 'AB_HidingProp_C::WobbleTimerHandle' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, BlockEntranceTags) == 0x000DB8, "Member 'AB_HidingProp_C::BlockEntranceTags' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, BlockExitTags) == 0x000DC8, "Member 'AB_HidingProp_C::BlockExitTags' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, EnterAnimMontage) == 0x000DD8, "Member 'AB_HidingProp_C::EnterAnimMontage' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, ExitAnimMontage) == 0x000DE0, "Member 'AB_HidingProp_C::ExitAnimMontage' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, LastPawnToHide) == 0x000DE8, "Member 'AB_HidingProp_C::LastPawnToHide' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, TeleportingStateGC) == 0x000DF0, "Member 'AB_HidingProp_C::TeleportingStateGC' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, RandomWobbleNormal) == 0x000DF8, "Member 'AB_HidingProp_C::RandomWobbleNormal' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, SingleOccupant) == 0x000DF9, "Member 'AB_HidingProp_C::SingleOccupant' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, Teleporting) == 0x000DFA, "Member 'AB_HidingProp_C::Teleporting' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, JumpOut) == 0x000DFB, "Member 'AB_HidingProp_C::JumpOut' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, DestroyInNonSpyLTM) == 0x000DFC, "Member 'AB_HidingProp_C::DestroyInNonSpyLTM' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, ActiveInSpyLTM) == 0x000DFD, "Member 'AB_HidingProp_C::ActiveInSpyLTM' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, ForceAllowInteractTags) == 0x000E00, "Member 'AB_HidingProp_C::ForceAllowInteractTags' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, IsTeleporter) == 0x000E10, "Member 'AB_HidingProp_C::IsTeleporter' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, ContainsPlayerRepNof) == 0x000E18, "Member 'AB_HidingProp_C::ContainsPlayerRepNof' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, ObstructionTraceExtents) == 0x000E20, "Member 'AB_HidingProp_C::ObstructionTraceExtents' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, ObstructionTraceStartOffSet) == 0x000E2C, "Member 'AB_HidingProp_C::ObstructionTraceStartOffSet' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, ExitLaunchVelocity) == 0x000E38, "Member 'AB_HidingProp_C::ExitLaunchVelocity' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, AdditionalLaunchVelocity) == 0x000E3C, "Member 'AB_HidingProp_C::AdditionalLaunchVelocity' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, FixedEntraceObstructionTraceEndOffset) == 0x000E48, "Member 'AB_HidingProp_C::FixedEntraceObstructionTraceEndOffset' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, isActiveTeleportExit) == 0x000E54, "Member 'AB_HidingProp_C::isActiveTeleportExit' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, GE_TeleportAbilityGranted) == 0x000E58, "Member 'AB_HidingProp_C::GE_TeleportAbilityGranted' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, DisableWhenSubmergedInWater) == 0x000E60, "Member 'AB_HidingProp_C::DisableWhenSubmergedInWater' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, DisableWhenSubmergedExceptionTags) == 0x000E68, "Member 'AB_HidingProp_C::DisableWhenSubmergedExceptionTags' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, NonCosmeticPawns) == 0x000E88, "Member 'AB_HidingProp_C::NonCosmeticPawns' has a wrong offset!");
+static_assert(offsetof(AB_HidingProp_C, CameraModifier) == 0x000E98, "Member 'AB_HidingProp_C::CameraModifier' has a wrong offset!");
 
 }
 

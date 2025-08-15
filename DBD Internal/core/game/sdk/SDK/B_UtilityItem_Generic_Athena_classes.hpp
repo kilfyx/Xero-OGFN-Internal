@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_UtilityItem_Generic_Athena.B_UtilityItem_Generic_Athena_C
-// 0x0010 (0x1470 - 0x1460)
+// 0x0010 (0x0D18 - 0x0D08)
 class AB_UtilityItem_Generic_Athena_C : public AB_UtilityItem_Generic_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1460(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          UseThrowConsumableHudKeyActions;                   // 0x1468(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D08(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          UseThrowConsumableHudKeyActions;                   // 0x0D10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
+	void ExecuteUbergraph_B_UtilityItem_Generic_Athena(int32 EntryPoint);
 	void ThrowConsumableHudActionKey_Visible(bool Visible);
 	void ThrowConsumableHudActionKey_Targeting(bool Targeting);
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_B_UtilityItem_Generic_Athena(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -41,6 +41,10 @@ public:
 		return GetDefaultObjImpl<AB_UtilityItem_Generic_Athena_C>();
 	}
 };
+static_assert(alignof(AB_UtilityItem_Generic_Athena_C) == 0x000008, "Wrong alignment on AB_UtilityItem_Generic_Athena_C");
+static_assert(sizeof(AB_UtilityItem_Generic_Athena_C) == 0x000D18, "Wrong size on AB_UtilityItem_Generic_Athena_C");
+static_assert(offsetof(AB_UtilityItem_Generic_Athena_C, UberGraphFrame) == 0x000D08, "Member 'AB_UtilityItem_Generic_Athena_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_UtilityItem_Generic_Athena_C, UseThrowConsumableHudKeyActions) == 0x000D10, "Member 'AB_UtilityItem_Generic_Athena_C::UseThrowConsumableHudKeyActions' has a wrong offset!");
 
 }
 

@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapWeaponGotKillInstigatorNode_C>();
 	}
 };
+static_assert(alignof(ABP_BattleMapWeaponGotKillInstigatorNode_C) == 0x000008, "Wrong alignment on ABP_BattleMapWeaponGotKillInstigatorNode_C");
+static_assert(sizeof(ABP_BattleMapWeaponGotKillInstigatorNode_C) == 0x000358, "Wrong size on ABP_BattleMapWeaponGotKillInstigatorNode_C");
 
 }
 

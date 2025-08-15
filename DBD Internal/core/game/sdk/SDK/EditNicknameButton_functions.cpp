@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function EditNicknameButton.EditNicknameButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UEditNicknameButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EditNicknameButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EditNicknameButton.EditNicknameButton_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void UEditNicknameButton_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EditNicknameButton_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function EditNicknameButton.EditNicknameButton_C.ExecuteUbergraph_EditNicknameButton
 // (Final, UbergraphFunction)
 // Parameters:
@@ -62,6 +34,34 @@ void UEditNicknameButton_C::ExecuteUbergraph_EditNicknameButton(int32 EntryPoint
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EditNicknameButton.EditNicknameButton_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UEditNicknameButton_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EditNicknameButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function EditNicknameButton.EditNicknameButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UEditNicknameButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EditNicknameButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

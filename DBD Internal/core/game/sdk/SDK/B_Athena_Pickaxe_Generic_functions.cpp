@@ -17,74 +17,6 @@
 namespace SDK
 {
 
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.Anim Trails Disable
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Athena_Pickaxe_Generic_C::Anim_Trails_Disable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "Anim Trails Disable");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.Anim Trails Notify
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bActive                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Athena_Pickaxe_Generic_C::Anim_Trails_Notify(bool bActive)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "Anim Trails Notify");
-
-	Params::B_Athena_Pickaxe_Generic_C_Anim_Trails_Notify Parms{};
-
-	Parms.bActive = bActive;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.Binding Time of Day Control
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    F_                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Athena_Pickaxe_Generic_C::Binding_Time_of_Day_Control(bool F_)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "Binding Time of Day Control");
-
-	Params::B_Athena_Pickaxe_Generic_C_Binding_Time_of_Day_Control Parms{};
-
-	Parms.F_ = F_;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.BindSwingAnimTrailEvents
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Athena_Pickaxe_Generic_C::BindSwingAnimTrailEvents()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "BindSwingAnimTrailEvents");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.ExecuteUbergraph_B_Athena_Pickaxe_Generic
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -105,29 +37,147 @@ void AB_Athena_Pickaxe_Generic_C::ExecuteUbergraph_B_Athena_Pickaxe_Generic(int3
 }
 
 
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.FootStepLeft
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.K2_OnUnEquip
+// (Event, Public, BlueprintEvent)
 
-void AB_Athena_Pickaxe_Generic_C::FootStepLeft()
+void AB_Athena_Pickaxe_Generic_C::K2_OnUnEquip()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "FootStepLeft");
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "K2_OnUnEquip");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.FootStepRight
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnInstigatorSet
+// (Event, Public, BlueprintEvent)
 
-void AB_Athena_Pickaxe_Generic_C::FootStepRight()
+void AB_Athena_Pickaxe_Generic_C::OnInstigatorSet()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "FootStepRight");
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnInstigatorSet");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.SwingLeftEnd
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Athena_Pickaxe_Generic_C::SwingLeftEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "SwingLeftEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.SwingRightEnd
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Athena_Pickaxe_Generic_C::SwingRightEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "SwingRightEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.SwingLeft
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Athena_Pickaxe_Generic_C::SwingLeft()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "SwingLeft");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.SwingRight
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Athena_Pickaxe_Generic_C::SwingRight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "SwingRight");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.Anim Trails Disable
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Athena_Pickaxe_Generic_C::Anim_Trails_Disable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "Anim Trails Disable");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.Anim Trails Notify
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bActive                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_Athena_Pickaxe_Generic_C::Anim_Trails_Notify(bool bActive)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "Anim Trails Notify");
+
+	Params::B_Athena_Pickaxe_Generic_C_Anim_Trails_Notify Parms{};
+
+	Parms.bActive = bActive;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.CandyCaneUpdate
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Athena_Pickaxe_Generic_C::CandyCaneUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "CandyCaneUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.UpdateBasedOnKills
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Athena_Pickaxe_Generic_C::UpdateBasedOnKills()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "UpdateBasedOnKills");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -147,120 +197,53 @@ void AB_Athena_Pickaxe_Generic_C::HandleKillWatch()
 }
 
 
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.K2_OnUnEquip
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnInitWeaponCosmetics
+// (Event, Protected, BlueprintEvent)
+
+void AB_Athena_Pickaxe_Generic_C::OnInitWeaponCosmetics()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnInitWeaponCosmetics");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnWeaponDetached
 // (Event, Public, BlueprintEvent)
 
-void AB_Athena_Pickaxe_Generic_C::K2_OnUnEquip()
+void AB_Athena_Pickaxe_Generic_C::OnWeaponDetached()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "K2_OnUnEquip");
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnWeaponDetached");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.Melee_Effect_Color
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnWeaponVisibilityChanged
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// struct FVector*                         Melee_Color_Set                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bVisible                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bSetForLocalControllerOnly                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_Athena_Pickaxe_Generic_C::Melee_Effect_Color(struct FVector* Melee_Color_Set)
+void AB_Athena_Pickaxe_Generic_C::OnWeaponVisibilityChanged(bool bVisible, bool bSetForLocalControllerOnly)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "Melee_Effect_Color");
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnWeaponVisibilityChanged");
 
-	Params::B_Athena_Pickaxe_Generic_C_Melee_Effect_Color Parms{};
+	Params::B_Athena_Pickaxe_Generic_C_OnWeaponVisibilityChanged Parms{};
+
+	Parms.bVisible = bVisible;
+	Parms.bSetForLocalControllerOnly = bSetForLocalControllerOnly;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Melee_Color_Set != nullptr)
-		*Melee_Color_Set = std::move(Parms.Melee_Color_Set);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.MeleeSwingLeft
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    First_Left                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Athena_Pickaxe_Generic_C::MeleeSwingLeft(bool First_Left)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "MeleeSwingLeft");
-
-	Params::B_Athena_Pickaxe_Generic_C_MeleeSwingLeft Parms{};
-
-	Parms.First_Left = First_Left;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.MeleeSwingLeft_End
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Athena_Pickaxe_Generic_C::MeleeSwingLeft_End()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "MeleeSwingLeft_End");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.MeleeSwingRight
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    First_Right                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Athena_Pickaxe_Generic_C::MeleeSwingRight(bool First_Right)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "MeleeSwingRight");
-
-	Params::B_Athena_Pickaxe_Generic_C_MeleeSwingRight Parms{};
-
-	Parms.First_Right = First_Right;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.MeleeSwingRight_End
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Athena_Pickaxe_Generic_C::MeleeSwingRight_End()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "MeleeSwingRight_End");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnEquippedWeaponDestory
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
-
-void AB_Athena_Pickaxe_Generic_C::OnEquippedWeaponDestory()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnEquippedWeaponDestory");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -284,31 +267,163 @@ void AB_Athena_Pickaxe_Generic_C::OnInitCosmeticAlterations(const struct FFortCo
 }
 
 
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnInitWeaponCosmetics
-// (Event, Protected, BlueprintEvent)
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnWeaponAttached
+// (Event, Public, BlueprintEvent)
 
-void AB_Athena_Pickaxe_Generic_C::OnInitWeaponCosmetics()
+void AB_Athena_Pickaxe_Generic_C::OnWeaponAttached()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnInitWeaponCosmetics");
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnWeaponAttached");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnInstigatorSet
-// (Event, Public, BlueprintEvent)
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnEquippedWeaponDestory
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 
-void AB_Athena_Pickaxe_Generic_C::OnInstigatorSet()
+void AB_Athena_Pickaxe_Generic_C::OnEquippedWeaponDestory()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnInstigatorSet");
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnEquippedWeaponDestory");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.PlayRClickImpacts
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Athena_Pickaxe_Generic_C::PlayRClickImpacts()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "PlayRClickImpacts");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnPlayWeaponFireFX
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bPersistentFire                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bSecondaryFire                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_Athena_Pickaxe_Generic_C::OnPlayWeaponFireFX(bool bPersistentFire, bool bSecondaryFire)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnPlayWeaponFireFX");
+
+	Params::B_Athena_Pickaxe_Generic_C_OnPlayWeaponFireFX Parms{};
+
+	Parms.bPersistentFire = bPersistentFire;
+	Parms.bSecondaryFire = bSecondaryFire;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.MeleeSwingLeft_End
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Athena_Pickaxe_Generic_C::MeleeSwingLeft_End()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "MeleeSwingLeft_End");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.MeleeSwingRight_End
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Athena_Pickaxe_Generic_C::MeleeSwingRight_End()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "MeleeSwingRight_End");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.FootStepRight
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Athena_Pickaxe_Generic_C::FootStepRight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "FootStepRight");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.FootStepLeft
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Athena_Pickaxe_Generic_C::FootStepLeft()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "FootStepLeft");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.MeleeSwingLeft
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    First_Left                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_Athena_Pickaxe_Generic_C::MeleeSwingLeft(bool First_Left)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "MeleeSwingLeft");
+
+	Params::B_Athena_Pickaxe_Generic_C_MeleeSwingLeft Parms{};
+
+	Parms.First_Left = First_Left;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.MeleeSwingRight
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    First_Right                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_Athena_Pickaxe_Generic_C::MeleeSwingRight(bool First_Right)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "MeleeSwingRight");
+
+	Params::B_Athena_Pickaxe_Generic_C_MeleeSwingRight Parms{};
+
+	Parms.First_Right = First_Right;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -327,52 +442,6 @@ void AB_Athena_Pickaxe_Generic_C::OnLoaded_5BC5DA3B4E308BE7A188FBB2571333D2(clas
 	Params::B_Athena_Pickaxe_Generic_C_OnLoaded_5BC5DA3B4E308BE7A188FBB2571333D2 Parms{};
 
 	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnPlayImpactFX
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FHitResult&                HitResult                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-// EPhysicalSurface                        ImpactPhysicalSurface                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFXSystemComponent*               SpawnedPSC                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Athena_Pickaxe_Generic_C::OnPlayImpactFX(const struct FHitResult& HitResult, EPhysicalSurface ImpactPhysicalSurface, class UFXSystemComponent* SpawnedPSC)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnPlayImpactFX");
-
-	Params::B_Athena_Pickaxe_Generic_C_OnPlayImpactFX Parms{};
-
-	Parms.HitResult = std::move(HitResult);
-	Parms.ImpactPhysicalSurface = ImpactPhysicalSurface;
-	Parms.SpawnedPSC = SpawnedPSC;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnPlayWeaponFireFX
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bPersistentFire                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bSecondaryFire                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Athena_Pickaxe_Generic_C::OnPlayWeaponFireFX(bool bPersistentFire, bool bSecondaryFire)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnPlayWeaponFireFX");
-
-	Params::B_Athena_Pickaxe_Generic_C_OnPlayWeaponFireFX Parms{};
-
-	Parms.bPersistentFire = bPersistentFire;
-	Parms.bSecondaryFire = bSecondaryFire;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -400,51 +469,51 @@ void AB_Athena_Pickaxe_Generic_C::OnStatChanged_F171C56748FEA3E19F93088E968D3E21
 }
 
 
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnWeaponAttached
-// (Event, Public, BlueprintEvent)
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void AB_Athena_Pickaxe_Generic_C::OnWeaponAttached()
+void AB_Athena_Pickaxe_Generic_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnWeaponAttached");
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnWeaponDetached
-// (Event, Public, BlueprintEvent)
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.SetWpnRarity
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AB_Athena_Pickaxe_Generic_C::OnWeaponDetached()
+void AB_Athena_Pickaxe_Generic_C::SetWpnRarity()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnWeaponDetached");
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "SetWpnRarity");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.OnWeaponVisibilityChanged
-// (Event, Protected, BlueprintEvent)
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.SetActiveAlterationIdleParticles
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bVisible                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bSetForLocalControllerOnly                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    Reset                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_Athena_Pickaxe_Generic_C::OnWeaponVisibilityChanged(bool bVisible, bool bSetForLocalControllerOnly)
+void AB_Athena_Pickaxe_Generic_C::SetActiveAlterationIdleParticles(bool Active, bool Reset)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "OnWeaponVisibilityChanged");
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "SetActiveAlterationIdleParticles");
 
-	Params::B_Athena_Pickaxe_Generic_C_OnWeaponVisibilityChanged Parms{};
+	Params::B_Athena_Pickaxe_Generic_C_SetActiveAlterationIdleParticles Parms{};
 
-	Parms.bVisible = bVisible;
-	Parms.bSetForLocalControllerOnly = bSetForLocalControllerOnly;
+	Parms.Active = Active;
+	Parms.Reset = Reset;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -470,133 +539,17 @@ void AB_Athena_Pickaxe_Generic_C::PlayCQCPickaxeEnemyAudio(const struct FHitResu
 }
 
 
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.PlayRClickImpacts
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Athena_Pickaxe_Generic_C::PlayRClickImpacts()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "PlayRClickImpacts");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.SetActiveAlterationIdleParticles
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Reset                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Athena_Pickaxe_Generic_C::SetActiveAlterationIdleParticles(bool Active, bool Reset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "SetActiveAlterationIdleParticles");
-
-	Params::B_Athena_Pickaxe_Generic_C_SetActiveAlterationIdleParticles Parms{};
-
-	Parms.Active = Active;
-	Parms.Reset = Reset;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.SetWpnRarity
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.BindSwingAnimTrailEvents
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void AB_Athena_Pickaxe_Generic_C::SetWpnRarity()
+void AB_Athena_Pickaxe_Generic_C::BindSwingAnimTrailEvents()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "SetWpnRarity");
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "BindSwingAnimTrailEvents");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.SwingLeft
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Athena_Pickaxe_Generic_C::SwingLeft()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "SwingLeft");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.SwingLeftEnd
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Athena_Pickaxe_Generic_C::SwingLeftEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "SwingLeftEnd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.SwingRight
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Athena_Pickaxe_Generic_C::SwingRight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "SwingRight");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.SwingRightEnd
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Athena_Pickaxe_Generic_C::SwingRightEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "SwingRightEnd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.TODCheck
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EFortDayPhase                           CurrentDayPhase                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EFortDayPhase                           PreviousDayPhase                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bAtCreation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Athena_Pickaxe_Generic_C::TODCheck(EFortDayPhase CurrentDayPhase, EFortDayPhase PreviousDayPhase, bool bAtCreation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "TODCheck");
-
-	Params::B_Athena_Pickaxe_Generic_C_TODCheck Parms{};
-
-	Parms.CurrentDayPhase = CurrentDayPhase;
-	Parms.PreviousDayPhase = PreviousDayPhase;
-	Parms.bAtCreation = bAtCreation;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -614,37 +567,24 @@ void AB_Athena_Pickaxe_Generic_C::UnbindSwingAnimTrailEvents()
 }
 
 
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.UpdateBasedOnKills
-// (BlueprintCallable, BlueprintEvent)
+// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.Melee_Effect_Color
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Watched_Kills                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         Melee_Color_Set                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Athena_Pickaxe_Generic_C::UpdateBasedOnKills(int32 Watched_Kills)
+void AB_Athena_Pickaxe_Generic_C::Melee_Effect_Color(struct FVector* Melee_Color_Set)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "UpdateBasedOnKills");
+		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "Melee_Effect_Color");
 
-	Params::B_Athena_Pickaxe_Generic_C_UpdateBasedOnKills Parms{};
-
-	Parms.Watched_Kills = Watched_Kills;
+	Params::B_Athena_Pickaxe_Generic_C_Melee_Effect_Color Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Athena_Pickaxe_Generic_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Athena_Pickaxe_Generic_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (Melee_Color_Set != nullptr)
+		*Melee_Color_Set = std::move(Parms.Melee_Color_Set);
 }
 
 }

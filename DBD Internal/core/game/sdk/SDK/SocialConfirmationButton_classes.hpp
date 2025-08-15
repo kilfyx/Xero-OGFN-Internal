@@ -11,33 +11,32 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUILegacy_classes.hpp"
+#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SocialConfirmationButton.SocialConfirmationButton_C
-// 0x0050 (0x0F50 - 0x0F00)
-class USocialConfirmationButton_C final : public UCommonButtonLegacy
+// 0x0050 (0x0BF0 - 0x0BA0)
+class USocialConfirmationButton_C final : public UCommonButton
 {
 public:
-	uint8                                         Pad_EF8[0x8];                                      // 0x0EF8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHover;                                           // 0x0F08(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                Border_InteractionIndicator;                       // 0x0F10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 InteractionIcon;                                   // 0x0F18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMenuAnchor*                            MenuAnchor_Actions;                                // 0x0F20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_InteractionName;                              // 0x0F28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bIsAccept;                                         // 0x0F30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F31[0x7];                                      // 0x0F31(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   DisplayText;                                       // 0x0F38(0x0018)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHover;                                           // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                Border_InteractionIndicator;                       // 0x0BB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 InteractionIcon;                                   // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuAnchor*                            MenuAnchor_Actions;                                // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_InteractionName;                              // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bIsAccept;                                         // 0x0BD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BD1[0x7];                                      // 0x0BD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   DisplayText;                                       // 0x0BD8(0x0018)(Edit, BlueprintVisible)
 
 public:
-	void BP_OnHovered();
-	void BP_OnUnhovered();
 	void ExecuteUbergraph_SocialConfirmationButton(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void BP_OnUnhovered();
+	void BP_OnHovered();
 
 public:
 	static class UClass* StaticClass()
@@ -49,6 +48,16 @@ public:
 		return GetDefaultObjImpl<USocialConfirmationButton_C>();
 	}
 };
+static_assert(alignof(USocialConfirmationButton_C) == 0x000008, "Wrong alignment on USocialConfirmationButton_C");
+static_assert(sizeof(USocialConfirmationButton_C) == 0x000BF0, "Wrong size on USocialConfirmationButton_C");
+static_assert(offsetof(USocialConfirmationButton_C, UberGraphFrame) == 0x000BA0, "Member 'USocialConfirmationButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USocialConfirmationButton_C, OnHover) == 0x000BA8, "Member 'USocialConfirmationButton_C::OnHover' has a wrong offset!");
+static_assert(offsetof(USocialConfirmationButton_C, Border_InteractionIndicator) == 0x000BB0, "Member 'USocialConfirmationButton_C::Border_InteractionIndicator' has a wrong offset!");
+static_assert(offsetof(USocialConfirmationButton_C, InteractionIcon) == 0x000BB8, "Member 'USocialConfirmationButton_C::InteractionIcon' has a wrong offset!");
+static_assert(offsetof(USocialConfirmationButton_C, MenuAnchor_Actions) == 0x000BC0, "Member 'USocialConfirmationButton_C::MenuAnchor_Actions' has a wrong offset!");
+static_assert(offsetof(USocialConfirmationButton_C, Text_InteractionName) == 0x000BC8, "Member 'USocialConfirmationButton_C::Text_InteractionName' has a wrong offset!");
+static_assert(offsetof(USocialConfirmationButton_C, bIsAccept) == 0x000BD0, "Member 'USocialConfirmationButton_C::bIsAccept' has a wrong offset!");
+static_assert(offsetof(USocialConfirmationButton_C, DisplayText) == 0x000BD8, "Member 'USocialConfirmationButton_C::DisplayText' has a wrong offset!");
 
 }
 

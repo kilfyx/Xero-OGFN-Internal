@@ -17,23 +17,17 @@
 namespace SDK
 {
 
-// Function AthenaGlobalCash.AthenaGlobalCash_C.ExecuteUbergraph_AthenaGlobalCash
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function AthenaGlobalCash.AthenaGlobalCash_C.OnQueryStarted
+// (Event, Protected, BlueprintEvent)
 
-void UAthenaGlobalCash_C::ExecuteUbergraph_AthenaGlobalCash(int32 EntryPoint)
+void UAthenaGlobalCash_C::OnQueryStarted()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaGlobalCash");
+		Func = Class->GetFunction("AthenaGlobalCash_C", "OnQueryStarted");
 
-	Params::AthenaGlobalCash_C_ExecuteUbergraph_AthenaGlobalCash Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -45,9 +39,9 @@ void UAthenaGlobalCash_C::ExecuteUbergraph_AthenaGlobalCash(int32 EntryPoint)
 void UAthenaGlobalCash_C::OnQueryCompletedSuccessfully(int32 GlobalCashBalance)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnQueryCompletedSuccessfully");
+		Func = Class->GetFunction("AthenaGlobalCash_C", "OnQueryCompletedSuccessfully");
 
 	Params::AthenaGlobalCash_C_OnQueryCompletedSuccessfully Parms{};
 
@@ -57,17 +51,23 @@ void UAthenaGlobalCash_C::OnQueryCompletedSuccessfully(int32 GlobalCashBalance)
 }
 
 
-// Function AthenaGlobalCash.AthenaGlobalCash_C.OnQueryStarted
-// (Event, Protected, BlueprintEvent)
+// Function AthenaGlobalCash.AthenaGlobalCash_C.ExecuteUbergraph_AthenaGlobalCash
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaGlobalCash_C::OnQueryStarted()
+void UAthenaGlobalCash_C::ExecuteUbergraph_AthenaGlobalCash(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnQueryStarted");
 
-	UObject::ProcessEvent(Func, nullptr);
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaGlobalCash_C", "ExecuteUbergraph_AthenaGlobalCash");
+
+	Params::AthenaGlobalCash_C_ExecuteUbergraph_AthenaGlobalCash Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

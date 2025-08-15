@@ -20,7 +20,7 @@ namespace SDK
 // Function AnimationSharing.AnimSharingStateInstance.GetInstancedActors
 // (Final, Native, Protected, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<class AActor*>*                  Actors                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class AActor*>*                  Actors                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UAnimSharingStateInstance::GetInstancedActors(TArray<class AActor*>* Actors)
 {

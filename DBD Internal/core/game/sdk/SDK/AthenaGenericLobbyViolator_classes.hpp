@@ -10,16 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "FortniteUI_classes.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaGenericLobbyViolator.AthenaGenericLobbyViolator_C
-// 0x0000 (0x02F8 - 0x02F8)
-class UAthenaGenericLobbyViolator_C final : public UAthenaMatchmakingViolator
+// 0x0010 (0x0270 - 0x0260)
+class UAthenaGenericLobbyViolator_C final : public UUserWidget
 {
+public:
+	class UCommonTextBlock*                       ModeName;                                          // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       SubText;                                           // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void SetGamemodeName(const class FText& Name_0, const class FText& SubText_0);
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -31,7 +38,9 @@ public:
 	}
 };
 static_assert(alignof(UAthenaGenericLobbyViolator_C) == 0x000008, "Wrong alignment on UAthenaGenericLobbyViolator_C");
-static_assert(sizeof(UAthenaGenericLobbyViolator_C) == 0x0002F8, "Wrong size on UAthenaGenericLobbyViolator_C");
+static_assert(sizeof(UAthenaGenericLobbyViolator_C) == 0x000270, "Wrong size on UAthenaGenericLobbyViolator_C");
+static_assert(offsetof(UAthenaGenericLobbyViolator_C, ModeName) == 0x000260, "Member 'UAthenaGenericLobbyViolator_C::ModeName' has a wrong offset!");
+static_assert(offsetof(UAthenaGenericLobbyViolator_C, SubText) == 0x000268, "Member 'UAthenaGenericLobbyViolator_C::SubText' has a wrong offset!");
 
 }
 

@@ -25,9 +25,9 @@ namespace SDK
 void AGCNL_AthenaAI_NonParticipant_AlertState_C::ExecuteUbergraph_GCNL_AthenaAI_NonParticipant_AlertState(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_GCNL_AthenaAI_NonParticipant_AlertState");
+		Func = Class->GetFunction("GCNL_AthenaAI_NonParticipant_AlertState_C", "ExecuteUbergraph_GCNL_AthenaAI_NonParticipant_AlertState");
 
 	Params::GCNL_AthenaAI_NonParticipant_AlertState_C_ExecuteUbergraph_GCNL_AthenaAI_NonParticipant_AlertState Parms{};
 
@@ -40,19 +40,19 @@ void AGCNL_AthenaAI_NonParticipant_AlertState_C::ExecuteUbergraph_GCNL_AthenaAI_
 // Function GCNL_AthenaAI_NonParticipant_AlertState.GCNL_AthenaAI_NonParticipant_AlertState_C.OnApplication
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayCueParameters           Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// TArray<class UParticleSystemComponent*> ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// TArray<class UAudioComponent*>          AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// class ULegacyCameraShake*               BurstCameraShakeInstance                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class ADecalActor*                      BurstDecalInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// class UMatineeCameraShake*              BurstCameraShakeInstance                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ADecalActor*                      BurstDecalInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AGCNL_AthenaAI_NonParticipant_AlertState_C::OnApplication(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class ULegacyCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance)
+void AGCNL_AthenaAI_NonParticipant_AlertState_C::OnApplication(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UMatineeCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnApplication");
+		Func = Class->GetFunction("GCNL_AthenaAI_NonParticipant_AlertState_C", "OnApplication");
 
 	Params::GCNL_AthenaAI_NonParticipant_AlertState_C_OnApplication Parms{};
 
@@ -62,26 +62,6 @@ void AGCNL_AthenaAI_NonParticipant_AlertState_C::OnApplication(class AActor* MyT
 	Parms.AudioComponents = std::move(AudioComponents);
 	Parms.BurstCameraShakeInstance = BurstCameraShakeInstance;
 	Parms.BurstDecalInstance = BurstDecalInstance;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GCNL_AthenaAI_NonParticipant_AlertState.GCNL_AthenaAI_NonParticipant_AlertState_C.Play Alert Sound
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           TargetedActor                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AGCNL_AthenaAI_NonParticipant_AlertState_C::Play_Alert_Sound(class AActor* TargetedActor)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Play Alert Sound");
-
-	Params::GCNL_AthenaAI_NonParticipant_AlertState_C_Play_Alert_Sound Parms{};
-
-	Parms.TargetedActor = TargetedActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

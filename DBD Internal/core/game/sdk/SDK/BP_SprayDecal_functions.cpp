@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function BP_SprayDecal.BP_SprayDecal_C.AddBoxCollisionForCreative
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_SprayDecal_C::AddBoxCollisionForCreative()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "AddBoxCollisionForCreative");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.CreateDecalComponents
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_SprayDecal_C::CreateDecalComponents()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "CreateDecalComponents");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_SprayDecal.BP_SprayDecal_C.ExecuteUbergraph_BP_SprayDecal
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -65,91 +37,37 @@ void ABP_SprayDecal_C::ExecuteUbergraph_BP_SprayDecal(int32 EntryPoint)
 }
 
 
-// Function BP_SprayDecal.BP_SprayDecal_C.FindNearbyBuildingActorsAndBindDelegates
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_SprayDecal_C::FindNearbyBuildingActorsAndBindDelegates()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "FindNearbyBuildingActorsAndBindDelegates");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.GetInstigatorPlayerId
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_SprayDecal.BP_SprayDecal_C.OnWallDestoryed
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FUniqueNetIdRepl                 ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash)
+// class AActor*                           DestroyedActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-struct FUniqueNetIdRepl ABP_SprayDecal_C::GetInstigatorPlayerId()
+void ABP_SprayDecal_C::OnWallDestoryed(class AActor* DestroyedActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "GetInstigatorPlayerId");
+		Func = Class->GetFunction("BP_SprayDecal_C", "OnWallDestoryed");
 
-	Params::BP_SprayDecal_C_GetInstigatorPlayerId Parms{};
+	Params::BP_SprayDecal_C_OnWallDestoryed Parms{};
+
+	Parms.DestroyedActor = DestroyedActor;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function BP_SprayDecal.BP_SprayDecal_C.OnBounceOccurs
+// Function BP_SprayDecal.BP_SprayDecal_C.PostLevelSaveSpawnCleanup
 // (Event, Public, BlueprintEvent)
 
-void ABP_SprayDecal_C::OnBounceOccurs()
+void ABP_SprayDecal_C::PostLevelSaveSpawnCleanup()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "OnBounceOccurs");
+		Func = Class->GetFunction("BP_SprayDecal_C", "PostLevelSaveSpawnCleanup");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.OnLoaded_F8AB699B4D8DD22B5A0409B608B7D6FA
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_SprayDecal_C::OnLoaded_F8AB699B4D8DD22B5A0409B608B7D6FA(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "OnLoaded_F8AB699B4D8DD22B5A0409B608B7D6FA");
-
-	Params::BP_SprayDecal_C_OnLoaded_F8AB699B4D8DD22B5A0409B608B7D6FA Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.OnLoaded_F925FF00475A018319C73E9FB1540BC6
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_SprayDecal_C::OnLoaded_F925FF00475A018319C73E9FB1540BC6(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "OnLoaded_F925FF00475A018319C73E9FB1540BC6");
-
-	Params::BP_SprayDecal_C_OnLoaded_F925FF00475A018319C73E9FB1540BC6 Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -157,7 +75,7 @@ void ABP_SprayDecal_C::OnLoaded_F925FF00475A018319C73E9FB1540BC6(class UObject* 
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABuildingTrap*                    Trap                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bDetatched                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bDetatched                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABP_SprayDecal_C::OnNearbyTrapPlaced(class ABuildingTrap* Trap, bool bDetatched)
 {
@@ -172,6 +90,20 @@ void ABP_SprayDecal_C::OnNearbyTrapPlaced(class ABuildingTrap* Trap, bool bDetat
 	Parms.bDetatched = bDetatched;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SprayDecal.BP_SprayDecal_C.OnBounceOccurs
+// (Event, Public, BlueprintEvent)
+
+void ABP_SprayDecal_C::OnBounceOccurs()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SprayDecal_C", "OnBounceOccurs");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -243,6 +175,62 @@ void ABP_SprayDecal_C::OnNearbyWallDied(class AActor* DamagedActor, float Damage
 }
 
 
+// Function BP_SprayDecal.BP_SprayDecal_C.StartSprayFadeOutDueToNewPlacement
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_SprayDecal_C::StartSprayFadeOutDueToNewPlacement()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SprayDecal_C", "StartSprayFadeOutDueToNewPlacement");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SprayDecal.BP_SprayDecal_C.OnSprayInfoReady
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void ABP_SprayDecal_C::OnSprayInfoReady()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SprayDecal_C", "OnSprayInfoReady");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SprayDecal.BP_SprayDecal_C.OnSprayAssetReplicatedDown
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_SprayDecal_C::OnSprayAssetReplicatedDown()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SprayDecal_C", "OnSprayAssetReplicatedDown");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SprayDecal.BP_SprayDecal_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_SprayDecal_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SprayDecal_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_SprayDecal.BP_SprayDecal_C.OnReady_B252FED346EAB98D54D786BD15C1CC7B
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -267,6 +255,94 @@ void ABP_SprayDecal_C::OnReady_B252FED346EAB98D54D786BD15C1CC7B(class AFortGameS
 }
 
 
+// Function BP_SprayDecal.BP_SprayDecal_C.OnLoaded_F925FF00475A018319C73E9FB1540BC6
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SprayDecal_C::OnLoaded_F925FF00475A018319C73E9FB1540BC6(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SprayDecal_C", "OnLoaded_F925FF00475A018319C73E9FB1540BC6");
+
+	Params::BP_SprayDecal_C_OnLoaded_F925FF00475A018319C73E9FB1540BC6 Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SprayDecal.BP_SprayDecal_C.OnLoaded_F8AB699B4D8DD22B5A0409B608B7D6FA
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SprayDecal_C::OnLoaded_F8AB699B4D8DD22B5A0409B608B7D6FA(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SprayDecal_C", "OnLoaded_F8AB699B4D8DD22B5A0409B608B7D6FA");
+
+	Params::BP_SprayDecal_C_OnLoaded_F8AB699B4D8DD22B5A0409B608B7D6FA Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SprayDecal.BP_SprayDecal_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_SprayDecal_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SprayDecal_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SprayDecal.BP_SprayDecal_C.CreateDecalComponents
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_SprayDecal_C::CreateDecalComponents()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SprayDecal_C", "CreateDecalComponents");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SprayDecal.BP_SprayDecal_C.GetInstigatorPlayerId
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash)
+
+struct FUniqueNetIdRepl ABP_SprayDecal_C::GetInstigatorPlayerId()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SprayDecal_C", "GetInstigatorPlayerId");
+
+	Params::BP_SprayDecal_C_GetInstigatorPlayerId Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_SprayDecal.BP_SprayDecal_C.OnRep_DecalFadeoutTime
 // (BlueprintCallable, BlueprintEvent)
 
@@ -276,96 +352,6 @@ void ABP_SprayDecal_C::OnRep_DecalFadeoutTime()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_SprayDecal_C", "OnRep_DecalFadeoutTime");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.OnSprayAssetReplicatedDown
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_SprayDecal_C::OnSprayAssetReplicatedDown()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "OnSprayAssetReplicatedDown");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.OnSprayInfoReady
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void ABP_SprayDecal_C::OnSprayInfoReady()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "OnSprayInfoReady");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.OnWallDestoryed
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           DestroyedActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_SprayDecal_C::OnWallDestoryed(class AActor* DestroyedActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "OnWallDestoryed");
-
-	Params::BP_SprayDecal_C_OnWallDestoryed Parms{};
-
-	Parms.DestroyedActor = DestroyedActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.PostLevelSaveSpawnCleanup
-// (Event, Public, BlueprintEvent)
-
-void ABP_SprayDecal_C::PostLevelSaveSpawnCleanup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "PostLevelSaveSpawnCleanup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_SprayDecal_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.StartSprayFadeOutDueToNewPlacement
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_SprayDecal_C::StartSprayFadeOutDueToNewPlacement()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "StartSprayFadeOutDueToNewPlacement");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -385,15 +371,29 @@ void ABP_SprayDecal_C::UnbindAndClearNearbyBuildingActors()
 }
 
 
-// Function BP_SprayDecal.BP_SprayDecal_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_SprayDecal.BP_SprayDecal_C.FindNearbyBuildingActorsAndBindDelegates
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_SprayDecal_C::UserConstructionScript()
+void ABP_SprayDecal_C::FindNearbyBuildingActorsAndBindDelegates()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_SprayDecal_C", "FindNearbyBuildingActorsAndBindDelegates");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SprayDecal.BP_SprayDecal_C.AddBoxCollisionForCreative
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_SprayDecal_C::AddBoxCollisionForCreative()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SprayDecal_C", "AddBoxCollisionForCreative");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_TrapGeneric.GA_TrapGeneric_C
-// 0x0020 (0x0AC8 - 0x0AA8)
+// 0x0020 (0x0AD8 - 0x0AB8)
 class UGA_TrapGeneric_C : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class ABuildingTrap*                          CeilingTrap;                                       // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         TargetArray;                                       // 0x0AB8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class ABuildingTrap*                          CeilingTrap;                                       // 0x0AC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         TargetArray;                                       // 0x0AC8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
-	void Cancelled_EFEC611E4D988CAA3867F28EE35771B3(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void ExecuteUbergraph_GA_TrapGeneric(int32 EntryPoint);
 	void K2_ActivateAbility();
 	void Targeted_EFEC611E4D988CAA3867F28EE35771B3(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void Cancelled_EFEC611E4D988CAA3867F28EE35771B3(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 
 public:
 	static class UClass* StaticClass()
@@ -42,6 +42,11 @@ public:
 		return GetDefaultObjImpl<UGA_TrapGeneric_C>();
 	}
 };
+static_assert(alignof(UGA_TrapGeneric_C) == 0x000008, "Wrong alignment on UGA_TrapGeneric_C");
+static_assert(sizeof(UGA_TrapGeneric_C) == 0x000AD8, "Wrong size on UGA_TrapGeneric_C");
+static_assert(offsetof(UGA_TrapGeneric_C, UberGraphFrame) == 0x000AB8, "Member 'UGA_TrapGeneric_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UGA_TrapGeneric_C, CeilingTrap) == 0x000AC0, "Member 'UGA_TrapGeneric_C::CeilingTrap' has a wrong offset!");
+static_assert(offsetof(UGA_TrapGeneric_C, TargetArray) == 0x000AC8, "Member 'UGA_TrapGeneric_C::TargetArray' has a wrong offset!");
 
 }
 

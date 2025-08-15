@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FuelIndicator.FuelIndicator_C
-// 0x0010 (0x08D0 - 0x08C0)
+// 0x0010 (0x07D8 - 0x07C8)
 class AFuelIndicator_C final : public ABuildingGameplayActor
 {
 public:
-	class UAthenaSpecialActorComponent*           AthenaSpecialActor;                                // 0x08C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x08C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAthenaSpecialActorComponent*           AthenaSpecialActor;                                // 0x07C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x07D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,6 +34,10 @@ public:
 		return GetDefaultObjImpl<AFuelIndicator_C>();
 	}
 };
+static_assert(alignof(AFuelIndicator_C) == 0x000008, "Wrong alignment on AFuelIndicator_C");
+static_assert(sizeof(AFuelIndicator_C) == 0x0007D8, "Wrong size on AFuelIndicator_C");
+static_assert(offsetof(AFuelIndicator_C, AthenaSpecialActor) == 0x0007C8, "Member 'AFuelIndicator_C::AthenaSpecialActor' has a wrong offset!");
+static_assert(offsetof(AFuelIndicator_C, DefaultSceneRoot) == 0x0007D0, "Member 'AFuelIndicator_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

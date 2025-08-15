@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TabMouseAndKeyboardOptions_New.TabMouseAndKeyboardOptions_New_C
-// 0x0008 (0x0380 - 0x0378)
+// 0x0008 (0x0370 - 0x0368)
 class UTabMouseAndKeyboardOptions_New_C final : public UFortTabMouseAndKeyboardOptions_TempNew
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void CenterOnTab();
 	void ExecuteUbergraph_TabMouseAndKeyboardOptions_New(int32 EntryPoint);
+	void CenterOnTab();
 	void SettingValueChanged(float Value);
 
 public:
@@ -39,6 +39,9 @@ public:
 		return GetDefaultObjImpl<UTabMouseAndKeyboardOptions_New_C>();
 	}
 };
+static_assert(alignof(UTabMouseAndKeyboardOptions_New_C) == 0x000008, "Wrong alignment on UTabMouseAndKeyboardOptions_New_C");
+static_assert(sizeof(UTabMouseAndKeyboardOptions_New_C) == 0x000370, "Wrong size on UTabMouseAndKeyboardOptions_New_C");
+static_assert(offsetof(UTabMouseAndKeyboardOptions_New_C, UberGraphFrame) == 0x000368, "Member 'UTabMouseAndKeyboardOptions_New_C::UberGraphFrame' has a wrong offset!");
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
@@ -19,29 +19,25 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass Blueprint_Paper_VIM.Blueprint_Paper_VIM_C
-// 0x1170 (0x15E0 - 0x0470)
+// 0x0510 (0x08C0 - 0x03B0)
 class UBlueprint_Paper_VIM_C final : public UFortAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0470(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0478(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0480(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0488(0x0020)()
-	struct FAnimNode_MeshSpaceRefPose             AnimGraphNode_MeshRefPose;                         // 0x04A8(0x0010)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x04B8(0x0020)()
-	uint8                                         Pad_4D8[0x8];                                      // 0x04D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_AnimDynamics                 AnimGraphNode_AnimDynamics_3;                      // 0x04E0(0x0440)()
-	struct FAnimNode_AnimDynamics                 AnimGraphNode_AnimDynamics_2;                      // 0x0920(0x0440)()
-	struct FAnimNode_AnimDynamics                 AnimGraphNode_AnimDynamics_1;                      // 0x0D60(0x0440)()
-	struct FAnimNode_AnimDynamics                 AnimGraphNode_AnimDynamics;                        // 0x11A0(0x0440)()
+	uint8                                         Pad_3A8[0x8];                                      // 0x03A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3B9[0x7];                                      // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_SpringBone                   AnimGraphNode_SpringBone_3;                        // 0x03C0(0x0128)()
+	struct FAnimNode_SpringBone                   AnimGraphNode_SpringBone_2;                        // 0x04E8(0x0128)()
+	struct FAnimNode_SpringBone                   AnimGraphNode_SpringBone_1;                        // 0x0610(0x0128)()
+	struct FAnimNode_SpringBone                   AnimGraphNode_SpringBone;                          // 0x0738(0x0128)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0860(0x0020)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0880(0x0030)()
+	struct FAnimNode_MeshSpaceRefPose             AnimGraphNode_MeshRefPose;                         // 0x08B0(0x0010)()
 
 public:
-	void AnimGraph(struct FPoseLink* AnimGraph_0);
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_3AF159404BD341EBBF1D83916A014149();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_9E5EF2534AF35AEF656F7798016DF75B();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_ADC4973B4FF994FAB62509B5C600BF73();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_BCA43E284168E0AB05BB9E98D217441B();
 	void ExecuteUbergraph_Blueprint_Paper_VIM(int32 EntryPoint);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -53,6 +49,17 @@ public:
 		return GetDefaultObjImpl<UBlueprint_Paper_VIM_C>();
 	}
 };
+static_assert(alignof(UBlueprint_Paper_VIM_C) == 0x000010, "Wrong alignment on UBlueprint_Paper_VIM_C");
+static_assert(sizeof(UBlueprint_Paper_VIM_C) == 0x0008C0, "Wrong size on UBlueprint_Paper_VIM_C");
+static_assert(offsetof(UBlueprint_Paper_VIM_C, UberGraphFrame) == 0x0003B0, "Member 'UBlueprint_Paper_VIM_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimBlueprintClassSubsystem_PropertyAccess) == 0x0003B8, "Member 'UBlueprint_Paper_VIM_C::AnimBlueprintClassSubsystem_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_SpringBone_3) == 0x0003C0, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_SpringBone_3' has a wrong offset!");
+static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_SpringBone_2) == 0x0004E8, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_SpringBone_2' has a wrong offset!");
+static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_SpringBone_1) == 0x000610, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_SpringBone_1' has a wrong offset!");
+static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_SpringBone) == 0x000738, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_SpringBone' has a wrong offset!");
+static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_ComponentToLocalSpace) == 0x000860, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_Root) == 0x000880, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_MeshRefPose) == 0x0008B0, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_MeshRefPose' has a wrong offset!");
 
 }
 

@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "FortniteUI_structs.hpp"
 #include "FortniteUI_classes.hpp"
 #include "UMG_structs.hpp"
 
@@ -20,19 +19,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LockerBuiltInEmoteWidget.LockerBuiltInEmoteWidget_C
-// 0x0030 (0x1470 - 0x1440)
+// 0x0018 (0x0BC8 - 0x0BB0)
 class ULockerBuiltInEmoteWidget_C final : public UFortLockerBuiltInEmoteWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1440(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       WarningPulse;                                      // 0x1448(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        IconSwitcher;                                      // 0x1450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LockedFill;                                        // 0x1458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               LockedOvr;                                         // 0x1460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BB0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 LockedFill;                                        // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               LockedOvr;                                         // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_LockerBuiltInEmoteWidget(int32 EntryPoint);
-	void OnUpdateAccessRestrictionWarning(bool bShouldShow, EAthenaLockerInfoRestrictionWarning WarningType);
+	void OnUpdateLocked(bool bLocked);
 
 public:
 	static class UClass* StaticClass()
@@ -44,13 +41,11 @@ public:
 		return GetDefaultObjImpl<ULockerBuiltInEmoteWidget_C>();
 	}
 };
-static_assert(alignof(ULockerBuiltInEmoteWidget_C) == 0x000010, "Wrong alignment on ULockerBuiltInEmoteWidget_C");
-static_assert(sizeof(ULockerBuiltInEmoteWidget_C) == 0x001470, "Wrong size on ULockerBuiltInEmoteWidget_C");
-static_assert(offsetof(ULockerBuiltInEmoteWidget_C, UberGraphFrame) == 0x001440, "Member 'ULockerBuiltInEmoteWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ULockerBuiltInEmoteWidget_C, WarningPulse) == 0x001448, "Member 'ULockerBuiltInEmoteWidget_C::WarningPulse' has a wrong offset!");
-static_assert(offsetof(ULockerBuiltInEmoteWidget_C, IconSwitcher) == 0x001450, "Member 'ULockerBuiltInEmoteWidget_C::IconSwitcher' has a wrong offset!");
-static_assert(offsetof(ULockerBuiltInEmoteWidget_C, LockedFill) == 0x001458, "Member 'ULockerBuiltInEmoteWidget_C::LockedFill' has a wrong offset!");
-static_assert(offsetof(ULockerBuiltInEmoteWidget_C, LockedOvr) == 0x001460, "Member 'ULockerBuiltInEmoteWidget_C::LockedOvr' has a wrong offset!");
+static_assert(alignof(ULockerBuiltInEmoteWidget_C) == 0x000008, "Wrong alignment on ULockerBuiltInEmoteWidget_C");
+static_assert(sizeof(ULockerBuiltInEmoteWidget_C) == 0x000BC8, "Wrong size on ULockerBuiltInEmoteWidget_C");
+static_assert(offsetof(ULockerBuiltInEmoteWidget_C, UberGraphFrame) == 0x000BB0, "Member 'ULockerBuiltInEmoteWidget_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ULockerBuiltInEmoteWidget_C, LockedFill) == 0x000BB8, "Member 'ULockerBuiltInEmoteWidget_C::LockedFill' has a wrong offset!");
+static_assert(offsetof(ULockerBuiltInEmoteWidget_C, LockedOvr) == 0x000BC0, "Member 'ULockerBuiltInEmoteWidget_C::LockedOvr' has a wrong offset!");
 
 }
 

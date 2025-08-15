@@ -23,7 +23,7 @@ struct EntityFortniteStormSpawner_Start final
 public:
 	float                                         StartRadius;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BoundsRadius;                                      // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FEntityFortniteStormPhase>      Phases;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FEntityFortniteStormPhase>      Phases;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(EntityFortniteStormSpawner_Start) == 0x000008, "Wrong alignment on EntityFortniteStormSpawner_Start");
 static_assert(sizeof(EntityFortniteStormSpawner_Start) == 0x000018, "Wrong size on EntityFortniteStormSpawner_Start");

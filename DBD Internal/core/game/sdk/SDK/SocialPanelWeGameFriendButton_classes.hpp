@@ -11,26 +11,25 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUILegacy_classes.hpp"
+#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SocialPanelWeGameFriendButton.SocialPanelWeGameFriendButton_C
-// 0x0020 (0x0F20 - 0x0F00)
-class USocialPanelWeGameFriendButton_C final : public UCommonButtonLegacy
+// 0x0018 (0x0BB8 - 0x0BA0)
+class USocialPanelWeGameFriendButton_C final : public UCommonButton
 {
 public:
-	uint8                                         Pad_EF8[0x8];                                      // 0x0EF8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHovered;                                         // 0x0F08(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_LinkPrompt;                                   // 0x0F10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHovered;                                         // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_LinkPrompt;                                   // 0x0BB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnHovered();
-	void BP_OnUnhovered();
 	void ExecuteUbergraph_SocialPanelWeGameFriendButton(int32 EntryPoint);
+	void BP_OnUnhovered();
+	void BP_OnHovered();
 
 public:
 	static class UClass* StaticClass()
@@ -42,6 +41,11 @@ public:
 		return GetDefaultObjImpl<USocialPanelWeGameFriendButton_C>();
 	}
 };
+static_assert(alignof(USocialPanelWeGameFriendButton_C) == 0x000008, "Wrong alignment on USocialPanelWeGameFriendButton_C");
+static_assert(sizeof(USocialPanelWeGameFriendButton_C) == 0x000BB8, "Wrong size on USocialPanelWeGameFriendButton_C");
+static_assert(offsetof(USocialPanelWeGameFriendButton_C, UberGraphFrame) == 0x000BA0, "Member 'USocialPanelWeGameFriendButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USocialPanelWeGameFriendButton_C, OnHovered) == 0x000BA8, "Member 'USocialPanelWeGameFriendButton_C::OnHovered' has a wrong offset!");
+static_assert(offsetof(USocialPanelWeGameFriendButton_C, Text_LinkPrompt) == 0x000BB0, "Member 'USocialPanelWeGameFriendButton_C::Text_LinkPrompt' has a wrong offset!");
 
 }
 

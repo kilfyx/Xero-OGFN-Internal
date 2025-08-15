@@ -19,30 +19,27 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Prj_Athena_FragGrenade.B_Prj_Athena_FragGrenade_C
-// 0x0030 (0x0A70 - 0x0A40)
+// 0x0028 (0x0A10 - 0x09E8)
 class AB_Prj_Athena_FragGrenade_C final : public AB_Prj_Athena_Grenade_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_Prj_Athena_FragGrenade_C;         // 0x0A40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      NS_Object_FloatingInWater;                         // 0x0A48(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_SurfaceTypeSoundComponent_C*        BP_SurfaceTypeSoundComponent;                      // 0x0A50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         PreExploWarning_PreExplo_E5859FFE443F57359EC2C0AB73DFA4CD; // 0x0A58(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            PreExploWarning__Direction_E5859FFE443F57359EC2C0AB73DFA4CD; // 0x0A5C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A5D[0x3];                                      // 0x0A5D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     PreExploWarning;                                   // 0x0A60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           FeedbackCue;                                       // 0x0A68(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_Prj_Athena_FragGrenade_C;         // 0x09E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBP_SurfaceTypeSoundComponent_C*        BP_SurfaceTypeSoundComponent;                      // 0x09F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         PreExploWarning_PreExplo_E5859FFE443F57359EC2C0AB73DFA4CD; // 0x09F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            PreExploWarning__Direction_E5859FFE443F57359EC2C0AB73DFA4CD; // 0x09FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9FD[0x3];                                      // 0x09FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     PreExploWarning;                                   // 0x0A00(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           FeedbackCue;                                       // 0x0A08(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_1_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody);
-	void BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_3_WaterInteractionOnExitWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsLastBody);
 	void ExecuteUbergraph_B_Prj_Athena_FragGrenade(int32 EntryPoint);
-	void FuseEnded();
+	void Pre_Explo_Audio_Tell();
+	void ReceiveBeginPlay();
 	void OnBounce(const struct FHitResult& Hit);
 	void OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults);
-	void Pre_Explo_Audio_Tell();
-	void PreExploWarning__FinishedFunc();
+	void FuseEnded();
 	void PreExploWarning__UpdateFunc();
-	void ReceiveBeginPlay();
+	void PreExploWarning__FinishedFunc();
 
 public:
 	static class UClass* StaticClass()
@@ -54,6 +51,14 @@ public:
 		return GetDefaultObjImpl<AB_Prj_Athena_FragGrenade_C>();
 	}
 };
+static_assert(alignof(AB_Prj_Athena_FragGrenade_C) == 0x000008, "Wrong alignment on AB_Prj_Athena_FragGrenade_C");
+static_assert(sizeof(AB_Prj_Athena_FragGrenade_C) == 0x000A10, "Wrong size on AB_Prj_Athena_FragGrenade_C");
+static_assert(offsetof(AB_Prj_Athena_FragGrenade_C, UberGraphFrame_B_Prj_Athena_FragGrenade_C) == 0x0009E8, "Member 'AB_Prj_Athena_FragGrenade_C::UberGraphFrame_B_Prj_Athena_FragGrenade_C' has a wrong offset!");
+static_assert(offsetof(AB_Prj_Athena_FragGrenade_C, BP_SurfaceTypeSoundComponent) == 0x0009F0, "Member 'AB_Prj_Athena_FragGrenade_C::BP_SurfaceTypeSoundComponent' has a wrong offset!");
+static_assert(offsetof(AB_Prj_Athena_FragGrenade_C, PreExploWarning_PreExplo_E5859FFE443F57359EC2C0AB73DFA4CD) == 0x0009F8, "Member 'AB_Prj_Athena_FragGrenade_C::PreExploWarning_PreExplo_E5859FFE443F57359EC2C0AB73DFA4CD' has a wrong offset!");
+static_assert(offsetof(AB_Prj_Athena_FragGrenade_C, PreExploWarning__Direction_E5859FFE443F57359EC2C0AB73DFA4CD) == 0x0009FC, "Member 'AB_Prj_Athena_FragGrenade_C::PreExploWarning__Direction_E5859FFE443F57359EC2C0AB73DFA4CD' has a wrong offset!");
+static_assert(offsetof(AB_Prj_Athena_FragGrenade_C, PreExploWarning) == 0x000A00, "Member 'AB_Prj_Athena_FragGrenade_C::PreExploWarning' has a wrong offset!");
+static_assert(offsetof(AB_Prj_Athena_FragGrenade_C, FeedbackCue) == 0x000A08, "Member 'AB_Prj_Athena_FragGrenade_C::FeedbackCue' has a wrong offset!");
 
 }
 

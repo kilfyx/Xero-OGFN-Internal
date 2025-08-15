@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UTwitchNotification_C>();
 	}
 };
+static_assert(alignof(UTwitchNotification_C) == 0x000008, "Wrong alignment on UTwitchNotification_C");
+static_assert(sizeof(UTwitchNotification_C) == 0x000108, "Wrong size on UTwitchNotification_C");
 
 }
 

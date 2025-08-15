@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Ranged_GenericProjectileExplosive.GA_Ranged_GenericProjectileExplosive_C
-// 0x0000 (0x0AF0 - 0x0AF0)
+// 0x0000 (0x0B00 - 0x0B00)
 class UGA_Ranged_GenericProjectileExplosive_C : public UGA_Ranged_GenericDamage_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGA_Ranged_GenericProjectileExplosive_C>();
 	}
 };
+static_assert(alignof(UGA_Ranged_GenericProjectileExplosive_C) == 0x000008, "Wrong alignment on UGA_Ranged_GenericProjectileExplosive_C");
+static_assert(sizeof(UGA_Ranged_GenericProjectileExplosive_C) == 0x000B00, "Wrong size on UGA_Ranged_GenericProjectileExplosive_C");
 
 }
 

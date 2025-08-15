@@ -18,29 +18,29 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_UI_ScannerScreen.BP_UI_ScannerScreen_C
-// 0x0038 (0x08F8 - 0x08C0)
+// 0x0038 (0x0800 - 0x07C8)
 class ABP_UI_ScannerScreen_C final : public ABuildingGameplayActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetComponent*                       ScreenWidget;                                      // 0x08C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x08D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         ErrorTimeline_Switch_EBBEA5504EC9CD2C274D38AA3BFC1EEF; // 0x08D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            ErrorTimeline__Direction_EBBEA5504EC9CD2C274D38AA3BFC1EEF; // 0x08DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8DD[0x3];                                      // 0x08DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     ErrorTimeline;                                     // 0x08E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUI_ScannerScreen_C*                    Widget_Screen;                                     // 0x08E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           TimeoutHandle;                                     // 0x08F0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetComponent*                       ScreenWidget;                                      // 0x07D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x07D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         ErrorTimeline_Switch_EBBEA5504EC9CD2C274D38AA3BFC1EEF; // 0x07E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            ErrorTimeline__Direction_EBBEA5504EC9CD2C274D38AA3BFC1EEF; // 0x07E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7E5[0x3];                                      // 0x07E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     ErrorTimeline;                                     // 0x07E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUI_ScannerScreen_C*                    Widget_Screen;                                     // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           TimeoutHandle;                                     // 0x07F8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_BP_UI_ScannerScreen(int32 EntryPoint);
 	void ScreenEventTargetLost(const class FText& LostText);
-	void ScreenEventSuccess(const class FText& SuccessText);
+	void ScreenEventDismiss();
 	void ScreenEventScan();
 	void ScreenEventFailure(const class FText& FailureText);
+	void ScreenEventSuccess(const class FText& SuccessText);
 	void ScreenEventError(bool Reverse);
-	void ScreenEventDismiss();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_UI_ScannerScreen(int32 EntryPoint);
 	void ErrorTimeline__UpdateFunc();
 	void ErrorTimeline__FinishedFunc();
 
@@ -54,6 +54,16 @@ public:
 		return GetDefaultObjImpl<ABP_UI_ScannerScreen_C>();
 	}
 };
+static_assert(alignof(ABP_UI_ScannerScreen_C) == 0x000008, "Wrong alignment on ABP_UI_ScannerScreen_C");
+static_assert(sizeof(ABP_UI_ScannerScreen_C) == 0x000800, "Wrong size on ABP_UI_ScannerScreen_C");
+static_assert(offsetof(ABP_UI_ScannerScreen_C, UberGraphFrame) == 0x0007C8, "Member 'ABP_UI_ScannerScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_UI_ScannerScreen_C, ScreenWidget) == 0x0007D0, "Member 'ABP_UI_ScannerScreen_C::ScreenWidget' has a wrong offset!");
+static_assert(offsetof(ABP_UI_ScannerScreen_C, DefaultSceneRoot) == 0x0007D8, "Member 'ABP_UI_ScannerScreen_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_UI_ScannerScreen_C, ErrorTimeline_Switch_EBBEA5504EC9CD2C274D38AA3BFC1EEF) == 0x0007E0, "Member 'ABP_UI_ScannerScreen_C::ErrorTimeline_Switch_EBBEA5504EC9CD2C274D38AA3BFC1EEF' has a wrong offset!");
+static_assert(offsetof(ABP_UI_ScannerScreen_C, ErrorTimeline__Direction_EBBEA5504EC9CD2C274D38AA3BFC1EEF) == 0x0007E4, "Member 'ABP_UI_ScannerScreen_C::ErrorTimeline__Direction_EBBEA5504EC9CD2C274D38AA3BFC1EEF' has a wrong offset!");
+static_assert(offsetof(ABP_UI_ScannerScreen_C, ErrorTimeline) == 0x0007E8, "Member 'ABP_UI_ScannerScreen_C::ErrorTimeline' has a wrong offset!");
+static_assert(offsetof(ABP_UI_ScannerScreen_C, Widget_Screen) == 0x0007F0, "Member 'ABP_UI_ScannerScreen_C::Widget_Screen' has a wrong offset!");
+static_assert(offsetof(ABP_UI_ScannerScreen_C, TimeoutHandle) == 0x0007F8, "Member 'ABP_UI_ScannerScreen_C::TimeoutHandle' has a wrong offset!");
 
 }
 

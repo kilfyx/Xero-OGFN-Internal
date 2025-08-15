@@ -21,6 +21,9 @@ struct B_Grenade_Molotov_Athena_C_ExecuteUbergraph_B_Grenade_Molotov_Athena fina
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(B_Grenade_Molotov_Athena_C_ExecuteUbergraph_B_Grenade_Molotov_Athena) == 0x000004, "Wrong alignment on B_Grenade_Molotov_Athena_C_ExecuteUbergraph_B_Grenade_Molotov_Athena");
+static_assert(sizeof(B_Grenade_Molotov_Athena_C_ExecuteUbergraph_B_Grenade_Molotov_Athena) == 0x000004, "Wrong size on B_Grenade_Molotov_Athena_C_ExecuteUbergraph_B_Grenade_Molotov_Athena");
+static_assert(offsetof(B_Grenade_Molotov_Athena_C_ExecuteUbergraph_B_Grenade_Molotov_Athena, EntryPoint) == 0x000000, "Member 'B_Grenade_Molotov_Athena_C_ExecuteUbergraph_B_Grenade_Molotov_Athena::EntryPoint' has a wrong offset!");
 
 }
 

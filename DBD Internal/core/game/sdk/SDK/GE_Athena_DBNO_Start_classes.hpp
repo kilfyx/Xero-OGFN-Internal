@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Athena_DBNO_Start_C>();
 	}
 };
+static_assert(alignof(UGE_Athena_DBNO_Start_C) == 0x000008, "Wrong alignment on UGE_Athena_DBNO_Start_C");
+static_assert(sizeof(UGE_Athena_DBNO_Start_C) == 0x000800, "Wrong size on UGE_Athena_DBNO_Start_C");
 
 }
 

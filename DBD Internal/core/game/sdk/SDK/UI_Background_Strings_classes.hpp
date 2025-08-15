@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass UI_Background_Strings.UI_Background_Strings_C
-// 0x0028 (0x0290 - 0x0268)
+// 0x0028 (0x0288 - 0x0260)
 class UUI_Background_Strings_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0268(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonRichTextBlock*                   CustomString;                                      // 0x0270(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   CustomText;                                        // 0x0278(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonRichTextBlock*                   CustomString;                                      // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   CustomText;                                        // 0x0270(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
 	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_UI_Background_Strings(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_UI_Background_Strings(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -42,10 +42,10 @@ public:
 	}
 };
 static_assert(alignof(UUI_Background_Strings_C) == 0x000008, "Wrong alignment on UUI_Background_Strings_C");
-static_assert(sizeof(UUI_Background_Strings_C) == 0x000290, "Wrong size on UUI_Background_Strings_C");
-static_assert(offsetof(UUI_Background_Strings_C, UberGraphFrame) == 0x000268, "Member 'UUI_Background_Strings_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UUI_Background_Strings_C, CustomString) == 0x000270, "Member 'UUI_Background_Strings_C::CustomString' has a wrong offset!");
-static_assert(offsetof(UUI_Background_Strings_C, CustomText) == 0x000278, "Member 'UUI_Background_Strings_C::CustomText' has a wrong offset!");
+static_assert(sizeof(UUI_Background_Strings_C) == 0x000288, "Wrong size on UUI_Background_Strings_C");
+static_assert(offsetof(UUI_Background_Strings_C, UberGraphFrame) == 0x000260, "Member 'UUI_Background_Strings_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UUI_Background_Strings_C, CustomString) == 0x000268, "Member 'UUI_Background_Strings_C::CustomString' has a wrong offset!");
+static_assert(offsetof(UUI_Background_Strings_C, CustomText) == 0x000270, "Member 'UUI_Background_Strings_C::CustomText' has a wrong offset!");
 
 }
 

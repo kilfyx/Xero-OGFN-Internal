@@ -21,8 +21,8 @@ namespace SDK
 class IPlayerAnimOverrideLayerInterface_C final
 {
 public:
-	void CharacterSkeletalControlPostLegIK(const struct FPoseLink& InPosePostLegIK, struct FPoseLink* CharacterSkeletalControlPostLegIK_0);
 	void FullBodyOverride(const struct FPoseLink& PassThroughFullBodyPose, struct FPoseLink* FullBodyOverride_0);
+	void CharacterSkeletalControlPostLegIK(const struct FPoseLink& InPosePostLegIK, struct FPoseLink* CharacterSkeletalControlPostLegIK_0);
 
 public:
 	static class UClass* StaticClass()
@@ -43,6 +43,8 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+static_assert(alignof(IPlayerAnimOverrideLayerInterface_C) == 0x000001, "Wrong alignment on IPlayerAnimOverrideLayerInterface_C");
+static_assert(sizeof(IPlayerAnimOverrideLayerInterface_C) == 0x000001, "Wrong size on IPlayerAnimOverrideLayerInterface_C");
 
 }
 

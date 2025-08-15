@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Border_Solid_DkBlue.Border_Solid_DkBlue_C
-// 0x0000 (0x00E0 - 0x00E0)
+// 0x0000 (0x00B0 - 0x00B0)
 class UBorder_Solid_DkBlue_C final : public UCommonBorderStyle
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBorder_Solid_DkBlue_C>();
 	}
 };
+static_assert(alignof(UBorder_Solid_DkBlue_C) == 0x000008, "Wrong alignment on UBorder_Solid_DkBlue_C");
+static_assert(sizeof(UBorder_Solid_DkBlue_C) == 0x0000B0, "Wrong size on UBorder_Solid_DkBlue_C");
 
 }
 

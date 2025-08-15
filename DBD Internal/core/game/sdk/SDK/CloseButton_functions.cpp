@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function CloseButton.CloseButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UCloseButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CloseButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CloseButton.CloseButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UCloseButton_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CloseButton_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function CloseButton.CloseButton_C.ExecuteUbergraph_CloseButton
 // (Final, UbergraphFunction)
 // Parameters:
@@ -62,6 +34,34 @@ void UCloseButton_C::ExecuteUbergraph_CloseButton(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function CloseButton.CloseButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UCloseButton_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CloseButton_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CloseButton.CloseButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UCloseButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CloseButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

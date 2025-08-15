@@ -109,31 +109,6 @@ void URadioPlayerWidgetBase::NativeExitedVehicle()
 }
 
 
-// Function SrirachaRanchUI.RadioPlayerWidgetBase.OnControllerGainedNewFortPawn
-// (Final, Native, Protected)
-// Parameters:
-// class AFortPawn*                        FortPawn                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void URadioPlayerWidgetBase::OnControllerGainedNewFortPawn(class AFortPawn* FortPawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RadioPlayerWidgetBase", "OnControllerGainedNewFortPawn");
-
-	Params::RadioPlayerWidgetBase_OnControllerGainedNewFortPawn Parms{};
-
-	Parms.FortPawn = FortPawn;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function SrirachaRanchUI.RadioPlayerWidgetBase.OnDisconnectFromComp
 // (Event, Protected, BlueprintEvent)
 

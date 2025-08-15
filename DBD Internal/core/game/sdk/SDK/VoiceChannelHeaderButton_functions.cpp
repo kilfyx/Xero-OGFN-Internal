@@ -17,82 +17,6 @@
 namespace SDK
 {
 
-// Function VoiceChannelHeaderButton.VoiceChannelHeaderButton_C.BP_OnDisabled
-// (Event, Protected, BlueprintEvent)
-
-void UVoiceChannelHeaderButton_C::BP_OnDisabled()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VoiceChannelHeaderButton_C", "BP_OnDisabled");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function VoiceChannelHeaderButton.VoiceChannelHeaderButton_C.BP_OnEnabled
-// (Event, Protected, BlueprintEvent)
-
-void UVoiceChannelHeaderButton_C::BP_OnEnabled()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VoiceChannelHeaderButton_C", "BP_OnEnabled");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function VoiceChannelHeaderButton.VoiceChannelHeaderButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UVoiceChannelHeaderButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VoiceChannelHeaderButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function VoiceChannelHeaderButton.VoiceChannelHeaderButton_C.BP_OnItemExpansionChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UVoiceChannelHeaderButton_C::BP_OnItemExpansionChanged(bool bIsExpanded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VoiceChannelHeaderButton_C", "BP_OnItemExpansionChanged");
-
-	Params::VoiceChannelHeaderButton_C_BP_OnItemExpansionChanged Parms{};
-
-	Parms.bIsExpanded = bIsExpanded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function VoiceChannelHeaderButton.VoiceChannelHeaderButton_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void UVoiceChannelHeaderButton_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VoiceChannelHeaderButton_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function VoiceChannelHeaderButton.VoiceChannelHeaderButton_C.ExecuteUbergraph_VoiceChannelHeaderButton
 // (Final, UbergraphFunction)
 // Parameters:
@@ -113,35 +37,91 @@ void UVoiceChannelHeaderButton_C::ExecuteUbergraph_VoiceChannelHeaderButton(int3
 }
 
 
-// Function VoiceChannelHeaderButton.VoiceChannelHeaderButton_C.OnListItemObjectSet_1
-// (BlueprintCallable, BlueprintEvent)
+// Function VoiceChannelHeaderButton.VoiceChannelHeaderButton_C.OnExpansionChanged
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UVoiceChannelHeaderButton_C::OnListItemObjectSet_1(class UObject* ListItemObject)
+void UVoiceChannelHeaderButton_C::OnExpansionChanged(bool bIsExpanded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("VoiceChannelHeaderButton_C", "OnListItemObjectSet_1");
+		Func = Class->GetFunction("VoiceChannelHeaderButton_C", "OnExpansionChanged");
 
-	Params::VoiceChannelHeaderButton_C_OnListItemObjectSet_1 Parms{};
+	Params::VoiceChannelHeaderButton_C_OnExpansionChanged Parms{};
 
-	Parms.ListItemObject = ListItemObject;
+	Parms.bIsExpanded = bIsExpanded;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function VoiceChannelHeaderButton.VoiceChannelHeaderButton_C.BP_OnEnabled
+// (Event, Protected, BlueprintEvent)
+
+void UVoiceChannelHeaderButton_C::BP_OnEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VoiceChannelHeaderButton_C", "BP_OnEnabled");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function VoiceChannelHeaderButton.VoiceChannelHeaderButton_C.BP_OnDisabled
+// (Event, Protected, BlueprintEvent)
+
+void UVoiceChannelHeaderButton_C::BP_OnDisabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VoiceChannelHeaderButton_C", "BP_OnDisabled");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function VoiceChannelHeaderButton.VoiceChannelHeaderButton_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UVoiceChannelHeaderButton_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VoiceChannelHeaderButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function VoiceChannelHeaderButton.VoiceChannelHeaderButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UVoiceChannelHeaderButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VoiceChannelHeaderButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function VoiceChannelHeaderButton.VoiceChannelHeaderButton_C.OnUpdateVisuals
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsActiveAndListening                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsActiveOrAvailable                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsAvailableAndNotActive                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsListening                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsActive                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bRepresentingPlatformChat                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bChannelAvailable                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bTransmitting                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UVoiceChannelHeaderButton_C::OnUpdateVisuals(bool bIsActiveAndListening, bool bIsActiveOrAvailable, bool bIsAvailableAndNotActive, bool bIsListening)
+void UVoiceChannelHeaderButton_C::OnUpdateVisuals(bool bIsActive, bool bRepresentingPlatformChat, bool bChannelAvailable, bool bTransmitting)
 {
 	static class UFunction* Func = nullptr;
 
@@ -150,10 +130,10 @@ void UVoiceChannelHeaderButton_C::OnUpdateVisuals(bool bIsActiveAndListening, bo
 
 	Params::VoiceChannelHeaderButton_C_OnUpdateVisuals Parms{};
 
-	Parms.bIsActiveAndListening = bIsActiveAndListening;
-	Parms.bIsActiveOrAvailable = bIsActiveOrAvailable;
-	Parms.bIsAvailableAndNotActive = bIsAvailableAndNotActive;
-	Parms.bIsListening = bIsListening;
+	Parms.bIsActive = bIsActive;
+	Parms.bRepresentingPlatformChat = bRepresentingPlatformChat;
+	Parms.bChannelAvailable = bChannelAvailable;
+	Parms.bTransmitting = bTransmitting;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

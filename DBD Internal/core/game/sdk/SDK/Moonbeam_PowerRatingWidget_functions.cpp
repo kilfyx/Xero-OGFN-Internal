@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function Moonbeam_PowerRatingWidget.Moonbeam_PowerRatingWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UMoonbeam_PowerRatingWidget_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Moonbeam_PowerRatingWidget_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Moonbeam_PowerRatingWidget.Moonbeam_PowerRatingWidget_C.ExecuteUbergraph_Moonbeam_PowerRatingWidget
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -51,21 +37,35 @@ void UMoonbeam_PowerRatingWidget_C::ExecuteUbergraph_Moonbeam_PowerRatingWidget(
 }
 
 
-// Function Moonbeam_PowerRatingWidget.Moonbeam_PowerRatingWidget_C.OnBasePowerRatingUpdated
+// Function Moonbeam_PowerRatingWidget.Moonbeam_PowerRatingWidget_C.OnTeamMembershipChanged
 // (Event, Protected, BlueprintEvent)
-// Parameters:
-// int32                                   BasePowerRating                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMoonbeam_PowerRatingWidget_C::OnBasePowerRatingUpdated(int32 BasePowerRating)
+void UMoonbeam_PowerRatingWidget_C::OnTeamMembershipChanged()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Moonbeam_PowerRatingWidget_C", "OnBasePowerRatingUpdated");
+		Func = Class->GetFunction("Moonbeam_PowerRatingWidget_C", "OnTeamMembershipChanged");
 
-	Params::Moonbeam_PowerRatingWidget_C_OnBasePowerRatingUpdated Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.BasePowerRating = BasePowerRating;
+
+// Function Moonbeam_PowerRatingWidget.Moonbeam_PowerRatingWidget_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UMoonbeam_PowerRatingWidget_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Moonbeam_PowerRatingWidget_C", "PreConstruct");
+
+	Params::Moonbeam_PowerRatingWidget_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -93,20 +93,6 @@ void UMoonbeam_PowerRatingWidget_C::OnPowerRatingProgressUpdated(float BaseRatin
 }
 
 
-// Function Moonbeam_PowerRatingWidget.Moonbeam_PowerRatingWidget_C.OnTeamMembershipChanged
-// (Event, Protected, BlueprintEvent)
-
-void UMoonbeam_PowerRatingWidget_C::OnTeamMembershipChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Moonbeam_PowerRatingWidget_C", "OnTeamMembershipChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Moonbeam_PowerRatingWidget.Moonbeam_PowerRatingWidget_C.OnTeamPowerRatingUpdated
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -127,23 +113,51 @@ void UMoonbeam_PowerRatingWidget_C::OnTeamPowerRatingUpdated(int32 TeamPowerRati
 }
 
 
-// Function Moonbeam_PowerRatingWidget.Moonbeam_PowerRatingWidget_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Moonbeam_PowerRatingWidget.Moonbeam_PowerRatingWidget_C.OnBasePowerRatingUpdated
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   BasePowerRating                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMoonbeam_PowerRatingWidget_C::PreConstruct(bool IsDesignTime)
+void UMoonbeam_PowerRatingWidget_C::OnBasePowerRatingUpdated(int32 BasePowerRating)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Moonbeam_PowerRatingWidget_C", "PreConstruct");
+		Func = Class->GetFunction("Moonbeam_PowerRatingWidget_C", "OnBasePowerRatingUpdated");
 
-	Params::Moonbeam_PowerRatingWidget_C_PreConstruct Parms{};
+	Params::Moonbeam_PowerRatingWidget_C_OnBasePowerRatingUpdated Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.BasePowerRating = BasePowerRating;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Moonbeam_PowerRatingWidget.Moonbeam_PowerRatingWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UMoonbeam_PowerRatingWidget_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Moonbeam_PowerRatingWidget_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Moonbeam_PowerRatingWidget.Moonbeam_PowerRatingWidget_C.UpdateWidgetState
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UMoonbeam_PowerRatingWidget_C::UpdateWidgetState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Moonbeam_PowerRatingWidget_C", "UpdateWidgetState");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -164,20 +178,6 @@ void UMoonbeam_PowerRatingWidget_C::SetBackgroundColor(const struct FLinearColor
 	Parms.NewColor = std::move(NewColor);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Moonbeam_PowerRatingWidget.Moonbeam_PowerRatingWidget_C.UpdateWidgetState
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UMoonbeam_PowerRatingWidget_C::UpdateWidgetState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Moonbeam_PowerRatingWidget_C", "UpdateWidgetState");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

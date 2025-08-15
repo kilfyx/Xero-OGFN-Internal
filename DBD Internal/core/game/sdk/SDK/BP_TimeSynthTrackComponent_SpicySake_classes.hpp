@@ -31,10 +31,10 @@ public:
 	int32                                         Attack_FacingID;                                   // 0x0250(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void OnDataTrackerUpdate();
 	void GetRemainingEventCooldown(float* Cooldown);
 	void HandleMixState();
 	void OnDataTrackerStart();
-	void OnDataTrackerUpdate();
 
 public:
 	static class UClass* StaticClass()
@@ -46,6 +46,15 @@ public:
 		return GetDefaultObjImpl<UBP_TimeSynthTrackComponent_SpicySake_C>();
 	}
 };
+static_assert(alignof(UBP_TimeSynthTrackComponent_SpicySake_C) == 0x000008, "Wrong alignment on UBP_TimeSynthTrackComponent_SpicySake_C");
+static_assert(sizeof(UBP_TimeSynthTrackComponent_SpicySake_C) == 0x000258, "Wrong size on UBP_TimeSynthTrackComponent_SpicySake_C");
+static_assert(offsetof(UBP_TimeSynthTrackComponent_SpicySake_C, InterpFloat_Circling) == 0x000230, "Member 'UBP_TimeSynthTrackComponent_SpicySake_C::InterpFloat_Circling' has a wrong offset!");
+static_assert(offsetof(UBP_TimeSynthTrackComponent_SpicySake_C, InterpFloat_Attacking) == 0x000234, "Member 'UBP_TimeSynthTrackComponent_SpicySake_C::InterpFloat_Attacking' has a wrong offset!");
+static_assert(offsetof(UBP_TimeSynthTrackComponent_SpicySake_C, EventTag_Circling) == 0x000238, "Member 'UBP_TimeSynthTrackComponent_SpicySake_C::EventTag_Circling' has a wrong offset!");
+static_assert(offsetof(UBP_TimeSynthTrackComponent_SpicySake_C, EventTag_Attacking) == 0x000240, "Member 'UBP_TimeSynthTrackComponent_SpicySake_C::EventTag_Attacking' has a wrong offset!");
+static_assert(offsetof(UBP_TimeSynthTrackComponent_SpicySake_C, CirclingID) == 0x000248, "Member 'UBP_TimeSynthTrackComponent_SpicySake_C::CirclingID' has a wrong offset!");
+static_assert(offsetof(UBP_TimeSynthTrackComponent_SpicySake_C, AttackID) == 0x00024C, "Member 'UBP_TimeSynthTrackComponent_SpicySake_C::AttackID' has a wrong offset!");
+static_assert(offsetof(UBP_TimeSynthTrackComponent_SpicySake_C, Attack_FacingID) == 0x000250, "Member 'UBP_TimeSynthTrackComponent_SpicySake_C::Attack_FacingID' has a wrong offset!");
 
 }
 

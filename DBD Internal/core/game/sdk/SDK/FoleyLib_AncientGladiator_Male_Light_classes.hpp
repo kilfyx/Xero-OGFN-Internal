@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UFoleyLib_AncientGladiator_Male_Light_C>();
 	}
 };
+static_assert(alignof(UFoleyLib_AncientGladiator_Male_Light_C) == 0x000008, "Wrong alignment on UFoleyLib_AncientGladiator_Male_Light_C");
+static_assert(sizeof(UFoleyLib_AncientGladiator_Male_Light_C) == 0x0000B0, "Wrong size on UFoleyLib_AncientGladiator_Male_Light_C");
 
 }
 

@@ -67,8 +67,83 @@ void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor)
 }
 
 
+// Function Landscape.LandscapeProxy.ChangeTessellationComponentScreenSize
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InTessellationComponentScreenSize                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ALandscapeProxy::ChangeTessellationComponentScreenSize(float InTessellationComponentScreenSize)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LandscapeProxy", "ChangeTessellationComponentScreenSize");
+
+	Params::LandscapeProxy_ChangeTessellationComponentScreenSize Parms{};
+
+	Parms.InTessellationComponentScreenSize = InTessellationComponentScreenSize;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Landscape.LandscapeProxy.ChangeTessellationComponentScreenSizeFalloff
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InUseTessellationComponentScreenSizeFalloff            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ALandscapeProxy::ChangeTessellationComponentScreenSizeFalloff(float InUseTessellationComponentScreenSizeFalloff)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LandscapeProxy", "ChangeTessellationComponentScreenSizeFalloff");
+
+	Params::LandscapeProxy_ChangeTessellationComponentScreenSizeFalloff Parms{};
+
+	Parms.InUseTessellationComponentScreenSizeFalloff = InUseTessellationComponentScreenSizeFalloff;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Landscape.LandscapeProxy.ChangeUseTessellationComponentScreenSizeFalloff
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    InComponentScreenSizeToUseSubSections                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ALandscapeProxy::ChangeUseTessellationComponentScreenSizeFalloff(bool InComponentScreenSizeToUseSubSections)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LandscapeProxy", "ChangeUseTessellationComponentScreenSizeFalloff");
+
+	Params::LandscapeProxy_ChangeUseTessellationComponentScreenSizeFalloff Parms{};
+
+	Parms.InComponentScreenSizeToUseSubSections = InComponentScreenSizeToUseSubSections;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Landscape.LandscapeProxy.EditorApplySpline
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class USplineComponent*                 InSplineComponent                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   StartWidth                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -81,9 +156,8 @@ void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor)
 // bool                                    bRaiseHeights                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bLowerHeights                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class ULandscapeLayerInfoObject*        PaintLayer                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             EditLayerName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponent, float StartWidth, float EndWidth, float StartSideFalloff, float EndSideFalloff, float StartRoll, float EndRoll, int32 NumSubdivisions, bool bRaiseHeights, bool bLowerHeights, class ULandscapeLayerInfoObject* PaintLayer, class FName EditLayerName)
+void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponent, float StartWidth, float EndWidth, float StartSideFalloff, float EndSideFalloff, float StartRoll, float EndRoll, int32 NumSubdivisions, bool bRaiseHeights, bool bLowerHeights, class ULandscapeLayerInfoObject* PaintLayer)
 {
 	static class UFunction* Func = nullptr;
 
@@ -103,7 +177,6 @@ void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponen
 	Parms.bRaiseHeights = bRaiseHeights;
 	Parms.bLowerHeights = bLowerHeights;
 	Parms.PaintLayer = PaintLayer;
-	Parms.EditLayerName = EditLayerName;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -255,9 +328,9 @@ void ALandscapeProxy::SetLandscapeMaterialVectorParameterValue(class FName Param
 // Function Landscape.LandscapeBlueprintBrushBase.GetBlueprintRenderDependencies
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// TArray<class UObject*>*                 OutStreamableAssets                                    (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class UTexture2D*>*              OutStreamableAssets                                    (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void ALandscapeBlueprintBrushBase::GetBlueprintRenderDependencies(TArray<class UObject*>* OutStreamableAssets)
+void ALandscapeBlueprintBrushBase::GetBlueprintRenderDependencies(TArray<class UTexture2D*>* OutStreamableAssets)
 {
 	static class UFunction* Func = nullptr;
 
@@ -469,7 +542,7 @@ class ULandscapeComponent* ULandscapeHeightfieldCollisionComponent::GetRenderCom
 // Function Landscape.LandscapeSplinesComponent.GetSplineMeshComponents
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class USplineMeshComponent*>     ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// TArray<class USplineMeshComponent*>     ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<class USplineMeshComponent*> ULandscapeSplinesComponent::GetSplineMeshComponents()
 {

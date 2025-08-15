@@ -17,114 +17,66 @@
 namespace SDK
 {
 
-// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.BP_OnDeselected
-// (Event, Protected, BlueprintEvent)
+// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.UpdateDisplay
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UAthenaMOTDTileMainPage_C::BP_OnDeselected()
+void UAthenaMOTDTileMainPage_C::UpdateDisplay()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnDeselected");
+		Func = Class->GetFunction("AthenaMOTDTileMainPage_C", "UpdateDisplay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.BP_OnItemSelectionChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.ShowImageOnly
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UAthenaMOTDTileMainPage_C::BP_OnItemSelectionChanged(bool bIsSelected)
+void UAthenaMOTDTileMainPage_C::ShowImageOnly()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnItemSelectionChanged");
+		Func = Class->GetFunction("AthenaMOTDTileMainPage_C", "ShowImageOnly");
 
-	Params::AthenaMOTDTileMainPage_C_BP_OnItemSelectionChanged Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.bIsSelected = bIsSelected;
+
+// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaMOTDTileMainPage_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMOTDTileMainPage_C", "PreConstruct");
+
+	Params::AthenaMOTDTileMainPage_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.BP_OnSelected
-// (Event, Protected, BlueprintEvent)
-
-void UAthenaMOTDTileMainPage_C::BP_OnSelected()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnSelected");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAthenaMOTDTileMainPage_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.ExecuteUbergraph_AthenaMOTDTileMainPage
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaMOTDTileMainPage_C::ExecuteUbergraph_AthenaMOTDTileMainPage(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaMOTDTileMainPage");
-
-	Params::AthenaMOTDTileMainPage_C_ExecuteUbergraph_AthenaMOTDTileMainPage Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAthenaMOTDTileMainPage_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.OnMouseEnter
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UAthenaMOTDTileMainPage_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnMouseEnter");
+		Func = Class->GetFunction("AthenaMOTDTileMainPage_C", "OnMouseEnter");
 
 	Params::AthenaMOTDTileMainPage_C_OnMouseEnter Parms{};
 
@@ -138,14 +90,14 @@ void UAthenaMOTDTileMainPage_C::OnMouseEnter(const struct FGeometry& MyGeometry,
 // Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.OnMouseLeave
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UAthenaMOTDTileMainPage_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnMouseLeave");
+		Func = Class->GetFunction("AthenaMOTDTileMainPage_C", "OnMouseLeave");
 
 	Params::AthenaMOTDTileMainPage_C_OnMouseLeave Parms{};
 
@@ -155,17 +107,37 @@ void UAthenaMOTDTileMainPage_C::OnMouseLeave(const struct FPointerEvent& MouseEv
 }
 
 
+// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.BP_OnItemSelectionChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaMOTDTileMainPage_C::BP_OnItemSelectionChanged(bool bIsSelected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMOTDTileMainPage_C", "BP_OnItemSelectionChanged");
+
+	Params::AthenaMOTDTileMainPage_C_BP_OnItemSelectionChanged Parms{};
+
+	Parms.bIsSelected = bIsSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.OnPopulateNews
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FAthenaMOTDBase                  NewsEntry                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FAthenaMOTDBase&           NewsEntry                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UAthenaMOTDTileMainPage_C::OnPopulateNews(const struct FAthenaMOTDBase& NewsEntry)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnPopulateNews");
+		Func = Class->GetFunction("AthenaMOTDTileMainPage_C", "OnPopulateNews");
 
 	Params::AthenaMOTDTileMainPage_C_OnPopulateNews Parms{};
 
@@ -175,51 +147,65 @@ void UAthenaMOTDTileMainPage_C::OnPopulateNews(const struct FAthenaMOTDBase& New
 }
 
 
-// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.BP_OnSelected
+// (Event, Protected, BlueprintEvent)
 
-void UAthenaMOTDTileMainPage_C::PreConstruct(bool IsDesignTime)
+void UAthenaMOTDTileMainPage_C::BP_OnSelected()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PreConstruct");
+		Func = Class->GetFunction("AthenaMOTDTileMainPage_C", "BP_OnSelected");
 
-	Params::AthenaMOTDTileMainPage_C_PreConstruct Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsDesignTime = IsDesignTime;
+
+// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.BP_OnDeselected
+// (Event, Protected, BlueprintEvent)
+
+void UAthenaMOTDTileMainPage_C::BP_OnDeselected()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMOTDTileMainPage_C", "BP_OnDeselected");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UAthenaMOTDTileMainPage_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMOTDTileMainPage_C", "OnInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.ExecuteUbergraph_AthenaMOTDTileMainPage
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaMOTDTileMainPage_C::ExecuteUbergraph_AthenaMOTDTileMainPage(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMOTDTileMainPage_C", "ExecuteUbergraph_AthenaMOTDTileMainPage");
+
+	Params::AthenaMOTDTileMainPage_C_ExecuteUbergraph_AthenaMOTDTileMainPage Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.ShowImageOnly
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UAthenaMOTDTileMainPage_C::ShowImageOnly()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ShowImageOnly");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C.UpdateDisplay
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UAthenaMOTDTileMainPage_C::UpdateDisplay()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateDisplay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

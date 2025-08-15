@@ -17,29 +17,35 @@
 namespace SDK
 {
 
+// Function ShowdownTournamentPosterBack.ShowdownTournamentPosterBack_C.ExecuteUbergraph_ShowdownTournamentPosterBack
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UShowdownTournamentPosterBack_C::ExecuteUbergraph_ShowdownTournamentPosterBack(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownTournamentPosterBack_C", "ExecuteUbergraph_ShowdownTournamentPosterBack");
+
+	Params::ShowdownTournamentPosterBack_C_ExecuteUbergraph_ShowdownTournamentPosterBack Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function ShowdownTournamentPosterBack.ShowdownTournamentPosterBack_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UShowdownTournamentPosterBack_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ShowdownTournamentPosterBack.ShowdownTournamentPosterBack_C.EventColorize
-// (BlueprintCallable, BlueprintEvent)
-
-void UShowdownTournamentPosterBack_C::EventColorize()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventColorize");
+		Func = Class->GetFunction("ShowdownTournamentPosterBack_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,52 +57,25 @@ void UShowdownTournamentPosterBack_C::EventColorize()
 void UShowdownTournamentPosterBack_C::EventPopulateEventWindowData()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("EventPopulateEventWindowData");
+		Func = Class->GetFunction("ShowdownTournamentPosterBack_C", "EventPopulateEventWindowData");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ShowdownTournamentPosterBack.ShowdownTournamentPosterBack_C.ExecuteUbergraph_ShowdownTournamentPosterBack
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ShowdownTournamentPosterBack.ShowdownTournamentPosterBack_C.EventColorize
+// (BlueprintCallable, BlueprintEvent)
 
-void UShowdownTournamentPosterBack_C::ExecuteUbergraph_ShowdownTournamentPosterBack(int32 EntryPoint)
+void UShowdownTournamentPosterBack_C::EventColorize()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_ShowdownTournamentPosterBack");
+		Func = Class->GetFunction("ShowdownTournamentPosterBack_C", "EventColorize");
 
-	Params::ShowdownTournamentPosterBack_C_ExecuteUbergraph_ShowdownTournamentPosterBack Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ShowdownTournamentPosterBack.ShowdownTournamentPosterBack_C.GetTournamentDateText
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             TournamentDate                                         (Parm, OutParm)
-
-void UShowdownTournamentPosterBack_C::GetTournamentDateText(class FText* TournamentDate)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("GetTournamentDateText");
-
-	Params::ShowdownTournamentPosterBack_C_GetTournamentDateText Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (TournamentDate != nullptr)
-		*TournamentDate = std::move(Parms.TournamentDate);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -106,11 +85,32 @@ void UShowdownTournamentPosterBack_C::GetTournamentDateText(class FText* Tournam
 void UShowdownTournamentPosterBack_C::RefreshDataBP()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshDataBP");
+		Func = Class->GetFunction("ShowdownTournamentPosterBack_C", "RefreshDataBP");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShowdownTournamentPosterBack.ShowdownTournamentPosterBack_C.GetTournamentDateText
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText*                            TournamentDate                                         (Parm, OutParm)
+
+void UShowdownTournamentPosterBack_C::GetTournamentDateText(class FText* TournamentDate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownTournamentPosterBack_C", "GetTournamentDateText");
+
+	Params::ShowdownTournamentPosterBack_C_GetTournamentDateText Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (TournamentDate != nullptr)
+		*TournamentDate = std::move(Parms.TournamentDate);
 }
 
 }

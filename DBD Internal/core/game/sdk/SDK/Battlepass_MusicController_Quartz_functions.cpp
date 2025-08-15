@@ -17,29 +17,29 @@
 namespace SDK
 {
 
-// Function Battlepass_MusicController_Quartz.Battlepass_MusicController_Quartz_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void ABattlepass_MusicController_Quartz_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Battlepass_MusicController_Quartz.Battlepass_MusicController_Quartz_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
 void ABattlepass_MusicController_Quartz_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveBeginPlay");
+		Func = Class->GetFunction("Battlepass_MusicController_Quartz_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Battlepass_MusicController_Quartz.Battlepass_MusicController_Quartz_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABattlepass_MusicController_Quartz_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Battlepass_MusicController_Quartz_C", "ReceiveDestroyed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -53,9 +53,9 @@ void ABattlepass_MusicController_Quartz_C::ReceiveBeginPlay()
 void ABattlepass_MusicController_Quartz_C::ExecuteUbergraph_Battlepass_MusicController_Quartz(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_Battlepass_MusicController_Quartz");
+		Func = Class->GetFunction("Battlepass_MusicController_Quartz_C", "ExecuteUbergraph_Battlepass_MusicController_Quartz");
 
 	Params::Battlepass_MusicController_Quartz_C_ExecuteUbergraph_Battlepass_MusicController_Quartz Parms{};
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MissionGen_Creative_ZebraWallet_D.MissionGen_Creative_ZebraWallet_D_C
-// 0x0000 (0x07E0 - 0x07E0)
+// 0x0000 (0x06C8 - 0x06C8)
 class UMissionGen_Creative_ZebraWallet_D_C final : public UFortMissionGenerator
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UMissionGen_Creative_ZebraWallet_D_C>();
 	}
 };
+static_assert(alignof(UMissionGen_Creative_ZebraWallet_D_C) == 0x000008, "Wrong alignment on UMissionGen_Creative_ZebraWallet_D_C");
+static_assert(sizeof(UMissionGen_Creative_ZebraWallet_D_C) == 0x0006C8, "Wrong size on UMissionGen_Creative_ZebraWallet_D_C");
 
 }
 

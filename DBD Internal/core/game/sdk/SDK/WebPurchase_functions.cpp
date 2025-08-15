@@ -20,7 +20,7 @@ namespace SDK
 // Function WebPurchase.WebPurchase_C.HandleBack
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   bPassThrough                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bPassThrough                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UWebPurchase_C::HandleBack(bool* bPassThrough)
 {
@@ -35,6 +35,34 @@ void UWebPurchase_C::HandleBack(bool* bPassThrough)
 
 	if (bPassThrough != nullptr)
 		*bPassThrough = Parms.bPassThrough;
+}
+
+
+// Function WebPurchase.WebPurchase_C.BindDelegates
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWebPurchase_C::BindDelegates()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WebPurchase_C", "BindDelegates");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WebPurchase.WebPurchase_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UWebPurchase_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WebPurchase_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -55,34 +83,6 @@ void UWebPurchase_C::ExecuteUbergraph_WebPurchase(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WebPurchase.WebPurchase_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UWebPurchase_C::BP_OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WebPurchase_C", "BP_OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WebPurchase.WebPurchase_C.BindDelegates
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWebPurchase_C::BindDelegates()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WebPurchase_C", "BindDelegates");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

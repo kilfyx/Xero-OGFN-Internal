@@ -20,25 +20,25 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LeaderboardListViewWrapper.LeaderboardListViewWrapper_C
-// 0x0210 (0x05C8 - 0x03B8)
+// 0x01E8 (0x0518 - 0x0330)
 class ULeaderboardListViewWrapper_C final : public UFortLeaderboardListViewWrapper
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UEventsSimpleButton_C*                  Button_Filter;                                     // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEventsSimpleButton_C*                  Button_Position;                                   // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_OptionsBarBG;                         // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            CommonWidgetSwitcher_FliterOptions;                // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEventLeaderboardPlayerPerformance_C*   EventLeaderboardPlayerPerformance;                 // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_0;                                           // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBox;                                       // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FFortTournamentDisplayInfo             DisplayInfo;                                       // 0x03F8(0x01D0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0330(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UEventsSimpleButton_C*                  Button_Filter;                                     // 0x0338(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEventsSimpleButton_C*                  Button_Position;                                   // 0x0340(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_OptionsBarBG;                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_FliterOptions;                // 0x0350(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEventLeaderboardPlayerPerformance_C*   EventLeaderboardPlayerPerformance;                 // 0x0358(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_0;                                           // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBox;                                       // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FFortTournamentDisplayInfo             DisplayInfo;                                       // 0x0370(0x01A8)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_LeaderboardListViewWrapper(int32 EntryPoint);
 	void OnLeaderboardDisplayTypeChanged(ELeaderboardDisplayType NewDisplayType);
-	void Set_Display_Info(const struct FFortTournamentDisplayInfo& DisplayInfo_0);
 	void Set_Event(const class FString& EventId, const class FString& EventWindowId);
+	void Set_Display_Info(const struct FFortTournamentDisplayInfo& DisplayInfo_0);
 
 public:
 	static class UClass* StaticClass()
@@ -51,16 +51,16 @@ public:
 	}
 };
 static_assert(alignof(ULeaderboardListViewWrapper_C) == 0x000008, "Wrong alignment on ULeaderboardListViewWrapper_C");
-static_assert(sizeof(ULeaderboardListViewWrapper_C) == 0x0005C8, "Wrong size on ULeaderboardListViewWrapper_C");
-static_assert(offsetof(ULeaderboardListViewWrapper_C, UberGraphFrame) == 0x0003B8, "Member 'ULeaderboardListViewWrapper_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ULeaderboardListViewWrapper_C, Button_Filter) == 0x0003C0, "Member 'ULeaderboardListViewWrapper_C::Button_Filter' has a wrong offset!");
-static_assert(offsetof(ULeaderboardListViewWrapper_C, Button_Position) == 0x0003C8, "Member 'ULeaderboardListViewWrapper_C::Button_Position' has a wrong offset!");
-static_assert(offsetof(ULeaderboardListViewWrapper_C, CommonBorder_OptionsBarBG) == 0x0003D0, "Member 'ULeaderboardListViewWrapper_C::CommonBorder_OptionsBarBG' has a wrong offset!");
-static_assert(offsetof(ULeaderboardListViewWrapper_C, CommonWidgetSwitcher_FliterOptions) == 0x0003D8, "Member 'ULeaderboardListViewWrapper_C::CommonWidgetSwitcher_FliterOptions' has a wrong offset!");
-static_assert(offsetof(ULeaderboardListViewWrapper_C, EventLeaderboardPlayerPerformance) == 0x0003E0, "Member 'ULeaderboardListViewWrapper_C::EventLeaderboardPlayerPerformance' has a wrong offset!");
-static_assert(offsetof(ULeaderboardListViewWrapper_C, Image_0) == 0x0003E8, "Member 'ULeaderboardListViewWrapper_C::Image_0' has a wrong offset!");
-static_assert(offsetof(ULeaderboardListViewWrapper_C, VerticalBox) == 0x0003F0, "Member 'ULeaderboardListViewWrapper_C::VerticalBox' has a wrong offset!");
-static_assert(offsetof(ULeaderboardListViewWrapper_C, DisplayInfo) == 0x0003F8, "Member 'ULeaderboardListViewWrapper_C::DisplayInfo' has a wrong offset!");
+static_assert(sizeof(ULeaderboardListViewWrapper_C) == 0x000518, "Wrong size on ULeaderboardListViewWrapper_C");
+static_assert(offsetof(ULeaderboardListViewWrapper_C, UberGraphFrame) == 0x000330, "Member 'ULeaderboardListViewWrapper_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ULeaderboardListViewWrapper_C, Button_Filter) == 0x000338, "Member 'ULeaderboardListViewWrapper_C::Button_Filter' has a wrong offset!");
+static_assert(offsetof(ULeaderboardListViewWrapper_C, Button_Position) == 0x000340, "Member 'ULeaderboardListViewWrapper_C::Button_Position' has a wrong offset!");
+static_assert(offsetof(ULeaderboardListViewWrapper_C, CommonBorder_OptionsBarBG) == 0x000348, "Member 'ULeaderboardListViewWrapper_C::CommonBorder_OptionsBarBG' has a wrong offset!");
+static_assert(offsetof(ULeaderboardListViewWrapper_C, CommonWidgetSwitcher_FliterOptions) == 0x000350, "Member 'ULeaderboardListViewWrapper_C::CommonWidgetSwitcher_FliterOptions' has a wrong offset!");
+static_assert(offsetof(ULeaderboardListViewWrapper_C, EventLeaderboardPlayerPerformance) == 0x000358, "Member 'ULeaderboardListViewWrapper_C::EventLeaderboardPlayerPerformance' has a wrong offset!");
+static_assert(offsetof(ULeaderboardListViewWrapper_C, Image_0) == 0x000360, "Member 'ULeaderboardListViewWrapper_C::Image_0' has a wrong offset!");
+static_assert(offsetof(ULeaderboardListViewWrapper_C, VerticalBox) == 0x000368, "Member 'ULeaderboardListViewWrapper_C::VerticalBox' has a wrong offset!");
+static_assert(offsetof(ULeaderboardListViewWrapper_C, DisplayInfo) == 0x000370, "Member 'ULeaderboardListViewWrapper_C::DisplayInfo' has a wrong offset!");
 
 }
 

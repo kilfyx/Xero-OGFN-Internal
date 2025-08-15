@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_DefaultResourceCap_C>();
 	}
 };
+static_assert(alignof(UGE_DefaultResourceCap_C) == 0x000008, "Wrong alignment on UGE_DefaultResourceCap_C");
+static_assert(sizeof(UGE_DefaultResourceCap_C) == 0x000800, "Wrong size on UGE_DefaultResourceCap_C");
 
 }
 

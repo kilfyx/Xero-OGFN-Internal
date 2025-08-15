@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -19,16 +19,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass HealthWarningScreen.HealthWarningScreen_C
-// 0x0040 (0x0558 - 0x0518)
+// 0x0040 (0x04D0 - 0x0490)
 class UHealthWarningScreen_C final : public UHealthWarningScreen
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0518(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FinishingAnim;                                     // 0x0520(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_0;                                        // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              HealthWarningCompleted;                            // 0x0530(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FTimerHandle                           ShowTimer;                                         // 0x0540(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FMargin                                IconPadding;                                       // 0x0548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0490(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FinishingAnim;                                     // 0x0498(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_0;                                        // 0x04A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              HealthWarningCompleted;                            // 0x04A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FTimerHandle                           ShowTimer;                                         // 0x04B8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FMargin                                IconPadding;                                       // 0x04C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void HandleShowTimerComplete();
@@ -45,13 +45,13 @@ public:
 	}
 };
 static_assert(alignof(UHealthWarningScreen_C) == 0x000008, "Wrong alignment on UHealthWarningScreen_C");
-static_assert(sizeof(UHealthWarningScreen_C) == 0x000558, "Wrong size on UHealthWarningScreen_C");
-static_assert(offsetof(UHealthWarningScreen_C, UberGraphFrame) == 0x000518, "Member 'UHealthWarningScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UHealthWarningScreen_C, FinishingAnim) == 0x000520, "Member 'UHealthWarningScreen_C::FinishingAnim' has a wrong offset!");
-static_assert(offsetof(UHealthWarningScreen_C, SafeZone_0) == 0x000528, "Member 'UHealthWarningScreen_C::SafeZone_0' has a wrong offset!");
-static_assert(offsetof(UHealthWarningScreen_C, HealthWarningCompleted) == 0x000530, "Member 'UHealthWarningScreen_C::HealthWarningCompleted' has a wrong offset!");
-static_assert(offsetof(UHealthWarningScreen_C, ShowTimer) == 0x000540, "Member 'UHealthWarningScreen_C::ShowTimer' has a wrong offset!");
-static_assert(offsetof(UHealthWarningScreen_C, IconPadding) == 0x000548, "Member 'UHealthWarningScreen_C::IconPadding' has a wrong offset!");
+static_assert(sizeof(UHealthWarningScreen_C) == 0x0004D0, "Wrong size on UHealthWarningScreen_C");
+static_assert(offsetof(UHealthWarningScreen_C, UberGraphFrame) == 0x000490, "Member 'UHealthWarningScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UHealthWarningScreen_C, FinishingAnim) == 0x000498, "Member 'UHealthWarningScreen_C::FinishingAnim' has a wrong offset!");
+static_assert(offsetof(UHealthWarningScreen_C, SafeZone_0) == 0x0004A0, "Member 'UHealthWarningScreen_C::SafeZone_0' has a wrong offset!");
+static_assert(offsetof(UHealthWarningScreen_C, HealthWarningCompleted) == 0x0004A8, "Member 'UHealthWarningScreen_C::HealthWarningCompleted' has a wrong offset!");
+static_assert(offsetof(UHealthWarningScreen_C, ShowTimer) == 0x0004B8, "Member 'UHealthWarningScreen_C::ShowTimer' has a wrong offset!");
+static_assert(offsetof(UHealthWarningScreen_C, IconPadding) == 0x0004C0, "Member 'UHealthWarningScreen_C::IconPadding' has a wrong offset!");
 
 }
 

@@ -345,24 +345,6 @@ namespace UC
 			MaxElements = NullTerminatedLength;
 		}
 
-		FString(const std::wstring& WStr)
-		{
-			const uint32 Length = static_cast<uint32>(WStr.length() + 1);
-			Data = const_cast<wchar_t*>(WStr.c_str());
-			NumElements = Length;
-			MaxElements = Length;
-		}
-
-		FString(const std::string& Str)
-		{
-			std::wstring wideStr = UtfN::Utf8StringToUtf16String<std::wstring>(Str);
-			const uint32 Length = static_cast<uint32>(wideStr.length() + 1);
-			Data = const_cast<wchar_t*>(wideStr.c_str());
-			NumElements = Length;
-			MaxElements = Length;
-		}
-
-
 	public:
 		inline std::string ToString() const
 		{
@@ -790,7 +772,13 @@ namespace UC
 	template<typename T0, typename T1> inline Iterators::TMapIterator<T0, T1> begin(const TMap<T0, T1>& Map) { return Iterators::TMapIterator<T0, T1>(Map, Map.GetAllocationFlags(), 0); }
 	template<typename T0, typename T1> inline Iterators::TMapIterator<T0, T1> end  (const TMap<T0, T1>& Map) { return Iterators::TMapIterator<T0, T1>(Map, Map.GetAllocationFlags(), Map.NumAllocated()); }
 
+#if defined(_WIN64)
 	static_assert(sizeof(TArray<int32>) == 0x10, "TArray has a wrong size!");
 	static_assert(sizeof(TSet<int32>) == 0x50, "TSet has a wrong size!");
 	static_assert(sizeof(TMap<int32, int32>) == 0x50, "TMap has a wrong size!");
+#elif defined(_WIN32)
+	static_assert(sizeof(TArray<int32>) == 0x0C, "TArray has a wrong size!");
+	static_assert(sizeof(TSet<int32>) == 0x3C, "TSet has a wrong size!");
+	static_assert(sizeof(TMap<int32, int32>) == 0x3C, "TMap has a wrong size!");
+#endif
 }

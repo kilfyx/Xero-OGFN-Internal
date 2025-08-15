@@ -37,26 +37,6 @@ void UNPCStatusWidgetBar_C::ExecuteUbergraph_NPCStatusWidgetBar(int32 EntryPoint
 }
 
 
-// Function NPCStatusWidgetBar.NPCStatusWidgetBar_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UNPCStatusWidgetBar_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NPCStatusWidgetBar_C", "PreConstruct");
-
-	Params::NPCStatusWidgetBar_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function NPCStatusWidgetBar.NPCStatusWidgetBar_C.SetPercent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -72,6 +52,26 @@ void UNPCStatusWidgetBar_C::SetPercent(float Value)
 	Params::NPCStatusWidgetBar_C_SetPercent Parms{};
 
 	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function NPCStatusWidgetBar.NPCStatusWidgetBar_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UNPCStatusWidgetBar_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NPCStatusWidgetBar_C", "PreConstruct");
+
+	Params::NPCStatusWidgetBar_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

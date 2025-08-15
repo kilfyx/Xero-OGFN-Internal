@@ -20,38 +20,18 @@ namespace SDK
 // Function AthenaTemperature.AthenaTemperature_C.ShowTemperatureChanged
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bShowTemperature                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bShowTemperature                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaTemperature_C::ShowTemperatureChanged(bool bShowTemperature)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ShowTemperatureChanged");
+		Func = Class->GetFunction("AthenaTemperature_C", "ShowTemperatureChanged");
 
 	Params::AthenaTemperature_C_ShowTemperatureChanged Parms{};
 
 	Parms.bShowTemperature = bShowTemperature;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaTemperature.AthenaTemperature_C.ExecuteUbergraph_AthenaTemperature
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaTemperature_C::ExecuteUbergraph_AthenaTemperature(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaTemperature");
-
-	Params::AthenaTemperature_C_ExecuteUbergraph_AthenaTemperature Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -63,11 +43,31 @@ void UAthenaTemperature_C::ExecuteUbergraph_AthenaTemperature(int32 EntryPoint)
 void UAthenaTemperature_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
+		Func = Class->GetFunction("AthenaTemperature_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaTemperature.AthenaTemperature_C.ExecuteUbergraph_AthenaTemperature
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaTemperature_C::ExecuteUbergraph_AthenaTemperature(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaTemperature_C", "ExecuteUbergraph_AthenaTemperature");
+
+	Params::AthenaTemperature_C_ExecuteUbergraph_AthenaTemperature Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

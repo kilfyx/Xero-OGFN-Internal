@@ -10,35 +10,35 @@
 
 #include "Basic.hpp"
 
-#include "FortniteUI_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SuggestedFriendListEntry.SuggestedFriendListEntry_C
-// 0x0060 (0x0FE0 - 0x0F80)
+// 0x0060 (0x0C50 - 0x0BF0)
 class USuggestedFriendListEntry_C final : public UFortConnectionsUserListEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F80(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Selected;                                          // 0x0F88(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hovered;                                           // 0x0F90(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Arrow;                                             // 0x0F98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Border_Background;                                 // 0x0FA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Border_Highlight;                                  // 0x0FA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIconTextButton_C*                      EmptyButtonToEatOneMouseUpEvent;                   // 0x0FB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UUserActionMenuInputButton_C*           UserActionMenuInputButton;                         // 0x0FB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FLinearColor                           EncourageEpicFriend_IdleColor;                     // 0x0FC0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EncourageEpicFriend_HoveredColor;                  // 0x0FD0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BF0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Selected;                                          // 0x0BF8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hovered;                                           // 0x0C00(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Arrow;                                             // 0x0C08(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                Border_Background;                                 // 0x0C10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                Border_Highlight;                                  // 0x0C18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIconTextButton_C*                      EmptyButtonToEatOneMouseUpEvent;                   // 0x0C20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UUserActionMenuInputButton_C*           UserActionMenuInputButton;                         // 0x0C28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FLinearColor                           EncourageEpicFriend_IdleColor;                     // 0x0C30(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EncourageEpicFriend_HoveredColor;                  // 0x0C40(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);
-	void BP_OnHovered();
-	void BP_OnUnhovered();
 	void ExecuteUbergraph_SuggestedFriendListEntry(int32 EntryPoint);
+	void BP_OnHovered();
+	void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);
+	void BP_OnUnhovered();
 
 public:
 	static class UClass* StaticClass()
@@ -50,6 +50,18 @@ public:
 		return GetDefaultObjImpl<USuggestedFriendListEntry_C>();
 	}
 };
+static_assert(alignof(USuggestedFriendListEntry_C) == 0x000008, "Wrong alignment on USuggestedFriendListEntry_C");
+static_assert(sizeof(USuggestedFriendListEntry_C) == 0x000C50, "Wrong size on USuggestedFriendListEntry_C");
+static_assert(offsetof(USuggestedFriendListEntry_C, UberGraphFrame) == 0x000BF0, "Member 'USuggestedFriendListEntry_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USuggestedFriendListEntry_C, Selected) == 0x000BF8, "Member 'USuggestedFriendListEntry_C::Selected' has a wrong offset!");
+static_assert(offsetof(USuggestedFriendListEntry_C, Hovered) == 0x000C00, "Member 'USuggestedFriendListEntry_C::Hovered' has a wrong offset!");
+static_assert(offsetof(USuggestedFriendListEntry_C, Arrow) == 0x000C08, "Member 'USuggestedFriendListEntry_C::Arrow' has a wrong offset!");
+static_assert(offsetof(USuggestedFriendListEntry_C, Border_Background) == 0x000C10, "Member 'USuggestedFriendListEntry_C::Border_Background' has a wrong offset!");
+static_assert(offsetof(USuggestedFriendListEntry_C, Border_Highlight) == 0x000C18, "Member 'USuggestedFriendListEntry_C::Border_Highlight' has a wrong offset!");
+static_assert(offsetof(USuggestedFriendListEntry_C, EmptyButtonToEatOneMouseUpEvent) == 0x000C20, "Member 'USuggestedFriendListEntry_C::EmptyButtonToEatOneMouseUpEvent' has a wrong offset!");
+static_assert(offsetof(USuggestedFriendListEntry_C, UserActionMenuInputButton) == 0x000C28, "Member 'USuggestedFriendListEntry_C::UserActionMenuInputButton' has a wrong offset!");
+static_assert(offsetof(USuggestedFriendListEntry_C, EncourageEpicFriend_IdleColor) == 0x000C30, "Member 'USuggestedFriendListEntry_C::EncourageEpicFriend_IdleColor' has a wrong offset!");
+static_assert(offsetof(USuggestedFriendListEntry_C, EncourageEpicFriend_HoveredColor) == 0x000C40, "Member 'USuggestedFriendListEntry_C::EncourageEpicFriend_HoveredColor' has a wrong offset!");
 
 }
 

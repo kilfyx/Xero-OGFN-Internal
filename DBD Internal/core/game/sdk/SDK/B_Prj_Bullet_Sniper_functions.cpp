@@ -37,32 +37,6 @@ void AB_Prj_Bullet_Sniper_C::ExecuteUbergraph_B_Prj_Bullet_Sniper(int32 EntryPoi
 }
 
 
-// Function B_Prj_Bullet_Sniper.B_Prj_Bullet_Sniper_C.GetSurfaceTypeFromInfo
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// EPhysicalSurface                        Surface_Type                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EPhysicalSurface*                       Surface                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Prj_Bullet_Sniper_C::GetSurfaceTypeFromInfo(EPhysicalSurface Surface_Type, class AActor* Actor, EPhysicalSurface* Surface)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Bullet_Sniper_C", "GetSurfaceTypeFromInfo");
-
-	Params::B_Prj_Bullet_Sniper_C_GetSurfaceTypeFromInfo Parms{};
-
-	Parms.Surface_Type = Surface_Type;
-	Parms.Actor = Actor;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Surface != nullptr)
-		*Surface = Parms.Surface;
-}
-
-
 // Function B_Prj_Bullet_Sniper.B_Prj_Bullet_Sniper_C.OnSniperTraceWaterHit
 // (BlueprintCosmetic, Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -82,6 +56,46 @@ void AB_Prj_Bullet_Sniper_C::OnSniperTraceWaterHit(const struct FHitResult& Wate
 	Parms.WaterBody = WaterBody;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Prj_Bullet_Sniper.B_Prj_Bullet_Sniper_C.OnTouched
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                HitResult                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// bool                                    bIsOverlap                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_Prj_Bullet_Sniper_C::OnTouched(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FHitResult& HitResult, bool bIsOverlap)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Bullet_Sniper_C", "OnTouched");
+
+	Params::B_Prj_Bullet_Sniper_C_OnTouched Parms{};
+
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.HitResult = std::move(HitResult);
+	Parms.bIsOverlap = bIsOverlap;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Prj_Bullet_Sniper.B_Prj_Bullet_Sniper_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AB_Prj_Bullet_Sniper_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Bullet_Sniper_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -105,68 +119,6 @@ void AB_Prj_Bullet_Sniper_C::OnStop(const struct FHitResult& Hit)
 }
 
 
-// Function B_Prj_Bullet_Sniper.B_Prj_Bullet_Sniper_C.OnTouched
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                HitResult                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-// bool                                    bIsOverlap                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Prj_Bullet_Sniper_C::OnTouched(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FHitResult& HitResult, bool bIsOverlap)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Bullet_Sniper_C", "OnTouched");
-
-	Params::B_Prj_Bullet_Sniper_C_OnTouched Parms{};
-
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.HitResult = std::move(HitResult);
-	Parms.bIsOverlap = bIsOverlap;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Prj_Bullet_Sniper.B_Prj_Bullet_Sniper_C.PlayImpactSFX
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EPhysicalSurface                        Surface_Type                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Prj_Bullet_Sniper_C::PlayImpactSFX(EPhysicalSurface Surface_Type, class AActor* Actor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Bullet_Sniper_C", "PlayImpactSFX");
-
-	Params::B_Prj_Bullet_Sniper_C_PlayImpactSFX Parms{};
-
-	Parms.Surface_Type = Surface_Type;
-	Parms.Actor = Actor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Prj_Bullet_Sniper.B_Prj_Bullet_Sniper_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AB_Prj_Bullet_Sniper_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Bullet_Sniper_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_Prj_Bullet_Sniper.B_Prj_Bullet_Sniper_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -178,6 +130,28 @@ void AB_Prj_Bullet_Sniper_C::UserConstructionScript()
 		Func = Class->GetFunction("B_Prj_Bullet_Sniper_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Bullet_Sniper.B_Prj_Bullet_Sniper_C.PlayImpactSFX
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsPlayer                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsWater                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_Prj_Bullet_Sniper_C::PlayImpactSFX(bool IsPlayer, bool IsWater)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Bullet_Sniper_C", "PlayImpactSFX");
+
+	Params::B_Prj_Bullet_Sniper_C_PlayImpactSFX Parms{};
+
+	Parms.IsPlayer = IsPlayer;
+	Parms.IsWater = IsWater;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

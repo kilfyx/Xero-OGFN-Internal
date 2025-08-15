@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CommonUI_KeyboardBrushData.CommonUI_KeyboardBrushData_C
-// 0x0000 (0x0100 - 0x0100)
+// 0x0000 (0x00A0 - 0x00A0)
 class UCommonUI_KeyboardBrushData_C final : public UFortInputControllerData
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UCommonUI_KeyboardBrushData_C>();
 	}
 };
+static_assert(alignof(UCommonUI_KeyboardBrushData_C) == 0x000008, "Wrong alignment on UCommonUI_KeyboardBrushData_C");
+static_assert(sizeof(UCommonUI_KeyboardBrushData_C) == 0x0000A0, "Wrong size on UCommonUI_KeyboardBrushData_C");
 
 }
 

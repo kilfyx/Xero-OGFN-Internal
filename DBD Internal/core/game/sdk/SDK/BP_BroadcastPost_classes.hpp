@@ -24,7 +24,7 @@ public:
 	class UPostProcessComponent*                  Extreme;                                           // 0x0220(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UPostProcessComponent*                  PostProcess;                                       // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          ExtremePostEnabled;                                // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ExtremePostEnabled;                                // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void UserConstructionScript();
@@ -39,6 +39,12 @@ public:
 		return GetDefaultObjImpl<ABP_BroadcastPost_C>();
 	}
 };
+static_assert(alignof(ABP_BroadcastPost_C) == 0x000008, "Wrong alignment on ABP_BroadcastPost_C");
+static_assert(sizeof(ABP_BroadcastPost_C) == 0x000240, "Wrong size on ABP_BroadcastPost_C");
+static_assert(offsetof(ABP_BroadcastPost_C, Extreme) == 0x000220, "Member 'ABP_BroadcastPost_C::Extreme' has a wrong offset!");
+static_assert(offsetof(ABP_BroadcastPost_C, PostProcess) == 0x000228, "Member 'ABP_BroadcastPost_C::PostProcess' has a wrong offset!");
+static_assert(offsetof(ABP_BroadcastPost_C, DefaultSceneRoot) == 0x000230, "Member 'ABP_BroadcastPost_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_BroadcastPost_C, ExtremePostEnabled) == 0x000238, "Member 'ABP_BroadcastPost_C::ExtremePostEnabled' has a wrong offset!");
 
 }
 

@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function Creative_DeviceComponent_Parent.Creative_DeviceComponent_Parent_C.Owning Actor Activated
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UCreative_DeviceComponent_Parent_C::Owning_Actor_Activated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_DeviceComponent_Parent_C", "Owning Actor Activated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Creative_DeviceComponent_Parent.Creative_DeviceComponent_Parent_C.ExecuteUbergraph_Creative_DeviceComponent_Parent
 // (Final, UbergraphFunction)
 // Parameters:
@@ -74,6 +60,20 @@ void UCreative_DeviceComponent_Parent_C::Owning_Actor_Initialized()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("Creative_DeviceComponent_Parent_C", "Owning Actor Initialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Creative_DeviceComponent_Parent.Creative_DeviceComponent_Parent_C.Owning Actor Activated
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UCreative_DeviceComponent_Parent_C::Owning_Actor_Activated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_DeviceComponent_Parent_C", "Owning Actor Activated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -37,6 +37,26 @@ void USettingsListEntry_Missing_C::ExecuteUbergraph_SettingsListEntry_Missing(in
 }
 
 
+// Function SettingsListEntry_Missing.SettingsListEntry_Missing_C.OnMouseLeave
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void USettingsListEntry_Missing_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SettingsListEntry_Missing_C", "OnMouseLeave");
+
+	Params::SettingsListEntry_Missing_C_OnMouseLeave Parms{};
+
+	Parms.MouseEvent = std::move(MouseEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function SettingsListEntry_Missing.SettingsListEntry_Missing_C.OnMouseEnter
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -53,26 +73,6 @@ void USettingsListEntry_Missing_C::OnMouseEnter(const struct FGeometry& MyGeomet
 	Params::SettingsListEntry_Missing_C_OnMouseEnter Parms{};
 
 	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SettingsListEntry_Missing.SettingsListEntry_Missing_C.OnMouseLeave
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void USettingsListEntry_Missing_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsListEntry_Missing_C", "OnMouseLeave");
-
-	Params::SettingsListEntry_Missing_C_OnMouseLeave Parms{};
-
 	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);

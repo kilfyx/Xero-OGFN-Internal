@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaFPSTicker.AthenaFPSTicker_C
-// 0x0000 (0x0290 - 0x0290)
+// 0x0000 (0x02A8 - 0x02A8)
 class UAthenaFPSTicker_C final : public UAthenaFPSBase
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UAthenaFPSTicker_C>();
 	}
 };
+static_assert(alignof(UAthenaFPSTicker_C) == 0x000008, "Wrong alignment on UAthenaFPSTicker_C");
+static_assert(sizeof(UAthenaFPSTicker_C) == 0x0002A8, "Wrong size on UAthenaFPSTicker_C");
 
 }
 

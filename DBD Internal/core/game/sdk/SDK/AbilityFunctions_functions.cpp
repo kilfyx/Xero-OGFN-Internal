@@ -17,33 +17,55 @@
 namespace SDK
 {
 
-// Function AbilityFunctions.AbilityFunctions_C.ApplySlowFall
+// Function AbilityFunctions.AbilityFunctions_C.DoNOTUse-BuildArrayOfHitActors
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   SlowFallDuration                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFortGameplayAbility*             SelfGameplayAbilityReference                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UClass*                           GameplayEffect                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FActiveGameplayEffectHandle*     EffectSpecHandle                                       (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
+// TArray<class AActor*>*                  HitActors                                              (Parm, OutParm, HasGetValueTypeHash)
 
-void UAbilityFunctions_C::ApplySlowFall(float SlowFallDuration, class UFortGameplayAbility* SelfGameplayAbilityReference, class UClass* GameplayEffect, class UObject* __WorldContext, struct FActiveGameplayEffectHandle* EffectSpecHandle)
+void UAbilityFunctions_C::DoNOTUse_BuildArrayOfHitActors(const struct FGameplayAbilityTargetDataHandle& TargetData, class UObject* __WorldContext, TArray<class AActor*>* HitActors)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AbilityFunctions_C", "ApplySlowFall");
+		Func = StaticClass()->GetFunction("AbilityFunctions_C", "DoNOTUse-BuildArrayOfHitActors");
 
-	Params::AbilityFunctions_C_ApplySlowFall Parms{};
+	Params::AbilityFunctions_C_DoNOTUse_BuildArrayOfHitActors Parms{};
 
-	Parms.SlowFallDuration = SlowFallDuration;
-	Parms.SelfGameplayAbilityReference = SelfGameplayAbilityReference;
-	Parms.GameplayEffect = GameplayEffect;
+	Parms.TargetData = std::move(TargetData);
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (EffectSpecHandle != nullptr)
-		*EffectSpecHandle = std::move(Parms.EffectSpecHandle);
+	if (HitActors != nullptr)
+		*HitActors = std::move(Parms.HitActors);
+}
+
+
+// Function AbilityFunctions.AbilityFunctions_C.SetArrayOfHitActors
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// TArray<class AActor*>&                  ArrayToSet                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAbilityFunctions_C::SetArrayOfHitActors(const struct FGameplayAbilityTargetDataHandle& TargetData, TArray<class AActor*>& ArrayToSet, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AbilityFunctions_C", "SetArrayOfHitActors");
+
+	Params::AbilityFunctions_C_SetArrayOfHitActors Parms{};
+
+	Parms.TargetData = std::move(TargetData);
+	Parms.ArrayToSet = std::move(ArrayToSet);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	ArrayToSet = std::move(Parms.ArrayToSet);
 }
 
 
@@ -73,61 +95,61 @@ void UAbilityFunctions_C::ConvertRangeToTiles(float InRange, class UObject* __Wo
 }
 
 
-// Function AbilityFunctions.AbilityFunctions_C.DoNOTUse-BuildArrayOfHitActors
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function AbilityFunctions.AbilityFunctions_C.GetProjectedTeleportLocation
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   MovementDistance                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class AActor*>*                  HitActors                                              (Parm, OutParm)
+// struct FVector*                         TargetLocation                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAbilityFunctions_C::DoNOTUse_BuildArrayOfHitActors(const struct FGameplayAbilityTargetDataHandle& TargetData, class UObject* __WorldContext, TArray<class AActor*>* HitActors)
+void UAbilityFunctions_C::GetProjectedTeleportLocation(class AActor* Actor, float MovementDistance, class UObject* __WorldContext, struct FVector* TargetLocation)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AbilityFunctions_C", "DoNOTUse-BuildArrayOfHitActors");
+		Func = StaticClass()->GetFunction("AbilityFunctions_C", "GetProjectedTeleportLocation");
 
-	Params::AbilityFunctions_C_DoNOTUse_BuildArrayOfHitActors Parms{};
+	Params::AbilityFunctions_C_GetProjectedTeleportLocation Parms{};
 
-	Parms.TargetData = std::move(TargetData);
+	Parms.Actor = Actor;
+	Parms.MovementDistance = MovementDistance;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (HitActors != nullptr)
-		*HitActors = std::move(Parms.HitActors);
+	if (TargetLocation != nullptr)
+		*TargetLocation = std::move(Parms.TargetLocation);
 }
 
 
-// Function AbilityFunctions.AbilityFunctions_C.EvaluatePerkTierBalanceValue
+// Function AbilityFunctions.AbilityFunctions_C.GetRangeFromGameplayEffectContainerSpec
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// const struct FScalableFloat&            T01_Balance_Value                                      (BlueprintVisible, BlueprintReadOnly, Parm)
-// const struct FScalableFloat&            T02_Balance_Value                                      (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                                    Owns_T02                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Should_Override_T01                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FFortGameplayEffectContainerSpec&GE_Container_Spec                                      (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   Target_Selection_List_Index                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   At_Level                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FScalableFloat*                  Balance_Value                                          (Parm, OutParm)
+// float*                                  Range                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAbilityFunctions_C::EvaluatePerkTierBalanceValue(const struct FScalableFloat& T01_Balance_Value, const struct FScalableFloat& T02_Balance_Value, bool Owns_T02, bool Should_Override_T01, class UObject* __WorldContext, struct FScalableFloat* Balance_Value)
+void UAbilityFunctions_C::GetRangeFromGameplayEffectContainerSpec(const struct FFortGameplayEffectContainerSpec& GE_Container_Spec, int32 Target_Selection_List_Index, float At_Level, class UObject* __WorldContext, float* Range)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AbilityFunctions_C", "EvaluatePerkTierBalanceValue");
+		Func = StaticClass()->GetFunction("AbilityFunctions_C", "GetRangeFromGameplayEffectContainerSpec");
 
-	Params::AbilityFunctions_C_EvaluatePerkTierBalanceValue Parms{};
+	Params::AbilityFunctions_C_GetRangeFromGameplayEffectContainerSpec Parms{};
 
-	Parms.T01_Balance_Value = std::move(T01_Balance_Value);
-	Parms.T02_Balance_Value = std::move(T02_Balance_Value);
-	Parms.Owns_T02 = Owns_T02;
-	Parms.Should_Override_T01 = Should_Override_T01;
+	Parms.GE_Container_Spec = std::move(GE_Container_Spec);
+	Parms.Target_Selection_List_Index = Target_Selection_List_Index;
+	Parms.At_Level = At_Level;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Balance_Value != nullptr)
-		*Balance_Value = std::move(Parms.Balance_Value);
+	if (Range != nullptr)
+		*Range = Parms.Range;
 }
 
 
@@ -156,6 +178,128 @@ void UAbilityFunctions_C::GetAngleBetweenTwoVectors(const struct FVector& Vector
 
 	if (Angle__Degrees_ != nullptr)
 		*Angle__Degrees_ = Parms.Angle__Degrees_;
+}
+
+
+// Function AbilityFunctions.AbilityFunctions_C.GetTotalGameplayEffectCount
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class UClass*>&                  EffectsToCount                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// class UAbilitySystemComponent*          AbilitySystemComponent                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  FinalEffectCount                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAbilityFunctions_C::GetTotalGameplayEffectCount(TArray<class UClass*>& EffectsToCount, class UAbilitySystemComponent* AbilitySystemComponent, class UObject* __WorldContext, int32* FinalEffectCount)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AbilityFunctions_C", "GetTotalGameplayEffectCount");
+
+	Params::AbilityFunctions_C_GetTotalGameplayEffectCount Parms{};
+
+	Parms.EffectsToCount = std::move(EffectsToCount);
+	Parms.AbilitySystemComponent = AbilitySystemComponent;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	EffectsToCount = std::move(Parms.EffectsToCount);
+
+	if (FinalEffectCount != nullptr)
+		*FinalEffectCount = Parms.FinalEffectCount;
+}
+
+
+// Function AbilityFunctions.AbilityFunctions_C.GetRangeFromGameplayEffectContainer
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FFortGameplayEffectContainer&GE_Container                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   Target_Selection_List_Index                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   At_Level                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  Range                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAbilityFunctions_C::GetRangeFromGameplayEffectContainer(const struct FFortGameplayEffectContainer& GE_Container, int32 Target_Selection_List_Index, float At_Level, class UObject* __WorldContext, float* Range)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AbilityFunctions_C", "GetRangeFromGameplayEffectContainer");
+
+	Params::AbilityFunctions_C_GetRangeFromGameplayEffectContainer Parms{};
+
+	Parms.GE_Container = std::move(GE_Container);
+	Parms.Target_Selection_List_Index = Target_Selection_List_Index;
+	Parms.At_Level = At_Level;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (Range != nullptr)
+		*Range = Parms.Range;
+}
+
+
+// Function AbilityFunctions.AbilityFunctions_C.EvaluatePerkTierBalanceValue
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FScalableFloat&            T01_Balance_Value                                      (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FScalableFloat&            T02_Balance_Value                                      (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                                    Owns_T02                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    Should_Override_T01                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FScalableFloat*                  Balance_Value                                          (Parm, OutParm)
+
+void UAbilityFunctions_C::EvaluatePerkTierBalanceValue(const struct FScalableFloat& T01_Balance_Value, const struct FScalableFloat& T02_Balance_Value, bool Owns_T02, bool Should_Override_T01, class UObject* __WorldContext, struct FScalableFloat* Balance_Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AbilityFunctions_C", "EvaluatePerkTierBalanceValue");
+
+	Params::AbilityFunctions_C_EvaluatePerkTierBalanceValue Parms{};
+
+	Parms.T01_Balance_Value = std::move(T01_Balance_Value);
+	Parms.T02_Balance_Value = std::move(T02_Balance_Value);
+	Parms.Owns_T02 = Owns_T02;
+	Parms.Should_Override_T01 = Should_Override_T01;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (Balance_Value != nullptr)
+		*Balance_Value = std::move(Parms.Balance_Value);
+}
+
+
+// Function AbilityFunctions.AbilityFunctions_C.GetPawnFromPlayerStateZone
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           InActor                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortPlayerPawn**                 OutPawn                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   PawnReturned                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAbilityFunctions_C::GetPawnFromPlayerStateZone(class AActor* InActor, class UObject* __WorldContext, class AFortPlayerPawn** OutPawn, bool* PawnReturned)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AbilityFunctions_C", "GetPawnFromPlayerStateZone");
+
+	Params::AbilityFunctions_C_GetPawnFromPlayerStateZone Parms{};
+
+	Parms.InActor = InActor;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (OutPawn != nullptr)
+		*OutPawn = Parms.OutPawn;
+
+	if (PawnReturned != nullptr)
+		*PawnReturned = Parms.PawnReturned;
 }
 
 
@@ -215,186 +359,42 @@ void UAbilityFunctions_C::GetDistanceSquaredBetweenActors(class AActor* Actor_1,
 }
 
 
-// Function AbilityFunctions.AbilityFunctions_C.GetPawnFromPlayerStateZone
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           InActor                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AFortPlayerPawn**                 OutPawn                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   PawnReturned                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAbilityFunctions_C::GetPawnFromPlayerStateZone(class AActor* InActor, class UObject* __WorldContext, class AFortPlayerPawn** OutPawn, bool* PawnReturned)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AbilityFunctions_C", "GetPawnFromPlayerStateZone");
-
-	Params::AbilityFunctions_C_GetPawnFromPlayerStateZone Parms{};
-
-	Parms.InActor = InActor;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (OutPawn != nullptr)
-		*OutPawn = Parms.OutPawn;
-
-	if (PawnReturned != nullptr)
-		*PawnReturned = Parms.PawnReturned;
-}
-
-
-// Function AbilityFunctions.AbilityFunctions_C.GetProjectedTeleportLocation
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   MovementDistance                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector*                         TargetLocation                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAbilityFunctions_C::GetProjectedTeleportLocation(class AActor* Actor, float MovementDistance, class UObject* __WorldContext, struct FVector* TargetLocation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AbilityFunctions_C", "GetProjectedTeleportLocation");
-
-	Params::AbilityFunctions_C_GetProjectedTeleportLocation Parms{};
-
-	Parms.Actor = Actor;
-	Parms.MovementDistance = MovementDistance;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (TargetLocation != nullptr)
-		*TargetLocation = std::move(Parms.TargetLocation);
-}
-
-
-// Function AbilityFunctions.AbilityFunctions_C.GetRangeFromGameplayEffectContainer
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const struct FFortGameplayEffectContainer&GE_Container                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   Target_Selection_List_Index                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   At_Level                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float*                                  Range                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAbilityFunctions_C::GetRangeFromGameplayEffectContainer(const struct FFortGameplayEffectContainer& GE_Container, int32 Target_Selection_List_Index, float At_Level, class UObject* __WorldContext, float* Range)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AbilityFunctions_C", "GetRangeFromGameplayEffectContainer");
-
-	Params::AbilityFunctions_C_GetRangeFromGameplayEffectContainer Parms{};
-
-	Parms.GE_Container = std::move(GE_Container);
-	Parms.Target_Selection_List_Index = Target_Selection_List_Index;
-	Parms.At_Level = At_Level;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (Range != nullptr)
-		*Range = Parms.Range;
-}
-
-
-// Function AbilityFunctions.AbilityFunctions_C.GetRangeFromGameplayEffectContainerSpec
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const struct FFortGameplayEffectContainerSpec&GE_Container_Spec                                      (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   Target_Selection_List_Index                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   At_Level                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float*                                  Range                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAbilityFunctions_C::GetRangeFromGameplayEffectContainerSpec(const struct FFortGameplayEffectContainerSpec& GE_Container_Spec, int32 Target_Selection_List_Index, float At_Level, class UObject* __WorldContext, float* Range)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AbilityFunctions_C", "GetRangeFromGameplayEffectContainerSpec");
-
-	Params::AbilityFunctions_C_GetRangeFromGameplayEffectContainerSpec Parms{};
-
-	Parms.GE_Container_Spec = std::move(GE_Container_Spec);
-	Parms.Target_Selection_List_Index = Target_Selection_List_Index;
-	Parms.At_Level = At_Level;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (Range != nullptr)
-		*Range = Parms.Range;
-}
-
-
-// Function AbilityFunctions.AbilityFunctions_C.GetTotalGameplayEffectCount
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class UClass*>&                  EffectsToCount                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class UAbilitySystemComponent*          AbilitySystemComponent                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32*                                  FinalEffectCount                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAbilityFunctions_C::GetTotalGameplayEffectCount(TArray<class UClass*>& EffectsToCount, class UAbilitySystemComponent* AbilitySystemComponent, class UObject* __WorldContext, int32* FinalEffectCount)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AbilityFunctions_C", "GetTotalGameplayEffectCount");
-
-	Params::AbilityFunctions_C_GetTotalGameplayEffectCount Parms{};
-
-	Parms.EffectsToCount = std::move(EffectsToCount);
-	Parms.AbilitySystemComponent = AbilitySystemComponent;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	EffectsToCount = std::move(Parms.EffectsToCount);
-
-	if (FinalEffectCount != nullptr)
-		*FinalEffectCount = Parms.FinalEffectCount;
-}
-
-
-// Function AbilityFunctions.AbilityFunctions_C.SetArrayOfHitActors
+// Function AbilityFunctions.AbilityFunctions_C.ApplySlowFall
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (BlueprintVisible, BlueprintReadOnly, Parm)
-// TArray<class AActor*>&                  ArrayToSet                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// float                                   SlowFallDuration                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortGameplayAbility*             SelfGameplayAbilityReference                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           GameplayEffect                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FActiveGameplayEffectHandle*     EffectSpecHandle                                       (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 
-void UAbilityFunctions_C::SetArrayOfHitActors(const struct FGameplayAbilityTargetDataHandle& TargetData, TArray<class AActor*>& ArrayToSet, class UObject* __WorldContext)
+void UAbilityFunctions_C::ApplySlowFall(float SlowFallDuration, class UFortGameplayAbility* SelfGameplayAbilityReference, class UClass* GameplayEffect, class UObject* __WorldContext, struct FActiveGameplayEffectHandle* EffectSpecHandle)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AbilityFunctions_C", "SetArrayOfHitActors");
+		Func = StaticClass()->GetFunction("AbilityFunctions_C", "ApplySlowFall");
 
-	Params::AbilityFunctions_C_SetArrayOfHitActors Parms{};
+	Params::AbilityFunctions_C_ApplySlowFall Parms{};
 
-	Parms.TargetData = std::move(TargetData);
-	Parms.ArrayToSet = std::move(ArrayToSet);
+	Parms.SlowFallDuration = SlowFallDuration;
+	Parms.SelfGameplayAbilityReference = SelfGameplayAbilityReference;
+	Parms.GameplayEffect = GameplayEffect;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	ArrayToSet = std::move(Parms.ArrayToSet);
+	if (EffectSpecHandle != nullptr)
+		*EffectSpecHandle = std::move(Parms.EffectSpecHandle);
 }
 
 
 // Function AbilityFunctions.AbilityFunctions_C.ShouldHammerHitsHealRespondToEvent
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // const struct FGameplayEventData&        Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UAbilityFunctions_C::ShouldHammerHitsHealRespondToEvent(const struct FGameplayEventData& Payload, class UObject* __WorldContext)
 {
@@ -415,11 +415,11 @@ bool UAbilityFunctions_C::ShouldHammerHitsHealRespondToEvent(const struct FGamep
 
 
 // Function AbilityFunctions.AbilityFunctions_C.ShouldSwordHitsHealRespondToEvent
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // const struct FGameplayEventData&        Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UAbilityFunctions_C::ShouldSwordHitsHealRespondToEvent(const struct FGameplayEventData& Payload, class UObject* __WorldContext)
 {

@@ -17,40 +17,6 @@
 namespace SDK
 {
 
-// Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.Activated
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   EdgeOfStorm                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AGCNL_EdgeOfStorm_C::Activated(const struct FVector& EdgeOfStorm)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCNL_EdgeOfStorm_C", "Activated");
-
-	Params::GCNL_EdgeOfStorm_C_Activated Parms{};
-
-	Parms.EdgeOfStorm = std::move(EdgeOfStorm);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.Deactivated
-// (BlueprintCallable, BlueprintEvent)
-
-void AGCNL_EdgeOfStorm_C::Deactivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCNL_EdgeOfStorm_C", "Deactivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.ExecuteUbergraph_GCNL_EdgeOfStorm
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -71,12 +37,46 @@ void AGCNL_EdgeOfStorm_C::ExecuteUbergraph_GCNL_EdgeOfStorm(int32 EntryPoint)
 }
 
 
+// Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.Deactivated
+// (BlueprintCallable, BlueprintEvent)
+
+void AGCNL_EdgeOfStorm_C::Deactivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCNL_EdgeOfStorm_C", "Deactivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.Activated
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   EdgeOfStorm                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AGCNL_EdgeOfStorm_C::Activated(const struct FVector& EdgeOfStorm)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCNL_EdgeOfStorm_C", "Activated");
+
+	Params::GCNL_EdgeOfStorm_C_Activated Parms{};
+
+	Parms.EdgeOfStorm = std::move(EdgeOfStorm);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.OnActive
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool AGCNL_EdgeOfStorm_C::OnActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
 {
@@ -101,7 +101,7 @@ bool AGCNL_EdgeOfStorm_C::OnActive(class AActor* MyTarget, const struct FGamepla
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool AGCNL_EdgeOfStorm_C::OnExecute(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
 {
@@ -126,7 +126,7 @@ bool AGCNL_EdgeOfStorm_C::OnExecute(class AActor* MyTarget, const struct FGamepl
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool AGCNL_EdgeOfStorm_C::OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
 {

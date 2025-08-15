@@ -18,29 +18,29 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C
-// 0x0020 (0x1490 - 0x1470)
+// 0x0020 (0x0D38 - 0x0D18)
 class AB_FloppingRabbit_Weap_Athena_C : public AB_UtilityItem_Generic_Athena_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_FloppingRabbit_Weap_Athena_C;     // 0x1470(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AActor*                                 Projectile;                                        // 0x1478(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Wire;                                              // 0x1480(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HideBobber;                                        // 0x1488(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          OneHandGrip;                                       // 0x1489(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_FloppingRabbit_Weap_Athena_C;     // 0x0D18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AActor*                                 Projectile;                                        // 0x0D20(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Wire;                                              // 0x0D28(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HideBobber;                                        // 0x0D30(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
+	bool                                          OneHandGrip;                                       // 0x0D31(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
 
 public:
-	void UnbindHolsterEvents();
-	void ReceiveBeginPlay();
-	void OnWeaponAttached();
-	void OnTetherDetached();
-	void OnRep_OneHandGrip();
-	void OnRep_HideBobber();
-	void OnHolstered();
-	void K2_OnUnEquip();
-	void ForceKillFishing();
 	void ExecuteUbergraph_B_FloppingRabbit_Weap_Athena(int32 EntryPoint);
-	class FName DetermineFishLootTierNameAndSetLootForSpawner(bool bIsExplosion);
+	void OnHolstered();
+	void UnbindHolsterEvents();
 	void BindHolsterEvents();
+	void OnTetherDetached();
+	void ForceKillFishing();
+	void OnWeaponAttached();
+	void K2_OnUnEquip();
+	void ReceiveBeginPlay();
+	void OnRep_HideBobber();
+	void OnRep_OneHandGrip();
+	class FName DetermineFishLootTierNameAndSetLootForSpawner(bool bIsExplosion);
 
 public:
 	static class UClass* StaticClass()
@@ -52,6 +52,13 @@ public:
 		return GetDefaultObjImpl<AB_FloppingRabbit_Weap_Athena_C>();
 	}
 };
+static_assert(alignof(AB_FloppingRabbit_Weap_Athena_C) == 0x000008, "Wrong alignment on AB_FloppingRabbit_Weap_Athena_C");
+static_assert(sizeof(AB_FloppingRabbit_Weap_Athena_C) == 0x000D38, "Wrong size on AB_FloppingRabbit_Weap_Athena_C");
+static_assert(offsetof(AB_FloppingRabbit_Weap_Athena_C, UberGraphFrame_B_FloppingRabbit_Weap_Athena_C) == 0x000D18, "Member 'AB_FloppingRabbit_Weap_Athena_C::UberGraphFrame_B_FloppingRabbit_Weap_Athena_C' has a wrong offset!");
+static_assert(offsetof(AB_FloppingRabbit_Weap_Athena_C, Projectile) == 0x000D20, "Member 'AB_FloppingRabbit_Weap_Athena_C::Projectile' has a wrong offset!");
+static_assert(offsetof(AB_FloppingRabbit_Weap_Athena_C, Wire) == 0x000D28, "Member 'AB_FloppingRabbit_Weap_Athena_C::Wire' has a wrong offset!");
+static_assert(offsetof(AB_FloppingRabbit_Weap_Athena_C, HideBobber) == 0x000D30, "Member 'AB_FloppingRabbit_Weap_Athena_C::HideBobber' has a wrong offset!");
+static_assert(offsetof(AB_FloppingRabbit_Weap_Athena_C, OneHandGrip) == 0x000D31, "Member 'AB_FloppingRabbit_Weap_Athena_C::OneHandGrip' has a wrong offset!");
 
 }
 

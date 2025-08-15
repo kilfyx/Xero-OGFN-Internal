@@ -20,14 +20,14 @@ namespace SDK
 // Function ArenaPersonalView.ArenaPersonalView_C.Colorize
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortTournamentDisplayInfo       Color_Info                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortTournamentDisplayInfo&Color_Info                                             (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UArenaPersonalView_C::Colorize(const struct FFortTournamentDisplayInfo& Color_Info)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Colorize");
+		Func = Class->GetFunction("ArenaPersonalView_C", "Colorize");
 
 	Params::ArenaPersonalView_C_Colorize Parms{};
 
@@ -45,9 +45,9 @@ void UArenaPersonalView_C::Colorize(const struct FFortTournamentDisplayInfo& Col
 void UArenaPersonalView_C::ExecuteUbergraph_ArenaPersonalView(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_ArenaPersonalView");
+		Func = Class->GetFunction("ArenaPersonalView_C", "ExecuteUbergraph_ArenaPersonalView");
 
 	Params::ArenaPersonalView_C_ExecuteUbergraph_ArenaPersonalView Parms{};
 

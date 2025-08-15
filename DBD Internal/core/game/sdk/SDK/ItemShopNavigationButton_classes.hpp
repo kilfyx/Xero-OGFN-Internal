@@ -19,27 +19,27 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ItemShopNavigationButton.ItemShopNavigationButton_C
-// 0x0050 (0x1490 - 0x1440)
+// 0x0050 (0x0BF8 - 0x0BA8)
 class UItemShopNavigationButton_C final : public UAthenaItemShopNavigationButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1440(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FadeOutBacking;                                    // 0x1448(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Translate_Bottom;                                  // 0x1450(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Translate_Top;                                     // 0x1458(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hover;                                             // 0x1460(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Backing;                                           // 0x1468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                BorderButton;                                      // 0x1470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                GridBoundBorder;                                   // 0x1478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 IMG_Arrow;                                         // 0x1480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bFlipArrow;                                        // 0x1488(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          bIsTop;                                            // 0x1489(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FadeOutBacking;                                    // 0x0BB0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Translate_Bottom;                                  // 0x0BB8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Translate_Top;                                     // 0x0BC0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover;                                             // 0x0BC8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Backing;                                           // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                BorderButton;                                      // 0x0BD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                GridBoundBorder;                                   // 0x0BE0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IMG_Arrow;                                         // 0x0BE8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bFlipArrow;                                        // 0x0BF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	bool                                          bIsTop;                                            // 0x0BF1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
+	void PreConstruct(bool IsDesignTime);
 	void BP_OnHovered();
 	void BP_OnUnhovered();
 	void ExecuteUbergraph_ItemShopNavigationButton(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()
@@ -51,19 +51,19 @@ public:
 		return GetDefaultObjImpl<UItemShopNavigationButton_C>();
 	}
 };
-static_assert(alignof(UItemShopNavigationButton_C) == 0x000010, "Wrong alignment on UItemShopNavigationButton_C");
-static_assert(sizeof(UItemShopNavigationButton_C) == 0x001490, "Wrong size on UItemShopNavigationButton_C");
-static_assert(offsetof(UItemShopNavigationButton_C, UberGraphFrame) == 0x001440, "Member 'UItemShopNavigationButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UItemShopNavigationButton_C, FadeOutBacking) == 0x001448, "Member 'UItemShopNavigationButton_C::FadeOutBacking' has a wrong offset!");
-static_assert(offsetof(UItemShopNavigationButton_C, Translate_Bottom) == 0x001450, "Member 'UItemShopNavigationButton_C::Translate_Bottom' has a wrong offset!");
-static_assert(offsetof(UItemShopNavigationButton_C, Translate_Top) == 0x001458, "Member 'UItemShopNavigationButton_C::Translate_Top' has a wrong offset!");
-static_assert(offsetof(UItemShopNavigationButton_C, Hover) == 0x001460, "Member 'UItemShopNavigationButton_C::Hover' has a wrong offset!");
-static_assert(offsetof(UItemShopNavigationButton_C, Backing) == 0x001468, "Member 'UItemShopNavigationButton_C::Backing' has a wrong offset!");
-static_assert(offsetof(UItemShopNavigationButton_C, BorderButton) == 0x001470, "Member 'UItemShopNavigationButton_C::BorderButton' has a wrong offset!");
-static_assert(offsetof(UItemShopNavigationButton_C, GridBoundBorder) == 0x001478, "Member 'UItemShopNavigationButton_C::GridBoundBorder' has a wrong offset!");
-static_assert(offsetof(UItemShopNavigationButton_C, IMG_Arrow) == 0x001480, "Member 'UItemShopNavigationButton_C::IMG_Arrow' has a wrong offset!");
-static_assert(offsetof(UItemShopNavigationButton_C, bFlipArrow) == 0x001488, "Member 'UItemShopNavigationButton_C::bFlipArrow' has a wrong offset!");
-static_assert(offsetof(UItemShopNavigationButton_C, bIsTop) == 0x001489, "Member 'UItemShopNavigationButton_C::bIsTop' has a wrong offset!");
+static_assert(alignof(UItemShopNavigationButton_C) == 0x000008, "Wrong alignment on UItemShopNavigationButton_C");
+static_assert(sizeof(UItemShopNavigationButton_C) == 0x000BF8, "Wrong size on UItemShopNavigationButton_C");
+static_assert(offsetof(UItemShopNavigationButton_C, UberGraphFrame) == 0x000BA8, "Member 'UItemShopNavigationButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UItemShopNavigationButton_C, FadeOutBacking) == 0x000BB0, "Member 'UItemShopNavigationButton_C::FadeOutBacking' has a wrong offset!");
+static_assert(offsetof(UItemShopNavigationButton_C, Translate_Bottom) == 0x000BB8, "Member 'UItemShopNavigationButton_C::Translate_Bottom' has a wrong offset!");
+static_assert(offsetof(UItemShopNavigationButton_C, Translate_Top) == 0x000BC0, "Member 'UItemShopNavigationButton_C::Translate_Top' has a wrong offset!");
+static_assert(offsetof(UItemShopNavigationButton_C, Hover) == 0x000BC8, "Member 'UItemShopNavigationButton_C::Hover' has a wrong offset!");
+static_assert(offsetof(UItemShopNavigationButton_C, Backing) == 0x000BD0, "Member 'UItemShopNavigationButton_C::Backing' has a wrong offset!");
+static_assert(offsetof(UItemShopNavigationButton_C, BorderButton) == 0x000BD8, "Member 'UItemShopNavigationButton_C::BorderButton' has a wrong offset!");
+static_assert(offsetof(UItemShopNavigationButton_C, GridBoundBorder) == 0x000BE0, "Member 'UItemShopNavigationButton_C::GridBoundBorder' has a wrong offset!");
+static_assert(offsetof(UItemShopNavigationButton_C, IMG_Arrow) == 0x000BE8, "Member 'UItemShopNavigationButton_C::IMG_Arrow' has a wrong offset!");
+static_assert(offsetof(UItemShopNavigationButton_C, bFlipArrow) == 0x000BF0, "Member 'UItemShopNavigationButton_C::bFlipArrow' has a wrong offset!");
+static_assert(offsetof(UItemShopNavigationButton_C, bIsTop) == 0x000BF1, "Member 'UItemShopNavigationButton_C::bIsTop' has a wrong offset!");
 
 }
 

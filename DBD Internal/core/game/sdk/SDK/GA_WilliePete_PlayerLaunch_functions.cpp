@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.ExecuteUbergraph_GA_WilliePete_PlayerLaunch
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_WilliePete_PlayerLaunch_C::ExecuteUbergraph_GA_WilliePete_PlayerLaunch(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_WilliePete_PlayerLaunch_C", "ExecuteUbergraph_GA_WilliePete_PlayerLaunch");
+
+	Params::GA_WilliePete_PlayerLaunch_C_ExecuteUbergraph_GA_WilliePete_PlayerLaunch Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.ActorHit
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -43,23 +63,17 @@ void UGA_WilliePete_PlayerLaunch_C::ActorHit(class AActor* SelfActor, class AAct
 }
 
 
-// Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.BreakBlockingStructure
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           HitActor                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
 
-void UGA_WilliePete_PlayerLaunch_C::BreakBlockingStructure(class AActor* HitActor)
+void UGA_WilliePete_PlayerLaunch_C::K2_ActivateAbility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_WilliePete_PlayerLaunch_C", "BreakBlockingStructure");
+		Func = Class->GetFunction("GA_WilliePete_PlayerLaunch_C", "K2_ActivateAbility");
 
-	Params::GA_WilliePete_PlayerLaunch_C_BreakBlockingStructure Parms{};
-
-	Parms.HitActor = HitActor;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -83,77 +97,17 @@ void UGA_WilliePete_PlayerLaunch_C::End_Skydive(const struct FHitResult& Hit)
 }
 
 
-// Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.ExecuteUbergraph_GA_WilliePete_PlayerLaunch
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.Redeploy Glider
+// (BlueprintCallable, BlueprintEvent)
 
-void UGA_WilliePete_PlayerLaunch_C::ExecuteUbergraph_GA_WilliePete_PlayerLaunch(int32 EntryPoint)
+void UGA_WilliePete_PlayerLaunch_C::Redeploy_Glider()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_WilliePete_PlayerLaunch_C", "ExecuteUbergraph_GA_WilliePete_PlayerLaunch");
-
-	Params::GA_WilliePete_PlayerLaunch_C_ExecuteUbergraph_GA_WilliePete_PlayerLaunch Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_WilliePete_PlayerLaunch_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_WilliePete_PlayerLaunch_C", "K2_ActivateAbility");
+		Func = Class->GetFunction("GA_WilliePete_PlayerLaunch_C", "Redeploy Glider");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnBlendOut_A0F03A1445141EA659E282AFE77CEA62
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              NotifyTag                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UGA_WilliePete_PlayerLaunch_C::OnBlendOut_A0F03A1445141EA659E282AFE77CEA62(const struct FGameplayTag& NotifyTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_WilliePete_PlayerLaunch_C", "OnBlendOut_A0F03A1445141EA659E282AFE77CEA62");
-
-	Params::GA_WilliePete_PlayerLaunch_C_OnBlendOut_A0F03A1445141EA659E282AFE77CEA62 Parms{};
-
-	Parms.NotifyTag = std::move(NotifyTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnCancelled_A0F03A1445141EA659E282AFE77CEA62
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              NotifyTag                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UGA_WilliePete_PlayerLaunch_C::OnCancelled_A0F03A1445141EA659E282AFE77CEA62(const struct FGameplayTag& NotifyTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_WilliePete_PlayerLaunch_C", "OnCancelled_A0F03A1445141EA659E282AFE77CEA62");
-
-	Params::GA_WilliePete_PlayerLaunch_C_OnCancelled_A0F03A1445141EA659E282AFE77CEA62 Parms{};
-
-	Parms.NotifyTag = std::move(NotifyTag);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -177,6 +131,26 @@ void UGA_WilliePete_PlayerLaunch_C::OnCompleted_A0F03A1445141EA659E282AFE77CEA62
 }
 
 
+// Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnBlendOut_A0F03A1445141EA659E282AFE77CEA62
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayTag&              NotifyTag                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+
+void UGA_WilliePete_PlayerLaunch_C::OnBlendOut_A0F03A1445141EA659E282AFE77CEA62(const struct FGameplayTag& NotifyTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_WilliePete_PlayerLaunch_C", "OnBlendOut_A0F03A1445141EA659E282AFE77CEA62");
+
+	Params::GA_WilliePete_PlayerLaunch_C_OnBlendOut_A0F03A1445141EA659E282AFE77CEA62 Parms{};
+
+	Parms.NotifyTag = std::move(NotifyTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnInterrupted_A0F03A1445141EA659E282AFE77CEA62
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -190,6 +164,26 @@ void UGA_WilliePete_PlayerLaunch_C::OnInterrupted_A0F03A1445141EA659E282AFE77CEA
 		Func = Class->GetFunction("GA_WilliePete_PlayerLaunch_C", "OnInterrupted_A0F03A1445141EA659E282AFE77CEA62");
 
 	Params::GA_WilliePete_PlayerLaunch_C_OnInterrupted_A0F03A1445141EA659E282AFE77CEA62 Parms{};
+
+	Parms.NotifyTag = std::move(NotifyTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnCancelled_A0F03A1445141EA659E282AFE77CEA62
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayTag&              NotifyTag                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+
+void UGA_WilliePete_PlayerLaunch_C::OnCancelled_A0F03A1445141EA659E282AFE77CEA62(const struct FGameplayTag& NotifyTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_WilliePete_PlayerLaunch_C", "OnCancelled_A0F03A1445141EA659E282AFE77CEA62");
+
+	Params::GA_WilliePete_PlayerLaunch_C_OnCancelled_A0F03A1445141EA659E282AFE77CEA62 Parms{};
 
 	Parms.NotifyTag = std::move(NotifyTag);
 
@@ -237,17 +231,23 @@ void UGA_WilliePete_PlayerLaunch_C::OnNotifyEnd_A0F03A1445141EA659E282AFE77CEA62
 }
 
 
-// Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.Redeploy Glider
-// (BlueprintCallable, BlueprintEvent)
+// Function GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.BreakBlockingStructure
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           HitActor                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_WilliePete_PlayerLaunch_C::Redeploy_Glider()
+void UGA_WilliePete_PlayerLaunch_C::BreakBlockingStructure(class AActor* HitActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_WilliePete_PlayerLaunch_C", "Redeploy Glider");
+		Func = Class->GetFunction("GA_WilliePete_PlayerLaunch_C", "BreakBlockingStructure");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::GA_WilliePete_PlayerLaunch_C_BreakBlockingStructure Parms{};
+
+	Parms.HitActor = HitActor;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

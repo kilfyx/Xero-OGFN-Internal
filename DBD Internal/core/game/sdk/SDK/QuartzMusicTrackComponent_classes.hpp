@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass QuartzMusicTrackComponent.QuartzMusicTrackComponent_C
-// 0x00D0 (0x0180 - 0x00B0)
+// 0x00B0 (0x0160 - 0x00B0)
 class UQuartzMusicTrackComponent_C : public UGameFrameworkComponent
 {
 public:
@@ -33,35 +33,33 @@ public:
 	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuartzClockSettings                   ClockSettings;                                     // 0x00E0(0x0020)(Edit, BlueprintVisible)
 	class ABP_QuartzMusicController_C*            ControllerActor;                                   // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FQuartzQuantizationBoundary            ClockQuantizationBoundary;                         // 0x0108(0x0020)(Edit, BlueprintVisible)
-	bool                                          bDebugEnabled;                                     // 0x0128(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        AudioComponent;                                    // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bQueueStop;                                        // 0x0138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TrackFadeInTime;                                   // 0x013C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TrackFadeOutTime;                                  // 0x0140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_144[0x4];                                      // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           TrackParameters;                                   // 0x0148(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTagContainer                  TrackDisableTags;                                  // 0x0158(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTag                           MusicEventTag;                                     // 0x0178(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FQuartzQuantizationBoundary            ClockQuantizationBoundary;                         // 0x0108(0x000C)(Edit, BlueprintVisible, NoDestructor)
+	bool                                          bDebugEnabled;                                     // 0x0114(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_115[0x3];                                      // 0x0115(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        AudioComponent;                                    // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bQueueStop;                                        // 0x0120(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_121[0x3];                                      // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TrackFadeInTime;                                   // 0x0124(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TrackFadeOutTime;                                  // 0x0128(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           TrackParameters;                                   // 0x0130(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  TrackDisableTags;                                  // 0x0140(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void ExecuteUbergraph_QuartzMusicTrackComponent(int32 EntryPoint);
+	void SetTrackParameter(int32 ParameterIndex, float InFloat);
 	void GetAudioComponent(class UAudioComponent** AudioComponent_0);
-	void GetClockHandle(class UQuartzClockHandle** Clock_Handle);
-	void GetIsPlaying(bool* Is_Playing);
 	EAudioComponentPlayState GetPlayState();
-	void GetTrackPriority(float* Priority);
-	void OnQuartzClockDelegate(EQuartzCommandDelegateSubType EventType, class FName Name_0);
+	void GetIsPlaying(bool* Is_Playing);
 	void OnQuartzQuantizationEvent(class FName ClockName_0, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction);
-	void QueueTrackStart();
+	void OnQuartzClockDelegate(EQuartzCommandDelegateSubType EventType, class FName Name_0);
 	void QueueTrackStop();
+	void QueueTrackStart();
+	void GetTrackPriority(float* Priority);
+	void SetDebugEnabled(bool Debug);
 	void ReceiveBeginPlay();
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void SetDebugEnabled(bool Debug);
 	void SetStemVolume(int32 Index_0, float Value);
-	void SetTrackParameter(int32 ParameterIndex, float InFloat);
+	void ExecuteUbergraph_QuartzMusicTrackComponent(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -73,6 +71,24 @@ public:
 		return GetDefaultObjImpl<UQuartzMusicTrackComponent_C>();
 	}
 };
+static_assert(alignof(UQuartzMusicTrackComponent_C) == 0x000008, "Wrong alignment on UQuartzMusicTrackComponent_C");
+static_assert(sizeof(UQuartzMusicTrackComponent_C) == 0x000160, "Wrong size on UQuartzMusicTrackComponent_C");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, UberGraphFrame) == 0x0000B0, "Member 'UQuartzMusicTrackComponent_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, TrackSoundCue) == 0x0000B8, "Member 'UQuartzMusicTrackComponent_C::TrackSoundCue' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, TrackPriority) == 0x0000C0, "Member 'UQuartzMusicTrackComponent_C::TrackPriority' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, ClockInst) == 0x0000C8, "Member 'UQuartzMusicTrackComponent_C::ClockInst' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, ClockName) == 0x0000D0, "Member 'UQuartzMusicTrackComponent_C::ClockName' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, ClockBPM) == 0x0000D8, "Member 'UQuartzMusicTrackComponent_C::ClockBPM' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, ClockSettings) == 0x0000E0, "Member 'UQuartzMusicTrackComponent_C::ClockSettings' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, ControllerActor) == 0x000100, "Member 'UQuartzMusicTrackComponent_C::ControllerActor' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, ClockQuantizationBoundary) == 0x000108, "Member 'UQuartzMusicTrackComponent_C::ClockQuantizationBoundary' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, bDebugEnabled) == 0x000114, "Member 'UQuartzMusicTrackComponent_C::bDebugEnabled' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, AudioComponent) == 0x000118, "Member 'UQuartzMusicTrackComponent_C::AudioComponent' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, bQueueStop) == 0x000120, "Member 'UQuartzMusicTrackComponent_C::bQueueStop' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, TrackFadeInTime) == 0x000124, "Member 'UQuartzMusicTrackComponent_C::TrackFadeInTime' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, TrackFadeOutTime) == 0x000128, "Member 'UQuartzMusicTrackComponent_C::TrackFadeOutTime' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, TrackParameters) == 0x000130, "Member 'UQuartzMusicTrackComponent_C::TrackParameters' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_C, TrackDisableTags) == 0x000140, "Member 'UQuartzMusicTrackComponent_C::TrackDisableTags' has a wrong offset!");
 
 }
 

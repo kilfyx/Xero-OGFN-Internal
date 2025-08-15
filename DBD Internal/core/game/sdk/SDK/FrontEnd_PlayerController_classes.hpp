@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FrontEnd_PlayerController.FrontEnd_PlayerController_C
-// 0x0000 (0x2E50 - 0x2E50)
+// 0x0000 (0x2400 - 0x2400)
 class AFrontEnd_PlayerController_C final : public AFortPlayerControllerFrontEnd
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AFrontEnd_PlayerController_C) == 0x000010, "Wrong alignment on AFrontEnd_PlayerController_C");
-static_assert(sizeof(AFrontEnd_PlayerController_C) == 0x002E50, "Wrong size on AFrontEnd_PlayerController_C");
+static_assert(sizeof(AFrontEnd_PlayerController_C) == 0x002400, "Wrong size on AFrontEnd_PlayerController_C");
 
 }
 

@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaGlobalCash.AthenaGlobalCash_C
-// 0x0010 (0x0300 - 0x02F0)
+// 0x0010 (0x02F8 - 0x02E8)
 class UAthenaGlobalCash_C final : public UFortGlobalCashWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UVerticalBox*                           VBox_Content;                                      // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UVerticalBox*                           VBox_Content;                                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_AthenaGlobalCash(int32 EntryPoint);
-	void OnQueryCompletedSuccessfully(int32 GlobalCashBalance);
 	void OnQueryStarted();
+	void OnQueryCompletedSuccessfully(int32 GlobalCashBalance);
+	void ExecuteUbergraph_AthenaGlobalCash(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -41,9 +41,9 @@ public:
 	}
 };
 static_assert(alignof(UAthenaGlobalCash_C) == 0x000008, "Wrong alignment on UAthenaGlobalCash_C");
-static_assert(sizeof(UAthenaGlobalCash_C) == 0x000300, "Wrong size on UAthenaGlobalCash_C");
-static_assert(offsetof(UAthenaGlobalCash_C, UberGraphFrame) == 0x0002F0, "Member 'UAthenaGlobalCash_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaGlobalCash_C, VBox_Content) == 0x0002F8, "Member 'UAthenaGlobalCash_C::VBox_Content' has a wrong offset!");
+static_assert(sizeof(UAthenaGlobalCash_C) == 0x0002F8, "Wrong size on UAthenaGlobalCash_C");
+static_assert(offsetof(UAthenaGlobalCash_C, UberGraphFrame) == 0x0002E8, "Member 'UAthenaGlobalCash_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaGlobalCash_C, VBox_Content) == 0x0002F0, "Member 'UAthenaGlobalCash_C::VBox_Content' has a wrong offset!");
 
 }
 

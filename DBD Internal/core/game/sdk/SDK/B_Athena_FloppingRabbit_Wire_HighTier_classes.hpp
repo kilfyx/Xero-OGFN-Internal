@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AB_Athena_FloppingRabbit_Wire_HighTier_C>();
 	}
 };
+static_assert(alignof(AB_Athena_FloppingRabbit_Wire_HighTier_C) == 0x000008, "Wrong alignment on AB_Athena_FloppingRabbit_Wire_HighTier_C");
+static_assert(sizeof(AB_Athena_FloppingRabbit_Wire_HighTier_C) == 0x0003B0, "Wrong size on AB_Athena_FloppingRabbit_Wire_HighTier_C");
 
 }
 

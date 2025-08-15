@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_WilliePete_PlayerLaunch_Granted_C>();
 	}
 };
+static_assert(alignof(UGE_WilliePete_PlayerLaunch_Granted_C) == 0x000008, "Wrong alignment on UGE_WilliePete_PlayerLaunch_Granted_C");
+static_assert(sizeof(UGE_WilliePete_PlayerLaunch_Granted_C) == 0x000800, "Wrong size on UGE_WilliePete_PlayerLaunch_Granted_C");
 
 }
 

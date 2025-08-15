@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ArenaViewMeTab.ArenaViewMeTab_C
-// 0x0008 (0x03B8 - 0x03B0)
+// 0x0008 (0x0330 - 0x0328)
 class UArenaViewMeTab_C final : public UFortArenaPersonalViewTab
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0328(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void Colorize(const struct FFortTournamentDisplayInfo& ColorInfo);
@@ -39,8 +39,8 @@ public:
 	}
 };
 static_assert(alignof(UArenaViewMeTab_C) == 0x000008, "Wrong alignment on UArenaViewMeTab_C");
-static_assert(sizeof(UArenaViewMeTab_C) == 0x0003B8, "Wrong size on UArenaViewMeTab_C");
-static_assert(offsetof(UArenaViewMeTab_C, UberGraphFrame) == 0x0003B0, "Member 'UArenaViewMeTab_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(UArenaViewMeTab_C) == 0x000330, "Wrong size on UArenaViewMeTab_C");
+static_assert(offsetof(UArenaViewMeTab_C, UberGraphFrame) == 0x000328, "Member 'UArenaViewMeTab_C::UberGraphFrame' has a wrong offset!");
 
 }
 

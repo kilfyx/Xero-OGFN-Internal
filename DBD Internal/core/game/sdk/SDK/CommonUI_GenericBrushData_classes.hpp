@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CommonUI_GenericBrushData.CommonUI_GenericBrushData_C
-// 0x0000 (0x0100 - 0x0100)
+// 0x0000 (0x00A0 - 0x00A0)
 class UCommonUI_GenericBrushData_C final : public UFortInputControllerData
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UCommonUI_GenericBrushData_C>();
 	}
 };
+static_assert(alignof(UCommonUI_GenericBrushData_C) == 0x000008, "Wrong alignment on UCommonUI_GenericBrushData_C");
+static_assert(sizeof(UCommonUI_GenericBrushData_C) == 0x0000A0, "Wrong size on UCommonUI_GenericBrushData_C");
 
 }
 

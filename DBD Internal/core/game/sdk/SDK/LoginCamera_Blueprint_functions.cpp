@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function LoginCamera_Blueprint.LoginCamera_Blueprint_C.OnActivated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ALoginCamera_Blueprint_C::OnActivated(class AFortPlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LoginCamera_Blueprint_C", "OnActivated");
+
+	Params::LoginCamera_Blueprint_C_OnActivated Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function LoginCamera_Blueprint.LoginCamera_Blueprint_C.ExecuteUbergraph_LoginCamera_Blueprint
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -25,33 +45,13 @@ namespace SDK
 void ALoginCamera_Blueprint_C::ExecuteUbergraph_LoginCamera_Blueprint(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_LoginCamera_Blueprint");
+		Func = Class->GetFunction("LoginCamera_Blueprint_C", "ExecuteUbergraph_LoginCamera_Blueprint");
 
 	Params::LoginCamera_Blueprint_C_ExecuteUbergraph_LoginCamera_Blueprint Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LoginCamera_Blueprint.LoginCamera_Blueprint_C.BP_OnActivated
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ALoginCamera_Blueprint_C::BP_OnActivated(class AFortPlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
-
-	Params::LoginCamera_Blueprint_C_BP_OnActivated Parms{};
-
-	Parms.PlayerController = PlayerController;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

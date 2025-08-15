@@ -51,34 +51,6 @@ void UGA_DefaultPlayer_PetOtherPet_C::K2_ActivateAbility()
 }
 
 
-// Function GA_DefaultPlayer_PetOtherPet.GA_DefaultPlayer_PetOtherPet_C.OnBlendOut_FB7AFE5D4FF547CAEB1ECA8264EE1330
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_DefaultPlayer_PetOtherPet_C::OnBlendOut_FB7AFE5D4FF547CAEB1ECA8264EE1330()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_DefaultPlayer_PetOtherPet_C", "OnBlendOut_FB7AFE5D4FF547CAEB1ECA8264EE1330");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_DefaultPlayer_PetOtherPet.GA_DefaultPlayer_PetOtherPet_C.OnCancelled_FB7AFE5D4FF547CAEB1ECA8264EE1330
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_DefaultPlayer_PetOtherPet_C::OnCancelled_FB7AFE5D4FF547CAEB1ECA8264EE1330()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_DefaultPlayer_PetOtherPet_C", "OnCancelled_FB7AFE5D4FF547CAEB1ECA8264EE1330");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_DefaultPlayer_PetOtherPet.GA_DefaultPlayer_PetOtherPet_C.OnCompleted_FB7AFE5D4FF547CAEB1ECA8264EE1330
 // (BlueprintCallable, BlueprintEvent)
 
@@ -93,6 +65,20 @@ void UGA_DefaultPlayer_PetOtherPet_C::OnCompleted_FB7AFE5D4FF547CAEB1ECA8264EE13
 }
 
 
+// Function GA_DefaultPlayer_PetOtherPet.GA_DefaultPlayer_PetOtherPet_C.OnBlendOut_FB7AFE5D4FF547CAEB1ECA8264EE1330
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_DefaultPlayer_PetOtherPet_C::OnBlendOut_FB7AFE5D4FF547CAEB1ECA8264EE1330()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_DefaultPlayer_PetOtherPet_C", "OnBlendOut_FB7AFE5D4FF547CAEB1ECA8264EE1330");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_DefaultPlayer_PetOtherPet.GA_DefaultPlayer_PetOtherPet_C.OnInterrupted_FB7AFE5D4FF547CAEB1ECA8264EE1330
 // (BlueprintCallable, BlueprintEvent)
 
@@ -102,6 +88,20 @@ void UGA_DefaultPlayer_PetOtherPet_C::OnInterrupted_FB7AFE5D4FF547CAEB1ECA8264EE
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GA_DefaultPlayer_PetOtherPet_C", "OnInterrupted_FB7AFE5D4FF547CAEB1ECA8264EE1330");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_DefaultPlayer_PetOtherPet.GA_DefaultPlayer_PetOtherPet_C.OnCancelled_FB7AFE5D4FF547CAEB1ECA8264EE1330
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_DefaultPlayer_PetOtherPet_C::OnCancelled_FB7AFE5D4FF547CAEB1ECA8264EE1330()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_DefaultPlayer_PetOtherPet_C", "OnCancelled_FB7AFE5D4FF547CAEB1ECA8264EE1330");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

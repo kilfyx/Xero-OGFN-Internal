@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Interrogate_GC_C>();
 	}
 };
+static_assert(alignof(UGE_Interrogate_GC_C) == 0x000008, "Wrong alignment on UGE_Interrogate_GC_C");
+static_assert(sizeof(UGE_Interrogate_GC_C) == 0x000800, "Wrong size on UGE_Interrogate_GC_C");
 
 }
 

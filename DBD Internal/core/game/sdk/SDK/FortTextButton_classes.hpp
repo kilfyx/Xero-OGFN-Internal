@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass FortTextButton.FortTextButton_C
-// 0x0000 (0x14D0 - 0x14D0)
+// 0x0000 (0x0BC8 - 0x0BC8)
 class UFortTextButton_C final : public UFortTextButton
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<UFortTextButton_C>();
 	}
 };
-static_assert(alignof(UFortTextButton_C) == 0x000010, "Wrong alignment on UFortTextButton_C");
-static_assert(sizeof(UFortTextButton_C) == 0x0014D0, "Wrong size on UFortTextButton_C");
+static_assert(alignof(UFortTextButton_C) == 0x000008, "Wrong alignment on UFortTextButton_C");
+static_assert(sizeof(UFortTextButton_C) == 0x000BC8, "Wrong size on UFortTextButton_C");
 
 }
 

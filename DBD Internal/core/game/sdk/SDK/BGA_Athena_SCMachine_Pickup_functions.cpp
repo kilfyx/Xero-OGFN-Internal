@@ -17,142 +17,6 @@
 namespace SDK
 {
 
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.AutoCollectCards
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_SCMachine_Pickup_C::AutoCollectCards()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "AutoCollectCards");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BlueprintOnInteract
-// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
-// Parameters:
-// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_SCMachine_Pickup_C::BlueprintOnInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "BlueprintOnInteract");
-
-	Params::BGA_Athena_SCMachine_Pickup_C_BlueprintOnInteract Parms{};
-
-	Parms.InteractingPawn = InteractingPawn;
-	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BndEvt__Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParams, BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void ABGA_Athena_SCMachine_Pickup_C::BndEvt__Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "BndEvt__Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
-
-	Params::BGA_Athena_SCMachine_Pickup_C_BndEvt__Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature Parms{};
-
-	Parms.OverlappedComponent = OverlappedComponent;
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.OtherBodyIndex = OtherBodyIndex;
-	Parms.bFromSweep = bFromSweep;
-	Parms.SweepResult = std::move(SweepResult);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.CollectPickup
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_SCMachine_Pickup_C::CollectPickup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "CollectPickup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ConsiderPositionCorrection
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_SCMachine_Pickup_C::ConsiderPositionCorrection()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "ConsiderPositionCorrection");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.DelayDestroyPickup
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_SCMachine_Pickup_C::DelayDestroyPickup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "DelayDestroyPickup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.DestroyPickup
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_SCMachine_Pickup_C::DestroyPickup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "DestroyPickup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.DetermineStopLocation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_SCMachine_Pickup_C::DetermineStopLocation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "DetermineStopLocation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ExecuteUbergraph_BGA_Athena_SCMachine_Pickup
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -170,6 +34,20 @@ void ABGA_Athena_SCMachine_Pickup_C::ExecuteUbergraph_BGA_Athena_SCMachine_Picku
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.DelayDestroyPickup
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_SCMachine_Pickup_C::DelayDestroyPickup()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "DelayDestroyPickup");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -219,6 +97,20 @@ void ABGA_Athena_SCMachine_Pickup_C::OnDeathServer(float Damage, const struct FG
 }
 
 
+// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.SpawnSound
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_SCMachine_Pickup_C::SpawnSound()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "SpawnSound");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnDestroyPickup
 // (Event, Protected, BlueprintEvent)
 
@@ -233,29 +125,51 @@ void ABGA_Athena_SCMachine_Pickup_C::OnDestroyPickup()
 }
 
 
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnRep_HideAndKill
-// (BlueprintCallable, BlueprintEvent)
+// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.CollectPickup
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 
-void ABGA_Athena_SCMachine_Pickup_C::OnRep_HideAndKill()
+void ABGA_Athena_SCMachine_Pickup_C::CollectPickup()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "OnRep_HideAndKill");
+		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "CollectPickup");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnRep_UnHide
-// (HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BlueprintOnInteract
+// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
+// Parameters:
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABGA_Athena_SCMachine_Pickup_C::OnRep_UnHide()
+void ABGA_Athena_SCMachine_Pickup_C::BlueprintOnInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "OnRep_UnHide");
+		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "BlueprintOnInteract");
+
+	Params::BGA_Athena_SCMachine_Pickup_C_BlueprintOnInteract Parms{};
+
+	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.DestroyPickup
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_SCMachine_Pickup_C::DestroyPickup()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "DestroyPickup");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -275,13 +189,27 @@ void ABGA_Athena_SCMachine_Pickup_C::ReceiveBeginPlay()
 }
 
 
+// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnRep_UnHide
+// (HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_SCMachine_Pickup_C::OnRep_UnHide()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "OnRep_UnHide");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ShouldDie
 // (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AController*                      EventInstigator                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool ABGA_Athena_SCMachine_Pickup_C::ShouldDie(float Damage, class AController* EventInstigator, class AActor* DamageCauser)
 {
@@ -302,15 +230,43 @@ bool ABGA_Athena_SCMachine_Pickup_C::ShouldDie(float Damage, class AController* 
 }
 
 
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.SpawnSound
-// (BlueprintCallable, BlueprintEvent)
+// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.DetermineStopLocation
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABGA_Athena_SCMachine_Pickup_C::SpawnSound()
+void ABGA_Athena_SCMachine_Pickup_C::DetermineStopLocation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "SpawnSound");
+		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "DetermineStopLocation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ConsiderPositionCorrection
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_SCMachine_Pickup_C::ConsiderPositionCorrection()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "ConsiderPositionCorrection");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnRep_HideAndKill
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_SCMachine_Pickup_C::OnRep_HideAndKill()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_SCMachine_Pickup_C", "OnRep_HideAndKill");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -322,7 +278,7 @@ void ABGA_Athena_SCMachine_Pickup_C::SpawnSound()
 // const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool ABGA_Athena_SCMachine_Pickup_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
 {

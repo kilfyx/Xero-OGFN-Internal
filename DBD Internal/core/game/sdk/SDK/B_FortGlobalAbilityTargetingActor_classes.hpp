@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AB_FortGlobalAbilityTargetingActor_C>();
 	}
 };
+static_assert(alignof(AB_FortGlobalAbilityTargetingActor_C) == 0x000008, "Wrong alignment on AB_FortGlobalAbilityTargetingActor_C");
+static_assert(sizeof(AB_FortGlobalAbilityTargetingActor_C) == 0x000220, "Wrong size on AB_FortGlobalAbilityTargetingActor_C");
 
 }
 

@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function LeaderboardTab.LeaderboardTab_C.Colorize
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FFortTournamentDisplayInfo       Color_Info                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
-
-void ULeaderboardTab_C::Colorize(const struct FFortTournamentDisplayInfo& Color_Info)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Colorize");
-
-	Params::LeaderboardTab_C_Colorize Parms{};
-
-	Parms.Color_Info = std::move(Color_Info);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function LeaderboardTab.LeaderboardTab_C.ExecuteUbergraph_LeaderboardTab
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -45,9 +25,9 @@ void ULeaderboardTab_C::Colorize(const struct FFortTournamentDisplayInfo& Color_
 void ULeaderboardTab_C::ExecuteUbergraph_LeaderboardTab(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_LeaderboardTab");
+		Func = Class->GetFunction("LeaderboardTab_C", "ExecuteUbergraph_LeaderboardTab");
 
 	Params::LeaderboardTab_C_ExecuteUbergraph_LeaderboardTab Parms{};
 
@@ -60,20 +40,40 @@ void ULeaderboardTab_C::ExecuteUbergraph_LeaderboardTab(int32 EntryPoint)
 // Function LeaderboardTab.LeaderboardTab_C.Set Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           EventId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           EventWindowId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    EventId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    EventWindowId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
 void ULeaderboardTab_C::Set_Event(const class FString& EventId, const class FString& EventWindowId)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Set Event");
+		Func = Class->GetFunction("LeaderboardTab_C", "Set Event");
 
 	Params::LeaderboardTab_C_Set_Event Parms{};
 
 	Parms.EventId = std::move(EventId);
 	Parms.EventWindowId = std::move(EventWindowId);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LeaderboardTab.LeaderboardTab_C.Colorize
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FFortTournamentDisplayInfo&Color_Info                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ULeaderboardTab_C::Colorize(const struct FFortTournamentDisplayInfo& Color_Info)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LeaderboardTab_C", "Colorize");
+
+	Params::LeaderboardTab_C_Colorize Parms{};
+
+	Parms.Color_Info = std::move(Color_Info);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -23,45 +23,53 @@ namespace SDK
 void ULoginScreen_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
+		Func = Class->GetFunction("LoginScreen_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function LoginScreen.LoginScreen_C.SetKeyArtVisibility
-// (Event, Protected, BlueprintEvent)
+// Function LoginScreen.LoginScreen_C.BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// int32                                   NewActiveWidgetIndex                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ActiveWidget                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ActiveWidgetIndex                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULoginScreen_C::SetKeyArtVisibility(int32 NewActiveWidgetIndex)
+void ULoginScreen_C::BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature(class UWidget* ActiveWidget, int32 ActiveWidgetIndex)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetKeyArtVisibility");
+		Func = Class->GetFunction("LoginScreen_C", "BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature");
 
-	Params::LoginScreen_C_SetKeyArtVisibility Parms{};
+	Params::LoginScreen_C_BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature Parms{};
 
-	Parms.NewActiveWidgetIndex = NewActiveWidgetIndex;
+	Parms.ActiveWidget = ActiveWidget;
+	Parms.ActiveWidgetIndex = ActiveWidgetIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function LoginScreen.LoginScreen_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
+// Function LoginScreen.LoginScreen_C.OnEnterState_1
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFortUIState                            PreviousUIState                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULoginScreen_C::BP_OnActivated()
+void ULoginScreen_C::OnEnterState_1(EFortUIState PreviousUIState)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
 
-	UObject::ProcessEvent(Func, nullptr);
+	if (Func == nullptr)
+		Func = Class->GetFunction("LoginScreen_C", "OnEnterState_1");
+
+	Params::LoginScreen_C_OnEnterState_1 Parms{};
+
+	Parms.PreviousUIState = PreviousUIState;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -73,29 +81,15 @@ void ULoginScreen_C::BP_OnActivated()
 void ULoginScreen_C::ExecuteUbergraph_LoginScreen(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_LoginScreen");
+		Func = Class->GetFunction("LoginScreen_C", "ExecuteUbergraph_LoginScreen");
 
 	Params::LoginScreen_C_ExecuteUbergraph_LoginScreen Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LoginScreen.LoginScreen_C.BndEvt__LoginScreen_Splash_Screen_K2Node_ComponentBoundEvent_0_OnWidgetActivationChanged__DelegateSignature
-// (BlueprintEvent)
-
-void ULoginScreen_C::BndEvt__LoginScreen_Splash_Screen_K2Node_ComponentBoundEvent_0_OnWidgetActivationChanged__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__LoginScreen_Splash_Screen_K2Node_ComponentBoundEvent_0_OnWidgetActivationChanged__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

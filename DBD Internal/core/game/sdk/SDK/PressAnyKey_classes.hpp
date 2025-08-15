@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass PressAnyKey.PressAnyKey_C
-// 0x0000 (0x04E8 - 0x04E8)
+// 0x0000 (0x04D8 - 0x04D8)
 class UPressAnyKey_C final : public UFortSettingsPressAnyKey
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UPressAnyKey_C>();
 	}
 };
+static_assert(alignof(UPressAnyKey_C) == 0x000008, "Wrong alignment on UPressAnyKey_C");
+static_assert(sizeof(UPressAnyKey_C) == 0x0004D8, "Wrong size on UPressAnyKey_C");
 
 }
 

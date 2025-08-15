@@ -42,6 +42,8 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+static_assert(alignof(IIslandPortalInteractionInterface_C) == 0x000001, "Wrong alignment on IIslandPortalInteractionInterface_C");
+static_assert(sizeof(IIslandPortalInteractionInterface_C) == 0x000001, "Wrong size on IIslandPortalInteractionInterface_C");
 
 }
 

@@ -37,20 +37,6 @@ void UHousepartyWelcomeToast_C::OnSetToast(class UFortUINotification* ToastNotif
 }
 
 
-// Function HousepartyWelcomeToast.HousepartyWelcomeToast_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UHousepartyWelcomeToast_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HousepartyWelcomeToast_C", "OnInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function HousepartyWelcomeToast.HousepartyWelcomeToast_C.ExecuteUbergraph_HousepartyWelcomeToast
 // (Final, UbergraphFunction)
 // Parameters:
@@ -68,20 +54,6 @@ void UHousepartyWelcomeToast_C::ExecuteUbergraph_HousepartyWelcomeToast(int32 En
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function HousepartyWelcomeToast.HousepartyWelcomeToast_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UHousepartyWelcomeToast_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HousepartyWelcomeToast_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -77,26 +77,6 @@ struct FLinearColor AB_SoundIndicator_01_C::GetDefaultTint()
 }
 
 
-// Function B_SoundIndicator_01.B_SoundIndicator_01_C.GetStrengthCurveForActiveType
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// struct FRuntimeFloatCurve               ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-struct FRuntimeFloatCurve AB_SoundIndicator_01_C::GetStrengthCurveForActiveType() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_SoundIndicator_01_C", "GetStrengthCurveForActiveType");
-
-	Params::B_SoundIndicator_01_C_GetStrengthCurveForActiveType Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function B_SoundIndicator_01.B_SoundIndicator_01_C.GetWeaponCurve
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
@@ -110,6 +90,26 @@ struct FRuntimeFloatCurve AB_SoundIndicator_01_C::GetWeaponCurve() const
 		Func = Class->GetFunction("B_SoundIndicator_01_C", "GetWeaponCurve");
 
 	Params::B_SoundIndicator_01_C_GetWeaponCurve Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function B_SoundIndicator_01.B_SoundIndicator_01_C.GetStrengthCurveForActiveType
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// struct FRuntimeFloatCurve               ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FRuntimeFloatCurve AB_SoundIndicator_01_C::GetStrengthCurveForActiveType() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_SoundIndicator_01_C", "GetStrengthCurveForActiveType");
+
+	Params::B_SoundIndicator_01_C_GetStrengthCurveForActiveType Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

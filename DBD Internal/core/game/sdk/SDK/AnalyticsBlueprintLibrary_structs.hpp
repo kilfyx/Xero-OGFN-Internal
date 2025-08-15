@@ -22,6 +22,10 @@ public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FAnalyticsEventAttr) == 0x000008, "Wrong alignment on FAnalyticsEventAttr");
+static_assert(sizeof(FAnalyticsEventAttr) == 0x000020, "Wrong size on FAnalyticsEventAttr");
+static_assert(offsetof(FAnalyticsEventAttr, Name) == 0x000000, "Member 'FAnalyticsEventAttr::Name' has a wrong offset!");
+static_assert(offsetof(FAnalyticsEventAttr, Value) == 0x000010, "Member 'FAnalyticsEventAttr::Value' has a wrong offset!");
 
 }
 

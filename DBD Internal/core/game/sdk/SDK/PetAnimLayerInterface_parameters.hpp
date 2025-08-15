@@ -10,33 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function PetAnimLayerInterface.PetAnimLayerInterface_C.PetSkeletalControlLayer
-// 0x0050 (0x0050 - 0x0000)
-struct PetAnimLayerInterface_C_PetSkeletalControlLayer final
-{
-public:
-	struct FPoseLink                              Pose;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	double                                        LookAtOverrideInput;                               // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                LookAtTargetLocationInput;                         // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LegIKAlphaOverride;                                // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        HandIKAlphaOverride;                               // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPoseLink                              PetSkeletalControlLayer_0;                         // 0x0040(0x0010)(Parm, OutParm, NoDestructor)
-};
-static_assert(alignof(PetAnimLayerInterface_C_PetSkeletalControlLayer) == 0x000008, "Wrong alignment on PetAnimLayerInterface_C_PetSkeletalControlLayer");
-static_assert(sizeof(PetAnimLayerInterface_C_PetSkeletalControlLayer) == 0x000050, "Wrong size on PetAnimLayerInterface_C_PetSkeletalControlLayer");
-static_assert(offsetof(PetAnimLayerInterface_C_PetSkeletalControlLayer, Pose) == 0x000000, "Member 'PetAnimLayerInterface_C_PetSkeletalControlLayer::Pose' has a wrong offset!");
-static_assert(offsetof(PetAnimLayerInterface_C_PetSkeletalControlLayer, LookAtOverrideInput) == 0x000010, "Member 'PetAnimLayerInterface_C_PetSkeletalControlLayer::LookAtOverrideInput' has a wrong offset!");
-static_assert(offsetof(PetAnimLayerInterface_C_PetSkeletalControlLayer, LookAtTargetLocationInput) == 0x000018, "Member 'PetAnimLayerInterface_C_PetSkeletalControlLayer::LookAtTargetLocationInput' has a wrong offset!");
-static_assert(offsetof(PetAnimLayerInterface_C_PetSkeletalControlLayer, LegIKAlphaOverride) == 0x000030, "Member 'PetAnimLayerInterface_C_PetSkeletalControlLayer::LegIKAlphaOverride' has a wrong offset!");
-static_assert(offsetof(PetAnimLayerInterface_C_PetSkeletalControlLayer, HandIKAlphaOverride) == 0x000038, "Member 'PetAnimLayerInterface_C_PetSkeletalControlLayer::HandIKAlphaOverride' has a wrong offset!");
-static_assert(offsetof(PetAnimLayerInterface_C_PetSkeletalControlLayer, PetSkeletalControlLayer_0) == 0x000040, "Member 'PetAnimLayerInterface_C_PetSkeletalControlLayer::PetSkeletalControlLayer_0' has a wrong offset!");
 
 // Function PetAnimLayerInterface.PetAnimLayerInterface_C.PetFullOverrideLayer
 // 0x0020 (0x0020 - 0x0000)
@@ -50,6 +29,27 @@ static_assert(alignof(PetAnimLayerInterface_C_PetFullOverrideLayer) == 0x000008,
 static_assert(sizeof(PetAnimLayerInterface_C_PetFullOverrideLayer) == 0x000020, "Wrong size on PetAnimLayerInterface_C_PetFullOverrideLayer");
 static_assert(offsetof(PetAnimLayerInterface_C_PetFullOverrideLayer, InPose) == 0x000000, "Member 'PetAnimLayerInterface_C_PetFullOverrideLayer::InPose' has a wrong offset!");
 static_assert(offsetof(PetAnimLayerInterface_C_PetFullOverrideLayer, PetFullOverrideLayer_0) == 0x000010, "Member 'PetAnimLayerInterface_C_PetFullOverrideLayer::PetFullOverrideLayer_0' has a wrong offset!");
+
+// Function PetAnimLayerInterface.PetAnimLayerInterface_C.PetSkeletalControlLayer
+// 0x0038 (0x0038 - 0x0000)
+struct PetAnimLayerInterface_C_PetSkeletalControlLayer final
+{
+public:
+	struct FPoseLink                              Pose;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         LookAtOverrideInput;                               // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LookAtTargetLocationInput;                         // 0x0014(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LegIKAlphaOverride;                                // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         HandIKAlphaOverride;                               // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPoseLink                              PetSkeletalControlLayer_0;                         // 0x0028(0x0010)(Parm, OutParm, NoDestructor)
+};
+static_assert(alignof(PetAnimLayerInterface_C_PetSkeletalControlLayer) == 0x000008, "Wrong alignment on PetAnimLayerInterface_C_PetSkeletalControlLayer");
+static_assert(sizeof(PetAnimLayerInterface_C_PetSkeletalControlLayer) == 0x000038, "Wrong size on PetAnimLayerInterface_C_PetSkeletalControlLayer");
+static_assert(offsetof(PetAnimLayerInterface_C_PetSkeletalControlLayer, Pose) == 0x000000, "Member 'PetAnimLayerInterface_C_PetSkeletalControlLayer::Pose' has a wrong offset!");
+static_assert(offsetof(PetAnimLayerInterface_C_PetSkeletalControlLayer, LookAtOverrideInput) == 0x000010, "Member 'PetAnimLayerInterface_C_PetSkeletalControlLayer::LookAtOverrideInput' has a wrong offset!");
+static_assert(offsetof(PetAnimLayerInterface_C_PetSkeletalControlLayer, LookAtTargetLocationInput) == 0x000014, "Member 'PetAnimLayerInterface_C_PetSkeletalControlLayer::LookAtTargetLocationInput' has a wrong offset!");
+static_assert(offsetof(PetAnimLayerInterface_C_PetSkeletalControlLayer, LegIKAlphaOverride) == 0x000020, "Member 'PetAnimLayerInterface_C_PetSkeletalControlLayer::LegIKAlphaOverride' has a wrong offset!");
+static_assert(offsetof(PetAnimLayerInterface_C_PetSkeletalControlLayer, HandIKAlphaOverride) == 0x000024, "Member 'PetAnimLayerInterface_C_PetSkeletalControlLayer::HandIKAlphaOverride' has a wrong offset!");
+static_assert(offsetof(PetAnimLayerInterface_C_PetSkeletalControlLayer, PetSkeletalControlLayer_0) == 0x000028, "Member 'PetAnimLayerInterface_C_PetSkeletalControlLayer::PetSkeletalControlLayer_0' has a wrong offset!");
 
 }
 

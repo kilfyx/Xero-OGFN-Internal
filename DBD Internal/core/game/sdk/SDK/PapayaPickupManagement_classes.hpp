@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UPapayaPickupManagement_C>();
 	}
 };
+static_assert(alignof(UPapayaPickupManagement_C) == 0x000008, "Wrong alignment on UPapayaPickupManagement_C");
+static_assert(sizeof(UPapayaPickupManagement_C) == 0x000168, "Wrong size on UPapayaPickupManagement_C");
 
 }
 

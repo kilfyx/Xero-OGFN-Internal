@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function ItemDetailsStackCounter.ItemDetailsStackCounter_C.Update Stack Count
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UItemDetailsStackCounter_C::Update_Stack_Count()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsStackCounter_C", "Update Stack Count");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ItemDetailsStackCounter.ItemDetailsStackCounter_C.Refresh Visibility
 // (Private, BlueprintCallable, BlueprintEvent)
 
@@ -45,10 +31,24 @@ void UItemDetailsStackCounter_C::Refresh_Visibility()
 }
 
 
+// Function ItemDetailsStackCounter.ItemDetailsStackCounter_C.Update Stack Count
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UItemDetailsStackCounter_C::Update_Stack_Count()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemDetailsStackCounter_C", "Update Stack Count");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ItemDetailsStackCounter.ItemDetailsStackCounter_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UItemDetailsStackCounter_C::PreConstruct(bool IsDesignTime)
 {
@@ -65,15 +65,15 @@ void UItemDetailsStackCounter_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function ItemDetailsStackCounter.ItemDetailsStackCounter_C.HandleQuantityOverrideChanged
-// (Event, Protected, BlueprintEvent)
+// Function ItemDetailsStackCounter.ItemDetailsStackCounter_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UItemDetailsStackCounter_C::HandleQuantityOverrideChanged()
+void UItemDetailsStackCounter_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsStackCounter_C", "HandleQuantityOverrideChanged");
+		Func = Class->GetFunction("ItemDetailsStackCounter_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -110,9 +110,9 @@ void UItemDetailsStackCounter_C::HandlePostDifferentItemToDetailSet()
 // Function ItemDetailsStackCounter.ItemDetailsStackCounter_C.HandleOnItemChanged
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bItemChanged                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bAmmoChanged                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIngredientsChanged                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bItemChanged                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bAmmoChanged                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bIngredientsChanged                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UItemDetailsStackCounter_C::HandleOnItemChanged(bool bItemChanged, bool bAmmoChanged, bool bIngredientsChanged)
 {
@@ -128,6 +128,20 @@ void UItemDetailsStackCounter_C::HandleOnItemChanged(bool bItemChanged, bool bAm
 	Parms.bIngredientsChanged = bIngredientsChanged;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemDetailsStackCounter.ItemDetailsStackCounter_C.HandleQuantityOverrideChanged
+// (Event, Protected, BlueprintEvent)
+
+void UItemDetailsStackCounter_C::HandleQuantityOverrideChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemDetailsStackCounter_C", "HandleQuantityOverrideChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -148,20 +162,6 @@ void UItemDetailsStackCounter_C::ExecuteUbergraph_ItemDetailsStackCounter(int32 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemDetailsStackCounter.ItemDetailsStackCounter_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UItemDetailsStackCounter_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsStackCounter_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

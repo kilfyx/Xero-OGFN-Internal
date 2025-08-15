@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass InScreenWidget.InScreenWidget_C
-// 0x0008 (0x0250 - 0x0248)
+// 0x0008 (0x0268 - 0x0260)
 class UInScreenWidget_C final : public UUserWidget
 {
 public:
-	class UImage*                                 InScreenMedia;                                     // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 InScreenMedia;                                     // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -33,6 +33,9 @@ public:
 		return GetDefaultObjImpl<UInScreenWidget_C>();
 	}
 };
+static_assert(alignof(UInScreenWidget_C) == 0x000008, "Wrong alignment on UInScreenWidget_C");
+static_assert(sizeof(UInScreenWidget_C) == 0x000268, "Wrong size on UInScreenWidget_C");
+static_assert(offsetof(UInScreenWidget_C, InScreenMedia) == 0x000260, "Member 'UInScreenWidget_C::InScreenMedia' has a wrong offset!");
 
 }
 

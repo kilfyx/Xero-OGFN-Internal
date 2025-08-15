@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function LiveViolator.LiveViolator_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ULiveViolator_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LiveViolator_C", "PreConstruct");
+
+	Params::LiveViolator_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function LiveViolator.LiveViolator_C.ExecuteUbergraph_LiveViolator
 // (Final, UbergraphFunction)
 // Parameters:
@@ -32,26 +52,6 @@ void ULiveViolator_C::ExecuteUbergraph_LiveViolator(int32 EntryPoint)
 	Params::LiveViolator_C_ExecuteUbergraph_LiveViolator Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LiveViolator.LiveViolator_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULiveViolator_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LiveViolator_C", "PreConstruct");
-
-	Params::LiveViolator_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -16,14 +16,6 @@
 namespace SDK::Params
 {
 
-// Function NetworkPrediction.NetworkPhysicsComponent.GetNetworkPredictionLOD
-// 0x0004 (0x0004 - 0x0000)
-struct NetworkPhysicsComponent_GetNetworkPredictionLOD final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
 // Function NetworkPrediction.NetworkPredictionComponent.ServerReceiveClientInput
 // 0x0018 (0x0018 - 0x0000)
 struct NetworkPredictionComponent_ServerReceiveClientInput final
@@ -31,6 +23,9 @@ struct NetworkPredictionComponent_ServerReceiveClientInput final
 public:
 	struct FServerReplicationRPCParameter         ProxyParameter;                                    // 0x0000(0x0018)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(NetworkPredictionComponent_ServerReceiveClientInput) == 0x000008, "Wrong alignment on NetworkPredictionComponent_ServerReceiveClientInput");
+static_assert(sizeof(NetworkPredictionComponent_ServerReceiveClientInput) == 0x000018, "Wrong size on NetworkPredictionComponent_ServerReceiveClientInput");
+static_assert(offsetof(NetworkPredictionComponent_ServerReceiveClientInput, ProxyParameter) == 0x000000, "Member 'NetworkPredictionComponent_ServerReceiveClientInput::ProxyParameter' has a wrong offset!");
 
 }
 

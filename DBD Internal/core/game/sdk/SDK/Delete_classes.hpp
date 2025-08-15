@@ -17,8 +17,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Delete.Delete_C
-// 0x0000 (0x0028 - 0x0028)
-class IDelete_C final : public IInterface
+// 0x0000 (0x0000 - 0x0000)
+class IDelete_C final
 {
 public:
 	static class UClass* StaticClass()
@@ -29,9 +29,18 @@ public:
 	{
 		return GetDefaultObjImpl<IDelete_C>();
 	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
 };
-static_assert(alignof(IDelete_C) == 0x000008, "Wrong alignment on IDelete_C");
-static_assert(sizeof(IDelete_C) == 0x000028, "Wrong size on IDelete_C");
+static_assert(alignof(IDelete_C) == 0x000001, "Wrong alignment on IDelete_C");
+static_assert(sizeof(IDelete_C) == 0x000001, "Wrong size on IDelete_C");
 
 }
 

@@ -19,27 +19,26 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass SK_ChillBronco_AnimBP.SK_ChillBronco_AnimBP_C
-// 0x0E90 (0x11B0 - 0x0320)
+// 0x0CC0 (0x0F80 - 0x02C0)
 class USK_ChillBronco_AnimBP_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_318[0x8];                                      // 0x0318(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0328(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0330(0x0008)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0338(0x0020)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0358(0x0020)()
-	uint8                                         Pad_378[0x8];                                      // 0x0378(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_AnimDynamics                 AnimGraphNode_AnimDynamics;                        // 0x0380(0x0440)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_SubInput;                            // 0x07C0(0x00C8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0888(0x0020)()
-	uint8                                         Pad_8A8[0x8];                                      // 0x08A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x08B0(0x07F0)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x10A0(0x0108)()
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x02D0(0x0020)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x02F0(0x0020)()
+	struct FAnimNode_AnimDynamics                 AnimGraphNode_AnimDynamics;                        // 0x0310(0x0440)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_SubInput;                            // 0x0750(0x0088)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x07D8(0x0030)()
+	uint8                                         Pad_808[0x8];                                      // 0x0808(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x0810(0x0660)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0E70(0x0108)()
 
 public:
-	void AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0);
 	void ExecuteUbergraph_SK_ChillBronco_AnimBP(int32 EntryPoint);
+	void AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -51,6 +50,17 @@ public:
 		return GetDefaultObjImpl<USK_ChillBronco_AnimBP_C>();
 	}
 };
+static_assert(alignof(USK_ChillBronco_AnimBP_C) == 0x000010, "Wrong alignment on USK_ChillBronco_AnimBP_C");
+static_assert(sizeof(USK_ChillBronco_AnimBP_C) == 0x000F80, "Wrong size on USK_ChillBronco_AnimBP_C");
+static_assert(offsetof(USK_ChillBronco_AnimBP_C, UberGraphFrame) == 0x0002C0, "Member 'USK_ChillBronco_AnimBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USK_ChillBronco_AnimBP_C, AnimBlueprintClassSubsystem_PropertyAccess) == 0x0002C8, "Member 'USK_ChillBronco_AnimBP_C::AnimBlueprintClassSubsystem_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(USK_ChillBronco_AnimBP_C, AnimGraphNode_ComponentToLocalSpace) == 0x0002D0, "Member 'USK_ChillBronco_AnimBP_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(USK_ChillBronco_AnimBP_C, AnimGraphNode_LocalToComponentSpace) == 0x0002F0, "Member 'USK_ChillBronco_AnimBP_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(USK_ChillBronco_AnimBP_C, AnimGraphNode_AnimDynamics) == 0x000310, "Member 'USK_ChillBronco_AnimBP_C::AnimGraphNode_AnimDynamics' has a wrong offset!");
+static_assert(offsetof(USK_ChillBronco_AnimBP_C, AnimGraphNode_SubInput) == 0x000750, "Member 'USK_ChillBronco_AnimBP_C::AnimGraphNode_SubInput' has a wrong offset!");
+static_assert(offsetof(USK_ChillBronco_AnimBP_C, AnimGraphNode_Root) == 0x0007D8, "Member 'USK_ChillBronco_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(USK_ChillBronco_AnimBP_C, AnimGraphNode_RigidBody) == 0x000810, "Member 'USK_ChillBronco_AnimBP_C::AnimGraphNode_RigidBody' has a wrong offset!");
+static_assert(offsetof(USK_ChillBronco_AnimBP_C, AnimGraphNode_ModifyBone) == 0x000E70, "Member 'USK_ChillBronco_AnimBP_C::AnimGraphNode_ModifyBone' has a wrong offset!");
 
 }
 

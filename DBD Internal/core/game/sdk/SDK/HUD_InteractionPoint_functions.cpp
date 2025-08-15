@@ -17,54 +17,6 @@
 namespace SDK
 {
 
-// Function HUD_InteractionPoint.HUD_InteractionPoint_C.SetDistantIcon
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FSlateBrush&               Icon                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                                    Default                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    HideArrow                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UHUD_InteractionPoint_C::SetDistantIcon(const struct FSlateBrush& Icon, bool Default, bool HideArrow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HUD_InteractionPoint_C", "SetDistantIcon");
-
-	Params::HUD_InteractionPoint_C_SetDistantIcon Parms{};
-
-	Parms.Icon = std::move(Icon);
-	Parms.Default = Default;
-	Parms.HideArrow = HideArrow;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function HUD_InteractionPoint.HUD_InteractionPoint_C.SetDetailIcon
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FSlateBrush&               Icon                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                                    ShowWithText                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    HideArrow                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UHUD_InteractionPoint_C::SetDetailIcon(const struct FSlateBrush& Icon, bool ShowWithText, bool HideArrow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HUD_InteractionPoint_C", "SetDetailIcon");
-
-	Params::HUD_InteractionPoint_C_SetDetailIcon Parms{};
-
-	Parms.Icon = std::move(Icon);
-	Parms.ShowWithText = ShowWithText;
-	Parms.HideArrow = HideArrow;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function HUD_InteractionPoint.HUD_InteractionPoint_C.ExecuteUbergraph_HUD_InteractionPoint
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -88,7 +40,7 @@ void UHUD_InteractionPoint_C::ExecuteUbergraph_HUD_InteractionPoint(int32 EntryP
 // Function HUD_InteractionPoint.HUD_InteractionPoint_C.EventShowDetail
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    ShowDetail                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ShowDetail                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UHUD_InteractionPoint_C::EventShowDetail(bool ShowDetail)
 {
@@ -100,6 +52,76 @@ void UHUD_InteractionPoint_C::EventShowDetail(bool ShowDetail)
 	Params::HUD_InteractionPoint_C_EventShowDetail Parms{};
 
 	Parms.ShowDetail = ShowDetail;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function HUD_InteractionPoint.HUD_InteractionPoint_C.EventClamp
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsClamped                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FVector2D&                 Position                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UHUD_InteractionPoint_C::EventClamp(bool IsClamped, const struct FVector2D& Position)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUD_InteractionPoint_C", "EventClamp");
+
+	Params::HUD_InteractionPoint_C_EventClamp Parms{};
+
+	Parms.IsClamped = IsClamped;
+	Parms.Position = std::move(Position);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function HUD_InteractionPoint.HUD_InteractionPoint_C.SetDetailIcon
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FSlateBrush&               Icon                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                                    ShowWithText                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    HideArrow                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UHUD_InteractionPoint_C::SetDetailIcon(const struct FSlateBrush& Icon, bool ShowWithText, bool HideArrow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUD_InteractionPoint_C", "SetDetailIcon");
+
+	Params::HUD_InteractionPoint_C_SetDetailIcon Parms{};
+
+	Parms.Icon = std::move(Icon);
+	Parms.ShowWithText = ShowWithText;
+	Parms.HideArrow = HideArrow;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function HUD_InteractionPoint.HUD_InteractionPoint_C.SetDistantIcon
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FSlateBrush&               Icon                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                                    Default                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    HideArrow                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UHUD_InteractionPoint_C::SetDistantIcon(const struct FSlateBrush& Icon, bool Default, bool HideArrow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUD_InteractionPoint_C", "SetDistantIcon");
+
+	Params::HUD_InteractionPoint_C_SetDistantIcon Parms{};
+
+	Parms.Icon = std::move(Icon);
+	Parms.Default = Default;
+	Parms.HideArrow = HideArrow;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -139,42 +161,6 @@ void UHUD_InteractionPoint_C::EventOutro()
 }
 
 
-// Function HUD_InteractionPoint.HUD_InteractionPoint_C.EventIntro
-// (BlueprintCallable, BlueprintEvent)
-
-void UHUD_InteractionPoint_C::EventIntro()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HUD_InteractionPoint_C", "EventIntro");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function HUD_InteractionPoint.HUD_InteractionPoint_C.EventClamp
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsClamped                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector2D&                 Position                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UHUD_InteractionPoint_C::EventClamp(bool IsClamped, const struct FVector2D& Position)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HUD_InteractionPoint_C", "EventClamp");
-
-	Params::HUD_InteractionPoint_C_EventClamp Parms{};
-
-	Parms.IsClamped = IsClamped;
-	Parms.Position = std::move(Position);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function HUD_InteractionPoint.HUD_InteractionPoint_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -184,6 +170,20 @@ void UHUD_InteractionPoint_C::Construct()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("HUD_InteractionPoint_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function HUD_InteractionPoint.HUD_InteractionPoint_C.EventIntro
+// (BlueprintCallable, BlueprintEvent)
+
+void UHUD_InteractionPoint_C::EventIntro()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUD_InteractionPoint_C", "EventIntro");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

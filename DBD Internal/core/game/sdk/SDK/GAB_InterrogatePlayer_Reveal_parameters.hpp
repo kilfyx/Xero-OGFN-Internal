@@ -10,59 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "FortniteGame_structs.hpp"
-#include "Engine_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Cancelled_23F3C2DB411862D627ACFCA8233F7B33
-// 0x0030 (0x0030 - 0x0000)
-struct GAB_InterrogatePlayer_Reveal_C_Cancelled_23F3C2DB411862D627ACFCA8233F7B33 final
-{
-public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1
-// 0x0030 (0x0030 - 0x0000)
-struct GAB_InterrogatePlayer_Reveal_C_Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1 final
-{
-public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Completed_23F3C2DB411862D627ACFCA8233F7B33
-// 0x0030 (0x0030 - 0x0000)
-struct GAB_InterrogatePlayer_Reveal_C_Completed_23F3C2DB411862D627ACFCA8233F7B33 final
-{
-public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Completed_3C2C8C224B62B00BDEEAF5AF38A401C1
-// 0x0030 (0x0030 - 0x0000)
-struct GAB_InterrogatePlayer_Reveal_C_Completed_3C2C8C224B62B00BDEEAF5AF38A401C1 final
-{
-public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.EndAbilityCleanup
-// 0x0001 (0x0001 - 0x0000)
-struct GAB_InterrogatePlayer_Reveal_C_EndAbilityCleanup final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
 
 // Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.ExecuteUbergraph_GAB_InterrogatePlayer_Reveal
 // 0x0368 (0x0368 - 0x0000)
@@ -72,7 +28,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAbilityTask_WaitDelay*                 CallFunc_WaitDelay_ReturnValue;                    // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayAbilityTargetDataHandle       K2Node_CustomEvent_TargetData_5;                   // 0x0018(0x0028)(ConstParm)
 	struct FGameplayTag                           K2Node_CustomEvent_ApplicationTag_5;               // 0x0040(0x0008)(NoDestructor, HasGetValueTypeHash)
@@ -97,13 +53,13 @@ public:
 	struct FGameplayTag                           Temp_struct_Variable_2;                            // 0x01C8(0x0008)(NoDestructor, HasGetValueTypeHash)
 	struct FGameplayAbilityTargetDataHandle       Temp_struct_Variable_3;                            // 0x01D0(0x0028)()
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_6;            // 0x01F8(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          K2Node_Event_bWasCancelled;                        // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bWasCancelled;                        // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFortAbilityTask_PlayMontageWaitTarget* CallFunc_PlayMontageWaitTarget_ReturnValue;        // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_219[0x3];                                      // 0x0219(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)> K2Node_CreateDelegate_OutputDelegate_7; // 0x021C(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x022C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x022C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_22D[0x3];                                      // 0x022D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 K2Node_CustomEvent_DamagedActor;                   // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_Damage;                         // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -119,79 +75,62 @@ public:
 	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayEventData                     K2Node_Event_EventData;                            // 0x0290(0x00B0)(ConstParm)
 	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn;             // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0349(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0349(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_34A[0x6];                                      // 0x034A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0350(0x0008)(NoDestructor, HasGetValueTypeHash)
 	class UFortAbilityTask_PlayMontageWaitTarget* CallFunc_PlayMontageWaitTarget_ReturnValue_1;      // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.GAB_InterrogatePlayer_Reveal_AutoGenFunc
-// 0x0008 (0x0008 - 0x0000)
-struct GAB_InterrogatePlayer_Reveal_C_GAB_InterrogatePlayer_Reveal_AutoGenFunc final
-{
-public:
-	class AActor*                                 IndicatedActor;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.GetTeamMembers
-// 0x00B8 (0x00B8 - 0x0000)
-struct GAB_InterrogatePlayer_Reveal_C_GetTeamMembers final
-{
-public:
-	class APawn*                                  Target;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIncludeSelf;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AFortPlayerStateAthena*>         ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm)
-	TArray<class AFortPlayerStateAthena*>         PlayerStates;                                      // 0x0020(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerStateAthena*                 K2Node_DynamicCast_AsFort_Player_State_Athena;     // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetActorTeam_ReturnValue;                 // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortMinigame*                          CallFunc_GetMinigameForPlayerState_ReturnValue;    // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AFortPlayerState*>               CallFunc_GetTeamMembers_OutTeamMembers;            // 0x0060(0x0010)(ReferenceParm)
-	class AFortGameStateAthena*                   K2Node_DynamicCast_AsFort_Game_State_Athena;       // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerState*                       CallFunc_Array_Get_Item;                           // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AFortPlayerStateAthena*>         CallFunc_GetSquadMemberPlayerStates_ReturnValue;   // 0x0088(0x0010)(ReferenceParm)
-	class AFortPlayerStateAthena*                 K2Node_DynamicCast_AsFort_Player_State_Athena_1;   // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsBattleLabModePlaylist_ReturnValue;      // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsCreativeOrPlaygroundModePlaylist_ReturnValue; // 0x00AB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.InitAbility
-// 0x00B0 (0x00B0 - 0x0000)
-struct GAB_InterrogatePlayer_Reveal_C_InitAbility final
-{
-public:
-	bool                                          CallFunc_K2_CommitAbility_ReturnValue;             // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityActorInfo              CallFunc_GetActorInfo_ReturnValue;                 // 0x0008(0x0048)(ContainsInstancedReference)
-	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn;             // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityTargetDataHandle       CallFunc_AbilityTargetDataFromActor_ReturnValue;   // 0x0060(0x0028)()
-	TArray<struct FActiveGameplayEffectHandle>    CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue; // 0x0088(0x0010)(ReferenceParm)
-	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue; // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerControllerAthena*            K2Node_DynamicCast_AsFort_Player_Controller_Athena; // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal) == 0x000008, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal) == 0x000368, "Wrong size on GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, EntryPoint) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::EntryPoint' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, CallFunc_WaitDelay_ReturnValue) == 0x000008, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::CallFunc_WaitDelay_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_TargetData_5) == 0x000018, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_TargetData_5' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_ApplicationTag_5) == 0x000040, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_ApplicationTag_5' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_TargetData_4) == 0x000048, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_TargetData_4' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_ApplicationTag_4) == 0x000070, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_ApplicationTag_4' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CreateDelegate_OutputDelegate) == 0x000078, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_TargetData_3) == 0x000088, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_TargetData_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_ApplicationTag_3) == 0x0000B0, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_ApplicationTag_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000B8, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, Temp_struct_Variable) == 0x0000C8, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, Temp_struct_Variable_1) == 0x0000D0, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CreateDelegate_OutputDelegate_2) == 0x0000F8, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CreateDelegate_OutputDelegate_3) == 0x000108, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_TargetData_2) == 0x000118, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_TargetData_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_ApplicationTag_2) == 0x000140, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_ApplicationTag_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_TargetData_1) == 0x000148, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_TargetData_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_ApplicationTag_1) == 0x000170, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_ApplicationTag_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CreateDelegate_OutputDelegate_4) == 0x000178, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_TargetData) == 0x000188, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_TargetData' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_ApplicationTag) == 0x0001B0, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_ApplicationTag' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CreateDelegate_OutputDelegate_5) == 0x0001B8, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, Temp_struct_Variable_2) == 0x0001C8, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::Temp_struct_Variable_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, Temp_struct_Variable_3) == 0x0001D0, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::Temp_struct_Variable_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CreateDelegate_OutputDelegate_6) == 0x0001F8, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_Event_bWasCancelled) == 0x000208, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_Event_bWasCancelled' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, CallFunc_PlayMontageWaitTarget_ReturnValue) == 0x000210, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::CallFunc_PlayMontageWaitTarget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, CallFunc_IsValid_ReturnValue_1) == 0x000218, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CreateDelegate_OutputDelegate_7) == 0x00021C, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, CallFunc_IsValid_ReturnValue_2) == 0x00022C, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_DamagedActor) == 0x000230, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_DamagedActor' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_Damage) == 0x000238, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_Damage' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_InstigatedBy) == 0x000240, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_InstigatedBy' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_DamageCauser) == 0x000248, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_DamageCauser' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_HitLocation) == 0x000250, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_HitLocation' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_FHitComponent) == 0x000260, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_FHitComponent' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_BoneName) == 0x000268, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_BoneName' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CustomEvent_Momentum) == 0x000270, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CustomEvent_Momentum' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_CreateDelegate_OutputDelegate_8) == 0x00027C, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_Event_EventData) == 0x000290, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_Event_EventData' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_DynamicCast_AsFort_Player_Pawn) == 0x000340, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_DynamicCast_AsFort_Player_Pawn' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, K2Node_DynamicCast_bSuccess) == 0x000348, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, CallFunc_IsValid_ReturnValue_3) == 0x000349, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000350, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, CallFunc_PlayMontageWaitTarget_ReturnValue_1) == 0x000358, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::CallFunc_PlayMontageWaitTarget_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal, CallFunc_IsValid_ReturnValue_4) == 0x000360, "Member 'GAB_InterrogatePlayer_Reveal_C_ExecuteUbergraph_GAB_InterrogatePlayer_Reveal::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
 
 // Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.K2_ActivateAbilityFromEvent
 // 0x00B0 (0x00B0 - 0x0000)
@@ -200,14 +139,9 @@ struct GAB_InterrogatePlayer_Reveal_C_K2_ActivateAbilityFromEvent final
 public:
 	struct FGameplayEventData                     EventData;                                         // 0x0000(0x00B0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.K2_OnEndAbility
-// 0x0001 (0x0001 - 0x0000)
-struct GAB_InterrogatePlayer_Reveal_C_K2_OnEndAbility final
-{
-public:
-	bool                                          bWasCancelled;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_K2_ActivateAbilityFromEvent) == 0x000008, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_K2_ActivateAbilityFromEvent");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_K2_ActivateAbilityFromEvent) == 0x0000B0, "Wrong size on GAB_InterrogatePlayer_Reveal_C_K2_ActivateAbilityFromEvent");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_K2_ActivateAbilityFromEvent, EventData) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_K2_ActivateAbilityFromEvent::EventData' has a wrong offset!");
 
 // Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.OnDied_Event_1
 // 0x0050 (0x0050 - 0x0000)
@@ -225,146 +159,27 @@ public:
 	class FName                                   BoneName;                                          // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Momentum;                                          // 0x0040(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1) == 0x000008, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1) == 0x000050, "Wrong size on GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1, DamagedActor) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1::DamagedActor' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1, Damage) == 0x000008, "Member 'GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1::Damage' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1, InstigatedBy) == 0x000010, "Member 'GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1::InstigatedBy' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1, DamageCauser) == 0x000018, "Member 'GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1::DamageCauser' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1, HitLocation) == 0x000020, "Member 'GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1::HitLocation' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1, FHitComponent) == 0x000030, "Member 'GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1::FHitComponent' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1, BoneName) == 0x000038, "Member 'GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1::BoneName' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1, Momentum) == 0x000040, "Member 'GAB_InterrogatePlayer_Reveal_C_OnDied_Event_1::Momentum' has a wrong offset!");
 
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Reveal
-// 0x0D98 (0x0D98 - 0x0000)
-struct GAB_InterrogatePlayer_Reveal_C_Reveal final
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.K2_OnEndAbility
+// 0x0001 (0x0001 - 0x0000)
+struct GAB_InterrogatePlayer_Reveal_C_K2_OnEndAbility final
 {
 public:
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable;                                // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AFortPlayerStateAthena*>         CallFunc_GetTeamMembers_ReturnValue;               // 0x0020(0x0010)(ReferenceParm)
-	TArray<class AFortPlayerStateAthena*>         CallFunc_GetTeamMembers_ReturnValue_1;             // 0x0030(0x0010)(ReferenceParm)
-	class AFortPlayerStateAthena*                 CallFunc_Array_Get_Item;                           // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        CallFunc_GetPlayerPawnOrVehicleDriver_ReturnValue; // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IGameplayTagAssetInterface> K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface; // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_72[0x2];                                       // 0x0072(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7A[0x2];                                       // 0x007A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class AActor* IndicatedActor)> K2Node_CreateDelegate_OutputDelegate;              // 0x007C(0x0010)(ZeroConstructor, NoDestructor)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue; // 0x0090(0x0020)()
-	bool                                          CallFunc_HasAnyMatchingGameplayTags_ReturnValue;   // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Temp_name_Variable_1;                              // 0x00B4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_1;            // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_2;            // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_3;            // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_4;            // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RowToBool_ReturnValue;                    // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RowToBool_ReturnValue_1;                  // 0x00CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RowToBool_ReturnValue_2;                  // 0x00CE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RowToBool_ReturnValue_3;                  // 0x00CF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_5;            // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_6;            // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_7;            // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DD[0x3];                                       // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Temp_name_Variable_2;                              // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Select_Default;                             // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FIndicatedActorParticleSystemData      CallFunc_MakeIndicatedActorParticleSystemData_ReturnValue; // 0x00F0(0x0030)(NoDestructor)
-	uint8                                         CallFunc_GetActorTeam_ReturnValue;                 // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIndicatedActorData                    K2Node_MakeStruct_IndicatedActorData;              // 0x0128(0x00B0)(ContainsInstancedReference)
-	class FName                                   K2Node_Select_Default_1;                           // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_8;            // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x01E8(0x0010)(ReferenceParm)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_9;            // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1FC[0x4];                                      // 0x01FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIndicatedActorData                    CallFunc_MakeIndicatedActorData_ReturnValue;       // 0x0200(0x00B0)(ContainsInstancedReference)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_10;           // 0x02B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_11;           // 0x02B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FStenciledActorData                    CallFunc_MakeStenciledActorData_ReturnValue;       // 0x02B8(0x0070)()
-	struct FIndicatedActorParticleSystemData      CallFunc_MakeIndicatedActorParticleSystemData_ReturnValue_1; // 0x0328(0x0030)(NoDestructor)
-	struct FStenciledActorData                    CallFunc_MakeStenciledActorData_ReturnValue_1;     // 0x0358(0x0070)()
-	struct FIndicatedActorData                    CallFunc_MakeIndicatedActorData_ReturnValue_1;     // 0x03C8(0x00B0)(ContainsInstancedReference)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_12;           // 0x0478(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_13;           // 0x047C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FIndicatedActorData                    CallFunc_MakeIndicatedActorData_ReturnValue_2;     // 0x0480(0x00B0)(ContainsInstancedReference)
-	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_1;                          // 0x0530(0x0010)(ReferenceParm)
-	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_2;                          // 0x0540(0x0010)(ReferenceParm)
-	TArray<EFortTeamAffiliation>                  CallFunc_MakeIndicatedActorDataWithFilter_InAffiliations; // 0x0550(0x0010)(ReferenceParm)
-	struct FIndicatedActorDataWithFilter          CallFunc_MakeIndicatedActorDataWithFilter_ReturnValue; // 0x0560(0x01D8)(ContainsInstancedReference)
-	bool                                          Temp_bool_Variable_3;                              // 0x0738(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_739[0x3];                                      // 0x0739(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   K2Node_Select_Default_2;                           // 0x073C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_744[0x4];                                      // 0x0744(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortAbilitySystemComponent*            CallFunc_GetFortAbilitySystemComponent_ReturnValue; // 0x0748(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FStenciledActorData                    K2Node_MakeStruct_StenciledActorData;              // 0x0750(0x0070)()
-	class FName                                   Temp_name_Variable_3;                              // 0x07C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x07C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C9[0x3];                                      // 0x07C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x07CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Select_Default_3;                           // 0x07D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerStateAthena*                 CallFunc_Array_Get_Item_1;                         // 0x07D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FStenciledActorData                    CallFunc_MakeStenciledActorData_ReturnValue_2;     // 0x07E0(0x0070)()
-	class AFortPlayerPawn*                        CallFunc_GetCurrentPawn_ReturnValue;               // 0x0850(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<EFortTeamAffiliation>                  CallFunc_MakeIndicatedActorDataWithFilter_InAffiliations_1; // 0x0858(0x0010)(ReferenceParm)
-	struct FIndicatedActorDataWithFilter          CallFunc_MakeIndicatedActorDataWithFilter_ReturnValue_1; // 0x0868(0x01D8)(ContainsInstancedReference)
-	class UFortAbilitySystemComponent*            CallFunc_GetFortAbilitySystemComponent_ReturnValue_1; // 0x0A40(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayEffectContextHandle           CallFunc_MakeFortEffectContext_ReturnValue;        // 0x0A48(0x0018)()
-	struct FActiveGameplayEffectHandle            CallFunc_BP_FortApplyGameplayEffectToTarget_ReturnValue; // 0x0A60(0x0008)(NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue; // 0x0A68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue_1; // 0x0A70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortQuestManager*                      CallFunc_GetQuestManager_ReturnValue;              // 0x0A78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortQuestManager*                      CallFunc_GetQuestManager_ReturnValue_1;            // 0x0A80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SendComplexCustomStatEvent_QuestActive;   // 0x0A88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SendComplexCustomStatEvent_QuestCompleted; // 0x0A89(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A8A[0x2];                                      // 0x0A8A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0A8C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0A90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A91[0x7];                                      // 0x0A91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 CallFunc_MakeGameplayCueParameters_ReturnValue;    // 0x0A98(0x00C0)(ContainsInstancedReference)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0B58(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SendComplexCustomStatEvent_QuestActive_1; // 0x0B59(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SendComplexCustomStatEvent_QuestCompleted_1; // 0x0B5A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B5B[0x5];                                      // 0x0B5B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetFactionTagContainerForActor_ReturnValue; // 0x0B60(0x0020)()
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0B80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B81[0x7];                                      // 0x0B81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EFortTeamAffiliation>                  CallFunc_MakeIndicatedActorDataWithFilter_InAffiliations_2; // 0x0B88(0x0010)(ReferenceParm)
-	struct FIndicatedActorDataWithFilter          CallFunc_MakeIndicatedActorDataWithFilter_ReturnValue_2; // 0x0B98(0x01D8)(ContainsInstancedReference)
-	TArray<struct FIndicatedActorDataWithFilter>  K2Node_MakeArray_Array_3;                          // 0x0D70(0x0010)(ReferenceParm, ContainsInstancedReference)
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput; // 0x0D80(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue;       // 0x0D90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0D91(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasCancelled;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.ToggleReticleVisibility
-// 0x0010 (0x0010 - 0x0000)
-struct GAB_InterrogatePlayer_Reveal_C_ToggleReticleVisibility final
-{
-public:
-	bool                                          Hide;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortHUDContext*                        CallFunc_GetContext_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Triggered_23F3C2DB411862D627ACFCA8233F7B33
-// 0x0030 (0x0030 - 0x0000)
-struct GAB_InterrogatePlayer_Reveal_C_Triggered_23F3C2DB411862D627ACFCA8233F7B33 final
-{
-public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_K2_OnEndAbility) == 0x000001, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_K2_OnEndAbility");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_K2_OnEndAbility) == 0x000001, "Wrong size on GAB_InterrogatePlayer_Reveal_C_K2_OnEndAbility");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_K2_OnEndAbility, bWasCancelled) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_K2_OnEndAbility::bWasCancelled' has a wrong offset!");
 
 // Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1
 // 0x0030 (0x0030 - 0x0000)
@@ -374,6 +189,361 @@ public:
 	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1) == 0x000008, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1) == 0x000030, "Wrong size on GAB_InterrogatePlayer_Reveal_C_Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1, TargetData) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1::TargetData' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1, ApplicationTag) == 0x000028, "Member 'GAB_InterrogatePlayer_Reveal_C_Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1::ApplicationTag' has a wrong offset!");
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1
+// 0x0030 (0x0030 - 0x0000)
+struct GAB_InterrogatePlayer_Reveal_C_Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1 final
+{
+public:
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1) == 0x000008, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1) == 0x000030, "Wrong size on GAB_InterrogatePlayer_Reveal_C_Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1, TargetData) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1::TargetData' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1, ApplicationTag) == 0x000028, "Member 'GAB_InterrogatePlayer_Reveal_C_Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1::ApplicationTag' has a wrong offset!");
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Completed_3C2C8C224B62B00BDEEAF5AF38A401C1
+// 0x0030 (0x0030 - 0x0000)
+struct GAB_InterrogatePlayer_Reveal_C_Completed_3C2C8C224B62B00BDEEAF5AF38A401C1 final
+{
+public:
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_Completed_3C2C8C224B62B00BDEEAF5AF38A401C1) == 0x000008, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_Completed_3C2C8C224B62B00BDEEAF5AF38A401C1");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_Completed_3C2C8C224B62B00BDEEAF5AF38A401C1) == 0x000030, "Wrong size on GAB_InterrogatePlayer_Reveal_C_Completed_3C2C8C224B62B00BDEEAF5AF38A401C1");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Completed_3C2C8C224B62B00BDEEAF5AF38A401C1, TargetData) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_Completed_3C2C8C224B62B00BDEEAF5AF38A401C1::TargetData' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Completed_3C2C8C224B62B00BDEEAF5AF38A401C1, ApplicationTag) == 0x000028, "Member 'GAB_InterrogatePlayer_Reveal_C_Completed_3C2C8C224B62B00BDEEAF5AF38A401C1::ApplicationTag' has a wrong offset!");
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Triggered_23F3C2DB411862D627ACFCA8233F7B33
+// 0x0030 (0x0030 - 0x0000)
+struct GAB_InterrogatePlayer_Reveal_C_Triggered_23F3C2DB411862D627ACFCA8233F7B33 final
+{
+public:
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_Triggered_23F3C2DB411862D627ACFCA8233F7B33) == 0x000008, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_Triggered_23F3C2DB411862D627ACFCA8233F7B33");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_Triggered_23F3C2DB411862D627ACFCA8233F7B33) == 0x000030, "Wrong size on GAB_InterrogatePlayer_Reveal_C_Triggered_23F3C2DB411862D627ACFCA8233F7B33");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Triggered_23F3C2DB411862D627ACFCA8233F7B33, TargetData) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_Triggered_23F3C2DB411862D627ACFCA8233F7B33::TargetData' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Triggered_23F3C2DB411862D627ACFCA8233F7B33, ApplicationTag) == 0x000028, "Member 'GAB_InterrogatePlayer_Reveal_C_Triggered_23F3C2DB411862D627ACFCA8233F7B33::ApplicationTag' has a wrong offset!");
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Cancelled_23F3C2DB411862D627ACFCA8233F7B33
+// 0x0030 (0x0030 - 0x0000)
+struct GAB_InterrogatePlayer_Reveal_C_Cancelled_23F3C2DB411862D627ACFCA8233F7B33 final
+{
+public:
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_Cancelled_23F3C2DB411862D627ACFCA8233F7B33) == 0x000008, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_Cancelled_23F3C2DB411862D627ACFCA8233F7B33");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_Cancelled_23F3C2DB411862D627ACFCA8233F7B33) == 0x000030, "Wrong size on GAB_InterrogatePlayer_Reveal_C_Cancelled_23F3C2DB411862D627ACFCA8233F7B33");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Cancelled_23F3C2DB411862D627ACFCA8233F7B33, TargetData) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_Cancelled_23F3C2DB411862D627ACFCA8233F7B33::TargetData' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Cancelled_23F3C2DB411862D627ACFCA8233F7B33, ApplicationTag) == 0x000028, "Member 'GAB_InterrogatePlayer_Reveal_C_Cancelled_23F3C2DB411862D627ACFCA8233F7B33::ApplicationTag' has a wrong offset!");
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Completed_23F3C2DB411862D627ACFCA8233F7B33
+// 0x0030 (0x0030 - 0x0000)
+struct GAB_InterrogatePlayer_Reveal_C_Completed_23F3C2DB411862D627ACFCA8233F7B33 final
+{
+public:
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_Completed_23F3C2DB411862D627ACFCA8233F7B33) == 0x000008, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_Completed_23F3C2DB411862D627ACFCA8233F7B33");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_Completed_23F3C2DB411862D627ACFCA8233F7B33) == 0x000030, "Wrong size on GAB_InterrogatePlayer_Reveal_C_Completed_23F3C2DB411862D627ACFCA8233F7B33");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Completed_23F3C2DB411862D627ACFCA8233F7B33, TargetData) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_Completed_23F3C2DB411862D627ACFCA8233F7B33::TargetData' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Completed_23F3C2DB411862D627ACFCA8233F7B33, ApplicationTag) == 0x000028, "Member 'GAB_InterrogatePlayer_Reveal_C_Completed_23F3C2DB411862D627ACFCA8233F7B33::ApplicationTag' has a wrong offset!");
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.InitAbility
+// 0x00B0 (0x00B0 - 0x0000)
+struct GAB_InterrogatePlayer_Reveal_C_InitAbility final
+{
+public:
+	bool                                          CallFunc_K2_CommitAbility_ReturnValue;             // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityActorInfo              CallFunc_GetActorInfo_ReturnValue;                 // 0x0008(0x0048)(ContainsInstancedReference)
+	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn;             // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       CallFunc_AbilityTargetDataFromActor_ReturnValue;   // 0x0060(0x0028)()
+	TArray<struct FActiveGameplayEffectHandle>    CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue; // 0x0088(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue; // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerControllerAthena*            K2Node_DynamicCast_AsFort_Player_Controller_Athena; // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_InitAbility) == 0x000008, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_InitAbility");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_InitAbility) == 0x0000B0, "Wrong size on GAB_InterrogatePlayer_Reveal_C_InitAbility");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_InitAbility, CallFunc_K2_CommitAbility_ReturnValue) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_InitAbility::CallFunc_K2_CommitAbility_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_InitAbility, CallFunc_GetActorInfo_ReturnValue) == 0x000008, "Member 'GAB_InterrogatePlayer_Reveal_C_InitAbility::CallFunc_GetActorInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_InitAbility, K2Node_DynamicCast_AsFort_Player_Pawn) == 0x000050, "Member 'GAB_InterrogatePlayer_Reveal_C_InitAbility::K2Node_DynamicCast_AsFort_Player_Pawn' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_InitAbility, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'GAB_InterrogatePlayer_Reveal_C_InitAbility::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_InitAbility, CallFunc_AbilityTargetDataFromActor_ReturnValue) == 0x000060, "Member 'GAB_InterrogatePlayer_Reveal_C_InitAbility::CallFunc_AbilityTargetDataFromActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_InitAbility, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue) == 0x000088, "Member 'GAB_InterrogatePlayer_Reveal_C_InitAbility::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_InitAbility, CallFunc_GetFortPlayerControllerFromActor_ReturnValue) == 0x000098, "Member 'GAB_InterrogatePlayer_Reveal_C_InitAbility::CallFunc_GetFortPlayerControllerFromActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_InitAbility, K2Node_DynamicCast_AsFort_Player_Controller_Athena) == 0x0000A0, "Member 'GAB_InterrogatePlayer_Reveal_C_InitAbility::K2Node_DynamicCast_AsFort_Player_Controller_Athena' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_InitAbility, K2Node_DynamicCast_bSuccess_1) == 0x0000A8, "Member 'GAB_InterrogatePlayer_Reveal_C_InitAbility::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.EndAbilityCleanup
+// 0x0001 (0x0001 - 0x0000)
+struct GAB_InterrogatePlayer_Reveal_C_EndAbilityCleanup final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_EndAbilityCleanup) == 0x000001, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_EndAbilityCleanup");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_EndAbilityCleanup) == 0x000001, "Wrong size on GAB_InterrogatePlayer_Reveal_C_EndAbilityCleanup");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_EndAbilityCleanup, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_EndAbilityCleanup::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Reveal
+// 0x0BE8 (0x0BE8 - 0x0000)
+struct GAB_InterrogatePlayer_Reveal_C_Reveal final
+{
+public:
+	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue; // 0x0018(0x0020)()
+	class FName                                   Temp_name_Variable;                                // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_1;            // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_2;            // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_3;            // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RowToBool_ReturnValue;                    // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_RowToBool_ReturnValue_1;                  // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_RowToBool_ReturnValue_2;                  // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_RowToBool_ReturnValue_3;                  // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_4;            // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_5;            // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_6;            // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_1;                              // 0x0064(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIndicatedActorParticleSystemData      CallFunc_MakeIndicatedActorParticleSystemData_ReturnValue; // 0x0070(0x0030)(NoDestructor)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_7;            // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIndicatedActorData                    CallFunc_MakeIndicatedActorData_ReturnValue;       // 0x00A8(0x0088)()
+	class FName                                   K2Node_Select_Default;                             // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_8;            // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0140(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_9;            // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIndicatedActorData                    CallFunc_MakeIndicatedActorData_ReturnValue_1;     // 0x0158(0x0088)()
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_10;           // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_11;           // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FIndicatedActorParticleSystemData      CallFunc_MakeIndicatedActorParticleSystemData_ReturnValue_1; // 0x01E8(0x0030)(NoDestructor)
+	struct FStenciledActorData                    CallFunc_MakeStenciledActorData_ReturnValue;       // 0x0218(0x0070)()
+	struct FIndicatedActorData                    CallFunc_MakeIndicatedActorData_ReturnValue_2;     // 0x0288(0x0088)()
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_12;           // 0x0310(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_13;           // 0x0314(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FIndicatedActorData                    CallFunc_MakeIndicatedActorData_ReturnValue_3;     // 0x0318(0x0088)()
+	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_1;                          // 0x03A0(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_2;                          // 0x03B0(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class UFortAbilitySystemComponent*            CallFunc_GetFortAbilitySystemComponent_ReturnValue; // 0x03C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerStateAthena*                 K2Node_DynamicCast_AsFort_Player_State_Athena;     // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3D9[0x7];                                      // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortGameStateAthena*                   K2Node_DynamicCast_AsFort_Game_State_Athena;       // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x03E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_2;                              // 0x03E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3EA[0x6];                                      // 0x03EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AFortPlayerStateAthena*>         CallFunc_GetSquadMemberPlayerStates_ReturnValue;   // 0x03F0(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0400(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Select_Default_1;                           // 0x0404(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x040C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_40D[0x3];                                      // 0x040D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStenciledActorData                    CallFunc_MakeStenciledActorData_ReturnValue_1;     // 0x0410(0x0070)()
+	struct FIndicatedActorDataWithFilter          CallFunc_MakeIndicatedActorDataWithFilter_ReturnValue; // 0x0480(0x0180)()
+	class FName                                   Temp_name_Variable_2;                              // 0x0600(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x0608(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_609[0x3];                                      // 0x0609(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Temp_name_Variable_3;                              // 0x060C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Select_Default_2;                           // 0x0614(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61C[0x4];                                      // 0x061C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStenciledActorData                    CallFunc_MakeStenciledActorData_ReturnValue_2;     // 0x0620(0x0070)()
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0690(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortGameStateAthena*                   K2Node_DynamicCast_AsFort_Game_State_Athena_1;     // 0x0698(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x06A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_4;                              // 0x06A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6A2[0x2];                                      // 0x06A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x06A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Select_Default_3;                           // 0x06A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerStateAthena*                 CallFunc_Array_Get_Item;                           // 0x06B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FStenciledActorData                    CallFunc_MakeStenciledActorData_ReturnValue_3;     // 0x06B8(0x0070)()
+	class AFortPlayerPawn*                        CallFunc_GetCurrentPawn_ReturnValue;               // 0x0728(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FIndicatedActorDataWithFilter          CallFunc_MakeIndicatedActorDataWithFilter_ReturnValue_1; // 0x0730(0x0180)()
+	class UFortAbilitySystemComponent*            CallFunc_GetFortAbilitySystemComponent_ReturnValue_1; // 0x08B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEffectContextHandle           CallFunc_MakeFortEffectContext_ReturnValue;        // 0x08B8(0x0018)()
+	struct FActiveGameplayEffectHandle            CallFunc_BP_FortApplyGameplayEffectToTarget_ReturnValue; // 0x08D0(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue; // 0x08D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue_1; // 0x08E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortQuestManager*                      CallFunc_GetQuestManager_ReturnValue;              // 0x08E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortQuestManager*                      CallFunc_GetQuestManager_ReturnValue_1;            // 0x08F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SendComplexCustomStatEvent_QuestActive;   // 0x08F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SendComplexCustomStatEvent_QuestCompleted; // 0x08F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x08FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_8FB[0x5];                                      // 0x08FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayCueParameters                 CallFunc_MakeGameplayCueParameters_ReturnValue;    // 0x0900(0x00B8)(ContainsInstancedReference)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x09B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SendComplexCustomStatEvent_QuestActive_1; // 0x09B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SendComplexCustomStatEvent_QuestCompleted_1; // 0x09BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9BB[0x5];                                      // 0x09BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetFactionTagContainerForActor_ReturnValue; // 0x09C0(0x0020)()
+	struct FIndicatedActorDataWithFilter          CallFunc_MakeIndicatedActorDataWithFilter_ReturnValue_2; // 0x09E0(0x0180)()
+	class AFortPlayerStateAthena*                 K2Node_DynamicCast_AsFort_Player_State_Athena_1;   // 0x0B60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0B68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B69[0x7];                                      // 0x0B69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FIndicatedActorDataWithFilter>  K2Node_MakeArray_Array_3;                          // 0x0B70(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	TArray<class AFortPlayerStateAthena*>         CallFunc_GetSquadMemberPlayerStates_ReturnValue_1; // 0x0B80(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class AFortPlayerStateAthena*                 CallFunc_Array_Get_Item_1;                         // 0x0B90(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0B98(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0B9C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0B9D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B9E[0x2];                                      // 0x0B9E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        CallFunc_GetPlayerPawnOrVehicleDriver_ReturnValue; // 0x0BA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0BA8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BAC[0x4];                                      // 0x0BAC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGameplayTagAssetInterface> K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface; // 0x0BB0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0BC0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0BC1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAnyMatchingGameplayTags_ReturnValue;   // 0x0BC2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BC3[0x1];                                      // 0x0BC3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0BC4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0BC8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BC9[0x7];                                      // 0x0BC9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput; // 0x0BD0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue;       // 0x0BE0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0BE1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_Reveal) == 0x000008, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_Reveal");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_Reveal) == 0x000BE8, "Wrong size on GAB_InterrogatePlayer_Reveal_C_Reveal");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, Temp_bool_Variable) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, Temp_int_Loop_Counter_Variable_1) == 0x000010, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_Add_IntInt_ReturnValue_1) == 0x000014, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeLiteralGameplayTagContainer_ReturnValue) == 0x000018, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeLiteralGameplayTagContainer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, Temp_name_Variable) == 0x000038, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::Temp_name_Variable' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue) == 0x000040, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue_1) == 0x000044, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue_2) == 0x000048, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue_3) == 0x00004C, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_RowToBool_ReturnValue) == 0x000050, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_RowToBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_RowToBool_ReturnValue_1) == 0x000051, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_RowToBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_RowToBool_ReturnValue_2) == 0x000052, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_RowToBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_RowToBool_ReturnValue_3) == 0x000053, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_RowToBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue_4) == 0x000054, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue_5) == 0x000058, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, Temp_bool_Variable_1) == 0x00005C, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue_6) == 0x000060, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, Temp_name_Variable_1) == 0x000064, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::Temp_name_Variable_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeIndicatedActorParticleSystemData_ReturnValue) == 0x000070, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeIndicatedActorParticleSystemData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue_7) == 0x0000A0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeIndicatedActorData_ReturnValue) == 0x0000A8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeIndicatedActorData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_Select_Default) == 0x000130, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue_8) == 0x000138, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_MakeArray_Array) == 0x000140, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue_9) == 0x000150, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeIndicatedActorData_ReturnValue_1) == 0x000158, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeIndicatedActorData_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue_10) == 0x0001E0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue_11) == 0x0001E4, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeIndicatedActorParticleSystemData_ReturnValue_1) == 0x0001E8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeIndicatedActorParticleSystemData_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeStenciledActorData_ReturnValue) == 0x000218, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeStenciledActorData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeIndicatedActorData_ReturnValue_2) == 0x000288, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeIndicatedActorData_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue_12) == 0x000310, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetValueAtLevel_ReturnValue_13) == 0x000314, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetValueAtLevel_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeIndicatedActorData_ReturnValue_3) == 0x000318, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeIndicatedActorData_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_MakeArray_Array_1) == 0x0003A0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_MakeArray_Array_2) == 0x0003B0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetFortAbilitySystemComponent_ReturnValue) == 0x0003C0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetFortAbilitySystemComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetGameState_ReturnValue) == 0x0003C8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_DynamicCast_AsFort_Player_State_Athena) == 0x0003D0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_DynamicCast_AsFort_Player_State_Athena' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_DynamicCast_bSuccess) == 0x0003D8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_DynamicCast_AsFort_Game_State_Athena) == 0x0003E0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_DynamicCast_AsFort_Game_State_Athena' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_DynamicCast_bSuccess_1) == 0x0003E8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, Temp_bool_Variable_2) == 0x0003E9, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetSquadMemberPlayerStates_ReturnValue) == 0x0003F0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetSquadMemberPlayerStates_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_Array_Length_ReturnValue) == 0x000400, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_Select_Default_1) == 0x000404, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_Less_IntInt_ReturnValue) == 0x00040C, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeStenciledActorData_ReturnValue_1) == 0x000410, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeStenciledActorData_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeIndicatedActorDataWithFilter_ReturnValue) == 0x000480, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeIndicatedActorDataWithFilter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, Temp_name_Variable_2) == 0x000600, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::Temp_name_Variable_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, Temp_bool_Variable_3) == 0x000608, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, Temp_name_Variable_3) == 0x00060C, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::Temp_name_Variable_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_Select_Default_2) == 0x000614, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeStenciledActorData_ReturnValue_2) == 0x000620, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeStenciledActorData_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetGameState_ReturnValue_1) == 0x000690, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_DynamicCast_AsFort_Game_State_Athena_1) == 0x000698, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_DynamicCast_AsFort_Game_State_Athena_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_DynamicCast_bSuccess_2) == 0x0006A0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, Temp_bool_Variable_4) == 0x0006A1, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::Temp_bool_Variable_4' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, Temp_int_Array_Index_Variable_1) == 0x0006A4, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_Select_Default_3) == 0x0006A8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_Select_Default_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_Array_Get_Item) == 0x0006B0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeStenciledActorData_ReturnValue_3) == 0x0006B8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeStenciledActorData_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetCurrentPawn_ReturnValue) == 0x000728, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetCurrentPawn_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeIndicatedActorDataWithFilter_ReturnValue_1) == 0x000730, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeIndicatedActorDataWithFilter_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetFortAbilitySystemComponent_ReturnValue_1) == 0x0008B0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetFortAbilitySystemComponent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeFortEffectContext_ReturnValue) == 0x0008B8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeFortEffectContext_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_BP_FortApplyGameplayEffectToTarget_ReturnValue) == 0x0008D0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_BP_FortApplyGameplayEffectToTarget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetFortPlayerControllerFromActor_ReturnValue) == 0x0008D8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetFortPlayerControllerFromActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetFortPlayerControllerFromActor_ReturnValue_1) == 0x0008E0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetFortPlayerControllerFromActor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetQuestManager_ReturnValue) == 0x0008E8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetQuestManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetQuestManager_ReturnValue_1) == 0x0008F0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetQuestManager_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_SendComplexCustomStatEvent_QuestActive) == 0x0008F8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_SendComplexCustomStatEvent_QuestActive' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_SendComplexCustomStatEvent_QuestCompleted) == 0x0008F9, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_SendComplexCustomStatEvent_QuestCompleted' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_IsValid_ReturnValue) == 0x0008FA, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeGameplayCueParameters_ReturnValue) == 0x000900, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeGameplayCueParameters_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_IsDedicatedServer_ReturnValue) == 0x0009B8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_SendComplexCustomStatEvent_QuestActive_1) == 0x0009B9, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_SendComplexCustomStatEvent_QuestActive_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_SendComplexCustomStatEvent_QuestCompleted_1) == 0x0009BA, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_SendComplexCustomStatEvent_QuestCompleted_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetFactionTagContainerForActor_ReturnValue) == 0x0009C0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetFactionTagContainerForActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_MakeIndicatedActorDataWithFilter_ReturnValue_2) == 0x0009E0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_MakeIndicatedActorDataWithFilter_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_DynamicCast_AsFort_Player_State_Athena_1) == 0x000B60, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_DynamicCast_AsFort_Player_State_Athena_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_DynamicCast_bSuccess_3) == 0x000B68, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_MakeArray_Array_3) == 0x000B70, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_MakeArray_Array_3' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetSquadMemberPlayerStates_ReturnValue_1) == 0x000B80, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetSquadMemberPlayerStates_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_Array_Get_Item_1) == 0x000B90, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_Array_Length_ReturnValue_1) == 0x000B98, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_IsValid_ReturnValue_1) == 0x000B9C, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_Less_IntInt_ReturnValue_1) == 0x000B9D, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_GetPlayerPawnOrVehicleDriver_ReturnValue) == 0x000BA0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_GetPlayerPawnOrVehicleDriver_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_Array_Length_ReturnValue_2) == 0x000BA8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface) == 0x000BB0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, K2Node_DynamicCast_bSuccess_4) == 0x000BC0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_Greater_IntInt_ReturnValue) == 0x000BC1, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_HasAnyMatchingGameplayTags_ReturnValue) == 0x000BC2, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_HasAnyMatchingGameplayTags_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_Array_Add_ReturnValue) == 0x000BC4, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_IsValid_ReturnValue_2) == 0x000BC8, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_HasMatchingGameplayTag_self_CastInput) == 0x000BD0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_HasMatchingGameplayTag_self_CastInput' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_HasMatchingGameplayTag_ReturnValue) == 0x000BE0, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_HasMatchingGameplayTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_Reveal, CallFunc_Not_PreBool_ReturnValue) == 0x000BE1, "Member 'GAB_InterrogatePlayer_Reveal_C_Reveal::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.ToggleReticleVisibility
+// 0x0010 (0x0010 - 0x0000)
+struct GAB_InterrogatePlayer_Reveal_C_ToggleReticleVisibility final
+{
+public:
+	bool                                          Hide;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortHUDContext*                        CallFunc_GetContext_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GAB_InterrogatePlayer_Reveal_C_ToggleReticleVisibility) == 0x000008, "Wrong alignment on GAB_InterrogatePlayer_Reveal_C_ToggleReticleVisibility");
+static_assert(sizeof(GAB_InterrogatePlayer_Reveal_C_ToggleReticleVisibility) == 0x000010, "Wrong size on GAB_InterrogatePlayer_Reveal_C_ToggleReticleVisibility");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ToggleReticleVisibility, Hide) == 0x000000, "Member 'GAB_InterrogatePlayer_Reveal_C_ToggleReticleVisibility::Hide' has a wrong offset!");
+static_assert(offsetof(GAB_InterrogatePlayer_Reveal_C_ToggleReticleVisibility, CallFunc_GetContext_ReturnValue) == 0x000008, "Member 'GAB_InterrogatePlayer_Reveal_C_ToggleReticleVisibility::CallFunc_GetContext_ReturnValue' has a wrong offset!");
 
 }
 

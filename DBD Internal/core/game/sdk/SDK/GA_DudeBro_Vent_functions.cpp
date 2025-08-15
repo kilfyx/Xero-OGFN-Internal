@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function GA_DudeBro_Vent.GA_DudeBro_Vent_C.ActuallyCleanPlayerUp
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UGA_DudeBro_Vent_C::ActuallyCleanPlayerUp()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_DudeBro_Vent_C", "ActuallyCleanPlayerUp");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_DudeBro_Vent.GA_DudeBro_Vent_C.Added_4065C3B14D35BDC4C0608DB5BD4A1EBA
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_DudeBro_Vent_C::Added_4065C3B14D35BDC4C0608DB5BD4A1EBA()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_DudeBro_Vent_C", "Added_4065C3B14D35BDC4C0608DB5BD4A1EBA");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_DudeBro_Vent.GA_DudeBro_Vent_C.ExecuteUbergraph_GA_DudeBro_Vent
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -60,70 +32,6 @@ void UGA_DudeBro_Vent_C::ExecuteUbergraph_GA_DudeBro_Vent(int32 EntryPoint)
 	Params::GA_DudeBro_Vent_C_ExecuteUbergraph_GA_DudeBro_Vent Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_DudeBro_Vent.GA_DudeBro_Vent_C.K2_ActivateAbilityFromEvent
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FGameplayEventData&        EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UGA_DudeBro_Vent_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_DudeBro_Vent_C", "K2_ActivateAbilityFromEvent");
-
-	Params::GA_DudeBro_Vent_C_K2_ActivateAbilityFromEvent Parms{};
-
-	Parms.EventData = std::move(EventData);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_DudeBro_Vent.GA_DudeBro_Vent_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_DudeBro_Vent_C::K2_OnEndAbility(bool bWasCancelled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_DudeBro_Vent_C", "K2_OnEndAbility");
-
-	Params::GA_DudeBro_Vent_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_DudeBro_Vent.GA_DudeBro_Vent_C.MovementModeChangedDelegate_Event_0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ACharacter*                       Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMovementMode                           PrevMovementMode                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// uint8                                   PreviousCustomMode                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_DudeBro_Vent_C::MovementModeChangedDelegate_Event_0(class ACharacter* Character, EMovementMode PrevMovementMode, uint8 PreviousCustomMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_DudeBro_Vent_C", "MovementModeChangedDelegate_Event_0");
-
-	Params::GA_DudeBro_Vent_C_MovementModeChangedDelegate_Event_0 Parms{};
-
-	Parms.Character = Character;
-	Parms.PrevMovementMode = PrevMovementMode;
-	Parms.PreviousCustomMode = PreviousCustomMode;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -154,6 +62,84 @@ void UGA_DudeBro_Vent_C::PlayerCapsuleHit(class UPrimitiveComponent* HitComponen
 	Parms.Hit = std::move(Hit);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_DudeBro_Vent.GA_DudeBro_Vent_C.K2_ActivateAbilityFromEvent
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FGameplayEventData&        EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UGA_DudeBro_Vent_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_DudeBro_Vent_C", "K2_ActivateAbilityFromEvent");
+
+	Params::GA_DudeBro_Vent_C_K2_ActivateAbilityFromEvent Parms{};
+
+	Parms.EventData = std::move(EventData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_DudeBro_Vent.GA_DudeBro_Vent_C.MovementModeChangedDelegate_Event_0
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ACharacter*                       Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMovementMode                           PrevMovementMode                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   PreviousCustomMode                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_DudeBro_Vent_C::MovementModeChangedDelegate_Event_0(class ACharacter* Character, EMovementMode PrevMovementMode, uint8 PreviousCustomMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_DudeBro_Vent_C", "MovementModeChangedDelegate_Event_0");
+
+	Params::GA_DudeBro_Vent_C_MovementModeChangedDelegate_Event_0 Parms{};
+
+	Parms.Character = Character;
+	Parms.PrevMovementMode = PrevMovementMode;
+	Parms.PreviousCustomMode = PreviousCustomMode;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_DudeBro_Vent.GA_DudeBro_Vent_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGA_DudeBro_Vent_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_DudeBro_Vent_C", "K2_OnEndAbility");
+
+	Params::GA_DudeBro_Vent_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_DudeBro_Vent.GA_DudeBro_Vent_C.ActuallyCleanPlayerUp
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UGA_DudeBro_Vent_C::ActuallyCleanPlayerUp()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_DudeBro_Vent_C", "ActuallyCleanPlayerUp");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

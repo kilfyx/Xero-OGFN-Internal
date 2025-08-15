@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UCinematicCamera_MatineeTransition_C>();
 	}
 };
+static_assert(alignof(UCinematicCamera_MatineeTransition_C) == 0x000008, "Wrong alignment on UCinematicCamera_MatineeTransition_C");
+static_assert(sizeof(UCinematicCamera_MatineeTransition_C) == 0x000060, "Wrong size on UCinematicCamera_MatineeTransition_C");
 
 }
 

@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function CareerScreen.CareerScreen_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UCareerScreen_C::BP_OnActivated()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function CareerScreen.CareerScreen_C.ExecuteUbergraph_CareerScreen
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -39,9 +25,9 @@ void UCareerScreen_C::BP_OnActivated()
 void UCareerScreen_C::ExecuteUbergraph_CareerScreen(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_CareerScreen");
+		Func = Class->GetFunction("CareerScreen_C", "ExecuteUbergraph_CareerScreen");
 
 	Params::CareerScreen_C_ExecuteUbergraph_CareerScreen Parms{};
 
@@ -57,11 +43,45 @@ void UCareerScreen_C::ExecuteUbergraph_CareerScreen(int32 EntryPoint)
 void UCareerScreen_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnInitialized");
+		Func = Class->GetFunction("CareerScreen_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CareerScreen.CareerScreen_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UCareerScreen_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CareerScreen_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CareerScreen.CareerScreen_C.ShowFeats
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bHasCompletedFeats                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UCareerScreen_C::ShowFeats(bool bHasCompletedFeats)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CareerScreen_C", "ShowFeats");
+
+	Params::CareerScreen_C_ShowFeats Parms{};
+
+	Parms.bHasCompletedFeats = bHasCompletedFeats;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -71,9 +91,9 @@ void UCareerScreen_C::OnInitialized()
 void UCareerScreen_C::PlayCinematic()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PlayCinematic");
+		Func = Class->GetFunction("CareerScreen_C", "PlayCinematic");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -82,14 +102,14 @@ void UCareerScreen_C::PlayCinematic()
 // Function CareerScreen.CareerScreen_C.ReplayCinematic
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UCareerScreen_C::ReplayCinematic(bool* PassThrough)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ReplayCinematic");
+		Func = Class->GetFunction("CareerScreen_C", "ReplayCinematic");
 
 	Params::CareerScreen_C_ReplayCinematic Parms{};
 
@@ -97,26 +117,6 @@ void UCareerScreen_C::ReplayCinematic(bool* PassThrough)
 
 	if (PassThrough != nullptr)
 		*PassThrough = Parms.PassThrough;
-}
-
-
-// Function CareerScreen.CareerScreen_C.ShowFeats
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bHasCompletedFeats                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UCareerScreen_C::ShowFeats(bool bHasCompletedFeats)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ShowFeats");
-
-	Params::CareerScreen_C_ShowFeats Parms{};
-
-	Parms.bHasCompletedFeats = bHasCompletedFeats;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

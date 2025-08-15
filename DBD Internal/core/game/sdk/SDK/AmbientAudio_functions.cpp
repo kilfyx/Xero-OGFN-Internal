@@ -17,76 +17,174 @@
 namespace SDK
 {
 
-// Function AmbientAudio.AmbientAudioComponent.SetAmbientAsset
-// (Final, Native, Public, BlueprintCallable)
+// Function AmbientAudio.AmbientAudioStatics.AddAmbientEntry
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAmbientAudioDataAsset*           InAmbientAsset                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             AmbientName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAmbientAudioDataAsset*           Asset                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Priority                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   CrossfadeTime                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAmbientAudioComponent::SetAmbientAsset(class UAmbientAudioDataAsset* InAmbientAsset)
+void UAmbientAudioStatics::AddAmbientEntry(class UObject* WorldContextObject, class FName AmbientName, class UAmbientAudioDataAsset* Asset, int32 Priority, float CrossfadeTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AmbientAudioComponent", "SetAmbientAsset");
+		Func = StaticClass()->GetFunction("AmbientAudioStatics", "AddAmbientEntry");
 
-	Params::AmbientAudioComponent_SetAmbientAsset Parms{};
+	Params::AmbientAudioStatics_AddAmbientEntry Parms{};
 
-	Parms.InAmbientAsset = InAmbientAsset;
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.AmbientName = AmbientName;
+	Parms.Asset = Asset;
+	Parms.Priority = Priority;
+	Parms.CrossfadeTime = CrossfadeTime;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function AmbientAudio.AmbientAudioComponent.SetCrossfadeTime
-// (Final, Native, Public, BlueprintCallable)
+// Function AmbientAudio.AmbientAudioStatics.AddAmbientGameplayTag
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                                   InCrossfadeTime                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              GameplayTag                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAmbientAudioComponent::SetCrossfadeTime(float InCrossfadeTime)
+void UAmbientAudioStatics::AddAmbientGameplayTag(class UObject* WorldContextObject, const struct FGameplayTag& GameplayTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AmbientAudioComponent", "SetCrossfadeTime");
+		Func = StaticClass()->GetFunction("AmbientAudioStatics", "AddAmbientGameplayTag");
 
-	Params::AmbientAudioComponent_SetCrossfadeTime Parms{};
+	Params::AmbientAudioStatics_AddAmbientGameplayTag Parms{};
 
-	Parms.InCrossfadeTime = InCrossfadeTime;
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.GameplayTag = std::move(GameplayTag);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function AmbientAudio.AmbientAudioComponent.SetPriority
-// (Final, Native, Public, BlueprintCallable)
+// Function AmbientAudio.AmbientAudioStatics.CreateAudioComponent
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int32                                   InPriority                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USoundBase*                       Sound                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAudioComponent*                  ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAmbientAudioComponent::SetPriority(int32 InPriority)
+class UAudioComponent* UAmbientAudioStatics::CreateAudioComponent(class UObject* WorldContextObject, class USoundBase* Sound)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AmbientAudioComponent", "SetPriority");
+		Func = StaticClass()->GetFunction("AmbientAudioStatics", "CreateAudioComponent");
 
-	Params::AmbientAudioComponent_SetPriority Parms{};
+	Params::AmbientAudioStatics_CreateAudioComponent Parms{};
 
-	Parms.InPriority = InPriority;
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Sound = Sound;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AmbientAudio.AmbientAudioStatics.PlaySoundAtLocation
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USoundBase*                       Sound                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAmbientAudioStatics::PlaySoundAtLocation(class UObject* WorldContextObject, class USoundBase* Sound, const struct FVector& Location)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AmbientAudioStatics", "PlaySoundAtLocation");
+
+	Params::AmbientAudioStatics_PlaySoundAtLocation Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Sound = Sound;
+	Parms.Location = std::move(Location);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AmbientAudio.AmbientAudioStatics.RemoveAmbientEntry
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             AmbientName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAmbientAudioStatics::RemoveAmbientEntry(class UObject* WorldContextObject, class FName AmbientName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AmbientAudioStatics", "RemoveAmbientEntry");
+
+	Params::AmbientAudioStatics_RemoveAmbientEntry Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.AmbientName = AmbientName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AmbientAudio.AmbientAudioStatics.RemoveAmbientGameplayTag
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              GameplayTag                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAmbientAudioStatics::RemoveAmbientGameplayTag(class UObject* WorldContextObject, const struct FGameplayTag& GameplayTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AmbientAudioStatics", "RemoveAmbientGameplayTag");
+
+	Params::AmbientAudioStatics_RemoveAmbientGameplayTag Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.GameplayTag = std::move(GameplayTag);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -152,9 +250,8 @@ void UAmbientAudioSubsystem::AddGameplayTag(const struct FGameplayTag& GameplayT
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             AmbientName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   CrossfadeOverride                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAmbientAudioSubsystem::RemoveAmbientEntry(class FName AmbientName, float CrossfadeOverride)
+void UAmbientAudioSubsystem::RemoveAmbientEntry(class FName AmbientName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -164,7 +261,6 @@ void UAmbientAudioSubsystem::RemoveAmbientEntry(class FName AmbientName, float C
 	Params::AmbientAudioSubsystem_RemoveAmbientEntry Parms{};
 
 	Parms.AmbientName = AmbientName;
-	Parms.CrossfadeOverride = CrossfadeOverride;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

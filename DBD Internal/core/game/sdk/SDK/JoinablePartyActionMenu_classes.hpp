@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass JoinablePartyActionMenu.JoinablePartyActionMenu_C
-// 0x0028 (0x0460 - 0x0438)
+// 0x0028 (0x03F8 - 0x03D0)
 class UJoinablePartyActionMenu_C final : public UFortJoinablePartyActionMenu
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       ConfirmationOpened;                                // 0x0440(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Opened;                                            // 0x0448(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                Border_OnlineStatusIndicator;                      // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                EntryBorder;                                       // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       ConfirmationOpened;                                // 0x03D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Opened;                                            // 0x03E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                Border_OnlineStatusIndicator;                      // 0x03E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                EntryBorder;                                       // 0x03F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_JoinablePartyActionMenu(int32 EntryPoint);
@@ -43,6 +43,13 @@ public:
 		return GetDefaultObjImpl<UJoinablePartyActionMenu_C>();
 	}
 };
+static_assert(alignof(UJoinablePartyActionMenu_C) == 0x000008, "Wrong alignment on UJoinablePartyActionMenu_C");
+static_assert(sizeof(UJoinablePartyActionMenu_C) == 0x0003F8, "Wrong size on UJoinablePartyActionMenu_C");
+static_assert(offsetof(UJoinablePartyActionMenu_C, UberGraphFrame) == 0x0003D0, "Member 'UJoinablePartyActionMenu_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UJoinablePartyActionMenu_C, ConfirmationOpened) == 0x0003D8, "Member 'UJoinablePartyActionMenu_C::ConfirmationOpened' has a wrong offset!");
+static_assert(offsetof(UJoinablePartyActionMenu_C, Opened) == 0x0003E0, "Member 'UJoinablePartyActionMenu_C::Opened' has a wrong offset!");
+static_assert(offsetof(UJoinablePartyActionMenu_C, Border_OnlineStatusIndicator) == 0x0003E8, "Member 'UJoinablePartyActionMenu_C::Border_OnlineStatusIndicator' has a wrong offset!");
+static_assert(offsetof(UJoinablePartyActionMenu_C, EntryBorder) == 0x0003F0, "Member 'UJoinablePartyActionMenu_C::EntryBorder' has a wrong offset!");
 
 }
 

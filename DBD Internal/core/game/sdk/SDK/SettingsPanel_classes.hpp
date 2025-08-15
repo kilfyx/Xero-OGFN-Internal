@@ -17,12 +17,9 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SettingsPanel.SettingsPanel_C
-// 0x0008 (0x06C0 - 0x06B8)
+// 0x0000 (0x06C0 - 0x06C0)
 class USettingsPanel_C final : public UFortSettingsPanel
 {
-public:
-	class USafeZone*                              SafeZone_0;                                        // 0x06B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -33,6 +30,8 @@ public:
 		return GetDefaultObjImpl<USettingsPanel_C>();
 	}
 };
+static_assert(alignof(USettingsPanel_C) == 0x000008, "Wrong alignment on USettingsPanel_C");
+static_assert(sizeof(USettingsPanel_C) == 0x0006C0, "Wrong size on USettingsPanel_C");
 
 }
 

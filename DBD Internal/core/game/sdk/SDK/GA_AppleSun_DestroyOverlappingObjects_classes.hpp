@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_AppleSun_DestroyOverlappingObjects.GA_AppleSun_DestroyOverlappingObjects_C
-// 0x0008 (0x0AB0 - 0x0AA8)
+// 0x0008 (0x0AC0 - 0x0AB8)
 class UGA_AppleSun_DestroyOverlappingObjects_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void Cancelled_96BA3C644E573EAE0D8760B88ABB3969(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void ExecuteUbergraph_GA_AppleSun_DestroyOverlappingObjects(int32 EntryPoint);
 	void K2_ActivateAbility();
 	void Targeted_96BA3C644E573EAE0D8760B88ABB3969(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void Cancelled_96BA3C644E573EAE0D8760B88ABB3969(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 
 	struct FTransform GetCustomAbilitySourceTransform() const;
 
@@ -42,6 +42,9 @@ public:
 		return GetDefaultObjImpl<UGA_AppleSun_DestroyOverlappingObjects_C>();
 	}
 };
+static_assert(alignof(UGA_AppleSun_DestroyOverlappingObjects_C) == 0x000008, "Wrong alignment on UGA_AppleSun_DestroyOverlappingObjects_C");
+static_assert(sizeof(UGA_AppleSun_DestroyOverlappingObjects_C) == 0x000AC0, "Wrong size on UGA_AppleSun_DestroyOverlappingObjects_C");
+static_assert(offsetof(UGA_AppleSun_DestroyOverlappingObjects_C, UberGraphFrame) == 0x000AB8, "Member 'UGA_AppleSun_DestroyOverlappingObjects_C::UberGraphFrame' has a wrong offset!");
 
 }
 

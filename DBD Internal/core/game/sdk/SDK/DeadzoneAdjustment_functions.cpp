@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function DeadzoneAdjustment.DeadzoneAdjustment_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UDeadzoneAdjustment_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DeadzoneAdjustment_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function DeadzoneAdjustment.DeadzoneAdjustment_C.DoCustomNavigation_0
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -54,23 +40,17 @@ class UWidget* UDeadzoneAdjustment_C::DoCustomNavigation_0(EUINavigation Navigat
 }
 
 
-// Function DeadzoneAdjustment.DeadzoneAdjustment_C.ExecuteUbergraph_DeadzoneAdjustment
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function DeadzoneAdjustment.DeadzoneAdjustment_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UDeadzoneAdjustment_C::ExecuteUbergraph_DeadzoneAdjustment(int32 EntryPoint)
+void UDeadzoneAdjustment_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DeadzoneAdjustment_C", "ExecuteUbergraph_DeadzoneAdjustment");
+		Func = Class->GetFunction("DeadzoneAdjustment_C", "Construct");
 
-	Params::DeadzoneAdjustment_C_ExecuteUbergraph_DeadzoneAdjustment Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -89,6 +69,26 @@ void UDeadzoneAdjustment_C::OnValueChanged_Bind(float Value)
 	Params::DeadzoneAdjustment_C_OnValueChanged_Bind Parms{};
 
 	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DeadzoneAdjustment.DeadzoneAdjustment_C.ExecuteUbergraph_DeadzoneAdjustment
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDeadzoneAdjustment_C::ExecuteUbergraph_DeadzoneAdjustment(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DeadzoneAdjustment_C", "ExecuteUbergraph_DeadzoneAdjustment");
+
+	Params::DeadzoneAdjustment_C_ExecuteUbergraph_DeadzoneAdjustment Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

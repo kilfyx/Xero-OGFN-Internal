@@ -17,6 +17,128 @@
 namespace SDK
 {
 
+// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.ExecuteUbergraph_GAB_InterrogatePlayer_Search
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGAB_InterrogatePlayer_Search_C::ExecuteUbergraph_GAB_InterrogatePlayer_Search(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "ExecuteUbergraph_GAB_InterrogatePlayer_Search");
+
+	Params::GAB_InterrogatePlayer_Search_C_ExecuteUbergraph_GAB_InterrogatePlayer_Search Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.OnDied_Event_1
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           DamagedActor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              FHitComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             BoneName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGAB_InterrogatePlayer_Search_C::OnDied_Event_1(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "OnDied_Event_1");
+
+	Params::GAB_InterrogatePlayer_Search_C_OnDied_Event_1 Parms{};
+
+	Parms.DamagedActor = DamagedActor;
+	Parms.Damage = Damage;
+	Parms.InstigatedBy = InstigatedBy;
+	Parms.DamageCauser = DamageCauser;
+	Parms.HitLocation = std::move(HitLocation);
+	Parms.FHitComponent = FHitComponent;
+	Parms.BoneName = BoneName;
+	Parms.Momentum = std::move(Momentum);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.OnDied_Event_0
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           DamagedActor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              FHitComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             BoneName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGAB_InterrogatePlayer_Search_C::OnDied_Event_0(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "OnDied_Event_0");
+
+	Params::GAB_InterrogatePlayer_Search_C_OnDied_Event_0 Parms{};
+
+	Parms.DamagedActor = DamagedActor;
+	Parms.Damage = Damage;
+	Parms.InstigatedBy = InstigatedBy;
+	Parms.DamageCauser = DamageCauser;
+	Parms.HitLocation = std::move(HitLocation);
+	Parms.FHitComponent = FHitComponent;
+	Parms.BoneName = BoneName;
+	Parms.Momentum = std::move(Momentum);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGAB_InterrogatePlayer_Search_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "K2_OnEndAbility");
+
+	Params::GAB_InterrogatePlayer_Search_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGAB_InterrogatePlayer_Search_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.Added_9291D75D4A0949E1C5B7E49C1FD11F8B
 // (BlueprintCallable, BlueprintEvent)
 
@@ -31,21 +153,23 @@ void UGAB_InterrogatePlayer_Search_C::Added_9291D75D4A0949E1C5B7E49C1FD11F8B()
 }
 
 
-// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.ApplyGameplayEffectToNPC
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.Triggered_6BBDC9B445D4280492A25E8E5EA7A53D
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           GameplayEffect                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
-void UGAB_InterrogatePlayer_Search_C::ApplyGameplayEffectToNPC(class UClass* GameplayEffect)
+void UGAB_InterrogatePlayer_Search_C::Triggered_6BBDC9B445D4280492A25E8E5EA7A53D(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "ApplyGameplayEffectToNPC");
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "Triggered_6BBDC9B445D4280492A25E8E5EA7A53D");
 
-	Params::GAB_InterrogatePlayer_Search_C_ApplyGameplayEffectToNPC Parms{};
+	Params::GAB_InterrogatePlayer_Search_C_Triggered_6BBDC9B445D4280492A25E8E5EA7A53D Parms{};
 
-	Parms.GameplayEffect = GameplayEffect;
+	Parms.TargetData = std::move(TargetData);
+	Parms.ApplicationTag = std::move(ApplicationTag);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -95,29 +219,15 @@ void UGAB_InterrogatePlayer_Search_C::Completed_6BBDC9B445D4280492A25E8E5EA7A53D
 }
 
 
-// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.DropKeycard
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UGAB_InterrogatePlayer_Search_C::DropKeycard()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "DropKeycard");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.DropLoot
+// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.InitAbility
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UGAB_InterrogatePlayer_Search_C::DropLoot()
+void UGAB_InterrogatePlayer_Search_C::InitAbility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "DropLoot");
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "InitAbility");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -137,30 +247,44 @@ void UGAB_InterrogatePlayer_Search_C::EndAbilityCleanup()
 }
 
 
-// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.ExecuteUbergraph_GAB_InterrogatePlayer_Search
-// (Final, UbergraphFunction, HasDefaults)
+// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.ToggleReticleVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Hide                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UGAB_InterrogatePlayer_Search_C::ExecuteUbergraph_GAB_InterrogatePlayer_Search(int32 EntryPoint)
+void UGAB_InterrogatePlayer_Search_C::ToggleReticleVisibility(bool Hide)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "ExecuteUbergraph_GAB_InterrogatePlayer_Search");
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "ToggleReticleVisibility");
 
-	Params::GAB_InterrogatePlayer_Search_C_ExecuteUbergraph_GAB_InterrogatePlayer_Search Parms{};
+	Params::GAB_InterrogatePlayer_Search_C_ToggleReticleVisibility Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Hide = Hide;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.DropLoot
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UGAB_InterrogatePlayer_Search_C::DropLoot()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "DropLoot");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.GetKeycardToDrop
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool*                                   HasKeycard                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   HasKeycard                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UFortWorldItemDefinition**        Output                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGAB_InterrogatePlayer_Search_C::GetKeycardToDrop(bool* HasKeycard, class UFortWorldItemDefinition** Output)
@@ -182,179 +306,35 @@ void UGAB_InterrogatePlayer_Search_C::GetKeycardToDrop(bool* HasKeycard, class U
 }
 
 
-// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.InitAbility
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UGAB_InterrogatePlayer_Search_C::InitAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "InitAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGAB_InterrogatePlayer_Search_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_InterrogatePlayer_Search_C::K2_OnEndAbility(bool bWasCancelled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "K2_OnEndAbility");
-
-	Params::GAB_InterrogatePlayer_Search_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.OnDied_Event_0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           DamagedActor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              FHitComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             BoneName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_InterrogatePlayer_Search_C::OnDied_Event_0(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "OnDied_Event_0");
-
-	Params::GAB_InterrogatePlayer_Search_C_OnDied_Event_0 Parms{};
-
-	Parms.DamagedActor = DamagedActor;
-	Parms.Damage = Damage;
-	Parms.InstigatedBy = InstigatedBy;
-	Parms.DamageCauser = DamageCauser;
-	Parms.HitLocation = std::move(HitLocation);
-	Parms.FHitComponent = FHitComponent;
-	Parms.BoneName = BoneName;
-	Parms.Momentum = std::move(Momentum);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.OnDied_Event_1
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           DamagedActor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              FHitComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             BoneName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_InterrogatePlayer_Search_C::OnDied_Event_1(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "OnDied_Event_1");
-
-	Params::GAB_InterrogatePlayer_Search_C_OnDied_Event_1 Parms{};
-
-	Parms.DamagedActor = DamagedActor;
-	Parms.Damage = Damage;
-	Parms.InstigatedBy = InstigatedBy;
-	Parms.DamageCauser = DamageCauser;
-	Parms.HitLocation = std::move(HitLocation);
-	Parms.FHitComponent = FHitComponent;
-	Parms.BoneName = BoneName;
-	Parms.Momentum = std::move(Momentum);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.OnPress_2000C5AE43E9D757FF188B85CF911E39
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   TimeWaited                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_InterrogatePlayer_Search_C::OnPress_2000C5AE43E9D757FF188B85CF911E39(float TimeWaited)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "OnPress_2000C5AE43E9D757FF188B85CF911E39");
-
-	Params::GAB_InterrogatePlayer_Search_C_OnPress_2000C5AE43E9D757FF188B85CF911E39 Parms{};
-
-	Parms.TimeWaited = TimeWaited;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.ToggleReticleVisibility
+// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.DropKeycard
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Hide                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGAB_InterrogatePlayer_Search_C::ToggleReticleVisibility(bool Hide)
+void UGAB_InterrogatePlayer_Search_C::DropKeycard()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "ToggleReticleVisibility");
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "DropKeycard");
 
-	Params::GAB_InterrogatePlayer_Search_C_ToggleReticleVisibility Parms{};
-
-	Parms.Hide = Hide;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.Triggered_6BBDC9B445D4280492A25E8E5EA7A53D
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.ApplyGameplayEffectToNPC
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           GameplayEffect                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGAB_InterrogatePlayer_Search_C::Triggered_6BBDC9B445D4280492A25E8E5EA7A53D(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
+void UGAB_InterrogatePlayer_Search_C::ApplyGameplayEffectToNPC(class UClass* GameplayEffect)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "Triggered_6BBDC9B445D4280492A25E8E5EA7A53D");
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Search_C", "ApplyGameplayEffectToNPC");
 
-	Params::GAB_InterrogatePlayer_Search_C_Triggered_6BBDC9B445D4280492A25E8E5EA7A53D Parms{};
+	Params::GAB_InterrogatePlayer_Search_C_ApplyGameplayEffectToNPC Parms{};
 
-	Parms.TargetData = std::move(TargetData);
-	Parms.ApplicationTag = std::move(ApplicationTag);
+	Parms.GameplayEffect = GameplayEffect;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

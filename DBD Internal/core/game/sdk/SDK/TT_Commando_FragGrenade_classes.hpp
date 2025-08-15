@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TT_Commando_FragGrenade.TT_Commando_FragGrenade_C
-// 0x0000 (0x0188 - 0x0188)
+// 0x0000 (0x0180 - 0x0180)
 class UTT_Commando_FragGrenade_C final : public UFortGameplayAbilityTooltip
 {
 public:
-	bool GetApplicationTag(const class UGameplayAbility* AbilityInstance, struct FGameplayTag* OutTag) const;
-	bool GetTextForTokenFromAbilityInstanceInternal(const class UGameplayAbility* AbilityInstance, const struct FGameplayTag& Tag, const class UFortTooltipContext* Context, const struct FGameplayTag& Token, class FText* OutText) const;
 	void InitializeAbilityInstanceInternal(const class UGameplayAbility* AbilityInstance, const class UFortTooltipContext* Context) const;
+	bool GetTextForTokenFromAbilityInstanceInternal(const class UGameplayAbility* AbilityInstance, const struct FGameplayTag& Tag, const class UFortTooltipContext* Context, const struct FGameplayTag& Token, class FText* OutText) const;
+	bool GetApplicationTag(const class UGameplayAbility* AbilityInstance, struct FGameplayTag* OutTag) const;
 
 public:
 	static class UClass* StaticClass()
@@ -35,6 +35,8 @@ public:
 		return GetDefaultObjImpl<UTT_Commando_FragGrenade_C>();
 	}
 };
+static_assert(alignof(UTT_Commando_FragGrenade_C) == 0x000008, "Wrong alignment on UTT_Commando_FragGrenade_C");
+static_assert(sizeof(UTT_Commando_FragGrenade_C) == 0x000180, "Wrong size on UTT_Commando_FragGrenade_C");
 
 }
 

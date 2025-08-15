@@ -17,6 +17,120 @@
 namespace SDK
 {
 
+// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.ExecuteUbergraph_QuartzMusicTrackComponent_DataTracker
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UQuartzMusicTrackComponent_DataTracker_C::ExecuteUbergraph_QuartzMusicTrackComponent_DataTracker(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "ExecuteUbergraph_QuartzMusicTrackComponent_DataTracker");
+
+	Params::QuartzMusicTrackComponent_DataTracker_C_ExecuteUbergraph_QuartzMusicTrackComponent_DataTracker Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.Retry Get Data Tracker Manager
+// (BlueprintCallable, BlueprintEvent)
+
+void UQuartzMusicTrackComponent_DataTracker_C::Retry_Get_Data_Tracker_Manager()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "Retry Get Data Tracker Manager");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UQuartzMusicTrackComponent_DataTracker_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.OnReady_EAA166EB4AA20B4778C921B5F15F1C62
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFortGameStateAthena*             GameState                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UFortPlaylist*              Playlist                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTagContainer&     PlaylistContextTags                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UQuartzMusicTrackComponent_DataTracker_C::OnReady_EAA166EB4AA20B4778C921B5F15F1C62(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "OnReady_EAA166EB4AA20B4778C921B5F15F1C62");
+
+	Params::QuartzMusicTrackComponent_DataTracker_C_OnReady_EAA166EB4AA20B4778C921B5F15F1C62 Parms{};
+
+	Parms.GameState = GameState;
+	Parms.Playlist = Playlist;
+	Parms.PlaylistContextTags = std::move(PlaylistContextTags);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.On Changed Has Any Event Value
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortGameplayDataTrackerComponent*DataTrackerComponent_0                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bHasEventValues                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UQuartzMusicTrackComponent_DataTracker_C::On_Changed_Has_Any_Event_Value(class UFortGameplayDataTrackerComponent* DataTrackerComponent_0, bool bHasEventValues)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "On Changed Has Any Event Value");
+
+	Params::QuartzMusicTrackComponent_DataTracker_C_On_Changed_Has_Any_Event_Value Parms{};
+
+	Parms.DataTrackerComponent_0 = DataTrackerComponent_0;
+	Parms.bHasEventValues = bHasEventValues;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.OnDataTrackerComponentRegistered
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortGameplayDataTrackerComponent*RegisteredDataTracker                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UQuartzMusicTrackComponent_DataTracker_C::OnDataTrackerComponentRegistered(class UFortGameplayDataTrackerComponent* RegisteredDataTracker)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "OnDataTrackerComponentRegistered");
+
+	Params::QuartzMusicTrackComponent_DataTracker_C_OnDataTrackerComponentRegistered Parms{};
+
+	Parms.RegisteredDataTracker = RegisteredDataTracker;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.DataTrackerStart_Internal
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -26,20 +140,6 @@ void UQuartzMusicTrackComponent_DataTracker_C::DataTrackerStart_Internal()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "DataTrackerStart_Internal");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.DataTrackerStop_Internal
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UQuartzMusicTrackComponent_DataTracker_C::DataTrackerStop_Internal()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "DataTrackerStop_Internal");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -59,23 +159,59 @@ void UQuartzMusicTrackComponent_DataTracker_C::DataTrackerUpdate_Internal()
 }
 
 
-// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.ExecuteUbergraph_QuartzMusicTrackComponent_DataTracker
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.DataTrackerStop_Internal
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UQuartzMusicTrackComponent_DataTracker_C::ExecuteUbergraph_QuartzMusicTrackComponent_DataTracker(int32 EntryPoint)
+void UQuartzMusicTrackComponent_DataTracker_C::DataTrackerStop_Internal()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "ExecuteUbergraph_QuartzMusicTrackComponent_DataTracker");
+		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "DataTrackerStop_Internal");
 
-	Params::QuartzMusicTrackComponent_DataTracker_C_ExecuteUbergraph_QuartzMusicTrackComponent_DataTracker Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.OnDataTrackerStart
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UQuartzMusicTrackComponent_DataTracker_C::OnDataTrackerStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "OnDataTrackerStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.OnDataTrackerUpdate
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UQuartzMusicTrackComponent_DataTracker_C::OnDataTrackerUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "OnDataTrackerUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.OnDataTrackerStop
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UQuartzMusicTrackComponent_DataTracker_C::OnDataTrackerStop()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "OnDataTrackerStop");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -142,162 +278,6 @@ void UQuartzMusicTrackComponent_DataTracker_C::GetDataTrackerParameterValueTotal
 
 	if (Value != nullptr)
 		*Value = Parms.Value;
-}
-
-
-// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.On Changed Has Any Event Value
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFortGameplayDataTrackerComponent*DataTrackerComponent_0                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bHasEventValues                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UQuartzMusicTrackComponent_DataTracker_C::On_Changed_Has_Any_Event_Value(class UFortGameplayDataTrackerComponent* DataTrackerComponent_0, bool bHasEventValues)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "On Changed Has Any Event Value");
-
-	Params::QuartzMusicTrackComponent_DataTracker_C_On_Changed_Has_Any_Event_Value Parms{};
-
-	Parms.DataTrackerComponent_0 = DataTrackerComponent_0;
-	Parms.bHasEventValues = bHasEventValues;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.OnDataTrackerComponentRegistered
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFortGameplayDataTrackerComponent*RegisteredDataTracker                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UQuartzMusicTrackComponent_DataTracker_C::OnDataTrackerComponentRegistered(class UFortGameplayDataTrackerComponent* RegisteredDataTracker)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "OnDataTrackerComponentRegistered");
-
-	Params::QuartzMusicTrackComponent_DataTracker_C_OnDataTrackerComponentRegistered Parms{};
-
-	Parms.RegisteredDataTracker = RegisteredDataTracker;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.OnDataTrackerComponentUnRegistered
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFortGameplayDataTrackerComponent*UnRegisteredDataTracker                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UQuartzMusicTrackComponent_DataTracker_C::OnDataTrackerComponentUnRegistered(class UFortGameplayDataTrackerComponent* UnRegisteredDataTracker)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "OnDataTrackerComponentUnRegistered");
-
-	Params::QuartzMusicTrackComponent_DataTracker_C_OnDataTrackerComponentUnRegistered Parms{};
-
-	Parms.UnRegisteredDataTracker = UnRegisteredDataTracker;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.OnDataTrackerStart
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UQuartzMusicTrackComponent_DataTracker_C::OnDataTrackerStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "OnDataTrackerStart");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.OnDataTrackerStop
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UQuartzMusicTrackComponent_DataTracker_C::OnDataTrackerStop()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "OnDataTrackerStop");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.OnDataTrackerUpdate
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UQuartzMusicTrackComponent_DataTracker_C::OnDataTrackerUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "OnDataTrackerUpdate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.OnReady_EAA166EB4AA20B4778C921B5F15F1C62
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortGameStateAthena*             GameState                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UFortPlaylist*              Playlist                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTagContainer&     PlaylistContextTags                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UQuartzMusicTrackComponent_DataTracker_C::OnReady_EAA166EB4AA20B4778C921B5F15F1C62(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "OnReady_EAA166EB4AA20B4778C921B5F15F1C62");
-
-	Params::QuartzMusicTrackComponent_DataTracker_C_OnReady_EAA166EB4AA20B4778C921B5F15F1C62 Parms{};
-
-	Parms.GameState = GameState;
-	Parms.Playlist = Playlist;
-	Parms.PlaylistContextTags = std::move(PlaylistContextTags);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UQuartzMusicTrackComponent_DataTracker_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuartzMusicTrackComponent_DataTracker.QuartzMusicTrackComponent_DataTracker_C.Retry Get Data Tracker Manager
-// (BlueprintCallable, BlueprintEvent)
-
-void UQuartzMusicTrackComponent_DataTracker_C::Retry_Get_Data_Tracker_Manager()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_DataTracker_C", "Retry Get Data Tracker Manager");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

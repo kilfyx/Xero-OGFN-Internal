@@ -10,7 +10,7 @@
 
 #include "Basic.hpp"
 
-#include "FortniteAI_classes.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK

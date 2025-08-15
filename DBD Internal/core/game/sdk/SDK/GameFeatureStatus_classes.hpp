@@ -11,33 +11,33 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "FortniteUI_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass GameFeatureStatus.GameFeatureStatus_C
-// 0x0060 (0x03B0 - 0x0350)
+// 0x0060 (0x03A8 - 0x0348)
 class UGameFeatureStatus_C final : public UAthenaGameFeatureStatus
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Downloading_Error;                                 // 0x0358(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Downloading;                                       // 0x0360(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_ErrorIcon;                                   // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Pause;                                       // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        Switcher_ProgressOrError;                          // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FLinearColor                           Progress;                                          // 0x0380(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Error;                                             // 0x0390(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           paused;                                            // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Downloading_Error;                                 // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Downloading;                                       // 0x0358(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_ErrorIcon;                                   // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Pause;                                       // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        Switcher_ProgressOrError;                          // 0x0370(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FLinearColor                           Progress;                                          // 0x0378(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Error;                                             // 0x0388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Paused;                                            // 0x0398(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_GameFeatureStatus(int32 EntryPoint);
 	void HandleStatusChanged(EAthenaGameFeatureStatus CurrentStatus);
 	void OnStatusChanged(EAthenaGameFeatureStatus NewStatus);
+	void ExecuteUbergraph_GameFeatureStatus(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -50,16 +50,16 @@ public:
 	}
 };
 static_assert(alignof(UGameFeatureStatus_C) == 0x000008, "Wrong alignment on UGameFeatureStatus_C");
-static_assert(sizeof(UGameFeatureStatus_C) == 0x0003B0, "Wrong size on UGameFeatureStatus_C");
-static_assert(offsetof(UGameFeatureStatus_C, UberGraphFrame) == 0x000350, "Member 'UGameFeatureStatus_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UGameFeatureStatus_C, Downloading_Error) == 0x000358, "Member 'UGameFeatureStatus_C::Downloading_Error' has a wrong offset!");
-static_assert(offsetof(UGameFeatureStatus_C, Downloading) == 0x000360, "Member 'UGameFeatureStatus_C::Downloading' has a wrong offset!");
-static_assert(offsetof(UGameFeatureStatus_C, Image_ErrorIcon) == 0x000368, "Member 'UGameFeatureStatus_C::Image_ErrorIcon' has a wrong offset!");
-static_assert(offsetof(UGameFeatureStatus_C, Image_Pause) == 0x000370, "Member 'UGameFeatureStatus_C::Image_Pause' has a wrong offset!");
-static_assert(offsetof(UGameFeatureStatus_C, Switcher_ProgressOrError) == 0x000378, "Member 'UGameFeatureStatus_C::Switcher_ProgressOrError' has a wrong offset!");
-static_assert(offsetof(UGameFeatureStatus_C, Progress) == 0x000380, "Member 'UGameFeatureStatus_C::Progress' has a wrong offset!");
-static_assert(offsetof(UGameFeatureStatus_C, Error) == 0x000390, "Member 'UGameFeatureStatus_C::Error' has a wrong offset!");
-static_assert(offsetof(UGameFeatureStatus_C, paused) == 0x0003A0, "Member 'UGameFeatureStatus_C::paused' has a wrong offset!");
+static_assert(sizeof(UGameFeatureStatus_C) == 0x0003A8, "Wrong size on UGameFeatureStatus_C");
+static_assert(offsetof(UGameFeatureStatus_C, UberGraphFrame) == 0x000348, "Member 'UGameFeatureStatus_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UGameFeatureStatus_C, Downloading_Error) == 0x000350, "Member 'UGameFeatureStatus_C::Downloading_Error' has a wrong offset!");
+static_assert(offsetof(UGameFeatureStatus_C, Downloading) == 0x000358, "Member 'UGameFeatureStatus_C::Downloading' has a wrong offset!");
+static_assert(offsetof(UGameFeatureStatus_C, Image_ErrorIcon) == 0x000360, "Member 'UGameFeatureStatus_C::Image_ErrorIcon' has a wrong offset!");
+static_assert(offsetof(UGameFeatureStatus_C, Image_Pause) == 0x000368, "Member 'UGameFeatureStatus_C::Image_Pause' has a wrong offset!");
+static_assert(offsetof(UGameFeatureStatus_C, Switcher_ProgressOrError) == 0x000370, "Member 'UGameFeatureStatus_C::Switcher_ProgressOrError' has a wrong offset!");
+static_assert(offsetof(UGameFeatureStatus_C, Progress) == 0x000378, "Member 'UGameFeatureStatus_C::Progress' has a wrong offset!");
+static_assert(offsetof(UGameFeatureStatus_C, Error) == 0x000388, "Member 'UGameFeatureStatus_C::Error' has a wrong offset!");
+static_assert(offsetof(UGameFeatureStatus_C, Paused) == 0x000398, "Member 'UGameFeatureStatus_C::Paused' has a wrong offset!");
 
 }
 

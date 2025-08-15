@@ -26,8 +26,8 @@ public:
 
 public:
 	void ExecuteUbergraph_FriendNotification(int32 EntryPoint);
-	void JoinPartyInvite();
 	void ShowFriendInvites();
+	void JoinPartyInvite();
 
 public:
 	static class UClass* StaticClass()
@@ -39,6 +39,9 @@ public:
 		return GetDefaultObjImpl<UFriendNotification_C>();
 	}
 };
+static_assert(alignof(UFriendNotification_C) == 0x000008, "Wrong alignment on UFriendNotification_C");
+static_assert(sizeof(UFriendNotification_C) == 0x000110, "Wrong size on UFriendNotification_C");
+static_assert(offsetof(UFriendNotification_C, UberGraphFrame) == 0x000108, "Member 'UFriendNotification_C::UberGraphFrame' has a wrong offset!");
 
 }
 

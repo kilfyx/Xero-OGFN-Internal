@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ButtonStyle-Tab-Main_Bacchus.ButtonStyle-Tab-Main_Bacchus_C
-// 0x0000 (0x0730 - 0x0730)
+// 0x0000 (0x0570 - 0x0570)
 class UButtonStyle_Tab_Main_Bacchus_C final : public UButtonStyle_Tab_Main_C
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_Tab_Main_Bacchus_C>();
 	}
 };
-static_assert(alignof(UButtonStyle_Tab_Main_Bacchus_C) == 0x000010, "Wrong alignment on UButtonStyle_Tab_Main_Bacchus_C");
-static_assert(sizeof(UButtonStyle_Tab_Main_Bacchus_C) == 0x000730, "Wrong size on UButtonStyle_Tab_Main_Bacchus_C");
+static_assert(alignof(UButtonStyle_Tab_Main_Bacchus_C) == 0x000008, "Wrong alignment on UButtonStyle_Tab_Main_Bacchus_C");
+static_assert(sizeof(UButtonStyle_Tab_Main_Bacchus_C) == 0x000570, "Wrong size on UButtonStyle_Tab_Main_Bacchus_C");
 
 }
 

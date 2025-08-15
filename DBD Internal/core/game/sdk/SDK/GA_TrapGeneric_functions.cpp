@@ -17,28 +17,6 @@
 namespace SDK
 {
 
-// Function GA_TrapGeneric.GA_TrapGeneric_C.Cancelled_EFEC611E4D988CAA3867F28EE35771B3
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UGA_TrapGeneric_C::Cancelled_EFEC611E4D988CAA3867F28EE35771B3(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_TrapGeneric_C", "Cancelled_EFEC611E4D988CAA3867F28EE35771B3");
-
-	Params::GA_TrapGeneric_C_Cancelled_EFEC611E4D988CAA3867F28EE35771B3 Parms{};
-
-	Parms.TargetData = std::move(TargetData);
-	Parms.ApplicationTag = std::move(ApplicationTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_TrapGeneric.GA_TrapGeneric_C.ExecuteUbergraph_GA_TrapGeneric
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -87,6 +65,28 @@ void UGA_TrapGeneric_C::Targeted_EFEC611E4D988CAA3867F28EE35771B3(const struct F
 		Func = Class->GetFunction("GA_TrapGeneric_C", "Targeted_EFEC611E4D988CAA3867F28EE35771B3");
 
 	Params::GA_TrapGeneric_C_Targeted_EFEC611E4D988CAA3867F28EE35771B3 Parms{};
+
+	Parms.TargetData = std::move(TargetData);
+	Parms.ApplicationTag = std::move(ApplicationTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_TrapGeneric.GA_TrapGeneric_C.Cancelled_EFEC611E4D988CAA3867F28EE35771B3
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+
+void UGA_TrapGeneric_C::Cancelled_EFEC611E4D988CAA3867F28EE35771B3(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_TrapGeneric_C", "Cancelled_EFEC611E4D988CAA3867F28EE35771B3");
+
+	Params::GA_TrapGeneric_C_Cancelled_EFEC611E4D988CAA3867F28EE35771B3 Parms{};
 
 	Parms.TargetData = std::move(TargetData);
 	Parms.ApplicationTag = std::move(ApplicationTag);

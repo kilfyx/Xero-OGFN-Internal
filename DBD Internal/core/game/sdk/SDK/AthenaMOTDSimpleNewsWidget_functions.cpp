@@ -17,15 +17,77 @@
 namespace SDK
 {
 
+// Function AthenaMOTDSimpleNewsWidget.AthenaMOTDSimpleNewsWidget_C.SetDynamicColors
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FColor&                    Dark                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FColor&                    Light                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaMOTDSimpleNewsWidget_C::SetDynamicColors(const struct FColor& Dark, const struct FColor& Light)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMOTDSimpleNewsWidget_C", "SetDynamicColors");
+
+	Params::AthenaMOTDSimpleNewsWidget_C_SetDynamicColors Parms{};
+
+	Parms.Dark = std::move(Dark);
+	Parms.Light = std::move(Light);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaMOTDSimpleNewsWidget.AthenaMOTDSimpleNewsWidget_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaMOTDSimpleNewsWidget_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMOTDSimpleNewsWidget_C", "PreConstruct");
+
+	Params::AthenaMOTDSimpleNewsWidget_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaMOTDSimpleNewsWidget.AthenaMOTDSimpleNewsWidget_C.OnPopulateNews
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FAthenaMOTDBase&           NewsEntry                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UAthenaMOTDSimpleNewsWidget_C::OnPopulateNews(const struct FAthenaMOTDBase& NewsEntry)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMOTDSimpleNewsWidget_C", "OnPopulateNews");
+
+	Params::AthenaMOTDSimpleNewsWidget_C_OnPopulateNews Parms{};
+
+	Parms.NewsEntry = std::move(NewsEntry);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function AthenaMOTDSimpleNewsWidget.AthenaMOTDSimpleNewsWidget_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
 void UAthenaMOTDSimpleNewsWidget_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
+		Func = Class->GetFunction("AthenaMOTDSimpleNewsWidget_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -39,75 +101,13 @@ void UAthenaMOTDSimpleNewsWidget_C::BP_OnActivated()
 void UAthenaMOTDSimpleNewsWidget_C::ExecuteUbergraph_AthenaMOTDSimpleNewsWidget(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaMOTDSimpleNewsWidget");
+		Func = Class->GetFunction("AthenaMOTDSimpleNewsWidget_C", "ExecuteUbergraph_AthenaMOTDSimpleNewsWidget");
 
 	Params::AthenaMOTDSimpleNewsWidget_C_ExecuteUbergraph_AthenaMOTDSimpleNewsWidget Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMOTDSimpleNewsWidget.AthenaMOTDSimpleNewsWidget_C.OnPopulateNews
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// struct FAthenaMOTDBase                  NewsEntry                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UAthenaMOTDSimpleNewsWidget_C::OnPopulateNews(const struct FAthenaMOTDBase& NewsEntry)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnPopulateNews");
-
-	Params::AthenaMOTDSimpleNewsWidget_C_OnPopulateNews Parms{};
-
-	Parms.NewsEntry = std::move(NewsEntry);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMOTDSimpleNewsWidget.AthenaMOTDSimpleNewsWidget_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaMOTDSimpleNewsWidget_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PreConstruct");
-
-	Params::AthenaMOTDSimpleNewsWidget_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMOTDSimpleNewsWidget.AthenaMOTDSimpleNewsWidget_C.SetDynamicColors
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FColor                           Dark                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FColor                           Light                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaMOTDSimpleNewsWidget_C::SetDynamicColors(const struct FColor& Dark, const struct FColor& Light)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetDynamicColors");
-
-	Params::AthenaMOTDSimpleNewsWidget_C_SetDynamicColors Parms{};
-
-	Parms.Dark = std::move(Dark);
-	Parms.Light = std::move(Light);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -20,46 +20,44 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ShowdownPin.ShowdownPin_C
-// 0x00A0 (0x07C0 - 0x0720)
+// 0x0098 (0x0750 - 0x06B8)
 class UShowdownPin_C final : public UFortShowdownPin
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0720(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Hover;                                             // 0x0728(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Focus;                                             // 0x0730(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Reveal;                                            // 0x0738(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_NoPinPts;                          // 0x0740(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_PinPts;                            // 0x0748(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_PinShadow;                                   // 0x0750(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               NoPinContent;                                      // 0x0758(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonLazyImage*                       NoPinIcon;                                         // 0x0760(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       NoPinPlusSign;                                     // 0x0768(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonNumericTextBlock*                NoPinScoreText;                                    // 0x0770(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonLazyImage*                       NoPinShadow;                                       // 0x0778(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               PinContent;                                        // 0x0780(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PinIcon;                                           // 0x0788(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            PinInfoSwitcher;                                   // 0x0790(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       PinScoreText;                                      // 0x0798(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBox_PointValuesProgress;                   // 0x07A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBoxPointValues;                            // 0x07A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bRepresentsTournamentBestPin;                      // 0x07B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          DEVShowPin;                                        // 0x07B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HidePoints;                                        // 0x07B2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7B3[0x1];                                      // 0x07B3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         DEVPinScore;                                       // 0x07B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          colorSilhouette;                                   // 0x07B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          hideBackplate;                                     // 0x07B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Hover;                                             // 0x06C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Focus;                                             // 0x06C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Reveal;                                            // 0x06D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_NoPinPts;                          // 0x06D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_PinPts;                            // 0x06E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_PinShadow;                                   // 0x06E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               NoPinContent;                                      // 0x06F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonLazyImage*                       NoPinIcon;                                         // 0x06F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonNumericTextBlock*                NoPinScoreText;                                    // 0x0700(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonLazyImage*                       NoPinShadow;                                       // 0x0708(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               PinContent;                                        // 0x0710(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PinIcon;                                           // 0x0718(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  PinInfoSwitcher;                                   // 0x0720(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       PinScoreText;                                      // 0x0728(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBox_PointValuesProgress;                   // 0x0730(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBoxPointValues;                            // 0x0738(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bRepresentsTournamentBestPin;                      // 0x0740(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	bool                                          DEVShowPin;                                        // 0x0741(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          HidePoints;                                        // 0x0742(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_743[0x1];                                      // 0x0743(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         DEVPinScore;                                       // 0x0744(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          colorSilhouette;                                   // 0x0748(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          hideBackplate;                                     // 0x0749(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void ChooseScoreToDisplay(int32* ScoreToDisplay);
-	void EventColorize();
-	void EventFixPts(int32 Points);
-	void EventRevealAnim();
-	void EventSetTier(int32 Score);
-	void ExecuteUbergraph_ShowdownPin(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
 	void Refresh();
 	void RefreshDataBP();
+	void PreConstruct(bool IsDesignTime);
+	void EventSetTier(int32 Score);
+	void EventFixPts(int32 Points);
+	void EventColorize();
+	void EventRevealAnim();
+	void ExecuteUbergraph_ShowdownPin(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -72,31 +70,30 @@ public:
 	}
 };
 static_assert(alignof(UShowdownPin_C) == 0x000008, "Wrong alignment on UShowdownPin_C");
-static_assert(sizeof(UShowdownPin_C) == 0x0007C0, "Wrong size on UShowdownPin_C");
-static_assert(offsetof(UShowdownPin_C, UberGraphFrame) == 0x000720, "Member 'UShowdownPin_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, Hover) == 0x000728, "Member 'UShowdownPin_C::Hover' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, Focus) == 0x000730, "Member 'UShowdownPin_C::Focus' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, Reveal) == 0x000738, "Member 'UShowdownPin_C::Reveal' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, CommonTextBlock_NoPinPts) == 0x000740, "Member 'UShowdownPin_C::CommonTextBlock_NoPinPts' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, CommonTextBlock_PinPts) == 0x000748, "Member 'UShowdownPin_C::CommonTextBlock_PinPts' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, Image_PinShadow) == 0x000750, "Member 'UShowdownPin_C::Image_PinShadow' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, NoPinContent) == 0x000758, "Member 'UShowdownPin_C::NoPinContent' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, NoPinIcon) == 0x000760, "Member 'UShowdownPin_C::NoPinIcon' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, NoPinPlusSign) == 0x000768, "Member 'UShowdownPin_C::NoPinPlusSign' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, NoPinScoreText) == 0x000770, "Member 'UShowdownPin_C::NoPinScoreText' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, NoPinShadow) == 0x000778, "Member 'UShowdownPin_C::NoPinShadow' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, PinContent) == 0x000780, "Member 'UShowdownPin_C::PinContent' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, PinIcon) == 0x000788, "Member 'UShowdownPin_C::PinIcon' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, PinInfoSwitcher) == 0x000790, "Member 'UShowdownPin_C::PinInfoSwitcher' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, PinScoreText) == 0x000798, "Member 'UShowdownPin_C::PinScoreText' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, VerticalBox_PointValuesProgress) == 0x0007A0, "Member 'UShowdownPin_C::VerticalBox_PointValuesProgress' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, VerticalBoxPointValues) == 0x0007A8, "Member 'UShowdownPin_C::VerticalBoxPointValues' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, bRepresentsTournamentBestPin) == 0x0007B0, "Member 'UShowdownPin_C::bRepresentsTournamentBestPin' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, DEVShowPin) == 0x0007B1, "Member 'UShowdownPin_C::DEVShowPin' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, HidePoints) == 0x0007B2, "Member 'UShowdownPin_C::HidePoints' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, DEVPinScore) == 0x0007B4, "Member 'UShowdownPin_C::DEVPinScore' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, colorSilhouette) == 0x0007B8, "Member 'UShowdownPin_C::colorSilhouette' has a wrong offset!");
-static_assert(offsetof(UShowdownPin_C, hideBackplate) == 0x0007B9, "Member 'UShowdownPin_C::hideBackplate' has a wrong offset!");
+static_assert(sizeof(UShowdownPin_C) == 0x000750, "Wrong size on UShowdownPin_C");
+static_assert(offsetof(UShowdownPin_C, UberGraphFrame) == 0x0006B8, "Member 'UShowdownPin_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, Hover) == 0x0006C0, "Member 'UShowdownPin_C::Hover' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, Focus) == 0x0006C8, "Member 'UShowdownPin_C::Focus' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, Reveal) == 0x0006D0, "Member 'UShowdownPin_C::Reveal' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, CommonTextBlock_NoPinPts) == 0x0006D8, "Member 'UShowdownPin_C::CommonTextBlock_NoPinPts' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, CommonTextBlock_PinPts) == 0x0006E0, "Member 'UShowdownPin_C::CommonTextBlock_PinPts' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, Image_PinShadow) == 0x0006E8, "Member 'UShowdownPin_C::Image_PinShadow' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, NoPinContent) == 0x0006F0, "Member 'UShowdownPin_C::NoPinContent' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, NoPinIcon) == 0x0006F8, "Member 'UShowdownPin_C::NoPinIcon' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, NoPinScoreText) == 0x000700, "Member 'UShowdownPin_C::NoPinScoreText' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, NoPinShadow) == 0x000708, "Member 'UShowdownPin_C::NoPinShadow' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, PinContent) == 0x000710, "Member 'UShowdownPin_C::PinContent' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, PinIcon) == 0x000718, "Member 'UShowdownPin_C::PinIcon' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, PinInfoSwitcher) == 0x000720, "Member 'UShowdownPin_C::PinInfoSwitcher' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, PinScoreText) == 0x000728, "Member 'UShowdownPin_C::PinScoreText' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, VerticalBox_PointValuesProgress) == 0x000730, "Member 'UShowdownPin_C::VerticalBox_PointValuesProgress' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, VerticalBoxPointValues) == 0x000738, "Member 'UShowdownPin_C::VerticalBoxPointValues' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, bRepresentsTournamentBestPin) == 0x000740, "Member 'UShowdownPin_C::bRepresentsTournamentBestPin' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, DEVShowPin) == 0x000741, "Member 'UShowdownPin_C::DEVShowPin' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, HidePoints) == 0x000742, "Member 'UShowdownPin_C::HidePoints' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, DEVPinScore) == 0x000744, "Member 'UShowdownPin_C::DEVPinScore' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, colorSilhouette) == 0x000748, "Member 'UShowdownPin_C::colorSilhouette' has a wrong offset!");
+static_assert(offsetof(UShowdownPin_C, hideBackplate) == 0x000749, "Member 'UShowdownPin_C::hideBackplate' has a wrong offset!");
 
 }
 

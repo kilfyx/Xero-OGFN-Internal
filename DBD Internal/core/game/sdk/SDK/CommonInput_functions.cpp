@@ -17,31 +17,6 @@
 namespace SDK
 {
 
-// Function CommonInput.CommonInputBaseControllerData.GetRegisteredGamepads
-// (Final, Native, Static, Public)
-// Parameters:
-// const TArray<class FName>               ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-const TArray<class FName> UCommonInputBaseControllerData::GetRegisteredGamepads()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("CommonInputBaseControllerData", "GetRegisteredGamepads");
-
-	Params::CommonInputBaseControllerData_GetRegisteredGamepads Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function CommonInput.CommonInputSubsystem.SetCurrentInputType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -70,9 +45,9 @@ void UCommonInputSubsystem::SetCurrentInputType(ECommonInputType NewInputType)
 // Function CommonInput.CommonInputSubsystem.SetGamepadInputType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class FName                       InGamepadInputType                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ECommonGamepadType                      InGamepadInputType                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UCommonInputSubsystem::SetGamepadInputType(const class FName InGamepadInputType)
+void UCommonInputSubsystem::SetGamepadInputType(ECommonGamepadType InGamepadInputType)
 {
 	static class UFunction* Func = nullptr;
 
@@ -92,19 +67,19 @@ void UCommonInputSubsystem::SetGamepadInputType(const class FName InGamepadInput
 }
 
 
-// Function CommonInput.CommonInputSubsystem.GetCurrentGamepadName
+// Function CommonInput.CommonInputSubsystem.GetCurrentGamepadType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// const class FName                       ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ECommonGamepadType                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-const class FName UCommonInputSubsystem::GetCurrentGamepadName() const
+ECommonGamepadType UCommonInputSubsystem::GetCurrentGamepadType() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CommonInputSubsystem", "GetCurrentGamepadName");
+		Func = Class->GetFunction("CommonInputSubsystem", "GetCurrentGamepadType");
 
-	Params::CommonInputSubsystem_GetCurrentGamepadName Parms{};
+	Params::CommonInputSubsystem_GetCurrentGamepadType Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

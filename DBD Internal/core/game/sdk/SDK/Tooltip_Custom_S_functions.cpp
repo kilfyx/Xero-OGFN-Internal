@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function Tooltip-Custom-S.Tooltip-Custom-S_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UTooltip_Custom_S_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tooltip-Custom-S_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Tooltip-Custom-S.Tooltip-Custom-S_C.ExecuteUbergraph_Tooltip-Custom-S
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UTooltip_Custom_S_C::ExecuteUbergraph_Tooltip_Custom_S(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Tooltip-Custom-S.Tooltip-Custom-S_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UTooltip_Custom_S_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tooltip-Custom-S_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

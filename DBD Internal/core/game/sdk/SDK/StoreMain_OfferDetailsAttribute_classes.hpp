@@ -18,20 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass StoreMain_OfferDetailsAttribute.StoreMain_OfferDetailsAttribute_C
-// 0x0050 (0x02E0 - 0x0290)
+// 0x0050 (0x02D8 - 0x0288)
 class UStoreMain_OfferDetailsAttribute_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Image_0;                                           // 0x0298(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonRichTextBlock*                   Name_0;                                            // 0x02A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Value;                                             // 0x02A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   AttributeDescription;                              // 0x02B0(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   AttributeValue;                                    // 0x02C8(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Image_0;                                           // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   Name_0;                                            // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Value;                                             // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   AttributeDescription;                              // 0x02A8(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   AttributeValue;                                    // 0x02C0(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
-	void ExecuteUbergraph_StoreMain_OfferDetailsAttribute(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_StoreMain_OfferDetailsAttribute(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -44,13 +44,13 @@ public:
 	}
 };
 static_assert(alignof(UStoreMain_OfferDetailsAttribute_C) == 0x000008, "Wrong alignment on UStoreMain_OfferDetailsAttribute_C");
-static_assert(sizeof(UStoreMain_OfferDetailsAttribute_C) == 0x0002E0, "Wrong size on UStoreMain_OfferDetailsAttribute_C");
-static_assert(offsetof(UStoreMain_OfferDetailsAttribute_C, UberGraphFrame) == 0x000290, "Member 'UStoreMain_OfferDetailsAttribute_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetailsAttribute_C, Image_0) == 0x000298, "Member 'UStoreMain_OfferDetailsAttribute_C::Image_0' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetailsAttribute_C, Name_0) == 0x0002A0, "Member 'UStoreMain_OfferDetailsAttribute_C::Name_0' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetailsAttribute_C, Value) == 0x0002A8, "Member 'UStoreMain_OfferDetailsAttribute_C::Value' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetailsAttribute_C, AttributeDescription) == 0x0002B0, "Member 'UStoreMain_OfferDetailsAttribute_C::AttributeDescription' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetailsAttribute_C, AttributeValue) == 0x0002C8, "Member 'UStoreMain_OfferDetailsAttribute_C::AttributeValue' has a wrong offset!");
+static_assert(sizeof(UStoreMain_OfferDetailsAttribute_C) == 0x0002D8, "Wrong size on UStoreMain_OfferDetailsAttribute_C");
+static_assert(offsetof(UStoreMain_OfferDetailsAttribute_C, UberGraphFrame) == 0x000288, "Member 'UStoreMain_OfferDetailsAttribute_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetailsAttribute_C, Image_0) == 0x000290, "Member 'UStoreMain_OfferDetailsAttribute_C::Image_0' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetailsAttribute_C, Name_0) == 0x000298, "Member 'UStoreMain_OfferDetailsAttribute_C::Name_0' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetailsAttribute_C, Value) == 0x0002A0, "Member 'UStoreMain_OfferDetailsAttribute_C::Value' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetailsAttribute_C, AttributeDescription) == 0x0002A8, "Member 'UStoreMain_OfferDetailsAttribute_C::AttributeDescription' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetailsAttribute_C, AttributeValue) == 0x0002C0, "Member 'UStoreMain_OfferDetailsAttribute_C::AttributeValue' has a wrong offset!");
 
 }
 

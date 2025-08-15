@@ -20,42 +20,44 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ShowdownScreen.ShowdownScreen_C
-// 0x0080 (0x0618 - 0x0598)
+// 0x00A8 (0x05A0 - 0x04F8)
 class UShowdownScreen_C final : public UFortShowdownScreen
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Outro;                                             // 0x05A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Intro;                                             // 0x05A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCircleArrowButton_C*                   CircleArrowButton_Left;                            // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCircleArrowButton_C*                   CircleArrowButton_Right;                           // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            CommonWidgetSwitcher_ErrorSwitcher;                // 0x05C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_BG;                                          // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       NoTournamentsContent;                              // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_NoTournamentContent;                       // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_Posters;                                   // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortSwipePanel*                        SwipePanel;                                        // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               TournamentsContent;                                // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FSlateColor                            PrimaryColor;                                      // 0x05F8(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
-	uint8                                         Pad_60C[0x4];                                      // 0x060C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                SelectedTile;                                      // 0x0610(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Outro;                                             // 0x0500(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Intro;                                             // 0x0508(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCircleArrowButton_C*                   CircleArrowButton_Left;                            // 0x0510(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCircleArrowButton_C*                   CircleArrowButton_Right;                           // 0x0518(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_ErrorSwitcher;                // 0x0520(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Bg;                                          // 0x0528(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       NoTournamentsContent;                              // 0x0530(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_NoTournamentContent;                       // 0x0538(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UShowdownTournamentTile_C*              ShowdownTournamentTile;                            // 0x0540(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UShowdownTournamentTile_C*              ShowdownTournamentTile_0;                          // 0x0548(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UShowdownTournamentTile_C*              ShowdownTournamentTile_1;                          // 0x0550(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_Posters;                                   // 0x0558(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortSwipePanel*                        SwipePanel;                                        // 0x0560(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               TournamentsContent;                                // 0x0568(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FSlateColor                            PrimaryColor;                                      // 0x0570(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWidget*                                SelectedTile;                                      // 0x0598(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button);
-	void BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button);
-	void BndEvt__ListView_TournamentList_K2Node_ComponentBoundEvent_5_OnListItemSelectionChangedDynamic__DelegateSignature(class UObject* Item, bool bIsSelected);
-	void BndEvt__SwipePanel_K2Node_ComponentBoundEvent_3_OnFortSwipeEvent__DelegateSignature();
-	void BndEvt__SwipePanel_K2Node_ComponentBoundEvent_4_OnFortSwipeEvent__DelegateSignature();
-	void BP_OnActivated();
-	void BP_OnDeactivated();
-	void Construct();
 	void ExecuteUbergraph_ShowdownScreen(int32 EntryPoint);
-	void OnInputModeChanged(bool bUsingGamepad);
-	void PreConstruct(bool IsDesignTime);
+	void BP_OnDeactivated();
 	void SelectedEndTournament(bool bEndIsSelected);
 	void SelectedFrontTournament(bool bFrontIsSelected);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void TournamentListSelect(class UWidget* CurrentWidget);
+	void OnInputModeChanged(bool bUsingGamepad);
+	void BndEvt__SwipePanel_K2Node_ComponentBoundEvent_4_OnFortSwipeEvent__DelegateSignature();
+	void BndEvt__SwipePanel_K2Node_ComponentBoundEvent_3_OnFortSwipeEvent__DelegateSignature();
+	void BP_OnActivated();
+	void Construct();
+	void PreConstruct(bool IsDesignTime);
+	void BndEvt__ScrollBox_TournamentList_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature(float CurrentOffset);
+	void BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 
 public:
 	static class UClass* StaticClass()
@@ -68,21 +70,24 @@ public:
 	}
 };
 static_assert(alignof(UShowdownScreen_C) == 0x000008, "Wrong alignment on UShowdownScreen_C");
-static_assert(sizeof(UShowdownScreen_C) == 0x000618, "Wrong size on UShowdownScreen_C");
-static_assert(offsetof(UShowdownScreen_C, UberGraphFrame) == 0x000598, "Member 'UShowdownScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UShowdownScreen_C, Outro) == 0x0005A0, "Member 'UShowdownScreen_C::Outro' has a wrong offset!");
-static_assert(offsetof(UShowdownScreen_C, Intro) == 0x0005A8, "Member 'UShowdownScreen_C::Intro' has a wrong offset!");
-static_assert(offsetof(UShowdownScreen_C, CircleArrowButton_Left) == 0x0005B0, "Member 'UShowdownScreen_C::CircleArrowButton_Left' has a wrong offset!");
-static_assert(offsetof(UShowdownScreen_C, CircleArrowButton_Right) == 0x0005B8, "Member 'UShowdownScreen_C::CircleArrowButton_Right' has a wrong offset!");
-static_assert(offsetof(UShowdownScreen_C, CommonWidgetSwitcher_ErrorSwitcher) == 0x0005C0, "Member 'UShowdownScreen_C::CommonWidgetSwitcher_ErrorSwitcher' has a wrong offset!");
-static_assert(offsetof(UShowdownScreen_C, Image_BG) == 0x0005C8, "Member 'UShowdownScreen_C::Image_BG' has a wrong offset!");
-static_assert(offsetof(UShowdownScreen_C, NoTournamentsContent) == 0x0005D0, "Member 'UShowdownScreen_C::NoTournamentsContent' has a wrong offset!");
-static_assert(offsetof(UShowdownScreen_C, Overlay_NoTournamentContent) == 0x0005D8, "Member 'UShowdownScreen_C::Overlay_NoTournamentContent' has a wrong offset!");
-static_assert(offsetof(UShowdownScreen_C, SizeBox_Posters) == 0x0005E0, "Member 'UShowdownScreen_C::SizeBox_Posters' has a wrong offset!");
-static_assert(offsetof(UShowdownScreen_C, SwipePanel) == 0x0005E8, "Member 'UShowdownScreen_C::SwipePanel' has a wrong offset!");
-static_assert(offsetof(UShowdownScreen_C, TournamentsContent) == 0x0005F0, "Member 'UShowdownScreen_C::TournamentsContent' has a wrong offset!");
-static_assert(offsetof(UShowdownScreen_C, PrimaryColor) == 0x0005F8, "Member 'UShowdownScreen_C::PrimaryColor' has a wrong offset!");
-static_assert(offsetof(UShowdownScreen_C, SelectedTile) == 0x000610, "Member 'UShowdownScreen_C::SelectedTile' has a wrong offset!");
+static_assert(sizeof(UShowdownScreen_C) == 0x0005A0, "Wrong size on UShowdownScreen_C");
+static_assert(offsetof(UShowdownScreen_C, UberGraphFrame) == 0x0004F8, "Member 'UShowdownScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, Outro) == 0x000500, "Member 'UShowdownScreen_C::Outro' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, Intro) == 0x000508, "Member 'UShowdownScreen_C::Intro' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, CircleArrowButton_Left) == 0x000510, "Member 'UShowdownScreen_C::CircleArrowButton_Left' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, CircleArrowButton_Right) == 0x000518, "Member 'UShowdownScreen_C::CircleArrowButton_Right' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, CommonWidgetSwitcher_ErrorSwitcher) == 0x000520, "Member 'UShowdownScreen_C::CommonWidgetSwitcher_ErrorSwitcher' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, Image_Bg) == 0x000528, "Member 'UShowdownScreen_C::Image_Bg' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, NoTournamentsContent) == 0x000530, "Member 'UShowdownScreen_C::NoTournamentsContent' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, Overlay_NoTournamentContent) == 0x000538, "Member 'UShowdownScreen_C::Overlay_NoTournamentContent' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, ShowdownTournamentTile) == 0x000540, "Member 'UShowdownScreen_C::ShowdownTournamentTile' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, ShowdownTournamentTile_0) == 0x000548, "Member 'UShowdownScreen_C::ShowdownTournamentTile_0' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, ShowdownTournamentTile_1) == 0x000550, "Member 'UShowdownScreen_C::ShowdownTournamentTile_1' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, SizeBox_Posters) == 0x000558, "Member 'UShowdownScreen_C::SizeBox_Posters' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, SwipePanel) == 0x000560, "Member 'UShowdownScreen_C::SwipePanel' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, TournamentsContent) == 0x000568, "Member 'UShowdownScreen_C::TournamentsContent' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, PrimaryColor) == 0x000570, "Member 'UShowdownScreen_C::PrimaryColor' has a wrong offset!");
+static_assert(offsetof(UShowdownScreen_C, SelectedTile) == 0x000598, "Member 'UShowdownScreen_C::SelectedTile' has a wrong offset!");
 
 }
 

@@ -11,20 +11,20 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "GA_Athena_Consumable_Throw_Parent_classes.hpp"
+#include "GA_ThrowConsumable_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_ChillBronco.GA_Athena_ChillBronco_C
-// 0x0010 (0x0E68 - 0x0E58)
-class UGA_Athena_ChillBronco_C final : public UGA_Athena_Consumable_Throw_Parent_C
+// 0x0010 (0x0E58 - 0x0E48)
+class UGA_Athena_ChillBronco_C final : public UGA_ThrowConsumable_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_ChillBronco_C;            // 0x0E58(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Added_X_SpawnRotation;                             // 0x0E60(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Added_Y_SpawnRotation;                             // 0x0E64(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_ChillBronco_C;            // 0x0E48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         Added_X_SpawnRotation;                             // 0x0E50(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Added_Y_SpawnRotation;                             // 0x0E54(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_Athena_ChillBronco(int32 EntryPoint);
@@ -41,6 +41,11 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_ChillBronco_C>();
 	}
 };
+static_assert(alignof(UGA_Athena_ChillBronco_C) == 0x000008, "Wrong alignment on UGA_Athena_ChillBronco_C");
+static_assert(sizeof(UGA_Athena_ChillBronco_C) == 0x000E58, "Wrong size on UGA_Athena_ChillBronco_C");
+static_assert(offsetof(UGA_Athena_ChillBronco_C, UberGraphFrame_GA_Athena_ChillBronco_C) == 0x000E48, "Member 'UGA_Athena_ChillBronco_C::UberGraphFrame_GA_Athena_ChillBronco_C' has a wrong offset!");
+static_assert(offsetof(UGA_Athena_ChillBronco_C, Added_X_SpawnRotation) == 0x000E50, "Member 'UGA_Athena_ChillBronco_C::Added_X_SpawnRotation' has a wrong offset!");
+static_assert(offsetof(UGA_Athena_ChillBronco_C, Added_Y_SpawnRotation) == 0x000E54, "Member 'UGA_Athena_ChillBronco_C::Added_Y_SpawnRotation' has a wrong offset!");
 
 }
 

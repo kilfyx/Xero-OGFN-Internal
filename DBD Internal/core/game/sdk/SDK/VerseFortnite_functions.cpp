@@ -17,119 +17,448 @@
 namespace SDK
 {
 
-// Function VerseFortnite.VerseFortniteBRTeamCollection.OnActiveTeamArrayBuilt
-// (Final, Native, Private)
+// Function VerseFortnite.AudioComponentBase.OnRep_ActiveSoundInfo
+// (Final, Native, Protected)
 
-void UVerseFortniteBRTeamCollection::OnActiveTeamArrayBuilt()
+void UAudioComponentBase::OnRep_ActiveSoundInfo()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnActiveTeamArrayBuilt");
+		Func = Class->GetFunction("AudioComponentBase", "OnRep_ActiveSoundInfo");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
-// Function VerseFortnite.VerseFortniteMinigameTeamCollection.OnMinigameDestroyed
+// Function VerseFortnite.AudioComponentBase.OnRep_SoundAsset
+// (Final, Native, Protected)
+
+void UAudioComponentBase::OnRep_SoundAsset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioComponentBase", "OnRep_SoundAsset");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function VerseFortnite.FortBuildingSettingsComponentBase.OnRep_Settings
 // (Final, Native, Private)
-// Parameters:
-// class AActor*                           DestroyedMinigame                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UVerseFortniteMinigameTeamCollection::OnMinigameDestroyed(class AActor* DestroyedMinigame)
+void UFortBuildingSettingsComponentBase::OnRep_Settings()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnMinigameDestroyed");
+		Func = Class->GetFunction("FortBuildingSettingsComponentBase", "OnRep_Settings");
 
-	Params::VerseFortniteMinigameTeamCollection_OnMinigameDestroyed Parms{};
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	Parms.DestroyedMinigame = DestroyedMinigame;
+	UObject::ProcessEvent(Func, nullptr);
 
-	UObject::ProcessEvent(Func, &Parms);
+	Func->FunctionFlags = Flgs;
 }
 
 
-// Function VerseFortnite.VerseFortniteMinigameTeamCollection.OnMinigameSetUp
+// Function VerseFortnite.FortControllerStateHandlerComponent.NotifyOfStateChange
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// class FString*                          State                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Active                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFortControllerStateHandlerComponent::NotifyOfStateChange(class FString* State, bool Active)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortControllerStateHandlerComponent", "NotifyOfStateChange");
+
+	Params::FortControllerStateHandlerComponent_NotifyOfStateChange Parms{};
+
+	Parms.Active = Active;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (State != nullptr)
+		*State = std::move(Parms.State);
+}
+
+
+// Function VerseFortnite.FortPlayspaceComponentHelper.HandlePlayerDied
+// (Final, Native, Public)
+// Parameters:
+// class AFortPlayerPawnAthena*            FortPlayerPawnAthena                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFortPlayspaceComponentHelper::HandlePlayerDied(class AFortPlayerPawnAthena* FortPlayerPawnAthena)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortPlayspaceComponentHelper", "HandlePlayerDied");
+
+	Params::FortPlayspaceComponentHelper_HandlePlayerDied Parms{};
+
+	Parms.FortPlayerPawnAthena = FortPlayerPawnAthena;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function VerseFortnite.FortPlayspaceComponentHelper.HandlePlayerPawnPossessed
+// (Final, Native, Public)
+// Parameters:
+// class APawn*                            Pawn                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFortPlayspaceComponentHelper::HandlePlayerPawnPossessed(class APawn* Pawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortPlayspaceComponentHelper", "HandlePlayerPawnPossessed");
+
+	Params::FortPlayspaceComponentHelper_HandlePlayerPawnPossessed Parms{};
+
+	Parms.Pawn = Pawn;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function VerseFortnite.HUDComponentBase.OnRep_WidgetClass
 // (Final, Native, Private)
-// Parameters:
-// class AFortMinigame*                    InMinigame                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UVerseFortniteMinigameTeamCollection::OnMinigameSetUp(class AFortMinigame* InMinigame)
+void UHUDComponentBase::OnRep_WidgetClass()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnMinigameSetUp");
+		Func = Class->GetFunction("HUDComponentBase", "OnRep_WidgetClass");
 
-	Params::VerseFortniteMinigameTeamCollection_OnMinigameSetUp Parms{};
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	Parms.InMinigame = InMinigame;
+	UObject::ProcessEvent(Func, nullptr);
 
-	UObject::ProcessEvent(Func, &Parms);
+	Func->FunctionFlags = Flgs;
 }
 
 
-// Function VerseFortnite.VerseFortniteActorWrapper.OnActorDestroyed
+// Function VerseFortnite.HUDCountDownComponentBase.OnRep_CountDownEndTime
 // (Final, Native, Private)
-// Parameters:
-// class AActor*                           DestroyedActor                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UVerseFortniteActorWrapper::OnActorDestroyed(class AActor* DestroyedActor)
+void UHUDCountDownComponentBase::OnRep_CountDownEndTime()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnActorDestroyed");
+		Func = Class->GetFunction("HUDCountDownComponentBase", "OnRep_CountDownEndTime");
 
-	Params::VerseFortniteActorWrapper_OnActorDestroyed Parms{};
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	Parms.DestroyedActor = DestroyedActor;
+	UObject::ProcessEvent(Func, nullptr);
 
-	UObject::ProcessEvent(Func, &Parms);
+	Func->FunctionFlags = Flgs;
 }
 
 
-// Function VerseFortnite.VerseFortniteCharacter.HandlePawnEliminated
-// (Native, Protected)
-// Parameters:
-// class AFortPlayerPawnAthena*            EliminatedPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVerseFortniteCharacter::HandlePawnEliminated(class AFortPlayerPawnAthena* EliminatedPawn)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("HandlePawnEliminated");
-
-	Params::VerseFortniteCharacter_HandlePawnEliminated Parms{};
-
-	Parms.EliminatedPawn = EliminatedPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function VerseFortnite.VerseFortniteCharacter.HandlePosessedPawnChanged
+// Function VerseFortnite.HUDDynamicDirectorBase.OnRep_DisplayScene
 // (Final, Native, Private)
-// Parameters:
-// class APawn*                            OldPawn                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APawn*                            NewPawn                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UVerseFortniteCharacter::HandlePosessedPawnChanged(class APawn* OldPawn, class APawn* NewPawn)
+void UHUDDynamicDirectorBase::OnRep_DisplayScene()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HandlePosessedPawnChanged");
+		Func = Class->GetFunction("HUDDynamicDirectorBase", "OnRep_DisplayScene");
 
-	Params::VerseFortniteCharacter_HandlePosessedPawnChanged Parms{};
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	Parms.OldPawn = OldPawn;
-	Parms.NewPawn = NewPawn;
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function VerseFortnite.HUDGameOverComponentBase.GetIsDraw
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UHUDGameOverComponentBase::GetIsDraw()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDGameOverComponentBase", "GetIsDraw");
+
+	Params::HUDGameOverComponentBase_GetIsDraw Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function VerseFortnite.HUDGameOverComponentBase.GetWinningTeam
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UHUDGameOverComponentBase::GetWinningTeam()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDGameOverComponentBase", "GetWinningTeam");
+
+	Params::HUDGameOverComponentBase_GetWinningTeam Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function VerseFortnite.HUDGameOverComponentBase.OnRep_IsDraw
+// (Final, Native, Private)
+
+void UHUDGameOverComponentBase::OnRep_IsDraw()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDGameOverComponentBase", "OnRep_IsDraw");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function VerseFortnite.HUDGameOverComponentBase.OnRep_WinningTeam
+// (Final, Native, Private)
+
+void UHUDGameOverComponentBase::OnRep_WinningTeam()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDGameOverComponentBase", "OnRep_WinningTeam");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function VerseFortnite.HUDMapComponentBase.HandleMapBoundsChanged
+// (Final, Native, Private, HasOutParams, HasDefaults)
+// Parameters:
+// const struct FBox&                      newBounds                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void UHUDMapComponentBase::HandleMapBoundsChanged(const struct FBox& newBounds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDMapComponentBase", "HandleMapBoundsChanged");
+
+	Params::HUDMapComponentBase_HandleMapBoundsChanged Parms{};
+
+	Parms.newBounds = std::move(newBounds);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function VerseFortnite.HUDMapComponentBase.OnRep_MapBounds
+// (Final, Native, Private)
+
+void UHUDMapComponentBase::OnRep_MapBounds()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDMapComponentBase", "OnRep_MapBounds");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function VerseFortnite.HUDMessageComponentBase.OnRep_Message
+// (Final, Native, Private)
+
+void UHUDMessageComponentBase::OnRep_Message()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDMessageComponentBase", "OnRep_Message");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function VerseFortnite.HUDScoreboardComponentBase.OnRep_RoundInfo
+// (Final, Native, Public)
+
+void UHUDScoreboardComponentBase::OnRep_RoundInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDScoreboardComponentBase", "OnRep_RoundInfo");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function VerseFortnite.HUDScoreboardComponentBase.OnRep_ScoresUpdated
+// (Final, Native, Public)
+
+void UHUDScoreboardComponentBase::OnRep_ScoresUpdated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDScoreboardComponentBase", "OnRep_ScoresUpdated");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function VerseFortnite.ParticleSystemComponentBase.OnRep_bActive
+// (Final, Native, Protected)
+
+void UParticleSystemComponentBase::OnRep_bActive()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ParticleSystemComponentBase", "OnRep_bActive");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function VerseFortnite.ParticleSystemComponentBase.OnRep_ParticleSystemAsset
+// (Final, Native, Protected)
+
+void UParticleSystemComponentBase::OnRep_ParticleSystemAsset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ParticleSystemComponentBase", "OnRep_ParticleSystemAsset");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function VerseFortnite.VerseFortniteInputComponentBase.ServerTriggerAction
+// (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
+// Parameters:
+// const class FName&                      ActionName                                             (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVerseFortniteInputComponentBase::ServerTriggerAction(const class FName& ActionName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VerseFortniteInputComponentBase", "ServerTriggerAction");
+
+	Params::VerseFortniteInputComponentBase_ServerTriggerAction Parms{};
+
+	Parms.ActionName = ActionName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

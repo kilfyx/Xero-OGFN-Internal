@@ -37,8 +37,8 @@ public:
 	class UTexture* GetDefaultIcon();
 	struct FLinearColor GetDefaultTint();
 
-	struct FRuntimeFloatCurve GetStrengthCurveForActiveType() const;
 	struct FRuntimeFloatCurve GetWeaponCurve() const;
+	struct FRuntimeFloatCurve GetStrengthCurveForActiveType() const;
 
 public:
 	static class UClass* StaticClass()
@@ -50,6 +50,16 @@ public:
 		return GetDefaultObjImpl<AB_SoundIndicator_01_C>();
 	}
 };
+static_assert(alignof(AB_SoundIndicator_01_C) == 0x000010, "Wrong alignment on AB_SoundIndicator_01_C");
+static_assert(sizeof(AB_SoundIndicator_01_C) == 0x000750, "Wrong size on AB_SoundIndicator_01_C");
+static_assert(offsetof(AB_SoundIndicator_01_C, UberGraphFrame) == 0x000390, "Member 'AB_SoundIndicator_01_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_SoundIndicator_01_C, Gunshot_Falloff_Long_Range) == 0x000398, "Member 'AB_SoundIndicator_01_C::Gunshot_Falloff_Long_Range' has a wrong offset!");
+static_assert(offsetof(AB_SoundIndicator_01_C, Chest_Falloff) == 0x000420, "Member 'AB_SoundIndicator_01_C::Chest_Falloff' has a wrong offset!");
+static_assert(offsetof(AB_SoundIndicator_01_C, Footsteps_Falloff) == 0x0004A8, "Member 'AB_SoundIndicator_01_C::Footsteps_Falloff' has a wrong offset!");
+static_assert(offsetof(AB_SoundIndicator_01_C, Gunshot_Falloff_Mid_Range) == 0x000530, "Member 'AB_SoundIndicator_01_C::Gunshot_Falloff_Mid_Range' has a wrong offset!");
+static_assert(offsetof(AB_SoundIndicator_01_C, Gunshot_Falloff_Melee) == 0x0005B8, "Member 'AB_SoundIndicator_01_C::Gunshot_Falloff_Melee' has a wrong offset!");
+static_assert(offsetof(AB_SoundIndicator_01_C, Glider_Falloff) == 0x000640, "Member 'AB_SoundIndicator_01_C::Glider_Falloff' has a wrong offset!");
+static_assert(offsetof(AB_SoundIndicator_01_C, Plane_Falloff) == 0x0006C8, "Member 'AB_SoundIndicator_01_C::Plane_Falloff' has a wrong offset!");
 
 }
 

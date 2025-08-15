@@ -19,19 +19,18 @@ namespace SDK
 {
 
 // Class DataAssetDirectory.DataAssetDirectoryManager
-// 0x0180 (0x01A8 - 0x0028)
+// 0x0120 (0x0148 - 0x0028)
 class UDataAssetDirectoryManager : public UObject
 {
 public:
-	uint8                                         Pad_28[0x168];                                     // 0x0028(0x0168)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              LastUpdateCheck;                                   // 0x0190(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bUpdateCheckPending;                               // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_199[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        UpdateCheckLimitSeconds;                           // 0x019C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bEnabled;                                          // 0x01A0(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bFailOnError;                                      // 0x01A1(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bAnalyticsEnabled;                                 // 0x01A2(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1A3[0x5];                                      // 0x01A3(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x108];                                     // 0x0028(0x0108)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              LastUpdateCheck;                                   // 0x0130(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bUpdateCheckPending;                               // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        UpdateCheckLimitSeconds;                           // 0x013C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEnabled;                                          // 0x0140(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bFailOnError;                                      // 0x0141(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_142[0x6];                                      // 0x0142(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -43,21 +42,13 @@ public:
 		return GetDefaultObjImpl<UDataAssetDirectoryManager>();
 	}
 };
-
-// Class DataAssetDirectory.DataAssetDirectoryPatcher
-// 0x0000 (0x0028 - 0x0028)
-class UDataAssetDirectoryPatcher final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"DataAssetDirectoryPatcher">();
-	}
-	static class UDataAssetDirectoryPatcher* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDataAssetDirectoryPatcher>();
-	}
-};
+static_assert(alignof(UDataAssetDirectoryManager) == 0x000008, "Wrong alignment on UDataAssetDirectoryManager");
+static_assert(sizeof(UDataAssetDirectoryManager) == 0x000148, "Wrong size on UDataAssetDirectoryManager");
+static_assert(offsetof(UDataAssetDirectoryManager, LastUpdateCheck) == 0x000130, "Member 'UDataAssetDirectoryManager::LastUpdateCheck' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryManager, bUpdateCheckPending) == 0x000138, "Member 'UDataAssetDirectoryManager::bUpdateCheckPending' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryManager, UpdateCheckLimitSeconds) == 0x00013C, "Member 'UDataAssetDirectoryManager::UpdateCheckLimitSeconds' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryManager, bEnabled) == 0x000140, "Member 'UDataAssetDirectoryManager::bEnabled' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryManager, bFailOnError) == 0x000141, "Member 'UDataAssetDirectoryManager::bFailOnError' has a wrong offset!");
 
 // Class DataAssetDirectory.DataAssetDirectorySimpleObject
 // 0x0008 (0x0030 - 0x0028)
@@ -77,6 +68,9 @@ public:
 		return GetDefaultObjImpl<UDataAssetDirectorySimpleObject>();
 	}
 };
+static_assert(alignof(UDataAssetDirectorySimpleObject) == 0x000008, "Wrong alignment on UDataAssetDirectorySimpleObject");
+static_assert(sizeof(UDataAssetDirectorySimpleObject) == 0x000030, "Wrong size on UDataAssetDirectorySimpleObject");
+static_assert(offsetof(UDataAssetDirectorySimpleObject, IntProperty) == 0x000028, "Member 'UDataAssetDirectorySimpleObject::IntProperty' has a wrong offset!");
 
 // Class DataAssetDirectory.DataAssetDirectoryTestPODAsset
 // 0x0050 (0x0078 - 0x0028)
@@ -104,6 +98,16 @@ public:
 		return GetDefaultObjImpl<UDataAssetDirectoryTestPODAsset>();
 	}
 };
+static_assert(alignof(UDataAssetDirectoryTestPODAsset) == 0x000008, "Wrong alignment on UDataAssetDirectoryTestPODAsset");
+static_assert(sizeof(UDataAssetDirectoryTestPODAsset) == 0x000078, "Wrong size on UDataAssetDirectoryTestPODAsset");
+static_assert(offsetof(UDataAssetDirectoryTestPODAsset, AssetName) == 0x000028, "Member 'UDataAssetDirectoryTestPODAsset::AssetName' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryTestPODAsset, EnumProperty) == 0x000038, "Member 'UDataAssetDirectoryTestPODAsset::EnumProperty' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryTestPODAsset, IntProperty) == 0x00003C, "Member 'UDataAssetDirectoryTestPODAsset::IntProperty' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryTestPODAsset, FloatProperty) == 0x000040, "Member 'UDataAssetDirectoryTestPODAsset::FloatProperty' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryTestPODAsset, BoolProperty) == 0x000044, "Member 'UDataAssetDirectoryTestPODAsset::BoolProperty' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryTestPODAsset, StringProperty) == 0x000048, "Member 'UDataAssetDirectoryTestPODAsset::StringProperty' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryTestPODAsset, NameProperty) == 0x000058, "Member 'UDataAssetDirectoryTestPODAsset::NameProperty' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryTestPODAsset, TextProperty) == 0x000060, "Member 'UDataAssetDirectoryTestPODAsset::TextProperty' has a wrong offset!");
 
 // Class DataAssetDirectory.DataAssetDirectoryTestStructAsset
 // 0x0040 (0x0068 - 0x0028)
@@ -122,14 +126,17 @@ public:
 		return GetDefaultObjImpl<UDataAssetDirectoryTestStructAsset>();
 	}
 };
+static_assert(alignof(UDataAssetDirectoryTestStructAsset) == 0x000008, "Wrong alignment on UDataAssetDirectoryTestStructAsset");
+static_assert(sizeof(UDataAssetDirectoryTestStructAsset) == 0x000068, "Wrong size on UDataAssetDirectoryTestStructAsset");
+static_assert(offsetof(UDataAssetDirectoryTestStructAsset, TestStruct) == 0x000028, "Member 'UDataAssetDirectoryTestStructAsset::TestStruct' has a wrong offset!");
 
 // Class DataAssetDirectory.DataAssetDirectoryTestArrayAsset
 // 0x0020 (0x0048 - 0x0028)
 class UDataAssetDirectoryTestArrayAsset final : public UObject
 {
 public:
-	TArray<int32>                                 IntArray;                                          // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FDataAssetDirectoryTestSimpleStruct> SimpleStructArray;                            // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<int32>                                 IntArray;                                          // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FDataAssetDirectoryTestSimpleStruct> SimpleStructArray;                            // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -141,6 +148,10 @@ public:
 		return GetDefaultObjImpl<UDataAssetDirectoryTestArrayAsset>();
 	}
 };
+static_assert(alignof(UDataAssetDirectoryTestArrayAsset) == 0x000008, "Wrong alignment on UDataAssetDirectoryTestArrayAsset");
+static_assert(sizeof(UDataAssetDirectoryTestArrayAsset) == 0x000048, "Wrong size on UDataAssetDirectoryTestArrayAsset");
+static_assert(offsetof(UDataAssetDirectoryTestArrayAsset, IntArray) == 0x000028, "Member 'UDataAssetDirectoryTestArrayAsset::IntArray' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryTestArrayAsset, SimpleStructArray) == 0x000038, "Member 'UDataAssetDirectoryTestArrayAsset::SimpleStructArray' has a wrong offset!");
 
 // Class DataAssetDirectory.DataAssetDirectoryTestObjectAsset
 // 0x0008 (0x0030 - 0x0028)
@@ -159,6 +170,9 @@ public:
 		return GetDefaultObjImpl<UDataAssetDirectoryTestObjectAsset>();
 	}
 };
+static_assert(alignof(UDataAssetDirectoryTestObjectAsset) == 0x000008, "Wrong alignment on UDataAssetDirectoryTestObjectAsset");
+static_assert(sizeof(UDataAssetDirectoryTestObjectAsset) == 0x000030, "Wrong size on UDataAssetDirectoryTestObjectAsset");
+static_assert(offsetof(UDataAssetDirectoryTestObjectAsset, SimpleObject) == 0x000028, "Member 'UDataAssetDirectoryTestObjectAsset::SimpleObject' has a wrong offset!");
 
 // Class DataAssetDirectory.DataAssetDirectoryTestMapAsset
 // 0x00F0 (0x0118 - 0x0028)
@@ -179,6 +193,11 @@ public:
 		return GetDefaultObjImpl<UDataAssetDirectoryTestMapAsset>();
 	}
 };
+static_assert(alignof(UDataAssetDirectoryTestMapAsset) == 0x000008, "Wrong alignment on UDataAssetDirectoryTestMapAsset");
+static_assert(sizeof(UDataAssetDirectoryTestMapAsset) == 0x000118, "Wrong size on UDataAssetDirectoryTestMapAsset");
+static_assert(offsetof(UDataAssetDirectoryTestMapAsset, StringIntMap) == 0x000028, "Member 'UDataAssetDirectoryTestMapAsset::StringIntMap' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryTestMapAsset, ShrinkStringIntMap) == 0x000078, "Member 'UDataAssetDirectoryTestMapAsset::ShrinkStringIntMap' has a wrong offset!");
+static_assert(offsetof(UDataAssetDirectoryTestMapAsset, GrowStringIntMap) == 0x0000C8, "Member 'UDataAssetDirectoryTestMapAsset::GrowStringIntMap' has a wrong offset!");
 
 }
 

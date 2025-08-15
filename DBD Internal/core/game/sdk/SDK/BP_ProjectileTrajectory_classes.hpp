@@ -30,15 +30,15 @@ public:
 	float                                         SplineFadeDistance;                                // 0x0258(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         SplineFadeStartDistance;                           // 0x025C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                Trajectory_Owner;                                  // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldUpdate;                                      // 0x0268(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldUpdate;                                      // 0x0268(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_ProjectileTrajectory(int32 EntryPoint);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void SetShouldUpdateFromOwner(bool ShouldUpdate_0, class UObject* Owner_0);
 	void SetTrajectorySpline(const TArray<struct FVector>& SplinePoints, const TArray<struct FVector>& SplineTangents);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
 	void UpdateFromTrajectoryOwner();
+	void SetShouldUpdateFromOwner(bool ShouldUpdate_0, class UObject* Owner_0);
 
 public:
 	static class UClass* StaticClass()
@@ -50,6 +50,16 @@ public:
 		return GetDefaultObjImpl<ABP_ProjectileTrajectory_C>();
 	}
 };
+static_assert(alignof(ABP_ProjectileTrajectory_C) == 0x000008, "Wrong alignment on ABP_ProjectileTrajectory_C");
+static_assert(sizeof(ABP_ProjectileTrajectory_C) == 0x000270, "Wrong size on ABP_ProjectileTrajectory_C");
+static_assert(offsetof(ABP_ProjectileTrajectory_C, UberGraphFrame) == 0x000238, "Member 'ABP_ProjectileTrajectory_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_ProjectileTrajectory_C, Target) == 0x000240, "Member 'ABP_ProjectileTrajectory_C::Target' has a wrong offset!");
+static_assert(offsetof(ABP_ProjectileTrajectory_C, MaxMeshCount) == 0x000248, "Member 'ABP_ProjectileTrajectory_C::MaxMeshCount' has a wrong offset!");
+static_assert(offsetof(ABP_ProjectileTrajectory_C, SplineMID) == 0x000250, "Member 'ABP_ProjectileTrajectory_C::SplineMID' has a wrong offset!");
+static_assert(offsetof(ABP_ProjectileTrajectory_C, SplineFadeDistance) == 0x000258, "Member 'ABP_ProjectileTrajectory_C::SplineFadeDistance' has a wrong offset!");
+static_assert(offsetof(ABP_ProjectileTrajectory_C, SplineFadeStartDistance) == 0x00025C, "Member 'ABP_ProjectileTrajectory_C::SplineFadeStartDistance' has a wrong offset!");
+static_assert(offsetof(ABP_ProjectileTrajectory_C, Trajectory_Owner) == 0x000260, "Member 'ABP_ProjectileTrajectory_C::Trajectory_Owner' has a wrong offset!");
+static_assert(offsetof(ABP_ProjectileTrajectory_C, ShouldUpdate) == 0x000268, "Member 'ABP_ProjectileTrajectory_C::ShouldUpdate' has a wrong offset!");
 
 }
 

@@ -35,6 +35,8 @@ public:
 		return GetDefaultObjImpl<UFrontendItemViewSettingsManager_C>();
 	}
 };
+static_assert(alignof(UFrontendItemViewSettingsManager_C) == 0x000008, "Wrong alignment on UFrontendItemViewSettingsManager_C");
+static_assert(sizeof(UFrontendItemViewSettingsManager_C) == 0x000028, "Wrong size on UFrontendItemViewSettingsManager_C");
 
 }
 

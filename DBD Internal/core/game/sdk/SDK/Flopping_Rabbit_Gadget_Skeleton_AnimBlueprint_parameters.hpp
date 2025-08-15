@@ -27,8 +27,15 @@ public:
 	float                                         K2Node_Event_DeltaTimeX;                           // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_FloppingRabbit_Weap_Athena_C*        K2Node_DynamicCast_AsB_Flopping_Rabbit_Weap_Athena; // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint) == 0x000008, "Wrong alignment on Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint");
+static_assert(sizeof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint) == 0x000028, "Wrong size on Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint");
+static_assert(offsetof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint, EntryPoint) == 0x000000, "Member 'Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint::EntryPoint' has a wrong offset!");
+static_assert(offsetof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint, CallFunc_GetOwningActor_ReturnValue) == 0x000008, "Member 'Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint::CallFunc_GetOwningActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint, K2Node_Event_DeltaTimeX) == 0x000010, "Member 'Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint::K2Node_Event_DeltaTimeX' has a wrong offset!");
+static_assert(offsetof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint, K2Node_DynamicCast_AsB_Flopping_Rabbit_Weap_Athena) == 0x000018, "Member 'Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint::K2Node_DynamicCast_AsB_Flopping_Rabbit_Weap_Athena' has a wrong offset!");
+static_assert(offsetof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_ExecuteUbergraph_Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint.Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C.BlueprintUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -37,6 +44,9 @@ struct Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_BlueprintUpdateAnimation 
 public:
 	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_BlueprintUpdateAnimation");
+static_assert(sizeof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_BlueprintUpdateAnimation");
+static_assert(offsetof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
 
 // Function Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint.Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C.AnimGraph
 // 0x0020 (0x0020 - 0x0000)
@@ -46,6 +56,10 @@ public:
 	struct FPoseLink                              InPose;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
 };
+static_assert(alignof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_AnimGraph) == 0x000008, "Wrong alignment on Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_AnimGraph");
+static_assert(sizeof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_AnimGraph) == 0x000020, "Wrong size on Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_AnimGraph");
+static_assert(offsetof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_AnimGraph, InPose) == 0x000000, "Member 'Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_AnimGraph::InPose' has a wrong offset!");
+static_assert(offsetof(Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_AnimGraph, AnimGraph_0) == 0x000010, "Member 'Flopping_Rabbit_Gadget_Skeleton_AnimBlueprint_C_AnimGraph::AnimGraph_0' has a wrong offset!");
 
 }
 

@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Rift_Athena_Teleport_C>();
 	}
 };
+static_assert(alignof(UGE_Rift_Athena_Teleport_C) == 0x000008, "Wrong alignment on UGE_Rift_Athena_Teleport_C");
+static_assert(sizeof(UGE_Rift_Athena_Teleport_C) == 0x000800, "Wrong size on UGE_Rift_Athena_Teleport_C");
 
 }
 

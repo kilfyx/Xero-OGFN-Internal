@@ -20,14 +20,14 @@ namespace SDK
 // Function TVPostProcessBPAthena.TVPostProcessBPAthena_C.IsEnabledForCurrentSubgame
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    bEnabled                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bEnabled                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ATVPostProcessBPAthena_C::IsEnabledForCurrentSubgame(bool* bEnabled)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("IsEnabledForCurrentSubgame");
+		Func = Class->GetFunction("TVPostProcessBPAthena_C", "IsEnabledForCurrentSubgame");
 
 	Params::TVPostProcessBPAthena_C_IsEnabledForCurrentSubgame Parms{};
 
@@ -38,29 +38,57 @@ void ATVPostProcessBPAthena_C::IsEnabledForCurrentSubgame(bool* bEnabled)
 }
 
 
-// Function TVPostProcessBPAthena.TVPostProcessBPAthena_C.FrontEndCameraSwitchFadeAthena__UpdateFunc
-// (BlueprintEvent)
-
-void ATVPostProcessBPAthena_C::FrontEndCameraSwitchFadeAthena__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("FrontEndCameraSwitchFadeAthena__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function TVPostProcessBPAthena.TVPostProcessBPAthena_C.FrontEndCameraSwitchFadeAthena__FinishedFunc
 // (BlueprintEvent)
 
 void ATVPostProcessBPAthena_C::FrontEndCameraSwitchFadeAthena__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("FrontEndCameraSwitchFadeAthena__FinishedFunc");
+		Func = Class->GetFunction("TVPostProcessBPAthena_C", "FrontEndCameraSwitchFadeAthena__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TVPostProcessBPAthena.TVPostProcessBPAthena_C.FrontEndCameraSwitchFadeAthena__UpdateFunc
+// (BlueprintEvent)
+
+void ATVPostProcessBPAthena_C::FrontEndCameraSwitchFadeAthena__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TVPostProcessBPAthena_C", "FrontEndCameraSwitchFadeAthena__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TVPostProcessBPAthena.TVPostProcessBPAthena_C.ExecuteCameraSwitch
+// (BlueprintCallable, BlueprintEvent)
+
+void ATVPostProcessBPAthena_C::ExecuteCameraSwitch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TVPostProcessBPAthena_C", "ExecuteCameraSwitch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TVPostProcessBPAthena.TVPostProcessBPAthena_C.Camera_DisableEffects
+// (BlueprintCallable, BlueprintEvent)
+
+void ATVPostProcessBPAthena_C::Camera_DisableEffects()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TVPostProcessBPAthena_C", "Camera_DisableEffects");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -74,43 +102,15 @@ void ATVPostProcessBPAthena_C::FrontEndCameraSwitchFadeAthena__FinishedFunc()
 void ATVPostProcessBPAthena_C::ExecuteUbergraph_TVPostProcessBPAthena(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_TVPostProcessBPAthena");
+		Func = Class->GetFunction("TVPostProcessBPAthena_C", "ExecuteUbergraph_TVPostProcessBPAthena");
 
 	Params::TVPostProcessBPAthena_C_ExecuteUbergraph_TVPostProcessBPAthena Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TVPostProcessBPAthena.TVPostProcessBPAthena_C.ExecuteCameraSwitch
-// (BlueprintCallable, BlueprintEvent)
-
-void ATVPostProcessBPAthena_C::ExecuteCameraSwitch()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteCameraSwitch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TVPostProcessBPAthena.TVPostProcessBPAthena_C.Camera_DisableEffects
-// (BlueprintCallable, BlueprintEvent)
-
-void ATVPostProcessBPAthena_C::Camera_DisableEffects()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Camera_DisableEffects");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -12,7 +12,6 @@
 
 #include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
@@ -20,19 +19,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_HidingProp_HidingInProp.GA_Athena_HidingProp_HidingInProp_C
-// 0x0050 (0x0AF8 - 0x0AA8)
+// 0x0028 (0x0AE0 - 0x0AB8)
 class UGA_Athena_HidingProp_HidingInProp_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTagContainer                  ChangeEquipmentTag;                                // 0x0AB0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         Row_bDisablePlayerCollision;                       // 0x0AD0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTagContainer                  ChangeEquipmentTag;                                // 0x0AC0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_GA_Athena_HidingProp_HidingInProp(int32 EntryPoint);
 	void GrapplerFailSafe();
-	void K2_ActivateAbility();
 	void K2_OnEndAbility(bool bWasCancelled);
+	void K2_ActivateAbility();
 
 public:
 	static class UClass* StaticClass()
@@ -44,6 +42,10 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_HidingProp_HidingInProp_C>();
 	}
 };
+static_assert(alignof(UGA_Athena_HidingProp_HidingInProp_C) == 0x000008, "Wrong alignment on UGA_Athena_HidingProp_HidingInProp_C");
+static_assert(sizeof(UGA_Athena_HidingProp_HidingInProp_C) == 0x000AE0, "Wrong size on UGA_Athena_HidingProp_HidingInProp_C");
+static_assert(offsetof(UGA_Athena_HidingProp_HidingInProp_C, UberGraphFrame) == 0x000AB8, "Member 'UGA_Athena_HidingProp_HidingInProp_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UGA_Athena_HidingProp_HidingInProp_C, ChangeEquipmentTag) == 0x000AC0, "Member 'UGA_Athena_HidingProp_HidingInProp_C::ChangeEquipmentTag' has a wrong offset!");
 
 }
 

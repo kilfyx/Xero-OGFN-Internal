@@ -37,25 +37,25 @@ void UGAB_SurfaceChange_C::ExecuteUbergraph_GAB_SurfaceChange(int32 EntryPoint)
 }
 
 
-// Function GAB_SurfaceChange.GAB_SurfaceChange_C.HotfixableGEApplication
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function GAB_SurfaceChange.GAB_SurfaceChange_C.MovementModeChanged
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FScalableFloat&            Input                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class UClass*                           GameplayEffectAppliedOnTrue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UClass*                           GameplayEffectAppliedOnFalse                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ACharacter*                       Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMovementMode                           PrevMovementMode                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   PreviousCustomMode                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGAB_SurfaceChange_C::HotfixableGEApplication(const struct FScalableFloat& Input, class UClass* GameplayEffectAppliedOnTrue, class UClass* GameplayEffectAppliedOnFalse)
+void UGAB_SurfaceChange_C::MovementModeChanged(class ACharacter* Character, EMovementMode PrevMovementMode, uint8 PreviousCustomMode)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_SurfaceChange_C", "HotfixableGEApplication");
+		Func = Class->GetFunction("GAB_SurfaceChange_C", "MovementModeChanged");
 
-	Params::GAB_SurfaceChange_C_HotfixableGEApplication Parms{};
+	Params::GAB_SurfaceChange_C_MovementModeChanged Parms{};
 
-	Parms.Input = std::move(Input);
-	Parms.GameplayEffectAppliedOnTrue = GameplayEffectAppliedOnTrue;
-	Parms.GameplayEffectAppliedOnFalse = GameplayEffectAppliedOnFalse;
+	Parms.Character = Character;
+	Parms.PrevMovementMode = PrevMovementMode;
+	Parms.PreviousCustomMode = PreviousCustomMode;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -81,6 +81,44 @@ void UGAB_SurfaceChange_C::K2_ActivateAbilityFromEvent(const struct FGameplayEve
 }
 
 
+// Function GAB_SurfaceChange.GAB_SurfaceChange_C.SurfaceCleanupSpecial
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UGAB_SurfaceChange_C::SurfaceCleanupSpecial()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_SurfaceChange_C", "SurfaceCleanupSpecial");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GAB_SurfaceChange.GAB_SurfaceChange_C.HotfixableGEApplication
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FScalableFloat&            Input                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UClass*                           GameplayEffectAppliedOnTrue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           GameplayEffectAppliedOnFalse                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGAB_SurfaceChange_C::HotfixableGEApplication(const struct FScalableFloat& Input, class UClass* GameplayEffectAppliedOnTrue, class UClass* GameplayEffectAppliedOnFalse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_SurfaceChange_C", "HotfixableGEApplication");
+
+	Params::GAB_SurfaceChange_C_HotfixableGEApplication Parms{};
+
+	Parms.Input = std::move(Input);
+	Parms.GameplayEffectAppliedOnTrue = GameplayEffectAppliedOnTrue;
+	Parms.GameplayEffectAppliedOnFalse = GameplayEffectAppliedOnFalse;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GAB_SurfaceChange.GAB_SurfaceChange_C.LavaBounce
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -95,48 +133,10 @@ void UGAB_SurfaceChange_C::LavaBounce()
 }
 
 
-// Function GAB_SurfaceChange.GAB_SurfaceChange_C.MovementModeChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ACharacter*                       Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMovementMode                           PrevMovementMode                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// uint8                                   PreviousCustomMode                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_SurfaceChange_C::MovementModeChanged(class ACharacter* Character, EMovementMode PrevMovementMode, uint8 PreviousCustomMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_SurfaceChange_C", "MovementModeChanged");
-
-	Params::GAB_SurfaceChange_C_MovementModeChanged Parms{};
-
-	Parms.Character = Character;
-	Parms.PrevMovementMode = PrevMovementMode;
-	Parms.PreviousCustomMode = PreviousCustomMode;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GAB_SurfaceChange.GAB_SurfaceChange_C.OnRep_ReplicatedRandomAngle
-// (BlueprintCallable, BlueprintEvent)
-
-void UGAB_SurfaceChange_C::OnRep_ReplicatedRandomAngle()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_SurfaceChange_C", "OnRep_ReplicatedRandomAngle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GAB_SurfaceChange.GAB_SurfaceChange_C.SurfaceCleanup
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    AddLingeringEffects                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    AddLingeringEffects                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // EPhysicalSurface                        SurfaceType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGAB_SurfaceChange_C::SurfaceCleanup(bool AddLingeringEffects, EPhysicalSurface SurfaceType)
@@ -155,15 +155,15 @@ void UGAB_SurfaceChange_C::SurfaceCleanup(bool AddLingeringEffects, EPhysicalSur
 }
 
 
-// Function GAB_SurfaceChange.GAB_SurfaceChange_C.SurfaceCleanupSpecial
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function GAB_SurfaceChange.GAB_SurfaceChange_C.OnRep_ReplicatedRandomAngle
+// (BlueprintCallable, BlueprintEvent)
 
-void UGAB_SurfaceChange_C::SurfaceCleanupSpecial()
+void UGAB_SurfaceChange_C::OnRep_ReplicatedRandomAngle()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_SurfaceChange_C", "SurfaceCleanupSpecial");
+		Func = Class->GetFunction("GAB_SurfaceChange_C", "OnRep_ReplicatedRandomAngle");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

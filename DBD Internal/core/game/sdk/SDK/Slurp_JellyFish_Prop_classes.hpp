@@ -34,6 +34,10 @@ public:
 		return GetDefaultObjImpl<ASlurp_JellyFish_Prop_C>();
 	}
 };
+static_assert(alignof(ASlurp_JellyFish_Prop_C) == 0x000008, "Wrong alignment on ASlurp_JellyFish_Prop_C");
+static_assert(sizeof(ASlurp_JellyFish_Prop_C) == 0x000230, "Wrong size on ASlurp_JellyFish_Prop_C");
+static_assert(offsetof(ASlurp_JellyFish_Prop_C, Slurp_Jellyfish) == 0x000220, "Member 'ASlurp_JellyFish_Prop_C::Slurp_Jellyfish' has a wrong offset!");
+static_assert(offsetof(ASlurp_JellyFish_Prop_C, DefaultSceneRoot) == 0x000228, "Member 'ASlurp_JellyFish_Prop_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

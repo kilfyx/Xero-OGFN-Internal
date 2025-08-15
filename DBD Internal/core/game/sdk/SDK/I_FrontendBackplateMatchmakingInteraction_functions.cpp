@@ -20,38 +20,38 @@ namespace SDK
 // Function I_FrontendBackplateMatchmakingInteraction.I_FrontendBackplateMatchmakingInteraction_C.MatchmakingEnded
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bWasSuccess                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bWasSuccess                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void II_FrontendBackplateMatchmakingInteraction_C::MatchmakingEnded(bool bWasSuccess)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("MatchmakingEnded");
+		Func = AsUObject()->Class->GetFunction("I_FrontendBackplateMatchmakingInteraction_C", "MatchmakingEnded");
 
 	Params::I_FrontendBackplateMatchmakingInteraction_C_MatchmakingEnded Parms{};
 
 	Parms.bWasSuccess = bWasSuccess;
 
-	UObject::ProcessEvent(Func, &Parms);
+	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
 
 // Function I_FrontendBackplateMatchmakingInteraction.I_FrontendBackplateMatchmakingInteraction_C.HasMatcmakingInteraction
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    HasInteraction                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   HasInteraction                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void II_FrontendBackplateMatchmakingInteraction_C::HasMatcmakingInteraction(bool* HasInteraction)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HasMatcmakingInteraction");
+		Func = AsUObject()->Class->GetFunction("I_FrontendBackplateMatchmakingInteraction_C", "HasMatcmakingInteraction");
 
 	Params::I_FrontendBackplateMatchmakingInteraction_C_HasMatcmakingInteraction Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
+	AsUObject()->ProcessEvent(Func, &Parms);
 
 	if (HasInteraction != nullptr)
 		*HasInteraction = Parms.HasInteraction;
@@ -64,11 +64,11 @@ void II_FrontendBackplateMatchmakingInteraction_C::HasMatcmakingInteraction(bool
 void II_FrontendBackplateMatchmakingInteraction_C::EnteringMatchmaking()
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EnteringMatchmaking");
 
-	UObject::ProcessEvent(Func, nullptr);
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("I_FrontendBackplateMatchmakingInteraction_C", "EnteringMatchmaking");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 }

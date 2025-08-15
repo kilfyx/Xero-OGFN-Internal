@@ -37,20 +37,6 @@ void AAOE_Commando_KeepOutExplosion_C::ExecuteUbergraph_AOE_Commando_KeepOutExpl
 }
 
 
-// Function AOE_Commando_KeepOutExplosion.AOE_Commando_KeepOutExplosion_C.OnRep_Radius
-// (HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AAOE_Commando_KeepOutExplosion_C::OnRep_Radius()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AOE_Commando_KeepOutExplosion_C", "OnRep_Radius");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function AOE_Commando_KeepOutExplosion.AOE_Commando_KeepOutExplosion_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -96,6 +82,20 @@ void AAOE_Commando_KeepOutExplosion_C::Send_Info(float Radius_0)
 	Parms.Radius_0 = Radius_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AOE_Commando_KeepOutExplosion.AOE_Commando_KeepOutExplosion_C.OnRep_Radius
+// (HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AAOE_Commando_KeepOutExplosion_C::OnRep_Radius()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AOE_Commando_KeepOutExplosion_C", "OnRep_Radius");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

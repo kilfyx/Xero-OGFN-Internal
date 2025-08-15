@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaCustomizationBannerButton.AthenaCustomizationBannerButton_C
-// 0x0010 (0x1450 - 0x1440)
+// 0x0008 (0x0BB0 - 0x0BA8)
 class UAthenaCustomizationBannerButton_C final : public UFortBannerSlotButton
 {
 public:
-	class UNormalBangWrapper_C*                   NormalBangWrapper;                                 // 0x1440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNormalBangWrapper_C*                   NormalBangWrapper;                                 // 0x0BA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -33,9 +33,9 @@ public:
 		return GetDefaultObjImpl<UAthenaCustomizationBannerButton_C>();
 	}
 };
-static_assert(alignof(UAthenaCustomizationBannerButton_C) == 0x000010, "Wrong alignment on UAthenaCustomizationBannerButton_C");
-static_assert(sizeof(UAthenaCustomizationBannerButton_C) == 0x001450, "Wrong size on UAthenaCustomizationBannerButton_C");
-static_assert(offsetof(UAthenaCustomizationBannerButton_C, NormalBangWrapper) == 0x001440, "Member 'UAthenaCustomizationBannerButton_C::NormalBangWrapper' has a wrong offset!");
+static_assert(alignof(UAthenaCustomizationBannerButton_C) == 0x000008, "Wrong alignment on UAthenaCustomizationBannerButton_C");
+static_assert(sizeof(UAthenaCustomizationBannerButton_C) == 0x000BB0, "Wrong size on UAthenaCustomizationBannerButton_C");
+static_assert(offsetof(UAthenaCustomizationBannerButton_C, NormalBangWrapper) == 0x000BA8, "Member 'UAthenaCustomizationBannerButton_C::NormalBangWrapper' has a wrong offset!");
 
 }
 

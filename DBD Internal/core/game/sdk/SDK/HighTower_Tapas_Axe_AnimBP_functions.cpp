@@ -25,9 +25,9 @@ namespace SDK
 void UHighTower_Tapas_Axe_AnimBP_C::ExecuteUbergraph_HighTower_Tapas_Axe_AnimBP(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_HighTower_Tapas_Axe_AnimBP");
+		Func = Class->GetFunction("HighTower_Tapas_Axe_AnimBP_C", "ExecuteUbergraph_HighTower_Tapas_Axe_AnimBP");
 
 	Params::HighTower_Tapas_Axe_AnimBP_C_ExecuteUbergraph_HighTower_Tapas_Axe_AnimBP Parms{};
 
@@ -40,14 +40,14 @@ void UHighTower_Tapas_Axe_AnimBP_C::ExecuteUbergraph_HighTower_Tapas_Axe_AnimBP(
 // Function HighTower_Tapas_Axe_AnimBP.HighTower_Tapas_Axe_AnimBP_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
 void UHighTower_Tapas_Axe_AnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("AnimGraph");
+		Func = Class->GetFunction("HighTower_Tapas_Axe_AnimBP_C", "AnimGraph");
 
 	Params::HighTower_Tapas_Axe_AnimBP_C_AnimGraph Parms{};
 

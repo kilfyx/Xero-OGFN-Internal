@@ -87,16 +87,16 @@ namespace ZeroGUI
 {
 	namespace Colors
 	{
-		inline FLinearColor Text = { 1.0f, 1.0f, 1.0f, 1.0f };           // Pure white text
-		inline FLinearColor Text_Shadow = { 0.1f, 0.0f, 0.1f, 0.5f };   // Subtle purple shadow
-		inline FLinearColor Text_Outline = { 0.3f, 0.0f, 0.3f, 0.4f };  // Light purple outline
+		inline FLinearColor Text = { 1.0f, 1.0f, 1.0f, 1.0f };
+		inline FLinearColor Text_Shadow = { 0.0f, 0.0f, 0.0f, 0.5f };
+		inline FLinearColor Text_Outline = { 0.0f, 0.0f, 0.0f, 0.7f };
 
-		inline FLinearColor Window_Background = { 0.08f, 0.02f, 0.15f, 1.0f }; // Deep purple background
-		inline FLinearColor Window_Header = { 0.15f, 0.05f, 0.25f, 1.0f };    // Slightly lighter purple header
+		inline FLinearColor Window_Background = { 0.0f, 0.0f, 0.0f, 1.0f };
+		inline FLinearColor Window_Header = { 0.1f, 0.1f, 0.1f, 1.0f };
 
-		inline FLinearColor Button_Idle = { 0.35f, 0.15f, 0.55f, 1.0f };      // Medium purple idle
-		inline FLinearColor Button_Hovered = { 0.50f, 0.25f, 0.70f, 1.0f };   // Brighter purple on hover
-		inline FLinearColor Button_Active = { 1.0f, 1.0f, 1.0f, 1.0f };       // White when active
+		inline FLinearColor Button_Idle = { 0.2f, 0.2f, 0.2f, 1.0f };
+		inline FLinearColor Button_Hovered = { 0.35f, 0.35f, 0.35f, 1.0f };
+		inline FLinearColor Button_Active = { 1.0f, 1.0f, 1.0f, 1.0f };
 
 		inline FLinearColor Checkbox_Idle = Button_Idle;
 		inline FLinearColor Checkbox_Hovered = Button_Hovered;
@@ -106,22 +106,22 @@ namespace ZeroGUI
 		inline FLinearColor Combobox_Hovered = Button_Hovered;
 		inline FLinearColor Combobox_Active = Button_Active;
 
-		inline FLinearColor Slider_Idle = { 0.30f, 0.10f, 0.50f, 1.0f };      // Darker purple track
-		inline FLinearColor Slider_Hovered = { 0.45f, 0.20f, 0.65f, 1.0f };   // Lighter purple hover
-		inline FLinearColor Slider_Progress = { 1.0f, 1.0f, 1.0f, 1.0f };     // White progress fill
-		inline FLinearColor Slider_Button = { 0.75f, 0.40f, 1.0f, 1.0f };     // Bright purple knob
+		inline FLinearColor Slider_Idle = { 0.25f, 0.25f, 0.25f, 1.0f };
+		inline FLinearColor Slider_Hovered = { 0.4f, 0.4f, 0.4f, 1.0f };
+		inline FLinearColor Slider_Progress = { 1.0f, 1.0f, 1.0f, 1.0f };
+		inline FLinearColor Slider_Button = { 1.0f, 1.0f, 1.0f, 1.0f };
 
-		inline FLinearColor ColorPicker_Background = { 0.10f, 0.03f, 0.18f, 1.0f }; // Soft purple background
+		inline FLinearColor ColorPicker_Background = { 0.05f, 0.05f, 0.05f, 1.0f };
 
-		inline FLinearColor LightPurple = { 0.70f, 0.50f, 0.90f, 1.0f };        // Accent purple
-		inline FLinearColor LightPurple_Hovered = { 0.80f, 0.60f, 1.0f, 1.0f }; // Hover accent
+		inline FLinearColor Accent = { 1.0f, 1.0f, 1.0f, 1.0f };
+		inline FLinearColor Accent_Hovered = { 0.85f, 0.85f, 0.85f, 1.0f };
 	}
 
 	namespace PostRenderer
 	{
 		struct DrawList
 		{
-			int type = -1; //1 = FilledRect, 2 = TextLeft, 3 = TextCenter, 4 = Draw_Line
+			int type = -1;
 			FVector2D pos;
 			FVector2D size;
 			FLinearColor color;

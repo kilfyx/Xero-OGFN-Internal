@@ -16,14 +16,6 @@
 namespace SDK::Params
 {
 
-// Function Flopper_Gadget_AnimBP.Flopper_Gadget_AnimBP_C.AnimGraph
-// 0x0010 (0x0010 - 0x0000)
-struct Flopper_Gadget_AnimBP_C_AnimGraph final
-{
-public:
-	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
-};
-
 // Function Flopper_Gadget_AnimBP.Flopper_Gadget_AnimBP_C.ExecuteUbergraph_Flopper_Gadget_AnimBP
 // 0x0004 (0x0004 - 0x0000)
 struct Flopper_Gadget_AnimBP_C_ExecuteUbergraph_Flopper_Gadget_AnimBP final
@@ -31,6 +23,20 @@ struct Flopper_Gadget_AnimBP_C_ExecuteUbergraph_Flopper_Gadget_AnimBP final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(Flopper_Gadget_AnimBP_C_ExecuteUbergraph_Flopper_Gadget_AnimBP) == 0x000004, "Wrong alignment on Flopper_Gadget_AnimBP_C_ExecuteUbergraph_Flopper_Gadget_AnimBP");
+static_assert(sizeof(Flopper_Gadget_AnimBP_C_ExecuteUbergraph_Flopper_Gadget_AnimBP) == 0x000004, "Wrong size on Flopper_Gadget_AnimBP_C_ExecuteUbergraph_Flopper_Gadget_AnimBP");
+static_assert(offsetof(Flopper_Gadget_AnimBP_C_ExecuteUbergraph_Flopper_Gadget_AnimBP, EntryPoint) == 0x000000, "Member 'Flopper_Gadget_AnimBP_C_ExecuteUbergraph_Flopper_Gadget_AnimBP::EntryPoint' has a wrong offset!");
+
+// Function Flopper_Gadget_AnimBP.Flopper_Gadget_AnimBP_C.AnimGraph
+// 0x0010 (0x0010 - 0x0000)
+struct Flopper_Gadget_AnimBP_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+};
+static_assert(alignof(Flopper_Gadget_AnimBP_C_AnimGraph) == 0x000008, "Wrong alignment on Flopper_Gadget_AnimBP_C_AnimGraph");
+static_assert(sizeof(Flopper_Gadget_AnimBP_C_AnimGraph) == 0x000010, "Wrong size on Flopper_Gadget_AnimBP_C_AnimGraph");
+static_assert(offsetof(Flopper_Gadget_AnimBP_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'Flopper_Gadget_AnimBP_C_AnimGraph::AnimGraph_0' has a wrong offset!");
 
 }
 

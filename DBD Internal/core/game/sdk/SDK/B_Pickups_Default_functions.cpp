@@ -37,6 +37,20 @@ void AB_Pickups_Default_C::ExecuteUbergraph_B_Pickups_Default(int32 EntryPoint)
 }
 
 
+// Function B_Pickups_Default.B_Pickups_Default_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AB_Pickups_Default_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Default_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_Pickups_Default.B_Pickups_Default_C.HideBackgroundAndSpotlight
 // (BlueprintCallable, BlueprintEvent)
 
@@ -85,15 +99,29 @@ void AB_Pickups_Default_C::OnTossed()
 }
 
 
-// Function B_Pickups_Default.B_Pickups_Default_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function B_Pickups_Default.B_Pickups_Default_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void AB_Pickups_Default_C::ReceiveBeginPlay()
+void AB_Pickups_Default_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Pickups_Default_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("B_Pickups_Default_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Pickups_Default.B_Pickups_Default_C.Setup Light
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Pickups_Default_C::Setup_Light()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Default_C", "Setup Light");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -116,20 +144,6 @@ void AB_Pickups_Default_C::Set_Initial_BKGD_Param(class UMaterialInstanceDynamic
 	Parms.Mid = Mid;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Pickups_Default.B_Pickups_Default_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Pickups_Default_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Pickups_Default_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

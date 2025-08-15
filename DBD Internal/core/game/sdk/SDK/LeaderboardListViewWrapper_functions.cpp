@@ -25,9 +25,9 @@ namespace SDK
 void ULeaderboardListViewWrapper_C::ExecuteUbergraph_LeaderboardListViewWrapper(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_LeaderboardListViewWrapper");
+		Func = Class->GetFunction("LeaderboardListViewWrapper_C", "ExecuteUbergraph_LeaderboardListViewWrapper");
 
 	Params::LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper Parms{};
 
@@ -45,9 +45,9 @@ void ULeaderboardListViewWrapper_C::ExecuteUbergraph_LeaderboardListViewWrapper(
 void ULeaderboardListViewWrapper_C::OnLeaderboardDisplayTypeChanged(ELeaderboardDisplayType NewDisplayType)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnLeaderboardDisplayTypeChanged");
+		Func = Class->GetFunction("LeaderboardListViewWrapper_C", "OnLeaderboardDisplayTypeChanged");
 
 	Params::LeaderboardListViewWrapper_C_OnLeaderboardDisplayTypeChanged Parms{};
 
@@ -57,43 +57,43 @@ void ULeaderboardListViewWrapper_C::OnLeaderboardDisplayTypeChanged(ELeaderboard
 }
 
 
-// Function LeaderboardListViewWrapper.LeaderboardListViewWrapper_C.Set Display Info
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FFortTournamentDisplayInfo       DisplayInfo_0                                          (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void ULeaderboardListViewWrapper_C::Set_Display_Info(const struct FFortTournamentDisplayInfo& DisplayInfo_0)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Set Display Info");
-
-	Params::LeaderboardListViewWrapper_C_Set_Display_Info Parms{};
-
-	Parms.DisplayInfo_0 = std::move(DisplayInfo_0);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function LeaderboardListViewWrapper.LeaderboardListViewWrapper_C.Set Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           EventId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           EventWindowId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    EventId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    EventWindowId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
 void ULeaderboardListViewWrapper_C::Set_Event(const class FString& EventId, const class FString& EventWindowId)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Set Event");
+		Func = Class->GetFunction("LeaderboardListViewWrapper_C", "Set Event");
 
 	Params::LeaderboardListViewWrapper_C_Set_Event Parms{};
 
 	Parms.EventId = std::move(EventId);
 	Parms.EventWindowId = std::move(EventWindowId);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LeaderboardListViewWrapper.LeaderboardListViewWrapper_C.Set Display Info
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FFortTournamentDisplayInfo&DisplayInfo_0                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ULeaderboardListViewWrapper_C::Set_Display_Info(const struct FFortTournamentDisplayInfo& DisplayInfo_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LeaderboardListViewWrapper_C", "Set Display Info");
+
+	Params::LeaderboardListViewWrapper_C_Set_Display_Info Parms{};
+
+	Parms.DisplayInfo_0 = std::move(DisplayInfo_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

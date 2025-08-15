@@ -23,9 +23,9 @@ namespace SDK
 void UMainMenu_HamburgerButton_C::BP_OnHovered()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnHovered");
+		Func = Class->GetFunction("MainMenu_HamburgerButton_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,9 +37,9 @@ void UMainMenu_HamburgerButton_C::BP_OnHovered()
 void UMainMenu_HamburgerButton_C::BP_OnUnhovered()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnUnhovered");
+		Func = Class->GetFunction("MainMenu_HamburgerButton_C", "BP_OnUnhovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,9 +51,9 @@ void UMainMenu_HamburgerButton_C::BP_OnUnhovered()
 void UMainMenu_HamburgerButton_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
+		Func = Class->GetFunction("MainMenu_HamburgerButton_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -67,9 +67,9 @@ void UMainMenu_HamburgerButton_C::Construct()
 void UMainMenu_HamburgerButton_C::ExecuteUbergraph_MainMenu_HamburgerButton(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_MainMenu_HamburgerButton");
+		Func = Class->GetFunction("MainMenu_HamburgerButton_C", "ExecuteUbergraph_MainMenu_HamburgerButton");
 
 	Params::MainMenu_HamburgerButton_C_ExecuteUbergraph_MainMenu_HamburgerButton Parms{};
 

@@ -17,37 +17,17 @@
 namespace SDK
 {
 
-// Function MinimalSquadDisplay.MinimalSquadDisplay_C.ExecuteUbergraph_MinimalSquadDisplay
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMinimalSquadDisplay_C::ExecuteUbergraph_MinimalSquadDisplay(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_MinimalSquadDisplay");
-
-	Params::MinimalSquadDisplay_C_ExecuteUbergraph_MinimalSquadDisplay Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function MinimalSquadDisplay.MinimalSquadDisplay_C.OnLoaded_1B34C3FE47597A4DBA2DA7AFCF8744FB
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UMinimalSquadDisplay_C::OnLoaded_1B34C3FE47597A4DBA2DA7AFCF8744FB(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnLoaded_1B34C3FE47597A4DBA2DA7AFCF8744FB");
+		Func = Class->GetFunction("MinimalSquadDisplay_C", "OnLoaded_1B34C3FE47597A4DBA2DA7AFCF8744FB");
 
 	Params::MinimalSquadDisplay_C_OnLoaded_1B34C3FE47597A4DBA2DA7AFCF8744FB Parms{};
 
@@ -60,14 +40,14 @@ void UMinimalSquadDisplay_C::OnLoaded_1B34C3FE47597A4DBA2DA7AFCF8744FB(class UOb
 // Function MinimalSquadDisplay.MinimalSquadDisplay_C.OnLoaded_86B795124D19C878C8559FA7E78726E0
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UMinimalSquadDisplay_C::OnLoaded_86B795124D19C878C8559FA7E78726E0(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnLoaded_86B795124D19C878C8559FA7E78726E0");
+		Func = Class->GetFunction("MinimalSquadDisplay_C", "OnLoaded_86B795124D19C878C8559FA7E78726E0");
 
 	Params::MinimalSquadDisplay_C_OnLoaded_86B795124D19C878C8559FA7E78726E0 Parms{};
 
@@ -80,14 +60,14 @@ void UMinimalSquadDisplay_C::OnLoaded_86B795124D19C878C8559FA7E78726E0(class UOb
 // Function MinimalSquadDisplay.MinimalSquadDisplay_C.OnSquadAssigned
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FAthenaTeamDisplayInfo           SquadStyle                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FAthenaTeamDisplayInfo&    SquadStyle                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UMinimalSquadDisplay_C::OnSquadAssigned(const struct FAthenaTeamDisplayInfo& SquadStyle)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnSquadAssigned");
+		Func = Class->GetFunction("MinimalSquadDisplay_C", "OnSquadAssigned");
 
 	Params::MinimalSquadDisplay_C_OnSquadAssigned Parms{};
 
@@ -100,20 +80,40 @@ void UMinimalSquadDisplay_C::OnSquadAssigned(const struct FAthenaTeamDisplayInfo
 // Function MinimalSquadDisplay.MinimalSquadDisplay_C.OnSquadIsEmptyChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bSquadIsEmpty                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bMultipleSquadsPopulated                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSquadIsEmpty                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bMultipleSquadsPopulated                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMinimalSquadDisplay_C::OnSquadIsEmptyChanged(bool bSquadIsEmpty, bool bMultipleSquadsPopulated)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnSquadIsEmptyChanged");
+		Func = Class->GetFunction("MinimalSquadDisplay_C", "OnSquadIsEmptyChanged");
 
 	Params::MinimalSquadDisplay_C_OnSquadIsEmptyChanged Parms{};
 
 	Parms.bSquadIsEmpty = bSquadIsEmpty;
 	Parms.bMultipleSquadsPopulated = bMultipleSquadsPopulated;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MinimalSquadDisplay.MinimalSquadDisplay_C.ExecuteUbergraph_MinimalSquadDisplay
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMinimalSquadDisplay_C::ExecuteUbergraph_MinimalSquadDisplay(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MinimalSquadDisplay_C", "ExecuteUbergraph_MinimalSquadDisplay");
+
+	Params::MinimalSquadDisplay_C_ExecuteUbergraph_MinimalSquadDisplay Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

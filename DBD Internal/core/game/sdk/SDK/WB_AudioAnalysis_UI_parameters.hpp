@@ -30,6 +30,15 @@ public:
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVerticalBoxSlot*                       CallFunc_AddChildToVerticalBox_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI) == 0x000008, "Wrong alignment on WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI");
+static_assert(sizeof(WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI) == 0x000038, "Wrong size on WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI");
+static_assert(offsetof(WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI, EntryPoint) == 0x000000, "Member 'WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI, K2Node_Event_ParamName) == 0x000004, "Member 'WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI::K2Node_Event_ParamName' has a wrong offset!");
+static_assert(offsetof(WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI, K2Node_Event_Collection) == 0x000010, "Member 'WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI::K2Node_Event_Collection' has a wrong offset!");
+static_assert(offsetof(WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI, K2Node_Event_Vec4Index) == 0x000018, "Member 'WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI::K2Node_Event_Vec4Index' has a wrong offset!");
+static_assert(offsetof(WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI, CallFunc_Create_ReturnValue) == 0x000020, "Member 'WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI, CallFunc_Array_Add_ReturnValue) == 0x000028, "Member 'WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI, CallFunc_AddChildToVerticalBox_ReturnValue) == 0x000030, "Member 'WB_AudioAnalysis_UI_C_ExecuteUbergraph_WB_AudioAnalysis_UI::CallFunc_AddChildToVerticalBox_ReturnValue' has a wrong offset!");
 
 // Function WB_AudioAnalysis_UI.WB_AudioAnalysis_UI_C.AddMPCParameter
 // 0x0018 (0x0018 - 0x0000)
@@ -40,6 +49,11 @@ public:
 	class UMaterialParameterCollection*           Collection;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Vec4Index;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(WB_AudioAnalysis_UI_C_AddMPCParameter) == 0x000008, "Wrong alignment on WB_AudioAnalysis_UI_C_AddMPCParameter");
+static_assert(sizeof(WB_AudioAnalysis_UI_C_AddMPCParameter) == 0x000018, "Wrong size on WB_AudioAnalysis_UI_C_AddMPCParameter");
+static_assert(offsetof(WB_AudioAnalysis_UI_C_AddMPCParameter, ParamName) == 0x000000, "Member 'WB_AudioAnalysis_UI_C_AddMPCParameter::ParamName' has a wrong offset!");
+static_assert(offsetof(WB_AudioAnalysis_UI_C_AddMPCParameter, Collection) == 0x000008, "Member 'WB_AudioAnalysis_UI_C_AddMPCParameter::Collection' has a wrong offset!");
+static_assert(offsetof(WB_AudioAnalysis_UI_C_AddMPCParameter, Vec4Index) == 0x000010, "Member 'WB_AudioAnalysis_UI_C_AddMPCParameter::Vec4Index' has a wrong offset!");
 
 }
 

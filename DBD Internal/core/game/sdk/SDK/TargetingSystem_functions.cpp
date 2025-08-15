@@ -17,86 +17,20 @@
 namespace SDK
 {
 
-// Function TargetingSystem.AsyncAction_PerformTargeting.PerformFilteringRequest
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                           SourceActor_0                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UTargetingPreset*                 TargetingPreset_0                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bUseAsyncTargeting_0                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<class AActor*>&            InTargets                                              (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// class UAsyncAction_PerformTargeting*    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UAsyncAction_PerformTargeting* UAsyncAction_PerformTargeting::PerformFilteringRequest(class AActor* SourceActor_0, class UTargetingPreset* TargetingPreset_0, bool bUseAsyncTargeting_0, const TArray<class AActor*>& InTargets)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AsyncAction_PerformTargeting", "PerformFilteringRequest");
-
-	Params::AsyncAction_PerformTargeting_PerformFilteringRequest Parms{};
-
-	Parms.SourceActor_0 = SourceActor_0;
-	Parms.TargetingPreset_0 = TargetingPreset_0;
-	Parms.bUseAsyncTargeting_0 = bUseAsyncTargeting_0;
-	Parms.InTargets = std::move(InTargets);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TargetingSystem.AsyncAction_PerformTargeting.PerformTargetingRequest
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                           SourceActor_0                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UTargetingPreset*                 TargetingPreset_0                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bUseAsyncTargeting_0                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UAsyncAction_PerformTargeting*    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UAsyncAction_PerformTargeting* UAsyncAction_PerformTargeting::PerformTargetingRequest(class AActor* SourceActor_0, class UTargetingPreset* TargetingPreset_0, bool bUseAsyncTargeting_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AsyncAction_PerformTargeting", "PerformTargetingRequest");
-
-	Params::AsyncAction_PerformTargeting_PerformTargetingRequest Parms{};
-
-	Parms.SourceActor_0 = SourceActor_0;
-	Parms.TargetingPreset_0 = TargetingPreset_0;
-	Parms.bUseAsyncTargeting_0 = bUseAsyncTargeting_0;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TargetingSystem.TargetingSelectionTask_Trace.GetAdditionalActorsToIgnore
-// (Native, Event, Protected, HasOutParams, BlueprintEvent, Const)
+// Function TargetingSystem.TargetingSelectionTask_AOE.GetSourceLocation
+// (Native, Event, Protected, HasOutParams, HasDefaults, BlueprintEvent, Const)
 // Parameters:
 // const struct FTargetingRequestHandle&   TargetingHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// TArray<class AActor*>*                  OutAdditionalActorsToIgnore                            (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UTargetingSelectionTask_Trace::GetAdditionalActorsToIgnore(const struct FTargetingRequestHandle& TargetingHandle, TArray<class AActor*>* OutAdditionalActorsToIgnore) const
+struct FVector UTargetingSelectionTask_AOE::GetSourceLocation(const struct FTargetingRequestHandle& TargetingHandle) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TargetingSelectionTask_Trace", "GetAdditionalActorsToIgnore");
+		Func = Class->GetFunction("TargetingSelectionTask_AOE", "GetSourceLocation");
 
-	Params::TargetingSelectionTask_Trace_GetAdditionalActorsToIgnore Parms{};
+	Params::TargetingSelectionTask_AOE_GetSourceLocation Parms{};
 
 	Parms.TargetingHandle = std::move(TargetingHandle);
 
@@ -107,8 +41,35 @@ void UTargetingSelectionTask_Trace::GetAdditionalActorsToIgnore(const struct FTa
 
 	Func->FunctionFlags = Flgs;
 
-	if (OutAdditionalActorsToIgnore != nullptr)
-		*OutAdditionalActorsToIgnore = std::move(Parms.OutAdditionalActorsToIgnore);
+	return Parms.ReturnValue;
+}
+
+
+// Function TargetingSystem.TargetingSelectionTask_AOE.GetSourceOffset
+// (Native, Event, Protected, HasOutParams, HasDefaults, BlueprintEvent, Const)
+// Parameters:
+// const struct FTargetingRequestHandle&   TargetingHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UTargetingSelectionTask_AOE::GetSourceOffset(const struct FTargetingRequestHandle& TargetingHandle) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TargetingSelectionTask_AOE", "GetSourceOffset");
+
+	Params::TargetingSelectionTask_AOE_GetSourceOffset Parms{};
+
+	Parms.TargetingHandle = std::move(TargetingHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -252,96 +213,11 @@ float UTargetingSelectionTask_Trace::GetTraceLength(const struct FTargetingReque
 }
 
 
-// Function TargetingSystem.TargetingSelectionTask_AOE.GetSourceLocation
-// (Native, Event, Protected, HasOutParams, HasDefaults, BlueprintEvent, Const)
-// Parameters:
-// const struct FTargetingRequestHandle&   TargetingHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector UTargetingSelectionTask_AOE::GetSourceLocation(const struct FTargetingRequestHandle& TargetingHandle) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TargetingSelectionTask_AOE", "GetSourceLocation");
-
-	Params::TargetingSelectionTask_AOE_GetSourceLocation Parms{};
-
-	Parms.TargetingHandle = std::move(TargetingHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TargetingSystem.TargetingSelectionTask_AOE.GetSourceOffset
-// (Native, Event, Protected, HasOutParams, HasDefaults, BlueprintEvent, Const)
-// Parameters:
-// const struct FTargetingRequestHandle&   TargetingHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector UTargetingSelectionTask_AOE::GetSourceOffset(const struct FTargetingRequestHandle& TargetingHandle) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TargetingSelectionTask_AOE", "GetSourceOffset");
-
-	Params::TargetingSelectionTask_AOE_GetSourceOffset Parms{};
-
-	Parms.TargetingHandle = std::move(TargetingHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TargetingSystem.TargetingSubsystem.GetTargetingResults
-// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FTargetingRequestHandle&   TargetingHandle                                        (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// TArray<struct FHitResult>*              OutTargets                                             (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-void UTargetingSubsystem::GetTargetingResults(const struct FTargetingRequestHandle& TargetingHandle, TArray<struct FHitResult>* OutTargets)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("TargetingSubsystem", "GetTargetingResults");
-
-	Params::TargetingSubsystem_GetTargetingResults Parms{};
-
-	Parms.TargetingHandle = std::move(TargetingHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutTargets != nullptr)
-		*OutTargets = std::move(Parms.OutTargets);
-}
-
-
 // Function TargetingSystem.TargetingSubsystem.GetTargetingResultsActors
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FTargetingRequestHandle&   TargetingHandle                                        (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// TArray<class AActor*>*                  Targets                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class AActor*>*                  Targets                                                (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UTargetingSubsystem::GetTargetingResultsActors(const struct FTargetingRequestHandle& TargetingHandle, TArray<class AActor*>* Targets)
 {

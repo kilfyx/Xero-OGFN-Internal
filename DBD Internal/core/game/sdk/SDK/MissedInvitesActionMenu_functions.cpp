@@ -37,6 +37,20 @@ void UMissedInvitesActionMenu_C::ExecuteUbergraph_MissedInvitesActionMenu(int32 
 }
 
 
+// Function MissedInvitesActionMenu.MissedInvitesActionMenu_C.OnOpened
+// (Event, Protected, BlueprintEvent)
+
+void UMissedInvitesActionMenu_C::OnOpened()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MissedInvitesActionMenu_C", "OnOpened");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function MissedInvitesActionMenu.MissedInvitesActionMenu_C.OnKeyUp
 // (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -59,20 +73,6 @@ struct FEventReply UMissedInvitesActionMenu_C::OnKeyUp(const struct FGeometry& M
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function MissedInvitesActionMenu.MissedInvitesActionMenu_C.OnOpened
-// (Event, Protected, BlueprintEvent)
-
-void UMissedInvitesActionMenu_C::OnOpened()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MissedInvitesActionMenu_C", "OnOpened");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

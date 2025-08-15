@@ -14,6 +14,22 @@
 namespace SDK
 {
 
+// Enum Hotfix.EUpdateCompletionStatus
+// NumValues: 0x000A
+enum class EUpdateCompletionStatus : uint8
+{
+	UpdateUnknown                            = 0,
+	UpdateSuccess                            = 1,
+	UpdateSuccess_NoChange                   = 2,
+	UpdateSuccess_NeedsReload                = 3,
+	UpdateSuccess_NeedsRelaunch              = 4,
+	UpdateSuccess_NeedsPatch                 = 5,
+	UpdateFailure_PatchCheck                 = 6,
+	UpdateFailure_HotfixCheck                = 7,
+	UpdateFailure_NotLoggedIn                = 8,
+	EUpdateCompletionStatus_MAX              = 9,
+};
+
 // Enum Hotfix.EHotfixResult
 // NumValues: 0x0006
 enum class EHotfixResult : uint8
@@ -39,22 +55,6 @@ enum class EUpdateState : uint8
 	InitialLoadComplete                      = 6,
 	UpdateComplete                           = 7,
 	EUpdateState_MAX                         = 8,
-};
-
-// Enum Hotfix.EUpdateCompletionStatus
-// NumValues: 0x000A
-enum class EUpdateCompletionStatus : uint8
-{
-	UpdateUnknown                            = 0,
-	UpdateSuccess                            = 1,
-	UpdateSuccess_NoChange                   = 2,
-	UpdateSuccess_NeedsReload                = 3,
-	UpdateSuccess_NeedsRelaunch              = 4,
-	UpdateSuccess_NeedsPatch                 = 5,
-	UpdateFailure_PatchCheck                 = 6,
-	UpdateFailure_HotfixCheck                = 7,
-	UpdateFailure_NotLoggedIn                = 8,
-	EUpdateCompletionStatus_MAX              = 9,
 };
 
 }

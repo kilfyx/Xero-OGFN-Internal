@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UTextScrollStyle_Base_Ticker_C>();
 	}
 };
+static_assert(alignof(UTextScrollStyle_Base_Ticker_C) == 0x000008, "Wrong alignment on UTextScrollStyle_Base_Ticker_C");
+static_assert(sizeof(UTextScrollStyle_Base_Ticker_C) == 0x000040, "Wrong size on UTextScrollStyle_Base_Ticker_C");
 
 }
 

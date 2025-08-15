@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C.AbilityTimeout
-// (BlueprintCallable, BlueprintEvent)
-
-void UGAT_Creative_TriggeredAbility_C::AbilityTimeout()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAT_Creative_TriggeredAbility_C", "AbilityTimeout");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C.ExecuteUbergraph_GAT_Creative_TriggeredAbility
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -46,6 +32,40 @@ void UGAT_Creative_TriggeredAbility_C::ExecuteUbergraph_GAT_Creative_TriggeredAb
 	Params::GAT_Creative_TriggeredAbility_C_ExecuteUbergraph_GAT_Creative_TriggeredAbility Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C.AbilityTimeout
+// (BlueprintCallable, BlueprintEvent)
+
+void UGAT_Creative_TriggeredAbility_C::AbilityTimeout()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAT_Creative_TriggeredAbility_C", "AbilityTimeout");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C.SetupAbilityFailsafeTimer
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGAT_Creative_TriggeredAbility_C::SetupAbilityFailsafeTimer(float Duration)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAT_Creative_TriggeredAbility_C", "SetupAbilityFailsafeTimer");
+
+	Params::GAT_Creative_TriggeredAbility_C_SetupAbilityFailsafeTimer Parms{};
+
+	Parms.Duration = Duration;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -71,31 +91,11 @@ void UGAT_Creative_TriggeredAbility_C::K2_ActivateAbilityFromEvent(const struct 
 }
 
 
-// Function GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C.SetupAbilityFailsafeTimer
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAT_Creative_TriggeredAbility_C::SetupAbilityFailsafeTimer(float Duration)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAT_Creative_TriggeredAbility_C", "SetupAbilityFailsafeTimer");
-
-	Params::GAT_Creative_TriggeredAbility_C_SetupAbilityFailsafeTimer Parms{};
-
-	Parms.Duration = Duration;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C.IsPropertyOverridden
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class FName                             PropertyName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   bResult                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bResult                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UGAT_Creative_TriggeredAbility_C::IsPropertyOverridden(class FName PropertyName, bool* bResult) const
 {

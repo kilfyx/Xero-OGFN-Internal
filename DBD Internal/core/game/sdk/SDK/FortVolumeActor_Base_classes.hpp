@@ -18,26 +18,25 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FortVolumeActor_Base.FortVolumeActor_Base_C
-// 0x0038 (0x06A8 - 0x0670)
+// 0x0030 (0x0688 - 0x0658)
 class AFortVolumeActor_Base_C : public AFortVolume
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0670(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UFortMinigameStatsComponent*            FortMinigameStats;                                 // 0x0678(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UComplexPawnOverlapComponent*           BoundsMeshComponent;                               // 0x0680(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         TransitionTL_Fade_DD1C029E4A879F5D954A60A7D9770B8A; // 0x0688(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            TransitionTL__Direction_DD1C029E4A879F5D954A60A7D9770B8A; // 0x068C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_68D[0x3];                                      // 0x068D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     TransitionTL;                                      // 0x0690(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               BoundsMeshMID;                                     // 0x0698(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     BoundsMeshSourceMaterial;                          // 0x06A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0658(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UComplexPawnOverlapComponent*           BoundsMeshComponent;                               // 0x0660(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         TransitionTL_Fade_DD1C029E4A879F5D954A60A7D9770B8A; // 0x0668(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            TransitionTL__Direction_DD1C029E4A879F5D954A60A7D9770B8A; // 0x066C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_66D[0x3];                                      // 0x066D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     TransitionTL;                                      // 0x0670(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               BoundsMeshMID;                                     // 0x0678(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     BoundsMeshSourceMaterial;                          // 0x0680(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_FortVolumeActor_Base(int32 EntryPoint);
+	void OnDeathPlayEffects_1(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
+	void ReceiveBeginPlay();
 	void TransitionTL__UpdateFunc();
 	void TransitionTL__FinishedFunc();
-	void ReceiveBeginPlay();
-	void OnDeathPlayEffects_1(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
-	void ExecuteUbergraph_FortVolumeActor_Base(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -49,6 +48,15 @@ public:
 		return GetDefaultObjImpl<AFortVolumeActor_Base_C>();
 	}
 };
+static_assert(alignof(AFortVolumeActor_Base_C) == 0x000008, "Wrong alignment on AFortVolumeActor_Base_C");
+static_assert(sizeof(AFortVolumeActor_Base_C) == 0x000688, "Wrong size on AFortVolumeActor_Base_C");
+static_assert(offsetof(AFortVolumeActor_Base_C, UberGraphFrame) == 0x000658, "Member 'AFortVolumeActor_Base_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AFortVolumeActor_Base_C, BoundsMeshComponent) == 0x000660, "Member 'AFortVolumeActor_Base_C::BoundsMeshComponent' has a wrong offset!");
+static_assert(offsetof(AFortVolumeActor_Base_C, TransitionTL_Fade_DD1C029E4A879F5D954A60A7D9770B8A) == 0x000668, "Member 'AFortVolumeActor_Base_C::TransitionTL_Fade_DD1C029E4A879F5D954A60A7D9770B8A' has a wrong offset!");
+static_assert(offsetof(AFortVolumeActor_Base_C, TransitionTL__Direction_DD1C029E4A879F5D954A60A7D9770B8A) == 0x00066C, "Member 'AFortVolumeActor_Base_C::TransitionTL__Direction_DD1C029E4A879F5D954A60A7D9770B8A' has a wrong offset!");
+static_assert(offsetof(AFortVolumeActor_Base_C, TransitionTL) == 0x000670, "Member 'AFortVolumeActor_Base_C::TransitionTL' has a wrong offset!");
+static_assert(offsetof(AFortVolumeActor_Base_C, BoundsMeshMID) == 0x000678, "Member 'AFortVolumeActor_Base_C::BoundsMeshMID' has a wrong offset!");
+static_assert(offsetof(AFortVolumeActor_Base_C, BoundsMeshSourceMaterial) == 0x000680, "Member 'AFortVolumeActor_Base_C::BoundsMeshSourceMaterial' has a wrong offset!");
 
 }
 

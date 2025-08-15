@@ -18,26 +18,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass FlagSelectionModal.FlagSelectionModal_C
-// 0x0040 (0x0610 - 0x05D0)
+// 0x0028 (0x0570 - 0x0548)
 class UFlagSelectionModal_C final : public UFortFlagSelectionModal
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x05D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UVerticalBox*                           FlagConfirmation;                                  // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           FlagSelection;                                     // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_0;                                        // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        Switcher_Confirmation;                             // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USoundBase*                             FlagAppearWhooshSound;                             // 0x0600(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             FlagClickSound;                                    // 0x0608(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0548(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UVerticalBox*                           FlagConfirmation;                                  // 0x0550(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           FlagSelection;                                     // 0x0558(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_0;                                        // 0x0560(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        Switcher_Confirmation;                             // 0x0568(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__FlagSelectionModal_Button_Change_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__FlagSelectionModal_Button_ConfirmationCancel_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__FlagSelectionModal_TileView_FlagOptions_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item);
+	void Handle_Back(bool* PassThrough);
+	void BndEvt__Button_Change_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void BndEvt__Button_ConfirmationCancel_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void BP_OnActivated();
 	void ExecuteUbergraph_FlagSelectionModal(int32 EntryPoint);
-	void Handle_Back(bool* PassThrough);
 
 public:
 	static class UClass* StaticClass()
@@ -50,15 +46,12 @@ public:
 	}
 };
 static_assert(alignof(UFlagSelectionModal_C) == 0x000008, "Wrong alignment on UFlagSelectionModal_C");
-static_assert(sizeof(UFlagSelectionModal_C) == 0x000610, "Wrong size on UFlagSelectionModal_C");
-static_assert(offsetof(UFlagSelectionModal_C, UberGraphFrame) == 0x0005D0, "Member 'UFlagSelectionModal_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UFlagSelectionModal_C, Intro) == 0x0005D8, "Member 'UFlagSelectionModal_C::Intro' has a wrong offset!");
-static_assert(offsetof(UFlagSelectionModal_C, FlagConfirmation) == 0x0005E0, "Member 'UFlagSelectionModal_C::FlagConfirmation' has a wrong offset!");
-static_assert(offsetof(UFlagSelectionModal_C, FlagSelection) == 0x0005E8, "Member 'UFlagSelectionModal_C::FlagSelection' has a wrong offset!");
-static_assert(offsetof(UFlagSelectionModal_C, SafeZone_0) == 0x0005F0, "Member 'UFlagSelectionModal_C::SafeZone_0' has a wrong offset!");
-static_assert(offsetof(UFlagSelectionModal_C, Switcher_Confirmation) == 0x0005F8, "Member 'UFlagSelectionModal_C::Switcher_Confirmation' has a wrong offset!");
-static_assert(offsetof(UFlagSelectionModal_C, FlagAppearWhooshSound) == 0x000600, "Member 'UFlagSelectionModal_C::FlagAppearWhooshSound' has a wrong offset!");
-static_assert(offsetof(UFlagSelectionModal_C, FlagClickSound) == 0x000608, "Member 'UFlagSelectionModal_C::FlagClickSound' has a wrong offset!");
+static_assert(sizeof(UFlagSelectionModal_C) == 0x000570, "Wrong size on UFlagSelectionModal_C");
+static_assert(offsetof(UFlagSelectionModal_C, UberGraphFrame) == 0x000548, "Member 'UFlagSelectionModal_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UFlagSelectionModal_C, FlagConfirmation) == 0x000550, "Member 'UFlagSelectionModal_C::FlagConfirmation' has a wrong offset!");
+static_assert(offsetof(UFlagSelectionModal_C, FlagSelection) == 0x000558, "Member 'UFlagSelectionModal_C::FlagSelection' has a wrong offset!");
+static_assert(offsetof(UFlagSelectionModal_C, SafeZone_0) == 0x000560, "Member 'UFlagSelectionModal_C::SafeZone_0' has a wrong offset!");
+static_assert(offsetof(UFlagSelectionModal_C, Switcher_Confirmation) == 0x000568, "Member 'UFlagSelectionModal_C::Switcher_Confirmation' has a wrong offset!");
 
 }
 

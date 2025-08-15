@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function TabTouchOptions_New.TabTouchOptions_New_C.ExecuteUbergraph_TabTouchOptions_New
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTabTouchOptions_New_C::ExecuteUbergraph_TabTouchOptions_New(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabTouchOptions_New_C", "ExecuteUbergraph_TabTouchOptions_New");
+
+	Params::TabTouchOptions_New_C_ExecuteUbergraph_TabTouchOptions_New Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function TabTouchOptions_New.TabTouchOptions_New_C.BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -39,6 +59,26 @@ void UTabTouchOptions_New_C::BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1
 }
 
 
+// Function TabTouchOptions_New.TabTouchOptions_New_C.SettingValueChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTabTouchOptions_New_C::SettingValueChanged(float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabTouchOptions_New_C", "SettingValueChanged");
+
+	Params::TabTouchOptions_New_C_SettingValueChanged Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function TabTouchOptions_New.TabTouchOptions_New_C.CenterOnTab
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
 
@@ -50,26 +90,6 @@ void UTabTouchOptions_New_C::CenterOnTab()
 		Func = Class->GetFunction("TabTouchOptions_New_C", "CenterOnTab");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TabTouchOptions_New.TabTouchOptions_New_C.ExecuteUbergraph_TabTouchOptions_New
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTabTouchOptions_New_C::ExecuteUbergraph_TabTouchOptions_New(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabTouchOptions_New_C", "ExecuteUbergraph_TabTouchOptions_New");
-
-	Params::TabTouchOptions_New_C_ExecuteUbergraph_TabTouchOptions_New Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -88,26 +108,6 @@ void UTabTouchOptions_New_C::OnComplete_70DA8CBD478310A11CA48A9F568B15E0(class U
 	Params::TabTouchOptions_New_C_OnComplete_70DA8CBD478310A11CA48A9F568B15E0 Parms{};
 
 	Parms.UserWidget = UserWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TabTouchOptions_New.TabTouchOptions_New_C.SettingValueChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTabTouchOptions_New_C::SettingValueChanged(float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabTouchOptions_New_C", "SettingValueChanged");
-
-	Params::TabTouchOptions_New_C_SettingValueChanged Parms{};
-
-	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

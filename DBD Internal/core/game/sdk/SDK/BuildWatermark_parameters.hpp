@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BuildWatermark.BuildWatermark_C.ExecuteUbergraph_BuildWatermark
-// 0x0260 (0x0260 - 0x0000)
+// 0x0230 (0x0230 - 0x0000)
 struct BuildWatermark_C_ExecuteUbergraph_BuildWatermark final
 {
 public:
@@ -26,16 +26,26 @@ public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0014(0x0010)(ZeroConstructor, NoDestructor)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFortPartyContext*                      CallFunc_GetContext_ReturnValue;                   // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFortTeamMemberInfo                    K2Node_CustomEvent_PlayerInfo;                     // 0x0030(0x0230)(ConstParm, HasGetValueTypeHash)
+	struct FFortTeamMemberInfo                    K2Node_CustomEvent_PlayerInfo;                     // 0x0030(0x0200)(ConstParm, HasGetValueTypeHash)
 };
+static_assert(alignof(BuildWatermark_C_ExecuteUbergraph_BuildWatermark) == 0x000008, "Wrong alignment on BuildWatermark_C_ExecuteUbergraph_BuildWatermark");
+static_assert(sizeof(BuildWatermark_C_ExecuteUbergraph_BuildWatermark) == 0x000230, "Wrong size on BuildWatermark_C_ExecuteUbergraph_BuildWatermark");
+static_assert(offsetof(BuildWatermark_C_ExecuteUbergraph_BuildWatermark, EntryPoint) == 0x000000, "Member 'BuildWatermark_C_ExecuteUbergraph_BuildWatermark::EntryPoint' has a wrong offset!");
+static_assert(offsetof(BuildWatermark_C_ExecuteUbergraph_BuildWatermark, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BuildWatermark_C_ExecuteUbergraph_BuildWatermark::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BuildWatermark_C_ExecuteUbergraph_BuildWatermark, K2Node_CreateDelegate_OutputDelegate_1) == 0x000014, "Member 'BuildWatermark_C_ExecuteUbergraph_BuildWatermark::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(BuildWatermark_C_ExecuteUbergraph_BuildWatermark, CallFunc_GetContext_ReturnValue) == 0x000028, "Member 'BuildWatermark_C_ExecuteUbergraph_BuildWatermark::CallFunc_GetContext_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BuildWatermark_C_ExecuteUbergraph_BuildWatermark, K2Node_CustomEvent_PlayerInfo) == 0x000030, "Member 'BuildWatermark_C_ExecuteUbergraph_BuildWatermark::K2Node_CustomEvent_PlayerInfo' has a wrong offset!");
 
 // Function BuildWatermark.BuildWatermark_C.HandlePlayerStateChanged
-// 0x0230 (0x0230 - 0x0000)
+// 0x0200 (0x0200 - 0x0000)
 struct BuildWatermark_C_HandlePlayerStateChanged final
 {
 public:
-	struct FFortTeamMemberInfo                    PlayerInfo;                                        // 0x0000(0x0230)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	struct FFortTeamMemberInfo                    PlayerInfo;                                        // 0x0000(0x0200)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 };
+static_assert(alignof(BuildWatermark_C_HandlePlayerStateChanged) == 0x000008, "Wrong alignment on BuildWatermark_C_HandlePlayerStateChanged");
+static_assert(sizeof(BuildWatermark_C_HandlePlayerStateChanged) == 0x000200, "Wrong size on BuildWatermark_C_HandlePlayerStateChanged");
+static_assert(offsetof(BuildWatermark_C_HandlePlayerStateChanged, PlayerInfo) == 0x000000, "Member 'BuildWatermark_C_HandlePlayerStateChanged::PlayerInfo' has a wrong offset!");
 
 }
 

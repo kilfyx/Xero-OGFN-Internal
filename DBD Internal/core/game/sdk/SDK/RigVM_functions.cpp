@@ -48,12 +48,11 @@ int32 URigVM::AddRigVMFunction(class UScriptStruct* InRigVMStruct, const class F
 
 
 // Function RigVM.RigVM.Execute
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class FName&                      InEntryName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool URigVM::Execute(const class FName& InEntryName)
+bool URigVM::Execute()
 {
 	static class UFunction* Func = nullptr;
 
@@ -61,8 +60,6 @@ bool URigVM::Execute(const class FName& InEntryName)
 		Func = Class->GetFunction("RigVM", "Execute");
 
 	Params::RigVM_Execute Parms{};
-
-	Parms.InEntryName = InEntryName;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -90,36 +87,6 @@ bool URigVM::GetParameterValueBool(const class FName& InParameterName, int32 InA
 		Func = Class->GetFunction("RigVM", "GetParameterValueBool");
 
 	Params::RigVM_GetParameterValueBool Parms{};
-
-	Parms.InParameterName = InParameterName;
-	Parms.InArrayIndex = InArrayIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function RigVM.RigVM.GetParameterValueDouble
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FName&                      InParameterName                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   InArrayIndex                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-double URigVM::GetParameterValueDouble(const class FName& InParameterName, int32 InArrayIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RigVM", "GetParameterValueDouble");
-
-	Params::RigVM_GetParameterValueDouble Parms{};
 
 	Parms.InParameterName = InParameterName;
 	Parms.InArrayIndex = InArrayIndex;
@@ -404,35 +371,6 @@ void URigVM::SetParameterValueBool(const class FName& InParameterName, bool InVa
 }
 
 
-// Function RigVM.RigVM.SetParameterValueDouble
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FName&                      InParameterName                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   InArrayIndex                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void URigVM::SetParameterValueDouble(const class FName& InParameterName, double InValue, int32 InArrayIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RigVM", "SetParameterValueDouble");
-
-	Params::RigVM_SetParameterValueDouble Parms{};
-
-	Parms.InParameterName = InParameterName;
-	Parms.InValue = InValue;
-	Parms.InArrayIndex = InArrayIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function RigVM.RigVM.SetParameterValueFloat
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -665,6 +603,34 @@ void URigVM::SetParameterValueVector2D(const class FName& InParameterName, const
 }
 
 
+// Function RigVM.RigVM.GetParameterArraySize
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FName&                      InParameterName                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 URigVM::GetParameterArraySize(const class FName& InParameterName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVM", "GetParameterArraySize");
+
+	Params::RigVM_GetParameterArraySize Parms{};
+
+	Parms.InParameterName = InParameterName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function RigVM.RigVM.GetRigVMFunctionName
 // (Final, Native, Public, Const)
 // Parameters:
@@ -681,31 +647,6 @@ class FString URigVM::GetRigVMFunctionName(int32 InFunctionIndex) const
 	Params::RigVM_GetRigVMFunctionName Parms{};
 
 	Parms.InFunctionIndex = InFunctionIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function RigVM.RigVM.GetStatistics
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FRigVMStatistics                 ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FRigVMStatistics URigVM::GetStatistics() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RigVM", "GetStatistics");
-
-	Params::RigVM_GetStatistics Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

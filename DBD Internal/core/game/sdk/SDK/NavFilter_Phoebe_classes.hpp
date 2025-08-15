@@ -18,7 +18,7 @@ namespace SDK
 
 // BlueprintGeneratedClass NavFilter_Phoebe.NavFilter_Phoebe_C
 // 0x0000 (0x0048 - 0x0048)
-class UNavFilter_Phoebe_C final : public UNavigationQueryFilter
+class UNavFilter_Phoebe_C : public UNavigationQueryFilter
 {
 public:
 	static class UClass* StaticClass()

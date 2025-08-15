@@ -17,88 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.ActiveAbilitySetup
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAbilitySystemComponent*          AbilitySystemIn                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAbilitySystemComponent**         AbilitySystemOut                                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Commando_FragGrenade_WithTrajectory_C::ActiveAbilitySetup(class UAbilitySystemComponent* AbilitySystemIn, class UAbilitySystemComponent** AbilitySystemOut)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "ActiveAbilitySetup");
-
-	Params::GA_Commando_FragGrenade_WithTrajectory_C_ActiveAbilitySetup Parms{};
-
-	Parms.AbilitySystemIn = AbilitySystemIn;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (AbilitySystemOut != nullptr)
-		*AbilitySystemOut = Parms.AbilitySystemOut;
-}
-
-
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.Cancelled_BF65CDBE4F9E98E9174850B85775A15B
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Commando_FragGrenade_WithTrajectory_C::Cancelled_BF65CDBE4F9E98E9174850B85775A15B(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "Cancelled_BF65CDBE4F9E98E9174850B85775A15B");
-
-	Params::GA_Commando_FragGrenade_WithTrajectory_C_Cancelled_BF65CDBE4F9E98E9174850B85775A15B Parms{};
-
-	Parms.TargetData = std::move(TargetData);
-	Parms.ApplicationTag = std::move(ApplicationTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.CleanupTrajectoryDisplay
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Commando_FragGrenade_WithTrajectory_C::CleanupTrajectoryDisplay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "CleanupTrajectoryDisplay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.Completed_BF65CDBE4F9E98E9174850B85775A15B
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Commando_FragGrenade_WithTrajectory_C::Completed_BF65CDBE4F9E98E9174850B85775A15B(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "Completed_BF65CDBE4F9E98E9174850B85775A15B");
-
-	Params::GA_Commando_FragGrenade_WithTrajectory_C_Completed_BF65CDBE4F9E98E9174850B85775A15B Parms{};
-
-	Parms.TargetData = std::move(TargetData);
-	Parms.ApplicationTag = std::move(ApplicationTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.ExecuteUbergraph_GA_Commando_FragGrenade_WithTrajectory
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -119,6 +37,34 @@ void UGA_Commando_FragGrenade_WithTrajectory_C::ExecuteUbergraph_GA_Commando_Fra
 }
 
 
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.ServerSpawnProjectile
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Commando_FragGrenade_WithTrajectory_C::ServerSpawnProjectile()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "ServerSpawnProjectile");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.TossGrenade
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Commando_FragGrenade_WithTrajectory_C::TossGrenade()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "TossGrenade");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.K2_ActivateAbility
 // (Event, Protected, BlueprintEvent)
 
@@ -133,10 +79,24 @@ void UGA_Commando_FragGrenade_WithTrajectory_C::K2_ActivateAbility()
 }
 
 
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.CleanupTrajectoryDisplay
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Commando_FragGrenade_WithTrajectory_C::CleanupTrajectoryDisplay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "CleanupTrajectoryDisplay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.K2_OnEndAbility
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UGA_Commando_FragGrenade_WithTrajectory_C::K2_OnEndAbility(bool bWasCancelled)
 {
@@ -167,29 +127,81 @@ void UGA_Commando_FragGrenade_WithTrajectory_C::OnAbilityInputReleased()
 }
 
 
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.OnBlendOut_854170AF4268B06A435A3AA33232C5BF
-// (BlueprintCallable, BlueprintEvent)
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.Triggered_BF65CDBE4F9E98E9174850B85775A15B
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Commando_FragGrenade_WithTrajectory_C::OnBlendOut_854170AF4268B06A435A3AA33232C5BF()
+void UGA_Commando_FragGrenade_WithTrajectory_C::Triggered_BF65CDBE4F9E98E9174850B85775A15B(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "OnBlendOut_854170AF4268B06A435A3AA33232C5BF");
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "Triggered_BF65CDBE4F9E98E9174850B85775A15B");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::GA_Commando_FragGrenade_WithTrajectory_C_Triggered_BF65CDBE4F9E98E9174850B85775A15B Parms{};
+
+	Parms.TargetData = std::move(TargetData);
+	Parms.ApplicationTag = std::move(ApplicationTag);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.OnCancelled_854170AF4268B06A435A3AA33232C5BF
-// (BlueprintCallable, BlueprintEvent)
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.Cancelled_BF65CDBE4F9E98E9174850B85775A15B
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Commando_FragGrenade_WithTrajectory_C::OnCancelled_854170AF4268B06A435A3AA33232C5BF()
+void UGA_Commando_FragGrenade_WithTrajectory_C::Cancelled_BF65CDBE4F9E98E9174850B85775A15B(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "OnCancelled_854170AF4268B06A435A3AA33232C5BF");
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "Cancelled_BF65CDBE4F9E98E9174850B85775A15B");
+
+	Params::GA_Commando_FragGrenade_WithTrajectory_C_Cancelled_BF65CDBE4F9E98E9174850B85775A15B Parms{};
+
+	Parms.TargetData = std::move(TargetData);
+	Parms.ApplicationTag = std::move(ApplicationTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.Completed_BF65CDBE4F9E98E9174850B85775A15B
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Commando_FragGrenade_WithTrajectory_C::Completed_BF65CDBE4F9E98E9174850B85775A15B(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "Completed_BF65CDBE4F9E98E9174850B85775A15B");
+
+	Params::GA_Commando_FragGrenade_WithTrajectory_C_Completed_BF65CDBE4F9E98E9174850B85775A15B Parms{};
+
+	Parms.TargetData = std::move(TargetData);
+	Parms.ApplicationTag = std::move(ApplicationTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.OnFinish_1C6A100D44D1ACE5BBB57DAEDB3561CB
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Commando_FragGrenade_WithTrajectory_C::OnFinish_1C6A100D44D1ACE5BBB57DAEDB3561CB()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "OnFinish_1C6A100D44D1ACE5BBB57DAEDB3561CB");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -209,29 +221,15 @@ void UGA_Commando_FragGrenade_WithTrajectory_C::OnCompleted_854170AF4268B06A435A
 }
 
 
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.OnFinish_1C6A100D44D1ACE5BBB57DAEDB3561CB
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.OnBlendOut_854170AF4268B06A435A3AA33232C5BF
 // (BlueprintCallable, BlueprintEvent)
 
-void UGA_Commando_FragGrenade_WithTrajectory_C::OnFinish_1C6A100D44D1ACE5BBB57DAEDB3561CB()
+void UGA_Commando_FragGrenade_WithTrajectory_C::OnBlendOut_854170AF4268B06A435A3AA33232C5BF()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "OnFinish_1C6A100D44D1ACE5BBB57DAEDB3561CB");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.OnFinish_F5D87C9E46378707AE4C79B3A42F5A45
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Commando_FragGrenade_WithTrajectory_C::OnFinish_F5D87C9E46378707AE4C79B3A42F5A45()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "OnFinish_F5D87C9E46378707AE4C79B3A42F5A45");
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "OnBlendOut_854170AF4268B06A435A3AA33232C5BF");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -251,49 +249,29 @@ void UGA_Commando_FragGrenade_WithTrajectory_C::OnInterrupted_854170AF4268B06A43
 }
 
 
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.ServerSpawnProjectile
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.OnCancelled_854170AF4268B06A435A3AA33232C5BF
 // (BlueprintCallable, BlueprintEvent)
 
-void UGA_Commando_FragGrenade_WithTrajectory_C::ServerSpawnProjectile()
+void UGA_Commando_FragGrenade_WithTrajectory_C::OnCancelled_854170AF4268B06A435A3AA33232C5BF()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "ServerSpawnProjectile");
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "OnCancelled_854170AF4268B06A435A3AA33232C5BF");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.SetupAbility
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAbilitySystemComponent*          AbilitySystemComponentRef                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.OnFinish_F5D87C9E46378707AE4C79B3A42F5A45
+// (BlueprintCallable, BlueprintEvent)
 
-void UGA_Commando_FragGrenade_WithTrajectory_C::SetupAbility(class UAbilitySystemComponent* AbilitySystemComponentRef)
+void UGA_Commando_FragGrenade_WithTrajectory_C::OnFinish_F5D87C9E46378707AE4C79B3A42F5A45()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "SetupAbility");
-
-	Params::GA_Commando_FragGrenade_WithTrajectory_C_SetupAbility Parms{};
-
-	Parms.AbilitySystemComponentRef = AbilitySystemComponentRef;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.SetupDummyProjectile
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UGA_Commando_FragGrenade_WithTrajectory_C::SetupDummyProjectile()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "SetupDummyProjectile");
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "OnFinish_F5D87C9E46378707AE4C79B3A42F5A45");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -335,6 +313,54 @@ void UGA_Commando_FragGrenade_WithTrajectory_C::SetupGrenade(float AimPitch, cla
 }
 
 
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.SetupAbility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAbilitySystemComponent*          AbilitySystemComponentRef                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Commando_FragGrenade_WithTrajectory_C::SetupAbility(class UAbilitySystemComponent* AbilitySystemComponentRef)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "SetupAbility");
+
+	Params::GA_Commando_FragGrenade_WithTrajectory_C_SetupAbility Parms{};
+
+	Parms.AbilitySystemComponentRef = AbilitySystemComponentRef;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.SetupDummyProjectile
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UGA_Commando_FragGrenade_WithTrajectory_C::SetupDummyProjectile()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "SetupDummyProjectile");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.UpdateTrajectorySpline
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UGA_Commando_FragGrenade_WithTrajectory_C::UpdateTrajectorySpline()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "UpdateTrajectorySpline");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.SpawnFragGrenade
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -367,77 +393,27 @@ void UGA_Commando_FragGrenade_WithTrajectory_C::SpawnFragGrenade(class UClass* P
 }
 
 
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.TossGrenade
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Commando_FragGrenade_WithTrajectory_C::TossGrenade()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "TossGrenade");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.Triggered_BF65CDBE4F9E98E9174850B85775A15B
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.ActiveAbilitySetup
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// class UAbilitySystemComponent*          AbilitySystemIn                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAbilitySystemComponent**         AbilitySystemOut                                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Commando_FragGrenade_WithTrajectory_C::Triggered_BF65CDBE4F9E98E9174850B85775A15B(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
+void UGA_Commando_FragGrenade_WithTrajectory_C::ActiveAbilitySetup(class UAbilitySystemComponent* AbilitySystemIn, class UAbilitySystemComponent** AbilitySystemOut)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "Triggered_BF65CDBE4F9E98E9174850B85775A15B");
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "ActiveAbilitySetup");
 
-	Params::GA_Commando_FragGrenade_WithTrajectory_C_Triggered_BF65CDBE4F9E98E9174850B85775A15B Parms{};
+	Params::GA_Commando_FragGrenade_WithTrajectory_C_ActiveAbilitySetup Parms{};
 
-	Parms.TargetData = std::move(TargetData);
-	Parms.ApplicationTag = std::move(ApplicationTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.UpdateTrajectorySpline
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UGA_Commando_FragGrenade_WithTrajectory_C::UpdateTrajectorySpline()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "UpdateTrajectorySpline");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.CalcGrenadeSpeedFromPitch
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// float                                   AimPitch                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float*                                  GrenadeSpeed                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Commando_FragGrenade_WithTrajectory_C::CalcGrenadeSpeedFromPitch(float AimPitch, float* GrenadeSpeed) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "CalcGrenadeSpeedFromPitch");
-
-	Params::GA_Commando_FragGrenade_WithTrajectory_C_CalcGrenadeSpeedFromPitch Parms{};
-
-	Parms.AimPitch = AimPitch;
+	Parms.AbilitySystemIn = AbilitySystemIn;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (GrenadeSpeed != nullptr)
-		*GrenadeSpeed = Parms.GrenadeSpeed;
+	if (AbilitySystemOut != nullptr)
+		*AbilitySystemOut = Parms.AbilitySystemOut;
 }
 
 
@@ -463,6 +439,30 @@ void UGA_Commando_FragGrenade_WithTrajectory_C::SpawnLocationAndRotation(struct 
 
 	if (OutRot != nullptr)
 		*OutRot = std::move(Parms.OutRot);
+}
+
+
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.CalcGrenadeSpeedFromPitch
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// float                                   AimPitch                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  GrenadeSpeed                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Commando_FragGrenade_WithTrajectory_C::CalcGrenadeSpeedFromPitch(float AimPitch, float* GrenadeSpeed) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "CalcGrenadeSpeedFromPitch");
+
+	Params::GA_Commando_FragGrenade_WithTrajectory_C_CalcGrenadeSpeedFromPitch Parms{};
+
+	Parms.AimPitch = AimPitch;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (GrenadeSpeed != nullptr)
+		*GrenadeSpeed = Parms.GrenadeSpeed;
 }
 
 }

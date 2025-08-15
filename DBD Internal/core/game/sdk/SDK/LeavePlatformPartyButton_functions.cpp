@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function LeavePlatformPartyButton.LeavePlatformPartyButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void ULeavePlatformPartyButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LeavePlatformPartyButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function LeavePlatformPartyButton.LeavePlatformPartyButton_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void ULeavePlatformPartyButton_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LeavePlatformPartyButton_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function LeavePlatformPartyButton.LeavePlatformPartyButton_C.ExecuteUbergraph_LeavePlatformPartyButton
 // (Final, UbergraphFunction)
 // Parameters:
@@ -62,6 +34,34 @@ void ULeavePlatformPartyButton_C::ExecuteUbergraph_LeavePlatformPartyButton(int3
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LeavePlatformPartyButton.LeavePlatformPartyButton_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void ULeavePlatformPartyButton_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LeavePlatformPartyButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LeavePlatformPartyButton.LeavePlatformPartyButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void ULeavePlatformPartyButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LeavePlatformPartyButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -16,58 +16,93 @@
 namespace SDK::Params
 {
 
+// Function BP_AthenaMapScreenContainer.BP_AthenaMapScreenContainer_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct BP_AthenaMapScreenContainer_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_AthenaMapScreenContainer_C_PreConstruct) == 0x000001, "Wrong alignment on BP_AthenaMapScreenContainer_C_PreConstruct");
+static_assert(sizeof(BP_AthenaMapScreenContainer_C_PreConstruct) == 0x000001, "Wrong size on BP_AthenaMapScreenContainer_C_PreConstruct");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'BP_AthenaMapScreenContainer_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
 // Function BP_AthenaMapScreenContainer.BP_AthenaMapScreenContainer_C.BP_OnShowTabsSet
 // 0x0001 (0x0001 - 0x0000)
 struct BP_AthenaMapScreenContainer_C_BP_OnShowTabsSet final
 {
 public:
-	bool                                          bShowTabs;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShowTabs;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-
-// Function BP_AthenaMapScreenContainer.BP_AthenaMapScreenContainer_C.ExecuteUbergraph_BP_AthenaMapScreenContainer
-// 0x0070 (0x0070 - 0x0000)
-struct BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UScoreboard_UI_C*                       K2Node_DynamicCast_AsScoreboard_UI;                // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bShowTabs;                            // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bShowCreativeScoreboard;              // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IFortHideShowInterface> K2Node_DynamicCast_AsFort_Hide_Show_Interface;    // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IFortHideShowInterface> K2Node_DynamicCast_AsFort_Hide_Show_Interface_1;  // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
+static_assert(alignof(BP_AthenaMapScreenContainer_C_BP_OnShowTabsSet) == 0x000001, "Wrong alignment on BP_AthenaMapScreenContainer_C_BP_OnShowTabsSet");
+static_assert(sizeof(BP_AthenaMapScreenContainer_C_BP_OnShowTabsSet) == 0x000001, "Wrong size on BP_AthenaMapScreenContainer_C_BP_OnShowTabsSet");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_BP_OnShowTabsSet, bShowTabs) == 0x000000, "Member 'BP_AthenaMapScreenContainer_C_BP_OnShowTabsSet::bShowTabs' has a wrong offset!");
 
 // Function BP_AthenaMapScreenContainer.BP_AthenaMapScreenContainer_C.OnShowOrHideCreativeScoreboard
 // 0x0001 (0x0001 - 0x0000)
 struct BP_AthenaMapScreenContainer_C_OnShowOrHideCreativeScoreboard final
 {
 public:
-	bool                                          bShowCreativeScoreboard;                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShowCreativeScoreboard;                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(BP_AthenaMapScreenContainer_C_OnShowOrHideCreativeScoreboard) == 0x000001, "Wrong alignment on BP_AthenaMapScreenContainer_C_OnShowOrHideCreativeScoreboard");
+static_assert(sizeof(BP_AthenaMapScreenContainer_C_OnShowOrHideCreativeScoreboard) == 0x000001, "Wrong size on BP_AthenaMapScreenContainer_C_OnShowOrHideCreativeScoreboard");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_OnShowOrHideCreativeScoreboard, bShowCreativeScoreboard) == 0x000000, "Member 'BP_AthenaMapScreenContainer_C_OnShowOrHideCreativeScoreboard::bShowCreativeScoreboard' has a wrong offset!");
 
-// Function BP_AthenaMapScreenContainer.BP_AthenaMapScreenContainer_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct BP_AthenaMapScreenContainer_C_PreConstruct final
+// Function BP_AthenaMapScreenContainer.BP_AthenaMapScreenContainer_C.OnCreativeScoreboardWidgetCreated
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AthenaMapScreenContainer_C_OnCreativeScoreboardWidgetCreated final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonUserWidget*                      CreativeScoreboardWidget;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(BP_AthenaMapScreenContainer_C_OnCreativeScoreboardWidgetCreated) == 0x000008, "Wrong alignment on BP_AthenaMapScreenContainer_C_OnCreativeScoreboardWidgetCreated");
+static_assert(sizeof(BP_AthenaMapScreenContainer_C_OnCreativeScoreboardWidgetCreated) == 0x000008, "Wrong size on BP_AthenaMapScreenContainer_C_OnCreativeScoreboardWidgetCreated");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_OnCreativeScoreboardWidgetCreated, CreativeScoreboardWidget) == 0x000000, "Member 'BP_AthenaMapScreenContainer_C_OnCreativeScoreboardWidgetCreated::CreativeScoreboardWidget' has a wrong offset!");
+
+// Function BP_AthenaMapScreenContainer.BP_AthenaMapScreenContainer_C.ExecuteUbergraph_BP_AthenaMapScreenContainer
+// 0x0048 (0x0048 - 0x0000)
+struct BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCommonUserWidget*                      K2Node_Event_CreativeScoreboardWidget;             // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IFortHideShowInterface> K2Node_DynamicCast_AsFort_Hide_Show_Interface;    // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x002E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bShowTabs;                            // 0x002F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bShowCreativeScoreboard;              // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer) == 0x000008, "Wrong alignment on BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer");
+static_assert(sizeof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer) == 0x000048, "Wrong size on BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, EntryPoint) == 0x000000, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::EntryPoint' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, K2Node_Event_CreativeScoreboardWidget) == 0x000008, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::K2Node_Event_CreativeScoreboardWidget' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, Temp_bool_Variable) == 0x000010, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, K2Node_DynamicCast_AsFort_Hide_Show_Interface) == 0x000018, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::K2Node_DynamicCast_AsFort_Hide_Show_Interface' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, Temp_byte_Variable) == 0x000029, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, Temp_byte_Variable_1) == 0x00002A, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, Temp_bool_Variable_1) == 0x00002B, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, Temp_byte_Variable_2) == 0x00002C, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::Temp_byte_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, Temp_byte_Variable_3) == 0x00002D, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::Temp_byte_Variable_3' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, K2Node_Event_IsDesignTime) == 0x00002E, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, K2Node_Event_bShowTabs) == 0x00002F, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::K2Node_Event_bShowTabs' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, K2Node_Select_Default) == 0x000030, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, CallFunc_PlayAnimation_ReturnValue) == 0x000038, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, K2Node_Event_bShowCreativeScoreboard) == 0x000040, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::K2Node_Event_bShowCreativeScoreboard' has a wrong offset!");
+static_assert(offsetof(BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer, K2Node_Select_Default_1) == 0x000041, "Member 'BP_AthenaMapScreenContainer_C_ExecuteUbergraph_BP_AthenaMapScreenContainer::K2Node_Select_Default_1' has a wrong offset!");
 
 }
 

@@ -19,10 +19,14 @@ namespace SDK::Params
 struct EnemyPawn_Interface_C_Orphaned final
 {
 public:
-	bool                                          IsOrphaned;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsOrphaned;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AFortPawn*                              AttachedPawn;                                      // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(EnemyPawn_Interface_C_Orphaned) == 0x000008, "Wrong alignment on EnemyPawn_Interface_C_Orphaned");
+static_assert(sizeof(EnemyPawn_Interface_C_Orphaned) == 0x000010, "Wrong size on EnemyPawn_Interface_C_Orphaned");
+static_assert(offsetof(EnemyPawn_Interface_C_Orphaned, IsOrphaned) == 0x000000, "Member 'EnemyPawn_Interface_C_Orphaned::IsOrphaned' has a wrong offset!");
+static_assert(offsetof(EnemyPawn_Interface_C_Orphaned, AttachedPawn) == 0x000008, "Member 'EnemyPawn_Interface_C_Orphaned::AttachedPawn' has a wrong offset!");
 
 }
 

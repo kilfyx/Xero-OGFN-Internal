@@ -17,205 +17,23 @@
 namespace SDK
 {
 
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.UpdateReticleLocation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::UpdateReticleLocation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "UpdateReticleLocation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.TimerCheckPlayerDistance
-// (BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::TimerCheckPlayerDistance()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "TimerCheckPlayerDistance");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.StopFallAudioTimeline
-// (BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::StopFallAudioTimeline()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "StopFallAudioTimeline");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.SpawnVehicle
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::SpawnVehicle()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "SpawnVehicle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.SpawnLoot
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::SpawnLoot()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "SpawnLoot");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.SetupQuestData
-// (BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::SetupQuestData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "SetupQuestData");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.Setup Bind To Building Actor
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.ExecuteUbergraph_AthenaSupplyDrop
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UObject*                          Object                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AAthenaSupplyDrop_C::Setup_Bind_To_Building_Actor(class UObject* Object)
+void AAthenaSupplyDrop_C::ExecuteUbergraph_AthenaSupplyDrop(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "Setup Bind To Building Actor");
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "ExecuteUbergraph_AthenaSupplyDrop");
 
-	Params::AthenaSupplyDrop_C_Setup_Bind_To_Building_Actor Parms{};
+	Params::AthenaSupplyDrop_C_ExecuteUbergraph_AthenaSupplyDrop Parms{};
 
-	Parms.Object = Object;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.PlayLandingFX
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bSpawnVFX                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AAthenaSupplyDrop_C::PlayLandingFX(bool bSpawnVFX)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "PlayLandingFX");
-
-	Params::AthenaSupplyDrop_C_PlayLandingFX Parms{};
-
-	Parms.bSpawnVFX = bSpawnVFX;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.Play Looted Dialogue
-// (BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::Play_Looted_Dialogue()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "Play Looted Dialogue");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.PhysicsActivated
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UActorComponent*                  Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bReset                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AAthenaSupplyDrop_C::PhysicsActivated(class UActorComponent* Component, bool bReset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "PhysicsActivated");
-
-	Params::AthenaSupplyDrop_C_PhysicsActivated Parms{};
-
-	Parms.Component = Component;
-	Parms.bReset = bReset;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OpenSupplyDrop
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::OpenSupplyDrop()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "OpenSupplyDrop");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -239,71 +57,257 @@ void AAthenaSupplyDrop_C::OnTouchedFillFloor(class AAthenaFillFloor* FillFloorAc
 }
 
 
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnSetCustomDepthStencilValue
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<class UPrimitiveComponent*>&PrimComponents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// bool                                    bUseCustomDepth                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   StencilValue                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   bOutConsume                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AAthenaSupplyDrop_C::OnSetCustomDepthStencilValue(const TArray<class UPrimitiveComponent*>& PrimComponents, bool bUseCustomDepth, int32 StencilValue, bool* bOutConsume)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnSetCustomDepthStencilValue");
-
-	Params::AthenaSupplyDrop_C_OnSetCustomDepthStencilValue Parms{};
-
-	Parms.PrimComponents = std::move(PrimComponents);
-	Parms.bUseCustomDepth = bUseCustomDepth;
-	Parms.StencilValue = StencilValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bOutConsume != nullptr)
-		*bOutConsume = Parms.bOutConsume;
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnRep_Opened
-// (HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::OnRep_Opened()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnRep_Opened");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnRep_LandingLocation
-// (HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::OnRep_LandingLocation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnRep_LandingLocation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnRep_BalloonPopped
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnDelayedSpawnLoot
 // (BlueprintCallable, BlueprintEvent)
 
-void AAthenaSupplyDrop_C::OnRep_BalloonPopped()
+void AAthenaSupplyDrop_C::OnDelayedSpawnLoot()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnRep_BalloonPopped");
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnDelayedSpawnLoot");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.BndEvt__FortWaterInteraction_K2Node_ComponentBoundEvent_3_WaterInteractionOnEnterWater__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class AFortWaterBodyActor*              WaterBody                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortWaterInteractionComponent*   WaterInteractionComponent                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsFirstBody                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AAthenaSupplyDrop_C::BndEvt__FortWaterInteraction_K2Node_ComponentBoundEvent_3_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent, bool bIsFirstBody)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "BndEvt__FortWaterInteraction_K2Node_ComponentBoundEvent_3_WaterInteractionOnEnterWater__DelegateSignature");
+
+	Params::AthenaSupplyDrop_C_BndEvt__FortWaterInteraction_K2Node_ComponentBoundEvent_3_WaterInteractionOnEnterWater__DelegateSignature Parms{};
+
+	Parms.WaterBody = WaterBody;
+	Parms.WaterInteractionComponent = WaterInteractionComponent;
+	Parms.bIsFirstBody = bIsFirstBody;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.SetupQuestData
+// (BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::SetupQuestData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "SetupQuestData");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.BndEvt__FortProjectileMovement_K2Node_ComponentBoundEvent_2_OnProjectileStopDelegate__DelegateSignature
+// (HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FHitResult&                ImpactResult                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void AAthenaSupplyDrop_C::BndEvt__FortProjectileMovement_K2Node_ComponentBoundEvent_2_OnProjectileStopDelegate__DelegateSignature(const struct FHitResult& ImpactResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "BndEvt__FortProjectileMovement_K2Node_ComponentBoundEvent_2_OnProjectileStopDelegate__DelegateSignature");
+
+	Params::AthenaSupplyDrop_C_BndEvt__FortProjectileMovement_K2Node_ComponentBoundEvent_2_OnProjectileStopDelegate__DelegateSignature Parms{};
+
+	Parms.ImpactResult = std::move(ImpactResult);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.Play Looted Dialogue
+// (BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::Play_Looted_Dialogue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "Play Looted Dialogue");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.DestroyGroundComponents
+// (BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::DestroyGroundComponents()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "DestroyGroundComponents");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.TimerCheckPlayerDistance
+// (BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::TimerCheckPlayerDistance()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "TimerCheckPlayerDistance");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnLanding
+// (BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::OnLanding()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnLanding");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.StopFallAudioTimeline
+// (BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::StopFallAudioTimeline()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "StopFallAudioTimeline");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.BeginFallAudioTimeline
+// (BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::BeginFallAudioTimeline()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "BeginFallAudioTimeline");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnDeathPlayEffects
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTagContainer&     DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// class AFortPawn*                        InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayEffectContextHandle&EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AAthenaSupplyDrop_C::OnDeathPlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnDeathPlayEffects");
+
+	Params::AthenaSupplyDrop_C_OnDeathPlayEffects Parms{};
+
+	Parms.Damage = Damage;
+	Parms.DamageTags = std::move(DamageTags);
+	Parms.Momentum = std::move(Momentum);
+	Parms.HitInfo = std::move(HitInfo);
+	Parms.InstigatedBy = InstigatedBy;
+	Parms.DamageCauser = DamageCauser;
+	Parms.EffectContext = std::move(EffectContext);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.BlueprintOnInteract
+// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
+// Parameters:
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AAthenaSupplyDrop_C::BlueprintOnInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "BlueprintOnInteract");
+
+	Params::AthenaSupplyDrop_C_BlueprintOnInteract Parms{};
+
+	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnDeathServer
+// (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTagContainer&     DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayEffectContextHandle&EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AAthenaSupplyDrop_C::OnDeathServer(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnDeathServer");
+
+	Params::AthenaSupplyDrop_C_OnDeathServer Parms{};
+
+	Parms.Damage = Damage;
+	Parms.DamageTags = std::move(DamageTags);
+	Parms.Momentum = std::move(Momentum);
+	Parms.HitInfo = std::move(HitInfo);
+	Parms.InstigatedBy = InstigatedBy;
+	Parms.DamageCauser = DamageCauser;
+	Parms.EffectContext = std::move(EffectContext);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.Multicast_ApplyGravityForFall
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::Multicast_ApplyGravityForFall()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "Multicast_ApplyGravityForFall");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -343,123 +347,169 @@ void AAthenaSupplyDrop_C::OnLandingLocationChanged(class AActor* DamagedActor, f
 }
 
 
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnLanding
-// (BlueprintCallable, BlueprintEvent)
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AAthenaSupplyDrop_C::OnLanding()
+void AAthenaSupplyDrop_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnLanding");
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnDelayedSpawnLoot
-// (BlueprintCallable, BlueprintEvent)
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void AAthenaSupplyDrop_C::OnDelayedSpawnLoot()
+void AAthenaSupplyDrop_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnDelayedSpawnLoot");
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnDeathServer
-// (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintEvent)
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.SpawnLoot
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::SpawnLoot()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "SpawnLoot");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.Setup Bind To Building Actor
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTagContainer&     DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayEffectContextHandle&EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UObject*                          Object                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AAthenaSupplyDrop_C::OnDeathServer(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
+void AAthenaSupplyDrop_C::Setup_Bind_To_Building_Actor(class UObject* Object)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnDeathServer");
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "Setup Bind To Building Actor");
 
-	Params::AthenaSupplyDrop_C_OnDeathServer Parms{};
+	Params::AthenaSupplyDrop_C_Setup_Bind_To_Building_Actor Parms{};
 
-	Parms.Damage = Damage;
-	Parms.DamageTags = std::move(DamageTags);
-	Parms.Momentum = std::move(Momentum);
-	Parms.HitInfo = std::move(HitInfo);
-	Parms.InstigatedBy = InstigatedBy;
-	Parms.DamageCauser = DamageCauser;
-	Parms.EffectContext = std::move(EffectContext);
+	Parms.Object = Object;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnDeathPlayEffects
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTagContainer&     DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-// class AFortPawn*                        InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayEffectContextHandle&EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnRep_Opened
+// (HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void AAthenaSupplyDrop_C::OnDeathPlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
+void AAthenaSupplyDrop_C::OnRep_Opened()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnDeathPlayEffects");
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnRep_Opened");
 
-	Params::AthenaSupplyDrop_C_OnDeathPlayEffects Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Damage = Damage;
-	Parms.DamageTags = std::move(DamageTags);
-	Parms.Momentum = std::move(Momentum);
-	Parms.HitInfo = std::move(HitInfo);
-	Parms.InstigatedBy = InstigatedBy;
-	Parms.DamageCauser = DamageCauser;
-	Parms.EffectContext = std::move(EffectContext);
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OpenSupplyDrop
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::OpenSupplyDrop()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "OpenSupplyDrop");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.UpdateReticleLocation
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::UpdateReticleLocation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "UpdateReticleLocation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.BalloonDestroyed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::BalloonDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "BalloonDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnRep_BalloonPopped
+// (BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::OnRep_BalloonPopped()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnRep_BalloonPopped");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.InitFall
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::InitFall()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "InitFall");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.PlayLandingFX
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSpawnVFX                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AAthenaSupplyDrop_C::PlayLandingFX(bool bSpawnVFX)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "PlayLandingFX");
+
+	Params::AthenaSupplyDrop_C_PlayLandingFX Parms{};
+
+	Parms.bSpawnVFX = bSpawnVFX;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.Multicast_ApplyGravityForFall
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::Multicast_ApplyGravityForFall()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "Multicast_ApplyGravityForFall");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.LandingInterrupted
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::LandingInterrupted()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "LandingInterrupted");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -477,15 +527,57 @@ void AAthenaSupplyDrop_C::InitFallHeightAndSpeed()
 }
 
 
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.InitFall
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.DisableFlare
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void AAthenaSupplyDrop_C::InitFall()
+void AAthenaSupplyDrop_C::DisableFlare()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "InitFall");
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "DisableFlare");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.AlmostLanded
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::AlmostLanded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "AlmostLanded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnRep_LandingLocation
+// (HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::OnRep_LandingLocation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnRep_LandingLocation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.ForceSetLocationOnLanding
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDrop_C::ForceSetLocationOnLanding()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "ForceSetLocationOnLanding");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -511,166 +603,38 @@ void AAthenaSupplyDrop_C::HandleProjectileMovementStop(const struct FHitResult& 
 }
 
 
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.ForceSetLocationOnLanding
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::ForceSetLocationOnLanding()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "ForceSetLocationOnLanding");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.ExecuteUbergraph_AthenaSupplyDrop
-// (Final, UbergraphFunction, HasDefaults)
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.OnSetCustomDepthStencilValue
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<class UPrimitiveComponent*>&PrimComponents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// bool                                    bUseCustomDepth                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   StencilValue                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bOutConsume                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AAthenaSupplyDrop_C::ExecuteUbergraph_AthenaSupplyDrop(int32 EntryPoint)
+void AAthenaSupplyDrop_C::OnSetCustomDepthStencilValue(const TArray<class UPrimitiveComponent*>& PrimComponents, bool bUseCustomDepth, int32 StencilValue, bool* bOutConsume)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "ExecuteUbergraph_AthenaSupplyDrop");
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "OnSetCustomDepthStencilValue");
 
-	Params::AthenaSupplyDrop_C_ExecuteUbergraph_AthenaSupplyDrop Parms{};
+	Params::AthenaSupplyDrop_C_OnSetCustomDepthStencilValue Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.PrimComponents = std::move(PrimComponents);
+	Parms.bUseCustomDepth = bUseCustomDepth;
+	Parms.StencilValue = StencilValue;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.DisableFlare
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::DisableFlare()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "DisableFlare");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.DestroyGroundComponents
-// (BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::DestroyGroundComponents()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "DestroyGroundComponents");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.BndEvt__FortWaterInteraction_K2Node_ComponentBoundEvent_3_WaterInteractionOnEnterWater__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class AFortWaterBodyActor*              WaterBody                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFortWaterInteractionComponent*   WaterInteractionComponent                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsFirstBody                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AAthenaSupplyDrop_C::BndEvt__FortWaterInteraction_K2Node_ComponentBoundEvent_3_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent, bool bIsFirstBody)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "BndEvt__FortWaterInteraction_K2Node_ComponentBoundEvent_3_WaterInteractionOnEnterWater__DelegateSignature");
-
-	Params::AthenaSupplyDrop_C_BndEvt__FortWaterInteraction_K2Node_ComponentBoundEvent_3_WaterInteractionOnEnterWater__DelegateSignature Parms{};
-
-	Parms.WaterBody = WaterBody;
-	Parms.WaterInteractionComponent = WaterInteractionComponent;
-	Parms.bIsFirstBody = bIsFirstBody;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.BndEvt__FortProjectileMovement_K2Node_ComponentBoundEvent_2_OnProjectileStopDelegate__DelegateSignature
-// (HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FHitResult&                ImpactResult                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void AAthenaSupplyDrop_C::BndEvt__FortProjectileMovement_K2Node_ComponentBoundEvent_2_OnProjectileStopDelegate__DelegateSignature(const struct FHitResult& ImpactResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "BndEvt__FortProjectileMovement_K2Node_ComponentBoundEvent_2_OnProjectileStopDelegate__DelegateSignature");
-
-	Params::AthenaSupplyDrop_C_BndEvt__FortProjectileMovement_K2Node_ComponentBoundEvent_2_OnProjectileStopDelegate__DelegateSignature Parms{};
-
-	Parms.ImpactResult = std::move(ImpactResult);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.BlueprintOnInteract
-// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
-// Parameters:
-// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AAthenaSupplyDrop_C::BlueprintOnInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "BlueprintOnInteract");
-
-	Params::AthenaSupplyDrop_C_BlueprintOnInteract Parms{};
-
-	Parms.InteractingPawn = InteractingPawn;
-	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.BeginFallAudioTimeline
-// (BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::BeginFallAudioTimeline()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "BeginFallAudioTimeline");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.BalloonDestroyed
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AAthenaSupplyDrop_C::BalloonDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "BalloonDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (bOutConsume != nullptr)
+		*bOutConsume = Parms.bOutConsume;
 }
 
 
 // Function AthenaSupplyDrop.AthenaSupplyDrop_C.Analytics
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const TArray<struct FFortItemEntry>&    ItemsToSpawn                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const TArray<struct FFortItemEntry>&    ItemsToSpawn                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
 void AAthenaSupplyDrop_C::Analytics(const TArray<struct FFortItemEntry>& ItemsToSpawn)
 {
@@ -687,17 +651,44 @@ void AAthenaSupplyDrop_C::Analytics(const TArray<struct FFortItemEntry>& ItemsTo
 }
 
 
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.AlmostLanded
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.SpawnVehicle
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void AAthenaSupplyDrop_C::AlmostLanded()
+void AAthenaSupplyDrop_C::SpawnVehicle()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "AlmostLanded");
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "SpawnVehicle");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaSupplyDrop.AthenaSupplyDrop_C.BlueprintCanInteract
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool AAthenaSupplyDrop_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDrop_C", "BlueprintCanInteract");
+
+	Params::AthenaSupplyDrop_C_BlueprintCanInteract Parms{};
+
+	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+	Parms.InteractionType = InteractionType;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -740,33 +731,6 @@ class FText AAthenaSupplyDrop_C::BlueprintGetInteractionString(const class AFort
 
 	Parms.InteractingPawn = InteractingPawn;
 	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AthenaSupplyDrop.AthenaSupplyDrop_C.BlueprintCanInteract
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool AAthenaSupplyDrop_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDrop_C", "BlueprintCanInteract");
-
-	Params::AthenaSupplyDrop_C_BlueprintCanInteract Parms{};
-
-	Parms.InteractingPawn = InteractingPawn;
-	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
-	Parms.InteractionType = InteractionType;
 
 	UObject::ProcessEvent(Func, &Parms);
 

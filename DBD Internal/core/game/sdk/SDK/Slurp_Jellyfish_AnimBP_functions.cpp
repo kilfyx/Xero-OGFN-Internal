@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function Slurp_Jellyfish_AnimBP.Slurp_Jellyfish_AnimBP_C.ExecuteUbergraph_Slurp_Jellyfish_AnimBP
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USlurp_Jellyfish_AnimBP_C::ExecuteUbergraph_Slurp_Jellyfish_AnimBP(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Slurp_Jellyfish_AnimBP_C", "ExecuteUbergraph_Slurp_Jellyfish_AnimBP");
+
+	Params::Slurp_Jellyfish_AnimBP_C_ExecuteUbergraph_Slurp_Jellyfish_AnimBP Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Slurp_Jellyfish_AnimBP.Slurp_Jellyfish_AnimBP_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -35,26 +55,6 @@ void USlurp_Jellyfish_AnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 	if (AnimGraph_0 != nullptr)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
-}
-
-
-// Function Slurp_Jellyfish_AnimBP.Slurp_Jellyfish_AnimBP_C.ExecuteUbergraph_Slurp_Jellyfish_AnimBP
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USlurp_Jellyfish_AnimBP_C::ExecuteUbergraph_Slurp_Jellyfish_AnimBP(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Slurp_Jellyfish_AnimBP_C", "ExecuteUbergraph_Slurp_Jellyfish_AnimBP");
-
-	Params::Slurp_Jellyfish_AnimBP_C_ExecuteUbergraph_Slurp_Jellyfish_AnimBP Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

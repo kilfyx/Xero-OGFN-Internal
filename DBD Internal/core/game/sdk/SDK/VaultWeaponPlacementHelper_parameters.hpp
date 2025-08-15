@@ -23,7 +23,7 @@ struct VaultWeaponPlacementHelper_C_OnFrontEndCameraChanged final
 public:
 	EFrontEndCamera                               NewCamera;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EFrontEndCamera                               OldCamera;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(VaultWeaponPlacementHelper_C_OnFrontEndCameraChanged) == 0x000001, "Wrong alignment on VaultWeaponPlacementHelper_C_OnFrontEndCameraChanged");
 static_assert(sizeof(VaultWeaponPlacementHelper_C_OnFrontEndCameraChanged) == 0x000003, "Wrong size on VaultWeaponPlacementHelper_C_OnFrontEndCameraChanged");
@@ -36,9 +36,8 @@ static_assert(offsetof(VaultWeaponPlacementHelper_C_OnFrontEndCameraChanged, Cal
 struct VaultWeaponPlacementHelper_C_InitializeContextEvents final
 {
 public:
-	TDelegate<void(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera)> K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x000C)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortFrontEndContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera)> K2Node_CreateDelegate_OutputDelegate; // 0x0000(0x0010)(ZeroConstructor, NoDestructor)
+	class UFortFrontEndContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(VaultWeaponPlacementHelper_C_InitializeContextEvents) == 0x000008, "Wrong alignment on VaultWeaponPlacementHelper_C_InitializeContextEvents");
 static_assert(sizeof(VaultWeaponPlacementHelper_C_InitializeContextEvents) == 0x000018, "Wrong size on VaultWeaponPlacementHelper_C_InitializeContextEvents");

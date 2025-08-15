@@ -35,6 +35,17 @@ enum class EDataAssetDirectoryTestEnum : uint8
 	EDataAssetDirectoryTestEnum_MAX          = 4,
 };
 
+// ScriptStruct DataAssetDirectory.DataAssetDirectoryTestSimpleStruct
+// 0x0004 (0x0004 - 0x0000)
+struct FDataAssetDirectoryTestSimpleStruct final
+{
+public:
+	int32                                         IntProperty;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDataAssetDirectoryTestSimpleStruct) == 0x000004, "Wrong alignment on FDataAssetDirectoryTestSimpleStruct");
+static_assert(sizeof(FDataAssetDirectoryTestSimpleStruct) == 0x000004, "Wrong size on FDataAssetDirectoryTestSimpleStruct");
+static_assert(offsetof(FDataAssetDirectoryTestSimpleStruct, IntProperty) == 0x000000, "Member 'FDataAssetDirectoryTestSimpleStruct::IntProperty' has a wrong offset!");
+
 // ScriptStruct DataAssetDirectory.DataAssetDirectoryTestPODStruct
 // 0x0040 (0x0040 - 0x0000)
 struct FDataAssetDirectoryTestPODStruct final
@@ -50,14 +61,15 @@ public:
 	class FName                                   NameProperty;                                      // 0x0020(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   TextProperty;                                      // 0x0028(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct DataAssetDirectory.DataAssetDirectoryTestSimpleStruct
-// 0x0004 (0x0004 - 0x0000)
-struct FDataAssetDirectoryTestSimpleStruct final
-{
-public:
-	int32                                         IntProperty;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FDataAssetDirectoryTestPODStruct) == 0x000008, "Wrong alignment on FDataAssetDirectoryTestPODStruct");
+static_assert(sizeof(FDataAssetDirectoryTestPODStruct) == 0x000040, "Wrong size on FDataAssetDirectoryTestPODStruct");
+static_assert(offsetof(FDataAssetDirectoryTestPODStruct, EnumProperty) == 0x000000, "Member 'FDataAssetDirectoryTestPODStruct::EnumProperty' has a wrong offset!");
+static_assert(offsetof(FDataAssetDirectoryTestPODStruct, IntProperty) == 0x000004, "Member 'FDataAssetDirectoryTestPODStruct::IntProperty' has a wrong offset!");
+static_assert(offsetof(FDataAssetDirectoryTestPODStruct, FloatProperty) == 0x000008, "Member 'FDataAssetDirectoryTestPODStruct::FloatProperty' has a wrong offset!");
+static_assert(offsetof(FDataAssetDirectoryTestPODStruct, BoolProperty) == 0x00000C, "Member 'FDataAssetDirectoryTestPODStruct::BoolProperty' has a wrong offset!");
+static_assert(offsetof(FDataAssetDirectoryTestPODStruct, StringProperty) == 0x000010, "Member 'FDataAssetDirectoryTestPODStruct::StringProperty' has a wrong offset!");
+static_assert(offsetof(FDataAssetDirectoryTestPODStruct, NameProperty) == 0x000020, "Member 'FDataAssetDirectoryTestPODStruct::NameProperty' has a wrong offset!");
+static_assert(offsetof(FDataAssetDirectoryTestPODStruct, TextProperty) == 0x000028, "Member 'FDataAssetDirectoryTestPODStruct::TextProperty' has a wrong offset!");
 
 }
 

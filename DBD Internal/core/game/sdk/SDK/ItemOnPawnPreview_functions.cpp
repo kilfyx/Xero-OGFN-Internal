@@ -17,71 +17,17 @@
 namespace SDK
 {
 
-// Function ItemOnPawnPreview.ItemOnPawnPreview_C.UpdateSettings
-// (BlueprintCallable, BlueprintEvent)
-
-void AItemOnPawnPreview_C::UpdateSettings()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateSettings");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemOnPawnPreview.ItemOnPawnPreview_C.SwitchPCLighting
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AItemOnPawnPreview_C::SwitchPCLighting(bool Visibility)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SwitchPCLighting");
-
-	Params::ItemOnPawnPreview_C_SwitchPCLighting Parms{};
-
-	Parms.Visibility = Visibility;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemOnPawnPreview.ItemOnPawnPreview_C.SwitchMobileLighting
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AItemOnPawnPreview_C::SwitchMobileLighting(bool NewParam)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SwitchMobileLighting");
-
-	Params::ItemOnPawnPreview_C_SwitchMobileLighting Parms{};
-
-	Parms.NewParam = NewParam;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ItemOnPawnPreview.ItemOnPawnPreview_C.SwitchErebusLighting
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AItemOnPawnPreview_C::SwitchErebusLighting(bool Visibility)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SwitchErebusLighting");
+		Func = Class->GetFunction("ItemOnPawnPreview_C", "SwitchErebusLighting");
 
 	Params::ItemOnPawnPreview_C_SwitchErebusLighting Parms{};
 
@@ -94,14 +40,14 @@ void AItemOnPawnPreview_C::SwitchErebusLighting(bool Visibility)
 // Function ItemOnPawnPreview.ItemOnPawnPreview_C.SetFloorEnabled
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Show_Floor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Show_Floor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AItemOnPawnPreview_C::SetFloorEnabled(bool Show_Floor)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetFloorEnabled");
+		Func = Class->GetFunction("ItemOnPawnPreview_C", "SetFloorEnabled");
 
 	Params::ItemOnPawnPreview_C_SetFloorEnabled Parms{};
 
@@ -111,121 +57,17 @@ void AItemOnPawnPreview_C::SetFloorEnabled(bool Show_Floor)
 }
 
 
-// Function ItemOnPawnPreview.ItemOnPawnPreview_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AItemOnPawnPreview_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemOnPawnPreview.ItemOnPawnPreview_C.OnUpdateFloorMaterial
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bEnableAutotestBackground                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AItemOnPawnPreview_C::OnUpdateFloorMaterial(bool bEnableAutotestBackground)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateFloorMaterial");
-
-	Params::ItemOnPawnPreview_C_OnUpdateFloorMaterial Parms{};
-
-	Parms.bEnableAutotestBackground = bEnableAutotestBackground;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemOnPawnPreview.ItemOnPawnPreview_C.OnSetFloorMaterial
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UMaterialInterface*               InMaterialInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AItemOnPawnPreview_C::OnSetFloorMaterial(class UMaterialInterface* InMaterialInstance)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnSetFloorMaterial");
-
-	Params::ItemOnPawnPreview_C_OnSetFloorMaterial Parms{};
-
-	Parms.InMaterialInstance = InMaterialInstance;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemOnPawnPreview.ItemOnPawnPreview_C.OnPreviewVisualsSpawned
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bUseSecondaryTransitionEffects                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bShowFloor                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AItemOnPawnPreview_C::OnPreviewVisualsSpawned(const bool bUseSecondaryTransitionEffects, const bool bShowFloor)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnPreviewVisualsSpawned");
-
-	Params::ItemOnPawnPreview_C_OnPreviewVisualsSpawned Parms{};
-
-	Parms.bUseSecondaryTransitionEffects = bUseSecondaryTransitionEffects;
-	Parms.bShowFloor = bShowFloor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemOnPawnPreview.ItemOnPawnPreview_C.OnCurrentVisualsCleanedUp
-// (Event, Public, BlueprintEvent)
-
-void AItemOnPawnPreview_C::OnCurrentVisualsCleanedUp()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnCurrentVisualsCleanedUp");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemOnPawnPreview.ItemOnPawnPreview_C.OnAllLODStreamingComplete
-// (Event, Public, BlueprintEvent)
-
-void AItemOnPawnPreview_C::OnAllLODStreamingComplete()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnAllLODStreamingComplete");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ItemOnPawnPreview.ItemOnPawnPreview_C.LightControl
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AItemOnPawnPreview_C::LightControl(bool Active)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("LightControl");
+		Func = Class->GetFunction("ItemOnPawnPreview_C", "LightControl");
 
 	Params::ItemOnPawnPreview_C_LightControl Parms{};
 
@@ -235,51 +77,159 @@ void AItemOnPawnPreview_C::LightControl(bool Active)
 }
 
 
-// Function ItemOnPawnPreview.ItemOnPawnPreview_C.Get LOD Streaming Safety Duration
-// (Public, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function ItemOnPawnPreview.ItemOnPawnPreview_C.SwitchPCLighting
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AItemOnPawnPreview_C::Get_LOD_Streaming_Safety_Duration()
+void AItemOnPawnPreview_C::SwitchPCLighting(bool Visibility)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Get LOD Streaming Safety Duration");
+		Func = Class->GetFunction("ItemOnPawnPreview_C", "SwitchPCLighting");
+
+	Params::ItemOnPawnPreview_C_SwitchPCLighting Parms{};
+
+	Parms.Visibility = Visibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemOnPawnPreview.ItemOnPawnPreview_C.SwitchMobileLighting
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AItemOnPawnPreview_C::SwitchMobileLighting(bool NewParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemOnPawnPreview_C", "SwitchMobileLighting");
+
+	Params::ItemOnPawnPreview_C_SwitchMobileLighting Parms{};
+
+	Parms.NewParam = NewParam;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemOnPawnPreview.ItemOnPawnPreview_C.OnPreviewVisualsSpawned
+// (Event, Protected, BlueprintEvent)
+
+void AItemOnPawnPreview_C::OnPreviewVisualsSpawned()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemOnPawnPreview_C", "OnPreviewVisualsSpawned");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
+// Function ItemOnPawnPreview.ItemOnPawnPreview_C.UpdateSettings
+// (BlueprintCallable, BlueprintEvent)
+
+void AItemOnPawnPreview_C::UpdateSettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemOnPawnPreview_C", "UpdateSettings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemOnPawnPreview.ItemOnPawnPreview_C.OnSetFloorMaterial
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UMaterialInterface*               InMaterialInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AItemOnPawnPreview_C::OnSetFloorMaterial(class UMaterialInterface* InMaterialInstance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemOnPawnPreview_C", "OnSetFloorMaterial");
+
+	Params::ItemOnPawnPreview_C_OnSetFloorMaterial Parms{};
+
+	Parms.InMaterialInstance = InMaterialInstance;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemOnPawnPreview.ItemOnPawnPreview_C.OnAllLODStreamingComplete
+// (Event, Public, BlueprintEvent)
+
+void AItemOnPawnPreview_C::OnAllLODStreamingComplete()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemOnPawnPreview_C", "OnAllLODStreamingComplete");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemOnPawnPreview.ItemOnPawnPreview_C.OnCurrentVisualsCleanedUp
+// (Event, Public, BlueprintEvent)
+
+void AItemOnPawnPreview_C::OnCurrentVisualsCleanedUp()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemOnPawnPreview_C", "OnCurrentVisualsCleanedUp");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemOnPawnPreview.ItemOnPawnPreview_C.OnUpdateFloorMaterial
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bEnableAutotestBackground                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AItemOnPawnPreview_C::OnUpdateFloorMaterial(bool bEnableAutotestBackground)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemOnPawnPreview_C", "OnUpdateFloorMaterial");
+
+	Params::ItemOnPawnPreview_C_OnUpdateFloorMaterial Parms{};
+
+	Parms.bEnableAutotestBackground = bEnableAutotestBackground;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function ItemOnPawnPreview.ItemOnPawnPreview_C.ExecuteUbergraph_ItemOnPawnPreview
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AItemOnPawnPreview_C::ExecuteUbergraph_ItemOnPawnPreview(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_ItemOnPawnPreview");
+		Func = Class->GetFunction("ItemOnPawnPreview_C", "ExecuteUbergraph_ItemOnPawnPreview");
 
 	Params::ItemOnPawnPreview_C_ExecuteUbergraph_ItemOnPawnPreview Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemOnPawnPreview.ItemOnPawnPreview_C.Backup_LODStreamingFailed
-// (BlueprintCallable, BlueprintEvent)
-
-void AItemOnPawnPreview_C::Backup_LODStreamingFailed()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Backup_LODStreamingFailed");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

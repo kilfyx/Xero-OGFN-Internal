@@ -17,44 +17,6 @@
 namespace SDK
 {
 
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.ApplyPlayerTags
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FGameplayTag>&            Tag_Array                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UBP_AmbientAudioController_C::ApplyPlayerTags(class AActor* Player, TArray<struct FGameplayTag>& Tag_Array)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "ApplyPlayerTags");
-
-	Params::BP_AmbientAudioController_C_ApplyPlayerTags Parms{};
-
-	Parms.Player = Player;
-	Parms.Tag_Array = std::move(Tag_Array);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Tag_Array = std::move(Parms.Tag_Array);
-}
-
-
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.CacheViewTarget
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_AmbientAudioController_C::CacheViewTarget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "CacheViewTarget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_AmbientAudioController.BP_AmbientAudioController_C.ExecuteUbergraph_BP_AmbientAudioController
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -75,21 +37,35 @@ void UBP_AmbientAudioController_C::ExecuteUbergraph_BP_AmbientAudioController(in
 }
 
 
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.InitSnowCoverageComponent
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AGameStateBase*                   Game_State                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.EnableWorldPFXTags
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_AmbientAudioController_C::InitSnowCoverageComponent(class AGameStateBase* Game_State)
+void UBP_AmbientAudioController_C::EnableWorldPFXTags()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "InitSnowCoverageComponent");
+		Func = Class->GetFunction("BP_AmbientAudioController_C", "EnableWorldPFXTags");
 
-	Params::BP_AmbientAudioController_C_InitSnowCoverageComponent Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Game_State = Game_State;
+
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_AmbientAudioController_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AmbientAudioController_C", "ReceiveTick");
+
+	Params::BP_AmbientAudioController_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -117,67 +93,107 @@ void UBP_AmbientAudioController_C::InteriorStateChanged(EInteriorAudioState Prev
 }
 
 
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.On Room Size Changed
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.Update
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              Curr                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTag&              Prev                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AmbientAudioController_C::On_Room_Size_Changed(const struct FGameplayTag& Curr, const struct FGameplayTag& Prev)
+void UBP_AmbientAudioController_C::Update()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "On Room Size Changed");
+		Func = Class->GetFunction("BP_AmbientAudioController_C", "Update");
 
-	Params::BP_AmbientAudioController_C_On_Room_Size_Changed Parms{};
-
-	Parms.Curr = std::move(Curr);
-	Parms.Prev = std::move(Prev);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.On Room State Changed
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EInteriorAudioState                     Curr                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EInteriorAudioState                     Prev                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBP_AmbientAudioController_C::On_Room_State_Changed(EInteriorAudioState Curr, EInteriorAudioState Prev)
+void UBP_AmbientAudioController_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "On Room State Changed");
+		Func = Class->GetFunction("BP_AmbientAudioController_C", "ReceiveBeginPlay");
 
-	Params::BP_AmbientAudioController_C_On_Room_State_Changed Parms{};
-
-	Parms.Curr = Curr;
-	Parms.Prev = Prev;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.OnReady_C8AC4F724844E04160BE56BEAB4A2614
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AGameStateBase*                   GameState                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.UpdateSnowSetupBP
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_AmbientAudioController_C::OnReady_C8AC4F724844E04160BE56BEAB4A2614(class AGameStateBase* GameState)
+void UBP_AmbientAudioController_C::UpdateSnowSetupBP()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "OnReady_C8AC4F724844E04160BE56BEAB4A2614");
+		Func = Class->GetFunction("BP_AmbientAudioController_C", "UpdateSnowSetupBP");
 
-	Params::BP_AmbientAudioController_C_OnReady_C8AC4F724844E04160BE56BEAB4A2614 Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.GameState = GameState;
+
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.ApplyPlayerTags
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FGameplayTag>&            Tag_Array                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+
+void UBP_AmbientAudioController_C::ApplyPlayerTags(class AActor* Player, TArray<struct FGameplayTag>& Tag_Array)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AmbientAudioController_C", "ApplyPlayerTags");
+
+	Params::BP_AmbientAudioController_C_ApplyPlayerTags Parms{};
+
+	Parms.Player = Player;
+	Parms.Tag_Array = std::move(Tag_Array);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Tag_Array = std::move(Parms.Tag_Array);
+}
+
+
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.RemovePlayerTags
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FGameplayTag>&            Array                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+
+void UBP_AmbientAudioController_C::RemovePlayerTags(class AActor* Player, TArray<struct FGameplayTag>& Array)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AmbientAudioController_C", "RemovePlayerTags");
+
+	Params::BP_AmbientAudioController_C_RemovePlayerTags Parms{};
+
+	Parms.Player = Player;
+	Parms.Array = std::move(Array);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Array = std::move(Parms.Array);
+}
+
+
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.CacheViewTarget
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_AmbientAudioController_C::CacheViewTarget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AmbientAudioController_C", "CacheViewTarget");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -200,106 +216,6 @@ void UBP_AmbientAudioController_C::OnViewTargetChanged(class AActor* New_Target,
 	Parms.Prev_Target = Prev_Target;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBP_AmbientAudioController_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_AmbientAudioController_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "ReceiveTick");
-
-	Params::BP_AmbientAudioController_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.RemovePlayerTags
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FGameplayTag>&            Array                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UBP_AmbientAudioController_C::RemovePlayerTags(class AActor* Player, TArray<struct FGameplayTag>& Array)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "RemovePlayerTags");
-
-	Params::BP_AmbientAudioController_C_RemovePlayerTags Parms{};
-
-	Parms.Player = Player;
-	Parms.Array = std::move(Array);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Array = std::move(Parms.Array);
-}
-
-
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.Update
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_AmbientAudioController_C::Update()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "Update");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.Update Interior Audio Verb
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_AmbientAudioController_C::Update_Interior_Audio_Verb()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "Update Interior Audio Verb");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.UpdateSnowSetupBP
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_AmbientAudioController_C::UpdateSnowSetupBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "UpdateSnowSetupBP");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

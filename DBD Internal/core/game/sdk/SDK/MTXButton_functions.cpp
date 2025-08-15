@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function MTXButton.MTXButton_C.ExecuteUbergraph_MTXButton
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMTXButton_C::ExecuteUbergraph_MTXButton(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MTXButton_C", "ExecuteUbergraph_MTXButton");
-
-	Params::MTXButton_C_ExecuteUbergraph_MTXButton Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function MTXButton.MTXButton_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -46,6 +26,20 @@ void UMTXButton_C::Construct()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("MTXButton_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MTXButton.MTXButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UMTXButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MTXButton_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,17 +59,23 @@ void UMTXButton_C::BP_OnUnhovered()
 }
 
 
-// Function MTXButton.MTXButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
+// Function MTXButton.MTXButton_C.ExecuteUbergraph_MTXButton
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMTXButton_C::BP_OnHovered()
+void UMTXButton_C::ExecuteUbergraph_MTXButton(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MTXButton_C", "BP_OnHovered");
+		Func = Class->GetFunction("MTXButton_C", "ExecuteUbergraph_MTXButton");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::MTXButton_C_ExecuteUbergraph_MTXButton Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

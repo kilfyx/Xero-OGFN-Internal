@@ -36,6 +36,9 @@ public:
 		return GetDefaultObjImpl<USignificanceManager>();
 	}
 };
+static_assert(alignof(USignificanceManager) == 0x000008, "Wrong alignment on USignificanceManager");
+static_assert(sizeof(USignificanceManager) == 0x000148, "Wrong size on USignificanceManager");
+static_assert(offsetof(USignificanceManager, SignificanceManagerClassName) == 0x000108, "Member 'USignificanceManager::SignificanceManagerClassName' has a wrong offset!");
 
 }
 

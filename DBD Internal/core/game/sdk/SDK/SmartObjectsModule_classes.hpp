@@ -10,44 +10,50 @@
 
 #include "Basic.hpp"
 
-#include "AIModule_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
 #include "SmartObjectsModule_structs.hpp"
+#include "AIModule_classes.hpp"
 #include "GameplayTags_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
 {
 
-// Class SmartObjectsModule.SmartObjectBehaviorDefinition
+// Class SmartObjectsModule.SmartObjectBlueprintFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
-class USmartObjectBehaviorDefinition : public UObject
+class USmartObjectBlueprintFunctionLibrary final : public UBlueprintFunctionLibrary
 {
+public:
+	static bool K2_AddLooseGameplayTags(class AActor* Actor, const struct FGameplayTagContainer& GameplayTags);
+	static bool K2_RemoveLooseGameplayTags(class AActor* Actor, const struct FGameplayTagContainer& GameplayTags);
+	static bool K2_SetSmartObjectEnabled(class AActor* SmartObject, const bool bEnabled);
+	static bool K2_UseSmartObject(class AActor* Avatar, class AActor* SmartObject);
+
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SmartObjectBehaviorDefinition">();
+		return StaticClassImpl<"SmartObjectBlueprintFunctionLibrary">();
 	}
-	static class USmartObjectBehaviorDefinition* GetDefaultObj()
+	static class USmartObjectBlueprintFunctionLibrary* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USmartObjectBehaviorDefinition>();
+		return GetDefaultObjImpl<USmartObjectBlueprintFunctionLibrary>();
 	}
 };
+static_assert(alignof(USmartObjectBlueprintFunctionLibrary) == 0x000008, "Wrong alignment on USmartObjectBlueprintFunctionLibrary");
+static_assert(sizeof(USmartObjectBlueprintFunctionLibrary) == 0x000028, "Wrong size on USmartObjectBlueprintFunctionLibrary");
 
 // Class SmartObjectsModule.AITask_UseSmartObject
 // 0x0040 (0x00B0 - 0x0070)
 class UAITask_UseSmartObject final : public UAITask
 {
 public:
-	TMulticastInlineDelegate<void()>              OnFinished;                                        // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	class UAITask_MoveTo*                         MoveToTask;                                        // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UGameplayBehavior*                      GameplayBehavior;                                  // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USmartObjectComponent*                  SOComponent;                                       // 0x0070(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void()>              OnFinished;                                        // 0x0078(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	class UAITask_MoveTo*                         MoveToTask;                                        // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_90[0x20];                                      // 0x0090(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static class UAITask_UseSmartObject* UseClaimedSmartObject(class AAIController* Controller, const struct FSmartObjectClaimHandle& ClaimHandle, bool bLockAILogic);
 	static class UAITask_UseSmartObject* UseSmartObject(class AAIController* Controller, class AActor* SmartObjectActor, class USmartObjectComponent* SmartObjectComponent, bool bLockAILogic);
 
 public:
@@ -60,25 +66,11 @@ public:
 		return GetDefaultObjImpl<UAITask_UseSmartObject>();
 	}
 };
-
-// Class SmartObjectsModule.BlackboardKeyType_SOClaimHandle
-// 0x0010 (0x0040 - 0x0030)
-class UBlackboardKeyType_SOClaimHandle final : public UBlackboardKeyType
-{
-public:
-	struct FSmartObjectClaimHandle                Handle;                                            // 0x0030(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"BlackboardKeyType_SOClaimHandle">();
-	}
-	static class UBlackboardKeyType_SOClaimHandle* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBlackboardKeyType_SOClaimHandle>();
-	}
-};
+static_assert(alignof(UAITask_UseSmartObject) == 0x000008, "Wrong alignment on UAITask_UseSmartObject");
+static_assert(sizeof(UAITask_UseSmartObject) == 0x0000B0, "Wrong size on UAITask_UseSmartObject");
+static_assert(offsetof(UAITask_UseSmartObject, SOComponent) == 0x000070, "Member 'UAITask_UseSmartObject::SOComponent' has a wrong offset!");
+static_assert(offsetof(UAITask_UseSmartObject, OnFinished) == 0x000078, "Member 'UAITask_UseSmartObject::OnFinished' has a wrong offset!");
+static_assert(offsetof(UAITask_UseSmartObject, MoveToTask) == 0x000088, "Member 'UAITask_UseSmartObject::MoveToTask' has a wrong offset!");
 
 // Class SmartObjectsModule.BTTask_FindAndUseSmartObject
 // 0x0050 (0x00C0 - 0x0070)
@@ -99,13 +91,36 @@ public:
 		return GetDefaultObjImpl<UBTTask_FindAndUseSmartObject>();
 	}
 };
+static_assert(alignof(UBTTask_FindAndUseSmartObject) == 0x000008, "Wrong alignment on UBTTask_FindAndUseSmartObject");
+static_assert(sizeof(UBTTask_FindAndUseSmartObject) == 0x0000C0, "Wrong size on UBTTask_FindAndUseSmartObject");
+static_assert(offsetof(UBTTask_FindAndUseSmartObject, ActivityRequirements) == 0x000070, "Member 'UBTTask_FindAndUseSmartObject::ActivityRequirements' has a wrong offset!");
+static_assert(offsetof(UBTTask_FindAndUseSmartObject, Radius) == 0x0000B8, "Member 'UBTTask_FindAndUseSmartObject::Radius' has a wrong offset!");
+
+// Class SmartObjectsModule.BTTask_UseSmartObject
+// 0x0000 (0x0098 - 0x0098)
+class UBTTask_UseSmartObject final : public UBTTask_BlackboardBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"BTTask_UseSmartObject">();
+	}
+	static class UBTTask_UseSmartObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBTTask_UseSmartObject>();
+	}
+};
+static_assert(alignof(UBTTask_UseSmartObject) == 0x000008, "Wrong alignment on UBTTask_UseSmartObject");
+static_assert(sizeof(UBTTask_UseSmartObject) == 0x000098, "Wrong size on UBTTask_UseSmartObject");
 
 // Class SmartObjectsModule.GenericSmartObject
-// 0x0008 (0x0228 - 0x0220)
+// 0x0020 (0x0240 - 0x0220)
 class AGenericSmartObject final : public AActor
 {
 public:
-	class USmartObjectComponent*                  SOComponent;                                       // 0x0220(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoClear, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_220[0x8];                                      // 0x0220(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class USmartObjectComponent*                  SOComponent;                                       // 0x0228(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoClear, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class AActor*>                         ReferenceActors;                                   // 0x0230(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -117,62 +132,50 @@ public:
 		return GetDefaultObjImpl<AGenericSmartObject>();
 	}
 };
+static_assert(alignof(AGenericSmartObject) == 0x000008, "Wrong alignment on AGenericSmartObject");
+static_assert(sizeof(AGenericSmartObject) == 0x000240, "Wrong size on AGenericSmartObject");
+static_assert(offsetof(AGenericSmartObject, SOComponent) == 0x000228, "Member 'AGenericSmartObject::SOComponent' has a wrong offset!");
+static_assert(offsetof(AGenericSmartObject, ReferenceActors) == 0x000230, "Member 'AGenericSmartObject::ReferenceActors' has a wrong offset!");
 
-// Class SmartObjectsModule.SmartObjectBlueprintFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class USmartObjectBlueprintFunctionLibrary final : public UBlueprintFunctionLibrary
+// Class SmartObjectsModule.RichSmartObjectInterface
+// 0x0000 (0x0000 - 0x0000)
+class IRichSmartObjectInterface final
 {
-public:
-	static struct FSmartObjectClaimHandle GetValueAsSOClaimHandle(class UBlackboardComponent* BlackboardComponent, const class FName& KeyName);
-	static bool IsValidSmartObjectClaimHandle(const struct FSmartObjectClaimHandle& Handle);
-	static bool K2_AddLooseGameplayTags(class AActor* Actor, const struct FGameplayTagContainer& GameplayTags);
-	static bool K2_RemoveLooseGameplayTags(class AActor* Actor, const struct FGameplayTagContainer& GameplayTags);
-	static bool K2_SetSmartObjectEnabled(class AActor* SmartObject, const bool bEnabled);
-	static bool K2_UseSmartObject(class AActor* Avatar, class AActor* SmartObject);
-	static void SetValueAsSOClaimHandle(class UBlackboardComponent* BlackboardComponent, const class FName& KeyName, const struct FSmartObjectClaimHandle& Value);
-
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SmartObjectBlueprintFunctionLibrary">();
+		return StaticClassImpl<"RichSmartObjectInterface">();
 	}
-	static class USmartObjectBlueprintFunctionLibrary* GetDefaultObj()
+	static class IRichSmartObjectInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USmartObjectBlueprintFunctionLibrary>();
+		return GetDefaultObjImpl<IRichSmartObjectInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
 	}
 };
-
-// Class SmartObjectsModule.SmartObjectCollection
-// 0x0098 (0x02B8 - 0x0220)
-class ASmartObjectCollection final : public AActor
-{
-public:
-	struct FBox                                   Bounds;                                            // 0x0220(0x001C)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_23C[0x4];                                      // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSmartObjectCollectionEntry>    CollectionEntries;                                 // 0x0240(0x0010)(Edit, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
-	TMap<struct FSmartObjectID, struct FSoftObjectPath> RegisteredIdToObjectMap;                     // 0x0250(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TArray<class USmartObjectDefinition*>         Definitions;                                       // 0x02A0(0x0010)(Edit, ZeroConstructor, EditConst, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2B0[0x8];                                      // 0x02B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SmartObjectCollection">();
-	}
-	static class ASmartObjectCollection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ASmartObjectCollection>();
-	}
-};
+static_assert(alignof(IRichSmartObjectInterface) == 0x000001, "Wrong alignment on IRichSmartObjectInterface");
+static_assert(sizeof(IRichSmartObjectInterface) == 0x000001, "Wrong size on IRichSmartObjectInterface");
 
 // Class SmartObjectsModule.SmartObjectComponent
-// 0x0010 (0x0200 - 0x01F0)
-class USmartObjectComponent final : public USceneComponent
+// 0x0058 (0x0108 - 0x00B0)
+class USmartObjectComponent final : public UActorComponent
 {
 public:
-	class USmartObjectDefinition*                 DefinitionAsset;                                   // 0x01F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FSmartObjectID                         RegisteredID;                                      // 0x01F8(0x0004)(Edit, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1FC[0x4];                                      // 0x01FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B0[0x8];                                       // 0x00B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class USmartObjectConfig>      Config;                                            // 0x00B8(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FSmartObjectID                         RegisteredID;                                      // 0x00E0(0x0004)(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint32                                        ExecutionPriorityOverride;                         // 0x00E4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TScriptInterface<class IGameplayTagAssetInterface> GameplayTagAssetInterfaceImplementation;      // 0x00E8(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	uint8                                         bRichSmartObjectOwner : 1;                         // 0x00F8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, EditConst, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bRichSmartObjectComponent : 1;                     // 0x00F8(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, EditConst, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_F9[0xF];                                       // 0x00F9(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -184,52 +187,75 @@ public:
 		return GetDefaultObjImpl<USmartObjectComponent>();
 	}
 };
+static_assert(alignof(USmartObjectComponent) == 0x000008, "Wrong alignment on USmartObjectComponent");
+static_assert(sizeof(USmartObjectComponent) == 0x000108, "Wrong size on USmartObjectComponent");
+static_assert(offsetof(USmartObjectComponent, Config) == 0x0000B8, "Member 'USmartObjectComponent::Config' has a wrong offset!");
+static_assert(offsetof(USmartObjectComponent, RegisteredID) == 0x0000E0, "Member 'USmartObjectComponent::RegisteredID' has a wrong offset!");
+static_assert(offsetof(USmartObjectComponent, ExecutionPriorityOverride) == 0x0000E4, "Member 'USmartObjectComponent::ExecutionPriorityOverride' has a wrong offset!");
+static_assert(offsetof(USmartObjectComponent, GameplayTagAssetInterfaceImplementation) == 0x0000E8, "Member 'USmartObjectComponent::GameplayTagAssetInterfaceImplementation' has a wrong offset!");
 
-// Class SmartObjectsModule.SmartObjectGameplayBehaviorDefinition
-// 0x0008 (0x0030 - 0x0028)
-class USmartObjectGameplayBehaviorDefinition final : public USmartObjectBehaviorDefinition
+// Class SmartObjectsModule.SmartObjectConfig
+// 0x0038 (0x0068 - 0x0030)
+class USmartObjectConfig final : public UDataAsset
 {
 public:
-	class UGameplayBehaviorConfig*                GameplayBehaviorConfig;                            // 0x0028(0x0008)(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FSmartObjectUseConfig>          Uses;                                              // 0x0030(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FGameplayTagContainer                  DescriptionTags;                                   // 0x0040(0x0020)(Protected, NativeAccessSpecifierProtected)
+	uint32                                        MaxConcurrentUsers;                                // 0x0060(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SmartObjectGameplayBehaviorDefinition">();
+		return StaticClassImpl<"SmartObjectConfig">();
 	}
-	static class USmartObjectGameplayBehaviorDefinition* GetDefaultObj()
+	static class USmartObjectConfig* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USmartObjectGameplayBehaviorDefinition>();
+		return GetDefaultObjImpl<USmartObjectConfig>();
 	}
 };
+static_assert(alignof(USmartObjectConfig) == 0x000008, "Wrong alignment on USmartObjectConfig");
+static_assert(sizeof(USmartObjectConfig) == 0x000068, "Wrong size on USmartObjectConfig");
+static_assert(offsetof(USmartObjectConfig, Uses) == 0x000030, "Member 'USmartObjectConfig::Uses' has a wrong offset!");
+static_assert(offsetof(USmartObjectConfig, DescriptionTags) == 0x000040, "Member 'USmartObjectConfig::DescriptionTags' has a wrong offset!");
+static_assert(offsetof(USmartObjectConfig, MaxConcurrentUsers) == 0x000060, "Member 'USmartObjectConfig::MaxConcurrentUsers' has a wrong offset!");
 
-// Class SmartObjectsModule.SmartObjectDefinition
-// 0x00D8 (0x0108 - 0x0030)
-class USmartObjectDefinition final : public UDataAsset
+// Class SmartObjectsModule.SmartObjectManager
+// 0x0108 (0x0130 - 0x0028)
+class alignas(0x10) USmartObjectManager final : public UObject
 {
 public:
-	TArray<struct FSmartObjectSlot>               Slots;                                             // 0x0030(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	TArray<class USmartObjectBehaviorDefinition*> DefaultBehaviorDefinitions;                        // 0x0040(0x0010)(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	struct FGameplayTagQuery                      UserTagFilter;                                     // 0x0050(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FGameplayTagQuery                      ObjectTagFilter;                                   // 0x0098(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FGameplayTagContainer                  ActivityTags;                                      // 0x00E0(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_100[0x8];                                      // 0x0100(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMap<struct FSmartObjectID, struct FSmartObjectRuntime> RuntimeSmartObjects;                     // 0x0028(0x0050)(ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_78[0xA8];                                      // 0x0078(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         BitPad_120_0 : 1;                                  // 0x0120(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
+	uint8                                         bCreateIfMissing : 1;                              // 0x0120(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         Pad_121[0x3];                                      // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DefaultUnusedSmartObjectLifespan;                  // 0x0124(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_128[0x8];                                      // 0x0128(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SmartObjectDefinition">();
+		return StaticClassImpl<"SmartObjectManager">();
 	}
-	static class USmartObjectDefinition* GetDefaultObj()
+	static class USmartObjectManager* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USmartObjectDefinition>();
+		return GetDefaultObjImpl<USmartObjectManager>();
 	}
 };
+static_assert(alignof(USmartObjectManager) == 0x000010, "Wrong alignment on USmartObjectManager");
+static_assert(sizeof(USmartObjectManager) == 0x000130, "Wrong size on USmartObjectManager");
+static_assert(offsetof(USmartObjectManager, RuntimeSmartObjects) == 0x000028, "Member 'USmartObjectManager::RuntimeSmartObjects' has a wrong offset!");
+static_assert(offsetof(USmartObjectManager, DefaultUnusedSmartObjectLifespan) == 0x000124, "Member 'USmartObjectManager::DefaultUnusedSmartObjectLifespan' has a wrong offset!");
 
 // Class SmartObjectsModule.SmartObjectRenderingComponent
 // 0x0000 (0x0450 - 0x0450)
 class USmartObjectRenderingComponent final : public UPrimitiveComponent
 {
+public:
+	ESOReferenceDrawingMode                       ReferenceDrawingMode;                              // 0x0448(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_449[0x7];                                      // 0x0449(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -240,36 +266,9 @@ public:
 		return GetDefaultObjImpl<USmartObjectRenderingComponent>();
 	}
 };
-
-// Class SmartObjectsModule.SmartObjectSubsystem
-// 0x0110 (0x0140 - 0x0030)
-class alignas(0x10) USmartObjectSubsystem final : public UWorldSubsystem
-{
-public:
-	class ASmartObjectCollection*                 MainCollection;                                    // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_38[0x108];                                     // 0x0038(0x0108)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	struct FSmartObjectClaimHandle Claim(const struct FSmartObjectRequestResult& RequestResult);
-	struct FSmartObjectRequestResult FindSmartObject(const struct FSmartObjectRequest& Request);
-	bool FindSmartObjects(const struct FSmartObjectRequest& Request, TArray<struct FSmartObjectRequestResult>* OutResults);
-	bool Release(const struct FSmartObjectClaimHandle& ClaimHandle);
-	const class USmartObjectBehaviorDefinition* Use(const struct FSmartObjectClaimHandle& ClaimHandle, const TSubclassOf<class USmartObjectBehaviorDefinition>& DefinitionClass);
-
-	bool GetSlotLocation(const struct FSmartObjectClaimHandle& ClaimHandle, struct FVector* OutSlotLocation) const;
-	bool GetSlotTransform(const struct FSmartObjectClaimHandle& ClaimHandle, struct FTransform* OutSlotTransform) const;
-	class USmartObjectComponent* GetSmartObjectComponent(const struct FSmartObjectClaimHandle& ClaimHandle) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SmartObjectSubsystem">();
-	}
-	static class USmartObjectSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectSubsystem>();
-	}
-};
+static_assert(alignof(USmartObjectRenderingComponent) == 0x000010, "Wrong alignment on USmartObjectRenderingComponent");
+static_assert(sizeof(USmartObjectRenderingComponent) == 0x000450, "Wrong size on USmartObjectRenderingComponent");
+static_assert(offsetof(USmartObjectRenderingComponent, ReferenceDrawingMode) == 0x000448, "Member 'USmartObjectRenderingComponent::ReferenceDrawingMode' has a wrong offset!");
 
 }
 

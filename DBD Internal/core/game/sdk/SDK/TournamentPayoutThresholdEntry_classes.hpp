@@ -18,20 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TournamentPayoutThresholdEntry.TournamentPayoutThresholdEntry_C
-// 0x0028 (0x02C8 - 0x02A0)
+// 0x0028 (0x02C0 - 0x0298)
 class UTournamentPayoutThresholdEntry_C final : public UFortTournamentPayoutThresholdEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Selected;                                          // 0x02A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_IsPlayer;                             // 0x02B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_Selected;                             // 0x02B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_Zebra;                                // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Selected;                                          // 0x02A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_IsPlayer;                             // 0x02A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_Selected;                             // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_Zebra;                                // 0x02B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
+	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
 	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
 	void OnPayoutDataSet(int32 EntryIndex);
-	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
 	void ExecuteUbergraph_TournamentPayoutThresholdEntry(int32 EntryPoint);
 
 public:
@@ -45,12 +45,12 @@ public:
 	}
 };
 static_assert(alignof(UTournamentPayoutThresholdEntry_C) == 0x000008, "Wrong alignment on UTournamentPayoutThresholdEntry_C");
-static_assert(sizeof(UTournamentPayoutThresholdEntry_C) == 0x0002C8, "Wrong size on UTournamentPayoutThresholdEntry_C");
-static_assert(offsetof(UTournamentPayoutThresholdEntry_C, UberGraphFrame) == 0x0002A0, "Member 'UTournamentPayoutThresholdEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutThresholdEntry_C, Selected) == 0x0002A8, "Member 'UTournamentPayoutThresholdEntry_C::Selected' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutThresholdEntry_C, CommonBorder_IsPlayer) == 0x0002B0, "Member 'UTournamentPayoutThresholdEntry_C::CommonBorder_IsPlayer' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutThresholdEntry_C, CommonBorder_Selected) == 0x0002B8, "Member 'UTournamentPayoutThresholdEntry_C::CommonBorder_Selected' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutThresholdEntry_C, CommonBorder_Zebra) == 0x0002C0, "Member 'UTournamentPayoutThresholdEntry_C::CommonBorder_Zebra' has a wrong offset!");
+static_assert(sizeof(UTournamentPayoutThresholdEntry_C) == 0x0002C0, "Wrong size on UTournamentPayoutThresholdEntry_C");
+static_assert(offsetof(UTournamentPayoutThresholdEntry_C, UberGraphFrame) == 0x000298, "Member 'UTournamentPayoutThresholdEntry_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutThresholdEntry_C, Selected) == 0x0002A0, "Member 'UTournamentPayoutThresholdEntry_C::Selected' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutThresholdEntry_C, CommonBorder_IsPlayer) == 0x0002A8, "Member 'UTournamentPayoutThresholdEntry_C::CommonBorder_IsPlayer' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutThresholdEntry_C, CommonBorder_Selected) == 0x0002B0, "Member 'UTournamentPayoutThresholdEntry_C::CommonBorder_Selected' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutThresholdEntry_C, CommonBorder_Zebra) == 0x0002B8, "Member 'UTournamentPayoutThresholdEntry_C::CommonBorder_Zebra' has a wrong offset!");
 
 }
 

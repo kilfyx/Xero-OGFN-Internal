@@ -17,48 +17,6 @@
 namespace SDK
 {
 
-// Function PlayerDiscovered.PlayerDiscovered_C.Brief Show Finished
-// (BlueprintCallable, BlueprintEvent)
-
-void UPlayerDiscovered_C::Brief_Show_Finished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerDiscovered_C", "Brief Show Finished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PlayerDiscovered.PlayerDiscovered_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UPlayerDiscovered_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerDiscovered_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PlayerDiscovered.PlayerDiscovered_C.EndOfShow
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UPlayerDiscovered_C::EndOfShow()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerDiscovered_C", "EndOfShow");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function PlayerDiscovered.PlayerDiscovered_C.ExecuteUbergraph_PlayerDiscovered
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -79,15 +37,43 @@ void UPlayerDiscovered_C::ExecuteUbergraph_PlayerDiscovered(int32 EntryPoint)
 }
 
 
-// Function PlayerDiscovered.PlayerDiscovered_C.K2_OnBecomeActive
-// (Event, Protected, BlueprintEvent)
+// Function PlayerDiscovered.PlayerDiscovered_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UPlayerDiscovered_C::K2_OnBecomeActive()
+void UPlayerDiscovered_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerDiscovered_C", "K2_OnBecomeActive");
+		Func = Class->GetFunction("PlayerDiscovered_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PlayerDiscovered.PlayerDiscovered_C.Brief Show Finished
+// (BlueprintCallable, BlueprintEvent)
+
+void UPlayerDiscovered_C::Brief_Show_Finished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerDiscovered_C", "Brief Show Finished");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PlayerDiscovered.PlayerDiscovered_C.OnStompFailed
+// (Event, Protected, BlueprintEvent)
+
+void UPlayerDiscovered_C::OnStompFailed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerDiscovered_C", "OnStompFailed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -97,7 +83,7 @@ void UPlayerDiscovered_C::K2_OnBecomeActive()
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
 // const class FText&                      LocalizedLocationName                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool                                    bIsNamedLocation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsNamedLocation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UPlayerDiscovered_C::OnNewDiscovery(const class FText& LocalizedLocationName, bool bIsNamedLocation)
 {
@@ -129,20 +115,6 @@ void UPlayerDiscovered_C::OnStompedByOtherWidget()
 }
 
 
-// Function PlayerDiscovered.PlayerDiscovered_C.OnStompFailed
-// (Event, Protected, BlueprintEvent)
-
-void UPlayerDiscovered_C::OnStompFailed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerDiscovered_C", "OnStompFailed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function PlayerDiscovered.PlayerDiscovered_C.Play Brief Show Sound
 // (BlueprintCallable, BlueprintEvent)
 
@@ -152,6 +124,20 @@ void UPlayerDiscovered_C::Play_Brief_Show_Sound()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("PlayerDiscovered_C", "Play Brief Show Sound");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PlayerDiscovered.PlayerDiscovered_C.EndOfShow
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UPlayerDiscovered_C::EndOfShow()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerDiscovered_C", "EndOfShow");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

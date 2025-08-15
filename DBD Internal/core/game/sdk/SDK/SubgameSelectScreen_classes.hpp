@@ -13,33 +13,36 @@
 #include "Engine_structs.hpp"
 #include "FortniteUI_structs.hpp"
 #include "FortniteUI_classes.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SubgameSelectScreen.SubgameSelectScreen_C
-// 0x0038 (0x0468 - 0x0430)
+// 0x0038 (0x03F0 - 0x03B8)
 class USubgameSelectScreen_C final : public UFortSubgameSelectScreen
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UOverlay*                               ModeSelect;                                        // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressModalWidget_C*                 LeavingMatchmakingDialog;                          // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               MID_Keyart;                                        // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class UTexture*>                       TextureCycle;                                      // 0x0450(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         TextureCycleIndex;                                 // 0x0460(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UOverlay*                               ModeSelect;                                        // 0x03C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressModalWidget_C*                 LeavingMatchmakingDialog;                          // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               MID_Keyart;                                        // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UTexture*>                       TextureCycle;                                      // 0x03D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         TextureCycleIndex;                                 // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_SubgameSelectScreen(int32 EntryPoint);
+	void BP_OnActivated();
+	void BndEvt__ButtonExit_K2Node_ComponentBoundEvent_193_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void OnEventActive_57187EC14A536D0960088EB25BDF39E5(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio);
 	void OnEventUpdated_57187EC14A536D0960088EB25BDF39E5(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio);
 	void OnEventEnded_57187EC14A536D0960088EB25BDF39E5(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio);
-	void OnEventActive_57187EC14A536D0960088EB25BDF39E5(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio);
+	void DialogResult_FE9F49084346A08B6F02BA99FB50F5CD(EFortDialogResult Result, class FName ResultName);
+	void InitializeTextureCycle();
+	void AdvanceTextureCycle();
 	bool IsBusyMatchmaking();
 	void IsMinorShutdownWarningEnabled(bool* Enabled);
-	void ExecuteUbergraph_SubgameSelectScreen(int32 EntryPoint);
-	void InitializeTextureCycle();
-	void BP_OnActivated();
-	void AdvanceTextureCycle();
 
 public:
 	static class UClass* StaticClass()
@@ -52,13 +55,13 @@ public:
 	}
 };
 static_assert(alignof(USubgameSelectScreen_C) == 0x000008, "Wrong alignment on USubgameSelectScreen_C");
-static_assert(sizeof(USubgameSelectScreen_C) == 0x000468, "Wrong size on USubgameSelectScreen_C");
-static_assert(offsetof(USubgameSelectScreen_C, UberGraphFrame) == 0x000430, "Member 'USubgameSelectScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USubgameSelectScreen_C, ModeSelect) == 0x000438, "Member 'USubgameSelectScreen_C::ModeSelect' has a wrong offset!");
-static_assert(offsetof(USubgameSelectScreen_C, LeavingMatchmakingDialog) == 0x000440, "Member 'USubgameSelectScreen_C::LeavingMatchmakingDialog' has a wrong offset!");
-static_assert(offsetof(USubgameSelectScreen_C, MID_Keyart) == 0x000448, "Member 'USubgameSelectScreen_C::MID_Keyart' has a wrong offset!");
-static_assert(offsetof(USubgameSelectScreen_C, TextureCycle) == 0x000450, "Member 'USubgameSelectScreen_C::TextureCycle' has a wrong offset!");
-static_assert(offsetof(USubgameSelectScreen_C, TextureCycleIndex) == 0x000460, "Member 'USubgameSelectScreen_C::TextureCycleIndex' has a wrong offset!");
+static_assert(sizeof(USubgameSelectScreen_C) == 0x0003F0, "Wrong size on USubgameSelectScreen_C");
+static_assert(offsetof(USubgameSelectScreen_C, UberGraphFrame) == 0x0003B8, "Member 'USubgameSelectScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USubgameSelectScreen_C, ModeSelect) == 0x0003C0, "Member 'USubgameSelectScreen_C::ModeSelect' has a wrong offset!");
+static_assert(offsetof(USubgameSelectScreen_C, LeavingMatchmakingDialog) == 0x0003C8, "Member 'USubgameSelectScreen_C::LeavingMatchmakingDialog' has a wrong offset!");
+static_assert(offsetof(USubgameSelectScreen_C, MID_Keyart) == 0x0003D0, "Member 'USubgameSelectScreen_C::MID_Keyart' has a wrong offset!");
+static_assert(offsetof(USubgameSelectScreen_C, TextureCycle) == 0x0003D8, "Member 'USubgameSelectScreen_C::TextureCycle' has a wrong offset!");
+static_assert(offsetof(USubgameSelectScreen_C, TextureCycleIndex) == 0x0003E8, "Member 'USubgameSelectScreen_C::TextureCycleIndex' has a wrong offset!");
 
 }
 

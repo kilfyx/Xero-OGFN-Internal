@@ -25,6 +25,10 @@ public:
 	struct FGameplayAbilityTargetDataHandle       TargetDataHandle;                                  // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortGameplayAbility_Mantis_BP_OnMantisTechniqueHit) == 0x000008, "Wrong alignment on FortGameplayAbility_Mantis_BP_OnMantisTechniqueHit");
+static_assert(sizeof(FortGameplayAbility_Mantis_BP_OnMantisTechniqueHit) == 0x000030, "Wrong size on FortGameplayAbility_Mantis_BP_OnMantisTechniqueHit");
+static_assert(offsetof(FortGameplayAbility_Mantis_BP_OnMantisTechniqueHit, TargetDataHandle) == 0x000000, "Member 'FortGameplayAbility_Mantis_BP_OnMantisTechniqueHit::TargetDataHandle' has a wrong offset!");
+static_assert(offsetof(FortGameplayAbility_Mantis_BP_OnMantisTechniqueHit, ApplicationTag) == 0x000028, "Member 'FortGameplayAbility_Mantis_BP_OnMantisTechniqueHit::ApplicationTag' has a wrong offset!");
 
 // Function MantisRuntime.FortGameplayAbility_Mantis.ConfigureRootMotionWarping
 // 0x0010 (0x0010 - 0x0000)
@@ -37,6 +41,12 @@ public:
 	bool                                          bOutSnapshotTargetLocation;                        // 0x000A(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortGameplayAbility_Mantis_ConfigureRootMotionWarping) == 0x000008, "Wrong alignment on FortGameplayAbility_Mantis_ConfigureRootMotionWarping");
+static_assert(sizeof(FortGameplayAbility_Mantis_ConfigureRootMotionWarping) == 0x000010, "Wrong size on FortGameplayAbility_Mantis_ConfigureRootMotionWarping");
+static_assert(offsetof(FortGameplayAbility_Mantis_ConfigureRootMotionWarping, OutTargetActor) == 0x000000, "Member 'FortGameplayAbility_Mantis_ConfigureRootMotionWarping::OutTargetActor' has a wrong offset!");
+static_assert(offsetof(FortGameplayAbility_Mantis_ConfigureRootMotionWarping, bOutAllowTranslationWarp) == 0x000008, "Member 'FortGameplayAbility_Mantis_ConfigureRootMotionWarping::bOutAllowTranslationWarp' has a wrong offset!");
+static_assert(offsetof(FortGameplayAbility_Mantis_ConfigureRootMotionWarping, bOutAllowRotationWarp) == 0x000009, "Member 'FortGameplayAbility_Mantis_ConfigureRootMotionWarping::bOutAllowRotationWarp' has a wrong offset!");
+static_assert(offsetof(FortGameplayAbility_Mantis_ConfigureRootMotionWarping, bOutSnapshotTargetLocation) == 0x00000A, "Member 'FortGameplayAbility_Mantis_ConfigureRootMotionWarping::bOutSnapshotTargetLocation' has a wrong offset!");
 
 // Function MantisRuntime.FortMantisPawnComponent.OnCharacterMovementPreUpdate
 // 0x0010 (0x0010 - 0x0000)
@@ -47,6 +57,10 @@ public:
 	float                                         DeltaSeconds;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortMantisPawnComponent_OnCharacterMovementPreUpdate) == 0x000008, "Wrong alignment on FortMantisPawnComponent_OnCharacterMovementPreUpdate");
+static_assert(sizeof(FortMantisPawnComponent_OnCharacterMovementPreUpdate) == 0x000010, "Wrong size on FortMantisPawnComponent_OnCharacterMovementPreUpdate");
+static_assert(offsetof(FortMantisPawnComponent_OnCharacterMovementPreUpdate, CharMoveComp) == 0x000000, "Member 'FortMantisPawnComponent_OnCharacterMovementPreUpdate::CharMoveComp' has a wrong offset!");
+static_assert(offsetof(FortMantisPawnComponent_OnCharacterMovementPreUpdate, DeltaSeconds) == 0x000008, "Member 'FortMantisPawnComponent_OnCharacterMovementPreUpdate::DeltaSeconds' has a wrong offset!");
 
 // Function MantisRuntime.FortMantisPawnComponent.OnPostPhysicsRotation
 // 0x0010 (0x0010 - 0x0000)
@@ -57,6 +71,10 @@ public:
 	float                                         DeltaSeconds;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortMantisPawnComponent_OnPostPhysicsRotation) == 0x000008, "Wrong alignment on FortMantisPawnComponent_OnPostPhysicsRotation");
+static_assert(sizeof(FortMantisPawnComponent_OnPostPhysicsRotation) == 0x000010, "Wrong size on FortMantisPawnComponent_OnPostPhysicsRotation");
+static_assert(offsetof(FortMantisPawnComponent_OnPostPhysicsRotation, CharMoveComp) == 0x000000, "Member 'FortMantisPawnComponent_OnPostPhysicsRotation::CharMoveComp' has a wrong offset!");
+static_assert(offsetof(FortMantisPawnComponent_OnPostPhysicsRotation, DeltaSeconds) == 0x000008, "Member 'FortMantisPawnComponent_OnPostPhysicsRotation::DeltaSeconds' has a wrong offset!");
 
 }
 

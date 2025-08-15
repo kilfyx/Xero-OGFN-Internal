@@ -285,7 +285,7 @@ void AFortAthenaMutator_Phosphorus::OnRep_PhosphorusPhase()
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.GetLeadingTeamNums
 // (Final, Native, Protected, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<uint8>*                          LeadingTeamNums                                        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<uint8>*                          LeadingTeamNums                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void AFortAthenaMutator_Phosphorus::GetLeadingTeamNums(TArray<uint8>* LeadingTeamNums) const
 {
@@ -386,7 +386,7 @@ uint8 AFortAthenaMutator_Phosphorus::GetRoundWinningTeamNum() const
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.GetTeamDataArray
 // (Final, Native, Protected, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FPhosphorusTeamData>*     OutTeamDataArray                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<struct FPhosphorusTeamData>*     OutTeamDataArray                                       (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool                              bMustBeValid                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool                              bMustBeAlive                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool                              bSortByScore                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -556,6 +556,138 @@ bool AFortAthenaMutator_Phosphorus::IsTeamValid(const uint8 TeamNum) const
 }
 
 
+// Function PhosphorusRuntime.FortCheatManager_Phosphorus.PhosphorusDebug
+// (Final, Exec, Native, Public)
+// Parameters:
+// float                                   TextScale                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFortCheatManager_Phosphorus::PhosphorusDebug(float TextScale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortCheatManager_Phosphorus", "PhosphorusDebug");
+
+	Params::FortCheatManager_Phosphorus_PhosphorusDebug Parms{};
+
+	Parms.TextScale = TextScale;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PhosphorusRuntime.FortCheatManager_Phosphorus.PhosphorusEndMatch
+// (Final, Exec, Native, Public)
+
+void UFortCheatManager_Phosphorus::PhosphorusEndMatch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortCheatManager_Phosphorus", "PhosphorusEndMatch");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PhosphorusRuntime.FortCheatManager_Phosphorus.PhosphorusEndRound
+// (Final, Exec, Native, Public)
+
+void UFortCheatManager_Phosphorus::PhosphorusEndRound()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortCheatManager_Phosphorus", "PhosphorusEndRound");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PhosphorusRuntime.FortCheatManager_Phosphorus.PhosphorusSetNumRoundsToWin
+// (Final, Exec, Native, Public)
+// Parameters:
+// const int32                             NumRounds                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFortCheatManager_Phosphorus::PhosphorusSetNumRoundsToWin(const int32 NumRounds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortCheatManager_Phosphorus", "PhosphorusSetNumRoundsToWin");
+
+	Params::FortCheatManager_Phosphorus_PhosphorusSetNumRoundsToWin Parms{};
+
+	Parms.NumRounds = NumRounds;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PhosphorusRuntime.FortCheatManager_PlayerSpawnPod.PlayerSpawnPodDebug
+// (Final, Exec, Native, Public)
+// Parameters:
+// float                                   TextScale                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFortCheatManager_PlayerSpawnPod::PlayerSpawnPodDebug(float TextScale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortCheatManager_PlayerSpawnPod", "PlayerSpawnPodDebug");
+
+	Params::FortCheatManager_PlayerSpawnPod_PlayerSpawnPodDebug Parms{};
+
+	Parms.TextScale = TextScale;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PhosphorusRuntime.FortCheatManager_PlayerSpawnPod.PlayerSpawnPodTest
+// (Final, Exec, Native, Public)
+
+void UFortCheatManager_PlayerSpawnPod::PlayerSpawnPodTest()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortCheatManager_PlayerSpawnPod", "PlayerSpawnPodTest");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PhosphorusRuntime.FortAthenaMutator_PlayerSpawnPod.GetPodDataForActor
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -712,32 +844,6 @@ void AFortAthenaMutator_PlayerSpawnPod::OnRep_BlockedAbilitySystemComponents()
 }
 
 
-// Function PhosphorusRuntime.FortAthenaMutator_PlayerSpawnPod.OnRep_PodDataArray
-// (Final, Native, Private, HasOutParams)
-// Parameters:
-// TArray<struct FPlayerSpawnPodData>*     OldPodDataArray                                        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void AFortAthenaMutator_PlayerSpawnPod::OnRep_PodDataArray(TArray<struct FPlayerSpawnPodData>* OldPodDataArray)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaMutator_PlayerSpawnPod", "OnRep_PodDataArray");
-
-	Params::FortAthenaMutator_PlayerSpawnPod_OnRep_PodDataArray Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OldPodDataArray != nullptr)
-		*OldPodDataArray = std::move(Parms.OldPodDataArray);
-}
-
-
 // Function PhosphorusRuntime.FortAthenaMutator_PlayerSpawnPod.OnSingleTeleportComplete
 // (Final, Native, Private)
 // Parameters:
@@ -816,182 +922,6 @@ float AFortAthenaMutator_PlayerSpawnPod::GetFallDuration() const
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function PhosphorusRuntime.FortCheatManager_Phosphorus.PhosphorusDebug
-// (Final, Exec, Native, Public)
-// Parameters:
-// float                                   TextScale                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortCheatManager_Phosphorus::PhosphorusDebug(float TextScale)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortCheatManager_Phosphorus", "PhosphorusDebug");
-
-	Params::FortCheatManager_Phosphorus_PhosphorusDebug Parms{};
-
-	Parms.TextScale = TextScale;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PhosphorusRuntime.FortCheatManager_Phosphorus.PhosphorusEndMatch
-// (Final, Exec, Native, Public)
-
-void UFortCheatManager_Phosphorus::PhosphorusEndMatch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortCheatManager_Phosphorus", "PhosphorusEndMatch");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PhosphorusRuntime.FortCheatManager_Phosphorus.PhosphorusEndRound
-// (Final, Exec, Native, Public)
-
-void UFortCheatManager_Phosphorus::PhosphorusEndRound()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortCheatManager_Phosphorus", "PhosphorusEndRound");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PhosphorusRuntime.FortCheatManager_Phosphorus.PhosphorusForceStartMatch
-// (Final, Exec, Native, Public)
-
-void UFortCheatManager_Phosphorus::PhosphorusForceStartMatch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortCheatManager_Phosphorus", "PhosphorusForceStartMatch");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PhosphorusRuntime.FortCheatManager_Phosphorus.PhosphorusSetNumRoundsToWin
-// (Final, Exec, Native, Public)
-// Parameters:
-// const int32                             NumRounds                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortCheatManager_Phosphorus::PhosphorusSetNumRoundsToWin(const int32 NumRounds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortCheatManager_Phosphorus", "PhosphorusSetNumRoundsToWin");
-
-	Params::FortCheatManager_Phosphorus_PhosphorusSetNumRoundsToWin Parms{};
-
-	Parms.NumRounds = NumRounds;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PhosphorusRuntime.FortCheatManager_PlayerSpawnPod.PlayerSpawnPodDebug
-// (Final, Exec, Native, Public)
-// Parameters:
-// float                                   TextScale                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortCheatManager_PlayerSpawnPod::PlayerSpawnPodDebug(float TextScale)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortCheatManager_PlayerSpawnPod", "PlayerSpawnPodDebug");
-
-	Params::FortCheatManager_PlayerSpawnPod_PlayerSpawnPodDebug Parms{};
-
-	Parms.TextScale = TextScale;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PhosphorusRuntime.FortCheatManager_PlayerSpawnPod.PlayerSpawnPodTest
-// (Final, Exec, Native, Public)
-
-void UFortCheatManager_PlayerSpawnPod::PlayerSpawnPodTest()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortCheatManager_PlayerSpawnPod", "PlayerSpawnPodTest");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PhosphorusRuntime.FortCheatManager_PlayerSpawnPod.PlayerSpawnPodTestAllPlayers
-// (Final, Exec, Native, Public)
-// Parameters:
-// const bool                              bIndividualPods                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortCheatManager_PlayerSpawnPod::PlayerSpawnPodTestAllPlayers(const bool bIndividualPods)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortCheatManager_PlayerSpawnPod", "PlayerSpawnPodTestAllPlayers");
-
-	Params::FortCheatManager_PlayerSpawnPod_PlayerSpawnPodTestAllPlayers Parms{};
-
-	Parms.bIndividualPods = bIndividualPods;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 }
 
 }

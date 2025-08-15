@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBlueprintContextBase>();
 	}
 };
+static_assert(alignof(UBlueprintContextBase) == 0x000008, "Wrong alignment on UBlueprintContextBase");
+static_assert(sizeof(UBlueprintContextBase) == 0x000030, "Wrong size on UBlueprintContextBase");
 
 // Class BlueprintContext.BlueprintContextLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -48,6 +50,8 @@ public:
 		return GetDefaultObjImpl<UBlueprintContextLibrary>();
 	}
 };
+static_assert(alignof(UBlueprintContextLibrary) == 0x000008, "Wrong alignment on UBlueprintContextLibrary");
+static_assert(sizeof(UBlueprintContextLibrary) == 0x000028, "Wrong size on UBlueprintContextLibrary");
 
 }
 

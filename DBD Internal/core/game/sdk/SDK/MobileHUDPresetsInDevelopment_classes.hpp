@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UMobileHUDPresetsInDevelopment_C>();
 	}
 };
+static_assert(alignof(UMobileHUDPresetsInDevelopment_C) == 0x000008, "Wrong alignment on UMobileHUDPresetsInDevelopment_C");
+static_assert(sizeof(UMobileHUDPresetsInDevelopment_C) == 0x000040, "Wrong size on UMobileHUDPresetsInDevelopment_C");
 
 }
 

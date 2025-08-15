@@ -17,338 +17,21 @@
 namespace SDK
 {
 
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.DisablePointProvider
-// (Native, Public, BlueprintCallable)
-
-void IFortAthenaLivingWorldPointProviderInterface::DisablePointProvider()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "DisablePointProvider");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.EnablePointProvider
-// (Native, Public, BlueprintCallable)
-
-void IFortAthenaLivingWorldPointProviderInterface::EnablePointProvider()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "EnablePointProvider");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.GetPointProviderLocation
-// (Native, Public, HasDefaults, BlueprintCallable)
+// Function LagerRuntime.FortCheatManager_LivingWorldManager.LivingWorldManagerSpawn
+// (Final, Exec, Native, Public)
 // Parameters:
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    EventDataName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector IFortAthenaLivingWorldPointProviderInterface::GetPointProviderLocation()
+void UFortCheatManager_LivingWorldManager::LivingWorldManagerSpawn(const class FString& EventDataName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "GetPointProviderLocation");
+		Func = Class->GetFunction("FortCheatManager_LivingWorldManager", "LivingWorldManagerSpawn");
 
-	Params::FortAthenaLivingWorldPointProviderInterface_GetPointProviderLocation Parms{};
+	Params::FortCheatManager_LivingWorldManager_LivingWorldManagerSpawn Parms{};
 
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.OnEventRequested
-// (Native, Public, BlueprintCallable)
-
-void IFortAthenaLivingWorldPointProviderInterface::OnEventRequested()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "OnEventRequested");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.OnSpawnedActor
-// (Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class AActor*                           SpawnedActor                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   PositionFromProvider                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void IFortAthenaLivingWorldPointProviderInterface::OnSpawnedActor(class AActor* SpawnedActor, const struct FVector& PositionFromProvider)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "OnSpawnedActor");
-
-	Params::FortAthenaLivingWorldPointProviderInterface_OnSpawnedActor Parms{};
-
-	Parms.SpawnedActor = SpawnedActor;
-	Parms.PositionFromProvider = std::move(PositionFromProvider);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.OnSpawnedActorDestroyed
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                           DestroyedActor                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void IFortAthenaLivingWorldPointProviderInterface::OnSpawnedActorDestroyed(class AActor* DestroyedActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "OnSpawnedActorDestroyed");
-
-	Params::FortAthenaLivingWorldPointProviderInterface_OnSpawnedActorDestroyed Parms{};
-
-	Parms.DestroyedActor = DestroyedActor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.OnSpawnedActorFailed
-// (Native, Public, BlueprintCallable)
-
-void IFortAthenaLivingWorldPointProviderInterface::OnSpawnedActorFailed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "OnSpawnedActorFailed");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.GetFiltersTags
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FGameplayTagContainer*           FilterTags                                             (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void IFortAthenaLivingWorldPointProviderInterface::GetFiltersTags(struct FGameplayTagContainer* FilterTags) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "GetFiltersTags");
-
-	Params::FortAthenaLivingWorldPointProviderInterface_GetFiltersTags Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (FilterTags != nullptr)
-		*FilterTags = std::move(Parms.FilterTags);
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.GetValidLocation
-// (Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FFortAthenaLivingWorldPointProviderFilterRules&PointFilter                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FVector*                         OutPosition                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator*                        OutRotation                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IFortAthenaLivingWorldPointProviderInterface::GetValidLocation(const struct FFortAthenaLivingWorldPointProviderFilterRules& PointFilter, struct FVector* OutPosition, struct FRotator* OutRotation) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "GetValidLocation");
-
-	Params::FortAthenaLivingWorldPointProviderInterface_GetValidLocation Parms{};
-
-	Parms.PointFilter = std::move(PointFilter);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutPosition != nullptr)
-		*OutPosition = std::move(Parms.OutPosition);
-
-	if (OutRotation != nullptr)
-		*OutRotation = std::move(Parms.OutRotation);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.IsEnabled
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FFortAthenaLivingWorldPointProviderFilterRules&PointFilter                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IFortAthenaLivingWorldPointProviderInterface::IsEnabled(const struct FFortAthenaLivingWorldPointProviderFilterRules& PointFilter) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "IsEnabled");
-
-	Params::FortAthenaLivingWorldPointProviderInterface_IsEnabled Parms{};
-
-	Parms.PointFilter = std::move(PointFilter);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldEncounterInstance.AdvanceEncounterStage
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
-
-void UFortAthenaLivingWorldEncounterInstance::AdvanceEncounterStage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldEncounterInstance", "AdvanceEncounterStage");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldEncounterInstance.PauseEncounter
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
-
-void UFortAthenaLivingWorldEncounterInstance::PauseEncounter()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldEncounterInstance", "PauseEncounter");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldEncounterInstance.RequestEventGeneration
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
-
-void UFortAthenaLivingWorldEncounterInstance::RequestEventGeneration()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldEncounterInstance", "RequestEventGeneration");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldEncounterInstance.ResumeEncounter
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
-
-void UFortAthenaLivingWorldEncounterInstance::ResumeEncounter()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldEncounterInstance", "ResumeEncounter");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldEncounterInstance.GetTotalActorCount
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UFortAthenaLivingWorldEncounterInstance::GetTotalActorCount() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldEncounterInstance", "GetTotalActorCount");
-
-	Params::FortAthenaLivingWorldEncounterInstance_GetTotalActorCount Parms{};
+	Parms.EventDataName = std::move(EventDataName);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -356,8 +39,31 @@ int32 UFortAthenaLivingWorldEncounterInstance::GetTotalActorCount() const
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
 
-	return Parms.ReturnValue;
+
+// Function LagerRuntime.FortCheatManager_LivingWorldManager.LivingWorldManagerTeleportTo
+// (Final, Exec, Native, Public)
+// Parameters:
+// const class FString&                    EventDataName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFortCheatManager_LivingWorldManager::LivingWorldManagerTeleportTo(const class FString& EventDataName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortCheatManager_LivingWorldManager", "LivingWorldManagerTeleportTo");
+
+	Params::FortCheatManager_LivingWorldManager_LivingWorldManagerTeleportTo Parms{};
+
+	Parms.EventDataName = std::move(EventDataName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -411,33 +117,8 @@ void UFortAthenaLivingWorldManager::LivingWorldManagerUnregisterPointProvider(cl
 }
 
 
-// Function LagerRuntime.FortAthenaLivingWorldManager.EndEncounter
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
-// Parameters:
-// class UFortAthenaLivingWorldEncounterInstance*EncounterInstance                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortAthenaLivingWorldManager::EndEncounter(class UFortAthenaLivingWorldEncounterInstance* EncounterInstance)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldManager", "EndEncounter");
-
-	Params::FortAthenaLivingWorldManager_EndEncounter Parms{};
-
-	Parms.EncounterInstance = EncounterInstance;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function LagerRuntime.FortAthenaLivingWorldManager.LivingWorldManagerFlush
-// (Final, BlueprintAuthorityOnly, Exec, Native, Public)
+// (Final, Exec, Native, Public)
 
 void UFortAthenaLivingWorldManager::LivingWorldManagerFlush()
 {
@@ -456,7 +137,7 @@ void UFortAthenaLivingWorldManager::LivingWorldManagerFlush()
 
 
 // Function LagerRuntime.FortAthenaLivingWorldManager.LivingWorldManagerGenerateEvents
-// (Final, BlueprintAuthorityOnly, Exec, Native, Public)
+// (Final, Exec, Native, Public)
 
 void UFortAthenaLivingWorldManager::LivingWorldManagerGenerateEvents()
 {
@@ -475,7 +156,7 @@ void UFortAthenaLivingWorldManager::LivingWorldManagerGenerateEvents()
 
 
 // Function LagerRuntime.FortAthenaLivingWorldManager.LivingWorldManagerProviderDebugActor
-// (Final, BlueprintAuthorityOnly, Exec, Native, Public)
+// (Final, Exec, Native, Public)
 // Parameters:
 // int32                                   ProviderIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -500,7 +181,7 @@ void UFortAthenaLivingWorldManager::LivingWorldManagerProviderDebugActor(int32 P
 
 
 // Function LagerRuntime.FortAthenaLivingWorldManager.LivingWorldManagerToggleActorMinimap
-// (Final, BlueprintAuthorityOnly, Exec, Native, Public)
+// (Final, Exec, Native, Public)
 
 void UFortAthenaLivingWorldManager::LivingWorldManagerToggleActorMinimap()
 {
@@ -518,27 +199,8 @@ void UFortAthenaLivingWorldManager::LivingWorldManagerToggleActorMinimap()
 }
 
 
-// Function LagerRuntime.FortAthenaLivingWorldManager.LivingWorldManagerToggleDensityDisplay
-// (Final, BlueprintAuthorityOnly, Exec, Native, Public)
-
-void UFortAthenaLivingWorldManager::LivingWorldManagerToggleDensityDisplay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldManager", "LivingWorldManagerToggleDensityDisplay");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function LagerRuntime.FortAthenaLivingWorldManager.LivingWorldManagerToggleGenerateEvents
-// (Final, BlueprintAuthorityOnly, Exec, Native, Public)
+// (Final, Exec, Native, Public)
 
 void UFortAthenaLivingWorldManager::LivingWorldManagerToggleGenerateEvents()
 {
@@ -557,7 +219,7 @@ void UFortAthenaLivingWorldManager::LivingWorldManagerToggleGenerateEvents()
 
 
 // Function LagerRuntime.FortAthenaLivingWorldManager.LivingWorldManagerToggleVerboseLogging
-// (Final, BlueprintAuthorityOnly, Exec, Native, Public)
+// (Final, Exec, Native, Public)
 
 void UFortAthenaLivingWorldManager::LivingWorldManagerToggleVerboseLogging()
 {
@@ -570,33 +232,6 @@ void UFortAthenaLivingWorldManager::LivingWorldManagerToggleVerboseLogging()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldManager.OnActorSpawned
-// (Final, Native, Private)
-// Parameters:
-// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   RequestID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortAthenaLivingWorldManager::OnActorSpawned(class AActor* Actor, int32 RequestID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldManager", "OnActorSpawned");
-
-	Params::FortAthenaLivingWorldManager_OnActorSpawned Parms{};
-
-	Parms.Actor = Actor;
-	Parms.RequestID = RequestID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -654,50 +289,6 @@ void UFortAthenaLivingWorldManager::OnPatrolPathAdded(class AFortAthenaPatrolPat
 }
 
 
-// Function LagerRuntime.FortAthenaLivingWorldManager.OnRep_ActorClassToPreloadOnClient
-// (Final, Native, Private)
-
-void UFortAthenaLivingWorldManager::OnRep_ActorClassToPreloadOnClient()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldManager", "OnRep_ActorClassToPreloadOnClient");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldManager.OnRep_DebugDensityMinimapIndicator
-// (Final, Native, Private)
-// Parameters:
-// class UFortAthenaLivingWorldDebugDensityMiniMapIndicator*OldMapIndicator                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortAthenaLivingWorldManager::OnRep_DebugDensityMinimapIndicator(class UFortAthenaLivingWorldDebugDensityMiniMapIndicator* OldMapIndicator)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldManager", "OnRep_DebugDensityMinimapIndicator");
-
-	Params::FortAthenaLivingWorldManager_OnRep_DebugDensityMinimapIndicator Parms{};
-
-	Parms.OldMapIndicator = OldMapIndicator;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function LagerRuntime.FortAthenaLivingWorldManager.OnSpawnedActorDestroy
 // (Final, Native, Private)
 // Parameters:
@@ -723,64 +314,33 @@ void UFortAthenaLivingWorldManager::OnSpawnedActorDestroy(class AActor* Destroye
 }
 
 
-// Function LagerRuntime.FortAthenaLivingWorldManager.OnUnmanagedDensityReservoirActorDestroy
-// (Final, Native, Private)
-// Parameters:
-// class AActor*                           DestroyedActor                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// Function LagerRuntime.FortAthenaLivingWorldManager.RequestEventGeneration
+// (Final, Native, Public, BlueprintCallable)
 
-void UFortAthenaLivingWorldManager::OnUnmanagedDensityReservoirActorDestroy(class AActor* DestroyedActor)
+void UFortAthenaLivingWorldManager::RequestEventGeneration()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldManager", "OnUnmanagedDensityReservoirActorDestroy");
-
-	Params::FortAthenaLivingWorldManager_OnUnmanagedDensityReservoirActorDestroy Parms{};
-
-	Parms.DestroyedActor = DestroyedActor;
+		Func = Class->GetFunction("FortAthenaLivingWorldManager", "RequestEventGeneration");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldManager.OnWorldFinishedInitialization
-// (Final, Native, Private, HasOutParams)
-// Parameters:
-// const struct FGameplayTagContainer&     ContextTags                                            (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UFortAthenaLivingWorldManager::OnWorldFinishedInitialization(const struct FGameplayTagContainer& ContextTags)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldManager", "OnWorldFinishedInitialization");
-
-	Params::FortAthenaLivingWorldManager_OnWorldFinishedInitialization Parms{};
-
-	Parms.ContextTags = std::move(ContextTags);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function LagerRuntime.FortAthenaLivingWorldManager.QueryEventBudget
-// (Final, Native, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FDataTableRowHandle&       EventEntry                                             (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // const class AActor*                     SpawnLocation                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UFortAthenaLivingWorldManager::QueryEventBudget(const struct FDataTableRowHandle& EventEntry, const class AActor* SpawnLocation)
+int32 UFortAthenaLivingWorldManager::QueryEventBudget(const struct FDataTableRowHandle& EventEntry, const class AActor* SpawnLocation) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -803,319 +363,156 @@ int32 UFortAthenaLivingWorldManager::QueryEventBudget(const struct FDataTableRow
 }
 
 
-// Function LagerRuntime.FortAthenaLivingWorldManager.RequestEventGeneration
-// (Final, Native, Public, BlueprintCallable)
+// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.OnEventRequested
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 
-void UFortAthenaLivingWorldManager::RequestEventGeneration()
+void IFortAthenaLivingWorldPointProviderInterface::OnEventRequested()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldManager", "RequestEventGeneration");
+		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "OnEventRequested");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, nullptr);
+	AsUObject()->ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function LagerRuntime.FortAthenaLivingWorldManager.StartEncounter
-// (Final, BlueprintAuthorityOnly, Native, Public, HasOutParams, BlueprintCallable)
+// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.OnSpawnedActor
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const TSoftObjectPtr<class UFortAthenaLivingWorldEncounter>EncounterType                                          (ConstParm, Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>>&EncounterPointProviders                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, UObjectWrapper, NativeAccessSpecifierPublic)
-// class AActor*                           ActorDensityReservoir                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UFortAthenaLivingWorldEncounterInstance*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           SpawnedActor                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UFortAthenaLivingWorldEncounterInstance* UFortAthenaLivingWorldManager::StartEncounter(const TSoftObjectPtr<class UFortAthenaLivingWorldEncounter> EncounterType, const TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>>& EncounterPointProviders, class AActor* ActorDensityReservoir)
+void IFortAthenaLivingWorldPointProviderInterface::OnSpawnedActor(class AActor* SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldManager", "StartEncounter");
+		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "OnSpawnedActor");
 
-	Params::FortAthenaLivingWorldManager_StartEncounter Parms{};
+	Params::FortAthenaLivingWorldPointProviderInterface_OnSpawnedActor Parms{};
 
-	Parms.EncounterType = EncounterType;
-	Parms.EncounterPointProviders = std::move(EncounterPointProviders);
-	Parms.ActorDensityReservoir = ActorDensityReservoir;
+	Parms.SpawnedActor = SpawnedActor;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	AsUObject()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
-// Function LagerRuntime.FortAthenaLivingWorldManager.TrySpawnEvent
-// (Final, BlueprintAuthorityOnly, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.OnSpawnedActorFailed
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+
+void IFortAthenaLivingWorldPointProviderInterface::OnSpawnedActorFailed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "OnSpawnedActorFailed");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.GetFiltersTags
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// const struct FDataTableRowHandle&       EventEntry                                             (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// const struct FTransform&                SpawnLocation                                          (ConstParm, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// const TDelegate<void(const TArray<class AActor*>& SpawnedActors, bool bSuccess)>&OnRequestFinished                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FGameplayTagContainer*           FilterTags                                             (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void IFortAthenaLivingWorldPointProviderInterface::GetFiltersTags(struct FGameplayTagContainer* FilterTags) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "GetFiltersTags");
+
+	Params::FortAthenaLivingWorldPointProviderInterface_GetFiltersTags Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (FilterTags != nullptr)
+		*FilterTags = std::move(Parms.FilterTags);
+}
+
+
+// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.GetValidLocation
+// (Native, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// const struct FFortAthenaLivingWorldPointProviderFilterRules&PointFilter                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FVector*                         OutPosition                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRotator*                        OutRotation                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UFortAthenaLivingWorldManager::TrySpawnEvent(const struct FDataTableRowHandle& EventEntry, const struct FTransform& SpawnLocation, const TDelegate<void(const TArray<class AActor*>& SpawnedActors, bool bSuccess)>& OnRequestFinished)
+bool IFortAthenaLivingWorldPointProviderInterface::GetValidLocation(const struct FFortAthenaLivingWorldPointProviderFilterRules& PointFilter, struct FVector* OutPosition, struct FRotator* OutRotation) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldManager", "TrySpawnEvent");
+		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "GetValidLocation");
 
-	Params::FortAthenaLivingWorldManager_TrySpawnEvent Parms{};
+	Params::FortAthenaLivingWorldPointProviderInterface_GetValidLocation Parms{};
 
-	Parms.EventEntry = std::move(EventEntry);
-	Parms.SpawnLocation = std::move(SpawnLocation);
-	Parms.OnRequestFinished = OnRequestFinished;
+	Parms.PointFilter = std::move(PointFilter);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	AsUObject()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	if (OutPosition != nullptr)
+		*OutPosition = std::move(Parms.OutPosition);
+
+	if (OutRotation != nullptr)
+		*OutRotation = std::move(Parms.OutRotation);
 
 	return Parms.ReturnValue;
 }
 
 
-// Function LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.EvaluateAndEnablePointProviders
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
-
-void AFortAthenaLivingWorldPointProvidersEnabler::EvaluateAndEnablePointProviders()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldPointProvidersEnabler", "EvaluateAndEnablePointProviders");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.OnCurrentPlaylistLoaded
-// (Final, Native, Private, HasOutParams)
+// Function LagerRuntime.FortAthenaLivingWorldPointProviderInterface.IsEnabled
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class FName                             PlaylistName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTagContainer&     PlaylistContextTags                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void AFortAthenaLivingWorldPointProvidersEnabler::OnCurrentPlaylistLoaded(class FName PlaylistName, const struct FGameplayTagContainer& PlaylistContextTags)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldPointProvidersEnabler", "OnCurrentPlaylistLoaded");
-
-	Params::FortAthenaLivingWorldPointProvidersEnabler_OnCurrentPlaylistLoaded Parms{};
-
-	Parms.PlaylistName = PlaylistName;
-	Parms.PlaylistContextTags = std::move(PlaylistContextTags);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.RemoveClosestPointProvidersToPoint
-// (Final, BlueprintAuthorityOnly, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FVector&                   Point                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             MaximumDistance                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             PointsToDisable                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AFortAthenaLivingWorldPointProvidersEnabler::RemoveClosestPointProvidersToPoint(const struct FVector& Point, const float MaximumDistance, const int32 PointsToDisable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldPointProvidersEnabler", "RemoveClosestPointProvidersToPoint");
-
-	Params::FortAthenaLivingWorldPointProvidersEnabler_RemoveClosestPointProvidersToPoint Parms{};
-
-	Parms.Point = std::move(Point);
-	Parms.MaximumDistance = MaximumDistance;
-	Parms.PointsToDisable = PointsToDisable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.DoesStartEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
+// const struct FFortAthenaLivingWorldPointProviderFilterRules&PointFilter                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool AFortAthenaLivingWorldPointProvidersEnabler::DoesStartEnabled() const
+bool IFortAthenaLivingWorldPointProviderInterface::IsEnabled(const struct FFortAthenaLivingWorldPointProviderFilterRules& PointFilter) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldPointProvidersEnabler", "DoesStartEnabled");
+		Func = AsUObject()->Class->GetFunction("FortAthenaLivingWorldPointProviderInterface", "IsEnabled");
 
-	Params::FortAthenaLivingWorldPointProvidersEnabler_DoesStartEnabled Parms{};
+	Params::FortAthenaLivingWorldPointProviderInterface_IsEnabled Parms{};
+
+	Parms.PointFilter = std::move(PointFilter);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	AsUObject()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.GetEnabledLinkedPointProviders
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>>ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, UObjectWrapper, NativeAccessSpecifierPublic)
-
-const TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>> AFortAthenaLivingWorldPointProvidersEnabler::GetEnabledLinkedPointProviders() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldPointProvidersEnabler", "GetEnabledLinkedPointProviders");
-
-	Params::FortAthenaLivingWorldPointProvidersEnabler_GetEnabledLinkedPointProviders Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.GetEnablerTags
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FGameplayTagContainer      ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-const struct FGameplayTagContainer AFortAthenaLivingWorldPointProvidersEnabler::GetEnablerTags() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldPointProvidersEnabler", "GetEnablerTags");
-
-	Params::FortAthenaLivingWorldPointProvidersEnabler_GetEnablerTags Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.HasCompletedEvaluation
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool AFortAthenaLivingWorldPointProvidersEnabler::HasCompletedEvaluation() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldPointProvidersEnabler", "HasCompletedEvaluation");
-
-	Params::FortAthenaLivingWorldPointProvidersEnabler_HasCompletedEvaluation Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldSpawnActionBlueprint.K2_OnAllActorSpawned
-// (Event, Public, HasOutParams, BlueprintEvent, Const)
-// Parameters:
-// const TArray<class AActor*>&            SpawnedActor                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UFortAthenaLivingWorldSpawnActionBlueprint::K2_OnAllActorSpawned(const TArray<class AActor*>& SpawnedActor) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldSpawnActionBlueprint", "K2_OnAllActorSpawned");
-
-	Params::FortAthenaLivingWorldSpawnActionBlueprint_K2_OnAllActorSpawned Parms{};
-
-	Parms.SpawnedActor = std::move(SpawnedActor);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldVolume.DisablePointProvider
-// (Native, Public, BlueprintCallable)
-
-void AFortAthenaLivingWorldVolume::DisablePointProvider()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldVolume", "DisablePointProvider");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldVolume.EnablePointProvider
-// (Native, Public, BlueprintCallable)
-
-void AFortAthenaLivingWorldVolume::EnablePointProvider()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldVolume", "EnablePointProvider");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
 }
 
 
@@ -1146,65 +543,21 @@ void AFortAthenaLivingWorldVolume::OnCurrentPlaylistLoaded(class FName PlaylistN
 }
 
 
-// Function LagerRuntime.FortAthenaLivingWorldVolume.OnWorldFinishedInitialization
-// (Final, Native, Private, HasOutParams)
-// Parameters:
-// const struct FGameplayTagContainer&     ContextTags                                            (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void AFortAthenaLivingWorldVolume::OnWorldFinishedInitialization(const struct FGameplayTagContainer& ContextTags)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldVolume", "OnWorldFinishedInitialization");
-
-	Params::FortAthenaLivingWorldVolume_OnWorldFinishedInitialization Parms{};
-
-	Parms.ContextTags = std::move(ContextTags);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldVolume.RunEQS
+// Function LagerRuntime.FortAthenaLivingWorldVolume.OnPointProviderRegistered
 // (Final, Native, Private)
-
-void AFortAthenaLivingWorldVolume::RunEQS()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldVolume", "RunEQS");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldVolume.SetEQSQuery
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
 // Parameters:
-// class UEnvQuery*                        Query                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           PointProvider                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void AFortAthenaLivingWorldVolume::SetEQSQuery(class UEnvQuery* Query)
+void AFortAthenaLivingWorldVolume::OnPointProviderRegistered(class AActor* PointProvider)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldVolume", "SetEQSQuery");
+		Func = Class->GetFunction("FortAthenaLivingWorldVolume", "OnPointProviderRegistered");
 
-	Params::FortAthenaLivingWorldVolume_SetEQSQuery Parms{};
+	Params::FortAthenaLivingWorldVolume_OnPointProviderRegistered Parms{};
 
-	Parms.Query = Query;
+	Parms.PointProvider = PointProvider;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1212,113 +565,11 @@ void AFortAthenaLivingWorldVolume::SetEQSQuery(class UEnvQuery* Query)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldVolume.SetEQSQueryConfigParam
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FName                       ParameterName                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AFortAthenaLivingWorldVolume::SetEQSQueryConfigParam(const class FName ParameterName, float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldVolume", "SetEQSQueryConfigParam");
-
-	Params::FortAthenaLivingWorldVolume_SetEQSQueryConfigParam Parms{};
-
-	Parms.ParameterName = ParameterName;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldVolume.SetFiltersTags
-// (Final, BlueprintAuthorityOnly, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FGameplayTagContainer&     TagContainer                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void AFortAthenaLivingWorldVolume::SetFiltersTags(const struct FGameplayTagContainer& TagContainer)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldVolume", "SetFiltersTags");
-
-	Params::FortAthenaLivingWorldVolume_SetFiltersTags Parms{};
-
-	Parms.TagContainer = std::move(TagContainer);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldVolume.DoesStartEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool AFortAthenaLivingWorldVolume::DoesStartEnabled() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldVolume", "DoesStartEnabled");
-
-	Params::FortAthenaLivingWorldVolume_DoesStartEnabled Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function LagerRuntime.FortAthenaLivingWorldVolume.IsPointProviderEnabled
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool AFortAthenaLivingWorldVolume::IsPointProviderEnabled() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaLivingWorldVolume", "IsPointProviderEnabled");
-
-	Params::FortAthenaLivingWorldVolume_IsPointProviderEnabled Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
 // Function LagerRuntime.FortAthenaPatrolPathPointProvider.DisablePointProvider
-// (Native, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 
 void AFortAthenaPatrolPathPointProvider::DisablePointProvider()
 {
@@ -1337,7 +588,7 @@ void AFortAthenaPatrolPathPointProvider::DisablePointProvider()
 
 
 // Function LagerRuntime.FortAthenaPatrolPathPointProvider.EnablePointProvider
-// (Native, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 
 void AFortAthenaPatrolPathPointProvider::EnablePointProvider()
 {
@@ -1382,165 +633,21 @@ void AFortAthenaPatrolPathPointProvider::OnCurrentPlaylistLoaded(class FName Pla
 }
 
 
-// Function LagerRuntime.FortAthenaPointAroundPlayerProvider.DisablePointProvider
-// (Native, Public, BlueprintCallable)
-
-void AFortAthenaPointAroundPlayerProvider::DisablePointProvider()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaPointAroundPlayerProvider", "DisablePointProvider");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaPointAroundPlayerProvider.EnablePointProvider
-// (Native, Public, BlueprintCallable)
-
-void AFortAthenaPointAroundPlayerProvider::EnablePointProvider()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaPointAroundPlayerProvider", "EnablePointProvider");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortAthenaPointAroundPlayerProvider.OnCurrentPlaylistLoaded
-// (Final, Native, Private, HasOutParams)
+// Function LagerRuntime.FortAthenaPatrolPathPointProvider.OnSpawnedActorDestroyed
+// (Final, Native, Private)
 // Parameters:
-// class FName                             PlaylistName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTagContainer&     PlaylistContextTags                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class AActor*                           DestroyedActor                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void AFortAthenaPointAroundPlayerProvider::OnCurrentPlaylistLoaded(class FName PlaylistName, const struct FGameplayTagContainer& PlaylistContextTags)
+void AFortAthenaPatrolPathPointProvider::OnSpawnedActorDestroyed(class AActor* DestroyedActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaPointAroundPlayerProvider", "OnCurrentPlaylistLoaded");
+		Func = Class->GetFunction("FortAthenaPatrolPathPointProvider", "OnSpawnedActorDestroyed");
 
-	Params::FortAthenaPointAroundPlayerProvider_OnCurrentPlaylistLoaded Parms{};
+	Params::FortAthenaPatrolPathPointProvider_OnSpawnedActorDestroyed Parms{};
 
-	Parms.PlaylistName = PlaylistName;
-	Parms.PlaylistContextTags = std::move(PlaylistContextTags);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortCheatManager_LivingWorldManager.LivingWorldManagerSpawn
-// (Final, BlueprintAuthorityOnly, Exec, Native, Public)
-// Parameters:
-// const class FString&                    EventDataName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortCheatManager_LivingWorldManager::LivingWorldManagerSpawn(const class FString& EventDataName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortCheatManager_LivingWorldManager", "LivingWorldManagerSpawn");
-
-	Params::FortCheatManager_LivingWorldManager_LivingWorldManagerSpawn Parms{};
-
-	Parms.EventDataName = std::move(EventDataName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortCheatManager_LivingWorldManager.LivingWorldManagerSpawnAtLocation
-// (Final, BlueprintAuthorityOnly, Exec, Native, Public, HasDefaults)
-// Parameters:
-// const class FString&                    EventDataName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FRotator&                  Rotation                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-void UFortCheatManager_LivingWorldManager::LivingWorldManagerSpawnAtLocation(const class FString& EventDataName, const struct FVector& Location, const struct FRotator& Rotation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortCheatManager_LivingWorldManager", "LivingWorldManagerSpawnAtLocation");
-
-	Params::FortCheatManager_LivingWorldManager_LivingWorldManagerSpawnAtLocation Parms{};
-
-	Parms.EventDataName = std::move(EventDataName);
-	Parms.Location = std::move(Location);
-	Parms.Rotation = std::move(Rotation);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortCheatManager_LivingWorldManager.LivingWorldManagerTeleportTo
-// (Final, BlueprintAuthorityOnly, Exec, Native, Public)
-// Parameters:
-// const class FString&                    EventDataName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortCheatManager_LivingWorldManager::LivingWorldManagerTeleportTo(const class FString& EventDataName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortCheatManager_LivingWorldManager", "LivingWorldManagerTeleportTo");
-
-	Params::FortCheatManager_LivingWorldManager_LivingWorldManagerTeleportTo Parms{};
-
-	Parms.EventDataName = std::move(EventDataName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function LagerRuntime.FortCheatManager_LivingWorldManager.LivingWorldManagerTeleportToSpawnPosition
-// (Final, BlueprintAuthorityOnly, Exec, Native, Public)
-// Parameters:
-// const class FString&                    EventDataName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFortCheatManager_LivingWorldManager::LivingWorldManagerTeleportToSpawnPosition(const class FString& EventDataName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortCheatManager_LivingWorldManager", "LivingWorldManagerTeleportToSpawnPosition");
-
-	Params::FortCheatManager_LivingWorldManager_LivingWorldManagerTeleportToSpawnPosition Parms{};
-
-	Parms.EventDataName = std::move(EventDataName);
+	Parms.DestroyedActor = DestroyedActor;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

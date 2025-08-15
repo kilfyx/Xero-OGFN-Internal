@@ -10,21 +10,21 @@
 
 #include "Basic.hpp"
 
+#include "GA_Ninja_Tactical_MeleeHitsHeal_classes.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "GA_Ninja_Tactical_MeleeHitsHeal_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Ninja_SwordHitsHeal.GA_Ninja_SwordHitsHeal_C
-// 0x0028 (0x0C78 - 0x0C50)
+// 0x0028 (0x0C88 - 0x0C60)
 class UGA_Ninja_SwordHitsHeal_C final : public UGA_Ninja_Tactical_MeleeHitsHeal_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Ninja_SwordHitsHeal_C;           // 0x0C50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTagContainer                  TC_RequiredTags;                                   // 0x0C58(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Ninja_SwordHitsHeal_C;           // 0x0C60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTagContainer                  TC_RequiredTags;                                   // 0x0C68(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_GA_Ninja_SwordHitsHeal(int32 EntryPoint);
@@ -43,6 +43,10 @@ public:
 		return GetDefaultObjImpl<UGA_Ninja_SwordHitsHeal_C>();
 	}
 };
+static_assert(alignof(UGA_Ninja_SwordHitsHeal_C) == 0x000008, "Wrong alignment on UGA_Ninja_SwordHitsHeal_C");
+static_assert(sizeof(UGA_Ninja_SwordHitsHeal_C) == 0x000C88, "Wrong size on UGA_Ninja_SwordHitsHeal_C");
+static_assert(offsetof(UGA_Ninja_SwordHitsHeal_C, UberGraphFrame_GA_Ninja_SwordHitsHeal_C) == 0x000C60, "Member 'UGA_Ninja_SwordHitsHeal_C::UberGraphFrame_GA_Ninja_SwordHitsHeal_C' has a wrong offset!");
+static_assert(offsetof(UGA_Ninja_SwordHitsHeal_C, TC_RequiredTags) == 0x000C68, "Member 'UGA_Ninja_SwordHitsHeal_C::TC_RequiredTags' has a wrong offset!");
 
 }
 

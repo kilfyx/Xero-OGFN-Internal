@@ -37,41 +37,21 @@ void USettingsListEntry_Scalar_Narrow_C::ExecuteUbergraph_SettingsListEntry_Scal
 }
 
 
-// Function SettingsListEntry_Scalar_Narrow.SettingsListEntry_Scalar_Narrow_C.GetPrimaryGamepadFocusWidget
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function SettingsListEntry_Scalar_Narrow.SettingsListEntry_Scalar_Narrow_C.OnMouseLeave
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-class UWidget* USettingsListEntry_Scalar_Narrow_C::GetPrimaryGamepadFocusWidget()
+void USettingsListEntry_Scalar_Narrow_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsListEntry_Scalar_Narrow_C", "GetPrimaryGamepadFocusWidget");
+		Func = Class->GetFunction("SettingsListEntry_Scalar_Narrow_C", "OnMouseLeave");
 
-	Params::SettingsListEntry_Scalar_Narrow_C_GetPrimaryGamepadFocusWidget Parms{};
+	Params::SettingsListEntry_Scalar_Narrow_C_OnMouseLeave Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SettingsListEntry_Scalar_Narrow.SettingsListEntry_Scalar_Narrow_C.OnDefaultValueChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// float                                   DefaultValue                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USettingsListEntry_Scalar_Narrow_C::OnDefaultValueChanged(float DefaultValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsListEntry_Scalar_Narrow_C", "OnDefaultValueChanged");
-
-	Params::SettingsListEntry_Scalar_Narrow_C_OnDefaultValueChanged Parms{};
-
-	Parms.DefaultValue = DefaultValue;
+	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -99,21 +79,21 @@ void USettingsListEntry_Scalar_Narrow_C::OnMouseEnter(const struct FGeometry& My
 }
 
 
-// Function SettingsListEntry_Scalar_Narrow.SettingsListEntry_Scalar_Narrow_C.OnMouseLeave
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Function SettingsListEntry_Scalar_Narrow.SettingsListEntry_Scalar_Narrow_C.OnDefaultValueChanged
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// float                                   DefaultValue                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USettingsListEntry_Scalar_Narrow_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
+void USettingsListEntry_Scalar_Narrow_C::OnDefaultValueChanged(float DefaultValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsListEntry_Scalar_Narrow_C", "OnMouseLeave");
+		Func = Class->GetFunction("SettingsListEntry_Scalar_Narrow_C", "OnDefaultValueChanged");
 
-	Params::SettingsListEntry_Scalar_Narrow_C_OnMouseLeave Parms{};
+	Params::SettingsListEntry_Scalar_Narrow_C_OnDefaultValueChanged Parms{};
 
-	Parms.MouseEvent = std::move(MouseEvent);
+	Parms.DefaultValue = DefaultValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -136,6 +116,26 @@ void USettingsListEntry_Scalar_Narrow_C::OnValueChanged(float Value)
 	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SettingsListEntry_Scalar_Narrow.SettingsListEntry_Scalar_Narrow_C.GetPrimaryGamepadFocusWidget
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* USettingsListEntry_Scalar_Narrow_C::GetPrimaryGamepadFocusWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SettingsListEntry_Scalar_Narrow_C", "GetPrimaryGamepadFocusWidget");
+
+	Params::SettingsListEntry_Scalar_Narrow_C_GetPrimaryGamepadFocusWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

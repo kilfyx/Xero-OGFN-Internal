@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LeavePartyConfirmationMenu.LeavePartyConfirmationMenu_C
-// 0x0010 (0x0390 - 0x0380)
+// 0x0010 (0x0378 - 0x0368)
 class ULeavePartyConfirmationMenu_C final : public UFortLeavePartyMenu
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0380(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Opened;                                            // 0x0388(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Opened;                                            // 0x0370(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_LeavePartyConfirmationMenu(int32 EntryPoint);
@@ -39,6 +39,10 @@ public:
 		return GetDefaultObjImpl<ULeavePartyConfirmationMenu_C>();
 	}
 };
+static_assert(alignof(ULeavePartyConfirmationMenu_C) == 0x000008, "Wrong alignment on ULeavePartyConfirmationMenu_C");
+static_assert(sizeof(ULeavePartyConfirmationMenu_C) == 0x000378, "Wrong size on ULeavePartyConfirmationMenu_C");
+static_assert(offsetof(ULeavePartyConfirmationMenu_C, UberGraphFrame) == 0x000368, "Member 'ULeavePartyConfirmationMenu_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ULeavePartyConfirmationMenu_C, Opened) == 0x000370, "Member 'ULeavePartyConfirmationMenu_C::Opened' has a wrong offset!");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LetoHudOverlay.LetoHudOverlay_C
-// 0x0000 (0x02A8 - 0x02A8)
+// 0x0000 (0x02C0 - 0x02C0)
 class ULetoHudOverlay_C final : public ULetoHudOverlay
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ULetoHudOverlay_C>();
 	}
 };
+static_assert(alignof(ULetoHudOverlay_C) == 0x000008, "Wrong alignment on ULetoHudOverlay_C");
+static_assert(sizeof(ULetoHudOverlay_C) == 0x0002C0, "Wrong size on ULetoHudOverlay_C");
 
 }
 

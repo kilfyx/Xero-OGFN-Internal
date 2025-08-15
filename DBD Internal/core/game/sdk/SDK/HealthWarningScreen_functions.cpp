@@ -23,9 +23,9 @@ namespace SDK
 void UHealthWarningScreen_C::HandleShowTimerComplete()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HandleShowTimerComplete");
+		Func = Class->GetFunction("HealthWarningScreen_C", "HandleShowTimerComplete");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -39,9 +39,9 @@ void UHealthWarningScreen_C::HandleShowTimerComplete()
 void UHealthWarningScreen_C::ExecuteUbergraph_HealthWarningScreen(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_HealthWarningScreen");
+		Func = Class->GetFunction("HealthWarningScreen_C", "ExecuteUbergraph_HealthWarningScreen");
 
 	Params::HealthWarningScreen_C_ExecuteUbergraph_HealthWarningScreen Parms{};
 

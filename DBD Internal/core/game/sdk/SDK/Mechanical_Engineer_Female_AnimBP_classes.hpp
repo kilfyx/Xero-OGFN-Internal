@@ -12,36 +12,38 @@
 
 #include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "FortniteGame_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass Mechanical_Engineer_Female_AnimBP.Mechanical_Engineer_Female_AnimBP_C
-// 0x1130 (0x1820 - 0x06F0)
+// 0x0CD0 (0x1180 - 0x04B0)
 class UMechanical_Engineer_Female_AnimBP_C final : public UCustomCharacterPartAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x06F8(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0700(0x0008)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0708(0x00C0)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x07C8(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x07E8(0x0020)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0808(0x0020)()
-	uint8                                         Pad_828[0x8];                                      // 0x0828(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_AnimDynamics                 AnimGraphNode_AnimDynamics;                        // 0x0830(0x0510)()
-	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x0D40(0x0990)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x16D0(0x0128)()
-	struct FRotator                               gear_rot;                                          // 0x17F8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	class USkeletalMeshComponent*                 skel_mesh;                                         // 0x1810(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A8[0x8];                                      // 0x04A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x04B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x04C0(0x0088)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0548(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0568(0x0020)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0588(0x0030)()
+	uint8                                         Pad_5B8[0x8];                                      // 0x05B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_AnimDynamics                 AnimGraphNode_AnimDynamics;                        // 0x05C0(0x0440)()
+	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x0A00(0x0660)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x1060(0x0108)()
+	struct FRotator                               gear_rot;                                          // 0x1168(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1174[0x4];                                     // 0x1174(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 skel_mesh;                                         // 0x1178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Mechanical_Engineer_Female_AnimBP(int32 EntryPoint);
-	void BlueprintUpdateAnimation(float DeltaTimeX);
 	void BlueprintInitializeAnimation();
+	void BlueprintUpdateAnimation(float DeltaTimeX);
 	void AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0);
 
 public:
@@ -55,19 +57,18 @@ public:
 	}
 };
 static_assert(alignof(UMechanical_Engineer_Female_AnimBP_C) == 0x000010, "Wrong alignment on UMechanical_Engineer_Female_AnimBP_C");
-static_assert(sizeof(UMechanical_Engineer_Female_AnimBP_C) == 0x001820, "Wrong size on UMechanical_Engineer_Female_AnimBP_C");
-static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, UberGraphFrame) == 0x0006F0, "Member 'UMechanical_Engineer_Female_AnimBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimBlueprintExtension_PropertyAccess) == 0x0006F8, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimBlueprintExtension_Base) == 0x000700, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_LinkedInputPose) == 0x000708, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_LocalToComponentSpace) == 0x0007C8, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_ComponentToLocalSpace) == 0x0007E8, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_Root) == 0x000808, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_AnimDynamics) == 0x000830, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_AnimDynamics' has a wrong offset!");
-static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_RigidBody) == 0x000D40, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_RigidBody' has a wrong offset!");
-static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_ModifyBone) == 0x0016D0, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_ModifyBone' has a wrong offset!");
-static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, gear_rot) == 0x0017F8, "Member 'UMechanical_Engineer_Female_AnimBP_C::gear_rot' has a wrong offset!");
-static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, skel_mesh) == 0x001810, "Member 'UMechanical_Engineer_Female_AnimBP_C::skel_mesh' has a wrong offset!");
+static_assert(sizeof(UMechanical_Engineer_Female_AnimBP_C) == 0x001180, "Wrong size on UMechanical_Engineer_Female_AnimBP_C");
+static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, UberGraphFrame) == 0x0004B0, "Member 'UMechanical_Engineer_Female_AnimBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimBlueprintClassSubsystem_PropertyAccess) == 0x0004B8, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimBlueprintClassSubsystem_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_LinkedInputPose) == 0x0004C0, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
+static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_LocalToComponentSpace) == 0x000548, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_ComponentToLocalSpace) == 0x000568, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_Root) == 0x000588, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_AnimDynamics) == 0x0005C0, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_AnimDynamics' has a wrong offset!");
+static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_RigidBody) == 0x000A00, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_RigidBody' has a wrong offset!");
+static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, AnimGraphNode_ModifyBone) == 0x001060, "Member 'UMechanical_Engineer_Female_AnimBP_C::AnimGraphNode_ModifyBone' has a wrong offset!");
+static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, gear_rot) == 0x001168, "Member 'UMechanical_Engineer_Female_AnimBP_C::gear_rot' has a wrong offset!");
+static_assert(offsetof(UMechanical_Engineer_Female_AnimBP_C, skel_mesh) == 0x001178, "Member 'UMechanical_Engineer_Female_AnimBP_C::skel_mesh' has a wrong offset!");
 
 }
 

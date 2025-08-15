@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function ControllerActionsMenu.ControllerActionsMenu_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UControllerActionsMenu_C::BP_OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControllerActionsMenu_C", "BP_OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ControllerActionsMenu.ControllerActionsMenu_C.ExecuteUbergraph_ControllerActionsMenu
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UControllerActionsMenu_C::ExecuteUbergraph_ControllerActionsMenu(int32 Entr
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ControllerActionsMenu.ControllerActionsMenu_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UControllerActionsMenu_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControllerActionsMenu_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

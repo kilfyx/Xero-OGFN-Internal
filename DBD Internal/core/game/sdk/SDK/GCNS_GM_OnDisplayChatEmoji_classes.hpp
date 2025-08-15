@@ -12,26 +12,19 @@
 
 #include "FortniteGame_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GCNS_GM_OnDisplayChatEmoji.GCNS_GM_OnDisplayChatEmoji_C
-// 0x0018 (0x0088 - 0x0070)
+// 0x0010 (0x0090 - 0x0080)
 class UGCNS_GM_OnDisplayChatEmoji_C final : public UFortGameplayCueNotify_Simple
 {
 public:
-	struct FVector                                ParticleRelativeOffset;                            // 0x0070(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             BubbleSound;                                       // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ParticleRelativeOffset;                            // 0x0080(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void K2_HandleGameplayCue(class AActor* MyTarget, EGameplayCueEvent EventType, const struct FGameplayCueParameters& Parameters) const;
-	bool OnActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters) const;
-	bool OnExecute(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters) const;
-	bool OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters) const;
 	void OnStartParticleSystemSpawned(class UParticleSystemComponent* SpawnedParticleSysComponent, const struct FGameplayCueParameters& Parameters) const;
 
 public:
@@ -44,6 +37,9 @@ public:
 		return GetDefaultObjImpl<UGCNS_GM_OnDisplayChatEmoji_C>();
 	}
 };
+static_assert(alignof(UGCNS_GM_OnDisplayChatEmoji_C) == 0x000008, "Wrong alignment on UGCNS_GM_OnDisplayChatEmoji_C");
+static_assert(sizeof(UGCNS_GM_OnDisplayChatEmoji_C) == 0x000090, "Wrong size on UGCNS_GM_OnDisplayChatEmoji_C");
+static_assert(offsetof(UGCNS_GM_OnDisplayChatEmoji_C, ParticleRelativeOffset) == 0x000080, "Member 'UGCNS_GM_OnDisplayChatEmoji_C::ParticleRelativeOffset' has a wrong offset!");
 
 }
 

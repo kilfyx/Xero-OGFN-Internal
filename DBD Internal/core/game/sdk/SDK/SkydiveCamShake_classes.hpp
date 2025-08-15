@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<USkydiveCamShake_C>();
 	}
 };
+static_assert(alignof(USkydiveCamShake_C) == 0x000010, "Wrong alignment on USkydiveCamShake_C");
+static_assert(sizeof(USkydiveCamShake_C) == 0x0001B0, "Wrong size on USkydiveCamShake_C");
 
 }
 

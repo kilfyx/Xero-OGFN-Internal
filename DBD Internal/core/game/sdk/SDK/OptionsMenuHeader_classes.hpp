@@ -11,40 +11,38 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "FortniteUI_structs.hpp"
-#include "CommonUI_classes.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass OptionsMenuHeader.OptionsMenuHeader_C
-// 0x0030 (0x02A0 - 0x0270)
-class UOptionsMenuHeader_C final : public UCommonUserWidget
+// 0x0030 (0x02E8 - 0x02B8)
+class UOptionsMenuHeader_C final : public UFortOptionsMenuSetting
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Image_0;                                           // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBoxContainer;                                  // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USpacer*                                SpacerBottom;                                      // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextHeader;                                        // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         FontSizeMobile;                                    // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESettingType                                  LocalSettingType;                                  // 0x029C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Image_0;                                           // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBoxContainer;                                  // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USpacer*                                SpacerBottom;                                      // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextHeader;                                        // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	int32                                         FontSizeMobile;                                    // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_OnEntryReleased();
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void Center_On_Widget();
-	void CenterOnWidget_1();
-	void Construct();
-	void ExecuteUbergraph_OptionsMenuHeader(int32 EntryPoint);
-	void HandlePawnSet();
-	void OnListItemObjectSet(class UObject* ListItemObject);
-	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
 	void SetFontSize(class UCommonTextBlock* Text, int32 DefaultSize, int32 MobileSize);
+	void HandlePawnSet();
 	void UpdateSize();
+	void Center_On_Widget();
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void Construct();
+	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
+	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void OnListItemObjectSet(class UObject* ListItemObject);
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void CenterOnWidget();
+	void BP_OnEntryReleased();
+	void ExecuteUbergraph_OptionsMenuHeader(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -56,6 +54,14 @@ public:
 		return GetDefaultObjImpl<UOptionsMenuHeader_C>();
 	}
 };
+static_assert(alignof(UOptionsMenuHeader_C) == 0x000008, "Wrong alignment on UOptionsMenuHeader_C");
+static_assert(sizeof(UOptionsMenuHeader_C) == 0x0002E8, "Wrong size on UOptionsMenuHeader_C");
+static_assert(offsetof(UOptionsMenuHeader_C, UberGraphFrame) == 0x0002B8, "Member 'UOptionsMenuHeader_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UOptionsMenuHeader_C, Image_0) == 0x0002C0, "Member 'UOptionsMenuHeader_C::Image_0' has a wrong offset!");
+static_assert(offsetof(UOptionsMenuHeader_C, SizeBoxContainer) == 0x0002C8, "Member 'UOptionsMenuHeader_C::SizeBoxContainer' has a wrong offset!");
+static_assert(offsetof(UOptionsMenuHeader_C, SpacerBottom) == 0x0002D0, "Member 'UOptionsMenuHeader_C::SpacerBottom' has a wrong offset!");
+static_assert(offsetof(UOptionsMenuHeader_C, TextHeader) == 0x0002D8, "Member 'UOptionsMenuHeader_C::TextHeader' has a wrong offset!");
+static_assert(offsetof(UOptionsMenuHeader_C, FontSizeMobile) == 0x0002E0, "Member 'UOptionsMenuHeader_C::FontSizeMobile' has a wrong offset!");
 
 }
 

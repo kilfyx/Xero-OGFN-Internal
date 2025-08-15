@@ -18,20 +18,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EmergencyNoticeWidgetBR.EmergencyNoticeWidgetBR_C
-// 0x0030 (0x02C8 - 0x0298)
+// 0x0028 (0x02B0 - 0x0288)
 class UEmergencyNoticeWidgetBR_C final : public UEmergencyNoticeBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Entrance;                                          // 0x02A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       BodyText;                                          // 0x02A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HB_Content;                                        // 0x02B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TitleText;                                         // 0x02B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               VisibilitySB;                                      // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Entrance;                                          // 0x0290(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       BodyText;                                          // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TitleText;                                         // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               VisibilitySB;                                      // 0x02A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ShowNotice(const class FText& Title, const class FText& Body);
 	void Show_Notice();
+	void ShowNotice(const class FText& Title, const class FText& Body);
 	void HideNotice();
 	void ExecuteUbergraph_EmergencyNoticeWidgetBR(int32 EntryPoint);
 
@@ -46,13 +45,12 @@ public:
 	}
 };
 static_assert(alignof(UEmergencyNoticeWidgetBR_C) == 0x000008, "Wrong alignment on UEmergencyNoticeWidgetBR_C");
-static_assert(sizeof(UEmergencyNoticeWidgetBR_C) == 0x0002C8, "Wrong size on UEmergencyNoticeWidgetBR_C");
-static_assert(offsetof(UEmergencyNoticeWidgetBR_C, UberGraphFrame) == 0x000298, "Member 'UEmergencyNoticeWidgetBR_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEmergencyNoticeWidgetBR_C, Entrance) == 0x0002A0, "Member 'UEmergencyNoticeWidgetBR_C::Entrance' has a wrong offset!");
-static_assert(offsetof(UEmergencyNoticeWidgetBR_C, BodyText) == 0x0002A8, "Member 'UEmergencyNoticeWidgetBR_C::BodyText' has a wrong offset!");
-static_assert(offsetof(UEmergencyNoticeWidgetBR_C, HB_Content) == 0x0002B0, "Member 'UEmergencyNoticeWidgetBR_C::HB_Content' has a wrong offset!");
-static_assert(offsetof(UEmergencyNoticeWidgetBR_C, TitleText) == 0x0002B8, "Member 'UEmergencyNoticeWidgetBR_C::TitleText' has a wrong offset!");
-static_assert(offsetof(UEmergencyNoticeWidgetBR_C, VisibilitySB) == 0x0002C0, "Member 'UEmergencyNoticeWidgetBR_C::VisibilitySB' has a wrong offset!");
+static_assert(sizeof(UEmergencyNoticeWidgetBR_C) == 0x0002B0, "Wrong size on UEmergencyNoticeWidgetBR_C");
+static_assert(offsetof(UEmergencyNoticeWidgetBR_C, UberGraphFrame) == 0x000288, "Member 'UEmergencyNoticeWidgetBR_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UEmergencyNoticeWidgetBR_C, Entrance) == 0x000290, "Member 'UEmergencyNoticeWidgetBR_C::Entrance' has a wrong offset!");
+static_assert(offsetof(UEmergencyNoticeWidgetBR_C, BodyText) == 0x000298, "Member 'UEmergencyNoticeWidgetBR_C::BodyText' has a wrong offset!");
+static_assert(offsetof(UEmergencyNoticeWidgetBR_C, TitleText) == 0x0002A0, "Member 'UEmergencyNoticeWidgetBR_C::TitleText' has a wrong offset!");
+static_assert(offsetof(UEmergencyNoticeWidgetBR_C, VisibilitySB) == 0x0002A8, "Member 'UEmergencyNoticeWidgetBR_C::VisibilitySB' has a wrong offset!");
 
 }
 

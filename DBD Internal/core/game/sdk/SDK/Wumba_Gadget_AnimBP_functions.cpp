@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function Wumba_Gadget_AnimBP.Wumba_Gadget_AnimBP_C.UpdateUpgradingVisuals
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWumba_Gadget_AnimBP_C::UpdateUpgradingVisuals(bool NewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Wumba_Gadget_AnimBP_C", "UpdateUpgradingVisuals");
-
-	Params::Wumba_Gadget_AnimBP_C_UpdateUpgradingVisuals Parms{};
-
-	Parms.NewValue = NewValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function Wumba_Gadget_AnimBP.Wumba_Gadget_AnimBP_C.ExecuteUbergraph_Wumba_Gadget_AnimBP
 // (Final, UbergraphFunction)
 // Parameters:
@@ -52,6 +32,26 @@ void UWumba_Gadget_AnimBP_C::ExecuteUbergraph_Wumba_Gadget_AnimBP(int32 EntryPoi
 	Params::Wumba_Gadget_AnimBP_C_ExecuteUbergraph_Wumba_Gadget_AnimBP Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Wumba_Gadget_AnimBP.Wumba_Gadget_AnimBP_C.UpdateUpgradingVisuals
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWumba_Gadget_AnimBP_C::UpdateUpgradingVisuals(bool NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wumba_Gadget_AnimBP_C", "UpdateUpgradingVisuals");
+
+	Params::Wumba_Gadget_AnimBP_C_UpdateUpgradingVisuals Parms{};
+
+	Parms.NewValue = NewValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

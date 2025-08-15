@@ -10,83 +10,77 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "PhysicsCore_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C
-// 0x0070 (0x1568 - 0x14F8)
+// 0x0058 (0x0E10 - 0x0DB8)
 class AB_Athena_Pickaxe_Generic_C final : public AFortWeaponPickaxeAthena
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x14F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UParticleSystemComponent*               MeleeHeavy_PSC;                                    // 0x1500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	EAttachmentRule                               IdleFX_Location_Rule;                              // 0x1508(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAttachmentRule                               Idle_FX_Rotation_Rule;                             // 0x1509(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAttachmentRule                               Idle_FX_Scale_Rule;                                // 0x150A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAttachmentRule                               SwingFX_Location_Rule;                             // 0x150B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAttachmentRule                               Swing_FX_Rotation_Rule;                            // 0x150C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAttachmentRule                               Swing_FX_Scale_Rule;                               // 0x150D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_150E[0x2];                                     // 0x150E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystem*                        MeleeHeavy_ParticleSystem;                         // 0x1510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        WeaponDurabilityDestroyEffect;                     // 0x1518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        WeaponDurabilityDestroyEffectIcon;                 // 0x1520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseDestroyEffect;                                  // 0x1528(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1529[0x7];                                     // 0x1529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               Alteration_Ambient_PS;                             // 0x1530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	struct FVector                                Effects_Color_Level;                               // 0x1538(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Equipped;                                          // 0x1544(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bEquipPendingInstigator;                           // 0x1545(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseTimeofDayControl;                               // 0x1546(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Swing_Right_;                                      // 0x1547(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	class UFXSystemComponent*                     Impact_FX;                                         // 0x1548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Left_Swing_Rotation;                               // 0x1550(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FRotator                               Right_Swing_Rotation;                              // 0x155C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0DB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*               MeleeHeavy_PSC;                                    // 0x0DC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	EAttachmentRule                               IdleFX_Location_Rule;                              // 0x0DC8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAttachmentRule                               Idle_FX_Rotation_Rule;                             // 0x0DC9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAttachmentRule                               Idle_FX_Scale_Rule;                                // 0x0DCA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAttachmentRule                               SwingFX_Location_Rule;                             // 0x0DCB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAttachmentRule                               Swing_FX_Rotation_Rule;                            // 0x0DCC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAttachmentRule                               Swing_FX_Scale_Rule;                               // 0x0DCD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DCE[0x2];                                      // 0x0DCE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystem*                        MeleeHeavy_ParticleSystem;                         // 0x0DD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        WeaponDurabilityDestroyEffect;                     // 0x0DD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        WeaponDurabilityDestroyEffectIcon;                 // 0x0DE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseDestroyEffect;                                  // 0x0DE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_DE9[0x7];                                      // 0x0DE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               Alteration_Ambient_PS;                             // 0x0DF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	struct FVector                                Effects_Color_Level;                               // 0x0DF8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Equipped;                                          // 0x0E04(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bEquipPendingInstigator;                           // 0x0E05(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E06[0x2];                                      // 0x0E06(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RibbonIDOffset;                                    // 0x0E08(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_B_Athena_Pickaxe_Generic(int32 EntryPoint);
+	void K2_OnUnEquip();
+	void OnInstigatorSet();
+	void SwingLeftEnd();
+	void SwingRightEnd();
+	void SwingLeft();
+	void SwingRight();
 	void Anim_Trails_Disable();
 	void Anim_Trails_Notify(bool bActive);
-	void Binding_Time_of_Day_Control(bool F_);
-	void BindSwingAnimTrailEvents();
-	void ExecuteUbergraph_B_Athena_Pickaxe_Generic(int32 EntryPoint);
-	void FootStepLeft();
-	void FootStepRight();
+	void CandyCaneUpdate();
+	void UpdateBasedOnKills();
 	void HandleKillWatch();
-	void K2_OnUnEquip();
-	void Melee_Effect_Color(struct FVector* Melee_Color_Set);
-	void MeleeSwingLeft(bool First_Left);
-	void MeleeSwingLeft_End();
-	void MeleeSwingRight(bool First_Right);
-	void MeleeSwingRight_End();
-	void OnEquippedWeaponDestory();
-	void OnInitCosmeticAlterations(const struct FFortCosmeticModification& CosmeticMod);
 	void OnInitWeaponCosmetics();
-	void OnInstigatorSet();
-	void OnLoaded_5BC5DA3B4E308BE7A188FBB2571333D2(class UObject* Loaded);
-	void OnPlayImpactFX(const struct FHitResult& HitResult, EPhysicalSurface ImpactPhysicalSurface, class UFXSystemComponent* SpawnedPSC);
-	void OnPlayWeaponFireFX(bool bPersistentFire, bool bSecondaryFire);
-	void OnStatChanged_F171C56748FEA3E19F93088E968D3E21(class FName StatName, int32 StatValue);
-	void OnWeaponAttached();
 	void OnWeaponDetached();
 	void OnWeaponVisibilityChanged(bool bVisible, bool bSetForLocalControllerOnly);
-	void PlayCQCPickaxeEnemyAudio(const struct FHitResult& Hit_Result);
+	void OnInitCosmeticAlterations(const struct FFortCosmeticModification& CosmeticMod);
+	void OnWeaponAttached();
+	void OnEquippedWeaponDestory();
 	void PlayRClickImpacts();
-	void SetActiveAlterationIdleParticles(bool Active, bool Reset);
-	void SetWpnRarity();
-	void SwingLeft();
-	void SwingLeftEnd();
-	void SwingRight();
-	void SwingRightEnd();
-	void TODCheck(EFortDayPhase CurrentDayPhase, EFortDayPhase PreviousDayPhase, bool bAtCreation);
-	void UnbindSwingAnimTrailEvents();
-	void UpdateBasedOnKills(int32 Watched_Kills);
+	void OnPlayWeaponFireFX(bool bPersistentFire, bool bSecondaryFire);
+	void MeleeSwingLeft_End();
+	void MeleeSwingRight_End();
+	void FootStepRight();
+	void FootStepLeft();
+	void MeleeSwingLeft(bool First_Left);
+	void MeleeSwingRight(bool First_Right);
+	void OnLoaded_5BC5DA3B4E308BE7A188FBB2571333D2(class UObject* Loaded);
+	void OnStatChanged_F171C56748FEA3E19F93088E968D3E21(class FName StatName, int32 StatValue);
 	void UserConstructionScript();
+	void SetWpnRarity();
+	void SetActiveAlterationIdleParticles(bool Active, bool Reset);
+	void PlayCQCPickaxeEnemyAudio(const struct FHitResult& Hit_Result);
+	void BindSwingAnimTrailEvents();
+	void UnbindSwingAnimTrailEvents();
+	void Melee_Effect_Color(struct FVector* Melee_Color_Set);
 
 public:
 	static class UClass* StaticClass()
@@ -98,6 +92,25 @@ public:
 		return GetDefaultObjImpl<AB_Athena_Pickaxe_Generic_C>();
 	}
 };
+static_assert(alignof(AB_Athena_Pickaxe_Generic_C) == 0x000008, "Wrong alignment on AB_Athena_Pickaxe_Generic_C");
+static_assert(sizeof(AB_Athena_Pickaxe_Generic_C) == 0x000E10, "Wrong size on AB_Athena_Pickaxe_Generic_C");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, UberGraphFrame) == 0x000DB8, "Member 'AB_Athena_Pickaxe_Generic_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, MeleeHeavy_PSC) == 0x000DC0, "Member 'AB_Athena_Pickaxe_Generic_C::MeleeHeavy_PSC' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, IdleFX_Location_Rule) == 0x000DC8, "Member 'AB_Athena_Pickaxe_Generic_C::IdleFX_Location_Rule' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, Idle_FX_Rotation_Rule) == 0x000DC9, "Member 'AB_Athena_Pickaxe_Generic_C::Idle_FX_Rotation_Rule' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, Idle_FX_Scale_Rule) == 0x000DCA, "Member 'AB_Athena_Pickaxe_Generic_C::Idle_FX_Scale_Rule' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, SwingFX_Location_Rule) == 0x000DCB, "Member 'AB_Athena_Pickaxe_Generic_C::SwingFX_Location_Rule' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, Swing_FX_Rotation_Rule) == 0x000DCC, "Member 'AB_Athena_Pickaxe_Generic_C::Swing_FX_Rotation_Rule' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, Swing_FX_Scale_Rule) == 0x000DCD, "Member 'AB_Athena_Pickaxe_Generic_C::Swing_FX_Scale_Rule' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, MeleeHeavy_ParticleSystem) == 0x000DD0, "Member 'AB_Athena_Pickaxe_Generic_C::MeleeHeavy_ParticleSystem' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, WeaponDurabilityDestroyEffect) == 0x000DD8, "Member 'AB_Athena_Pickaxe_Generic_C::WeaponDurabilityDestroyEffect' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, WeaponDurabilityDestroyEffectIcon) == 0x000DE0, "Member 'AB_Athena_Pickaxe_Generic_C::WeaponDurabilityDestroyEffectIcon' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, UseDestroyEffect) == 0x000DE8, "Member 'AB_Athena_Pickaxe_Generic_C::UseDestroyEffect' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, Alteration_Ambient_PS) == 0x000DF0, "Member 'AB_Athena_Pickaxe_Generic_C::Alteration_Ambient_PS' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, Effects_Color_Level) == 0x000DF8, "Member 'AB_Athena_Pickaxe_Generic_C::Effects_Color_Level' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, Equipped) == 0x000E04, "Member 'AB_Athena_Pickaxe_Generic_C::Equipped' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, bEquipPendingInstigator) == 0x000E05, "Member 'AB_Athena_Pickaxe_Generic_C::bEquipPendingInstigator' has a wrong offset!");
+static_assert(offsetof(AB_Athena_Pickaxe_Generic_C, RibbonIDOffset) == 0x000E08, "Member 'AB_Athena_Pickaxe_Generic_C::RibbonIDOffset' has a wrong offset!");
 
 }
 

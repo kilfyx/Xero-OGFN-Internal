@@ -19,11 +19,11 @@ namespace SDK
 {
 
 // Class PhosphorusUI.PhosphorusWidgetBase
-// 0x0008 (0x0310 - 0x0308)
+// 0x0008 (0x0320 - 0x0318)
 class UPhosphorusWidgetBase : public ULTMWidgetBase
 {
 public:
-	class AFortAthenaMutator_Phosphorus*          CachedPhosphorusMutator;                           // 0x0308(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class AFortAthenaMutator_Phosphorus*          CachedPhosphorusMutator;                           // 0x0318(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	void MutatorReady();
@@ -42,15 +42,18 @@ public:
 		return GetDefaultObjImpl<UPhosphorusWidgetBase>();
 	}
 };
+static_assert(alignof(UPhosphorusWidgetBase) == 0x000008, "Wrong alignment on UPhosphorusWidgetBase");
+static_assert(sizeof(UPhosphorusWidgetBase) == 0x000320, "Wrong size on UPhosphorusWidgetBase");
+static_assert(offsetof(UPhosphorusWidgetBase, CachedPhosphorusMutator) == 0x000318, "Member 'UPhosphorusWidgetBase::CachedPhosphorusMutator' has a wrong offset!");
 
 // Class PhosphorusUI.PhosphorusEndOfRoundWidget
-// 0x0030 (0x0340 - 0x0310)
+// 0x0030 (0x0350 - 0x0320)
 class UPhosphorusEndOfRoundWidget final : public UPhosphorusWidgetBase
 {
 public:
-	struct FScalableFloat                         PostRoundFadeOutDuration;                          // 0x0310(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	int32                                         CurrentRound;                                      // 0x0338(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_33C[0x4];                                      // 0x033C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         PostRoundFadeOutDuration;                          // 0x0320(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	int32                                         CurrentRound;                                      // 0x0348(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void FadeOutScreen();
@@ -68,9 +71,13 @@ public:
 		return GetDefaultObjImpl<UPhosphorusEndOfRoundWidget>();
 	}
 };
+static_assert(alignof(UPhosphorusEndOfRoundWidget) == 0x000008, "Wrong alignment on UPhosphorusEndOfRoundWidget");
+static_assert(sizeof(UPhosphorusEndOfRoundWidget) == 0x000350, "Wrong size on UPhosphorusEndOfRoundWidget");
+static_assert(offsetof(UPhosphorusEndOfRoundWidget, PostRoundFadeOutDuration) == 0x000320, "Member 'UPhosphorusEndOfRoundWidget::PostRoundFadeOutDuration' has a wrong offset!");
+static_assert(offsetof(UPhosphorusEndOfRoundWidget, CurrentRound) == 0x000348, "Member 'UPhosphorusEndOfRoundWidget::CurrentRound' has a wrong offset!");
 
 // Class PhosphorusUI.PhosphorusHUDWidget
-// 0x0000 (0x0310 - 0x0310)
+// 0x0000 (0x0320 - 0x0320)
 class UPhosphorusHUDWidget final : public UPhosphorusWidgetBase
 {
 public:
@@ -88,9 +95,11 @@ public:
 		return GetDefaultObjImpl<UPhosphorusHUDWidget>();
 	}
 };
+static_assert(alignof(UPhosphorusHUDWidget) == 0x000008, "Wrong alignment on UPhosphorusHUDWidget");
+static_assert(sizeof(UPhosphorusHUDWidget) == 0x000320, "Wrong size on UPhosphorusHUDWidget");
 
 // Class PhosphorusUI.PhosphorusSquadWipedWidget
-// 0x0000 (0x0310 - 0x0310)
+// 0x0000 (0x0320 - 0x0320)
 class UPhosphorusSquadWipedWidget final : public UPhosphorusWidgetBase
 {
 public:
@@ -107,6 +116,8 @@ public:
 		return GetDefaultObjImpl<UPhosphorusSquadWipedWidget>();
 	}
 };
+static_assert(alignof(UPhosphorusSquadWipedWidget) == 0x000008, "Wrong alignment on UPhosphorusSquadWipedWidget");
+static_assert(sizeof(UPhosphorusSquadWipedWidget) == 0x000320, "Wrong size on UPhosphorusSquadWipedWidget");
 
 }
 

@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function GA_Ranged_GenericDamage.GA_Ranged_GenericDamage_C.K2_CommitExecute
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UGA_Ranged_GenericDamage_C::K2_CommitExecute()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Ranged_GenericDamage_C", "K2_CommitExecute");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_Ranged_GenericDamage.GA_Ranged_GenericDamage_C.GetEventData
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -38,20 +52,6 @@ void UGA_Ranged_GenericDamage_C::GetEventData(const struct FGameplayTag& EventTa
 
 	if (GameplayEventData != nullptr)
 		*GameplayEventData = std::move(Parms.GameplayEventData);
-}
-
-
-// Function GA_Ranged_GenericDamage.GA_Ranged_GenericDamage_C.K2_CommitExecute
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UGA_Ranged_GenericDamage_C::K2_CommitExecute()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Ranged_GenericDamage_C", "K2_CommitExecute");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

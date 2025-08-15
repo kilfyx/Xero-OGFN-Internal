@@ -138,9 +138,8 @@ void UGameplayBehavior::K2_OnFinishedPawn(class APawn* Avatar, bool bWasInterrup
 // Parameters:
 // class AActor*                           Avatar                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UGameplayBehaviorConfig*    Config                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           SmartObjectOwner                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameplayBehavior::K2_OnTriggered(class AActor* Avatar, const class UGameplayBehaviorConfig* Config, class AActor* SmartObjectOwner)
+void UGameplayBehavior::K2_OnTriggered(class AActor* Avatar, const class UGameplayBehaviorConfig* Config)
 {
 	static class UFunction* Func = nullptr;
 
@@ -151,7 +150,6 @@ void UGameplayBehavior::K2_OnTriggered(class AActor* Avatar, const class UGamepl
 
 	Parms.Avatar = Avatar;
 	Parms.Config = Config;
-	Parms.SmartObjectOwner = SmartObjectOwner;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -162,9 +160,8 @@ void UGameplayBehavior::K2_OnTriggered(class AActor* Avatar, const class UGamepl
 // Parameters:
 // class ACharacter*                       Avatar                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UGameplayBehaviorConfig*    Config                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           SmartObjectOwner                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameplayBehavior::K2_OnTriggeredCharacter(class ACharacter* Avatar, const class UGameplayBehaviorConfig* Config, class AActor* SmartObjectOwner)
+void UGameplayBehavior::K2_OnTriggeredCharacter(class ACharacter* Avatar, const class UGameplayBehaviorConfig* Config)
 {
 	static class UFunction* Func = nullptr;
 
@@ -175,7 +172,6 @@ void UGameplayBehavior::K2_OnTriggeredCharacter(class ACharacter* Avatar, const 
 
 	Parms.Avatar = Avatar;
 	Parms.Config = Config;
-	Parms.SmartObjectOwner = SmartObjectOwner;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -186,9 +182,8 @@ void UGameplayBehavior::K2_OnTriggeredCharacter(class ACharacter* Avatar, const 
 // Parameters:
 // class APawn*                            Avatar                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UGameplayBehaviorConfig*    Config                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           SmartObjectOwner                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameplayBehavior::K2_OnTriggeredPawn(class APawn* Avatar, const class UGameplayBehaviorConfig* Config, class AActor* SmartObjectOwner)
+void UGameplayBehavior::K2_OnTriggeredPawn(class APawn* Avatar, const class UGameplayBehaviorConfig* Config)
 {
 	static class UFunction* Func = nullptr;
 
@@ -199,7 +194,6 @@ void UGameplayBehavior::K2_OnTriggeredPawn(class APawn* Avatar, const class UGam
 
 	Parms.Avatar = Avatar;
 	Parms.Config = Config;
-	Parms.SmartObjectOwner = SmartObjectOwner;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -210,9 +204,8 @@ void UGameplayBehavior::K2_OnTriggeredPawn(class APawn* Avatar, const class UGam
 // Parameters:
 // class AActor*                           Avatar                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UGameplayBehaviorConfig*          Config                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           SmartObjectOwner                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameplayBehavior::K2_TriggerBehavior(class AActor* Avatar, class UGameplayBehaviorConfig* Config, class AActor* SmartObjectOwner)
+void UGameplayBehavior::K2_TriggerBehavior(class AActor* Avatar, class UGameplayBehaviorConfig* Config)
 {
 	static class UFunction* Func = nullptr;
 
@@ -223,7 +216,6 @@ void UGameplayBehavior::K2_TriggerBehavior(class AActor* Avatar, class UGameplay
 
 	Parms.Avatar = Avatar;
 	Parms.Config = Config;
-	Parms.SmartObjectOwner = SmartObjectOwner;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

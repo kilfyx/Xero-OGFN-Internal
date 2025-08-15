@@ -10,19 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "CommonUILegacy_classes.hpp"
+#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass RadialMenuTestEntry.RadialMenuTestEntry_C
-// 0x0010 (0x0F10 - 0x0F00)
-class URadialMenuTestEntry_C final : public UCommonButtonLegacy
+// 0x0008 (0x0BA8 - 0x0BA0)
+class URadialMenuTestEntry_C final : public UCommonButton
 {
 public:
-	uint8                                         Pad_EF8[0x8];                                      // 0x0EF8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UImage*                                 Image_82;                                          // 0x0F00(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_82;                                          // 0x0BA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,6 +33,9 @@ public:
 		return GetDefaultObjImpl<URadialMenuTestEntry_C>();
 	}
 };
+static_assert(alignof(URadialMenuTestEntry_C) == 0x000008, "Wrong alignment on URadialMenuTestEntry_C");
+static_assert(sizeof(URadialMenuTestEntry_C) == 0x000BA8, "Wrong size on URadialMenuTestEntry_C");
+static_assert(offsetof(URadialMenuTestEntry_C, Image_82) == 0x000BA0, "Member 'URadialMenuTestEntry_C::Image_82' has a wrong offset!");
 
 }
 

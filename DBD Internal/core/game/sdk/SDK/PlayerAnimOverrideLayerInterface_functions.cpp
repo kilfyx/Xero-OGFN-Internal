@@ -17,30 +17,6 @@
 namespace SDK
 {
 
-// Function PlayerAnimOverrideLayerInterface.PlayerAnimOverrideLayerInterface_C.CharacterSkeletalControlPostLegIK
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FPoseLink&                 InPosePostLegIK                                        (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink*                       CharacterSkeletalControlPostLegIK_0                    (Parm, OutParm, NoDestructor)
-
-void IPlayerAnimOverrideLayerInterface_C::CharacterSkeletalControlPostLegIK(const struct FPoseLink& InPosePostLegIK, struct FPoseLink* CharacterSkeletalControlPostLegIK_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("PlayerAnimOverrideLayerInterface_C", "CharacterSkeletalControlPostLegIK");
-
-	Params::PlayerAnimOverrideLayerInterface_C_CharacterSkeletalControlPostLegIK Parms{};
-
-	Parms.InPosePostLegIK = std::move(InPosePostLegIK);
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (CharacterSkeletalControlPostLegIK_0 != nullptr)
-		*CharacterSkeletalControlPostLegIK_0 = std::move(Parms.CharacterSkeletalControlPostLegIK_0);
-}
-
-
 // Function PlayerAnimOverrideLayerInterface.PlayerAnimOverrideLayerInterface_C.FullBodyOverride
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -62,6 +38,30 @@ void IPlayerAnimOverrideLayerInterface_C::FullBodyOverride(const struct FPoseLin
 
 	if (FullBodyOverride_0 != nullptr)
 		*FullBodyOverride_0 = std::move(Parms.FullBodyOverride_0);
+}
+
+
+// Function PlayerAnimOverrideLayerInterface.PlayerAnimOverrideLayerInterface_C.CharacterSkeletalControlPostLegIK
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPoseLink&                 InPosePostLegIK                                        (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       CharacterSkeletalControlPostLegIK_0                    (Parm, OutParm, NoDestructor)
+
+void IPlayerAnimOverrideLayerInterface_C::CharacterSkeletalControlPostLegIK(const struct FPoseLink& InPosePostLegIK, struct FPoseLink* CharacterSkeletalControlPostLegIK_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("PlayerAnimOverrideLayerInterface_C", "CharacterSkeletalControlPostLegIK");
+
+	Params::PlayerAnimOverrideLayerInterface_C_CharacterSkeletalControlPostLegIK Parms{};
+
+	Parms.InPosePostLegIK = std::move(InPosePostLegIK);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (CharacterSkeletalControlPostLegIK_0 != nullptr)
+		*CharacterSkeletalControlPostLegIK_0 = std::move(Parms.CharacterSkeletalControlPostLegIK_0);
 }
 
 }

@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<USpicySakeDataTracker_C>();
 	}
 };
+static_assert(alignof(USpicySakeDataTracker_C) == 0x000008, "Wrong alignment on USpicySakeDataTracker_C");
+static_assert(sizeof(USpicySakeDataTracker_C) == 0x0001B0, "Wrong size on USpicySakeDataTracker_C");
 
 }
 

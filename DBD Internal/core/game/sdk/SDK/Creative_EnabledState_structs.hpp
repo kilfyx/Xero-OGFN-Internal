@@ -25,6 +25,10 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ResetTime_4_627345954070C685370F9CB7BEB6B42C;      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(FCreative_EnabledState) == 0x000004, "Wrong alignment on FCreative_EnabledState");
+static_assert(sizeof(FCreative_EnabledState) == 0x000008, "Wrong size on FCreative_EnabledState");
+static_assert(offsetof(FCreative_EnabledState, EnabledState_5_1AA41F2A4889E79F9EB31CBEA2AA0731) == 0x000000, "Member 'FCreative_EnabledState::EnabledState_5_1AA41F2A4889E79F9EB31CBEA2AA0731' has a wrong offset!");
+static_assert(offsetof(FCreative_EnabledState, ResetTime_4_627345954070C685370F9CB7BEB6B42C) == 0x000004, "Member 'FCreative_EnabledState::ResetTime_4_627345954070C685370F9CB7BEB6B42C' has a wrong offset!");
 
 }
 

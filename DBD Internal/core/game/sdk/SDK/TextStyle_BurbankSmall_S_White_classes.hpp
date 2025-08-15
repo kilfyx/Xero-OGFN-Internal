@@ -16,20 +16,22 @@
 namespace SDK
 {
 
-// BlueprintGeneratedClass TextStyle-BurbankSmall-S-White.TextStyle-BurbankSmall-S-White_C
-// 0x0000 (0x0180 - 0x0180)
-class TextStyle_BurbankSmall_S_White::UTextStyle_BurbankSmall_S_White_C final : public UTextStyle_BaseParent_C
+// BlueprintGeneratedClass TextStyle_BurbankSmall_S_White.TextStyle_BurbankSmall_S_White_C
+// 0x0000 (0x0148 - 0x0148)
+class UTextStyle_BurbankSmall_S_White_C final : public UTextStyle_BaseParent_C
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BlueprintGeneratedClass TextStyle-BurbankSmall-S-White.TextStyle-BurbankSmall-S-White_C", true, "TextStyle-BurbankSmall-S-White_C">();
+		return StaticBPGeneratedClassImpl<"TextStyle_BurbankSmall_S_White_C">();
 	}
-	static class TextStyle_BurbankSmall_S_White::UTextStyle_BurbankSmall_S_White_C* GetDefaultObj()
+	static class UTextStyle_BurbankSmall_S_White_C* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<TextStyle_BurbankSmall_S_White::UTextStyle_BurbankSmall_S_White_C>();
+		return GetDefaultObjImpl<UTextStyle_BurbankSmall_S_White_C>();
 	}
 };
+static_assert(alignof(UTextStyle_BurbankSmall_S_White_C) == 0x000008, "Wrong alignment on UTextStyle_BurbankSmall_S_White_C");
+static_assert(sizeof(UTextStyle_BurbankSmall_S_White_C) == 0x000148, "Wrong size on UTextStyle_BurbankSmall_S_White_C");
 
 }
 

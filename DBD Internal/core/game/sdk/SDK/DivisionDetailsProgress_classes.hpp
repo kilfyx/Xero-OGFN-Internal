@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass DivisionDetailsProgress.DivisionDetailsProgress_C
-// 0x0018 (0x02B8 - 0x02A0)
+// 0x0018 (0x02B0 - 0x0298)
 class UDivisionDetailsProgress_C final : public UFortShowdownDivisionRankProgressView
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonBorder*                          CommonBorder_CalloutOffset;                        // 0x02A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               ProgressBarContainer;                              // 0x02B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonBorder*                          CommonBorder_CalloutOffset;                        // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               ProgressBarContainer;                              // 0x02A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_DivisionDetailsProgress(int32 EntryPoint);
 	void OnSetInProgress(float NewPercent, bool bIsInProgress);
+	void ExecuteUbergraph_DivisionDetailsProgress(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -41,10 +41,10 @@ public:
 	}
 };
 static_assert(alignof(UDivisionDetailsProgress_C) == 0x000008, "Wrong alignment on UDivisionDetailsProgress_C");
-static_assert(sizeof(UDivisionDetailsProgress_C) == 0x0002B8, "Wrong size on UDivisionDetailsProgress_C");
-static_assert(offsetof(UDivisionDetailsProgress_C, UberGraphFrame) == 0x0002A0, "Member 'UDivisionDetailsProgress_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UDivisionDetailsProgress_C, CommonBorder_CalloutOffset) == 0x0002A8, "Member 'UDivisionDetailsProgress_C::CommonBorder_CalloutOffset' has a wrong offset!");
-static_assert(offsetof(UDivisionDetailsProgress_C, ProgressBarContainer) == 0x0002B0, "Member 'UDivisionDetailsProgress_C::ProgressBarContainer' has a wrong offset!");
+static_assert(sizeof(UDivisionDetailsProgress_C) == 0x0002B0, "Wrong size on UDivisionDetailsProgress_C");
+static_assert(offsetof(UDivisionDetailsProgress_C, UberGraphFrame) == 0x000298, "Member 'UDivisionDetailsProgress_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UDivisionDetailsProgress_C, CommonBorder_CalloutOffset) == 0x0002A0, "Member 'UDivisionDetailsProgress_C::CommonBorder_CalloutOffset' has a wrong offset!");
+static_assert(offsetof(UDivisionDetailsProgress_C, ProgressBarContainer) == 0x0002A8, "Member 'UDivisionDetailsProgress_C::ProgressBarContainer' has a wrong offset!");
 
 }
 

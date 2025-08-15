@@ -17,132 +17,6 @@
 namespace SDK
 {
 
-// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.UnbindHolsterEvents
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_FloppingRabbit_Weap_Athena_C::UnbindHolsterEvents()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "UnbindHolsterEvents");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AB_FloppingRabbit_Weap_Athena_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.OnWeaponAttached
-// (Event, Public, BlueprintEvent)
-
-void AB_FloppingRabbit_Weap_Athena_C::OnWeaponAttached()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "OnWeaponAttached");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.OnTetherDetached
-// (Event, Public, BlueprintEvent)
-
-void AB_FloppingRabbit_Weap_Athena_C::OnTetherDetached()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "OnTetherDetached");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.OnRep_OneHandGrip
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_FloppingRabbit_Weap_Athena_C::OnRep_OneHandGrip()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "OnRep_OneHandGrip");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.OnRep_HideBobber
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_FloppingRabbit_Weap_Athena_C::OnRep_HideBobber()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "OnRep_HideBobber");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.OnHolstered
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_FloppingRabbit_Weap_Athena_C::OnHolstered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "OnHolstered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.K2_OnUnEquip
-// (Event, Public, BlueprintEvent)
-
-void AB_FloppingRabbit_Weap_Athena_C::K2_OnUnEquip()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "K2_OnUnEquip");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.ForceKillFishing
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void AB_FloppingRabbit_Weap_Athena_C::ForceKillFishing()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "ForceKillFishing");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.ExecuteUbergraph_B_FloppingRabbit_Weap_Athena
 // (Final, UbergraphFunction)
 // Parameters:
@@ -163,10 +37,150 @@ void AB_FloppingRabbit_Weap_Athena_C::ExecuteUbergraph_B_FloppingRabbit_Weap_Ath
 }
 
 
+// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.OnHolstered
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_FloppingRabbit_Weap_Athena_C::OnHolstered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "OnHolstered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.UnbindHolsterEvents
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_FloppingRabbit_Weap_Athena_C::UnbindHolsterEvents()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "UnbindHolsterEvents");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.BindHolsterEvents
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_FloppingRabbit_Weap_Athena_C::BindHolsterEvents()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "BindHolsterEvents");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.OnTetherDetached
+// (Event, Public, BlueprintEvent)
+
+void AB_FloppingRabbit_Weap_Athena_C::OnTetherDetached()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "OnTetherDetached");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.ForceKillFishing
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void AB_FloppingRabbit_Weap_Athena_C::ForceKillFishing()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "ForceKillFishing");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.OnWeaponAttached
+// (Event, Public, BlueprintEvent)
+
+void AB_FloppingRabbit_Weap_Athena_C::OnWeaponAttached()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "OnWeaponAttached");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.K2_OnUnEquip
+// (Event, Public, BlueprintEvent)
+
+void AB_FloppingRabbit_Weap_Athena_C::K2_OnUnEquip()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "K2_OnUnEquip");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AB_FloppingRabbit_Weap_Athena_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.OnRep_HideBobber
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_FloppingRabbit_Weap_Athena_C::OnRep_HideBobber()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "OnRep_HideBobber");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.OnRep_OneHandGrip
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_FloppingRabbit_Weap_Athena_C::OnRep_OneHandGrip()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "OnRep_OneHandGrip");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.DetermineFishLootTierNameAndSetLootForSpawner
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bIsExplosion                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsExplosion                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 class FName AB_FloppingRabbit_Weap_Athena_C::DetermineFishLootTierNameAndSetLootForSpawner(bool bIsExplosion)
@@ -183,20 +197,6 @@ class FName AB_FloppingRabbit_Weap_Athena_C::DetermineFishLootTierNameAndSetLoot
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function B_FloppingRabbit_Weap_Athena.B_FloppingRabbit_Weap_Athena_C.BindHolsterEvents
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_FloppingRabbit_Weap_Athena_C::BindHolsterEvents()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_FloppingRabbit_Weap_Athena_C", "BindHolsterEvents");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

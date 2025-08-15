@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function MissedInvitesEntry.MissedInvitesEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function MissedInvitesEntry.MissedInvitesEntry_C.ExecuteUbergraph_MissedInvitesEntry
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    bIsOpen                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMissedInvitesEntry_C::BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
+void UMissedInvitesEntry_C::ExecuteUbergraph_MissedInvitesEntry(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MissedInvitesEntry_C", "BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature");
+		Func = Class->GetFunction("MissedInvitesEntry_C", "ExecuteUbergraph_MissedInvitesEntry");
 
-	Params::MissedInvitesEntry_C_BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature Parms{};
+	Params::MissedInvitesEntry_C_ExecuteUbergraph_MissedInvitesEntry Parms{};
 
-	Parms.bIsOpen = bIsOpen;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -51,6 +51,26 @@ void UMissedInvitesEntry_C::BP_OnHovered()
 }
 
 
+// Function MissedInvitesEntry.MissedInvitesEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bIsOpen                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UMissedInvitesEntry_C::BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MissedInvitesEntry_C", "BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature");
+
+	Params::MissedInvitesEntry_C_BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature Parms{};
+
+	Parms.bIsOpen = bIsOpen;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function MissedInvitesEntry.MissedInvitesEntry_C.BP_OnUnhovered
 // (Event, Protected, BlueprintEvent)
 
@@ -62,26 +82,6 @@ void UMissedInvitesEntry_C::BP_OnUnhovered()
 		Func = Class->GetFunction("MissedInvitesEntry_C", "BP_OnUnhovered");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MissedInvitesEntry.MissedInvitesEntry_C.ExecuteUbergraph_MissedInvitesEntry
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMissedInvitesEntry_C::ExecuteUbergraph_MissedInvitesEntry(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MissedInvitesEntry_C", "ExecuteUbergraph_MissedInvitesEntry");
-
-	Params::MissedInvitesEntry_C_ExecuteUbergraph_MissedInvitesEntry Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

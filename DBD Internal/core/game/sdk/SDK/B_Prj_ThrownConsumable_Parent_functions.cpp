@@ -17,31 +17,23 @@
 namespace SDK
 {
 
-// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.SetBounceVelocityPawn
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.ExecuteUbergraph_B_Prj_ThrownConsumable_Parent
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Prj_ThrownConsumable_Parent_C::SetBounceVelocityPawn()
+void AB_Prj_ThrownConsumable_Parent_C::ExecuteUbergraph_B_Prj_ThrownConsumable_Parent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "SetBounceVelocityPawn");
+		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "ExecuteUbergraph_B_Prj_ThrownConsumable_Parent");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::B_Prj_ThrownConsumable_Parent_C_ExecuteUbergraph_B_Prj_ThrownConsumable_Parent Parms{};
 
+	Parms.EntryPoint = EntryPoint;
 
-// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.ResetSimulatedComponents
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_ThrownConsumable_Parent_C::ResetSimulatedComponents()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "ResetSimulatedComponents");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -59,79 +51,11 @@ void AB_Prj_ThrownConsumable_Parent_C::ReceiveBeginPlay()
 }
 
 
-// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.ReceiveAnyDamage
-// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UDamageType*                DamageType                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Prj_ThrownConsumable_Parent_C::ReceiveAnyDamage(float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, class AActor* DamageCauser)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "ReceiveAnyDamage");
-
-	Params::B_Prj_ThrownConsumable_Parent_C_ReceiveAnyDamage Parms{};
-
-	Parms.Damage = Damage;
-	Parms.DamageType = DamageType;
-	Parms.InstigatedBy = InstigatedBy;
-	Parms.DamageCauser = DamageCauser;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.OnRep_bSimulationRunning
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_ThrownConsumable_Parent_C::OnRep_bSimulationRunning()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "OnRep_bSimulationRunning");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.SetBounceVelocity
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_ThrownConsumable_Parent_C::SetBounceVelocity()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "SetBounceVelocity");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.RestartSimulating
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_ThrownConsumable_Parent_C::RestartSimulating()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "RestartSimulating");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.OnExploded
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 
 void AB_Prj_ThrownConsumable_Parent_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
 {
@@ -169,23 +93,17 @@ void AB_Prj_ThrownConsumable_Parent_C::OnBounce(const struct FHitResult& Hit)
 }
 
 
-// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.ExecuteUbergraph_B_Prj_ThrownConsumable_Parent
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.RestartSimulating
+// (BlueprintCallable, BlueprintEvent)
 
-void AB_Prj_ThrownConsumable_Parent_C::ExecuteUbergraph_B_Prj_ThrownConsumable_Parent(int32 EntryPoint)
+void AB_Prj_ThrownConsumable_Parent_C::RestartSimulating()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "ExecuteUbergraph_B_Prj_ThrownConsumable_Parent");
+		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "RestartSimulating");
 
-	Params::B_Prj_ThrownConsumable_Parent_C_ExecuteUbergraph_B_Prj_ThrownConsumable_Parent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -270,7 +188,7 @@ void AB_Prj_ThrownConsumable_Parent_C::BndEvt__ProjectileMovementComponent_K2Nod
 // class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
 void AB_Prj_ThrownConsumable_Parent_C::BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
@@ -293,6 +211,32 @@ void AB_Prj_ThrownConsumable_Parent_C::BndEvt__CapsuleComponent_K2Node_Component
 }
 
 
+// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.ReceiveAnyDamage
+// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UDamageType*                DamageType                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Prj_ThrownConsumable_Parent_C::ReceiveAnyDamage(float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, class AActor* DamageCauser)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "ReceiveAnyDamage");
+
+	Params::B_Prj_ThrownConsumable_Parent_C_ReceiveAnyDamage Parms{};
+
+	Parms.Damage = Damage;
+	Parms.DamageType = DamageType;
+	Parms.InstigatedBy = InstigatedBy;
+	Parms.DamageCauser = DamageCauser;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.FuseEnded
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -302,6 +246,62 @@ void AB_Prj_ThrownConsumable_Parent_C::FuseEnded()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "FuseEnded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.SetBounceVelocity
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_ThrownConsumable_Parent_C::SetBounceVelocity()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "SetBounceVelocity");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.SetBounceVelocityPawn
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_ThrownConsumable_Parent_C::SetBounceVelocityPawn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "SetBounceVelocityPawn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.OnRep_bSimulationRunning
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_ThrownConsumable_Parent_C::OnRep_bSimulationRunning()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "OnRep_bSimulationRunning");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.ResetSimulatedComponents
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_ThrownConsumable_Parent_C::ResetSimulatedComponents()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "ResetSimulatedComponents");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

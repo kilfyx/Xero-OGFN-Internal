@@ -40,6 +40,9 @@ public:
 	}
 };
 #pragma pack(pop)
+static_assert(alignof(AB_PlayerHealthDamage_CameraLensEffect_C) == 0x000010, "Wrong alignment on AB_PlayerHealthDamage_CameraLensEffect_C");
+static_assert(sizeof(AB_PlayerHealthDamage_CameraLensEffect_C) == 0x0002F0, "Wrong size on AB_PlayerHealthDamage_CameraLensEffect_C");
+static_assert(offsetof(AB_PlayerHealthDamage_CameraLensEffect_C, UberGraphFrame) == 0x0002E0, "Member 'AB_PlayerHealthDamage_CameraLensEffect_C::UberGraphFrame' has a wrong offset!");
 
 }
 

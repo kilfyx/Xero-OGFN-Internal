@@ -20,14 +20,14 @@ namespace SDK
 // Function PurchaseUnavailable.PurchaseUnavailable_C.OnUpdateTextStyle
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// class FText                             OfferDisplayName                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      OfferDisplayName                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UPurchaseUnavailable_C::OnUpdateTextStyle(const class FText& OfferDisplayName)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateTextStyle");
+		Func = Class->GetFunction("PurchaseUnavailable_C", "OnUpdateTextStyle");
 
 	Params::PurchaseUnavailable_C_OnUpdateTextStyle Parms{};
 
@@ -45,9 +45,9 @@ void UPurchaseUnavailable_C::OnUpdateTextStyle(const class FText& OfferDisplayNa
 void UPurchaseUnavailable_C::ExecuteUbergraph_PurchaseUnavailable(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_PurchaseUnavailable");
+		Func = Class->GetFunction("PurchaseUnavailable_C", "ExecuteUbergraph_PurchaseUnavailable");
 
 	Params::PurchaseUnavailable_C_ExecuteUbergraph_PurchaseUnavailable Parms{};
 

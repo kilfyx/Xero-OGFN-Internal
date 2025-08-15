@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass UIManager_Athena.UIManager_Athena_C
-// 0x0000 (0x0130 - 0x0130)
+// 0x0000 (0x0140 - 0x0140)
 class UUIManager_Athena_C final : public UFortUIManager_Athena
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UUIManager_Athena_C>();
 	}
 };
+static_assert(alignof(UUIManager_Athena_C) == 0x000008, "Wrong alignment on UUIManager_Athena_C");
+static_assert(sizeof(UUIManager_Athena_C) == 0x000140, "Wrong size on UUIManager_Athena_C");
 
 }
 

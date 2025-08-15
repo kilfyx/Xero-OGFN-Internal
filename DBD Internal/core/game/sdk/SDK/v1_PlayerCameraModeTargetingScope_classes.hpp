@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass v1_PlayerCameraModeTargetingScope.v1_PlayerCameraModeTargetingScope_C
-// 0x0000 (0x0EA0 - 0x0EA0)
+// 0x0000 (0x0DD0 - 0x0DD0)
 class Uv1_PlayerCameraModeTargetingScope_C final : public Uv1_PlayerCameraModeBase_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<Uv1_PlayerCameraModeTargetingScope_C>();
 	}
 };
+static_assert(alignof(Uv1_PlayerCameraModeTargetingScope_C) == 0x000010, "Wrong alignment on Uv1_PlayerCameraModeTargetingScope_C");
+static_assert(sizeof(Uv1_PlayerCameraModeTargetingScope_C) == 0x000DD0, "Wrong size on Uv1_PlayerCameraModeTargetingScope_C");
 
 }
 

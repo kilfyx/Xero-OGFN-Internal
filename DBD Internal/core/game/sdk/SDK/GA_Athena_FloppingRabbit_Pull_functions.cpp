@@ -17,30 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Athena_FloppingRabbit_Pull.GA_Athena_FloppingRabbit_Pull_C.CalcLaunchValue
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Target_0                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector*                         OutLaunchVelocity                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_FloppingRabbit_Pull_C::CalcLaunchValue(class AActor* Target_0, struct FVector* OutLaunchVelocity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_FloppingRabbit_Pull_C", "CalcLaunchValue");
-
-	Params::GA_Athena_FloppingRabbit_Pull_C_CalcLaunchValue Parms{};
-
-	Parms.Target_0 = Target_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutLaunchVelocity != nullptr)
-		*OutLaunchVelocity = std::move(Parms.OutLaunchVelocity);
-}
-
-
 // Function GA_Athena_FloppingRabbit_Pull.GA_Athena_FloppingRabbit_Pull_C.ExecuteUbergraph_GA_Athena_FloppingRabbit_Pull
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:

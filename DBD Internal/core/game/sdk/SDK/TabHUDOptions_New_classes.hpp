@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TabHUDOptions_New.TabHUDOptions_New_C
-// 0x0008 (0x0380 - 0x0378)
+// 0x0008 (0x0370 - 0x0368)
 class UTabHUDOptions_New_C final : public UFortTabHUDOptions_TempNew
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void CenterOnTab();
 	void ExecuteUbergraph_TabHUDOptions_New(int32 EntryPoint);
+	void CenterOnTab();
 	void SettingValueChanged(float Value);
 
 public:
@@ -39,6 +39,9 @@ public:
 		return GetDefaultObjImpl<UTabHUDOptions_New_C>();
 	}
 };
+static_assert(alignof(UTabHUDOptions_New_C) == 0x000008, "Wrong alignment on UTabHUDOptions_New_C");
+static_assert(sizeof(UTabHUDOptions_New_C) == 0x000370, "Wrong size on UTabHUDOptions_New_C");
+static_assert(offsetof(UTabHUDOptions_New_C, UberGraphFrame) == 0x000368, "Member 'UTabHUDOptions_New_C::UberGraphFrame' has a wrong offset!");
 
 }
 

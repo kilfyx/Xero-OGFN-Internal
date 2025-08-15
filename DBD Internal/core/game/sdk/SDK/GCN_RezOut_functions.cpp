@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function GCN_RezOut.GCN_RezOut_C.Clean-Up Teleportation Light
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AGCN_RezOut_C::Clean_Up_Teleportation_Light()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_RezOut_C", "Clean-Up Teleportation Light");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GCN_RezOut.GCN_RezOut_C.Dissolve Material Setup
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AGCN_RezOut_C::Dissolve_Material_Setup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_RezOut_C", "Dissolve Material Setup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GCN_RezOut.GCN_RezOut_C.ExecuteUbergraph_GCN_RezOut
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -62,34 +34,6 @@ void AGCN_RezOut_C::ExecuteUbergraph_GCN_RezOut(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GCN_RezOut.GCN_RezOut_C.Play Elmination AnimMontage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AGCN_RezOut_C::Play_Elmination_AnimMontage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_RezOut_C", "Play Elmination AnimMontage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GCN_RezOut.GCN_RezOut_C.Pre-Sequence Change
-// (BlueprintCallable, BlueprintEvent)
-
-void AGCN_RezOut_C::Pre_Sequence_Change()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_RezOut_C", "Pre-Sequence Change");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -133,43 +77,99 @@ void AGCN_RezOut_C::Set_Additional_Niagara_Parameters_on_Spawned_FX(class UNiaga
 }
 
 
-// Function GCN_RezOut.GCN_RezOut_C.Set Timeline Playrates
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function GCN_RezOut.GCN_RezOut_C.Pre-Sequence Change
+// (BlueprintCallable, BlueprintEvent)
 
-void AGCN_RezOut_C::Set_Timeline_Playrates()
+void AGCN_RezOut_C::Pre_Sequence_Change()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_RezOut_C", "Set Timeline Playrates");
+		Func = Class->GetFunction("GCN_RezOut_C", "Pre-Sequence Change");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GCN_RezOut.GCN_RezOut_C.Spawn Dissolve VFX
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function GCN_RezOut.GCN_RezOut_C.TFX_ResOutCharacterMesh__UpdateFunc
+// (BlueprintEvent)
 
-void AGCN_RezOut_C::Spawn_Dissolve_VFX()
+void AGCN_RezOut_C::TFX_ResOutCharacterMesh__UpdateFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_RezOut_C", "Spawn Dissolve VFX");
+		Func = Class->GetFunction("GCN_RezOut_C", "TFX_ResOutCharacterMesh__UpdateFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GCN_RezOut.GCN_RezOut_C.Spawn Drone VFX
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function GCN_RezOut.GCN_RezOut_C.TFX_ResOutCharacterMesh__FinishedFunc
+// (BlueprintEvent)
 
-void AGCN_RezOut_C::Spawn_Drone_VFX()
+void AGCN_RezOut_C::TFX_ResOutCharacterMesh__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_RezOut_C", "Spawn Drone VFX");
+		Func = Class->GetFunction("GCN_RezOut_C", "TFX_ResOutCharacterMesh__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_RezOut.GCN_RezOut_C.TFX_GlowCharacterMesh__UpdateFunc
+// (BlueprintEvent)
+
+void AGCN_RezOut_C::TFX_GlowCharacterMesh__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_RezOut_C", "TFX_GlowCharacterMesh__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_RezOut.GCN_RezOut_C.TFX_GlowCharacterMesh__FinishedFunc
+// (BlueprintEvent)
+
+void AGCN_RezOut_C::TFX_GlowCharacterMesh__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_RezOut_C", "TFX_GlowCharacterMesh__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_RezOut.GCN_RezOut_C.Play Elmination AnimMontage
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AGCN_RezOut_C::Play_Elmination_AnimMontage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_RezOut_C", "Play Elmination AnimMontage");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_RezOut.GCN_RezOut_C.Stop Looping Audio
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AGCN_RezOut_C::Stop_Looping_Audio()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_RezOut_C", "Stop Looping Audio");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -203,71 +203,71 @@ void AGCN_RezOut_C::Spawn_Teleportation_Light()
 }
 
 
-// Function GCN_RezOut.GCN_RezOut_C.Stop Looping Audio
+// Function GCN_RezOut.GCN_RezOut_C.Clean-Up Teleportation Light
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void AGCN_RezOut_C::Stop_Looping_Audio()
+void AGCN_RezOut_C::Clean_Up_Teleportation_Light()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_RezOut_C", "Stop Looping Audio");
+		Func = Class->GetFunction("GCN_RezOut_C", "Clean-Up Teleportation Light");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GCN_RezOut.GCN_RezOut_C.TFX_GlowCharacterMesh__FinishedFunc
-// (BlueprintEvent)
+// Function GCN_RezOut.GCN_RezOut_C.Spawn Dissolve VFX
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AGCN_RezOut_C::TFX_GlowCharacterMesh__FinishedFunc()
+void AGCN_RezOut_C::Spawn_Dissolve_VFX()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_RezOut_C", "TFX_GlowCharacterMesh__FinishedFunc");
+		Func = Class->GetFunction("GCN_RezOut_C", "Spawn Dissolve VFX");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GCN_RezOut.GCN_RezOut_C.TFX_GlowCharacterMesh__UpdateFunc
-// (BlueprintEvent)
+// Function GCN_RezOut.GCN_RezOut_C.Dissolve Material Setup
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AGCN_RezOut_C::TFX_GlowCharacterMesh__UpdateFunc()
+void AGCN_RezOut_C::Dissolve_Material_Setup()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_RezOut_C", "TFX_GlowCharacterMesh__UpdateFunc");
+		Func = Class->GetFunction("GCN_RezOut_C", "Dissolve Material Setup");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GCN_RezOut.GCN_RezOut_C.TFX_ResOutCharacterMesh__FinishedFunc
-// (BlueprintEvent)
+// Function GCN_RezOut.GCN_RezOut_C.Set Timeline Playrates
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AGCN_RezOut_C::TFX_ResOutCharacterMesh__FinishedFunc()
+void AGCN_RezOut_C::Set_Timeline_Playrates()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_RezOut_C", "TFX_ResOutCharacterMesh__FinishedFunc");
+		Func = Class->GetFunction("GCN_RezOut_C", "Set Timeline Playrates");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GCN_RezOut.GCN_RezOut_C.TFX_ResOutCharacterMesh__UpdateFunc
-// (BlueprintEvent)
+// Function GCN_RezOut.GCN_RezOut_C.Spawn Drone VFX
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AGCN_RezOut_C::TFX_ResOutCharacterMesh__UpdateFunc()
+void AGCN_RezOut_C::Spawn_Drone_VFX()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_RezOut_C", "TFX_ResOutCharacterMesh__UpdateFunc");
+		Func = Class->GetFunction("GCN_RezOut_C", "Spawn Drone VFX");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -278,8 +278,8 @@ void AGCN_RezOut_C::TFX_ResOutCharacterMesh__UpdateFunc()
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// const TArray<class UFXSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const TArray<class UFXSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 // class UMatineeCameraShake*              BurstCameraShakeInstance                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ADecalActor*                      BurstDecalInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

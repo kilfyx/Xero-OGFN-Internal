@@ -25,9 +25,9 @@ namespace SDK
 void ABP_DetailLevelMesh_C::ExecuteUbergraph_BP_DetailLevelMesh(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_BP_DetailLevelMesh");
+		Func = Class->GetFunction("BP_DetailLevelMesh_C", "ExecuteUbergraph_BP_DetailLevelMesh");
 
 	Params::BP_DetailLevelMesh_C_ExecuteUbergraph_BP_DetailLevelMesh Parms{};
 

@@ -37,17 +37,25 @@ void ABP_ProjectileTrajectory_C::ExecuteUbergraph_BP_ProjectileTrajectory(int32 
 }
 
 
-// Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.SetTrajectorySpline
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<struct FVector>&           SplinePoints                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FVector>&           SplineTangents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
-void ABP_ProjectileTrajectory_C::ReceiveBeginPlay()
+void ABP_ProjectileTrajectory_C::SetTrajectorySpline(const TArray<struct FVector>& SplinePoints, const TArray<struct FVector>& SplineTangents)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ProjectileTrajectory_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_ProjectileTrajectory_C", "SetTrajectorySpline");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_ProjectileTrajectory_C_SetTrajectorySpline Parms{};
+
+	Parms.SplinePoints = std::move(SplinePoints);
+	Parms.SplineTangents = std::move(SplineTangents);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -71,10 +79,38 @@ void ABP_ProjectileTrajectory_C::ReceiveTick(float DeltaSeconds)
 }
 
 
+// Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_ProjectileTrajectory_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ProjectileTrajectory_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.UpdateFromTrajectoryOwner
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_ProjectileTrajectory_C::UpdateFromTrajectoryOwner()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ProjectileTrajectory_C", "UpdateFromTrajectoryOwner");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.SetShouldUpdateFromOwner
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    ShouldUpdate_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ShouldUpdate_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_ProjectileTrajectory_C::SetShouldUpdateFromOwner(bool ShouldUpdate_0, class UObject* Owner_0)
@@ -90,42 +126,6 @@ void ABP_ProjectileTrajectory_C::SetShouldUpdateFromOwner(bool ShouldUpdate_0, c
 	Parms.Owner_0 = Owner_0;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.SetTrajectorySpline
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<struct FVector>&           SplinePoints                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<struct FVector>&           SplineTangents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void ABP_ProjectileTrajectory_C::SetTrajectorySpline(const TArray<struct FVector>& SplinePoints, const TArray<struct FVector>& SplineTangents)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ProjectileTrajectory_C", "SetTrajectorySpline");
-
-	Params::BP_ProjectileTrajectory_C_SetTrajectorySpline Parms{};
-
-	Parms.SplinePoints = std::move(SplinePoints);
-	Parms.SplineTangents = std::move(SplineTangents);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.UpdateFromTrajectoryOwner
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_ProjectileTrajectory_C::UpdateFromTrajectoryOwner()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ProjectileTrajectory_C", "UpdateFromTrajectoryOwner");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

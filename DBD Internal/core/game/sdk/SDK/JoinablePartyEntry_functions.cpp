@@ -17,54 +17,6 @@
 namespace SDK
 {
 
-// Function JoinablePartyEntry.JoinablePartyEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    bIsOpen                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UJoinablePartyEntry_C::BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("JoinablePartyEntry_C", "BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature");
-
-	Params::JoinablePartyEntry_C_BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature Parms{};
-
-	Parms.bIsOpen = bIsOpen;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function JoinablePartyEntry.JoinablePartyEntry_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UJoinablePartyEntry_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("JoinablePartyEntry_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function JoinablePartyEntry.JoinablePartyEntry_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void UJoinablePartyEntry_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("JoinablePartyEntry_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function JoinablePartyEntry.JoinablePartyEntry_C.ExecuteUbergraph_JoinablePartyEntry
 // (Final, UbergraphFunction)
 // Parameters:
@@ -88,7 +40,7 @@ void UJoinablePartyEntry_C::ExecuteUbergraph_JoinablePartyEntry(int32 EntryPoint
 // Function JoinablePartyEntry.JoinablePartyEntry_C.OnInviteStatusUpdated
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsInvited                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsInvited                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UJoinablePartyEntry_C::OnInviteStatusUpdated(bool bIsInvited)
 {
@@ -102,6 +54,54 @@ void UJoinablePartyEntry_C::OnInviteStatusUpdated(bool bIsInvited)
 	Parms.bIsInvited = bIsInvited;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function JoinablePartyEntry.JoinablePartyEntry_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UJoinablePartyEntry_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("JoinablePartyEntry_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function JoinablePartyEntry.JoinablePartyEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bIsOpen                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UJoinablePartyEntry_C::BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("JoinablePartyEntry_C", "BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature");
+
+	Params::JoinablePartyEntry_C_BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature Parms{};
+
+	Parms.bIsOpen = bIsOpen;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function JoinablePartyEntry.JoinablePartyEntry_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UJoinablePartyEntry_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("JoinablePartyEntry_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

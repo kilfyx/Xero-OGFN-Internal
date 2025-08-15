@@ -38,6 +38,8 @@ public:
 		return GetDefaultObjImpl<UAssetTagsSubsystem>();
 	}
 };
+static_assert(alignof(UAssetTagsSubsystem) == 0x000008, "Wrong alignment on UAssetTagsSubsystem");
+static_assert(sizeof(UAssetTagsSubsystem) == 0x000030, "Wrong size on UAssetTagsSubsystem");
 
 }
 

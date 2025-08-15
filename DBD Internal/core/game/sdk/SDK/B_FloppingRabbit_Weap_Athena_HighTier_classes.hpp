@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_FloppingRabbit_Weap_Athena_HighTier.B_FloppingRabbit_Weap_Athena_HighTier_C
-// 0x0000 (0x1490 - 0x1490)
+// 0x0000 (0x0D38 - 0x0D38)
 class AB_FloppingRabbit_Weap_Athena_HighTier_C final : public AB_FloppingRabbit_Weap_Athena_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AB_FloppingRabbit_Weap_Athena_HighTier_C>();
 	}
 };
+static_assert(alignof(AB_FloppingRabbit_Weap_Athena_HighTier_C) == 0x000008, "Wrong alignment on AB_FloppingRabbit_Weap_Athena_HighTier_C");
+static_assert(sizeof(AB_FloppingRabbit_Weap_Athena_HighTier_C) == 0x000D38, "Wrong size on AB_FloppingRabbit_Weap_Athena_HighTier_C");
 
 }
 

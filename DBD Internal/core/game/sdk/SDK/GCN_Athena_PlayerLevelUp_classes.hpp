@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Athena_PlayerLevelUp.GCN_Athena_PlayerLevelUp_C
-// 0x0000 (0x01C0 - 0x01C0)
+// 0x0000 (0x01B8 - 0x01B8)
 class UGCN_Athena_PlayerLevelUp_C final : public UFortGameplayCueNotify_Burst
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGCN_Athena_PlayerLevelUp_C>();
 	}
 };
+static_assert(alignof(UGCN_Athena_PlayerLevelUp_C) == 0x000008, "Wrong alignment on UGCN_Athena_PlayerLevelUp_C");
+static_assert(sizeof(UGCN_Athena_PlayerLevelUp_C) == 0x0001B8, "Wrong size on UGCN_Athena_PlayerLevelUp_C");
 
 }
 

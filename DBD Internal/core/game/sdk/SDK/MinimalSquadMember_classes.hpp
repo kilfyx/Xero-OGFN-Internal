@@ -19,28 +19,28 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MinimalSquadMember.MinimalSquadMember_C
-// 0x0050 (0x14B0 - 0x1460)
+// 0x0048 (0x0C18 - 0x0BD0)
 class UMinimalSquadMember_C final : public UAthenaMinimalSquadMemberEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1460(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       StyleNotReady;                                     // 0x1468(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       StyleSitOut;                                       // 0x1470(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       StyleEmpty;                                        // 0x1478(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnReady;                                           // 0x1480(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_Meeple;                                      // 0x1488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LocalUserIndicator;                                // 0x1490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               MeepleContainer;                                   // 0x1498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ReadyFlash;                                        // 0x14A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BD0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       StyleNotReady;                                     // 0x0BD8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       StyleSitOut;                                       // 0x0BE0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       StyleEmpty;                                        // 0x0BE8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnReady;                                           // 0x0BF0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_Meeple;                                      // 0x0BF8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LocalUserIndicator;                                // 0x0C00(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               MeepleContainer;                                   // 0x0C08(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ReadyFlash;                                        // 0x0C10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnTeamMemberEstablished(bool bHasValidMember);
-	void ExecuteUbergraph_MinimalSquadMember(int32 EntryPoint);
-	void OnMemberGameReadinessChanged(EGameReadiness ReadyStatus);
 	void SetEmptyVisuals();
+	void SetSitOutVisuals();
 	void SetNotReadyVisuals();
 	void SetReadyVisuals();
-	void SetSitOutVisuals();
+	void OnMemberGameReadinessChanged(EGameReadiness ReadyStatus);
+	void BP_OnTeamMemberEstablished(bool bHasValidMember);
+	void ExecuteUbergraph_MinimalSquadMember(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -52,17 +52,17 @@ public:
 		return GetDefaultObjImpl<UMinimalSquadMember_C>();
 	}
 };
-static_assert(alignof(UMinimalSquadMember_C) == 0x000010, "Wrong alignment on UMinimalSquadMember_C");
-static_assert(sizeof(UMinimalSquadMember_C) == 0x0014B0, "Wrong size on UMinimalSquadMember_C");
-static_assert(offsetof(UMinimalSquadMember_C, UberGraphFrame) == 0x001460, "Member 'UMinimalSquadMember_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMinimalSquadMember_C, StyleNotReady) == 0x001468, "Member 'UMinimalSquadMember_C::StyleNotReady' has a wrong offset!");
-static_assert(offsetof(UMinimalSquadMember_C, StyleSitOut) == 0x001470, "Member 'UMinimalSquadMember_C::StyleSitOut' has a wrong offset!");
-static_assert(offsetof(UMinimalSquadMember_C, StyleEmpty) == 0x001478, "Member 'UMinimalSquadMember_C::StyleEmpty' has a wrong offset!");
-static_assert(offsetof(UMinimalSquadMember_C, OnReady) == 0x001480, "Member 'UMinimalSquadMember_C::OnReady' has a wrong offset!");
-static_assert(offsetof(UMinimalSquadMember_C, Image_Meeple) == 0x001488, "Member 'UMinimalSquadMember_C::Image_Meeple' has a wrong offset!");
-static_assert(offsetof(UMinimalSquadMember_C, LocalUserIndicator) == 0x001490, "Member 'UMinimalSquadMember_C::LocalUserIndicator' has a wrong offset!");
-static_assert(offsetof(UMinimalSquadMember_C, MeepleContainer) == 0x001498, "Member 'UMinimalSquadMember_C::MeepleContainer' has a wrong offset!");
-static_assert(offsetof(UMinimalSquadMember_C, ReadyFlash) == 0x0014A0, "Member 'UMinimalSquadMember_C::ReadyFlash' has a wrong offset!");
+static_assert(alignof(UMinimalSquadMember_C) == 0x000008, "Wrong alignment on UMinimalSquadMember_C");
+static_assert(sizeof(UMinimalSquadMember_C) == 0x000C18, "Wrong size on UMinimalSquadMember_C");
+static_assert(offsetof(UMinimalSquadMember_C, UberGraphFrame) == 0x000BD0, "Member 'UMinimalSquadMember_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UMinimalSquadMember_C, StyleNotReady) == 0x000BD8, "Member 'UMinimalSquadMember_C::StyleNotReady' has a wrong offset!");
+static_assert(offsetof(UMinimalSquadMember_C, StyleSitOut) == 0x000BE0, "Member 'UMinimalSquadMember_C::StyleSitOut' has a wrong offset!");
+static_assert(offsetof(UMinimalSquadMember_C, StyleEmpty) == 0x000BE8, "Member 'UMinimalSquadMember_C::StyleEmpty' has a wrong offset!");
+static_assert(offsetof(UMinimalSquadMember_C, OnReady) == 0x000BF0, "Member 'UMinimalSquadMember_C::OnReady' has a wrong offset!");
+static_assert(offsetof(UMinimalSquadMember_C, Image_Meeple) == 0x000BF8, "Member 'UMinimalSquadMember_C::Image_Meeple' has a wrong offset!");
+static_assert(offsetof(UMinimalSquadMember_C, LocalUserIndicator) == 0x000C00, "Member 'UMinimalSquadMember_C::LocalUserIndicator' has a wrong offset!");
+static_assert(offsetof(UMinimalSquadMember_C, MeepleContainer) == 0x000C08, "Member 'UMinimalSquadMember_C::MeepleContainer' has a wrong offset!");
+static_assert(offsetof(UMinimalSquadMember_C, ReadyFlash) == 0x000C10, "Member 'UMinimalSquadMember_C::ReadyFlash' has a wrong offset!");
 
 }
 

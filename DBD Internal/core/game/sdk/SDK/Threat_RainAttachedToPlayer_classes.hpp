@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Threat_RainAttachedToPlayer.Threat_RainAttachedToPlayer_C
-// 0x0010 (0x0298 - 0x0288)
+// 0x0010 (0x0230 - 0x0220)
 class AThreat_RainAttachedToPlayer_C final : public AActor
 {
 public:
-	class UParticleSystemComponent*               ParticleSystem;                                    // 0x0288(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0290(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               ParticleSystem;                                    // 0x0220(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(AThreat_RainAttachedToPlayer_C) == 0x000008, "Wrong alignment on AThreat_RainAttachedToPlayer_C");
-static_assert(sizeof(AThreat_RainAttachedToPlayer_C) == 0x000298, "Wrong size on AThreat_RainAttachedToPlayer_C");
-static_assert(offsetof(AThreat_RainAttachedToPlayer_C, ParticleSystem) == 0x000288, "Member 'AThreat_RainAttachedToPlayer_C::ParticleSystem' has a wrong offset!");
-static_assert(offsetof(AThreat_RainAttachedToPlayer_C, DefaultSceneRoot) == 0x000290, "Member 'AThreat_RainAttachedToPlayer_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(sizeof(AThreat_RainAttachedToPlayer_C) == 0x000230, "Wrong size on AThreat_RainAttachedToPlayer_C");
+static_assert(offsetof(AThreat_RainAttachedToPlayer_C, ParticleSystem) == 0x000220, "Member 'AThreat_RainAttachedToPlayer_C::ParticleSystem' has a wrong offset!");
+static_assert(offsetof(AThreat_RainAttachedToPlayer_C, DefaultSceneRoot) == 0x000228, "Member 'AThreat_RainAttachedToPlayer_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

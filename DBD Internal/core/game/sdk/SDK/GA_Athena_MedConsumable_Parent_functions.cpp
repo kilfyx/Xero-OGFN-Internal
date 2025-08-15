@@ -17,6 +17,82 @@
 namespace SDK
 {
 
+// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.ExecuteUbergraph_GA_Athena_MedConsumable_Parent
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_MedConsumable_Parent_C::ExecuteUbergraph_GA_Athena_MedConsumable_Parent(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "ExecuteUbergraph_GA_Athena_MedConsumable_Parent");
+
+	Params::GA_Athena_MedConsumable_Parent_C_ExecuteUbergraph_GA_Athena_MedConsumable_Parent Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGA_Athena_MedConsumable_Parent_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "K2_OnEndAbility");
+
+	Params::GA_Athena_MedConsumable_Parent_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Athena_MedConsumable_Parent_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.Triggered_4C02BFB04B18D9E79F84848FFE6D2C32
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_MedConsumable_Parent_C::Triggered_4C02BFB04B18D9E79F84848FFE6D2C32(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "Triggered_4C02BFB04B18D9E79F84848FFE6D2C32");
+
+	Params::GA_Athena_MedConsumable_Parent_C_Triggered_4C02BFB04B18D9E79F84848FFE6D2C32 Parms{};
+
+	Parms.TargetData = std::move(TargetData);
+	Parms.ApplicationTag = std::move(ApplicationTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.Cancelled_4C02BFB04B18D9E79F84848FFE6D2C32
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -61,23 +137,17 @@ void UGA_Athena_MedConsumable_Parent_C::Completed_4C02BFB04B18D9E79F84848FFE6D2C
 }
 
 
-// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.ExecuteUbergraph_GA_Athena_MedConsumable_Parent
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.ShieldCalc
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UGA_Athena_MedConsumable_Parent_C::ExecuteUbergraph_GA_Athena_MedConsumable_Parent(int32 EntryPoint)
+void UGA_Athena_MedConsumable_Parent_C::ShieldCalc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "ExecuteUbergraph_GA_Athena_MedConsumable_Parent");
+		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "ShieldCalc");
 
-	Params::GA_Athena_MedConsumable_Parent_C_ExecuteUbergraph_GA_Athena_MedConsumable_Parent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -90,106 +160,6 @@ void UGA_Athena_MedConsumable_Parent_C::HealthCalc()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "HealthCalc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_Athena_MedConsumable_Parent_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_MedConsumable_Parent_C::K2_OnEndAbility(bool bWasCancelled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "K2_OnEndAbility");
-
-	Params::GA_Athena_MedConsumable_Parent_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.K2_OverrideFailedReason
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayTagContainer&     FailedReason                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FGameplayTagContainer*           OverridenFailedReason                                  (Parm, OutParm)
-
-void UGA_Athena_MedConsumable_Parent_C::K2_OverrideFailedReason(const struct FGameplayTagContainer& FailedReason, struct FGameplayTagContainer* OverridenFailedReason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "K2_OverrideFailedReason");
-
-	Params::GA_Athena_MedConsumable_Parent_C_K2_OverrideFailedReason Parms{};
-
-	Parms.FailedReason = std::move(FailedReason);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OverridenFailedReason != nullptr)
-		*OverridenFailedReason = std::move(Parms.OverridenFailedReason);
-}
-
-
-// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.MakeCustomMontageInfo
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_MedConsumable_Parent_C::MakeCustomMontageInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "MakeCustomMontageInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.OnMontageTriggeredPostCommitSuccess
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_MedConsumable_Parent_C::OnMontageTriggeredPostCommitSuccess()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "OnMontageTriggeredPostCommitSuccess");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.OnMontageTriggeredPreCommit
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_MedConsumable_Parent_C::OnMontageTriggeredPreCommit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "OnMontageTriggeredPreCommit");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -216,39 +186,45 @@ void UGA_Athena_MedConsumable_Parent_C::SetupGE(struct FGameplayEffectSpecHandle
 }
 
 
-// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.ShieldCalc
+// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.MakeCustomMontageInfo
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UGA_Athena_MedConsumable_Parent_C::ShieldCalc()
+void UGA_Athena_MedConsumable_Parent_C::MakeCustomMontageInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "ShieldCalc");
+		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "MakeCustomMontageInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.Triggered_4C02BFB04B18D9E79F84848FFE6D2C32
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.OnMontageTriggeredPreCommit
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UGA_Athena_MedConsumable_Parent_C::Triggered_4C02BFB04B18D9E79F84848FFE6D2C32(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
+void UGA_Athena_MedConsumable_Parent_C::OnMontageTriggeredPreCommit()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "Triggered_4C02BFB04B18D9E79F84848FFE6D2C32");
+		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "OnMontageTriggeredPreCommit");
 
-	Params::GA_Athena_MedConsumable_Parent_C_Triggered_4C02BFB04B18D9E79F84848FFE6D2C32 Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.TargetData = std::move(TargetData);
-	Parms.ApplicationTag = std::move(ApplicationTag);
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C.OnMontageTriggeredPostCommitSuccess
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_MedConsumable_Parent_C::OnMontageTriggeredPostCommitSuccess()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_MedConsumable_Parent_C", "OnMontageTriggeredPostCommitSuccess");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -258,7 +234,7 @@ void UGA_Athena_MedConsumable_Parent_C::Triggered_4C02BFB04B18D9E79F84848FFE6D2C
 // const struct FGameplayAbilityActorInfo& ActorInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 // const struct FGameplayAbilitySpecHandle&Handle                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // struct FGameplayTagContainer*           RelevantTags                                           (Parm, OutParm)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UGA_Athena_MedConsumable_Parent_C::K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayAbilitySpecHandle& Handle, struct FGameplayTagContainer* RelevantTags) const
 {

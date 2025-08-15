@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function BP_QuartzMusicController.BP_QuartzMusicController_C.StopCurrentTrack
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_QuartzMusicController_C::StopCurrentTrack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_QuartzMusicController_C", "StopCurrentTrack");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_QuartzMusicController.BP_QuartzMusicController_C.PlayTrack
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -41,7 +55,7 @@ void ABP_QuartzMusicController_C::PlayTrack(class UQuartzMusicTrackComponent_C* 
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UQuartzMusicTrackComponent_C*     Requesting_Track                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABP_QuartzMusicController_C::RequestTrackPlayback(class UQuartzMusicTrackComponent_C* Requesting_Track, bool* Result)
 {
@@ -61,17 +75,37 @@ void ABP_QuartzMusicController_C::RequestTrackPlayback(class UQuartzMusicTrackCo
 }
 
 
-// Function BP_QuartzMusicController.BP_QuartzMusicController_C.StopCurrentTrack
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_QuartzMusicController.BP_QuartzMusicController_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_QuartzMusicController_C::StopCurrentTrack()
+void ABP_QuartzMusicController_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_QuartzMusicController_C", "StopCurrentTrack");
+		Func = Class->GetFunction("BP_QuartzMusicController_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_QuartzMusicController.BP_QuartzMusicController_C.ExecuteUbergraph_BP_QuartzMusicController
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_QuartzMusicController_C::ExecuteUbergraph_BP_QuartzMusicController(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_QuartzMusicController_C", "ExecuteUbergraph_BP_QuartzMusicController");
+
+	Params::BP_QuartzMusicController_C_ExecuteUbergraph_BP_QuartzMusicController Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

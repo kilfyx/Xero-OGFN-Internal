@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TVPostProcessBP.TVPostProcessBP_C
-// 0x0020 (0x02A8 - 0x0288)
+// 0x0020 (0x0240 - 0x0220)
 class ATVPostProcessBP_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBillboardComponent*                    Billboard;                                         // 0x0290(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Root;                                              // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          DisableOnStartup;                                  // 0x02A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBillboardComponent*                    Billboard;                                         // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Root;                                              // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          DisableOnStartup;                                  // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void UserConstructionScript();
 	void IsEnabledForCurrentSubgame(bool* bEnabled);
-	void FrontEndCameraSwitch();
-	void ExecuteUbergraph_TVPostProcessBP(int32 EntryPoint);
-	void ExecuteCameraSwitch();
+	void UserConstructionScript();
 	void Camera_DisableEffects();
+	void FrontEndCameraSwitch();
+	void ExecuteCameraSwitch();
+	void ExecuteUbergraph_TVPostProcessBP(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -46,11 +46,11 @@ public:
 	}
 };
 static_assert(alignof(ATVPostProcessBP_C) == 0x000008, "Wrong alignment on ATVPostProcessBP_C");
-static_assert(sizeof(ATVPostProcessBP_C) == 0x0002A8, "Wrong size on ATVPostProcessBP_C");
-static_assert(offsetof(ATVPostProcessBP_C, UberGraphFrame) == 0x000288, "Member 'ATVPostProcessBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Billboard) == 0x000290, "Member 'ATVPostProcessBP_C::Billboard' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Root) == 0x000298, "Member 'ATVPostProcessBP_C::Root' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, DisableOnStartup) == 0x0002A0, "Member 'ATVPostProcessBP_C::DisableOnStartup' has a wrong offset!");
+static_assert(sizeof(ATVPostProcessBP_C) == 0x000240, "Wrong size on ATVPostProcessBP_C");
+static_assert(offsetof(ATVPostProcessBP_C, UberGraphFrame) == 0x000220, "Member 'ATVPostProcessBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ATVPostProcessBP_C, Billboard) == 0x000228, "Member 'ATVPostProcessBP_C::Billboard' has a wrong offset!");
+static_assert(offsetof(ATVPostProcessBP_C, Root) == 0x000230, "Member 'ATVPostProcessBP_C::Root' has a wrong offset!");
+static_assert(offsetof(ATVPostProcessBP_C, DisableOnStartup) == 0x000238, "Member 'ATVPostProcessBP_C::DisableOnStartup' has a wrong offset!");
 
 }
 

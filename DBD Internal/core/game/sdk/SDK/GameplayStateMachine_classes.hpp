@@ -12,8 +12,8 @@
 
 #include "GameplayTags_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Engine_classes.hpp"
 #include "GameplayStateMachine_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -24,17 +24,15 @@ namespace SDK
 class UGameplayState : public UObject
 {
 public:
-	struct FGameplayTag                           StateId;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FGameplayTag                           StateId;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGameplayTagContainer                  StateRuntimeTags;                                  // 0x0030(0x0020)(Transient, Protected, NativeAccessSpecifierProtected)
 	bool                                          bEvaluateTransition;                               // 0x0050(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bReplicates;                                       // 0x0051(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bStateBegun;                                       // 0x0052(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bStateEnded;                                       // 0x0053(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         InitializationServerTime;                          // 0x0054(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         BeginStateDelay;                                   // 0x0058(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameplayStateMachine*                  CachedGameplayStateMachine;                        // 0x0060(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UGameplayStateMachineManager*           CachedStateMachineManager;                         // 0x0068(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bStateEnded;                                       // 0x0052(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_53[0x5];                                       // 0x0053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameplayStateMachine*                  CachedGameplayStateMachine;                        // 0x0058(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UGameplayStateMachineManager*           CachedStateMachineManager;                         // 0x0060(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UGameplayStateMachineSubsystem*         CachedStateMachineSubSystem;                       // 0x0068(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UGameplayState*                         Hack_StateToDelayProcess;                          // 0x0070(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
@@ -45,10 +43,6 @@ public:
 	void EndStateEvent(const struct FGameplayTag& NextStateId);
 	void EndStateEventClient(const struct FGameplayTag& NextStateId);
 	void EndStateEventServer(const struct FGameplayTag& NextStateId);
-	bool HasStateRuntimeTag(const struct FGameplayTag& QueryTag);
-	void InitializeStateEvent(const struct FGameplayTag& PrevStateId);
-	void InitializeStateEventClient(const struct FGameplayTag& PrevStateId);
-	void InitializeStateEventServer(const struct FGameplayTag& PrevStateId);
 	void MarkStateToEvaluateTransitions();
 	void RemoveStateRuntimeTag(const struct FGameplayTag& RemovedTag);
 	void UpdateStateEvent(const float DeltaTime);
@@ -71,21 +65,36 @@ public:
 		return GetDefaultObjImpl<UGameplayState>();
 	}
 };
+static_assert(alignof(UGameplayState) == 0x000008, "Wrong alignment on UGameplayState");
+static_assert(sizeof(UGameplayState) == 0x000078, "Wrong size on UGameplayState");
+static_assert(offsetof(UGameplayState, StateId) == 0x000028, "Member 'UGameplayState::StateId' has a wrong offset!");
+static_assert(offsetof(UGameplayState, StateRuntimeTags) == 0x000030, "Member 'UGameplayState::StateRuntimeTags' has a wrong offset!");
+static_assert(offsetof(UGameplayState, bEvaluateTransition) == 0x000050, "Member 'UGameplayState::bEvaluateTransition' has a wrong offset!");
+static_assert(offsetof(UGameplayState, bReplicates) == 0x000051, "Member 'UGameplayState::bReplicates' has a wrong offset!");
+static_assert(offsetof(UGameplayState, bStateEnded) == 0x000052, "Member 'UGameplayState::bStateEnded' has a wrong offset!");
+static_assert(offsetof(UGameplayState, CachedGameplayStateMachine) == 0x000058, "Member 'UGameplayState::CachedGameplayStateMachine' has a wrong offset!");
+static_assert(offsetof(UGameplayState, CachedStateMachineManager) == 0x000060, "Member 'UGameplayState::CachedStateMachineManager' has a wrong offset!");
+static_assert(offsetof(UGameplayState, CachedStateMachineSubSystem) == 0x000068, "Member 'UGameplayState::CachedStateMachineSubSystem' has a wrong offset!");
+static_assert(offsetof(UGameplayState, Hack_StateToDelayProcess) == 0x000070, "Member 'UGameplayState::Hack_StateToDelayProcess' has a wrong offset!");
 
 // Class GameplayStateMachine.GameplayStateMachine
 // 0x0038 (0x00B0 - 0x0078)
-class UGameplayStateMachine : public UGameplayState
+class UGameplayStateMachine final : public UGameplayState
 {
 public:
-	struct FGameplayTag                           StateMachineId;                                    // 0x0078(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, Net, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FActiveGameplayStateData               ActiveGameplayStateData;                           // 0x0080(0x0018)(Net, Transient, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FGameplayStateSettings>         GameplayStateSettings;                             // 0x0098(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	bool                                          bPubliclyBroadcast;                                // 0x0078(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bPersistDelegatesOnUnregistration;                 // 0x0079(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_7A[0x2];                                       // 0x007A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           StateMachineId;                                    // 0x007C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FActiveGameplayStateData               ActiveGameplayStateData;                           // 0x0088(0x0010)(Net, Transient, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FGameplayStateSettings>         GameplayStateSettings;                             // 0x0098(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGameplayTag                           InitialGameplayStateId;                            // 0x00A8(0x0008)(Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	void EvaluateStateTransition();
 	void OnRep_ActiveGameplayStateData();
-	void SetState(const struct FGameplayTag& InStateId, float InBeginStateDelay);
+	void SetState(const struct FGameplayTag& InStateId);
 
 	struct FGameplayTag GetActiveStateId() const;
 	class UGameplayState* GetActiveStateObject() const;
@@ -101,6 +110,14 @@ public:
 		return GetDefaultObjImpl<UGameplayStateMachine>();
 	}
 };
+static_assert(alignof(UGameplayStateMachine) == 0x000008, "Wrong alignment on UGameplayStateMachine");
+static_assert(sizeof(UGameplayStateMachine) == 0x0000B0, "Wrong size on UGameplayStateMachine");
+static_assert(offsetof(UGameplayStateMachine, bPubliclyBroadcast) == 0x000078, "Member 'UGameplayStateMachine::bPubliclyBroadcast' has a wrong offset!");
+static_assert(offsetof(UGameplayStateMachine, bPersistDelegatesOnUnregistration) == 0x000079, "Member 'UGameplayStateMachine::bPersistDelegatesOnUnregistration' has a wrong offset!");
+static_assert(offsetof(UGameplayStateMachine, StateMachineId) == 0x00007C, "Member 'UGameplayStateMachine::StateMachineId' has a wrong offset!");
+static_assert(offsetof(UGameplayStateMachine, ActiveGameplayStateData) == 0x000088, "Member 'UGameplayStateMachine::ActiveGameplayStateData' has a wrong offset!");
+static_assert(offsetof(UGameplayStateMachine, GameplayStateSettings) == 0x000098, "Member 'UGameplayStateMachine::GameplayStateSettings' has a wrong offset!");
+static_assert(offsetof(UGameplayStateMachine, InitialGameplayStateId) == 0x0000A8, "Member 'UGameplayStateMachine::InitialGameplayStateId' has a wrong offset!");
 
 // Class GameplayStateMachine.GameplayStateMachineManager
 // 0x0120 (0x01D0 - 0x00B0)
@@ -119,6 +136,30 @@ public:
 		return GetDefaultObjImpl<UGameplayStateMachineManager>();
 	}
 };
+static_assert(alignof(UGameplayStateMachineManager) == 0x000008, "Wrong alignment on UGameplayStateMachineManager");
+static_assert(sizeof(UGameplayStateMachineManager) == 0x0001D0, "Wrong size on UGameplayStateMachineManager");
+static_assert(offsetof(UGameplayStateMachineManager, StateMachineList) == 0x0000B0, "Member 'UGameplayStateMachineManager::StateMachineList' has a wrong offset!");
+
+// Class GameplayStateMachine.GameplayStateMachineSubsystem
+// 0x0050 (0x0080 - 0x0030)
+class UGameplayStateMachineSubsystem final : public UGameInstanceSubsystem
+{
+public:
+	TMap<struct FGameplayTag, struct FGameplayStateMachineData> StateMachineMap;                     // 0x0030(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GameplayStateMachineSubsystem">();
+	}
+	static class UGameplayStateMachineSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameplayStateMachineSubsystem>();
+	}
+};
+static_assert(alignof(UGameplayStateMachineSubsystem) == 0x000008, "Wrong alignment on UGameplayStateMachineSubsystem");
+static_assert(sizeof(UGameplayStateMachineSubsystem) == 0x000080, "Wrong size on UGameplayStateMachineSubsystem");
+static_assert(offsetof(UGameplayStateMachineSubsystem, StateMachineMap) == 0x000030, "Member 'UGameplayStateMachineSubsystem::StateMachineMap' has a wrong offset!");
 
 }
 

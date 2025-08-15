@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "OnlineSubsystemUtils_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "OnlineSubsystemUtils_classes.hpp"
 #include "Qos_structs.hpp"
 
 
@@ -40,6 +40,8 @@ public:
 		return GetDefaultObjImpl<AQosBeaconClient>();
 	}
 };
+static_assert(alignof(AQosBeaconClient) == 0x000008, "Wrong alignment on AQosBeaconClient");
+static_assert(sizeof(AQosBeaconClient) == 0x0002E8, "Wrong size on AQosBeaconClient");
 
 // Class Qos.QosBeaconHost
 // 0x0010 (0x0258 - 0x0248)
@@ -58,6 +60,8 @@ public:
 		return GetDefaultObjImpl<AQosBeaconHost>();
 	}
 };
+static_assert(alignof(AQosBeaconHost) == 0x000008, "Wrong alignment on AQosBeaconHost");
+static_assert(sizeof(AQosBeaconHost) == 0x000258, "Wrong size on AQosBeaconHost");
 
 // Class Qos.QosEvaluator
 // 0x0058 (0x0080 - 0x0028)
@@ -68,7 +72,7 @@ public:
 	bool                                          bInProgress;                                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bCancelOperation;                                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FDatacenterQosInstance>         Datacenters;                                       // 0x0050(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	TArray<struct FDatacenterQosInstance>         Datacenters;                                       // 0x0050(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_60[0x20];                                      // 0x0060(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -81,29 +85,31 @@ public:
 		return GetDefaultObjImpl<UQosEvaluator>();
 	}
 };
+static_assert(alignof(UQosEvaluator) == 0x000008, "Wrong alignment on UQosEvaluator");
+static_assert(sizeof(UQosEvaluator) == 0x000080, "Wrong size on UQosEvaluator");
+static_assert(offsetof(UQosEvaluator, bInProgress) == 0x000048, "Member 'UQosEvaluator::bInProgress' has a wrong offset!");
+static_assert(offsetof(UQosEvaluator, bCancelOperation) == 0x000049, "Member 'UQosEvaluator::bCancelOperation' has a wrong offset!");
+static_assert(offsetof(UQosEvaluator, Datacenters) == 0x000050, "Member 'UQosEvaluator::Datacenters' has a wrong offset!");
 
 // Class Qos.QosRegionManager
-// 0x00B8 (0x00E0 - 0x0028)
+// 0x0098 (0x00C0 - 0x0028)
 class UQosRegionManager final : public UObject
 {
 public:
 	int32                                         NumTestsPerRegion;                                 // 0x0028(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         PingTimeout;                                       // 0x002C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bEnableSubspaceBiasOrder;                          // 0x0030(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SubspaceDelimiter;                                 // 0x0038(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FQosRegionInfo>                 RegionDefinitions;                                 // 0x0048(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
-	TArray<struct FQosDatacenterInfo>             DatacenterDefinitions;                             // 0x0058(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
-	struct FDateTime                              LastCheckTimestamp;                                // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UQosEvaluator*                          Evaluator;                                         // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EQosCompletionResult                          QosEvalResult;                                     // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRegionQosInstance>             RegionOptions;                                     // 0x0080(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	class FString                                 ForceRegionId;                                     // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bRegionForcedViaCommandline;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SelectedRegionId;                                  // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_B8[0x28];                                      // 0x00B8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FQosRegionInfo>                 RegionDefinitions;                                 // 0x0030(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FQosDatacenterInfo>             DatacenterDefinitions;                             // 0x0040(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FDateTime                              LastCheckTimestamp;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UQosEvaluator*                          Evaluator;                                         // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EQosCompletionResult                          QosEvalResult;                                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRegionQosInstance>             RegionOptions;                                     // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 ForceRegionId;                                     // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bRegionForcedViaCommandline;                       // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SelectedRegionId;                                  // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A0[0x20];                                      // 0x00A0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -115,6 +121,19 @@ public:
 		return GetDefaultObjImpl<UQosRegionManager>();
 	}
 };
+static_assert(alignof(UQosRegionManager) == 0x000008, "Wrong alignment on UQosRegionManager");
+static_assert(sizeof(UQosRegionManager) == 0x0000C0, "Wrong size on UQosRegionManager");
+static_assert(offsetof(UQosRegionManager, NumTestsPerRegion) == 0x000028, "Member 'UQosRegionManager::NumTestsPerRegion' has a wrong offset!");
+static_assert(offsetof(UQosRegionManager, PingTimeout) == 0x00002C, "Member 'UQosRegionManager::PingTimeout' has a wrong offset!");
+static_assert(offsetof(UQosRegionManager, RegionDefinitions) == 0x000030, "Member 'UQosRegionManager::RegionDefinitions' has a wrong offset!");
+static_assert(offsetof(UQosRegionManager, DatacenterDefinitions) == 0x000040, "Member 'UQosRegionManager::DatacenterDefinitions' has a wrong offset!");
+static_assert(offsetof(UQosRegionManager, LastCheckTimestamp) == 0x000050, "Member 'UQosRegionManager::LastCheckTimestamp' has a wrong offset!");
+static_assert(offsetof(UQosRegionManager, Evaluator) == 0x000058, "Member 'UQosRegionManager::Evaluator' has a wrong offset!");
+static_assert(offsetof(UQosRegionManager, QosEvalResult) == 0x000060, "Member 'UQosRegionManager::QosEvalResult' has a wrong offset!");
+static_assert(offsetof(UQosRegionManager, RegionOptions) == 0x000068, "Member 'UQosRegionManager::RegionOptions' has a wrong offset!");
+static_assert(offsetof(UQosRegionManager, ForceRegionId) == 0x000078, "Member 'UQosRegionManager::ForceRegionId' has a wrong offset!");
+static_assert(offsetof(UQosRegionManager, bRegionForcedViaCommandline) == 0x000088, "Member 'UQosRegionManager::bRegionForcedViaCommandline' has a wrong offset!");
+static_assert(offsetof(UQosRegionManager, SelectedRegionId) == 0x000090, "Member 'UQosRegionManager::SelectedRegionId' has a wrong offset!");
 
 }
 

@@ -10,54 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "NetworkPrediction_structs.hpp"
+#include "Engine_classes.hpp"
 #include "CoreUObject_classes.hpp"
 
 
 namespace SDK
 {
-
-// Class NetworkPrediction.NetworkPhysicsManager
-// 0x60E0 (0x6110 - 0x0030)
-class UNetworkPhysicsManager final : public UWorldSubsystem
-{
-public:
-	uint8                                         Pad_30[0x60E0];                                    // 0x0030(0x60E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NetworkPhysicsManager">();
-	}
-	static class UNetworkPhysicsManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNetworkPhysicsManager>();
-	}
-};
-
-// Class NetworkPrediction.NetworkPhysicsComponent
-// 0x0070 (0x0120 - 0x00B0)
-class UNetworkPhysicsComponent final : public UActorComponent
-{
-public:
-	struct FNetworkPhysicsState                   NetworkPhysicsState;                               // 0x00B0(0x0060)(Net, Transient, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   ManagedComponentTag;                               // 0x0110(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_118[0x8];                                      // 0x0118(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	int32 GetNetworkPredictionLOD() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NetworkPhysicsComponent">();
-	}
-	static class UNetworkPhysicsComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNetworkPhysicsComponent>();
-	}
-};
 
 // Class NetworkPrediction.NetworkPredictionComponent
 // 0x01F0 (0x02A0 - 0x00B0)
@@ -83,6 +42,13 @@ public:
 		return GetDefaultObjImpl<UNetworkPredictionComponent>();
 	}
 };
+static_assert(alignof(UNetworkPredictionComponent) == 0x000010, "Wrong alignment on UNetworkPredictionComponent");
+static_assert(sizeof(UNetworkPredictionComponent) == 0x0002A0, "Wrong size on UNetworkPredictionComponent");
+static_assert(offsetof(UNetworkPredictionComponent, NetworkPredictionProxy) == 0x0000B0, "Member 'UNetworkPredictionComponent::NetworkPredictionProxy' has a wrong offset!");
+static_assert(offsetof(UNetworkPredictionComponent, ReplicationProxy_ServerRPC) == 0x000160, "Member 'UNetworkPredictionComponent::ReplicationProxy_ServerRPC' has a wrong offset!");
+static_assert(offsetof(UNetworkPredictionComponent, ReplicationProxy_Autonomous) == 0x0001B0, "Member 'UNetworkPredictionComponent::ReplicationProxy_Autonomous' has a wrong offset!");
+static_assert(offsetof(UNetworkPredictionComponent, ReplicationProxy_Simulated) == 0x000200, "Member 'UNetworkPredictionComponent::ReplicationProxy_Simulated' has a wrong offset!");
+static_assert(offsetof(UNetworkPredictionComponent, ReplicationProxy_Replay) == 0x000250, "Member 'UNetworkPredictionComponent::ReplicationProxy_Replay' has a wrong offset!");
 
 // Class NetworkPrediction.NetworkPredictionPhysicsComponent
 // 0x0120 (0x01D0 - 0x00B0)
@@ -105,6 +71,11 @@ public:
 		return GetDefaultObjImpl<UNetworkPredictionPhysicsComponent>();
 	}
 };
+static_assert(alignof(UNetworkPredictionPhysicsComponent) == 0x000010, "Wrong alignment on UNetworkPredictionPhysicsComponent");
+static_assert(sizeof(UNetworkPredictionPhysicsComponent) == 0x0001D0, "Wrong size on UNetworkPredictionPhysicsComponent");
+static_assert(offsetof(UNetworkPredictionPhysicsComponent, NetworkPredictionProxy) == 0x0000B0, "Member 'UNetworkPredictionPhysicsComponent::NetworkPredictionProxy' has a wrong offset!");
+static_assert(offsetof(UNetworkPredictionPhysicsComponent, UpdatedPrimitive) == 0x000160, "Member 'UNetworkPredictionPhysicsComponent::UpdatedPrimitive' has a wrong offset!");
+static_assert(offsetof(UNetworkPredictionPhysicsComponent, ReplicationProxy) == 0x000170, "Member 'UNetworkPredictionPhysicsComponent::ReplicationProxy' has a wrong offset!");
 
 // Class NetworkPrediction.NetworkPredictionReplicatedManager
 // 0x0010 (0x0230 - 0x0220)
@@ -123,14 +94,16 @@ public:
 		return GetDefaultObjImpl<ANetworkPredictionReplicatedManager>();
 	}
 };
+static_assert(alignof(ANetworkPredictionReplicatedManager) == 0x000008, "Wrong alignment on ANetworkPredictionReplicatedManager");
+static_assert(sizeof(ANetworkPredictionReplicatedManager) == 0x000230, "Wrong size on ANetworkPredictionReplicatedManager");
+static_assert(offsetof(ANetworkPredictionReplicatedManager, SharedPackageMap) == 0x000220, "Member 'ANetworkPredictionReplicatedManager::SharedPackageMap' has a wrong offset!");
 
 // Class NetworkPrediction.NetworkPredictionSettingsObject
-// 0x0038 (0x0060 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UNetworkPredictionSettingsObject final : public UObject
 {
 public:
 	struct FNetworkPredictionSettings             Settings;                                          // 0x0028(0x0028)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FNetworkPredictionDevHUD>       DevHUDs;                                           // 0x0050(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -142,6 +115,9 @@ public:
 		return GetDefaultObjImpl<UNetworkPredictionSettingsObject>();
 	}
 };
+static_assert(alignof(UNetworkPredictionSettingsObject) == 0x000008, "Wrong alignment on UNetworkPredictionSettingsObject");
+static_assert(sizeof(UNetworkPredictionSettingsObject) == 0x000050, "Wrong size on UNetworkPredictionSettingsObject");
+static_assert(offsetof(UNetworkPredictionSettingsObject, Settings) == 0x000028, "Member 'UNetworkPredictionSettingsObject::Settings' has a wrong offset!");
 
 // Class NetworkPrediction.NetworkPredictionWorldManager
 // 0x0638 (0x0668 - 0x0030)
@@ -161,6 +137,9 @@ public:
 		return GetDefaultObjImpl<UNetworkPredictionWorldManager>();
 	}
 };
+static_assert(alignof(UNetworkPredictionWorldManager) == 0x000008, "Wrong alignment on UNetworkPredictionWorldManager");
+static_assert(sizeof(UNetworkPredictionWorldManager) == 0x000668, "Wrong size on UNetworkPredictionWorldManager");
+static_assert(offsetof(UNetworkPredictionWorldManager, ReplicatedManager) == 0x000030, "Member 'UNetworkPredictionWorldManager::ReplicatedManager' has a wrong offset!");
 
 }
 

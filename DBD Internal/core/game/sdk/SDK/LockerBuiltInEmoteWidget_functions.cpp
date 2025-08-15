@@ -25,9 +25,9 @@ namespace SDK
 void ULockerBuiltInEmoteWidget_C::ExecuteUbergraph_LockerBuiltInEmoteWidget(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_LockerBuiltInEmoteWidget");
+		Func = Class->GetFunction("LockerBuiltInEmoteWidget_C", "ExecuteUbergraph_LockerBuiltInEmoteWidget");
 
 	Params::LockerBuiltInEmoteWidget_C_ExecuteUbergraph_LockerBuiltInEmoteWidget Parms{};
 
@@ -37,23 +37,21 @@ void ULockerBuiltInEmoteWidget_C::ExecuteUbergraph_LockerBuiltInEmoteWidget(int3
 }
 
 
-// Function LockerBuiltInEmoteWidget.LockerBuiltInEmoteWidget_C.OnUpdateAccessRestrictionWarning
+// Function LockerBuiltInEmoteWidget.LockerBuiltInEmoteWidget_C.OnUpdateLocked
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bShouldShow                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EAthenaLockerInfoRestrictionWarning     WarningType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bLocked                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ULockerBuiltInEmoteWidget_C::OnUpdateAccessRestrictionWarning(bool bShouldShow, EAthenaLockerInfoRestrictionWarning WarningType)
+void ULockerBuiltInEmoteWidget_C::OnUpdateLocked(bool bLocked)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateAccessRestrictionWarning");
+		Func = Class->GetFunction("LockerBuiltInEmoteWidget_C", "OnUpdateLocked");
 
-	Params::LockerBuiltInEmoteWidget_C_OnUpdateAccessRestrictionWarning Parms{};
+	Params::LockerBuiltInEmoteWidget_C_OnUpdateLocked Parms{};
 
-	Parms.bShouldShow = bShouldShow;
-	Parms.WarningType = WarningType;
+	Parms.bLocked = bLocked;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

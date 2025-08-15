@@ -17,62 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_67FE14EA4DF2D8C2DB494AA89443681B
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_HidingProp_Teleport_C::Added_67FE14EA4DF2D8C2DB494AA89443681B()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "Added_67FE14EA4DF2D8C2DB494AA89443681B");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_CB8220A04B74338E758C11B7371D4630
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_HidingProp_Teleport_C::Added_CB8220A04B74338E758C11B7371D4630()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "Added_CB8220A04B74338E758C11B7371D4630");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_F96D6DD549939CA425D2D1BE1AD32090
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_HidingProp_Teleport_C::Added_F96D6DD549939CA425D2D1BE1AD32090()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "Added_F96D6DD549939CA425D2D1BE1AD32090");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_FD079A2341CDD832DF47CD975DFC3BB3
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_HidingProp_Teleport_C::Added_FD079A2341CDD832DF47CD975DFC3BB3()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "Added_FD079A2341CDD832DF47CD975DFC3BB3");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.ExecuteUbergraph_GA_Athena_HidingProp_Teleport
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -113,54 +57,6 @@ void UGA_Athena_HidingProp_Teleport_C::GrapplerFailSafe(class AFortPawn* FortPaw
 }
 
 
-// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_Athena_HidingProp_Teleport_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_HidingProp_Teleport_C::K2_OnEndAbility(bool bWasCancelled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "K2_OnEndAbility");
-
-	Params::GA_Athena_HidingProp_Teleport_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.OnComplete_EE0FA6804073079396C44591432259C0
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_HidingProp_Teleport_C::OnComplete_EE0FA6804073079396C44591432259C0()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "OnComplete_EE0FA6804073079396C44591432259C0");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.OnPawnDied
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -195,6 +91,20 @@ void UGA_Athena_HidingProp_Teleport_C::OnPawnDied(class AActor* DamagedActor, fl
 }
 
 
+// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Wobble
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_HidingProp_Teleport_C::Wobble()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "Wobble");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.QuestUpdate
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -215,15 +125,105 @@ void UGA_Athena_HidingProp_Teleport_C::QuestUpdate(class AFortPawn* Pawn)
 }
 
 
-// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Wobble
-// (BlueprintCallable, BlueprintEvent)
+// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
 
-void UGA_Athena_HidingProp_Teleport_C::Wobble()
+void UGA_Athena_HidingProp_Teleport_C::K2_ActivateAbility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "Wobble");
+		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGA_Athena_HidingProp_Teleport_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "K2_OnEndAbility");
+
+	Params::GA_Athena_HidingProp_Teleport_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_F96D6DD549939CA425D2D1BE1AD32090
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_HidingProp_Teleport_C::Added_F96D6DD549939CA425D2D1BE1AD32090()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "Added_F96D6DD549939CA425D2D1BE1AD32090");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_CB8220A04B74338E758C11B7371D4630
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_HidingProp_Teleport_C::Added_CB8220A04B74338E758C11B7371D4630()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "Added_CB8220A04B74338E758C11B7371D4630");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_67FE14EA4DF2D8C2DB494AA89443681B
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_HidingProp_Teleport_C::Added_67FE14EA4DF2D8C2DB494AA89443681B()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "Added_67FE14EA4DF2D8C2DB494AA89443681B");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.OnComplete_EE0FA6804073079396C44591432259C0
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_HidingProp_Teleport_C::OnComplete_EE0FA6804073079396C44591432259C0()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "OnComplete_EE0FA6804073079396C44591432259C0");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_FD079A2341CDD832DF47CD975DFC3BB3
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_HidingProp_Teleport_C::Added_FD079A2341CDD832DF47CD975DFC3BB3()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_HidingProp_Teleport_C", "Added_FD079A2341CDD832DF47CD975DFC3BB3");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

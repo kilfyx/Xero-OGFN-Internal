@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_ShieldMushroom.GA_Athena_ShieldMushroom_C
-// 0x0000 (0x0C78 - 0x0C78)
+// 0x0000 (0x0C18 - 0x0C18)
 class UGA_Athena_ShieldMushroom_C final : public UGA_Athena_ForagedItemVersion_Consume_Parent_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_ShieldMushroom_C>();
 	}
 };
+static_assert(alignof(UGA_Athena_ShieldMushroom_C) == 0x000008, "Wrong alignment on UGA_Athena_ShieldMushroom_C");
+static_assert(sizeof(UGA_Athena_ShieldMushroom_C) == 0x000C18, "Wrong size on UGA_Athena_ShieldMushroom_C");
 
 }
 

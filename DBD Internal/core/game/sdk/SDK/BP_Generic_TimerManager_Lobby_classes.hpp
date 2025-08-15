@@ -10,41 +10,43 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C
-// 0x0058 (0x02E0 - 0x0288)
+// 0x0058 (0x0278 - 0x0220)
 class ABP_Generic_TimerManager_Lobby_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0290(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        TotalSecondsAtEvent;                               // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimespan                              TimeUntilCountdownEnd;                             // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CalendarEventName;                                 // 0x02A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CountdownTimerHandle;                              // 0x02B8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        Phase3VisualDuration;                              // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           AccuracyTimer;                                     // 0x02C8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimespan                              TimeSinceCountdownBegin;                           // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        TimespanRatio;                                     // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         TotalSecondsAtEvent;                               // 0x0230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_234[0x4];                                      // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimespan                              TimeUntilCountdownEnd;                             // 0x0238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CalendarEventName;                                 // 0x0240(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CountdownTimerHandle;                              // 0x0250(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         Phase3VisualDuration;                              // 0x0258(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           AccuracyTimer;                                     // 0x0260(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimespan                              TimeSinceCountdownBegin;                           // 0x0268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         TimespanRatio;                                     // 0x0270(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void VisualUpdateEverySecond();
+	void ExecuteUbergraph_BP_Generic_TimerManager_Lobby(int32 EntryPoint);
 	void ReceiveBeginPlay();
+	void CountDownTimer_AccuracyFix();
+	void ClearTimerVisuals();
+	void ContinueClockCountdown();
+	void VisualUpdateEverySecond();
+	void CountdownTimer_New();
+	void OnEventActive_2CA6194447CC90E72CA40FB1A2CD843E(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio_0);
 	void OnEventUpdated_2CA6194447CC90E72CA40FB1A2CD843E(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio_0);
 	void OnEventEnded_2CA6194447CC90E72CA40FB1A2CD843E(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio_0);
-	void OnEventActive_2CA6194447CC90E72CA40FB1A2CD843E(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio_0);
-	void ExecuteUbergraph_BP_Generic_TimerManager_Lobby(int32 EntryPoint);
-	void CountdownTimer_New();
-	void CountDownTimer_AccuracyFix();
-	void ContinueClockCountdown();
-	void ClearTimerVisuals();
 
 public:
 	static class UClass* StaticClass()
@@ -57,17 +59,17 @@ public:
 	}
 };
 static_assert(alignof(ABP_Generic_TimerManager_Lobby_C) == 0x000008, "Wrong alignment on ABP_Generic_TimerManager_Lobby_C");
-static_assert(sizeof(ABP_Generic_TimerManager_Lobby_C) == 0x0002E0, "Wrong size on ABP_Generic_TimerManager_Lobby_C");
-static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, UberGraphFrame) == 0x000288, "Member 'ABP_Generic_TimerManager_Lobby_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, DefaultSceneRoot) == 0x000290, "Member 'ABP_Generic_TimerManager_Lobby_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, TotalSecondsAtEvent) == 0x000298, "Member 'ABP_Generic_TimerManager_Lobby_C::TotalSecondsAtEvent' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, TimeUntilCountdownEnd) == 0x0002A0, "Member 'ABP_Generic_TimerManager_Lobby_C::TimeUntilCountdownEnd' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, CalendarEventName) == 0x0002A8, "Member 'ABP_Generic_TimerManager_Lobby_C::CalendarEventName' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, CountdownTimerHandle) == 0x0002B8, "Member 'ABP_Generic_TimerManager_Lobby_C::CountdownTimerHandle' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, Phase3VisualDuration) == 0x0002C0, "Member 'ABP_Generic_TimerManager_Lobby_C::Phase3VisualDuration' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, AccuracyTimer) == 0x0002C8, "Member 'ABP_Generic_TimerManager_Lobby_C::AccuracyTimer' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, TimeSinceCountdownBegin) == 0x0002D0, "Member 'ABP_Generic_TimerManager_Lobby_C::TimeSinceCountdownBegin' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, TimespanRatio) == 0x0002D8, "Member 'ABP_Generic_TimerManager_Lobby_C::TimespanRatio' has a wrong offset!");
+static_assert(sizeof(ABP_Generic_TimerManager_Lobby_C) == 0x000278, "Wrong size on ABP_Generic_TimerManager_Lobby_C");
+static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, UberGraphFrame) == 0x000220, "Member 'ABP_Generic_TimerManager_Lobby_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, DefaultSceneRoot) == 0x000228, "Member 'ABP_Generic_TimerManager_Lobby_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, TotalSecondsAtEvent) == 0x000230, "Member 'ABP_Generic_TimerManager_Lobby_C::TotalSecondsAtEvent' has a wrong offset!");
+static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, TimeUntilCountdownEnd) == 0x000238, "Member 'ABP_Generic_TimerManager_Lobby_C::TimeUntilCountdownEnd' has a wrong offset!");
+static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, CalendarEventName) == 0x000240, "Member 'ABP_Generic_TimerManager_Lobby_C::CalendarEventName' has a wrong offset!");
+static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, CountdownTimerHandle) == 0x000250, "Member 'ABP_Generic_TimerManager_Lobby_C::CountdownTimerHandle' has a wrong offset!");
+static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, Phase3VisualDuration) == 0x000258, "Member 'ABP_Generic_TimerManager_Lobby_C::Phase3VisualDuration' has a wrong offset!");
+static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, AccuracyTimer) == 0x000260, "Member 'ABP_Generic_TimerManager_Lobby_C::AccuracyTimer' has a wrong offset!");
+static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, TimeSinceCountdownBegin) == 0x000268, "Member 'ABP_Generic_TimerManager_Lobby_C::TimeSinceCountdownBegin' has a wrong offset!");
+static_assert(offsetof(ABP_Generic_TimerManager_Lobby_C, TimespanRatio) == 0x000270, "Member 'ABP_Generic_TimerManager_Lobby_C::TimespanRatio' has a wrong offset!");
 
 }
 

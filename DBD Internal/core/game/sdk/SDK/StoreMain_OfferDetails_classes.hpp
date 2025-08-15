@@ -20,66 +20,56 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass StoreMain_OfferDetails.StoreMain_OfferDetails_C
-// 0x0138 (0x09C0 - 0x0888)
+// 0x0118 (0x0908 - 0x07F0)
 class UStoreMain_OfferDetails_C final : public UFortRealMoneyOfferDetails
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0888(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 BaseColor;                                         // 0x0890(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 BaseColorDetails;                                  // 0x0898(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         BonusMTXArea;                                      // 0x08A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          BorderDisclaimer;                                  // 0x08A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonText_BaseQuantity;                           // 0x08B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonText_BonusQuantity;                          // 0x08B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Highlight;                                         // 0x08C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortLazyImage*                         Image_CurrencyIcon;                                // 0x08C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonLazyImage*                       KeyArt;                                            // 0x08D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               MTXArea;                                           // 0x08D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               MTXButtonBox;                                      // 0x08E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_VBucks;                                    // 0x08E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 OverlayGradient;                                   // 0x08F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 OverlayGradientDetails;                            // 0x08F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OverlaySalePrice;                                  // 0x0900(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZoneCloseButton;                               // 0x0908(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZoneMTX;                                       // 0x0910(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UStoreMain_OfferDetailsAttribute_C*     StoreMain_OfferDetailsAttribute1;                  // 0x0918(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UStoreMain_OfferDetailsAttribute_C*     StoreMain_OfferDetailsAttribute2;                  // 0x0920(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextDescription;                                   // 0x0928(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextName;                                          // 0x0930(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextOfferDisplayPrice;                             // 0x0938(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextOriginalPrice;                                 // 0x0940(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VBoxOfferInfo;                                     // 0x0948(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 VBuckHighlight;                                    // 0x0950(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ContentPurchaseBlocker_C*          WBP_ContentPurchaseBlocker;                        // 0x0958(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMap<int32, class UFortMtxOfferData*>         ABAssetCollection;                                 // 0x0960(0x0050)(Edit, BlueprintVisible)
-	bool                                          isContentBlocked;                                  // 0x09B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9B1[0x7];                                      // 0x09B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortMtxOfferData*                      DisplayAsset;                                      // 0x09B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 BaseColor;                                         // 0x07F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BaseColorDetails;                                  // 0x0800(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         BonusMTXArea;                                      // 0x0808(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          BorderDisclaimer;                                  // 0x0810(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonText_BaseQuantity;                           // 0x0818(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonText_BonusQuantity;                          // 0x0820(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Highlight;                                         // 0x0828(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortLazyImage*                         Image_CurrencyIcon;                                // 0x0830(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonLazyImage*                       KeyArt;                                            // 0x0838(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               MTXArea;                                           // 0x0840(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               MTXButtonBox;                                      // 0x0848(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 OverlayGradient;                                   // 0x0850(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 OverlayGradientDetails;                            // 0x0858(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               OverlaySalePrice;                                  // 0x0860(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZoneCloseButton;                               // 0x0868(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZoneMTX;                                       // 0x0870(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UStoreMain_OfferDetailsAttribute_C*     StoreMain_OfferDetailsAttribute1;                  // 0x0878(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UStoreMain_OfferDetailsAttribute_C*     StoreMain_OfferDetailsAttribute2;                  // 0x0880(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextDescription;                                   // 0x0888(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextName;                                          // 0x0890(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextOfferDisplayPrice;                             // 0x0898(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextOriginalPrice;                                 // 0x08A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VBoxOfferInfo;                                     // 0x08A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 VBuckHighlight;                                    // 0x08B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMap<int32, class UFortMtxOfferData*>         ABAssetCollection;                                 // 0x08B8(0x0050)(Edit, BlueprintVisible)
 
 public:
-	void UpdatePurchaseBlocked(bool bIsBlocked, const class FText& PurchaseNotAllowedReason);
-	void UnregisterInput();
-	void UpdatePurchaseButton();
-	void SetPurchaseButtonText(const class FText& ButtonText);
 	void SetupCurrencyImage();
+	void UpdatePurchaseButton();
+	void InitDetailAttributes();
+	void SetPurchaseButtonText(const class FText& ButtonText);
+	bool IsGiftingStorefrontOffer();
+	void GetCurrencyABAssetFromQuantity(int32 Quantity, class UFortMtxOfferData** DataAsset);
+	void InitCurrency();
+	void InitStoreTypeVisuals();
+	void UnregisterInput();
+	void RegisterInput();
 	void PopDetails();
+	void Init();
+	void HandleBack(bool* PassThrough);
 	void ResetPurchaseButtonText();
 	void OnPurchasingStarted();
-	void RegisterInput();
-	void InitStoreTypeVisuals();
-	void OnLoaded_8B6F4A804D215DC25DE60DB2A90E3BD0(class UObject* Loaded);
-	void InitDetailAttributes();
-	void OnLoaded_28384CAD450E607DCE5E079C601D083C(class UObject* Loaded);
-	void InitCurrency();
-	bool IsGiftingStorefrontOffer();
-	void HandleBack(bool* PassThrough);
-	void Init();
-	void ExecuteUbergraph_StoreMain_OfferDetails(int32 EntryPoint);
-	void GetCurrencyABAssetFromQuantity(int32 Quantity, class UFortMtxOfferData** DataAsset);
-	void Construct();
-	void ContentBlocked(bool isContentBlocked_0, const class FText& Content_Blocked_Text);
 	void BP_OnOfferSet();
 	void BP_OnActivated();
+	void ExecuteUbergraph_StoreMain_OfferDetails(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -92,37 +82,33 @@ public:
 	}
 };
 static_assert(alignof(UStoreMain_OfferDetails_C) == 0x000008, "Wrong alignment on UStoreMain_OfferDetails_C");
-static_assert(sizeof(UStoreMain_OfferDetails_C) == 0x0009C0, "Wrong size on UStoreMain_OfferDetails_C");
-static_assert(offsetof(UStoreMain_OfferDetails_C, UberGraphFrame) == 0x000888, "Member 'UStoreMain_OfferDetails_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, BaseColor) == 0x000890, "Member 'UStoreMain_OfferDetails_C::BaseColor' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, BaseColorDetails) == 0x000898, "Member 'UStoreMain_OfferDetails_C::BaseColorDetails' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, BonusMTXArea) == 0x0008A0, "Member 'UStoreMain_OfferDetails_C::BonusMTXArea' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, BorderDisclaimer) == 0x0008A8, "Member 'UStoreMain_OfferDetails_C::BorderDisclaimer' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, CommonText_BaseQuantity) == 0x0008B0, "Member 'UStoreMain_OfferDetails_C::CommonText_BaseQuantity' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, CommonText_BonusQuantity) == 0x0008B8, "Member 'UStoreMain_OfferDetails_C::CommonText_BonusQuantity' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, Highlight) == 0x0008C0, "Member 'UStoreMain_OfferDetails_C::Highlight' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, Image_CurrencyIcon) == 0x0008C8, "Member 'UStoreMain_OfferDetails_C::Image_CurrencyIcon' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, KeyArt) == 0x0008D0, "Member 'UStoreMain_OfferDetails_C::KeyArt' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, MTXArea) == 0x0008D8, "Member 'UStoreMain_OfferDetails_C::MTXArea' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, MTXButtonBox) == 0x0008E0, "Member 'UStoreMain_OfferDetails_C::MTXButtonBox' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, Overlay_VBucks) == 0x0008E8, "Member 'UStoreMain_OfferDetails_C::Overlay_VBucks' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, OverlayGradient) == 0x0008F0, "Member 'UStoreMain_OfferDetails_C::OverlayGradient' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, OverlayGradientDetails) == 0x0008F8, "Member 'UStoreMain_OfferDetails_C::OverlayGradientDetails' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, OverlaySalePrice) == 0x000900, "Member 'UStoreMain_OfferDetails_C::OverlaySalePrice' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, SafeZoneCloseButton) == 0x000908, "Member 'UStoreMain_OfferDetails_C::SafeZoneCloseButton' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, SafeZoneMTX) == 0x000910, "Member 'UStoreMain_OfferDetails_C::SafeZoneMTX' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, StoreMain_OfferDetailsAttribute1) == 0x000918, "Member 'UStoreMain_OfferDetails_C::StoreMain_OfferDetailsAttribute1' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, StoreMain_OfferDetailsAttribute2) == 0x000920, "Member 'UStoreMain_OfferDetails_C::StoreMain_OfferDetailsAttribute2' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, TextDescription) == 0x000928, "Member 'UStoreMain_OfferDetails_C::TextDescription' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, TextName) == 0x000930, "Member 'UStoreMain_OfferDetails_C::TextName' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, TextOfferDisplayPrice) == 0x000938, "Member 'UStoreMain_OfferDetails_C::TextOfferDisplayPrice' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, TextOriginalPrice) == 0x000940, "Member 'UStoreMain_OfferDetails_C::TextOriginalPrice' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, VBoxOfferInfo) == 0x000948, "Member 'UStoreMain_OfferDetails_C::VBoxOfferInfo' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, VBuckHighlight) == 0x000950, "Member 'UStoreMain_OfferDetails_C::VBuckHighlight' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, WBP_ContentPurchaseBlocker) == 0x000958, "Member 'UStoreMain_OfferDetails_C::WBP_ContentPurchaseBlocker' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, ABAssetCollection) == 0x000960, "Member 'UStoreMain_OfferDetails_C::ABAssetCollection' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, isContentBlocked) == 0x0009B0, "Member 'UStoreMain_OfferDetails_C::isContentBlocked' has a wrong offset!");
-static_assert(offsetof(UStoreMain_OfferDetails_C, DisplayAsset) == 0x0009B8, "Member 'UStoreMain_OfferDetails_C::DisplayAsset' has a wrong offset!");
+static_assert(sizeof(UStoreMain_OfferDetails_C) == 0x000908, "Wrong size on UStoreMain_OfferDetails_C");
+static_assert(offsetof(UStoreMain_OfferDetails_C, UberGraphFrame) == 0x0007F0, "Member 'UStoreMain_OfferDetails_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, BaseColor) == 0x0007F8, "Member 'UStoreMain_OfferDetails_C::BaseColor' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, BaseColorDetails) == 0x000800, "Member 'UStoreMain_OfferDetails_C::BaseColorDetails' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, BonusMTXArea) == 0x000808, "Member 'UStoreMain_OfferDetails_C::BonusMTXArea' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, BorderDisclaimer) == 0x000810, "Member 'UStoreMain_OfferDetails_C::BorderDisclaimer' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, CommonText_BaseQuantity) == 0x000818, "Member 'UStoreMain_OfferDetails_C::CommonText_BaseQuantity' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, CommonText_BonusQuantity) == 0x000820, "Member 'UStoreMain_OfferDetails_C::CommonText_BonusQuantity' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, Highlight) == 0x000828, "Member 'UStoreMain_OfferDetails_C::Highlight' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, Image_CurrencyIcon) == 0x000830, "Member 'UStoreMain_OfferDetails_C::Image_CurrencyIcon' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, KeyArt) == 0x000838, "Member 'UStoreMain_OfferDetails_C::KeyArt' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, MTXArea) == 0x000840, "Member 'UStoreMain_OfferDetails_C::MTXArea' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, MTXButtonBox) == 0x000848, "Member 'UStoreMain_OfferDetails_C::MTXButtonBox' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, OverlayGradient) == 0x000850, "Member 'UStoreMain_OfferDetails_C::OverlayGradient' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, OverlayGradientDetails) == 0x000858, "Member 'UStoreMain_OfferDetails_C::OverlayGradientDetails' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, OverlaySalePrice) == 0x000860, "Member 'UStoreMain_OfferDetails_C::OverlaySalePrice' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, SafeZoneCloseButton) == 0x000868, "Member 'UStoreMain_OfferDetails_C::SafeZoneCloseButton' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, SafeZoneMTX) == 0x000870, "Member 'UStoreMain_OfferDetails_C::SafeZoneMTX' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, StoreMain_OfferDetailsAttribute1) == 0x000878, "Member 'UStoreMain_OfferDetails_C::StoreMain_OfferDetailsAttribute1' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, StoreMain_OfferDetailsAttribute2) == 0x000880, "Member 'UStoreMain_OfferDetails_C::StoreMain_OfferDetailsAttribute2' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, TextDescription) == 0x000888, "Member 'UStoreMain_OfferDetails_C::TextDescription' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, TextName) == 0x000890, "Member 'UStoreMain_OfferDetails_C::TextName' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, TextOfferDisplayPrice) == 0x000898, "Member 'UStoreMain_OfferDetails_C::TextOfferDisplayPrice' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, TextOriginalPrice) == 0x0008A0, "Member 'UStoreMain_OfferDetails_C::TextOriginalPrice' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, VBoxOfferInfo) == 0x0008A8, "Member 'UStoreMain_OfferDetails_C::VBoxOfferInfo' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, VBuckHighlight) == 0x0008B0, "Member 'UStoreMain_OfferDetails_C::VBuckHighlight' has a wrong offset!");
+static_assert(offsetof(UStoreMain_OfferDetails_C, ABAssetCollection) == 0x0008B8, "Member 'UStoreMain_OfferDetails_C::ABAssetCollection' has a wrong offset!");
 
 }
 

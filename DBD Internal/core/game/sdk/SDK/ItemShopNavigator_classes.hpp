@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ItemShopNavigator.ItemShopNavigator_C
-// 0x0000 (0x02C8 - 0x02C8)
+// 0x0000 (0x02C0 - 0x02C0)
 class UItemShopNavigator_C final : public UAthenaItemShopSectionNavigator
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UItemShopNavigator_C) == 0x000008, "Wrong alignment on UItemShopNavigator_C");
-static_assert(sizeof(UItemShopNavigator_C) == 0x0002C8, "Wrong size on UItemShopNavigator_C");
+static_assert(sizeof(UItemShopNavigator_C) == 0x0002C0, "Wrong size on UItemShopNavigator_C");
 
 }
 

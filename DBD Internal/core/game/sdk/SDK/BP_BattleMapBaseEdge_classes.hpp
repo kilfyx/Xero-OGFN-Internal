@@ -34,6 +34,10 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapBaseEdge_C>();
 	}
 };
+static_assert(alignof(ABP_BattleMapBaseEdge_C) == 0x000008, "Wrong alignment on ABP_BattleMapBaseEdge_C");
+static_assert(sizeof(ABP_BattleMapBaseEdge_C) == 0x000288, "Wrong size on ABP_BattleMapBaseEdge_C");
+static_assert(offsetof(ABP_BattleMapBaseEdge_C, SplineMesh) == 0x000278, "Member 'ABP_BattleMapBaseEdge_C::SplineMesh' has a wrong offset!");
+static_assert(offsetof(ABP_BattleMapBaseEdge_C, DefaultSceneRoot) == 0x000280, "Member 'ABP_BattleMapBaseEdge_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

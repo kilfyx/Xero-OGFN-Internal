@@ -25,33 +25,13 @@ namespace SDK
 void UMechanical_Engineer_Female_AnimBP_C::ExecuteUbergraph_Mechanical_Engineer_Female_AnimBP(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_Mechanical_Engineer_Female_AnimBP");
+		Func = Class->GetFunction("Mechanical_Engineer_Female_AnimBP_C", "ExecuteUbergraph_Mechanical_Engineer_Female_AnimBP");
 
 	Params::Mechanical_Engineer_Female_AnimBP_C_ExecuteUbergraph_Mechanical_Engineer_Female_AnimBP Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Mechanical_Engineer_Female_AnimBP.Mechanical_Engineer_Female_AnimBP_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaTimeX                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMechanical_Engineer_Female_AnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BlueprintUpdateAnimation");
-
-	Params::Mechanical_Engineer_Female_AnimBP_C_BlueprintUpdateAnimation Parms{};
-
-	Parms.DeltaTimeX = DeltaTimeX;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -63,26 +43,46 @@ void UMechanical_Engineer_Female_AnimBP_C::BlueprintUpdateAnimation(float DeltaT
 void UMechanical_Engineer_Female_AnimBP_C::BlueprintInitializeAnimation()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BlueprintInitializeAnimation");
+		Func = Class->GetFunction("Mechanical_Engineer_Female_AnimBP_C", "BlueprintInitializeAnimation");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Mechanical_Engineer_Female_AnimBP.Mechanical_Engineer_Female_AnimBP_C.BlueprintUpdateAnimation
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTimeX                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMechanical_Engineer_Female_AnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Mechanical_Engineer_Female_AnimBP_C", "BlueprintUpdateAnimation");
+
+	Params::Mechanical_Engineer_Female_AnimBP_C_BlueprintUpdateAnimation Parms{};
+
+	Parms.DeltaTimeX = DeltaTimeX;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function Mechanical_Engineer_Female_AnimBP.Mechanical_Engineer_Female_AnimBP_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+// const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
 void UMechanical_Engineer_Female_AnimBP_C::AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("AnimGraph");
+		Func = Class->GetFunction("Mechanical_Engineer_Female_AnimBP_C", "AnimGraph");
 
 	Params::Mechanical_Engineer_Female_AnimBP_C_AnimGraph Parms{};
 

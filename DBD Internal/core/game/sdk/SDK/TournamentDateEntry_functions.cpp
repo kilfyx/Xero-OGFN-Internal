@@ -17,37 +17,57 @@
 namespace SDK
 {
 
-// Function TournamentDateEntry.TournamentDateEntry_C.RefreshDataBP
-// (Event, Protected, BlueprintEvent)
-
-void UTournamentDateEntry_C::RefreshDataBP()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshDataBP");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function TournamentDateEntry.TournamentDateEntry_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UTournamentDateEntry_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PreConstruct");
+		Func = Class->GetFunction("TournamentDateEntry_C", "PreConstruct");
 
 	Params::TournamentDateEntry_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TournamentDateEntry.TournamentDateEntry_C.EventColor
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FFortTournamentDisplayInfo&showdownData                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UTournamentDateEntry_C::EventColor(const struct FFortTournamentDisplayInfo& showdownData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDateEntry_C", "EventColor");
+
+	Params::TournamentDateEntry_C_EventColor Parms{};
+
+	Parms.showdownData = std::move(showdownData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TournamentDateEntry.TournamentDateEntry_C.RefreshDataBP
+// (Event, Protected, BlueprintEvent)
+
+void UTournamentDateEntry_C::RefreshDataBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDateEntry_C", "RefreshDataBP");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -59,33 +79,13 @@ void UTournamentDateEntry_C::PreConstruct(bool IsDesignTime)
 void UTournamentDateEntry_C::ExecuteUbergraph_TournamentDateEntry(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_TournamentDateEntry");
+		Func = Class->GetFunction("TournamentDateEntry_C", "ExecuteUbergraph_TournamentDateEntry");
 
 	Params::TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TournamentDateEntry.TournamentDateEntry_C.EventColor
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FFortTournamentDisplayInfo       showdownData                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UTournamentDateEntry_C::EventColor(const struct FFortTournamentDisplayInfo& showdownData)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventColor");
-
-	Params::TournamentDateEntry_C_EventColor Parms{};
-
-	Parms.showdownData = std::move(showdownData);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

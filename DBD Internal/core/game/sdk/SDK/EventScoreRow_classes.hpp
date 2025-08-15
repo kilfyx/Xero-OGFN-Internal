@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventScoreRow.EventScoreRow_C
-// 0x0028 (0x0290 - 0x0268)
+// 0x0028 (0x0288 - 0x0260)
 class UEventScoreRow_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0268(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 ImageDivider;                                      // 0x0270(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       StatLabelText;                                     // 0x0278(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       StatValueText;                                     // 0x0280(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          FinalEntry;                                        // 0x0288(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 ImageDivider;                                      // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       StatLabelText;                                     // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       StatValueText;                                     // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          FinalEntry;                                        // 0x0280(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void SetData(const class FText& Label, int32 Value);
@@ -45,12 +45,12 @@ public:
 	}
 };
 static_assert(alignof(UEventScoreRow_C) == 0x000008, "Wrong alignment on UEventScoreRow_C");
-static_assert(sizeof(UEventScoreRow_C) == 0x000290, "Wrong size on UEventScoreRow_C");
-static_assert(offsetof(UEventScoreRow_C, UberGraphFrame) == 0x000268, "Member 'UEventScoreRow_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventScoreRow_C, ImageDivider) == 0x000270, "Member 'UEventScoreRow_C::ImageDivider' has a wrong offset!");
-static_assert(offsetof(UEventScoreRow_C, StatLabelText) == 0x000278, "Member 'UEventScoreRow_C::StatLabelText' has a wrong offset!");
-static_assert(offsetof(UEventScoreRow_C, StatValueText) == 0x000280, "Member 'UEventScoreRow_C::StatValueText' has a wrong offset!");
-static_assert(offsetof(UEventScoreRow_C, FinalEntry) == 0x000288, "Member 'UEventScoreRow_C::FinalEntry' has a wrong offset!");
+static_assert(sizeof(UEventScoreRow_C) == 0x000288, "Wrong size on UEventScoreRow_C");
+static_assert(offsetof(UEventScoreRow_C, UberGraphFrame) == 0x000260, "Member 'UEventScoreRow_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UEventScoreRow_C, ImageDivider) == 0x000268, "Member 'UEventScoreRow_C::ImageDivider' has a wrong offset!");
+static_assert(offsetof(UEventScoreRow_C, StatLabelText) == 0x000270, "Member 'UEventScoreRow_C::StatLabelText' has a wrong offset!");
+static_assert(offsetof(UEventScoreRow_C, StatValueText) == 0x000278, "Member 'UEventScoreRow_C::StatValueText' has a wrong offset!");
+static_assert(offsetof(UEventScoreRow_C, FinalEntry) == 0x000280, "Member 'UEventScoreRow_C::FinalEntry' has a wrong offset!");
 
 }
 

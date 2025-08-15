@@ -17,6 +17,75 @@
 namespace SDK
 {
 
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.OnSetCustomDepthStencilValue
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<class UPrimitiveComponent*>&PrimComponents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// bool                                    bUseCustomDepth                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   StencilValue                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bOutConsume                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ATiered_Safe_Athena_Parent_C::OnSetCustomDepthStencilValue(const TArray<class UPrimitiveComponent*>& PrimComponents, bool bUseCustomDepth, int32 StencilValue, bool* bOutConsume)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "OnSetCustomDepthStencilValue");
+
+	Params::Tiered_Safe_Athena_Parent_C_OnSetCustomDepthStencilValue Parms{};
+
+	Parms.PrimComponents = std::move(PrimComponents);
+	Parms.bUseCustomDepth = bUseCustomDepth;
+	Parms.StencilValue = StencilValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bOutConsume != nullptr)
+		*bOutConsume = Parms.bOutConsume;
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.SetVisibleMobileInteractIcon
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ATiered_Safe_Athena_Parent_C::SetVisibleMobileInteractIcon(bool Visible)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "SetVisibleMobileInteractIcon");
+
+	Params::Tiered_Safe_Athena_Parent_C_SetVisibleMobileInteractIcon Parms{};
+
+	Parms.Visible = Visible;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.GetMaxAudibleDistance
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float*                                  Max_Distance                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ATiered_Safe_Athena_Parent_C::GetMaxAudibleDistance(float* Max_Distance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "GetMaxAudibleDistance");
+
+	Params::Tiered_Safe_Athena_Parent_C_GetMaxAudibleDistance Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Max_Distance != nullptr)
+		*Max_Distance = Parms.Max_Distance;
+}
+
+
 // Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.CleanupWiggleMIDs
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -45,154 +114,62 @@ void ATiered_Safe_Athena_Parent_C::CreateMobileMIDs()
 }
 
 
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.DetermineVFXRotation
-// (BlueprintCallable, BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::DetermineVFXRotation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "DetermineVFXRotation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.DisableBacchusHighlight
-// (Event, Public, BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::DisableBacchusHighlight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "DisableBacchusHighlight");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.EnableBacchusHighlight
-// (Event, Public, BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::EnableBacchusHighlight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "EnableBacchusHighlight");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.ExecuteUbergraph_Tiered_Safe_Athena_Parent
-// (Final, UbergraphFunction, HasDefaults)
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.ShouldDie
+// (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AController*                      EventInstigator                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-void ATiered_Safe_Athena_Parent_C::ExecuteUbergraph_Tiered_Safe_Athena_Parent(int32 EntryPoint)
+bool ATiered_Safe_Athena_Parent_C::ShouldDie(float Damage, class AController* EventInstigator, class AActor* DamageCauser)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "ExecuteUbergraph_Tiered_Safe_Athena_Parent");
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "ShouldDie");
 
-	Params::Tiered_Safe_Athena_Parent_C_ExecuteUbergraph_Tiered_Safe_Athena_Parent Parms{};
+	Params::Tiered_Safe_Athena_Parent_C_ShouldDie Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Damage = Damage;
+	Parms.EventInstigator = EventInstigator;
+	Parms.DamageCauser = DamageCauser;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.SetLightVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ATiered_Safe_Athena_Parent_C::SetLightVisibility(bool Visible)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "SetLightVisibility");
+
+	Params::Tiered_Safe_Athena_Parent_C_SetLightVisibility Parms{};
+
+	Parms.Visible = Visible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.GetMaxAudibleDistance
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// float*                                  Max_Distance                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ATiered_Safe_Athena_Parent_C::GetMaxAudibleDistance(float* Max_Distance)
+void ATiered_Safe_Athena_Parent_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "GetMaxAudibleDistance");
-
-	Params::Tiered_Safe_Athena_Parent_C_GetMaxAudibleDistance Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Max_Distance != nullptr)
-		*Max_Distance = Parms.Max_Distance;
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.HideChestOpenableCosmetics
-// (BlueprintCallable, BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::HideChestOpenableCosmetics()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "HideChestOpenableCosmetics");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.Mobile_OnDisconnect
-// (BlueprintCallable, BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::Mobile_OnDisconnect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "Mobile_OnDisconnect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.Mobile_OnInteract
-// (BlueprintCallable, BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::Mobile_OnInteract()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "Mobile_OnInteract");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.Mobile_Outline_Off
-// (BlueprintCallable, BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::Mobile_Outline_Off()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "Mobile_Outline_Off");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.Mobile_Outline_On
-// (BlueprintCallable, BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::Mobile_Outline_On()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "Mobile_Outline_On");
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -254,6 +231,174 @@ void ATiered_Safe_Athena_Parent_C::MobileSelectedTL__UpdateFunc()
 }
 
 
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.Timeline_0__FinishedFunc
+// (BlueprintEvent)
+
+void ATiered_Safe_Athena_Parent_C::Timeline_0__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "Timeline_0__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.Timeline_0__UpdateFunc
+// (BlueprintEvent)
+
+void ATiered_Safe_Athena_Parent_C::Timeline_0__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "Timeline_0__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.OnLoot
+// (Event, Public, BlueprintEvent)
+
+void ATiered_Safe_Athena_Parent_C::OnLoot()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "OnLoot");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ATiered_Safe_Athena_Parent_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ATiered_Safe_Athena_Parent_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.OnSetSearched
+// (Event, Public, BlueprintEvent)
+
+void ATiered_Safe_Athena_Parent_C::OnSetSearched()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "OnSetSearched");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.Mobile_Outline_On
+// (BlueprintCallable, BlueprintEvent)
+
+void ATiered_Safe_Athena_Parent_C::Mobile_Outline_On()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "Mobile_Outline_On");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.Mobile_Outline_Off
+// (BlueprintCallable, BlueprintEvent)
+
+void ATiered_Safe_Athena_Parent_C::Mobile_Outline_Off()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "Mobile_Outline_Off");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.Mobile_OnInteract
+// (BlueprintCallable, BlueprintEvent)
+
+void ATiered_Safe_Athena_Parent_C::Mobile_OnInteract()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "Mobile_OnInteract");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.Mobile_OnDisconnect
+// (BlueprintCallable, BlueprintEvent)
+
+void ATiered_Safe_Athena_Parent_C::Mobile_OnDisconnect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "Mobile_OnDisconnect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.EnableBacchusHighlight
+// (Event, Public, BlueprintEvent)
+
+void ATiered_Safe_Athena_Parent_C::EnableBacchusHighlight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "EnableBacchusHighlight");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.DisableBacchusHighlight
+// (Event, Public, BlueprintEvent)
+
+void ATiered_Safe_Athena_Parent_C::DisableBacchusHighlight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "DisableBacchusHighlight");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.OnBeginSearch
 // (Event, Public, BlueprintEvent)
 
@@ -300,57 +445,43 @@ void ATiered_Safe_Athena_Parent_C::OnDeathPlayEffects(float Damage, const struct
 }
 
 
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.OnLoot
-// (Event, Public, BlueprintEvent)
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.HideChestOpenableCosmetics
+// (BlueprintCallable, BlueprintEvent)
 
-void ATiered_Safe_Athena_Parent_C::OnLoot()
+void ATiered_Safe_Athena_Parent_C::HideChestOpenableCosmetics()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "OnLoot");
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "HideChestOpenableCosmetics");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.OnSetCustomDepthStencilValue
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<class UPrimitiveComponent*>&PrimComponents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// bool                                    bUseCustomDepth                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   StencilValue                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   bOutConsume                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.DetermineVFXRotation
+// (BlueprintCallable, BlueprintEvent)
 
-void ATiered_Safe_Athena_Parent_C::OnSetCustomDepthStencilValue(const TArray<class UPrimitiveComponent*>& PrimComponents, bool bUseCustomDepth, int32 StencilValue, bool* bOutConsume)
+void ATiered_Safe_Athena_Parent_C::DetermineVFXRotation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "OnSetCustomDepthStencilValue");
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "DetermineVFXRotation");
 
-	Params::Tiered_Safe_Athena_Parent_C_OnSetCustomDepthStencilValue Parms{};
-
-	Parms.PrimComponents = std::move(PrimComponents);
-	Parms.bUseCustomDepth = bUseCustomDepth;
-	Parms.StencilValue = StencilValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bOutConsume != nullptr)
-		*bOutConsume = Parms.bOutConsume;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.OnSetSearched
-// (Event, Public, BlueprintEvent)
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.SpawnChestOpenVFX
+// (BlueprintCallable, BlueprintEvent)
 
-void ATiered_Safe_Athena_Parent_C::OnSetSearched()
+void ATiered_Safe_Athena_Parent_C::SpawnChestOpenVFX()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "OnSetSearched");
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "SpawnChestOpenVFX");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -370,154 +501,23 @@ void ATiered_Safe_Athena_Parent_C::PlayChestOpeningTimeline()
 }
 
 
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.SetLightVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.ExecuteUbergraph_Tiered_Safe_Athena_Parent
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATiered_Safe_Athena_Parent_C::SetLightVisibility(bool Visible)
+void ATiered_Safe_Athena_Parent_C::ExecuteUbergraph_Tiered_Safe_Athena_Parent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "SetLightVisibility");
+		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "ExecuteUbergraph_Tiered_Safe_Athena_Parent");
 
-	Params::Tiered_Safe_Athena_Parent_C_SetLightVisibility Parms{};
+	Params::Tiered_Safe_Athena_Parent_C_ExecuteUbergraph_Tiered_Safe_Athena_Parent Parms{};
 
-	Parms.Visible = Visible;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.SetVisibleMobileInteractIcon
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ATiered_Safe_Athena_Parent_C::SetVisibleMobileInteractIcon(bool Visible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "SetVisibleMobileInteractIcon");
-
-	Params::Tiered_Safe_Athena_Parent_C_SetVisibleMobileInteractIcon Parms{};
-
-	Parms.Visible = Visible;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.ShouldDie
-// (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AController*                      EventInstigator                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool ATiered_Safe_Athena_Parent_C::ShouldDie(float Damage, class AController* EventInstigator, class AActor* DamageCauser)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "ShouldDie");
-
-	Params::Tiered_Safe_Athena_Parent_C_ShouldDie Parms{};
-
-	Parms.Damage = Damage;
-	Parms.EventInstigator = EventInstigator;
-	Parms.DamageCauser = DamageCauser;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.SpawnChestOpenVFX
-// (BlueprintCallable, BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::SpawnChestOpenVFX()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "SpawnChestOpenVFX");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.Timeline_0__FinishedFunc
-// (BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::Timeline_0__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "Timeline_0__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.Timeline_0__UpdateFunc
-// (BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::Timeline_0__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "Timeline_0__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Safe_Athena_Parent.Tiered_Safe_Athena_Parent_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ATiered_Safe_Athena_Parent_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_Parent_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -527,7 +527,7 @@ void ATiered_Safe_Athena_Parent_C::UserConstructionScript()
 // const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool ATiered_Safe_Athena_Parent_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
 {

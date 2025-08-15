@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UTeamID_PvP_15_C>();
 	}
 };
+static_assert(alignof(UTeamID_PvP_15_C) == 0x000008, "Wrong alignment on UTeamID_PvP_15_C");
+static_assert(sizeof(UTeamID_PvP_15_C) == 0x000038, "Wrong size on UTeamID_PvP_15_C");
 
 }
 

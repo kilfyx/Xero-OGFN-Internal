@@ -17,10 +17,24 @@
 namespace SDK
 {
 
+// Function AthenaBottomBarWidget.AthenaBottomBarWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UAthenaBottomBarWidget_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaBottomBarWidget_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function AthenaBottomBarWidget.AthenaBottomBarWidget_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaBottomBarWidget_C::PreConstruct(bool IsDesignTime)
 {
@@ -54,20 +68,6 @@ void UAthenaBottomBarWidget_C::ExecuteUbergraph_AthenaBottomBarWidget(int32 Entr
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaBottomBarWidget.AthenaBottomBarWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAthenaBottomBarWidget_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaBottomBarWidget_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

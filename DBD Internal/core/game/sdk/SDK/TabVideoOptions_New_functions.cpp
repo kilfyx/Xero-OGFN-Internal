@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function TabVideoOptions_New.TabVideoOptions_New_C.ExecuteUbergraph_TabVideoOptions_New
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTabVideoOptions_New_C::ExecuteUbergraph_TabVideoOptions_New(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabVideoOptions_New_C", "ExecuteUbergraph_TabVideoOptions_New");
+
+	Params::TabVideoOptions_New_C_ExecuteUbergraph_TabVideoOptions_New Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function TabVideoOptions_New.TabVideoOptions_New_C.BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -39,6 +59,26 @@ void UTabVideoOptions_New_C::BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1
 }
 
 
+// Function TabVideoOptions_New.TabVideoOptions_New_C.SettingValueChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTabVideoOptions_New_C::SettingValueChanged(float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabVideoOptions_New_C", "SettingValueChanged");
+
+	Params::TabVideoOptions_New_C_SettingValueChanged Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function TabVideoOptions_New.TabVideoOptions_New_C.CenterOnTab
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
 
@@ -50,26 +90,6 @@ void UTabVideoOptions_New_C::CenterOnTab()
 		Func = Class->GetFunction("TabVideoOptions_New_C", "CenterOnTab");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TabVideoOptions_New.TabVideoOptions_New_C.ExecuteUbergraph_TabVideoOptions_New
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTabVideoOptions_New_C::ExecuteUbergraph_TabVideoOptions_New(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabVideoOptions_New_C", "ExecuteUbergraph_TabVideoOptions_New");
-
-	Params::TabVideoOptions_New_C_ExecuteUbergraph_TabVideoOptions_New Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -88,26 +108,6 @@ void UTabVideoOptions_New_C::OnComplete_7E19F26B42A808FDADDB569CFB68CCB7(class U
 	Params::TabVideoOptions_New_C_OnComplete_7E19F26B42A808FDADDB569CFB68CCB7 Parms{};
 
 	Parms.UserWidget = UserWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TabVideoOptions_New.TabVideoOptions_New_C.SettingValueChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTabVideoOptions_New_C::SettingValueChanged(float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabVideoOptions_New_C", "SettingValueChanged");
-
-	Params::TabVideoOptions_New_C_SettingValueChanged Parms{};
-
-	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

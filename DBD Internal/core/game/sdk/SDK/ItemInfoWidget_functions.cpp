@@ -20,14 +20,14 @@ namespace SDK
 // Function ItemInfoWidget.ItemInfoWidget_C.SetRarityMaterialValues
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UFortItemDefinition*              ItemDefinition                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UFortItemDefinition*              ItemDefinition                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UItemInfoWidget_C::SetRarityMaterialValues(class UFortItemDefinition* ItemDefinition)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetRarityMaterialValues");
+		Func = Class->GetFunction("ItemInfoWidget_C", "SetRarityMaterialValues");
 
 	Params::ItemInfoWidget_C_SetRarityMaterialValues Parms{};
 
@@ -45,9 +45,9 @@ void UItemInfoWidget_C::SetRarityMaterialValues(class UFortItemDefinition* ItemD
 void UItemInfoWidget_C::ExecuteUbergraph_ItemInfoWidget(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_ItemInfoWidget");
+		Func = Class->GetFunction("ItemInfoWidget_C", "ExecuteUbergraph_ItemInfoWidget");
 
 	Params::ItemInfoWidget_C_ExecuteUbergraph_ItemInfoWidget Parms{};
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MissionGen_Squad_Battle_16_B.MissionGen_Squad_Battle_16_B_C
-// 0x0000 (0x07E0 - 0x07E0)
+// 0x0000 (0x06C8 - 0x06C8)
 class UMissionGen_Squad_Battle_16_B_C final : public UFortMissionGenerator
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UMissionGen_Squad_Battle_16_B_C>();
 	}
 };
+static_assert(alignof(UMissionGen_Squad_Battle_16_B_C) == 0x000008, "Wrong alignment on UMissionGen_Squad_Battle_16_B_C");
+static_assert(sizeof(UMissionGen_Squad_Battle_16_B_C) == 0x0006C8, "Wrong size on UMissionGen_Squad_Battle_16_B_C");
 
 }
 

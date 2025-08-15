@@ -300,7 +300,7 @@ bool UProceduralGeneratorContext::OnGenerate()
 // Function Procedural.ProceduralGeneratorContext.GetGeneratedContexts
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<class UProceduralGeneratorContext*>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TArray<class UProceduralGeneratorContext*>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<class UProceduralGeneratorContext*> UProceduralGeneratorContext::GetGeneratedContexts() const
 {
@@ -359,7 +359,7 @@ void UProceduralPointCloud::Empty()
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             InTag                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FProceduralPointCloudPoint>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TArray<struct FProceduralPointCloudPoint>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<struct FProceduralPointCloudPoint> UProceduralPointCloud::GetPointsByTag(class FName InTag)
 {

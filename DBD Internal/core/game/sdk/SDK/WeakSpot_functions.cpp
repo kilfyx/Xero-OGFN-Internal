@@ -51,20 +51,6 @@ void AWeakSpot_C::HideMesh()
 }
 
 
-// Function WeakSpot.WeakSpot_C.OnFadeOut
-// (Event, Public, BlueprintEvent)
-
-void AWeakSpot_C::OnFadeOut()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeakSpot_C", "OnFadeOut");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WeakSpot.WeakSpot_C.OnHit
 // (Event, Public, BlueprintEvent)
 
@@ -93,15 +79,15 @@ void AWeakSpot_C::OnStartDirectionEffect()
 }
 
 
-// Function WeakSpot.WeakSpot_C.ScaleDownParticleTL__FinishedFunc
-// (BlueprintEvent)
+// Function WeakSpot.WeakSpot_C.OnFadeOut
+// (Event, Public, BlueprintEvent)
 
-void AWeakSpot_C::ScaleDownParticleTL__FinishedFunc()
+void AWeakSpot_C::OnFadeOut()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WeakSpot_C", "ScaleDownParticleTL__FinishedFunc");
+		Func = Class->GetFunction("WeakSpot_C", "OnFadeOut");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -116,6 +102,20 @@ void AWeakSpot_C::ScaleDownParticleTL__UpdateFunc()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WeakSpot_C", "ScaleDownParticleTL__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WeakSpot.WeakSpot_C.ScaleDownParticleTL__FinishedFunc
+// (BlueprintEvent)
+
+void AWeakSpot_C::ScaleDownParticleTL__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WeakSpot_C", "ScaleDownParticleTL__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

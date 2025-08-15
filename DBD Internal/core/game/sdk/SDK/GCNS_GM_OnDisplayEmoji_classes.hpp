@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCNS_GM_OnDisplayEmoji.GCNS_GM_OnDisplayEmoji_C
-// 0x0000 (0x01D0 - 0x01D0)
+// 0x0000 (0x01C8 - 0x01C8)
 class UGCNS_GM_OnDisplayEmoji_C final : public UGameplayCueNotify_OnDisplayEmoji
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGCNS_GM_OnDisplayEmoji_C>();
 	}
 };
+static_assert(alignof(UGCNS_GM_OnDisplayEmoji_C) == 0x000008, "Wrong alignment on UGCNS_GM_OnDisplayEmoji_C");
+static_assert(sizeof(UGCNS_GM_OnDisplayEmoji_C) == 0x0001C8, "Wrong size on UGCNS_GM_OnDisplayEmoji_C");
 
 }
 

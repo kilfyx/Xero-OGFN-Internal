@@ -23,6 +23,10 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(LeavePartyConfirmationMenu_C_ExecuteUbergraph_LeavePartyConfirmationMenu) == 0x000008, "Wrong alignment on LeavePartyConfirmationMenu_C_ExecuteUbergraph_LeavePartyConfirmationMenu");
+static_assert(sizeof(LeavePartyConfirmationMenu_C_ExecuteUbergraph_LeavePartyConfirmationMenu) == 0x000010, "Wrong size on LeavePartyConfirmationMenu_C_ExecuteUbergraph_LeavePartyConfirmationMenu");
+static_assert(offsetof(LeavePartyConfirmationMenu_C_ExecuteUbergraph_LeavePartyConfirmationMenu, EntryPoint) == 0x000000, "Member 'LeavePartyConfirmationMenu_C_ExecuteUbergraph_LeavePartyConfirmationMenu::EntryPoint' has a wrong offset!");
+static_assert(offsetof(LeavePartyConfirmationMenu_C_ExecuteUbergraph_LeavePartyConfirmationMenu, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'LeavePartyConfirmationMenu_C_ExecuteUbergraph_LeavePartyConfirmationMenu::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 
 }
 

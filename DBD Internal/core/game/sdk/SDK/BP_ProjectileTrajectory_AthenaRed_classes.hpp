@@ -38,6 +38,9 @@ public:
 		return GetDefaultObjImpl<ABP_ProjectileTrajectory_AthenaRed_C>();
 	}
 };
+static_assert(alignof(ABP_ProjectileTrajectory_AthenaRed_C) == 0x000008, "Wrong alignment on ABP_ProjectileTrajectory_AthenaRed_C");
+static_assert(sizeof(ABP_ProjectileTrajectory_AthenaRed_C) == 0x000278, "Wrong size on ABP_ProjectileTrajectory_AthenaRed_C");
+static_assert(offsetof(ABP_ProjectileTrajectory_AthenaRed_C, UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_C) == 0x000270, "Member 'ABP_ProjectileTrajectory_AthenaRed_C::UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_C' has a wrong offset!");
 
 }
 

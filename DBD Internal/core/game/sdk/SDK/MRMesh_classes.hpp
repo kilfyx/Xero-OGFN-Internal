@@ -43,25 +43,27 @@ public:
 		return GetDefaultObjImpl<UMeshReconstructorBase>();
 	}
 };
+static_assert(alignof(UMeshReconstructorBase) == 0x000008, "Wrong alignment on UMeshReconstructorBase");
+static_assert(sizeof(UMeshReconstructorBase) == 0x000028, "Wrong size on UMeshReconstructorBase");
 
 // Class MRMesh.MockDataMeshTrackerComponent
-// 0x0070 (0x0260 - 0x01F0)
+// 0x0070 (0x0270 - 0x0200)
 class UMockDataMeshTrackerComponent final : public USceneComponent
 {
 public:
-	TMulticastInlineDelegate<void(int32 Index, const TArray<struct FVector>& Vertices, const TArray<int32>& Triangles, const TArray<struct FVector>& Normals, const TArray<float>& Confidence)> OnMeshTrackerUpdated; // 0x01F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	bool                                          ScanWorld;                                         // 0x0200(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          RequestNormals;                                    // 0x0201(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          RequestVertexConfidence;                           // 0x0202(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMeshTrackerVertexColorMode                   VertexColorMode;                                   // 0x0203(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_204[0x4];                                      // 0x0204(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FColor>                         BlockVertexColors;                                 // 0x0208(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FLinearColor                           VertexColorFromConfidenceZero;                     // 0x0218(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           VertexColorFromConfidenceOne;                      // 0x0228(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         UpdateInterval;                                    // 0x0238(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_23C[0x4];                                      // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMRMeshComponent*                       MRMesh;                                            // 0x0240(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_248[0x18];                                     // 0x0248(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(int32 Index, const TArray<struct FVector>& Vertices, const TArray<int32>& Triangles, const TArray<struct FVector>& Normals, const TArray<float>& Confidence)> OnMeshTrackerUpdated; // 0x01F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	bool                                          ScanWorld;                                         // 0x0208(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          RequestNormals;                                    // 0x0209(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          RequestVertexConfidence;                           // 0x020A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMeshTrackerVertexColorMode                   VertexColorMode;                                   // 0x020B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FColor>                         BlockVertexColors;                                 // 0x0210(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           VertexColorFromConfidenceZero;                     // 0x0220(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           VertexColorFromConfidenceOne;                      // 0x0230(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         UpdateInterval;                                    // 0x0240(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMRMeshComponent*                       MRMesh;                                            // 0x0248(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_250[0x20];                                     // 0x0250(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr);
@@ -77,34 +79,39 @@ public:
 		return GetDefaultObjImpl<UMockDataMeshTrackerComponent>();
 	}
 };
+static_assert(alignof(UMockDataMeshTrackerComponent) == 0x000010, "Wrong alignment on UMockDataMeshTrackerComponent");
+static_assert(sizeof(UMockDataMeshTrackerComponent) == 0x000270, "Wrong size on UMockDataMeshTrackerComponent");
+static_assert(offsetof(UMockDataMeshTrackerComponent, OnMeshTrackerUpdated) == 0x0001F8, "Member 'UMockDataMeshTrackerComponent::OnMeshTrackerUpdated' has a wrong offset!");
+static_assert(offsetof(UMockDataMeshTrackerComponent, ScanWorld) == 0x000208, "Member 'UMockDataMeshTrackerComponent::ScanWorld' has a wrong offset!");
+static_assert(offsetof(UMockDataMeshTrackerComponent, RequestNormals) == 0x000209, "Member 'UMockDataMeshTrackerComponent::RequestNormals' has a wrong offset!");
+static_assert(offsetof(UMockDataMeshTrackerComponent, RequestVertexConfidence) == 0x00020A, "Member 'UMockDataMeshTrackerComponent::RequestVertexConfidence' has a wrong offset!");
+static_assert(offsetof(UMockDataMeshTrackerComponent, VertexColorMode) == 0x00020B, "Member 'UMockDataMeshTrackerComponent::VertexColorMode' has a wrong offset!");
+static_assert(offsetof(UMockDataMeshTrackerComponent, BlockVertexColors) == 0x000210, "Member 'UMockDataMeshTrackerComponent::BlockVertexColors' has a wrong offset!");
+static_assert(offsetof(UMockDataMeshTrackerComponent, VertexColorFromConfidenceZero) == 0x000220, "Member 'UMockDataMeshTrackerComponent::VertexColorFromConfidenceZero' has a wrong offset!");
+static_assert(offsetof(UMockDataMeshTrackerComponent, VertexColorFromConfidenceOne) == 0x000230, "Member 'UMockDataMeshTrackerComponent::VertexColorFromConfidenceOne' has a wrong offset!");
+static_assert(offsetof(UMockDataMeshTrackerComponent, UpdateInterval) == 0x000240, "Member 'UMockDataMeshTrackerComponent::UpdateInterval' has a wrong offset!");
+static_assert(offsetof(UMockDataMeshTrackerComponent, MRMesh) == 0x000248, "Member 'UMockDataMeshTrackerComponent::MRMesh' has a wrong offset!");
 
 // Class MRMesh.MRMeshComponent
-// 0x00C0 (0x0510 - 0x0450)
+// 0x0070 (0x04C0 - 0x0450)
 class UMRMeshComponent final : public UPrimitiveComponent
 {
 public:
-	uint8                                         Pad_450[0x10];                                     // 0x0450(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     Material;                                          // 0x0460(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMaterialInterface*                     WireframeMaterial;                                 // 0x0468(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bCreateMeshProxySections;                          // 0x0470(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bUpdateNavMeshOnMeshUpdate;                        // 0x0471(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bNeverCreateCollisionMesh;                         // 0x0472(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_473[0x5];                                      // 0x0473(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBodySetup*                             CachedBodySetup;                                   // 0x0478(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UBodySetup*>                     BodySetups;                                        // 0x0480(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_490[0x80];                                     // 0x0490(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_448[0x8];                                      // 0x0448(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     Material;                                          // 0x0450(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bCreateMeshProxySections;                          // 0x0458(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bUpdateNavMeshOnMeshUpdate;                        // 0x0459(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bNeverCreateCollisionMesh;                         // 0x045A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_45B[0x5];                                      // 0x045B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBodySetup*                             CachedBodySetup;                                   // 0x0460(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UBodySetup*>                     BodySetups;                                        // 0x0468(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMaterialInterface*                     WireframeMaterial;                                 // 0x0478(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_480[0x40];                                     // 0x0480(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Clear();
 	void ForceNavMeshUpdate();
-	void SetEnableMeshOcclusion(bool bEnable);
-	void SetUseWireframe(bool bUseWireframe);
-	void SetWireframeColor(const struct FLinearColor& InColor);
-	void SetWireframeMaterial(class UMaterialInterface* InMaterial);
 
-	bool GetEnableMeshOcclusion() const;
-	bool GetUseWireframe() const;
-	const struct FLinearColor GetWireframeColor() const;
 	bool IsConnected() const;
 
 public:
@@ -117,6 +124,15 @@ public:
 		return GetDefaultObjImpl<UMRMeshComponent>();
 	}
 };
+static_assert(alignof(UMRMeshComponent) == 0x000010, "Wrong alignment on UMRMeshComponent");
+static_assert(sizeof(UMRMeshComponent) == 0x0004C0, "Wrong size on UMRMeshComponent");
+static_assert(offsetof(UMRMeshComponent, Material) == 0x000450, "Member 'UMRMeshComponent::Material' has a wrong offset!");
+static_assert(offsetof(UMRMeshComponent, bCreateMeshProxySections) == 0x000458, "Member 'UMRMeshComponent::bCreateMeshProxySections' has a wrong offset!");
+static_assert(offsetof(UMRMeshComponent, bUpdateNavMeshOnMeshUpdate) == 0x000459, "Member 'UMRMeshComponent::bUpdateNavMeshOnMeshUpdate' has a wrong offset!");
+static_assert(offsetof(UMRMeshComponent, bNeverCreateCollisionMesh) == 0x00045A, "Member 'UMRMeshComponent::bNeverCreateCollisionMesh' has a wrong offset!");
+static_assert(offsetof(UMRMeshComponent, CachedBodySetup) == 0x000460, "Member 'UMRMeshComponent::CachedBodySetup' has a wrong offset!");
+static_assert(offsetof(UMRMeshComponent, BodySetups) == 0x000468, "Member 'UMRMeshComponent::BodySetups' has a wrong offset!");
+static_assert(offsetof(UMRMeshComponent, WireframeMaterial) == 0x000478, "Member 'UMRMeshComponent::WireframeMaterial' has a wrong offset!");
 
 }
 

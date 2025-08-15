@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Athena_Bucket_Old_Weap.B_Athena_Bucket_Old_Weap_C
-// 0x0000 (0x1470 - 0x1470)
+// 0x0000 (0x0D18 - 0x0D18)
 class AB_Athena_Bucket_Old_Weap_C final : public AB_ConsumableSmall_Athena_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AB_Athena_Bucket_Old_Weap_C>();
 	}
 };
+static_assert(alignof(AB_Athena_Bucket_Old_Weap_C) == 0x000008, "Wrong alignment on AB_Athena_Bucket_Old_Weap_C");
+static_assert(sizeof(AB_Athena_Bucket_Old_Weap_C) == 0x000D18, "Wrong size on AB_Athena_Bucket_Old_Weap_C");
 
 }
 

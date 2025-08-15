@@ -17,6 +17,40 @@
 namespace SDK
 {
 
+// Function ErrorLlama.ErrorLlama_C.HandleInputTypeChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECommonInputType                        NewInputType                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UErrorLlama_C::HandleInputTypeChanged(ECommonInputType NewInputType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ErrorLlama_C", "HandleInputTypeChanged");
+
+	Params::ErrorLlama_C_HandleInputTypeChanged Parms{};
+
+	Parms.NewInputType = NewInputType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ErrorLlama.ErrorLlama_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UErrorLlama_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ErrorLlama_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ErrorLlama.ErrorLlama_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -73,26 +107,6 @@ void UErrorLlama_C::HandleNormalizedInputDirection(const struct FVector2D& TwoDI
 }
 
 
-// Function ErrorLlama.ErrorLlama_C.HandleInputTypeChanged
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ECommonInputType                        NewInputType                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UErrorLlama_C::HandleInputTypeChanged(ECommonInputType NewInputType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ErrorLlama_C", "HandleInputTypeChanged");
-
-	Params::ErrorLlama_C_HandleInputTypeChanged Parms{};
-
-	Parms.NewInputType = NewInputType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ErrorLlama.ErrorLlama_C.ExecuteUbergraph_ErrorLlama
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -110,20 +124,6 @@ void UErrorLlama_C::ExecuteUbergraph_ErrorLlama(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ErrorLlama.ErrorLlama_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UErrorLlama_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ErrorLlama_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

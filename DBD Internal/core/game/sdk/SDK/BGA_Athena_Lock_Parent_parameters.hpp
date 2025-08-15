@@ -10,53 +10,191 @@
 
 #include "Basic.hpp"
 
-#include "Enum_Athena_Lock_structs.hpp"
-#include "GameplayTags_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "FortniteGame_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
+#include "Enum_Athena_Lock_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ShouldDie
-// 0x0020 (0x0020 - 0x0000)
-struct BGA_Athena_Lock_Parent_C_ShouldDie final
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ExecuteUbergraph_BGA_Athena_Lock_Parent
+// 0x0248 (0x0248 - 0x0000)
+struct BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent final
 {
 public:
-	float                                         Damage;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            EventInstigator;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 DamageCauser;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_Athena_Lock                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPawn*                              K2Node_CustomEvent_InteractingPawn_1;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPawn*                              K2Node_CustomEvent_InteractingPawn;                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum)> K2Node_CreateDelegate_OutputDelegate; // 0x0018(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue; // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortQuestManager*                      CallFunc_GetQuestManager_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortAsyncAction_CurrentPlaylistReady*  CallFunc_PlaylistDataReadyAsync_ReturnValue;       // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_LockCheck_CheckPassed;                    // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortGameStateAthena*                   Temp_object_Variable;                              // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LockCheck_CheckPassed_1;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortPlaylist*                          Temp_object_Variable_1;                            // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  Temp_struct_Variable;                              // 0x0078(0x0020)()
+	class AFortGameStateAthena*                   K2Node_CustomEvent_GameState;                      // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UFortPlaylist*                    K2Node_CustomEvent_Playlist;                       // 0x00A0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  K2Node_CustomEvent_PlaylistContextTags;            // 0x00A8(0x0020)(ConstParm)
+	class UFortAbilitySystemComponent*            CallFunc_GetFortAbilitySystemComponent_ReturnValue; // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D2[0x6];                                       // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortAbilitySystemComponent*            CallFunc_GetFortAbilitySystemComponent_ReturnValue_1; // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue; // 0x00E0(0x0008)(NoDestructor, HasGetValueTypeHash)
+	Enum_Athena_Lock                              K2Node_CustomEvent_LockState;                      // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags)> K2Node_CreateDelegate_OutputDelegate_1; // 0x00EC(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x00FC(0x0010)(ZeroConstructor, NoDestructor)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0110(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RowToBool_ReturnValue;                    // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_RowToBool_ReturnValue_1;                  // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11A[0x6];                                      // 0x011A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	const class AFortPawn*                        K2Node_Event_InteractingPawn;                      // 0x0120(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EInteractionBeingAttempted                    K2Node_Event_InteractionBeingAttempted;            // 0x0128(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0129(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_12A[0x6];                                      // 0x012A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetParentActor_ReturnValue;               // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABuildingActor*                         K2Node_DynamicCast_AsBuilding_Actor;               // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           Temp_struct_Variable_1;                            // 0x0144(0x0008)(NoDestructor, HasGetValueTypeHash)
+	Enum_Athena_Lock                              Temp_byte_Variable_1;                              // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CloseActor_ReturnValue;                   // 0x014D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_14E[0x2];                                      // 0x014E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_GetOwnedGameplayTags_self_CastInput; // 0x0150(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FGameplayTagContainer                  CallFunc_GetOwnedGameplayTags_TagContainer;        // 0x0160(0x0020)()
+	class ABuildingContainer*                     K2Node_DynamicCast_AsBuilding_Container;           // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BP_SpawnLoot_ReturnValue;                 // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_18A[0x6];                                      // 0x018A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn;             // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	Enum_Athena_Lock                              Temp_byte_Variable_2;                              // 0x0199(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19A[0x6];                                      // 0x019A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_GetOwnedGameplayTags_self_CastInput_1; // 0x01A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FGameplayTagContainer                  CallFunc_GetOwnedGameplayTags_TagContainer_1;      // 0x01B0(0x0020)()
+	bool                                          CallFunc_OpenActor_ReturnValue;                    // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SendComplexCustomStatEvent_QuestActive;   // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SendComplexCustomStatEvent_QuestCompleted; // 0x01D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	Enum_Athena_Lock                              Temp_byte_Variable_3;                              // 0x01D3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue_1; // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortQuestManager*                      CallFunc_GetQuestManager_ReturnValue_1;            // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SendComplexCustomStatEvent_QuestActive_1; // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SendComplexCustomStatEvent_QuestCompleted_1; // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x01EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01EB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FGameplayTag                           K2Node_Select_Default;                             // 0x01EC(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_PerformLinkingCheck_ReturnValue;          // 0x01F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1F6[0x2];                                      // 0x01F6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_CustomEvent_DamagedActor;                   // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_CustomEvent_Damage;                         // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_204[0x4];                                      // 0x0204(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AController*                            K2Node_CustomEvent_InstigatedBy;                   // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_CustomEvent_DamageCauser;                   // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                K2Node_CustomEvent_HitLocation;                    // 0x0218(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_224[0x4];                                      // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrimitiveComponent*                    K2Node_CustomEvent_FHitComponent;                  // 0x0228(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_CustomEvent_BoneName;                       // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                K2Node_CustomEvent_Momentum;                       // 0x0238(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_Athena_Lock                              Temp_byte_Variable_4;                              // 0x0244(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_Athena_Lock                              K2Node_Select_Default_1;                           // 0x0245(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.SetLockVisuals
-// 0x0030 (0x0030 - 0x0000)
-struct BGA_Athena_Lock_Parent_C_SetLockVisuals final
-{
-public:
-	class UStaticMesh*                            Temp_object_Variable;                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_Athena_Lock                              Temp_byte_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_Athena_Lock                              Temp_byte_Variable_1;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     Temp_object_Variable_1;                            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     K2Node_Select_Default;                             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                            K2Node_Select_Default_1;                           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.SetLock
-// 0x0001 (0x0001 - 0x0000)
-struct BGA_Athena_Lock_Parent_C_SetLock final
-{
-public:
-	Enum_Athena_Lock                              LockState_0;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
+static_assert(alignof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent) == 0x000008, "Wrong alignment on BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent) == 0x000248, "Wrong size on BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, EntryPoint) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::EntryPoint' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, Temp_byte_Variable) == 0x000004, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_InteractingPawn_1) == 0x000008, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_InteractingPawn_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_InteractingPawn) == 0x000010, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_InteractingPawn' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CreateDelegate_OutputDelegate) == 0x000018, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_GetFortPlayerControllerFromActor_ReturnValue) == 0x000030, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_GetFortPlayerControllerFromActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_IsValid_ReturnValue_1) == 0x000038, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_GetQuestManager_ReturnValue) == 0x000040, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_GetQuestManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_IsValid_ReturnValue_2) == 0x000048, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_PlaylistDataReadyAsync_ReturnValue) == 0x000050, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_PlaylistDataReadyAsync_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_IsValid_ReturnValue_3) == 0x000058, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_LockCheck_CheckPassed) == 0x000059, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_LockCheck_CheckPassed' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, Temp_object_Variable) == 0x000060, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::Temp_object_Variable' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_LockCheck_CheckPassed_1) == 0x000068, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_LockCheck_CheckPassed_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, Temp_object_Variable_1) == 0x000070, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::Temp_object_Variable_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, Temp_struct_Variable) == 0x000078, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_GameState) == 0x000098, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_GameState' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_Playlist) == 0x0000A0, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_Playlist' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_PlaylistContextTags) == 0x0000A8, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_PlaylistContextTags' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_GetFortAbilitySystemComponent_ReturnValue) == 0x0000C8, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_GetFortAbilitySystemComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_IsValidClass_ReturnValue) == 0x0000D0, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_IsValid_ReturnValue_4) == 0x0000D1, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_GetFortAbilitySystemComponent_ReturnValue_1) == 0x0000D8, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_GetFortAbilitySystemComponent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue) == 0x0000E0, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_LockState) == 0x0000E8, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_LockState' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000EC, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CreateDelegate_OutputDelegate_2) == 0x0000FC, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_GetValueAtLevel_ReturnValue) == 0x00010C, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_GetValueAtLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000110, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_RowToBool_ReturnValue) == 0x000118, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_RowToBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_RowToBool_ReturnValue_1) == 0x000119, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_RowToBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_Event_InteractingPawn) == 0x000120, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_Event_InteractingPawn' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_Event_InteractionBeingAttempted) == 0x000128, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_Event_InteractionBeingAttempted' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_SwitchEnum_CmpSuccess) == 0x000129, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_GetParentActor_ReturnValue) == 0x000130, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_GetParentActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_DynamicCast_AsBuilding_Actor) == 0x000138, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_DynamicCast_AsBuilding_Actor' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_DynamicCast_bSuccess) == 0x000140, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, Temp_struct_Variable_1) == 0x000144, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, Temp_byte_Variable_1) == 0x00014C, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_CloseActor_ReturnValue) == 0x00014D, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_CloseActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_GetOwnedGameplayTags_self_CastInput) == 0x000150, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_GetOwnedGameplayTags_self_CastInput' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_GetOwnedGameplayTags_TagContainer) == 0x000160, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_GetOwnedGameplayTags_TagContainer' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_DynamicCast_AsBuilding_Container) == 0x000180, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_DynamicCast_AsBuilding_Container' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_DynamicCast_bSuccess_1) == 0x000188, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_BP_SpawnLoot_ReturnValue) == 0x000189, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_BP_SpawnLoot_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_DynamicCast_AsFort_Player_Pawn) == 0x000190, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_DynamicCast_AsFort_Player_Pawn' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_DynamicCast_bSuccess_2) == 0x000198, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, Temp_byte_Variable_2) == 0x000199, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::Temp_byte_Variable_2' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_GetOwnedGameplayTags_self_CastInput_1) == 0x0001A0, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_GetOwnedGameplayTags_self_CastInput_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_GetOwnedGameplayTags_TagContainer_1) == 0x0001B0, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_GetOwnedGameplayTags_TagContainer_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_OpenActor_ReturnValue) == 0x0001D0, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_OpenActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_SendComplexCustomStatEvent_QuestActive) == 0x0001D1, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_SendComplexCustomStatEvent_QuestActive' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_SendComplexCustomStatEvent_QuestCompleted) == 0x0001D2, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_SendComplexCustomStatEvent_QuestCompleted' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, Temp_byte_Variable_3) == 0x0001D3, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::Temp_byte_Variable_3' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_GetFortPlayerControllerFromActor_ReturnValue_1) == 0x0001D8, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_GetFortPlayerControllerFromActor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_GetQuestManager_ReturnValue_1) == 0x0001E0, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_GetQuestManager_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_SendComplexCustomStatEvent_QuestActive_1) == 0x0001E8, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_SendComplexCustomStatEvent_QuestActive_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_SendComplexCustomStatEvent_QuestCompleted_1) == 0x0001E9, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_SendComplexCustomStatEvent_QuestCompleted_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_IsServer_ReturnValue) == 0x0001EA, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_IsServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0001EB, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_Select_Default) == 0x0001EC, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_BooleanAND_ReturnValue) == 0x0001F4, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, CallFunc_PerformLinkingCheck_ReturnValue) == 0x0001F5, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::CallFunc_PerformLinkingCheck_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_DamagedActor) == 0x0001F8, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_DamagedActor' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_Damage) == 0x000200, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_Damage' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_InstigatedBy) == 0x000208, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_InstigatedBy' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_DamageCauser) == 0x000210, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_DamageCauser' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_HitLocation) == 0x000218, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_HitLocation' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_FHitComponent) == 0x000228, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_FHitComponent' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_BoneName) == 0x000230, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_BoneName' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_CustomEvent_Momentum) == 0x000238, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_CustomEvent_Momentum' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, Temp_byte_Variable_4) == 0x000244, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::Temp_byte_Variable_4' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent, K2Node_Select_Default_1) == 0x000245, "Member 'BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent::K2Node_Select_Default_1' has a wrong offset!");
 
 // Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ParentActorDied
 // 0x0050 (0x0050 - 0x0000)
@@ -74,6 +212,51 @@ public:
 	class FName                                   BoneName;                                          // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Momentum;                                          // 0x0040(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(BGA_Athena_Lock_Parent_C_ParentActorDied) == 0x000008, "Wrong alignment on BGA_Athena_Lock_Parent_C_ParentActorDied");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_ParentActorDied) == 0x000050, "Wrong size on BGA_Athena_Lock_Parent_C_ParentActorDied");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ParentActorDied, DamagedActor) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_ParentActorDied::DamagedActor' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ParentActorDied, Damage) == 0x000008, "Member 'BGA_Athena_Lock_Parent_C_ParentActorDied::Damage' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ParentActorDied, InstigatedBy) == 0x000010, "Member 'BGA_Athena_Lock_Parent_C_ParentActorDied::InstigatedBy' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ParentActorDied, DamageCauser) == 0x000018, "Member 'BGA_Athena_Lock_Parent_C_ParentActorDied::DamageCauser' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ParentActorDied, HitLocation) == 0x000020, "Member 'BGA_Athena_Lock_Parent_C_ParentActorDied::HitLocation' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ParentActorDied, FHitComponent) == 0x000030, "Member 'BGA_Athena_Lock_Parent_C_ParentActorDied::FHitComponent' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ParentActorDied, BoneName) == 0x000038, "Member 'BGA_Athena_Lock_Parent_C_ParentActorDied::BoneName' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ParentActorDied, Momentum) == 0x000040, "Member 'BGA_Athena_Lock_Parent_C_ParentActorDied::Momentum' has a wrong offset!");
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BlueprintOnInteract
+// 0x0010 (0x0010 - 0x0000)
+struct BGA_Athena_Lock_Parent_C_BlueprintOnInteract final
+{
+public:
+	const class AFortPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EInteractionBeingAttempted                    InteractionBeingAttempted;                         // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BGA_Athena_Lock_Parent_C_BlueprintOnInteract) == 0x000008, "Wrong alignment on BGA_Athena_Lock_Parent_C_BlueprintOnInteract");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_BlueprintOnInteract) == 0x000010, "Wrong size on BGA_Athena_Lock_Parent_C_BlueprintOnInteract");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintOnInteract, InteractingPawn) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_BlueprintOnInteract::InteractingPawn' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintOnInteract, InteractionBeingAttempted) == 0x000008, "Member 'BGA_Athena_Lock_Parent_C_BlueprintOnInteract::InteractionBeingAttempted' has a wrong offset!");
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.SetLock
+// 0x0001 (0x0001 - 0x0000)
+struct BGA_Athena_Lock_Parent_C_SetLock final
+{
+public:
+	Enum_Athena_Lock                              LockState_0;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BGA_Athena_Lock_Parent_C_SetLock) == 0x000001, "Wrong alignment on BGA_Athena_Lock_Parent_C_SetLock");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_SetLock) == 0x000001, "Wrong size on BGA_Athena_Lock_Parent_C_SetLock");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_SetLock, LockState_0) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_SetLock::LockState_0' has a wrong offset!");
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnFirstInteract
+// 0x0008 (0x0008 - 0x0000)
+struct BGA_Athena_Lock_Parent_C_OnFirstInteract final
+{
+public:
+	class AFortPawn*                              InteractingPawn;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BGA_Athena_Lock_Parent_C_OnFirstInteract) == 0x000008, "Wrong alignment on BGA_Athena_Lock_Parent_C_OnFirstInteract");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_OnFirstInteract) == 0x000008, "Wrong size on BGA_Athena_Lock_Parent_C_OnFirstInteract");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_OnFirstInteract, InteractingPawn) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_OnFirstInteract::InteractingPawn' has a wrong offset!");
 
 // Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnSecondInteract
 // 0x0008 (0x0008 - 0x0000)
@@ -82,17 +265,9 @@ struct BGA_Athena_Lock_Parent_C_OnSecondInteract final
 public:
 	class AFortPawn*                              InteractingPawn;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnRep_LockState
-// 0x0004 (0x0004 - 0x0000)
-struct BGA_Athena_Lock_Parent_C_OnRep_LockState final
-{
-public:
-	bool                                          CallFunc_AllLocksUnlocked_AllUnlocked;             // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
+static_assert(alignof(BGA_Athena_Lock_Parent_C_OnSecondInteract) == 0x000008, "Wrong alignment on BGA_Athena_Lock_Parent_C_OnSecondInteract");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_OnSecondInteract) == 0x000008, "Wrong size on BGA_Athena_Lock_Parent_C_OnSecondInteract");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_OnSecondInteract, InteractingPawn) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_OnSecondInteract::InteractingPawn' has a wrong offset!");
 
 // Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnReady_19560710434050E125B3ADA0163CD609
 // 0x0030 (0x0030 - 0x0000)
@@ -103,14 +278,26 @@ public:
 	const class UFortPlaylist*                    Playlist;                                          // 0x0008(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayTagContainer                  PlaylistContextTags;                               // 0x0010(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+static_assert(alignof(BGA_Athena_Lock_Parent_C_OnReady_19560710434050E125B3ADA0163CD609) == 0x000008, "Wrong alignment on BGA_Athena_Lock_Parent_C_OnReady_19560710434050E125B3ADA0163CD609");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_OnReady_19560710434050E125B3ADA0163CD609) == 0x000030, "Wrong size on BGA_Athena_Lock_Parent_C_OnReady_19560710434050E125B3ADA0163CD609");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_OnReady_19560710434050E125B3ADA0163CD609, GameState) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_OnReady_19560710434050E125B3ADA0163CD609::GameState' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_OnReady_19560710434050E125B3ADA0163CD609, Playlist) == 0x000008, "Member 'BGA_Athena_Lock_Parent_C_OnReady_19560710434050E125B3ADA0163CD609::Playlist' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_OnReady_19560710434050E125B3ADA0163CD609, PlaylistContextTags) == 0x000010, "Member 'BGA_Athena_Lock_Parent_C_OnReady_19560710434050E125B3ADA0163CD609::PlaylistContextTags' has a wrong offset!");
 
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnFirstInteract
-// 0x0008 (0x0008 - 0x0000)
-struct BGA_Athena_Lock_Parent_C_OnFirstInteract final
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.OnRep_LockState
+// 0x0003 (0x0003 - 0x0000)
+struct BGA_Athena_Lock_Parent_C_OnRep_LockState final
 {
 public:
-	class AFortPawn*                              InteractingPawn;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(BGA_Athena_Lock_Parent_C_OnRep_LockState) == 0x000001, "Wrong alignment on BGA_Athena_Lock_Parent_C_OnRep_LockState");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_OnRep_LockState) == 0x000003, "Wrong size on BGA_Athena_Lock_Parent_C_OnRep_LockState");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_OnRep_LockState, K2Node_SwitchEnum_CmpSuccess) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_OnRep_LockState::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_OnRep_LockState, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'BGA_Athena_Lock_Parent_C_OnRep_LockState::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_OnRep_LockState, CallFunc_IsValid_ReturnValue_1) == 0x000002, "Member 'BGA_Athena_Lock_Parent_C_OnRep_LockState::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.LockCheck
 // 0x0010 (0x0010 - 0x0000)
@@ -119,217 +306,42 @@ struct BGA_Athena_Lock_Parent_C_LockCheck final
 public:
 	const class AFortPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EInteractionBeingAttempted                    InteractionBeingAttempted;                         // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CheckPassed;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CheckPassed;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(BGA_Athena_Lock_Parent_C_LockCheck) == 0x000008, "Wrong alignment on BGA_Athena_Lock_Parent_C_LockCheck");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_LockCheck) == 0x000010, "Wrong size on BGA_Athena_Lock_Parent_C_LockCheck");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_LockCheck, InteractingPawn) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_LockCheck::InteractingPawn' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_LockCheck, InteractionBeingAttempted) == 0x000008, "Member 'BGA_Athena_Lock_Parent_C_LockCheck::InteractionBeingAttempted' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_LockCheck, CheckPassed) == 0x000009, "Member 'BGA_Athena_Lock_Parent_C_LockCheck::CheckPassed' has a wrong offset!");
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ShouldDie
+// 0x0020 (0x0020 - 0x0000)
+struct BGA_Athena_Lock_Parent_C_ShouldDie final
+{
+public:
+	float                                         Damage;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AController*                            EventInstigator;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 DamageCauser;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BGA_Athena_Lock_Parent_C_ShouldDie) == 0x000008, "Wrong alignment on BGA_Athena_Lock_Parent_C_ShouldDie");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_ShouldDie) == 0x000020, "Wrong size on BGA_Athena_Lock_Parent_C_ShouldDie");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ShouldDie, Damage) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_ShouldDie::Damage' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ShouldDie, EventInstigator) == 0x000008, "Member 'BGA_Athena_Lock_Parent_C_ShouldDie::EventInstigator' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ShouldDie, DamageCauser) == 0x000010, "Member 'BGA_Athena_Lock_Parent_C_ShouldDie::DamageCauser' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_ShouldDie, ReturnValue) == 0x000018, "Member 'BGA_Athena_Lock_Parent_C_ShouldDie::ReturnValue' has a wrong offset!");
 
 // Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.Lock Set Interact Collision
 // 0x0001 (0x0001 - 0x0000)
 struct BGA_Athena_Lock_Parent_C_Lock_Set_Interact_Collision final
 {
 public:
-	bool                                          On;                                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          On;                                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ExecuteValidGC
-// 0x000C (0x000C - 0x0000)
-struct BGA_Athena_Lock_Parent_C_ExecuteValidGC final
-{
-public:
-	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGameplayTagValid_ReturnValue;           // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.ExecuteUbergraph_BGA_Athena_Lock_Parent
-// 0x02F0 (0x02F0 - 0x0000)
-struct BGA_Athena_Lock_Parent_C_ExecuteUbergraph_BGA_Athena_Lock_Parent final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AVault_Door_C*                          K2Node_DynamicCast_AsVault_Door;                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_AllLocksUnlocked_AllUnlocked;             // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	const class AFortPawn*                        K2Node_Event_InteractingPawn;                      // 0x0018(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteractionBeingAttempted                    K2Node_Event_InteractionBeingAttempted;            // 0x0020(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags)> K2Node_CreateDelegate_OutputDelegate; // 0x0024(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_Athena_Lock                              K2Node_CustomEvent_LockState;                      // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPawn*                              K2Node_CustomEvent_InteractingPawn_1;              // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPawn*                              K2Node_CustomEvent_InteractingPawn;                // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_AllLocksUnlocked_AllUnlocked_1;           // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortGameStateAthena*                   K2Node_CustomEvent_GameState;                      // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UFortPlaylist*                    K2Node_CustomEvent_Playlist;                       // 0x0058(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  K2Node_CustomEvent_PlaylistContextTags;            // 0x0060(0x0020)(ConstParm)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0080(0x0010)(ZeroConstructor, NoDestructor)
-	struct FGameplayTag                           Temp_struct_Variable;                              // 0x0090(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0098(0x0008)(NoDestructor, HasGetValueTypeHash)
-	Enum_Athena_Lock                              Temp_byte_Variable;                                // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_ComponentBoundEvent_DamageCauser;           // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum)> K2Node_CreateDelegate_OutputDelegate_2; // 0x00B0(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_LockCheck_CheckPassed;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LockCheck_CheckPassed_1;                  // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C3[0x5];                                       // 0x00C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue; // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortQuestManager*                      CallFunc_GetQuestManager_ReturnValue;              // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x00E4(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortAbilitySystemComponent*            CallFunc_GetFortAbilitySystemComponent_ReturnValue; // 0x00F8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0101(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_102[0x6];                                      // 0x0102(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortAbilitySystemComponent*            CallFunc_GetFortAbilitySystemComponent_ReturnValue_1; // 0x0108(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue; // 0x0110(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           Temp_struct_Variable_1;                            // 0x0118(0x0008)(NoDestructor, HasGetValueTypeHash)
-	Enum_Athena_Lock                              Temp_byte_Variable_1;                              // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_Athena_Lock                              Temp_byte_Variable_2;                              // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_122[0x2];                                      // 0x0122(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_1;        // 0x0128(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RowToBool_ReturnValue;                    // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RowToBool_ReturnValue_1;                  // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_132[0x2];                                      // 0x0132(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetParentActor_ReturnValue;               // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABuildingActor*                         K2Node_DynamicCast_AsBuilding_Actor;               // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_Athena_Lock                              Temp_byte_Variable_3;                              // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_Athena_Lock                              Temp_byte_Variable_4;                              // 0x014A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CloseActor_ReturnValue;                   // 0x014B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_GetOwnedGameplayTags_self_CastInput; // 0x0150(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  CallFunc_GetOwnedGameplayTags_TagContainer;        // 0x0160(0x0020)()
-	class ABuildingContainer*                     K2Node_DynamicCast_AsBuilding_Container;           // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BP_SpawnLoot_ReturnValue;                 // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18A[0x6];                                      // 0x018A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn;             // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_Athena_Lock                              Temp_byte_Variable_5;                              // 0x0199(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_Athena_Lock                              K2Node_Select_Default;                             // 0x019A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OpenActor_ReturnValue;                    // 0x019B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue_1; // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortQuestManager*                      CallFunc_GetQuestManager_ReturnValue_1;            // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SendComplexCustomStatEvent_QuestActive;   // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SendComplexCustomStatEvent_QuestCompleted; // 0x01B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B3[0x1];                                      // 0x01B3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PerformLinkingCheck_ReturnValue;          // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BD[0x3];                                      // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_CustomEvent_DamagedActor;                   // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_CustomEvent_Damage;                         // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            K2Node_CustomEvent_InstigatedBy;                   // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_CustomEvent_DamageCauser;                   // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_CustomEvent_HitLocation;                    // 0x01E0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    K2Node_CustomEvent_FHitComponent;                  // 0x01F0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_CustomEvent_BoneName;                       // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_CustomEvent_Momentum;                       // 0x0200(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortAsyncAction_CurrentPlaylistReady*  CallFunc_PlaylistDataReadyAsync_ReturnValue;       // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           K2Node_Select_Default_1;                           // 0x0218(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0221(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0222(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_223[0x5];                                      // 0x0223(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortGameStateAthena*                   Temp_object_Variable;                              // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetParentActor_ReturnValue_1;             // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UChildActorComponent*>           CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0238(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UChildActorComponent*                   CallFunc_Array_Get_Item;                           // 0x0248(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABGA_Athena_Lock_Parent_C*              K2Node_DynamicCast_AsBGA_Athena_Lock_Parent;       // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0261(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0262(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_263[0x1];                                      // 0x0263(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0269(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26A[0x6];                                      // 0x026A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortPlaylist*                          Temp_object_Variable_1;                            // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  Temp_struct_Variable_2;                            // 0x0278(0x0020)()
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29C[0x4];                                      // 0x029C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_GetOwnedGameplayTags_self_CastInput_1; // 0x02A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  CallFunc_GetOwnedGameplayTags_TagContainer_1;      // 0x02B0(0x0020)()
-	bool                                          CallFunc_SendComplexCustomStatEvent_QuestActive_1; // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SendComplexCustomStatEvent_QuestCompleted_1; // 0x02D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D2[0x2];                                      // 0x02D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           K2Node_Select_Default_2;                           // 0x02D4(0x0008)(NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AVault_Door_C*                          K2Node_DynamicCast_AsVault_Door_1;                 // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_0_OnLinkedActorDestroyed__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct BGA_Athena_Lock_Parent_C_BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_0_OnLinkedActorDestroyed__DelegateSignature final
-{
-public:
-	class AActor*                                 DamageCauser;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BlueprintOnInteract
-// 0x0010 (0x0010 - 0x0000)
-struct BGA_Athena_Lock_Parent_C_BlueprintOnInteract final
-{
-public:
-	const class AFortPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteractionBeingAttempted                    InteractionBeingAttempted;                         // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.AllLocksUnlocked
-// 0x0028 (0x0028 - 0x0000)
-struct BGA_Athena_Lock_Parent_C_AllLocksUnlocked final
-{
-public:
-	bool                                          AllUnlocked;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AreAnyLocked;                                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABGA_Athena_Lock_Parent_C*              CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BlueprintGetInteractionTime
-// 0x0020 (0x0020 - 0x0000)
-struct BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime final
-{
-public:
-	const class AFortPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         OutInteractionTime;                                // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteractionBeingAttempted                    InteractionBeingAttempted;                         // 0x000C(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteractionBeingAttempted                    Temp_byte_Variable;                                // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Temp_float_Variable;                               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_1;            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Select_Default;                             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
+static_assert(alignof(BGA_Athena_Lock_Parent_C_Lock_Set_Interact_Collision) == 0x000001, "Wrong alignment on BGA_Athena_Lock_Parent_C_Lock_Set_Interact_Collision");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_Lock_Set_Interact_Collision) == 0x000001, "Wrong size on BGA_Athena_Lock_Parent_C_Lock_Set_Interact_Collision");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_Lock_Set_Interact_Collision, On) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_Lock_Set_Interact_Collision::On' has a wrong offset!");
 
 // Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BlueprintGetInteractionString
 // 0x0060 (0x0060 - 0x0000)
@@ -345,6 +357,38 @@ public:
 	class FText                                   Temp_text_Variable;                                // 0x0030(0x0018)()
 	class FText                                   K2Node_Select_Default;                             // 0x0048(0x0018)()
 };
+static_assert(alignof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString) == 0x000008, "Wrong alignment on BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString) == 0x000060, "Wrong size on BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString, InteractingPawn) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString::InteractingPawn' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString, InteractionBeingAttempted) == 0x000008, "Member 'BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString::InteractionBeingAttempted' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString, ReturnValue) == 0x000010, "Member 'BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString, Temp_byte_Variable) == 0x000028, "Member 'BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString, Temp_text_Variable) == 0x000030, "Member 'BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString, K2Node_Select_Default) == 0x000048, "Member 'BGA_Athena_Lock_Parent_C_BlueprintGetInteractionString::K2Node_Select_Default' has a wrong offset!");
+
+// Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BlueprintGetInteractionTime
+// 0x0018 (0x0018 - 0x0000)
+struct BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime final
+{
+public:
+	const class AFortPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         OutInteractionTime;                                // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EInteractionBeingAttempted                    InteractionBeingAttempted;                         // 0x000C(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	EInteractionBeingAttempted                    Temp_byte_Variable;                                // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Temp_float_Variable;                               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default;                             // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime) == 0x000008, "Wrong alignment on BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime) == 0x000018, "Wrong size on BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime, InteractingPawn) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime::InteractingPawn' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime, OutInteractionTime) == 0x000008, "Member 'BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime::OutInteractionTime' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime, InteractionBeingAttempted) == 0x00000C, "Member 'BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime::InteractionBeingAttempted' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime, ReturnValue) == 0x00000D, "Member 'BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime, Temp_byte_Variable) == 0x00000E, "Member 'BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime, Temp_float_Variable) == 0x000010, "Member 'BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime::Temp_float_Variable' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime, K2Node_Select_Default) == 0x000014, "Member 'BGA_Athena_Lock_Parent_C_BlueprintGetInteractionTime::K2Node_Select_Default' has a wrong offset!");
 
 // Function BGA_Athena_Lock_Parent.BGA_Athena_Lock_Parent_C.BlueprintCanInteract
 // 0x0078 (0x0078 - 0x0000)
@@ -354,12 +398,12 @@ public:
 	const class AFortPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EInteractionBeingAttempted                    InteractionBeingAttempted;                         // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETInteractionType                             InteractionType;                                   // 0x0009(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x000A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x000A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	EInteractionBeingAttempted                    Temp_byte_Variable;                                // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetActorForwardVector_ReturnValue;        // 0x0020(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -368,14 +412,37 @@ public:
 	float                                         CallFunc_BreakRotator_Roll;                        // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default;                             // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default;                             // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0054(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0060(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Dot_VectorVector_ReturnValue;             // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_DegAcos_ReturnValue;                      // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract) == 0x000008, "Wrong alignment on BGA_Athena_Lock_Parent_C_BlueprintCanInteract");
+static_assert(sizeof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract) == 0x000078, "Wrong size on BGA_Athena_Lock_Parent_C_BlueprintCanInteract");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, InteractingPawn) == 0x000000, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::InteractingPawn' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, InteractionBeingAttempted) == 0x000008, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::InteractionBeingAttempted' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, InteractionType) == 0x000009, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::InteractionType' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, ReturnValue) == 0x00000A, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, Temp_bool_Variable) == 0x00000B, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_IsValid_ReturnValue) == 0x00000C, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000010, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00001C, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, Temp_byte_Variable) == 0x00001D, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_GetActorForwardVector_ReturnValue) == 0x000020, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_GetActorForwardVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x00002C, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_FindLookAtRotation_ReturnValue) == 0x000038, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_FindLookAtRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_BreakRotator_Roll) == 0x000044, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_BreakRotator_Pitch) == 0x000048, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_BreakRotator_Yaw) == 0x00004C, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, K2Node_Select_Default) == 0x000050, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_MakeRotator_ReturnValue) == 0x000054, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_GetForwardVector_ReturnValue) == 0x000060, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_Dot_VectorVector_ReturnValue) == 0x00006C, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_Dot_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_DegAcos_ReturnValue) == 0x000070, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_DegAcos_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BGA_Athena_Lock_Parent_C_BlueprintCanInteract, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x000074, "Member 'BGA_Athena_Lock_Parent_C_BlueprintCanInteract::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
 
 }
 

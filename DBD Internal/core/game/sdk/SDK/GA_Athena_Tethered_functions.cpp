@@ -17,42 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Athena_Tethered.GA_Athena_Tethered_C.BreakBuildingsAtPlayerInDirectionOfTether
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_Tethered_C::BreakBuildingsAtPlayerInDirectionOfTether()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Tethered_C", "BreakBuildingsAtPlayerInDirectionOfTether");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_Tethered.GA_Athena_Tethered_C.BreakNearbyStructures
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   ForwardVector                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   OffsetForward                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_Tethered_C::BreakNearbyStructures(const struct FVector& ForwardVector, float OffsetForward)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Tethered_C", "BreakNearbyStructures");
-
-	Params::GA_Athena_Tethered_C_BreakNearbyStructures Parms{};
-
-	Parms.ForwardVector = std::move(ForwardVector);
-	Parms.OffsetForward = OffsetForward;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_Athena_Tethered.GA_Athena_Tethered_C.ExecuteUbergraph_GA_Athena_Tethered
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -73,37 +37,17 @@ void UGA_Athena_Tethered_C::ExecuteUbergraph_GA_Athena_Tethered(int32 EntryPoint
 }
 
 
-// Function GA_Athena_Tethered.GA_Athena_Tethered_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
+// Function GA_Athena_Tethered.GA_Athena_Tethered_C.BreakBuildingsAtPlayerInDirectionOfTether
+// (BlueprintCallable, BlueprintEvent)
 
-void UGA_Athena_Tethered_C::K2_ActivateAbility()
+void UGA_Athena_Tethered_C::BreakBuildingsAtPlayerInDirectionOfTether()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Tethered_C", "K2_ActivateAbility");
+		Func = Class->GetFunction("GA_Athena_Tethered_C", "BreakBuildingsAtPlayerInDirectionOfTether");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_Tethered.GA_Athena_Tethered_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_Tethered_C::K2_OnEndAbility(bool bWasCancelled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Tethered_C", "K2_OnEndAbility");
-
-	Params::GA_Athena_Tethered_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -126,6 +70,62 @@ void UGA_Athena_Tethered_C::MovementModeChangedDelegate_Event_0(class ACharacter
 	Parms.Character = Character;
 	Parms.PrevMovementMode = PrevMovementMode;
 	Parms.PreviousCustomMode = PreviousCustomMode;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Tethered.GA_Athena_Tethered_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGA_Athena_Tethered_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Tethered_C", "K2_OnEndAbility");
+
+	Params::GA_Athena_Tethered_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Tethered.GA_Athena_Tethered_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Athena_Tethered_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Tethered_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_Tethered.GA_Athena_Tethered_C.BreakNearbyStructures
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   ForwardVector                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   OffsetForward                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_Tethered_C::BreakNearbyStructures(const struct FVector& ForwardVector, float OffsetForward)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Tethered_C", "BreakNearbyStructures");
+
+	Params::GA_Athena_Tethered_C_BreakNearbyStructures Parms{};
+
+	Parms.ForwardVector = std::move(ForwardVector);
+	Parms.OffsetForward = OffsetForward;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

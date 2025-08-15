@@ -12,71 +12,68 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "DBNO_Carried_Simulation_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
-#include "FortniteGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass DBNO_Carried_Simulation.DBNO_Carried_Simulation_C
-// 0x08D0 (0x0BF0 - 0x0320)
+// 0x0810 (0x0AD0 - 0x02C0)
 class UDBNO_Carried_Simulation_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_318[0x8];                                      // 0x0318(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct DBNO_Carried_Simulation::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;      // 0x0328(0x000C)(HasGetValueTypeHash)
-	uint8                                         Pad_334[0x4];                                      // 0x0334(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0338(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0340(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0348(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_5;             // 0x0368(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_SubInput;                            // 0x0388(0x00C8)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_5;             // 0x0450(0x0020)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x0470(0x0088)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_2;                    // 0x04F8(0x0108)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_7;                     // 0x0600(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x0628(0x0108)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_4;             // 0x0730(0x0020)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_4;             // 0x0750(0x0020)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_6;                     // 0x0770(0x0028)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_3;             // 0x0798(0x0020)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_3;             // 0x07B8(0x0020)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5;                     // 0x07D8(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_4;                     // 0x0800(0x0028)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_2;             // 0x0828(0x0020)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_2;             // 0x0848(0x0020)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x0868(0x0028)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_1;             // 0x0890(0x0020)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_1;             // 0x08B0(0x0020)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x08D0(0x0028)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x08F8(0x0020)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0918(0x0020)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x0938(0x0028)()
-	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt_1;                    // 0x0960(0x0088)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x09E8(0x0108)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x0AF0(0x0028)()
-	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt;                      // 0x0B18(0x0088)()
-	class APlayerPawn_Athena_C*                   CarrierPawn;                                       // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortPlayerAnimInstance*                CarrierAnimBP;                                     // 0x0BA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                LHandIKLocation;                                   // 0x0BB0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               LHandIKRotation;                                   // 0x0BBC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FVector                                TempAttachLocation;                                // 0x0BC8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               TempAttachRotation;                                // 0x0BD4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	EFortCustomGender                             my_gender;                                         // 0x0BE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsMale;                                            // 0x0BE1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortPlayerAnimBodyType                       my_animbodytype;                                   // 0x0BE2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BE3[0x1];                                      // 0x0BE3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         bodytype_int;                                      // 0x0BE4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x02D0(0x0030)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_5;             // 0x0300(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_SubInput;                            // 0x0320(0x0088)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_5;             // 0x03A8(0x0020)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x03C8(0x00A0)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_2;                    // 0x0468(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_7;                     // 0x0530(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x0558(0x00C8)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_4;             // 0x0620(0x0020)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_4;             // 0x0640(0x0020)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_6;                     // 0x0660(0x0028)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_3;             // 0x0688(0x0020)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_3;             // 0x06A8(0x0020)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5;                     // 0x06C8(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_4;                     // 0x06F0(0x0028)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_2;             // 0x0718(0x0020)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_2;             // 0x0738(0x0020)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x0758(0x0028)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_1;             // 0x0780(0x0020)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_1;             // 0x07A0(0x0020)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x07C0(0x0028)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x07E8(0x0020)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0808(0x0020)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x0828(0x0028)()
+	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt_1;                    // 0x0850(0x00A0)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x08F0(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x09B8(0x0028)()
+	struct FAnimNode_BlendListByInt               AnimGraphNode_BlendListByInt;                      // 0x09E0(0x00A0)()
+	class APlayerPawn_Athena_C*                   CarrierPawn;                                       // 0x0A80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortPlayerAnimInstance*                CarrierAnimBP;                                     // 0x0A88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LHandIKLocation;                                   // 0x0A90(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               LHandIKRotation;                                   // 0x0A9C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FVector                                TempAttachLocation;                                // 0x0AA8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               TempAttachRotation;                                // 0x0AB4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	EFortCustomGender                             my_gender;                                         // 0x0AC0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsMale;                                            // 0x0AC1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	EFortPlayerAnimBodyType                       my_animbodytype;                                   // 0x0AC2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AC3[0x1];                                      // 0x0AC3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         bodytype_int;                                      // 0x0AC4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0);
+	void ExecuteUbergraph_DBNO_Carried_Simulation(int32 EntryPoint);
 	void BlueprintInitializeAnimation();
 	void BlueprintUpdateAnimation(float DeltaTimeX);
-	void ExecuteUbergraph_DBNO_Carried_Simulation(int32 EntryPoint);
+	void AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -88,6 +85,48 @@ public:
 		return GetDefaultObjImpl<UDBNO_Carried_Simulation_C>();
 	}
 };
+static_assert(alignof(UDBNO_Carried_Simulation_C) == 0x000010, "Wrong alignment on UDBNO_Carried_Simulation_C");
+static_assert(sizeof(UDBNO_Carried_Simulation_C) == 0x000AD0, "Wrong size on UDBNO_Carried_Simulation_C");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, UberGraphFrame) == 0x0002C0, "Member 'UDBNO_Carried_Simulation_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimBlueprintClassSubsystem_PropertyAccess) == 0x0002C8, "Member 'UDBNO_Carried_Simulation_C::AnimBlueprintClassSubsystem_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_Root) == 0x0002D0, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_ComponentToLocalSpace_5) == 0x000300, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_ComponentToLocalSpace_5' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_SubInput) == 0x000320, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_SubInput' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_LocalToComponentSpace_5) == 0x0003A8, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_LocalToComponentSpace_5' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_BlendListByBool) == 0x0003C8, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_SaveCachedPose_2) == 0x000468, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_SaveCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_UseCachedPose_7) == 0x000530, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_UseCachedPose_7' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_SaveCachedPose_1) == 0x000558, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_ComponentToLocalSpace_4) == 0x000620, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_ComponentToLocalSpace_4' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_LocalToComponentSpace_4) == 0x000640, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_LocalToComponentSpace_4' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_UseCachedPose_6) == 0x000660, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_UseCachedPose_6' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_ComponentToLocalSpace_3) == 0x000688, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_ComponentToLocalSpace_3' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_LocalToComponentSpace_3) == 0x0006A8, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_LocalToComponentSpace_3' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_UseCachedPose_5) == 0x0006C8, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_UseCachedPose_5' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_UseCachedPose_4) == 0x0006F0, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_UseCachedPose_4' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_ComponentToLocalSpace_2) == 0x000718, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_ComponentToLocalSpace_2' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_LocalToComponentSpace_2) == 0x000738, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_LocalToComponentSpace_2' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_UseCachedPose_3) == 0x000758, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_ComponentToLocalSpace_1) == 0x000780, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_ComponentToLocalSpace_1' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_LocalToComponentSpace_1) == 0x0007A0, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_LocalToComponentSpace_1' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_UseCachedPose_2) == 0x0007C0, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_ComponentToLocalSpace) == 0x0007E8, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_LocalToComponentSpace) == 0x000808, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_UseCachedPose_1) == 0x000828, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_BlendListByInt_1) == 0x000850, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_BlendListByInt_1' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_SaveCachedPose) == 0x0008F0, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_UseCachedPose) == 0x0009B8, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, AnimGraphNode_BlendListByInt) == 0x0009E0, "Member 'UDBNO_Carried_Simulation_C::AnimGraphNode_BlendListByInt' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, CarrierPawn) == 0x000A80, "Member 'UDBNO_Carried_Simulation_C::CarrierPawn' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, CarrierAnimBP) == 0x000A88, "Member 'UDBNO_Carried_Simulation_C::CarrierAnimBP' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, LHandIKLocation) == 0x000A90, "Member 'UDBNO_Carried_Simulation_C::LHandIKLocation' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, LHandIKRotation) == 0x000A9C, "Member 'UDBNO_Carried_Simulation_C::LHandIKRotation' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, TempAttachLocation) == 0x000AA8, "Member 'UDBNO_Carried_Simulation_C::TempAttachLocation' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, TempAttachRotation) == 0x000AB4, "Member 'UDBNO_Carried_Simulation_C::TempAttachRotation' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, my_gender) == 0x000AC0, "Member 'UDBNO_Carried_Simulation_C::my_gender' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, IsMale) == 0x000AC1, "Member 'UDBNO_Carried_Simulation_C::IsMale' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, my_animbodytype) == 0x000AC2, "Member 'UDBNO_Carried_Simulation_C::my_animbodytype' has a wrong offset!");
+static_assert(offsetof(UDBNO_Carried_Simulation_C, bodytype_int) == 0x000AC4, "Member 'UDBNO_Carried_Simulation_C::bodytype_int' has a wrong offset!");
 
 }
 

@@ -19,8 +19,11 @@ namespace SDK
 struct FLineSeparatorNullStruct final
 {
 public:
-	bool                                          MemberVar_0_D8DAF44B4118DCCD0F91A9B072AEAD9E;      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          MemberVar_0_D8DAF44B4118DCCD0F91A9B072AEAD9E;      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(FLineSeparatorNullStruct) == 0x000001, "Wrong alignment on FLineSeparatorNullStruct");
+static_assert(sizeof(FLineSeparatorNullStruct) == 0x000001, "Wrong size on FLineSeparatorNullStruct");
+static_assert(offsetof(FLineSeparatorNullStruct, MemberVar_0_D8DAF44B4118DCCD0F91A9B072AEAD9E) == 0x000000, "Member 'FLineSeparatorNullStruct::MemberVar_0_D8DAF44B4118DCCD0F91A9B072AEAD9E' has a wrong offset!");
 
 }
 

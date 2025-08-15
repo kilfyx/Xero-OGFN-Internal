@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_AthenaEnterVehicle.GA_AthenaEnterVehicle_C
-// 0x0008 (0x0AB0 - 0x0AA8)
+// 0x0008 (0x0AC0 - 0x0AB8)
 class UGA_AthenaEnterVehicle_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_GA_AthenaEnterVehicle(int32 EntryPoint);
@@ -38,6 +38,9 @@ public:
 		return GetDefaultObjImpl<UGA_AthenaEnterVehicle_C>();
 	}
 };
+static_assert(alignof(UGA_AthenaEnterVehicle_C) == 0x000008, "Wrong alignment on UGA_AthenaEnterVehicle_C");
+static_assert(sizeof(UGA_AthenaEnterVehicle_C) == 0x000AC0, "Wrong size on UGA_AthenaEnterVehicle_C");
+static_assert(offsetof(UGA_AthenaEnterVehicle_C, UberGraphFrame) == 0x000AB8, "Member 'UGA_AthenaEnterVehicle_C::UberGraphFrame' has a wrong offset!");
 
 }
 

@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventPlayerStatProfileSelectorEntry.EventPlayerStatProfileSelectorEntry_C
-// 0x0040 (0x1490 - 0x1450)
+// 0x0038 (0x0BF8 - 0x0BC0)
 class UEventPlayerStatProfileSelectorEntry_C final : public UFortEventPlayerStatProfileSelectorEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1450(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Selected;                                          // 0x1458(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_SelectedBG;                                  // 0x1460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              Hovered;                                           // 0x1468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              Unhovered;                                         // 0x1478(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Selected;                                          // 0x0BC8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_SelectedBG;                                  // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              Hovered;                                           // 0x0BD8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              Unhovered;                                         // 0x0BE8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void BP_OnHovered();
@@ -43,13 +43,13 @@ public:
 		return GetDefaultObjImpl<UEventPlayerStatProfileSelectorEntry_C>();
 	}
 };
-static_assert(alignof(UEventPlayerStatProfileSelectorEntry_C) == 0x000010, "Wrong alignment on UEventPlayerStatProfileSelectorEntry_C");
-static_assert(sizeof(UEventPlayerStatProfileSelectorEntry_C) == 0x001490, "Wrong size on UEventPlayerStatProfileSelectorEntry_C");
-static_assert(offsetof(UEventPlayerStatProfileSelectorEntry_C, UberGraphFrame) == 0x001450, "Member 'UEventPlayerStatProfileSelectorEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventPlayerStatProfileSelectorEntry_C, Selected) == 0x001458, "Member 'UEventPlayerStatProfileSelectorEntry_C::Selected' has a wrong offset!");
-static_assert(offsetof(UEventPlayerStatProfileSelectorEntry_C, Image_SelectedBG) == 0x001460, "Member 'UEventPlayerStatProfileSelectorEntry_C::Image_SelectedBG' has a wrong offset!");
-static_assert(offsetof(UEventPlayerStatProfileSelectorEntry_C, Hovered) == 0x001468, "Member 'UEventPlayerStatProfileSelectorEntry_C::Hovered' has a wrong offset!");
-static_assert(offsetof(UEventPlayerStatProfileSelectorEntry_C, Unhovered) == 0x001478, "Member 'UEventPlayerStatProfileSelectorEntry_C::Unhovered' has a wrong offset!");
+static_assert(alignof(UEventPlayerStatProfileSelectorEntry_C) == 0x000008, "Wrong alignment on UEventPlayerStatProfileSelectorEntry_C");
+static_assert(sizeof(UEventPlayerStatProfileSelectorEntry_C) == 0x000BF8, "Wrong size on UEventPlayerStatProfileSelectorEntry_C");
+static_assert(offsetof(UEventPlayerStatProfileSelectorEntry_C, UberGraphFrame) == 0x000BC0, "Member 'UEventPlayerStatProfileSelectorEntry_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UEventPlayerStatProfileSelectorEntry_C, Selected) == 0x000BC8, "Member 'UEventPlayerStatProfileSelectorEntry_C::Selected' has a wrong offset!");
+static_assert(offsetof(UEventPlayerStatProfileSelectorEntry_C, Image_SelectedBG) == 0x000BD0, "Member 'UEventPlayerStatProfileSelectorEntry_C::Image_SelectedBG' has a wrong offset!");
+static_assert(offsetof(UEventPlayerStatProfileSelectorEntry_C, Hovered) == 0x000BD8, "Member 'UEventPlayerStatProfileSelectorEntry_C::Hovered' has a wrong offset!");
+static_assert(offsetof(UEventPlayerStatProfileSelectorEntry_C, Unhovered) == 0x000BE8, "Member 'UEventPlayerStatProfileSelectorEntry_C::Unhovered' has a wrong offset!");
 
 }
 

@@ -19,34 +19,34 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass RedeemFriendCodeWindow.RedeemFriendCodeWindow_C
-// 0x0068 (0x0588 - 0x0520)
+// 0x0068 (0x0500 - 0x0498)
 class URedeemFriendCodeWindow_C final : public UFortRedeemCodeBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0520(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCloseButton_C*                         Button_Cancel;                                     // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIconTextButton_C*                      CancelButton;                                      // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        EntryProgressSwitcher;                             // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           EntryVBox;                                         // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       ErrorText;                                         // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_0;                                           // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULightbox_C*                            Lightbox;                                          // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               ProgressSizeBox;                                   // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       ProgressText;                                      // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           ProgressVBox;                                      // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIconTextButton_C*                      RedeemButton;                                      // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Title;                                             // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0498(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCloseButton_C*                         Button_Cancel;                                     // 0x04A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIconTextButton_C*                      CancelButton;                                      // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        EntryProgressSwitcher;                             // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           EntryVBox;                                         // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ErrorText;                                         // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_0;                                           // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULightbox_C*                            Lightbox;                                          // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               ProgressSizeBox;                                   // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ProgressText;                                      // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           ProgressVBox;                                      // 0x04E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIconTextButton_C*                      RedeemButton;                                      // 0x04F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Title;                                             // 0x04F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void OnRedeemFriendCodeComplete(bool bSuccess, ERedeemCodeFailureReason FailureReason);
-	void ExecuteUbergraph_RedeemFriendCodeWindow(int32 EntryPoint);
 	void HandleRedeemCodeComplete(bool Success, ERedeemCodeFailureReason FailureReason);
 	void Close();
+	void BndEvt__CancelButton_K2Node_ComponentBoundEvent_57_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void BndEvt__SendButton_K2Node_ComponentBoundEvent_75_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void OnRedeemFriendCodeComplete(bool bSuccess, ERedeemCodeFailureReason FailureReason);
 	void Construct();
 	void BndEvt__FriendCodeEntry_K2Node_ComponentBoundEvent_0_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text);
-	void BndEvt__SendButton_K2Node_ComponentBoundEvent_75_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button);
-	void BndEvt__Button_Cancel_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button);
-	void BndEvt__CancelButton_K2Node_ComponentBoundEvent_57_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button);
+	void BndEvt__Button_Cancel_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void ExecuteUbergraph_RedeemFriendCodeWindow(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -59,20 +59,20 @@ public:
 	}
 };
 static_assert(alignof(URedeemFriendCodeWindow_C) == 0x000008, "Wrong alignment on URedeemFriendCodeWindow_C");
-static_assert(sizeof(URedeemFriendCodeWindow_C) == 0x000588, "Wrong size on URedeemFriendCodeWindow_C");
-static_assert(offsetof(URedeemFriendCodeWindow_C, UberGraphFrame) == 0x000520, "Member 'URedeemFriendCodeWindow_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(URedeemFriendCodeWindow_C, Button_Cancel) == 0x000528, "Member 'URedeemFriendCodeWindow_C::Button_Cancel' has a wrong offset!");
-static_assert(offsetof(URedeemFriendCodeWindow_C, CancelButton) == 0x000530, "Member 'URedeemFriendCodeWindow_C::CancelButton' has a wrong offset!");
-static_assert(offsetof(URedeemFriendCodeWindow_C, EntryProgressSwitcher) == 0x000538, "Member 'URedeemFriendCodeWindow_C::EntryProgressSwitcher' has a wrong offset!");
-static_assert(offsetof(URedeemFriendCodeWindow_C, EntryVBox) == 0x000540, "Member 'URedeemFriendCodeWindow_C::EntryVBox' has a wrong offset!");
-static_assert(offsetof(URedeemFriendCodeWindow_C, ErrorText) == 0x000548, "Member 'URedeemFriendCodeWindow_C::ErrorText' has a wrong offset!");
-static_assert(offsetof(URedeemFriendCodeWindow_C, Image_0) == 0x000550, "Member 'URedeemFriendCodeWindow_C::Image_0' has a wrong offset!");
-static_assert(offsetof(URedeemFriendCodeWindow_C, Lightbox) == 0x000558, "Member 'URedeemFriendCodeWindow_C::Lightbox' has a wrong offset!");
-static_assert(offsetof(URedeemFriendCodeWindow_C, ProgressSizeBox) == 0x000560, "Member 'URedeemFriendCodeWindow_C::ProgressSizeBox' has a wrong offset!");
-static_assert(offsetof(URedeemFriendCodeWindow_C, ProgressText) == 0x000568, "Member 'URedeemFriendCodeWindow_C::ProgressText' has a wrong offset!");
-static_assert(offsetof(URedeemFriendCodeWindow_C, ProgressVBox) == 0x000570, "Member 'URedeemFriendCodeWindow_C::ProgressVBox' has a wrong offset!");
-static_assert(offsetof(URedeemFriendCodeWindow_C, RedeemButton) == 0x000578, "Member 'URedeemFriendCodeWindow_C::RedeemButton' has a wrong offset!");
-static_assert(offsetof(URedeemFriendCodeWindow_C, Title) == 0x000580, "Member 'URedeemFriendCodeWindow_C::Title' has a wrong offset!");
+static_assert(sizeof(URedeemFriendCodeWindow_C) == 0x000500, "Wrong size on URedeemFriendCodeWindow_C");
+static_assert(offsetof(URedeemFriendCodeWindow_C, UberGraphFrame) == 0x000498, "Member 'URedeemFriendCodeWindow_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(URedeemFriendCodeWindow_C, Button_Cancel) == 0x0004A0, "Member 'URedeemFriendCodeWindow_C::Button_Cancel' has a wrong offset!");
+static_assert(offsetof(URedeemFriendCodeWindow_C, CancelButton) == 0x0004A8, "Member 'URedeemFriendCodeWindow_C::CancelButton' has a wrong offset!");
+static_assert(offsetof(URedeemFriendCodeWindow_C, EntryProgressSwitcher) == 0x0004B0, "Member 'URedeemFriendCodeWindow_C::EntryProgressSwitcher' has a wrong offset!");
+static_assert(offsetof(URedeemFriendCodeWindow_C, EntryVBox) == 0x0004B8, "Member 'URedeemFriendCodeWindow_C::EntryVBox' has a wrong offset!");
+static_assert(offsetof(URedeemFriendCodeWindow_C, ErrorText) == 0x0004C0, "Member 'URedeemFriendCodeWindow_C::ErrorText' has a wrong offset!");
+static_assert(offsetof(URedeemFriendCodeWindow_C, Image_0) == 0x0004C8, "Member 'URedeemFriendCodeWindow_C::Image_0' has a wrong offset!");
+static_assert(offsetof(URedeemFriendCodeWindow_C, Lightbox) == 0x0004D0, "Member 'URedeemFriendCodeWindow_C::Lightbox' has a wrong offset!");
+static_assert(offsetof(URedeemFriendCodeWindow_C, ProgressSizeBox) == 0x0004D8, "Member 'URedeemFriendCodeWindow_C::ProgressSizeBox' has a wrong offset!");
+static_assert(offsetof(URedeemFriendCodeWindow_C, ProgressText) == 0x0004E0, "Member 'URedeemFriendCodeWindow_C::ProgressText' has a wrong offset!");
+static_assert(offsetof(URedeemFriendCodeWindow_C, ProgressVBox) == 0x0004E8, "Member 'URedeemFriendCodeWindow_C::ProgressVBox' has a wrong offset!");
+static_assert(offsetof(URedeemFriendCodeWindow_C, RedeemButton) == 0x0004F0, "Member 'URedeemFriendCodeWindow_C::RedeemButton' has a wrong offset!");
+static_assert(offsetof(URedeemFriendCodeWindow_C, Title) == 0x0004F8, "Member 'URedeemFriendCodeWindow_C::Title' has a wrong offset!");
 
 }
 

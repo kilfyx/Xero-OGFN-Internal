@@ -12,110 +12,93 @@
 
 #include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
-#include "CommonInput_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "CommonInput_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaLockerTab.AthenaLockerTab_C
-// 0x0200 (0x0FF8 - 0x0DF8)
+// 0x01C0 (0x0DF0 - 0x0C30)
 class UAthenaLockerTab_C final : public UAthenaCustomizationScreenBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0DF8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       LoopingModificationDetected;                       // 0x0E00(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ModifiedDisabledDisclaimer;                        // 0x0E08(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ModifiedEnabledDisclaimer;                         // 0x0E10(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       LoopingRandomEnabled_1;                            // 0x0E18(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       LoopingRandomEnabled;                              // 0x0E20(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       PresetAppliedToast_1;                              // 0x0E28(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       PresetAppliedToast_2;                              // 0x0E30(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       PresetAppliedToast;                                // 0x0E38(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       RandomDisabledDisclaimer;                          // 0x0E40(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       RandomEnabledDisclaimer;                           // 0x0E48(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ItemInfoIntroOutro;                                // 0x0E50(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       BackpackButton;                                    // 0x0E58(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_LoadoutTitleButton_C*              Button_QuickRename;                                // 0x0E60(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       CharacterButton;                                   // 0x0E68(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULoadoutSaveConfirmation_C*             Confirmation_Save;                                 // 0x0E70(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       DanceButton1;                                      // 0x0E78(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       DanceButton2;                                      // 0x0E80(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       DanceButton3;                                      // 0x0E88(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       DanceButton4;                                      // 0x0E90(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       DanceButton5;                                      // 0x0E98(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       DanceButton6;                                      // 0x0EA0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           ExpandibleIcon;                                    // 0x0EA8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaItemShopTileImage*               Icon_LoadoutEdit;                                  // 0x0EB0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image;                                             // 0x0EB8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_1;                                           // 0x0EC0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_2;                                           // 0x0EC8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_93;                                          // 0x0ED0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_131;                                         // 0x0ED8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       ItemWrapButton1;                                   // 0x0EE0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       ItemWrapButton2;                                   // 0x0EE8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       ItemWrapButton3;                                   // 0x0EF0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       ItemWrapButton4;                                   // 0x0EF8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       ItemWrapButton5;                                   // 0x0F00(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       ItemWrapButton6;                                   // 0x0F08(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       ItemWrapButton7;                                   // 0x0F10(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULockerBuiltInEmoteWidget_C*            LockerBuiltInEmoteWidget;                          // 0x0F18(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULockerBuiltInEmoteWidget_C*            LockerBuiltInEmoteWidget_2;                        // 0x0F20(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           LockerSlotsVB;                                     // 0x0F28(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           MainIcon;                                          // 0x0F30(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonRichTextBlock*                   ModifiedSlotsText;                                 // 0x0F38(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       MusicPackButton;                                   // 0x0F40(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       NextRandom;                                        // 0x0F48(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULockerArchivingTooltip_C*              QuicksaveTooltip;                                  // 0x0F50(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               Random_Disclaimer;                                 // 0x0F58(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonRichTextBlock*                   RandomDisclaimerText_Enabled;                      // 0x0F60(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_2;                                        // 0x0F68(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_iteminfo;                                 // 0x0F70(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_modified_slots;                            // 0x0F78(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_nextrando;                                 // 0x0F80(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       UnsavedText_1;                                     // 0x0F88(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBox_buttons;                               // 0x0F90(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UAthenaCustomizationSlotSelectorButton*> AllSlots;                                          // 0x0F98(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	EAthenaCustomizationCategory                  CurrentCustomizationType;                          // 0x0FA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FA9[0x3];                                      // 0x0FA9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CurrentSubslotIndex;                               // 0x0FAC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAthenaItemCustomizationSelector_C*     ItemCustomizationSelector;                         // 0x0FB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButton_C*       CustomizationSlotButtonToPlayConfirmationOn;       // 0x0FB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           AutoHideDetailsForDances;                          // 0x0FC0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAthenaCustomizationSlotButtonWrapper_C* FirstSlotInMenu;                                   // 0x0FC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                LastHoveredSlot_0;                                 // 0x0FD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UAthenaCustomizationSlotButtonWrapper_C*> AnimBoundSlotArray;                                // 0x0FD8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TMulticastInlineDelegate<void()>              OnBackToGameClicked;                               // 0x0FE8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C30(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       LoopingRandomEnabled_1;                            // 0x0C38(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       LoopingRandomEnabled;                              // 0x0C40(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       PresetAppliedToast_1;                              // 0x0C48(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       PresetAppliedToast_2;                              // 0x0C50(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       PresetAppliedToast;                                // 0x0C58(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       RandomDisabledDisclaimer;                          // 0x0C60(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       RandomEnabledDisclaimer;                           // 0x0C68(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ItemInfoIntroOutro;                                // 0x0C70(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       BackpackButton;                                    // 0x0C78(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USoloButton_C*                          Button_ChangeName;                                 // 0x0C80(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       CharacterButton;                                   // 0x0C88(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULoadoutSaveConfirmation_C*             Confirmation_Save;                                 // 0x0C90(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       DanceButton1;                                      // 0x0C98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       DanceButton2;                                      // 0x0CA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       DanceButton3;                                      // 0x0CA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       DanceButton4;                                      // 0x0CB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       DanceButton5;                                      // 0x0CB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       DanceButton6;                                      // 0x0CC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       HarvestToolButton;                                 // 0x0CC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image;                                             // 0x0CD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_73;                                          // 0x0CD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_93;                                          // 0x0CE0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_131;                                         // 0x0CE8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       ItemWrapButton1;                                   // 0x0CF0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       ItemWrapButton2;                                   // 0x0CF8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       ItemWrapButton3;                                   // 0x0D00(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       ItemWrapButton4;                                   // 0x0D08(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       ItemWrapButton5;                                   // 0x0D10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       ItemWrapButton6;                                   // 0x0D18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       ItemWrapButton7;                                   // 0x0D20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULockerBuiltInEmoteWidget_C*            LockerBuiltInEmoteWidget;                          // 0x0D28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULockerBuiltInEmoteWidget_C*            LockerBuiltInEmoteWidget_2;                        // 0x0D30(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       MusicPackButton;                                   // 0x0D38(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       NextRandom;                                        // 0x0D40(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               Random_Disclaimer;                                 // 0x0D48(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   RandomDisclaimerText_Enabled;                      // 0x0D50(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_2;                                        // 0x0D58(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_iteminfo;                                 // 0x0D60(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_nextrando;                                 // 0x0D68(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_HoldForRandom;                                // 0x0D70(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       UnsavedText_1;                                     // 0x0D78(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBox_Buttons;                               // 0x0D80(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USoloButton_C*                          xButton_Loadouts;                                  // 0x0D88(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USoloButton_C*                          xButton_RandomPresets;                             // 0x0D90(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USoloButton_C*                          xButton_SavePreset;                                // 0x0D98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UAthenaCustomizationSlotButtonWrapper_C*> AllSlots;                                 // 0x0DA0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	EAthenaCustomizationCategory                  CurrentCustomizationType;                          // 0x0DB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DB1[0x3];                                      // 0x0DB1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CurrentSubslotIndex;                               // 0x0DB4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAthenaItemCustomizationSelector_C*     ItemCustomizationSelector;                         // 0x0DB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       CustomizationSlotButtonToPlayConfirmationOn;       // 0x0DC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           AutoHideDetailsForDances;                          // 0x0DC8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButtonWrapper_C* FirstSlotInMenu;                                  // 0x0DD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                LastHoveredSlot_0;                                 // 0x0DD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UAthenaCustomizationSlotButtonWrapper_C*> AnimBoundSlotArray;                       // 0x0DE0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
 
 public:
-	void AnimShowRandomDisclaimerEnabled(bool Show);
-	void AssignAllSlots();
-	void BeginPickingCustomization(class UCommonButtonBase* WidgetToReturnFocusTo, const struct FAthenaCustomizationParams& CustomizationParams_0);
-	void BndEvt__AthenaLockerTab_Button_BackToGame_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__AthenaLockerTab_Button_QuickRename2_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button);
-	void BndEvt__AthenaLockerTab_LockerArchivingTooltip_K2Node_ComponentBoundEvent_0_OnDismissed__DelegateSignature();
-	void BP_OnActivated();
-	void BP_OnDeactivated();
-	void Construct();
 	void ExecuteUbergraph_AthenaLockerTab(int32 EntryPoint);
-	class UWidget* LoadoutButtonCustomNavigationDown(EUINavigation Navigation_0);
-	void OnBeginPickingCustomizationSlot(class UAthenaCustomizationSlotSelectorButton* SlotButton);
+	void TriggerRandomLoopingAnim();
+	void BP_OnDeactivated();
+	void BP_OnActivated();
+	void Construct();
 	void OnBeginPickingLoadouts();
 	void OnBeginSavingLoadouts();
-	void OnModifiedStatusUpdated(bool bIsModified, bool bCanShowToolTip);
-	void OnPreviewActionButtonUpdated(const class FText& RowDisplayName);
-	void OnQuickRenameStatusUpdated(bool bIsAvailable, const class FText& LoadoutName);
+	void OnBeginPickingCustomizationSlot(class UAthenaCustomizationSlotSelectorButton* SlotButton);
 	void OnRefreshForNewLoadout(const class FString& LoadoutName, bool bIsShuffleTile);
+	void BeginPickingCustomization(class UCommonButton* WidgetToReturnFocusTo, const struct FAthenaCustomizationParams& CustomizationParams_0);
+	void PlaySlotClickedAnimation(class UAthenaCustomizationSlotButton_C* SlotToPlayAnimOn);
 	void PlayEquippedLockerMusic_STW();
 	void PlaySlotAnimationAndCenterSlot();
-	void PlaySlotClickedAnimation(class UAthenaCustomizationSlotButton_C* SlotToPlayAnimOn);
-	class UWidget* TopRowCustomNavigationUp(EUINavigation Navigation_0);
-	void TriggerModifiedLoopingAnim();
-	void TriggerRandomLoopingAnim();
 	void UpdatePresetButtonStyles(ECommonInputType InputPin);
+	void AnimShowRandomDisclaimerEnabled(bool Show);
 
 public:
 	static class UClass* StaticClass()
@@ -128,69 +111,62 @@ public:
 	}
 };
 static_assert(alignof(UAthenaLockerTab_C) == 0x000008, "Wrong alignment on UAthenaLockerTab_C");
-static_assert(sizeof(UAthenaLockerTab_C) == 0x000FF8, "Wrong size on UAthenaLockerTab_C");
-static_assert(offsetof(UAthenaLockerTab_C, UberGraphFrame) == 0x000DF8, "Member 'UAthenaLockerTab_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, LoopingModificationDetected) == 0x000E00, "Member 'UAthenaLockerTab_C::LoopingModificationDetected' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, ModifiedDisabledDisclaimer) == 0x000E08, "Member 'UAthenaLockerTab_C::ModifiedDisabledDisclaimer' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, ModifiedEnabledDisclaimer) == 0x000E10, "Member 'UAthenaLockerTab_C::ModifiedEnabledDisclaimer' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, LoopingRandomEnabled_1) == 0x000E18, "Member 'UAthenaLockerTab_C::LoopingRandomEnabled_1' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, LoopingRandomEnabled) == 0x000E20, "Member 'UAthenaLockerTab_C::LoopingRandomEnabled' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, PresetAppliedToast_1) == 0x000E28, "Member 'UAthenaLockerTab_C::PresetAppliedToast_1' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, PresetAppliedToast_2) == 0x000E30, "Member 'UAthenaLockerTab_C::PresetAppliedToast_2' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, PresetAppliedToast) == 0x000E38, "Member 'UAthenaLockerTab_C::PresetAppliedToast' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, RandomDisabledDisclaimer) == 0x000E40, "Member 'UAthenaLockerTab_C::RandomDisabledDisclaimer' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, RandomEnabledDisclaimer) == 0x000E48, "Member 'UAthenaLockerTab_C::RandomEnabledDisclaimer' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, ItemInfoIntroOutro) == 0x000E50, "Member 'UAthenaLockerTab_C::ItemInfoIntroOutro' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, BackpackButton) == 0x000E58, "Member 'UAthenaLockerTab_C::BackpackButton' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, Button_QuickRename) == 0x000E60, "Member 'UAthenaLockerTab_C::Button_QuickRename' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, CharacterButton) == 0x000E68, "Member 'UAthenaLockerTab_C::CharacterButton' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, Confirmation_Save) == 0x000E70, "Member 'UAthenaLockerTab_C::Confirmation_Save' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, DanceButton1) == 0x000E78, "Member 'UAthenaLockerTab_C::DanceButton1' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, DanceButton2) == 0x000E80, "Member 'UAthenaLockerTab_C::DanceButton2' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, DanceButton3) == 0x000E88, "Member 'UAthenaLockerTab_C::DanceButton3' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, DanceButton4) == 0x000E90, "Member 'UAthenaLockerTab_C::DanceButton4' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, DanceButton5) == 0x000E98, "Member 'UAthenaLockerTab_C::DanceButton5' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, DanceButton6) == 0x000EA0, "Member 'UAthenaLockerTab_C::DanceButton6' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, ExpandibleIcon) == 0x000EA8, "Member 'UAthenaLockerTab_C::ExpandibleIcon' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, Icon_LoadoutEdit) == 0x000EB0, "Member 'UAthenaLockerTab_C::Icon_LoadoutEdit' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, Image) == 0x000EB8, "Member 'UAthenaLockerTab_C::Image' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, Image_1) == 0x000EC0, "Member 'UAthenaLockerTab_C::Image_1' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, Image_2) == 0x000EC8, "Member 'UAthenaLockerTab_C::Image_2' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, Image_93) == 0x000ED0, "Member 'UAthenaLockerTab_C::Image_93' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, Image_131) == 0x000ED8, "Member 'UAthenaLockerTab_C::Image_131' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton1) == 0x000EE0, "Member 'UAthenaLockerTab_C::ItemWrapButton1' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton2) == 0x000EE8, "Member 'UAthenaLockerTab_C::ItemWrapButton2' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton3) == 0x000EF0, "Member 'UAthenaLockerTab_C::ItemWrapButton3' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton4) == 0x000EF8, "Member 'UAthenaLockerTab_C::ItemWrapButton4' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton5) == 0x000F00, "Member 'UAthenaLockerTab_C::ItemWrapButton5' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton6) == 0x000F08, "Member 'UAthenaLockerTab_C::ItemWrapButton6' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton7) == 0x000F10, "Member 'UAthenaLockerTab_C::ItemWrapButton7' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, LockerBuiltInEmoteWidget) == 0x000F18, "Member 'UAthenaLockerTab_C::LockerBuiltInEmoteWidget' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, LockerBuiltInEmoteWidget_2) == 0x000F20, "Member 'UAthenaLockerTab_C::LockerBuiltInEmoteWidget_2' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, LockerSlotsVB) == 0x000F28, "Member 'UAthenaLockerTab_C::LockerSlotsVB' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, MainIcon) == 0x000F30, "Member 'UAthenaLockerTab_C::MainIcon' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, ModifiedSlotsText) == 0x000F38, "Member 'UAthenaLockerTab_C::ModifiedSlotsText' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, MusicPackButton) == 0x000F40, "Member 'UAthenaLockerTab_C::MusicPackButton' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, NextRandom) == 0x000F48, "Member 'UAthenaLockerTab_C::NextRandom' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, QuicksaveTooltip) == 0x000F50, "Member 'UAthenaLockerTab_C::QuicksaveTooltip' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, Random_Disclaimer) == 0x000F58, "Member 'UAthenaLockerTab_C::Random_Disclaimer' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, RandomDisclaimerText_Enabled) == 0x000F60, "Member 'UAthenaLockerTab_C::RandomDisclaimerText_Enabled' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, SafeZone_2) == 0x000F68, "Member 'UAthenaLockerTab_C::SafeZone_2' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, SafeZone_iteminfo) == 0x000F70, "Member 'UAthenaLockerTab_C::SafeZone_iteminfo' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, SizeBox_modified_slots) == 0x000F78, "Member 'UAthenaLockerTab_C::SizeBox_modified_slots' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, SizeBox_nextrando) == 0x000F80, "Member 'UAthenaLockerTab_C::SizeBox_nextrando' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, UnsavedText_1) == 0x000F88, "Member 'UAthenaLockerTab_C::UnsavedText_1' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, VerticalBox_buttons) == 0x000F90, "Member 'UAthenaLockerTab_C::VerticalBox_buttons' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, AllSlots) == 0x000F98, "Member 'UAthenaLockerTab_C::AllSlots' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, CurrentCustomizationType) == 0x000FA8, "Member 'UAthenaLockerTab_C::CurrentCustomizationType' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, CurrentSubslotIndex) == 0x000FAC, "Member 'UAthenaLockerTab_C::CurrentSubslotIndex' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, ItemCustomizationSelector) == 0x000FB0, "Member 'UAthenaLockerTab_C::ItemCustomizationSelector' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, CustomizationSlotButtonToPlayConfirmationOn) == 0x000FB8, "Member 'UAthenaLockerTab_C::CustomizationSlotButtonToPlayConfirmationOn' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, AutoHideDetailsForDances) == 0x000FC0, "Member 'UAthenaLockerTab_C::AutoHideDetailsForDances' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, FirstSlotInMenu) == 0x000FC8, "Member 'UAthenaLockerTab_C::FirstSlotInMenu' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, LastHoveredSlot_0) == 0x000FD0, "Member 'UAthenaLockerTab_C::LastHoveredSlot_0' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, AnimBoundSlotArray) == 0x000FD8, "Member 'UAthenaLockerTab_C::AnimBoundSlotArray' has a wrong offset!");
-static_assert(offsetof(UAthenaLockerTab_C, OnBackToGameClicked) == 0x000FE8, "Member 'UAthenaLockerTab_C::OnBackToGameClicked' has a wrong offset!");
+static_assert(sizeof(UAthenaLockerTab_C) == 0x000DF0, "Wrong size on UAthenaLockerTab_C");
+static_assert(offsetof(UAthenaLockerTab_C, UberGraphFrame) == 0x000C30, "Member 'UAthenaLockerTab_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, LoopingRandomEnabled_1) == 0x000C38, "Member 'UAthenaLockerTab_C::LoopingRandomEnabled_1' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, LoopingRandomEnabled) == 0x000C40, "Member 'UAthenaLockerTab_C::LoopingRandomEnabled' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, PresetAppliedToast_1) == 0x000C48, "Member 'UAthenaLockerTab_C::PresetAppliedToast_1' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, PresetAppliedToast_2) == 0x000C50, "Member 'UAthenaLockerTab_C::PresetAppliedToast_2' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, PresetAppliedToast) == 0x000C58, "Member 'UAthenaLockerTab_C::PresetAppliedToast' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, RandomDisabledDisclaimer) == 0x000C60, "Member 'UAthenaLockerTab_C::RandomDisabledDisclaimer' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, RandomEnabledDisclaimer) == 0x000C68, "Member 'UAthenaLockerTab_C::RandomEnabledDisclaimer' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, ItemInfoIntroOutro) == 0x000C70, "Member 'UAthenaLockerTab_C::ItemInfoIntroOutro' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, BackpackButton) == 0x000C78, "Member 'UAthenaLockerTab_C::BackpackButton' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, Button_ChangeName) == 0x000C80, "Member 'UAthenaLockerTab_C::Button_ChangeName' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, CharacterButton) == 0x000C88, "Member 'UAthenaLockerTab_C::CharacterButton' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, Confirmation_Save) == 0x000C90, "Member 'UAthenaLockerTab_C::Confirmation_Save' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, DanceButton1) == 0x000C98, "Member 'UAthenaLockerTab_C::DanceButton1' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, DanceButton2) == 0x000CA0, "Member 'UAthenaLockerTab_C::DanceButton2' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, DanceButton3) == 0x000CA8, "Member 'UAthenaLockerTab_C::DanceButton3' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, DanceButton4) == 0x000CB0, "Member 'UAthenaLockerTab_C::DanceButton4' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, DanceButton5) == 0x000CB8, "Member 'UAthenaLockerTab_C::DanceButton5' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, DanceButton6) == 0x000CC0, "Member 'UAthenaLockerTab_C::DanceButton6' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, HarvestToolButton) == 0x000CC8, "Member 'UAthenaLockerTab_C::HarvestToolButton' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, Image) == 0x000CD0, "Member 'UAthenaLockerTab_C::Image' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, Image_73) == 0x000CD8, "Member 'UAthenaLockerTab_C::Image_73' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, Image_93) == 0x000CE0, "Member 'UAthenaLockerTab_C::Image_93' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, Image_131) == 0x000CE8, "Member 'UAthenaLockerTab_C::Image_131' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton1) == 0x000CF0, "Member 'UAthenaLockerTab_C::ItemWrapButton1' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton2) == 0x000CF8, "Member 'UAthenaLockerTab_C::ItemWrapButton2' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton3) == 0x000D00, "Member 'UAthenaLockerTab_C::ItemWrapButton3' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton4) == 0x000D08, "Member 'UAthenaLockerTab_C::ItemWrapButton4' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton5) == 0x000D10, "Member 'UAthenaLockerTab_C::ItemWrapButton5' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton6) == 0x000D18, "Member 'UAthenaLockerTab_C::ItemWrapButton6' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, ItemWrapButton7) == 0x000D20, "Member 'UAthenaLockerTab_C::ItemWrapButton7' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, LockerBuiltInEmoteWidget) == 0x000D28, "Member 'UAthenaLockerTab_C::LockerBuiltInEmoteWidget' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, LockerBuiltInEmoteWidget_2) == 0x000D30, "Member 'UAthenaLockerTab_C::LockerBuiltInEmoteWidget_2' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, MusicPackButton) == 0x000D38, "Member 'UAthenaLockerTab_C::MusicPackButton' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, NextRandom) == 0x000D40, "Member 'UAthenaLockerTab_C::NextRandom' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, Random_Disclaimer) == 0x000D48, "Member 'UAthenaLockerTab_C::Random_Disclaimer' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, RandomDisclaimerText_Enabled) == 0x000D50, "Member 'UAthenaLockerTab_C::RandomDisclaimerText_Enabled' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, SafeZone_2) == 0x000D58, "Member 'UAthenaLockerTab_C::SafeZone_2' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, SafeZone_iteminfo) == 0x000D60, "Member 'UAthenaLockerTab_C::SafeZone_iteminfo' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, SizeBox_nextrando) == 0x000D68, "Member 'UAthenaLockerTab_C::SizeBox_nextrando' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, Text_HoldForRandom) == 0x000D70, "Member 'UAthenaLockerTab_C::Text_HoldForRandom' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, UnsavedText_1) == 0x000D78, "Member 'UAthenaLockerTab_C::UnsavedText_1' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, VerticalBox_Buttons) == 0x000D80, "Member 'UAthenaLockerTab_C::VerticalBox_Buttons' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, xButton_Loadouts) == 0x000D88, "Member 'UAthenaLockerTab_C::xButton_Loadouts' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, xButton_RandomPresets) == 0x000D90, "Member 'UAthenaLockerTab_C::xButton_RandomPresets' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, xButton_SavePreset) == 0x000D98, "Member 'UAthenaLockerTab_C::xButton_SavePreset' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, AllSlots) == 0x000DA0, "Member 'UAthenaLockerTab_C::AllSlots' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, CurrentCustomizationType) == 0x000DB0, "Member 'UAthenaLockerTab_C::CurrentCustomizationType' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, CurrentSubslotIndex) == 0x000DB4, "Member 'UAthenaLockerTab_C::CurrentSubslotIndex' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, ItemCustomizationSelector) == 0x000DB8, "Member 'UAthenaLockerTab_C::ItemCustomizationSelector' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, CustomizationSlotButtonToPlayConfirmationOn) == 0x000DC0, "Member 'UAthenaLockerTab_C::CustomizationSlotButtonToPlayConfirmationOn' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, AutoHideDetailsForDances) == 0x000DC8, "Member 'UAthenaLockerTab_C::AutoHideDetailsForDances' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, FirstSlotInMenu) == 0x000DD0, "Member 'UAthenaLockerTab_C::FirstSlotInMenu' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, LastHoveredSlot_0) == 0x000DD8, "Member 'UAthenaLockerTab_C::LastHoveredSlot_0' has a wrong offset!");
+static_assert(offsetof(UAthenaLockerTab_C, AnimBoundSlotArray) == 0x000DE0, "Member 'UAthenaLockerTab_C::AnimBoundSlotArray' has a wrong offset!");
 
 }
 

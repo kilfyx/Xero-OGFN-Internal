@@ -39,6 +39,9 @@ public:
 		return GetDefaultObjImpl<ATracer_Shotgun_C>();
 	}
 };
+static_assert(alignof(ATracer_Shotgun_C) == 0x000008, "Wrong alignment on ATracer_Shotgun_C");
+static_assert(sizeof(ATracer_Shotgun_C) == 0x0002C0, "Wrong size on ATracer_Shotgun_C");
+static_assert(offsetof(ATracer_Shotgun_C, UberGraphFrame) == 0x0002B8, "Member 'ATracer_Shotgun_C::UberGraphFrame' has a wrong offset!");
 
 }
 

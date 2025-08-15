@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "FortniteGame_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "PhysicsCore_structs.hpp"
-#include "FortniteGame_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -30,14 +30,14 @@ public:
 	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<EPhysicalSurface, class USoundBase*>     SoundMap;                                          // 0x00C0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FVector                                Location;                                          // 0x0110(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsSurfaceTypeSet;                                  // 0x011C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsSurfaceTypeSet;                                  // 0x011C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void ActuallyPlaySound();
 	void ExecuteUbergraph_BP_SurfaceTypeSoundComponent(int32 EntryPoint);
+	void Test_Delay();
 	void PlaySound(const struct FVector& Location_0);
 	void SetSurfaceType(EPhysicalSurface SurfaceType_0, class AActor* Actor);
-	void Test_Delay();
+	void ActuallyPlaySound();
 
 public:
 	static class UClass* StaticClass()
@@ -49,6 +49,13 @@ public:
 		return GetDefaultObjImpl<UBP_SurfaceTypeSoundComponent_C>();
 	}
 };
+static_assert(alignof(UBP_SurfaceTypeSoundComponent_C) == 0x000008, "Wrong alignment on UBP_SurfaceTypeSoundComponent_C");
+static_assert(sizeof(UBP_SurfaceTypeSoundComponent_C) == 0x000120, "Wrong size on UBP_SurfaceTypeSoundComponent_C");
+static_assert(offsetof(UBP_SurfaceTypeSoundComponent_C, UberGraphFrame) == 0x0000B0, "Member 'UBP_SurfaceTypeSoundComponent_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_SurfaceTypeSoundComponent_C, SurfaceType) == 0x0000B8, "Member 'UBP_SurfaceTypeSoundComponent_C::SurfaceType' has a wrong offset!");
+static_assert(offsetof(UBP_SurfaceTypeSoundComponent_C, SoundMap) == 0x0000C0, "Member 'UBP_SurfaceTypeSoundComponent_C::SoundMap' has a wrong offset!");
+static_assert(offsetof(UBP_SurfaceTypeSoundComponent_C, Location) == 0x000110, "Member 'UBP_SurfaceTypeSoundComponent_C::Location' has a wrong offset!");
+static_assert(offsetof(UBP_SurfaceTypeSoundComponent_C, IsSurfaceTypeSet) == 0x00011C, "Member 'UBP_SurfaceTypeSoundComponent_C::IsSurfaceTypeSet' has a wrong offset!");
 
 }
 

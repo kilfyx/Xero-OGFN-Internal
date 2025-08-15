@@ -17,53 +17,248 @@
 namespace SDK
 {
 
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ResetPreScaleLocations
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void APartyDisplayManagerBP_C::ResetPreScaleLocations()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "ResetPreScaleLocations");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.RestoreTeleportMIDsInProgress
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class AFortPlayerPawn*            Pawn                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void APartyDisplayManagerBP_C::RestoreTeleportMIDsInProgress(const class AFortPlayerPawn* Pawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "RestoreTeleportMIDsInProgress");
+
+	Params::PartyDisplayManagerBP_C_RestoreTeleportMIDsInProgress Parms{};
+
+	Parms.Pawn = Pawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.HandlePartyMemberInProgressDisplayChanges
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void APartyDisplayManagerBP_C::HandlePartyMemberInProgressDisplayChanges(class AFortPlayerPawn* Pawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "HandlePartyMemberInProgressDisplayChanges");
+
+	Params::PartyDisplayManagerBP_C_HandlePartyMemberInProgressDisplayChanges Parms{};
+
+	Parms.Pawn = Pawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.PartyMemberInProgressCheck
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void APartyDisplayManagerBP_C::PartyMemberInProgressCheck(class AFortPlayerPawn* Pawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "PartyMemberInProgressCheck");
+
+	Params::PartyDisplayManagerBP_C_PartyMemberInProgressCheck Parms{};
+
+	Parms.Pawn = Pawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.PostSetupPrefabVisuals
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void APartyDisplayManagerBP_C::PostSetupPrefabVisuals()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "PostSetupPrefabVisuals");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.GetMeshForCurrentDisplayedItem
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMeshComponent**                  OutDisplayedMesh                                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void APartyDisplayManagerBP_C::GetMeshForCurrentDisplayedItem(class UMeshComponent** OutDisplayedMesh)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "GetMeshForCurrentDisplayedItem");
+
+	Params::PartyDisplayManagerBP_C_GetMeshForCurrentDisplayedItem Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutDisplayedMesh != nullptr)
+		*OutDisplayedMesh = Parms.OutDisplayedMesh;
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.GetItemDefinitionToShow
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UFortItemDefinition**             ItemDefinition                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void APartyDisplayManagerBP_C::GetItemDefinitionToShow(class UFortItemDefinition** ItemDefinition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "GetItemDefinitionToShow");
+
+	Params::PartyDisplayManagerBP_C_GetItemDefinitionToShow Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ItemDefinition != nullptr)
+		*ItemDefinition = Parms.ItemDefinition;
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.SetUIOverrideVisuals
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTexture2D*                       Large_Texture                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortItemDefinition*              Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFortRarity                             Rarity                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void APartyDisplayManagerBP_C::SetUIOverrideVisuals(class UTexture2D* Large_Texture, class UFortItemDefinition* Item, EFortRarity Rarity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "SetUIOverrideVisuals");
+
+	Params::PartyDisplayManagerBP_C_SetUIOverrideVisuals Parms{};
+
+	Parms.Large_Texture = Large_Texture;
+	Parms.Item = Item;
+	Parms.Rarity = Rarity;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.GetWeaponPlacementTransform
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor)
+
+struct FTransform APartyDisplayManagerBP_C::GetWeaponPlacementTransform()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "GetWeaponPlacementTransform");
+
+	Params::PartyDisplayManagerBP_C_GetWeaponPlacementTransform Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.UpdatePreviewMeshTransforms
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void APartyDisplayManagerBP_C::UpdatePreviewMeshTransforms()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UpdatePreviewMeshTransforms");
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "UpdatePreviewMeshTransforms");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ShowItem
-// (Event, Public, HasOutParams, BlueprintEvent)
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.GetItemPreviewOffset
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UFortItem*                        ItemToView                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FGuid                            RequestID                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortItemDefinition*              ItemDefinition                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor)
 
-void APartyDisplayManagerBP_C::ShowItem(const class UFortItem* ItemToView, const struct FGuid& RequestID)
+struct FTransform APartyDisplayManagerBP_C::GetItemPreviewOffset(class UFortItemDefinition* ItemDefinition)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ShowItem");
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "GetItemPreviewOffset");
 
-	Params::PartyDisplayManagerBP_C_ShowItem Parms{};
+	Params::PartyDisplayManagerBP_C_GetItemPreviewOffset Parms{};
 
-	Parms.ItemToView = ItemToView;
-	Parms.RequestID = std::move(RequestID);
+	Parms.ItemDefinition = ItemDefinition;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.GetPreviewMeshWorldTransform
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor)
+
+struct FTransform APartyDisplayManagerBP_C::GetPreviewMeshWorldTransform()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "GetPreviewMeshWorldTransform");
+
+	Params::PartyDisplayManagerBP_C_GetPreviewMeshWorldTransform Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
 // Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.SetupStaticMeshVisuals
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UStaticMesh*                      NewMesh                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UStaticMesh*                      NewMesh                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void APartyDisplayManagerBP_C::SetupStaticMeshVisuals(class UStaticMesh* NewMesh)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetupStaticMeshVisuals");
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "SetupStaticMeshVisuals");
 
 	Params::PartyDisplayManagerBP_C_SetupStaticMeshVisuals Parms{};
 
@@ -76,174 +271,18 @@ void APartyDisplayManagerBP_C::SetupStaticMeshVisuals(class UStaticMesh* NewMesh
 // Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.SetupSkeletalMeshVisuals
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class USkeletalMesh*                    NewMesh                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMesh*                    NewMesh                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void APartyDisplayManagerBP_C::SetupSkeletalMeshVisuals(class USkeletalMesh* NewMesh)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetupSkeletalMeshVisuals");
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "SetupSkeletalMeshVisuals");
 
 	Params::PartyDisplayManagerBP_C_SetupSkeletalMeshVisuals Parms{};
 
 	Parms.NewMesh = NewMesh;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.SetupPrefabVisuals
-// (Event, Public, BlueprintEvent)
-
-void APartyDisplayManagerBP_C::SetupPrefabVisuals()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetupPrefabVisuals");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.SetUIOverrideVisuals
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UTexture2D*                       Large_Texture                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UFortItemDefinition*              Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// EFortRarity                             Rarity                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APartyDisplayManagerBP_C::SetUIOverrideVisuals(class UTexture2D* Large_Texture, class UFortItemDefinition* Item, EFortRarity Rarity)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetUIOverrideVisuals");
-
-	Params::PartyDisplayManagerBP_C_SetUIOverrideVisuals Parms{};
-
-	Parms.Large_Texture = Large_Texture;
-	Parms.Item = Item;
-	Parms.Rarity = Rarity;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.Set Character Parts Visibility
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    NewVisible                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APartyDisplayManagerBP_C::Set_Character_Parts_Visibility(bool NewVisible)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Set Character Parts Visibility");
-
-	Params::PartyDisplayManagerBP_C_Set_Character_Parts_Visibility Parms{};
-
-	Parms.NewVisible = NewVisible;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ScaleAnimLevel__UpdateFunc
-// (BlueprintEvent)
-
-void APartyDisplayManagerBP_C::ScaleAnimLevel__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ScaleAnimLevel__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ScaleAnimLevel__FinishedFunc
-// (BlueprintEvent)
-
-void APartyDisplayManagerBP_C::ScaleAnimLevel__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ScaleAnimLevel__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ScaleAnimEvolve__UpdateFunc
-// (BlueprintEvent)
-
-void APartyDisplayManagerBP_C::ScaleAnimEvolve__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ScaleAnimEvolve__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ScaleAnimEvolve__FinishedFunc
-// (BlueprintEvent)
-
-void APartyDisplayManagerBP_C::ScaleAnimEvolve__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ScaleAnimEvolve__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.RestoreTeleportMIDsInProgress
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortPlayerPawn*                  Pawn                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void APartyDisplayManagerBP_C::RestoreTeleportMIDsInProgress(const class AFortPlayerPawn* Pawn)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("RestoreTeleportMIDsInProgress");
-
-	Params::PartyDisplayManagerBP_C_RestoreTeleportMIDsInProgress Parms{};
-
-	Parms.Pawn = Pawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ResOutPawnFromLobby
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   PartyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APartyDisplayManagerBP_C::ResOutPawnFromLobby(class AFortPlayerPawn* Pawn, int32 PartyIndex)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ResOutPawnFromLobby");
-
-	Params::PartyDisplayManagerBP_C_ResOutPawnFromLobby Parms{};
-
-	Parms.Pawn = Pawn;
-	Parms.PartyIndex = PartyIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -255,195 +294,65 @@ void APartyDisplayManagerBP_C::ResOutPawnFromLobby(class AFortPlayerPawn* Pawn, 
 void APartyDisplayManagerBP_C::ResetVisuals()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ResetVisuals");
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "ResetVisuals");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ResetPreScaleLocations
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void APartyDisplayManagerBP_C::ResetPreScaleLocations()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ResetPreScaleLocations");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APartyDisplayManagerBP_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveTick");
-
-	Params::PartyDisplayManagerBP_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void APartyDisplayManagerBP_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.PostSetupPrefabVisuals
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void APartyDisplayManagerBP_C::PostSetupPrefabVisuals()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PostSetupPrefabVisuals");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.PlayLevelUpEffect
-// (Event, Public, BlueprintEvent)
-
-void APartyDisplayManagerBP_C::PlayLevelUpEffect()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PlayLevelUpEffect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.PlayEvolutionEffect
-// (Event, Public, BlueprintEvent)
-
-void APartyDisplayManagerBP_C::PlayEvolutionEffect()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PlayEvolutionEffect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.PerformScaleMeshFX
-// (BlueprintCallable, BlueprintEvent)
-
-void APartyDisplayManagerBP_C::PerformScaleMeshFX()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PerformScaleMeshFX");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.PartyMemberInProgressCheck
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void APartyDisplayManagerBP_C::PartyMemberInProgressCheck(class AFortPlayerPawn* Pawn)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PartyMemberInProgressCheck");
-
-	Params::PartyDisplayManagerBP_C_PartyMemberInProgressCheck Parms{};
-
-	Parms.Pawn = Pawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.OnPlayerPawnAddedToLobby
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void APartyDisplayManagerBP_C::OnPlayerPawnAddedToLobby(class AFortPlayerPawn* Pawn)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnPlayerPawnAddedToLobby");
-
-	Params::PartyDisplayManagerBP_C_OnPlayerPawnAddedToLobby Parms{};
-
-	Parms.Pawn = Pawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.OnMeshLODStreamingFinished
-// (Event, Public, BlueprintEvent)
-
-void APartyDisplayManagerBP_C::OnMeshLODStreamingFinished()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnMeshLODStreamingFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.OnEmoteSetupFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void APartyDisplayManagerBP_C::OnEmoteSetupFinished()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnEmoteSetupFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.HoloMatColorPulse__UpdateFunc
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ScaleAnimLevel__FinishedFunc
 // (BlueprintEvent)
 
-void APartyDisplayManagerBP_C::HoloMatColorPulse__UpdateFunc()
+void APartyDisplayManagerBP_C::ScaleAnimLevel__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HoloMatColorPulse__UpdateFunc");
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "ScaleAnimLevel__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ScaleAnimLevel__UpdateFunc
+// (BlueprintEvent)
+
+void APartyDisplayManagerBP_C::ScaleAnimLevel__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "ScaleAnimLevel__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ScaleAnimEvolve__FinishedFunc
+// (BlueprintEvent)
+
+void APartyDisplayManagerBP_C::ScaleAnimEvolve__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "ScaleAnimEvolve__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ScaleAnimEvolve__UpdateFunc
+// (BlueprintEvent)
+
+void APartyDisplayManagerBP_C::ScaleAnimEvolve__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "ScaleAnimEvolve__UpdateFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -455,47 +364,141 @@ void APartyDisplayManagerBP_C::HoloMatColorPulse__UpdateFunc()
 void APartyDisplayManagerBP_C::HoloMatColorPulse__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HoloMatColorPulse__FinishedFunc");
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "HoloMatColorPulse__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.HandlePartyMemberInProgressDisplayChanges
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.HoloMatColorPulse__UpdateFunc
+// (BlueprintEvent)
 
-void APartyDisplayManagerBP_C::HandlePartyMemberInProgressDisplayChanges(class AFortPlayerPawn* Pawn)
+void APartyDisplayManagerBP_C::HoloMatColorPulse__UpdateFunc()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HandlePartyMemberInProgressDisplayChanges");
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "HoloMatColorPulse__UpdateFunc");
 
-	Params::PartyDisplayManagerBP_C_HandlePartyMemberInProgressDisplayChanges Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Pawn = Pawn;
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.Completed_01D864884864692DBB7035B0996A5437
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortItem*                        Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGuid&                     RequestID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void APartyDisplayManagerBP_C::Completed_01D864884864692DBB7035B0996A5437(class UFortItem* Item, const struct FGuid& RequestID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "Completed_01D864884864692DBB7035B0996A5437");
+
+	Params::PartyDisplayManagerBP_C_Completed_01D864884864692DBB7035B0996A5437 Parms{};
+
+	Parms.Item = Item;
+	Parms.RequestID = std::move(RequestID);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ShowItem
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class UFortItem*                  ItemToView                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGuid&                     RequestID                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void APartyDisplayManagerBP_C::ShowItem(const class UFortItem* ItemToView, const struct FGuid& RequestID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "ShowItem");
+
+	Params::PartyDisplayManagerBP_C_ShowItem Parms{};
+
+	Parms.ItemToView = ItemToView;
+	Parms.RequestID = std::move(RequestID);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.PlayLevelUpEffect
+// (Event, Public, BlueprintEvent)
+
+void APartyDisplayManagerBP_C::PlayLevelUpEffect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "PlayLevelUpEffect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.PlayEvolutionEffect
+// (Event, Public, BlueprintEvent)
+
+void APartyDisplayManagerBP_C::PlayEvolutionEffect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "PlayEvolutionEffect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.CelebrateWithFX
+// (BlueprintCallable, BlueprintEvent)
+
+void APartyDisplayManagerBP_C::CelebrateWithFX()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "CelebrateWithFX");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.PerformScaleMeshFX
+// (BlueprintCallable, BlueprintEvent)
+
+void APartyDisplayManagerBP_C::PerformScaleMeshFX()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "PerformScaleMeshFX");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.HandleLoadingAssetsForItemCompleted
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// class UFortItem*                        ItemWhoseAssetsWereLoaded                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TArray<class UObject*>                  LoadedAssets                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FGuid                            RequestID                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortItem*                        ItemWhoseAssetsWereLoaded                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<class UObject*>&           LoadedAssets                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const struct FGuid&                     RequestID                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void APartyDisplayManagerBP_C::HandleLoadingAssetsForItemCompleted(class UFortItem* ItemWhoseAssetsWereLoaded, const TArray<class UObject*>& LoadedAssets, const struct FGuid& RequestID)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HandleLoadingAssetsForItemCompleted");
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "HandleLoadingAssetsForItemCompleted");
 
 	Params::PartyDisplayManagerBP_C_HandleLoadingAssetsForItemCompleted Parms{};
 
@@ -507,108 +510,161 @@ void APartyDisplayManagerBP_C::HandleLoadingAssetsForItemCompleted(class UFortIt
 }
 
 
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.GetWeaponPlacementTransform
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-struct FTransform APartyDisplayManagerBP_C::GetWeaponPlacementTransform()
+void APartyDisplayManagerBP_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("GetWeaponPlacementTransform");
 
-	Params::PartyDisplayManagerBP_C_GetWeaponPlacementTransform Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "ReceiveTick");
+
+	Params::PartyDisplayManagerBP_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.GetPreviewMeshWorldTransform
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.Set Character Parts Visibility
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    NewVisible                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-struct FTransform APartyDisplayManagerBP_C::GetPreviewMeshWorldTransform()
+void APartyDisplayManagerBP_C::Set_Character_Parts_Visibility(bool NewVisible)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("GetPreviewMeshWorldTransform");
 
-	Params::PartyDisplayManagerBP_C_GetPreviewMeshWorldTransform Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "Set Character Parts Visibility");
+
+	Params::PartyDisplayManagerBP_C_Set_Character_Parts_Visibility Parms{};
+
+	Parms.NewVisible = NewVisible;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.GetMeshForCurrentDisplayedItem
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.CharacterCustomizationFinished
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class UMeshComponent*                   OutDisplayedMesh                                       (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void APartyDisplayManagerBP_C::GetMeshForCurrentDisplayedItem(class UMeshComponent** OutDisplayedMesh)
+void APartyDisplayManagerBP_C::CharacterCustomizationFinished(class AFortPlayerPawn* Pawn)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("GetMeshForCurrentDisplayedItem");
 
-	Params::PartyDisplayManagerBP_C_GetMeshForCurrentDisplayedItem Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "CharacterCustomizationFinished");
+
+	Params::PartyDisplayManagerBP_C_CharacterCustomizationFinished Parms{};
+
+	Parms.Pawn = Pawn;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutDisplayedMesh != nullptr)
-		*OutDisplayedMesh = Parms.OutDisplayedMesh;
 }
 
 
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.GetItemPreviewOffset
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UFortItemDefinition*              ItemDefinition                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-struct FTransform APartyDisplayManagerBP_C::GetItemPreviewOffset(class UFortItemDefinition* ItemDefinition)
+void APartyDisplayManagerBP_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("GetItemPreviewOffset");
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "ReceiveBeginPlay");
 
-	Params::PartyDisplayManagerBP_C_GetItemPreviewOffset Parms{};
-
-	Parms.ItemDefinition = ItemDefinition;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.GetItemDefinitionToShow
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.OnPlayerPawnAddedToLobby
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class UFortItemDefinition*              ItemDefinition                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void APartyDisplayManagerBP_C::GetItemDefinitionToShow(class UFortItemDefinition** ItemDefinition)
+void APartyDisplayManagerBP_C::OnPlayerPawnAddedToLobby(class AFortPlayerPawn* Pawn)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("GetItemDefinitionToShow");
 
-	Params::PartyDisplayManagerBP_C_GetItemDefinitionToShow Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "OnPlayerPawnAddedToLobby");
+
+	Params::PartyDisplayManagerBP_C_OnPlayerPawnAddedToLobby Parms{};
+
+	Parms.Pawn = Pawn;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	if (ItemDefinition != nullptr)
-		*ItemDefinition = Parms.ItemDefinition;
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.ResOutPawnFromLobby
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PartyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void APartyDisplayManagerBP_C::ResOutPawnFromLobby(class AFortPlayerPawn* Pawn, int32 PartyIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "ResOutPawnFromLobby");
+
+	Params::PartyDisplayManagerBP_C_ResOutPawnFromLobby Parms{};
+
+	Parms.Pawn = Pawn;
+	Parms.PartyIndex = PartyIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.SetupPrefabVisuals
+// (Event, Public, BlueprintEvent)
+
+void APartyDisplayManagerBP_C::SetupPrefabVisuals()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "SetupPrefabVisuals");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.OnEmoteSetupFinished
+// (BlueprintCallable, BlueprintEvent)
+
+void APartyDisplayManagerBP_C::OnEmoteSetupFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "OnEmoteSetupFinished");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.OnMeshLODStreamingFinished
+// (Event, Public, BlueprintEvent)
+
+void APartyDisplayManagerBP_C::OnMeshLODStreamingFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "OnMeshLODStreamingFinished");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -620,9 +676,9 @@ void APartyDisplayManagerBP_C::GetItemDefinitionToShow(class UFortItemDefinition
 void APartyDisplayManagerBP_C::ExecuteUbergraph_PartyDisplayManagerBP(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_PartyDisplayManagerBP");
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "ExecuteUbergraph_PartyDisplayManagerBP");
 
 	Params::PartyDisplayManagerBP_C_ExecuteUbergraph_PartyDisplayManagerBP Parms{};
 
@@ -632,73 +688,17 @@ void APartyDisplayManagerBP_C::ExecuteUbergraph_PartyDisplayManagerBP(int32 Entr
 }
 
 
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.Completed_01D864884864692DBB7035B0996A5437
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFortItem*                        Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FGuid                            RequestID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APartyDisplayManagerBP_C::Completed_01D864884864692DBB7035B0996A5437(class UFortItem* Item, const struct FGuid& RequestID)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Completed_01D864884864692DBB7035B0996A5437");
-
-	Params::PartyDisplayManagerBP_C_Completed_01D864884864692DBB7035B0996A5437 Parms{};
-
-	Parms.Item = Item;
-	Parms.RequestID = std::move(RequestID);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.CharacterCustomizationFinished
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void APartyDisplayManagerBP_C::CharacterCustomizationFinished(class AFortPlayerPawn* Pawn)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("CharacterCustomizationFinished");
-
-	Params::PartyDisplayManagerBP_C_CharacterCustomizationFinished Parms{};
-
-	Parms.Pawn = Pawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.CelebrateWithFX
-// (BlueprintCallable, BlueprintEvent)
-
-void APartyDisplayManagerBP_C::CelebrateWithFX()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("CelebrateWithFX");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function PartyDisplayManagerBP.PartyDisplayManagerBP_C.GetPrefabActorForCurrentDisplayedItem
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 class AActor* APartyDisplayManagerBP_C::GetPrefabActorForCurrentDisplayedItem() const
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("GetPrefabActorForCurrentDisplayedItem");
+		Func = Class->GetFunction("PartyDisplayManagerBP_C", "GetPrefabActorForCurrentDisplayedItem");
 
 	Params::PartyDisplayManagerBP_C_GetPrefabActorForCurrentDisplayedItem Parms{};
 

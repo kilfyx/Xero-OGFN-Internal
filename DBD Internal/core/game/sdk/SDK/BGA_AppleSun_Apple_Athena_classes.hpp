@@ -10,125 +10,101 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BGA_AppleSun_Apple_Athena.BGA_AppleSun_Apple_Athena_C
-// 0x04A0 (0x0EC0 - 0x0A20)
-class ABGA_AppleSun_Apple_Athena_C final : public ABuildingGameplayActorCrashpad
+// 0x03D0 (0x0B98 - 0x07C8)
+class ABGA_AppleSun_Apple_Athena_C final : public ABuildingGameplayActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A20(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                          PlayerDetector;                                    // 0x0A28(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        Applesun_Activate;                                 // 0x0A30(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        AppleSun_Warning_Loop_01;                          // 0x0A38(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UFortLinkToActorComponent*              FortLinkToActor;                                   // 0x0A40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          SidesPawnBlocker;                                  // 0x0A48(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Pad;                                               // 0x0A50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          Box;                                               // 0x0A58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               P_AppleSun_Spawn;                                  // 0x0A60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               P_AppleSun_DespawnTell;                            // 0x0A68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         BeginDeflate_NewTrack_0_E511D36F4D2E46D8AE33548AA66A76B4; // 0x0A70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            BeginDeflate__Direction_E511D36F4D2E46D8AE33548AA66A76B4; // 0x0A74(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A75[0x3];                                      // 0x0A75(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     BeginDeflate;                                      // 0x0A78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Destroy_Scale_A5AFC0D0430E50F432FB2FB260534172;    // 0x0A80(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Destroy_Deflate_A5AFC0D0430E50F432FB2FB260534172;  // 0x0A8C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Destroy__Direction_A5AFC0D0430E50F432FB2FB260534172; // 0x0A90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A91[0x7];                                      // 0x0A91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Destroy;                                           // 0x0A98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         GrowthStart;                                       // 0x0AA0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          OverlapLaunchesActivated;                          // 0x0AC8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AC9[0x7];                                      // 0x0AC9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            LaunchCurve;                                       // 0x0AD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           LifespanTimer;                                     // 0x0AD8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           TimeoutTellTimer;                                  // 0x0AE0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UCurveFloat*                            LaunchAngleWeight;                                 // 0x0AE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                StartScale;                                        // 0x0AF0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           SpawnFeedbackGC;                                   // 0x0AFC(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           DeathFeedbackGC;                                   // 0x0B04(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B0C[0x4];                                      // 0x0B0C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  T_Quest_AppleSun_Use;                              // 0x0B10(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FVector                                WaterLocation;                                     // 0x0B30(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                BounceLocation;                                    // 0x0B3C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        NewVar_0;                                          // 0x0B48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         GrowthEnd;                                         // 0x0B50(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         MinLaunch;                                         // 0x0B78(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         MaxLaunch;                                         // 0x0BA0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         VehicleLaunchMultiplierXY;                         // 0x0BC8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         VehicleLaunchMultiplierZ;                          // 0x0BF0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         ProjectileLaunchMultiplierXY;                      // 0x0C18(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         ProjectileLaunchMultiplierZ;                       // 0x0C40(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         Lifespan_;                                         // 0x0C68(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         TimeoutTellDuration_;                              // 0x0C90(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         HorizontalLaunch;                                  // 0x0CB8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         MinNonPawnVelocity;                                // 0x0CE0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MaxNonPawnVelocity;                                // 0x0CE4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 LinkedActor;                                       // 0x0CE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class AFortPawn*, float>                 TrackedPlayers;                                    // 0x0CF0(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	struct FGameplayTagContainer                  TC_Crashpad_;                                      // 0x0D40(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         MinLaunch_Crashpad_;                               // 0x0D60(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         MaxLaunch_Crashpad_;                               // 0x0D88(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          HasLifespan;                                       // 0x0DB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsWorldPlaced;                                     // 0x0DB1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UsesCollisionTimer;                                // 0x0DB2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DestroyByShark;                                    // 0x0DB3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           Tag_BuildingPhysics;                               // 0x0DB4(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DBC[0x4];                                      // 0x0DBC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         Row_PhysicsObjectImpulseMult;                      // 0x0DC0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         PhysicsObjectMassMultiplier;                       // 0x0DE8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DEC[0x4];                                      // 0x0DEC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CollidingActor;                                    // 0x0DF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSubclassOf<class UGameplayEffect>            FallImmunityGameplayEffect;                        // 0x0DF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FGameplayTag                           Tag_EventUsedLaunchPad;                            // 0x0E00(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         Placed_Launch_Mod;                                 // 0x0E08(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_E0C[0x4];                                      // 0x0E0C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UGameplayEffect>            WebLaunchGameplayEffect;                           // 0x0E10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UFXSystemAsset*                         Death_Effect_Template;                             // 0x0E18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFXSystemComponent*                     Death_Effect;                                      // 0x0E20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Death_Effect_At_Loction;                           // 0x0E28(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E29[0x7];                                      // 0x0E29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             ThreeP_BounceSound;                                // 0x0E30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             OneP_Bounce_Sound;                                 // 0x0E38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             DestroySound;                                      // 0x0E40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CachedUseNativeCollisionHandling;                  // 0x0E48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E49[0x7];                                      // 0x0E49(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCrashpadDynamicParams                 HandleCollisionDynamicParams;                      // 0x0E50(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<float>                                 CrashpadBounceScales;                              // 0x0EB0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBoxComponent*                          PlayerDetector;                                    // 0x07D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        Applesun_Activate;                                 // 0x07D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        AppleSun_Warning_Loop_01;                          // 0x07E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UFortLinkToActorComponent*              FortLinkToActor;                                   // 0x07E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          SidesPawnBlocker;                                  // 0x07F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Pad;                                               // 0x07F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          Box;                                               // 0x0800(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               P_AppleSun_Spawn;                                  // 0x0808(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               P_AppleSun_DespawnTell;                            // 0x0810(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         BeginDeflate_NewTrack_0_E511D36F4D2E46D8AE33548AA66A76B4; // 0x0818(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            BeginDeflate__Direction_E511D36F4D2E46D8AE33548AA66A76B4; // 0x081C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81D[0x3];                                      // 0x081D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     BeginDeflate;                                      // 0x0820(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Destroy_Scale_A5AFC0D0430E50F432FB2FB260534172;    // 0x0828(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Destroy_Deflate_A5AFC0D0430E50F432FB2FB260534172;  // 0x0834(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Destroy__Direction_A5AFC0D0430E50F432FB2FB260534172; // 0x0838(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_839[0x7];                                      // 0x0839(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Destroy;                                           // 0x0840(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         GrowthStart;                                       // 0x0848(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          OverlapLaunchesActivated;                          // 0x0870(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_871[0x7];                                      // 0x0871(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            LaunchCurve;                                       // 0x0878(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           LifespanTimer;                                     // 0x0880(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           TimeoutTellTimer;                                  // 0x0888(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                            LaunchAngleWeight;                                 // 0x0890(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                StartScale;                                        // 0x0898(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           SpawnFeedbackGC;                                   // 0x08A4(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           DeathFeedbackGC;                                   // 0x08AC(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8B4[0x4];                                      // 0x08B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  T_Quest_AppleSun_Use;                              // 0x08B8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FVector                                WaterLocation;                                     // 0x08D8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                BounceLocation;                                    // 0x08E4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        NewVar_0;                                          // 0x08F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         GrowthEnd;                                         // 0x08F8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         MinLaunch;                                         // 0x0920(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         MaxLaunch;                                         // 0x0948(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         VehicleLaunchMultiplierXY;                         // 0x0970(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         VehicleLaunchMultiplierZ;                          // 0x0998(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         ProjectileLaunchMultiplierXY;                      // 0x09C0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         ProjectileLaunchMultiplierZ;                       // 0x09E8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         Lifespan_;                                         // 0x0A10(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         TimeoutTellDuration_;                              // 0x0A38(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         HorizontalLaunch;                                  // 0x0A60(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         MinNonPawnVelocity;                                // 0x0A88(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MaxNonPawnVelocity;                                // 0x0A8C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 LinkedActor;                                       // 0x0A90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class AFortPawn*, float>                 TrackedPlayers;                                    // 0x0A98(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FGameplayTagContainer                  TC_Crashpad_;                                      // 0x0AE8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         MinLaunch_Crashpad_;                               // 0x0B08(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         MaxLaunch_Crashpad_;                               // 0x0B30(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          HasLifespan;                                       // 0x0B58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsWorldPlaced;                                     // 0x0B59(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          UsesCollisionTimer;                                // 0x0B5A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          DestroyByShark;                                    // 0x0B5B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FGameplayTag                           Tag_BuildingPhysics;                               // 0x0B5C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B64[0x4];                                      // 0x0B64(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         Row_PhysicsObjectImpulseMult;                      // 0x0B68(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         PhysicsObjectMassMultiplier;                       // 0x0B90(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BeginDeflate__FinishedFunc();
-	void BeginDeflate__UpdateFunc();
-	void BndEvt__Box_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__Box_K2Node_ComponentBoundEvent_4_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_0_OnLinkedActorDestroyed__DelegateSignature(class AActor* DamageCauser);
-	void BndEvt__PlayerDetector_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__PlayerDetector_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-	void BounceMulticast(const struct FVector& Position, const float BounceIntensity, class AActor* Actor);
-	void CatchObjectsInside();
-	void CheckForSpyPerk(bool* HasPerk);
-	void DespawnTell();
-	void Destroy__FinishedFunc();
-	void Destroy__UpdateFunc();
-	void DestroyCrashpad();
-	void DestroyPad();
-	void DoBounceMulticast(const struct FVector& BounceLocation_0, const float BounceIntensity, const class AActor* BouncingActor);
-	void DoCollisionHandling();
 	void ExecuteUbergraph_BGA_AppleSun_Apple_Athena(int32 EntryPoint);
-	struct FVector Get_Launch_Reference_Vector(class ACharacter* Fort_Pawn);
 	void LaunchBuldingActors(class AActor* Actor);
+	void CatchObjectsInside();
+	void BndEvt__PlayerDetector_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	void BndEvt__PlayerDetector_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_0_OnLinkedActorDestroyed__DelegateSignature();
 	void OnDeathPlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
-	void PlayBounceAudio(class AActor* Actor);
+	void DestroyPad();
+	void BndEvt__Box_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void DespawnTell();
+	void BounceMulticast(const struct FVector& Position, const float BounceIntensity);
 	void ReceiveBeginPlay();
+	void Destroy__UpdateFunc();
+	void Destroy__FinishedFunc();
+	void BeginDeflate__UpdateFunc();
+	void BeginDeflate__FinishedFunc();
 	void UserConstructionScript();
+	void CheckForSpyPerk(bool* HasPerk);
+	struct FVector Get_Launch_Reference_Vector(class ACharacter* Fort_Pawn);
 
 public:
 	static class UClass* StaticClass()
@@ -140,6 +116,62 @@ public:
 		return GetDefaultObjImpl<ABGA_AppleSun_Apple_Athena_C>();
 	}
 };
+static_assert(alignof(ABGA_AppleSun_Apple_Athena_C) == 0x000008, "Wrong alignment on ABGA_AppleSun_Apple_Athena_C");
+static_assert(sizeof(ABGA_AppleSun_Apple_Athena_C) == 0x000B98, "Wrong size on ABGA_AppleSun_Apple_Athena_C");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, UberGraphFrame) == 0x0007C8, "Member 'ABGA_AppleSun_Apple_Athena_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, PlayerDetector) == 0x0007D0, "Member 'ABGA_AppleSun_Apple_Athena_C::PlayerDetector' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, Applesun_Activate) == 0x0007D8, "Member 'ABGA_AppleSun_Apple_Athena_C::Applesun_Activate' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, AppleSun_Warning_Loop_01) == 0x0007E0, "Member 'ABGA_AppleSun_Apple_Athena_C::AppleSun_Warning_Loop_01' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, FortLinkToActor) == 0x0007E8, "Member 'ABGA_AppleSun_Apple_Athena_C::FortLinkToActor' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, SidesPawnBlocker) == 0x0007F0, "Member 'ABGA_AppleSun_Apple_Athena_C::SidesPawnBlocker' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, Pad) == 0x0007F8, "Member 'ABGA_AppleSun_Apple_Athena_C::Pad' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, Box) == 0x000800, "Member 'ABGA_AppleSun_Apple_Athena_C::Box' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, P_AppleSun_Spawn) == 0x000808, "Member 'ABGA_AppleSun_Apple_Athena_C::P_AppleSun_Spawn' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, P_AppleSun_DespawnTell) == 0x000810, "Member 'ABGA_AppleSun_Apple_Athena_C::P_AppleSun_DespawnTell' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, BeginDeflate_NewTrack_0_E511D36F4D2E46D8AE33548AA66A76B4) == 0x000818, "Member 'ABGA_AppleSun_Apple_Athena_C::BeginDeflate_NewTrack_0_E511D36F4D2E46D8AE33548AA66A76B4' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, BeginDeflate__Direction_E511D36F4D2E46D8AE33548AA66A76B4) == 0x00081C, "Member 'ABGA_AppleSun_Apple_Athena_C::BeginDeflate__Direction_E511D36F4D2E46D8AE33548AA66A76B4' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, BeginDeflate) == 0x000820, "Member 'ABGA_AppleSun_Apple_Athena_C::BeginDeflate' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, Destroy_Scale_A5AFC0D0430E50F432FB2FB260534172) == 0x000828, "Member 'ABGA_AppleSun_Apple_Athena_C::Destroy_Scale_A5AFC0D0430E50F432FB2FB260534172' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, Destroy_Deflate_A5AFC0D0430E50F432FB2FB260534172) == 0x000834, "Member 'ABGA_AppleSun_Apple_Athena_C::Destroy_Deflate_A5AFC0D0430E50F432FB2FB260534172' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, Destroy__Direction_A5AFC0D0430E50F432FB2FB260534172) == 0x000838, "Member 'ABGA_AppleSun_Apple_Athena_C::Destroy__Direction_A5AFC0D0430E50F432FB2FB260534172' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, Destroy) == 0x000840, "Member 'ABGA_AppleSun_Apple_Athena_C::Destroy' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, GrowthStart) == 0x000848, "Member 'ABGA_AppleSun_Apple_Athena_C::GrowthStart' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, OverlapLaunchesActivated) == 0x000870, "Member 'ABGA_AppleSun_Apple_Athena_C::OverlapLaunchesActivated' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, LaunchCurve) == 0x000878, "Member 'ABGA_AppleSun_Apple_Athena_C::LaunchCurve' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, LifespanTimer) == 0x000880, "Member 'ABGA_AppleSun_Apple_Athena_C::LifespanTimer' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, TimeoutTellTimer) == 0x000888, "Member 'ABGA_AppleSun_Apple_Athena_C::TimeoutTellTimer' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, LaunchAngleWeight) == 0x000890, "Member 'ABGA_AppleSun_Apple_Athena_C::LaunchAngleWeight' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, StartScale) == 0x000898, "Member 'ABGA_AppleSun_Apple_Athena_C::StartScale' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, SpawnFeedbackGC) == 0x0008A4, "Member 'ABGA_AppleSun_Apple_Athena_C::SpawnFeedbackGC' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, DeathFeedbackGC) == 0x0008AC, "Member 'ABGA_AppleSun_Apple_Athena_C::DeathFeedbackGC' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, T_Quest_AppleSun_Use) == 0x0008B8, "Member 'ABGA_AppleSun_Apple_Athena_C::T_Quest_AppleSun_Use' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, WaterLocation) == 0x0008D8, "Member 'ABGA_AppleSun_Apple_Athena_C::WaterLocation' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, BounceLocation) == 0x0008E4, "Member 'ABGA_AppleSun_Apple_Athena_C::BounceLocation' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, NewVar_0) == 0x0008F0, "Member 'ABGA_AppleSun_Apple_Athena_C::NewVar_0' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, GrowthEnd) == 0x0008F8, "Member 'ABGA_AppleSun_Apple_Athena_C::GrowthEnd' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, MinLaunch) == 0x000920, "Member 'ABGA_AppleSun_Apple_Athena_C::MinLaunch' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, MaxLaunch) == 0x000948, "Member 'ABGA_AppleSun_Apple_Athena_C::MaxLaunch' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, VehicleLaunchMultiplierXY) == 0x000970, "Member 'ABGA_AppleSun_Apple_Athena_C::VehicleLaunchMultiplierXY' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, VehicleLaunchMultiplierZ) == 0x000998, "Member 'ABGA_AppleSun_Apple_Athena_C::VehicleLaunchMultiplierZ' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, ProjectileLaunchMultiplierXY) == 0x0009C0, "Member 'ABGA_AppleSun_Apple_Athena_C::ProjectileLaunchMultiplierXY' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, ProjectileLaunchMultiplierZ) == 0x0009E8, "Member 'ABGA_AppleSun_Apple_Athena_C::ProjectileLaunchMultiplierZ' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, Lifespan_) == 0x000A10, "Member 'ABGA_AppleSun_Apple_Athena_C::Lifespan_' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, TimeoutTellDuration_) == 0x000A38, "Member 'ABGA_AppleSun_Apple_Athena_C::TimeoutTellDuration_' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, HorizontalLaunch) == 0x000A60, "Member 'ABGA_AppleSun_Apple_Athena_C::HorizontalLaunch' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, MinNonPawnVelocity) == 0x000A88, "Member 'ABGA_AppleSun_Apple_Athena_C::MinNonPawnVelocity' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, MaxNonPawnVelocity) == 0x000A8C, "Member 'ABGA_AppleSun_Apple_Athena_C::MaxNonPawnVelocity' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, LinkedActor) == 0x000A90, "Member 'ABGA_AppleSun_Apple_Athena_C::LinkedActor' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, TrackedPlayers) == 0x000A98, "Member 'ABGA_AppleSun_Apple_Athena_C::TrackedPlayers' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, TC_Crashpad_) == 0x000AE8, "Member 'ABGA_AppleSun_Apple_Athena_C::TC_Crashpad_' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, MinLaunch_Crashpad_) == 0x000B08, "Member 'ABGA_AppleSun_Apple_Athena_C::MinLaunch_Crashpad_' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, MaxLaunch_Crashpad_) == 0x000B30, "Member 'ABGA_AppleSun_Apple_Athena_C::MaxLaunch_Crashpad_' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, HasLifespan) == 0x000B58, "Member 'ABGA_AppleSun_Apple_Athena_C::HasLifespan' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, IsWorldPlaced) == 0x000B59, "Member 'ABGA_AppleSun_Apple_Athena_C::IsWorldPlaced' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, UsesCollisionTimer) == 0x000B5A, "Member 'ABGA_AppleSun_Apple_Athena_C::UsesCollisionTimer' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, DestroyByShark) == 0x000B5B, "Member 'ABGA_AppleSun_Apple_Athena_C::DestroyByShark' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, Tag_BuildingPhysics) == 0x000B5C, "Member 'ABGA_AppleSun_Apple_Athena_C::Tag_BuildingPhysics' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, Row_PhysicsObjectImpulseMult) == 0x000B68, "Member 'ABGA_AppleSun_Apple_Athena_C::Row_PhysicsObjectImpulseMult' has a wrong offset!");
+static_assert(offsetof(ABGA_AppleSun_Apple_Athena_C, PhysicsObjectMassMultiplier) == 0x000B90, "Member 'ABGA_AppleSun_Apple_Athena_C::PhysicsObjectMassMultiplier' has a wrong offset!");
 
 }
 

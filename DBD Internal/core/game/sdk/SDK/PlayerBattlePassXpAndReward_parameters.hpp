@@ -23,13 +23,13 @@ struct PlayerBattlePassXpAndReward_C_ExecuteUbergraph_PlayerBattlePassXpAndRewar
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFortPublicAccountInfo                 K2Node_Event_Result;                               // 0x000C(0x0034)(ConstParm, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -65,7 +65,7 @@ static_assert(offsetof(PlayerBattlePassXpAndReward_C_OnAccountInfoChanged, Resul
 struct PlayerBattlePassXpAndReward_C_PreConstruct final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(PlayerBattlePassXpAndReward_C_PreConstruct) == 0x000001, "Wrong alignment on PlayerBattlePassXpAndReward_C_PreConstruct");
 static_assert(sizeof(PlayerBattlePassXpAndReward_C_PreConstruct) == 0x000001, "Wrong size on PlayerBattlePassXpAndReward_C_PreConstruct");
@@ -88,39 +88,39 @@ static_assert(offsetof(PlayerBattlePassXpAndReward_C_Refresh, CallFunc_GetCurren
 static_assert(offsetof(PlayerBattlePassXpAndReward_C_Refresh, CallFunc_GetCurrentChapterAsText_ReturnValue) == 0x000050, "Member 'PlayerBattlePassXpAndReward_C_Refresh::CallFunc_GetCurrentChapterAsText_ReturnValue' has a wrong offset!");
 
 // Function PlayerBattlePassXpAndReward.PlayerBattlePassXpAndReward_C.SetupReward
-// 0x0050 (0x0050 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct PlayerBattlePassXpAndReward_C_SetupReward final
 {
 public:
-	class UWidget*                                Container;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             RewardText;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UDailyQuestRewardInfo_Legacy_C*         RewardInfoWidget;                                  // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasReward;                                         // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                Container;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextBlock*                             RewardText;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UDailyQuestRewardInfo_C*                RewardInfoWidget;                                  // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasReward;                                         // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortItemQuantityPair                  RewardItem;                                        // 0x001C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	int32                                         LevelRewarded;                                     // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0030(0x0018)()
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFortItemQuantityPair                  RewardItem;                                        // 0x001C(0x0014)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	int32                                         LevelRewarded;                                     // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0038(0x0018)()
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(PlayerBattlePassXpAndReward_C_SetupReward) == 0x000008, "Wrong alignment on PlayerBattlePassXpAndReward_C_SetupReward");
-static_assert(sizeof(PlayerBattlePassXpAndReward_C_SetupReward) == 0x000050, "Wrong size on PlayerBattlePassXpAndReward_C_SetupReward");
+static_assert(sizeof(PlayerBattlePassXpAndReward_C_SetupReward) == 0x000058, "Wrong size on PlayerBattlePassXpAndReward_C_SetupReward");
 static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, Container) == 0x000000, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::Container' has a wrong offset!");
 static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, RewardText) == 0x000008, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::RewardText' has a wrong offset!");
 static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, RewardInfoWidget) == 0x000010, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::RewardInfoWidget' has a wrong offset!");
 static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, HasReward) == 0x000018, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::HasReward' has a wrong offset!");
 static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, RewardItem) == 0x00001C, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::RewardItem' has a wrong offset!");
-static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, LevelRewarded) == 0x000028, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::LevelRewarded' has a wrong offset!");
-static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, Temp_byte_Variable) == 0x00002C, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, CallFunc_Conv_IntToText_ReturnValue) == 0x000030, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, Temp_byte_Variable_1) == 0x000049, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, Temp_bool_Variable) == 0x00004A, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, K2Node_Select_Default) == 0x00004B, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, LevelRewarded) == 0x000030, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::LevelRewarded' has a wrong offset!");
+static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, Temp_byte_Variable) == 0x000034, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, CallFunc_Conv_IntToText_ReturnValue) == 0x000038, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, Temp_byte_Variable_1) == 0x000051, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, Temp_bool_Variable) == 0x000052, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(PlayerBattlePassXpAndReward_C_SetupReward, K2Node_Select_Default) == 0x000053, "Member 'PlayerBattlePassXpAndReward_C_SetupReward::K2Node_Select_Default' has a wrong offset!");
 
 }
 

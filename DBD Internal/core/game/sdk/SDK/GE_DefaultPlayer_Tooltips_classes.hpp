@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_DefaultPlayer_Tooltips_C>();
 	}
 };
+static_assert(alignof(UGE_DefaultPlayer_Tooltips_C) == 0x000008, "Wrong alignment on UGE_DefaultPlayer_Tooltips_C");
+static_assert(sizeof(UGE_DefaultPlayer_Tooltips_C) == 0x000800, "Wrong size on UGE_DefaultPlayer_Tooltips_C");
 
 }
 

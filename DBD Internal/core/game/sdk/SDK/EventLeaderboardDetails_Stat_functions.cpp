@@ -20,16 +20,16 @@ namespace SDK
 // Function EventLeaderboardDetails_Stat.EventLeaderboardDetails_Stat_C.SetStatData
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   NumFractionalDigits                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventLeaderboardDetails_Stat_C::SetStatData(const class FText& Name_0, double Value, int32 NumFractionalDigits)
+void UEventLeaderboardDetails_Stat_C::SetStatData(const class FText& Name_0, float Value, int32 NumFractionalDigits)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetStatData");
+		Func = Class->GetFunction("EventLeaderboardDetails_Stat_C", "SetStatData");
 
 	Params::EventLeaderboardDetails_Stat_C_SetStatData Parms{};
 
@@ -41,23 +41,17 @@ void UEventLeaderboardDetails_Stat_C::SetStatData(const class FText& Name_0, dou
 }
 
 
-// Function EventLeaderboardDetails_Stat.EventLeaderboardDetails_Stat_C.ExecuteUbergraph_EventLeaderboardDetails_Stat
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function EventLeaderboardDetails_Stat.EventLeaderboardDetails_Stat_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UEventLeaderboardDetails_Stat_C::ExecuteUbergraph_EventLeaderboardDetails_Stat(int32 EntryPoint)
+void UEventLeaderboardDetails_Stat_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_EventLeaderboardDetails_Stat");
+		Func = Class->GetFunction("EventLeaderboardDetails_Stat_C", "Construct");
 
-	Params::EventLeaderboardDetails_Stat_C_ExecuteUbergraph_EventLeaderboardDetails_Stat Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -67,25 +61,31 @@ void UEventLeaderboardDetails_Stat_C::ExecuteUbergraph_EventLeaderboardDetails_S
 void UEventLeaderboardDetails_Stat_C::EventStatAnim()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("EventStatAnim");
+		Func = Class->GetFunction("EventLeaderboardDetails_Stat_C", "EventStatAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function EventLeaderboardDetails_Stat.EventLeaderboardDetails_Stat_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function EventLeaderboardDetails_Stat.EventLeaderboardDetails_Stat_C.ExecuteUbergraph_EventLeaderboardDetails_Stat
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventLeaderboardDetails_Stat_C::Construct()
+void UEventLeaderboardDetails_Stat_C::ExecuteUbergraph_EventLeaderboardDetails_Stat(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardDetails_Stat_C", "ExecuteUbergraph_EventLeaderboardDetails_Stat");
+
+	Params::EventLeaderboardDetails_Stat_C_ExecuteUbergraph_EventLeaderboardDetails_Stat Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

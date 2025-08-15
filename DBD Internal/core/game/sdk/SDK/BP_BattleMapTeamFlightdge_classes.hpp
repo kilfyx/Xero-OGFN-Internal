@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapTeamFlightdge_C>();
 	}
 };
+static_assert(alignof(ABP_BattleMapTeamFlightdge_C) == 0x000008, "Wrong alignment on ABP_BattleMapTeamFlightdge_C");
+static_assert(sizeof(ABP_BattleMapTeamFlightdge_C) == 0x000288, "Wrong size on ABP_BattleMapTeamFlightdge_C");
 
 }
 

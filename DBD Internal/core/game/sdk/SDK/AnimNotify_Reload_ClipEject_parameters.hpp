@@ -10,24 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-
 
 namespace SDK::Params
 {
 
 // Function AnimNotify_Reload_ClipEject.AnimNotify_Reload_ClipEject_C.Received_Notify
-// 0x0048 (0x0048 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct AnimNotify_Reload_ClipEject_C_Received_Notify final
 {
 public:
 	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(AnimNotify_Reload_ClipEject_C_Received_Notify) == 0x000008, "Wrong alignment on AnimNotify_Reload_ClipEject_C_Received_Notify");
+static_assert(sizeof(AnimNotify_Reload_ClipEject_C_Received_Notify) == 0x000020, "Wrong size on AnimNotify_Reload_ClipEject_C_Received_Notify");
+static_assert(offsetof(AnimNotify_Reload_ClipEject_C_Received_Notify, MeshComp) == 0x000000, "Member 'AnimNotify_Reload_ClipEject_C_Received_Notify::MeshComp' has a wrong offset!");
+static_assert(offsetof(AnimNotify_Reload_ClipEject_C_Received_Notify, Animation) == 0x000008, "Member 'AnimNotify_Reload_ClipEject_C_Received_Notify::Animation' has a wrong offset!");
+static_assert(offsetof(AnimNotify_Reload_ClipEject_C_Received_Notify, ReturnValue) == 0x000010, "Member 'AnimNotify_Reload_ClipEject_C_Received_Notify::ReturnValue' has a wrong offset!");
+static_assert(offsetof(AnimNotify_Reload_ClipEject_C_Received_Notify, CallFunc_SpawnEmitterAttached_ReturnValue) == 0x000018, "Member 'AnimNotify_Reload_ClipEject_C_Received_Notify::CallFunc_SpawnEmitterAttached_ReturnValue' has a wrong offset!");
 
 }
 

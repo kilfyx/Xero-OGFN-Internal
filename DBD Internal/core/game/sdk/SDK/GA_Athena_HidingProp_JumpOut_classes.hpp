@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_HidingProp_JumpOut.GA_Athena_HidingProp_JumpOut_C
-// 0x0008 (0x0AB0 - 0x0AA8)
+// 0x0008 (0x0AC0 - 0x0AB8)
 class UGA_Athena_HidingProp_JumpOut_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_GA_Athena_HidingProp_JumpOut(int32 EntryPoint);
@@ -40,6 +40,9 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_HidingProp_JumpOut_C>();
 	}
 };
+static_assert(alignof(UGA_Athena_HidingProp_JumpOut_C) == 0x000008, "Wrong alignment on UGA_Athena_HidingProp_JumpOut_C");
+static_assert(sizeof(UGA_Athena_HidingProp_JumpOut_C) == 0x000AC0, "Wrong size on UGA_Athena_HidingProp_JumpOut_C");
+static_assert(offsetof(UGA_Athena_HidingProp_JumpOut_C, UberGraphFrame) == 0x000AB8, "Member 'UGA_Athena_HidingProp_JumpOut_C::UberGraphFrame' has a wrong offset!");
 
 }
 

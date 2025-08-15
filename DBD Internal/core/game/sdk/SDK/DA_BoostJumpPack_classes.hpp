@@ -20,19 +20,19 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass DA_BoostJumpPack.DA_BoostJumpPack_C
-// 0x0048 (0x1530 - 0x14E8)
+// 0x0048 (0x0DD8 - 0x0D90)
 class ADA_BoostJumpPack_C final : public AFortCustomizableAbilityDecoTool
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x14E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTagContainer                  ErrorReason;                                       // 0x14F0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTagContainer                  ErrorReasonGamepad;                                // 0x1510(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTagContainer                  ErrorReason;                                       // 0x0D98(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTagContainer                  ErrorReasonGamepad;                                // 0x0DB8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void BPPressTrigger(class AFortDecoHelper* FortDecoHelper);
 	void ExecuteUbergraph_DA_BoostJumpPack(int32 EntryPoint);
-	void IsOnGround(bool* bOnGround);
+	void BPPressTrigger(class AFortDecoHelper* FortDecoHelper);
 	void RaiseUsageError(const struct FGameplayTagContainer& FailedReason);
+	void IsOnGround(bool* bOnGround);
 
 public:
 	static class UClass* StaticClass()
@@ -44,6 +44,11 @@ public:
 		return GetDefaultObjImpl<ADA_BoostJumpPack_C>();
 	}
 };
+static_assert(alignof(ADA_BoostJumpPack_C) == 0x000008, "Wrong alignment on ADA_BoostJumpPack_C");
+static_assert(sizeof(ADA_BoostJumpPack_C) == 0x000DD8, "Wrong size on ADA_BoostJumpPack_C");
+static_assert(offsetof(ADA_BoostJumpPack_C, UberGraphFrame) == 0x000D90, "Member 'ADA_BoostJumpPack_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ADA_BoostJumpPack_C, ErrorReason) == 0x000D98, "Member 'ADA_BoostJumpPack_C::ErrorReason' has a wrong offset!");
+static_assert(offsetof(ADA_BoostJumpPack_C, ErrorReasonGamepad) == 0x000DB8, "Member 'ADA_BoostJumpPack_C::ErrorReasonGamepad' has a wrong offset!");
 
 }
 

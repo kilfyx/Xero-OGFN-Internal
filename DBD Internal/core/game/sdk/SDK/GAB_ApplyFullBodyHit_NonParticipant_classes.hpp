@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GAB_ApplyFullBodyHit_NonParticipant.GAB_ApplyFullBodyHit_NonParticipant_C
-// 0x0000 (0x0B98 - 0x0B98)
+// 0x0000 (0x0B28 - 0x0B28)
 class UGAB_ApplyFullBodyHit_NonParticipant_C final : public UGAB_GenericApplyFullBodyHit_C
 {
 public:
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(UGAB_ApplyFullBodyHit_NonParticipant_C) == 0x000008, "Wrong alignment on UGAB_ApplyFullBodyHit_NonParticipant_C");
-static_assert(sizeof(UGAB_ApplyFullBodyHit_NonParticipant_C) == 0x000B98, "Wrong size on UGAB_ApplyFullBodyHit_NonParticipant_C");
+static_assert(sizeof(UGAB_ApplyFullBodyHit_NonParticipant_C) == 0x000B28, "Wrong size on UGAB_ApplyFullBodyHit_NonParticipant_C");
 
 }
 

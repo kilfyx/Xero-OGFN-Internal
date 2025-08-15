@@ -17,17 +17,37 @@
 namespace SDK
 {
 
+// Function MANG_PatrolLayerAnimBP.MANG_PatrolLayerAnimBP_C.ExecuteUbergraph_MANG_PatrolLayerAnimBP
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMANG_PatrolLayerAnimBP_C::ExecuteUbergraph_MANG_PatrolLayerAnimBP(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MANG_PatrolLayerAnimBP_C", "ExecuteUbergraph_MANG_PatrolLayerAnimBP");
+
+	Params::MANG_PatrolLayerAnimBP_C_ExecuteUbergraph_MANG_PatrolLayerAnimBP Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function MANG_PatrolLayerAnimBP.MANG_PatrolLayerAnimBP_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
 void UMANG_PatrolLayerAnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("AnimGraph");
+		Func = Class->GetFunction("MANG_PatrolLayerAnimBP_C", "AnimGraph");
 
 	Params::MANG_PatrolLayerAnimBP_C_AnimGraph Parms{};
 
@@ -38,62 +58,18 @@ void UMANG_PatrolLayerAnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 }
 
 
-// Function MANG_PatrolLayerAnimBP.MANG_PatrolLayerAnimBP_C.CharacterSkeletalControlPostLegIK
-// (HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FPoseLink                        InPosePostLegIK                                        (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        CharacterSkeletalControlPostLegIK_0                    (Parm, OutParm, NoDestructor)
-
-void UMANG_PatrolLayerAnimBP_C::CharacterSkeletalControlPostLegIK(const struct FPoseLink& InPosePostLegIK, struct FPoseLink* CharacterSkeletalControlPostLegIK_0)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("CharacterSkeletalControlPostLegIK");
-
-	Params::MANG_PatrolLayerAnimBP_C_CharacterSkeletalControlPostLegIK Parms{};
-
-	Parms.InPosePostLegIK = std::move(InPosePostLegIK);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (CharacterSkeletalControlPostLegIK_0 != nullptr)
-		*CharacterSkeletalControlPostLegIK_0 = std::move(Parms.CharacterSkeletalControlPostLegIK_0);
-}
-
-
-// Function MANG_PatrolLayerAnimBP.MANG_PatrolLayerAnimBP_C.ExecuteUbergraph_MANG_PatrolLayerAnimBP
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMANG_PatrolLayerAnimBP_C::ExecuteUbergraph_MANG_PatrolLayerAnimBP(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_MANG_PatrolLayerAnimBP");
-
-	Params::MANG_PatrolLayerAnimBP_C_ExecuteUbergraph_MANG_PatrolLayerAnimBP Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function MANG_PatrolLayerAnimBP.MANG_PatrolLayerAnimBP_C.FullBodyOverride
 // (HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FPoseLink                        PassThroughFullBodyPose                                (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        FullBodyOverride_0                                     (Parm, OutParm, NoDestructor)
+// const struct FPoseLink&                 PassThroughFullBodyPose                                (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       FullBodyOverride_0                                     (Parm, OutParm, NoDestructor)
 
 void UMANG_PatrolLayerAnimBP_C::FullBodyOverride(const struct FPoseLink& PassThroughFullBodyPose, struct FPoseLink* FullBodyOverride_0)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("FullBodyOverride");
+		Func = Class->GetFunction("MANG_PatrolLayerAnimBP_C", "FullBodyOverride");
 
 	Params::MANG_PatrolLayerAnimBP_C_FullBodyOverride Parms{};
 
@@ -103,6 +79,30 @@ void UMANG_PatrolLayerAnimBP_C::FullBodyOverride(const struct FPoseLink& PassThr
 
 	if (FullBodyOverride_0 != nullptr)
 		*FullBodyOverride_0 = std::move(Parms.FullBodyOverride_0);
+}
+
+
+// Function MANG_PatrolLayerAnimBP.MANG_PatrolLayerAnimBP_C.CharacterSkeletalControlPostLegIK
+// (HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FPoseLink&                 InPosePostLegIK                                        (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       CharacterSkeletalControlPostLegIK_0                    (Parm, OutParm, NoDestructor)
+
+void UMANG_PatrolLayerAnimBP_C::CharacterSkeletalControlPostLegIK(const struct FPoseLink& InPosePostLegIK, struct FPoseLink* CharacterSkeletalControlPostLegIK_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MANG_PatrolLayerAnimBP_C", "CharacterSkeletalControlPostLegIK");
+
+	Params::MANG_PatrolLayerAnimBP_C_CharacterSkeletalControlPostLegIK Parms{};
+
+	Parms.InPosePostLegIK = std::move(InPosePostLegIK);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (CharacterSkeletalControlPostLegIK_0 != nullptr)
+		*CharacterSkeletalControlPostLegIK_0 = std::move(Parms.CharacterSkeletalControlPostLegIK_0);
 }
 
 }

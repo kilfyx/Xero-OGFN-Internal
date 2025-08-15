@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass DualBladeMenu.DualBladeMenu_C
-// 0x0000 (0x0398 - 0x0398)
+// 0x0000 (0x0380 - 0x0380)
 class UDualBladeMenu_C final : public UFortDualBladeMenu
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UDualBladeMenu_C>();
 	}
 };
+static_assert(alignof(UDualBladeMenu_C) == 0x000008, "Wrong alignment on UDualBladeMenu_C");
+static_assert(sizeof(UDualBladeMenu_C) == 0x000380, "Wrong size on UDualBladeMenu_C");
 
 }
 

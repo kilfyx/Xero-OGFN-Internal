@@ -182,9 +182,9 @@ bool USocialChatMessageEntry::CanInteract() const
 // Function SocialUMG.SocialGroupListEntry.HandleGetMenuContent
 // (Final, Native, Protected)
 // Parameters:
-// class UUserWidget*                      ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UUserWidget* USocialGroupListEntry::HandleGetMenuContent()
+class UWidget* USocialGroupListEntry::HandleGetMenuContent()
 {
 	static class UFunction* Func = nullptr;
 
@@ -355,9 +355,9 @@ class UWidget* USocialInteractionMenu::GetFirstEntryToCenter() const
 // Function SocialUMG.SocialListInteractableEntryBase.HandleGetMenuContent
 // (Final, Native, Protected)
 // Parameters:
-// class UUserWidget*                      ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UUserWidget* USocialListInteractableEntryBase::HandleGetMenuContent()
+class UWidget* USocialListInteractableEntryBase::HandleGetMenuContent()
 {
 	static class UFunction* Func = nullptr;
 

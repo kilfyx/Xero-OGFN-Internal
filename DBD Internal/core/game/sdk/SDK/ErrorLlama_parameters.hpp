@@ -18,6 +18,17 @@
 namespace SDK::Params
 {
 
+// Function ErrorLlama.ErrorLlama_C.HandleInputTypeChanged
+// 0x0001 (0x0001 - 0x0000)
+struct ErrorLlama_C_HandleInputTypeChanged final
+{
+public:
+	ECommonInputType                              NewInputType;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ErrorLlama_C_HandleInputTypeChanged) == 0x000001, "Wrong alignment on ErrorLlama_C_HandleInputTypeChanged");
+static_assert(sizeof(ErrorLlama_C_HandleInputTypeChanged) == 0x000001, "Wrong size on ErrorLlama_C_HandleInputTypeChanged");
+static_assert(offsetof(ErrorLlama_C_HandleInputTypeChanged, NewInputType) == 0x000000, "Member 'ErrorLlama_C_HandleInputTypeChanged::NewInputType' has a wrong offset!");
+
 // Function ErrorLlama.ErrorLlama_C.Tick
 // 0x003C (0x003C - 0x0000)
 struct ErrorLlama_C_Tick final
@@ -26,6 +37,10 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(ErrorLlama_C_Tick) == 0x000004, "Wrong alignment on ErrorLlama_C_Tick");
+static_assert(sizeof(ErrorLlama_C_Tick) == 0x00003C, "Wrong size on ErrorLlama_C_Tick");
+static_assert(offsetof(ErrorLlama_C_Tick, MyGeometry) == 0x000000, "Member 'ErrorLlama_C_Tick::MyGeometry' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_Tick, InDeltaTime) == 0x000038, "Member 'ErrorLlama_C_Tick::InDeltaTime' has a wrong offset!");
 
 // Function ErrorLlama.ErrorLlama_C.HandleNormalizedInputDirection
 // 0x0008 (0x0008 - 0x0000)
@@ -34,14 +49,9 @@ struct ErrorLlama_C_HandleNormalizedInputDirection final
 public:
 	struct FVector2D                              TwoDInputVec;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-
-// Function ErrorLlama.ErrorLlama_C.HandleInputTypeChanged
-// 0x0001 (0x0001 - 0x0000)
-struct ErrorLlama_C_HandleInputTypeChanged final
-{
-public:
-	ECommonInputType                              NewInputType;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
+static_assert(alignof(ErrorLlama_C_HandleNormalizedInputDirection) == 0x000004, "Wrong alignment on ErrorLlama_C_HandleNormalizedInputDirection");
+static_assert(sizeof(ErrorLlama_C_HandleNormalizedInputDirection) == 0x000008, "Wrong size on ErrorLlama_C_HandleNormalizedInputDirection");
+static_assert(offsetof(ErrorLlama_C_HandleNormalizedInputDirection, TwoDInputVec) == 0x000000, "Member 'ErrorLlama_C_HandleNormalizedInputDirection::TwoDInputVec' has a wrong offset!");
 
 // Function ErrorLlama.ErrorLlama_C.ExecuteUbergraph_ErrorLlama
 // 0x0170 (0x0170 - 0x0000)
@@ -59,7 +69,7 @@ public:
 	float                                         Temp_float_Variable_7;                             // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Temp_float_Variable_8;                             // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Temp_float_Variable_9;                             // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Temp_float_Variable_10;                            // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Temp_float_Variable_11;                            // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -78,7 +88,7 @@ public:
 	struct FVector2D                              CallFunc_LocalToAbsolute_ReturnValue;              // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_Normal2D_ReturnValue;                     // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Select_Default;                             // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -93,7 +103,7 @@ public:
 	struct FVector2D                              CallFunc_Multiply_Vector2DFloat_ReturnValue;       // 0x0104(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(ECommonInputType bNewInputType)> K2Node_CreateDelegate_OutputDelegate;            // 0x010C(0x0010)(ZeroConstructor, NoDestructor)
 	struct FVector2D                              K2Node_CustomEvent_2DInputVec;                     // 0x011C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_125[0x3];                                      // 0x0125(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakVector2D_X_1;                        // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector2D_Y_1;                        // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -107,6 +117,62 @@ public:
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_1;               // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_Vector2DInterpTo_ReturnValue;             // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama) == 0x000008, "Wrong alignment on ErrorLlama_C_ExecuteUbergraph_ErrorLlama");
+static_assert(sizeof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama) == 0x000170, "Wrong size on ErrorLlama_C_ExecuteUbergraph_ErrorLlama");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, EntryPoint) == 0x000000, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::EntryPoint' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_float_Variable) == 0x000004, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_float_Variable' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_float_Variable_1) == 0x000008, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_float_Variable_1' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_float_Variable_2) == 0x00000C, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_float_Variable_2' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_float_Variable_3) == 0x000010, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_float_Variable_3' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_float_Variable_4) == 0x000014, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_float_Variable_4' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_float_Variable_5) == 0x000018, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_float_Variable_5' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_float_Variable_6) == 0x00001C, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_float_Variable_6' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_float_Variable_7) == 0x000020, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_float_Variable_7' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_float_Variable_8) == 0x000024, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_float_Variable_8' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_float_Variable_9) == 0x000028, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_float_Variable_9' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_bool_Variable) == 0x00002C, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_float_Variable_10) == 0x000030, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_float_Variable_10' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_float_Variable_11) == 0x000034, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_float_Variable_11' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_GetContext_ReturnValue) == 0x000038, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_GetContext_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_BreakVector2D_X) == 0x000040, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_BreakVector2D_X' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_BreakVector2D_Y) == 0x000044, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_BreakVector2D_Y' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_GetCurrentInputType_ReturnValue) == 0x000048, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, K2Node_MakeStruct_LinearColor) == 0x00004C, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::K2Node_MakeStruct_LinearColor' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, K2Node_Event_MyGeometry) == 0x00005C, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, K2Node_Event_InDeltaTime) == 0x000094, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_GetMousePositionOnPlatform_ReturnValue) == 0x000098, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_GetMousePositionOnPlatform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_GetLocalSize_ReturnValue) == 0x0000A0, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_GetLocalSize_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x0000A8, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_Divide_Vector2DFloat_ReturnValue) == 0x0000B0, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_Divide_Vector2DFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_LocalToAbsolute_ReturnValue) == 0x0000B8, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_LocalToAbsolute_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x0000C0, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_Normal2D_ReturnValue) == 0x0000C8, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_Normal2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_IsValid_ReturnValue) == 0x0000D0, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_RandomIntegerInRange_ReturnValue) == 0x0000D4, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_RandomIntegerInRange_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, K2Node_Select_Default) == 0x0000D8, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x0000DC, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_GetPlayerController_ReturnValue) == 0x0000E0, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, Temp_int_Variable) == 0x0000E8, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_GetInputAnalogStickState_StickX) == 0x0000EC, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_GetInputAnalogStickState_StickX' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_GetInputAnalogStickState_StickY) == 0x0000F0, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_GetInputAnalogStickState_StickY' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x0000F4, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, K2Node_Select_Default_1) == 0x0000F8, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_MakeVector2D_ReturnValue) == 0x0000FC, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_Multiply_Vector2DFloat_ReturnValue) == 0x000104, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_Multiply_Vector2DFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, K2Node_CreateDelegate_OutputDelegate) == 0x00010C, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, K2Node_CustomEvent_2DInputVec) == 0x00011C, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::K2Node_CustomEvent_2DInputVec' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, K2Node_SwitchEnum_CmpSuccess) == 0x000124, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_BreakVector2D_X_1) == 0x000128, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_BreakVector2D_X_1' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_BreakVector2D_Y_1) == 0x00012C, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000130, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_MakeVector_ReturnValue) == 0x000134, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_Multiply_Vector2DFloat_ReturnValue_1) == 0x000140, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_Multiply_Vector2DFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_RotateAngleAxis_ReturnValue) == 0x000148, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_RotateAngleAxis_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_BreakVector_X) == 0x000154, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_BreakVector_Y) == 0x000158, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_BreakVector_Z) == 0x00015C, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_MakeVector2D_ReturnValue_1) == 0x000160, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ErrorLlama_C_ExecuteUbergraph_ErrorLlama, CallFunc_Vector2DInterpTo_ReturnValue) == 0x000168, "Member 'ErrorLlama_C_ExecuteUbergraph_ErrorLlama::CallFunc_Vector2DInterpTo_ReturnValue' has a wrong offset!");
 
 }
 

@@ -17,51 +17,6 @@
 namespace SDK
 {
 
-// Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.BreakKey
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// const struct FKey&                      InKey                                                  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString*                          InteractionProfile                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControllerHand*                        Hand                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName*                            MotionSource                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString*                          Indentifier                                            (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString*                          Component                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UHeadMountedDisplayFunctionLibrary::BreakKey(const struct FKey& InKey, class FString* InteractionProfile, EControllerHand* Hand, class FName* MotionSource, class FString* Indentifier, class FString* Component)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "BreakKey");
-
-	Params::HeadMountedDisplayFunctionLibrary_BreakKey Parms{};
-
-	Parms.InKey = std::move(InKey);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (InteractionProfile != nullptr)
-		*InteractionProfile = std::move(Parms.InteractionProfile);
-
-	if (Hand != nullptr)
-		*Hand = Parms.Hand;
-
-	if (MotionSource != nullptr)
-		*MotionSource = Parms.MotionSource;
-
-	if (Indentifier != nullptr)
-		*Indentifier = std::move(Parms.Indentifier);
-
-	if (Component != nullptr)
-		*Component = std::move(Parms.Component);
-}
-
-
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.CalibrateExternalTrackingToHMD
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -82,108 +37,6 @@ void UHeadMountedDisplayFunctionLibrary::CalibrateExternalTrackingToHMD(const st
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.ClearXRTimedInputActionDelegate
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FName&                      ActionPath                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UHeadMountedDisplayFunctionLibrary::ClearXRTimedInputActionDelegate(const class FName& ActionPath)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "ClearXRTimedInputActionDelegate");
-
-	Params::HeadMountedDisplayFunctionLibrary_ClearXRTimedInputActionDelegate Parms{};
-
-	Parms.ActionPath = ActionPath;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.ConfigureGestures
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FXRGestureConfig&          GestureConfig                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UHeadMountedDisplayFunctionLibrary::ConfigureGestures(const struct FXRGestureConfig& GestureConfig)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "ConfigureGestures");
-
-	Params::HeadMountedDisplayFunctionLibrary_ConfigureGestures Parms{};
-
-	Parms.GestureConfig = std::move(GestureConfig);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.ConnectRemoteXRDevice
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    IpAddress                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             BitRate                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EXRDeviceConnectionResult               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EXRDeviceConnectionResult UHeadMountedDisplayFunctionLibrary::ConnectRemoteXRDevice(const class FString& IpAddress, const int32 BitRate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "ConnectRemoteXRDevice");
-
-	Params::HeadMountedDisplayFunctionLibrary_ConnectRemoteXRDevice Parms{};
-
-	Parms.IpAddress = std::move(IpAddress);
-	Parms.BitRate = BitRate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.DisconnectRemoteXRDevice
-// (Final, Native, Static, Public, BlueprintCallable)
-
-void UHeadMountedDisplayFunctionLibrary::DisconnectRemoteXRDevice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "DisconnectRemoteXRDevice");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -247,7 +100,7 @@ void UHeadMountedDisplayFunctionLibrary::EnableLowPersistenceMode(bool bEnable)
 // Parameters:
 // const class FName                       SystemId                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EXRTrackedDeviceType                    DeviceType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FXRDeviceId>              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TArray<struct FXRDeviceId>              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<struct FXRDeviceId> UHeadMountedDisplayFunctionLibrary::EnumerateTrackedDevices(const class FName SystemId, EXRTrackedDeviceType DeviceType)
 {
@@ -267,68 +120,6 @@ TArray<struct FXRDeviceId> UHeadMountedDisplayFunctionLibrary::EnumerateTrackedD
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetControllerTransformForTime
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContext                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             ControllerIndex                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FName                       MotionSource                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FTimespan&                 Time                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool*                                   bTimeWasUsed                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator*                        Orientation                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// struct FVector*                         Position                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool*                                   bProvidedLinearVelocity                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector*                         LinearVelocity                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool*                                   bProvidedAngularVelocity                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector*                         AngularVelocityRadPerSec                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UHeadMountedDisplayFunctionLibrary::GetControllerTransformForTime(class UObject* WorldContext, const int32 ControllerIndex, const class FName MotionSource, const struct FTimespan& Time, bool* bTimeWasUsed, struct FRotator* Orientation, struct FVector* Position, bool* bProvidedLinearVelocity, struct FVector* LinearVelocity, bool* bProvidedAngularVelocity, struct FVector* AngularVelocityRadPerSec)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "GetControllerTransformForTime");
-
-	Params::HeadMountedDisplayFunctionLibrary_GetControllerTransformForTime Parms{};
-
-	Parms.WorldContext = WorldContext;
-	Parms.ControllerIndex = ControllerIndex;
-	Parms.MotionSource = MotionSource;
-	Parms.Time = std::move(Time);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (bTimeWasUsed != nullptr)
-		*bTimeWasUsed = Parms.bTimeWasUsed;
-
-	if (Orientation != nullptr)
-		*Orientation = std::move(Parms.Orientation);
-
-	if (Position != nullptr)
-		*Position = std::move(Parms.Position);
-
-	if (bProvidedLinearVelocity != nullptr)
-		*bProvidedLinearVelocity = Parms.bProvidedLinearVelocity;
-
-	if (LinearVelocity != nullptr)
-		*LinearVelocity = std::move(Parms.LinearVelocity);
-
-	if (bProvidedAngularVelocity != nullptr)
-		*bProvidedAngularVelocity = Parms.bProvidedAngularVelocity;
-
-	if (AngularVelocityRadPerSec != nullptr)
-		*AngularVelocityRadPerSec = std::move(Parms.AngularVelocityRadPerSec);
 
 	return Parms.ReturnValue;
 }
@@ -418,35 +209,6 @@ void UHeadMountedDisplayFunctionLibrary::GetDeviceWorldPose(class UObject* World
 }
 
 
-// Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDData
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContext                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FXRHMDData*                      HMDData                                                (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void UHeadMountedDisplayFunctionLibrary::GetHMDData(class UObject* WorldContext, struct FXRHMDData* HMDData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "GetHMDData");
-
-	Params::HeadMountedDisplayFunctionLibrary_GetHMDData Parms{};
-
-	Parms.WorldContext = WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (HMDData != nullptr)
-		*HMDData = std::move(Parms.HMDData);
-}
-
-
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDDeviceName
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -494,37 +256,6 @@ EHMDWornState UHeadMountedDisplayFunctionLibrary::GetHMDWornState()
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetMotionControllerData
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContext                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const EControllerHand                   Hand                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FXRMotionControllerData*         MotionControllerData                                   (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UHeadMountedDisplayFunctionLibrary::GetMotionControllerData(class UObject* WorldContext, const EControllerHand Hand, struct FXRMotionControllerData* MotionControllerData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "GetMotionControllerData");
-
-	Params::HeadMountedDisplayFunctionLibrary_GetMotionControllerData Parms{};
-
-	Parms.WorldContext = WorldContext;
-	Parms.Hand = Hand;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (MotionControllerData != nullptr)
-		*MotionControllerData = std::move(Parms.MotionControllerData);
 }
 
 
@@ -596,34 +327,6 @@ float UHeadMountedDisplayFunctionLibrary::GetPixelDensity()
 		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "GetPixelDensity");
 
 	Params::HeadMountedDisplayFunctionLibrary_GetPixelDensity Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetPlayAreaBounds
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// EHMDTrackingOrigin                      Origin                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector2D UHeadMountedDisplayFunctionLibrary::GetPlayAreaBounds(EHMDTrackingOrigin Origin)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "GetPlayAreaBounds");
-
-	Params::HeadMountedDisplayFunctionLibrary_GetPlayAreaBounds Parms{};
-
-	Parms.Origin = Origin;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -829,31 +532,6 @@ struct FTransform UHeadMountedDisplayFunctionLibrary::GetTrackingToWorldTransfor
 }
 
 
-// Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetVersionString
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UHeadMountedDisplayFunctionLibrary::GetVersionString()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "GetVersionString");
-
-	Params::HeadMountedDisplayFunctionLibrary_GetVersionString Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetVRFocusState
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -900,31 +578,6 @@ float UHeadMountedDisplayFunctionLibrary::GetWorldToMetersScale(class UObject* W
 	Params::HeadMountedDisplayFunctionLibrary_GetWorldToMetersScale Parms{};
 
 	Parms.WorldContext = WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetXRSystemFlags
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UHeadMountedDisplayFunctionLibrary::GetXRSystemFlags()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "GetXRSystemFlags");
-
-	Params::HeadMountedDisplayFunctionLibrary_GetXRSystemFlags Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1283,58 +936,6 @@ void UHeadMountedDisplayFunctionLibrary::SetWorldToMetersScale(class UObject* Wo
 }
 
 
-// Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetXRDisconnectDelegate
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TDelegate<void(const class FString& OutReason)>&InDisconnectedDelegate                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void UHeadMountedDisplayFunctionLibrary::SetXRDisconnectDelegate(const TDelegate<void(const class FString& OutReason)>& InDisconnectedDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "SetXRDisconnectDelegate");
-
-	Params::HeadMountedDisplayFunctionLibrary_SetXRDisconnectDelegate Parms{};
-
-	Parms.InDisconnectedDelegate = InDisconnectedDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetXRTimedInputActionDelegate
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FName&                      ActionName                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TDelegate<void(const float Value, const struct FTimespan& Time)>&InDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void UHeadMountedDisplayFunctionLibrary::SetXRTimedInputActionDelegate(const class FName& ActionName, const TDelegate<void(const float Value, const struct FTimespan& Time)>& InDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HeadMountedDisplayFunctionLibrary", "SetXRTimedInputActionDelegate");
-
-	Params::HeadMountedDisplayFunctionLibrary_SetXRTimedInputActionDelegate Parms{};
-
-	Parms.ActionName = ActionName;
-	Parms.InDelegate = InDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.UpdateExternalTrackingHMDPosition
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -1357,34 +958,6 @@ void UHeadMountedDisplayFunctionLibrary::UpdateExternalTrackingHMDPosition(const
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HeadMountedDisplay.HandKeypointConversion.Conv_HandKeypointToInt32
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// EHandKeypoint                           Input                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UHandKeypointConversion::Conv_HandKeypointToInt32(EHandKeypoint Input)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("HandKeypointConversion", "Conv_HandKeypointToInt32");
-
-	Params::HandKeypointConversion_Conv_HandKeypointToInt32 Parms{};
-
-	Parms.Input = Input;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -1880,7 +1453,7 @@ bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingOfSource(int32 Pla
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnumerateMotionSources
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<class FName> UMotionTrackedDeviceFunctionLibrary::EnumerateMotionSources()
 {

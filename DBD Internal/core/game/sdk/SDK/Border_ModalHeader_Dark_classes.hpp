@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Border-ModalHeader-Dark.Border-ModalHeader-Dark_C
-// 0x0000 (0x00E0 - 0x00E0)
+// 0x0000 (0x00B0 - 0x00B0)
 class UBorder_ModalHeader_Dark_C final : public UBorder_ModalHeader_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBorder_ModalHeader_Dark_C>();
 	}
 };
+static_assert(alignof(UBorder_ModalHeader_Dark_C) == 0x000008, "Wrong alignment on UBorder_ModalHeader_Dark_C");
+static_assert(sizeof(UBorder_ModalHeader_Dark_C) == 0x0000B0, "Wrong size on UBorder_ModalHeader_Dark_C");
 
 }
 

@@ -20,7 +20,7 @@ namespace SDK
 // Function EasyAntiCheatCommon.EasyAntiCheatNetComponent.ClientMessage
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// const TArray<uint8>&                    Message                                                (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<uint8>&                    Message                                                (ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UEasyAntiCheatNetComponent::ClientMessage(const TArray<uint8>& Message)
 {
@@ -45,7 +45,7 @@ void UEasyAntiCheatNetComponent::ClientMessage(const TArray<uint8>& Message)
 // Function EasyAntiCheatCommon.EasyAntiCheatNetComponent.ServerMessage
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// const TArray<uint8>&                    Message                                                (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<uint8>&                    Message                                                (ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UEasyAntiCheatNetComponent::ServerMessage(const TArray<uint8>& Message)
 {

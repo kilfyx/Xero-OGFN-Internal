@@ -17,24 +17,30 @@
 namespace SDK
 {
 
-// Function BP_SafeZoneStorm.BP_SafeZoneStorm_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_SafeZoneStorm.BP_SafeZoneStorm_C.ExecuteUbergraph_BP_SafeZoneStorm
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_SafeZoneStorm_C::UserConstructionScript()
+void ABP_SafeZoneStorm_C::ExecuteUbergraph_BP_SafeZoneStorm(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SafeZoneStorm_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_SafeZoneStorm_C", "ExecuteUbergraph_BP_SafeZoneStorm");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_SafeZoneStorm_C_ExecuteUbergraph_BP_SafeZoneStorm Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function BP_SafeZoneStorm.BP_SafeZoneStorm_C.ShowStormScreenEffect
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Show                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Show                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABP_SafeZoneStorm_C::ShowStormScreenEffect(bool Show)
 {
@@ -71,24 +77,10 @@ void ABP_SafeZoneStorm_C::ShowClouds(float Amount)
 }
 
 
-// Function BP_SafeZoneStorm.BP_SafeZoneStorm_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_SafeZoneStorm_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SafeZoneStorm_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_SafeZoneStorm.BP_SafeZoneStorm_C.MobileClouds
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Mobile                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Mobile                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABP_SafeZoneStorm_C::MobileClouds(bool Mobile)
 {
@@ -105,23 +97,31 @@ void ABP_SafeZoneStorm_C::MobileClouds(bool Mobile)
 }
 
 
-// Function BP_SafeZoneStorm.BP_SafeZoneStorm_C.ExecuteUbergraph_BP_SafeZoneStorm
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_SafeZoneStorm.BP_SafeZoneStorm_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_SafeZoneStorm_C::ExecuteUbergraph_BP_SafeZoneStorm(int32 EntryPoint)
+void ABP_SafeZoneStorm_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SafeZoneStorm_C", "ExecuteUbergraph_BP_SafeZoneStorm");
+		Func = Class->GetFunction("BP_SafeZoneStorm_C", "ReceiveBeginPlay");
 
-	Params::BP_SafeZoneStorm_C_ExecuteUbergraph_BP_SafeZoneStorm Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function BP_SafeZoneStorm.BP_SafeZoneStorm_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_SafeZoneStorm_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SafeZoneStorm_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

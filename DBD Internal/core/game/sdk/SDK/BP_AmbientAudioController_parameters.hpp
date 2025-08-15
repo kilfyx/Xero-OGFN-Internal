@@ -10,117 +10,85 @@
 
 #include "Basic.hpp"
 
-#include "PhysicsCore_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 #include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.ApplyPlayerTags
-// 0x00F8 (0x00F8 - 0x0000)
-struct BP_AmbientAudioController_C_ApplyPlayerTags final
-{
-public:
-	class AActor*                                 Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FGameplayTag>                   Tag_Array;                                         // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           CallFunc_Array_Get_Item;                           // 0x0024(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 CallFunc_MakeGameplayCueParameters_ReturnValue;    // 0x0038(0x00C0)(ContainsInstancedReference)
-};
-
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.CacheViewTarget
-// 0x0020 (0x0020 - 0x0000)
-struct BP_AmbientAudioController_C_CacheViewTarget final
-{
-public:
-	class AActor*                                 NewViewTarget;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerController*                  CallFunc_GetFirstLocalFortPlayerController_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetViewTarget_ReturnValue;                // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
 // Function BP_AmbientAudioController.BP_AmbientAudioController_C.ExecuteUbergraph_BP_AmbientAudioController
-// 0x0220 (0x0220 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAmbientAudioSubsystem*                 CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortInteriorAudioSubsystem*            CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FInteriorAudioPlayerInfo               CallFunc_GetPlayerInfo_ReturnValue;                // 0x0018(0x0110)(ConstParm, ContainsInstancedReference)
-	TDelegate<void(class AGameStateBase* GameState)> K2Node_CreateDelegate_OutputDelegate;           // 0x0128(0x0010)(ZeroConstructor, NoDestructor)
-	class AGameStateBase*                         K2Node_CustomEvent_GameState;                      // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FGameplayTag>                   K2Node_MakeArray_Array;                            // 0x0140(0x0010)(ConstParm, ReferenceParm)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EInteriorAudioState>                   K2Node_MakeArray_Array_1;                          // 0x0158(0x0010)(ConstParm, ReferenceParm)
-	class AGameStateBase*                         Temp_object_Variable;                              // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortAsyncAction_GameStateReady*        CallFunc_GameStateReadyAsync_ReturnValue;          // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteriorAudioState                           Temp_wildcard_To_allow_the_previous_value_to_be_returned_Variable; // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17A[0x2];                                      // 0x017A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           Temp_wildcard_To_allow_the_previous_value_to_be_returned_Variable_1; // 0x017C(0x0008)(NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EInteriorAudioState PreviousState, EInteriorAudioState CurrentState)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0184(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0194(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A5[0x3];                                      // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x01A8(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteriorAudioState                           K2Node_CustomEvent_PreviousState;                  // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteriorAudioState                           K2Node_CustomEvent_CurrentState;                   // 0x01B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B3[0x1];                                      // 0x01B3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue_1;       // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MapRangeClamped_ReturnValue;              // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SelectFloat_ReturnValue;                  // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SelectFloat_ReturnValue_1;                // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Lerp_ReturnValue;                         // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue;        // 0x01D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x01D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x01D6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D7[0x1];                                      // 0x01D7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           K2Node_CustomEvent_Curr_1;                         // 0x01D8(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           K2Node_CustomEvent_Prev_1;                         // 0x01E0(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue_1;             // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteriorAudioState                           K2Node_CustomEvent_Curr;                           // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteriorAudioState                           K2Node_CustomEvent_Prev;                           // 0x01EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01EB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UReverbEffect*                          CallFunc_Map_Find_Value;                           // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteriorAudioState                           Temp_byte_Variable;                                // 0x01F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default;                             // 0x01FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1FB[0x5];                                      // 0x01FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetCurrentLevelName_ReturnValue;          // 0x0200(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UFortInteriorAudioSubsystem*            CallFunc_GetWorldSubsystem_ReturnValue_2;          // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue_2;             // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EInteriorAudioState                           Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(EInteriorAudioState PreviousState, EInteriorAudioState CurrentState)> K2Node_CreateDelegate_OutputDelegate; // 0x0008(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_1;                              // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_2;                              // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_3;                              // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x001C(0x0010)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0030(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class UFortInteriorAudioSubsystem*            CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EInteriorAudioState                           K2Node_CustomEvent_PreviousState;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EInteriorAudioState                           K2Node_CustomEvent_CurrentState;                   // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43[0x1];                                       // 0x0043(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default;                             // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue_1;       // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MapRangeClamped_ReturnValue;              // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SelectFloat_ReturnValue;                  // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SelectFloat_ReturnValue_1;                // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Lerp_ReturnValue;                         // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue;        // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController) == 0x000008, "Wrong alignment on BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController");
+static_assert(sizeof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController) == 0x000070, "Wrong size on BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, EntryPoint) == 0x000000, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::EntryPoint' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, Temp_byte_Variable) == 0x000004, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, Temp_bool_Variable) == 0x000018, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, Temp_bool_Variable_1) == 0x000019, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, Temp_bool_Variable_2) == 0x00001A, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, Temp_bool_Variable_3) == 0x00001B, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, K2Node_CreateDelegate_OutputDelegate_1) == 0x00001C, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000030, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000038, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, CallFunc_IsDedicatedServer_ReturnValue) == 0x000040, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, K2Node_CustomEvent_PreviousState) == 0x000041, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::K2Node_CustomEvent_PreviousState' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, K2Node_CustomEvent_CurrentState) == 0x000042, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::K2Node_CustomEvent_CurrentState' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, K2Node_Event_DeltaSeconds) == 0x000044, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, CallFunc_GetGameTimeInSeconds_ReturnValue) == 0x000048, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::CallFunc_GetGameTimeInSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, K2Node_Select_Default) == 0x00004C, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, CallFunc_GetGameTimeInSeconds_ReturnValue_1) == 0x000050, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::CallFunc_GetGameTimeInSeconds_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000054, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, CallFunc_MapRangeClamped_ReturnValue) == 0x000058, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, CallFunc_SelectFloat_ReturnValue) == 0x00005C, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, CallFunc_SelectFloat_ReturnValue_1) == 0x000060, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::CallFunc_SelectFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, CallFunc_Lerp_ReturnValue) == 0x000064, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::CallFunc_Lerp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController, CallFunc_EqualEqual_FloatFloat_ReturnValue) == 0x000068, "Member 'BP_AmbientAudioController_C_ExecuteUbergraph_BP_AmbientAudioController::CallFunc_EqualEqual_FloatFloat_ReturnValue' has a wrong offset!");
 
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.InitSnowCoverageComponent
-// 0x0010 (0x0010 - 0x0000)
-struct BP_AmbientAudioController_C_InitSnowCoverageComponent final
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_AmbientAudioController_C_ReceiveTick final
 {
 public:
-	class AGameStateBase*                         Game_State;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortGameStateComponent_SurfaceOverride* CallFunc_GetComponentByClass_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(BP_AmbientAudioController_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_AmbientAudioController_C_ReceiveTick");
+static_assert(sizeof(BP_AmbientAudioController_C_ReceiveTick) == 0x000004, "Wrong size on BP_AmbientAudioController_C_ReceiveTick");
+static_assert(offsetof(BP_AmbientAudioController_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_AmbientAudioController_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 // Function BP_AmbientAudioController.BP_AmbientAudioController_C.InteriorStateChanged
 // 0x0002 (0x0002 - 0x0000)
@@ -130,32 +98,138 @@ public:
 	EInteriorAudioState                           PreviousState;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EInteriorAudioState                           CurrentState;                                      // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(BP_AmbientAudioController_C_InteriorStateChanged) == 0x000001, "Wrong alignment on BP_AmbientAudioController_C_InteriorStateChanged");
+static_assert(sizeof(BP_AmbientAudioController_C_InteriorStateChanged) == 0x000002, "Wrong size on BP_AmbientAudioController_C_InteriorStateChanged");
+static_assert(offsetof(BP_AmbientAudioController_C_InteriorStateChanged, PreviousState) == 0x000000, "Member 'BP_AmbientAudioController_C_InteriorStateChanged::PreviousState' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_InteriorStateChanged, CurrentState) == 0x000001, "Member 'BP_AmbientAudioController_C_InteriorStateChanged::CurrentState' has a wrong offset!");
 
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.On Room Size Changed
-// 0x0010 (0x0010 - 0x0000)
-struct BP_AmbientAudioController_C_On_Room_Size_Changed final
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.UpdateSnowSetupBP
+// 0x0060 (0x0060 - 0x0000)
+struct BP_AmbientAudioController_C_UpdateSnowSetupBP final
 {
 public:
-	struct FGameplayTag                           Curr;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           Prev;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X;                            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X_1;                          // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_1;                          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_1;                          // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetGlobalSnowOrigin_ReturnValue;          // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X_2;                          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_2;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_2;                          // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_1;               // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetGlobalSnowRadius_ReturnValue;          // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Distance2D_ReturnValue;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetGlobalSnowAltitude_ReturnValue;        // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x005E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x005F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(BP_AmbientAudioController_C_UpdateSnowSetupBP) == 0x000004, "Wrong alignment on BP_AmbientAudioController_C_UpdateSnowSetupBP");
+static_assert(sizeof(BP_AmbientAudioController_C_UpdateSnowSetupBP) == 0x000060, "Wrong size on BP_AmbientAudioController_C_UpdateSnowSetupBP");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000004, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_BreakVector_X) == 0x000010, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_BreakVector_Y) == 0x000014, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_BreakVector_Z) == 0x000018, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_BreakVector_X_1) == 0x00001C, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_BreakVector_X_1' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_BreakVector_Y_1) == 0x000020, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_BreakVector_Y_1' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_BreakVector_Z_1) == 0x000024, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_BreakVector_Z_1' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_MakeVector2D_ReturnValue) == 0x000028, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_GetGlobalSnowOrigin_ReturnValue) == 0x000030, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_GetGlobalSnowOrigin_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_BreakVector_X_2) == 0x00003C, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_BreakVector_X_2' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_BreakVector_Y_2) == 0x000040, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_BreakVector_Y_2' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_BreakVector_Z_2) == 0x000044, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_BreakVector_Z_2' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_MakeVector2D_ReturnValue_1) == 0x000048, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_GetGlobalSnowRadius_ReturnValue) == 0x000050, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_GetGlobalSnowRadius_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_Distance2D_ReturnValue) == 0x000054, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_Distance2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_GetGlobalSnowAltitude_ReturnValue) == 0x000058, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_GetGlobalSnowAltitude_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x00005C, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x00005D, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_BooleanAND_ReturnValue) == 0x00005E, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_UpdateSnowSetupBP, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x00005F, "Member 'BP_AmbientAudioController_C_UpdateSnowSetupBP::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
 
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.On Room State Changed
-// 0x0002 (0x0002 - 0x0000)
-struct BP_AmbientAudioController_C_On_Room_State_Changed final
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.ApplyPlayerTags
+// 0x00F0 (0x00F0 - 0x0000)
+struct BP_AmbientAudioController_C_ApplyPlayerTags final
 {
 public:
-	EInteriorAudioState                           Curr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteriorAudioState                           Prev;                                              // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FGameplayTag>                   Tag_Array;                                         // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           CallFunc_Array_Get_Item;                           // 0x0024(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayCueParameters                 CallFunc_MakeGameplayCueParameters_ReturnValue;    // 0x0038(0x00B8)(ContainsInstancedReference)
 };
+static_assert(alignof(BP_AmbientAudioController_C_ApplyPlayerTags) == 0x000008, "Wrong alignment on BP_AmbientAudioController_C_ApplyPlayerTags");
+static_assert(sizeof(BP_AmbientAudioController_C_ApplyPlayerTags) == 0x0000F0, "Wrong size on BP_AmbientAudioController_C_ApplyPlayerTags");
+static_assert(offsetof(BP_AmbientAudioController_C_ApplyPlayerTags, Player) == 0x000000, "Member 'BP_AmbientAudioController_C_ApplyPlayerTags::Player' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ApplyPlayerTags, Tag_Array) == 0x000008, "Member 'BP_AmbientAudioController_C_ApplyPlayerTags::Tag_Array' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ApplyPlayerTags, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'BP_AmbientAudioController_C_ApplyPlayerTags::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ApplyPlayerTags, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'BP_AmbientAudioController_C_ApplyPlayerTags::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ApplyPlayerTags, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'BP_AmbientAudioController_C_ApplyPlayerTags::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ApplyPlayerTags, CallFunc_Array_Get_Item) == 0x000024, "Member 'BP_AmbientAudioController_C_ApplyPlayerTags::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ApplyPlayerTags, CallFunc_Less_IntInt_ReturnValue) == 0x00002C, "Member 'BP_AmbientAudioController_C_ApplyPlayerTags::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ApplyPlayerTags, CallFunc_Add_IntInt_ReturnValue) == 0x000030, "Member 'BP_AmbientAudioController_C_ApplyPlayerTags::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_ApplyPlayerTags, CallFunc_MakeGameplayCueParameters_ReturnValue) == 0x000038, "Member 'BP_AmbientAudioController_C_ApplyPlayerTags::CallFunc_MakeGameplayCueParameters_ReturnValue' has a wrong offset!");
 
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.OnReady_C8AC4F724844E04160BE56BEAB4A2614
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AmbientAudioController_C_OnReady_C8AC4F724844E04160BE56BEAB4A2614 final
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.RemovePlayerTags
+// 0x00F0 (0x00F0 - 0x0000)
+struct BP_AmbientAudioController_C_RemovePlayerTags final
 {
 public:
-	class AGameStateBase*                         GameState;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FGameplayTag>                   Array;                                             // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           CallFunc_Array_Get_Item;                           // 0x0024(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayCueParameters                 CallFunc_MakeGameplayCueParameters_ReturnValue;    // 0x0038(0x00B8)(ContainsInstancedReference)
 };
+static_assert(alignof(BP_AmbientAudioController_C_RemovePlayerTags) == 0x000008, "Wrong alignment on BP_AmbientAudioController_C_RemovePlayerTags");
+static_assert(sizeof(BP_AmbientAudioController_C_RemovePlayerTags) == 0x0000F0, "Wrong size on BP_AmbientAudioController_C_RemovePlayerTags");
+static_assert(offsetof(BP_AmbientAudioController_C_RemovePlayerTags, Player) == 0x000000, "Member 'BP_AmbientAudioController_C_RemovePlayerTags::Player' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_RemovePlayerTags, Array) == 0x000008, "Member 'BP_AmbientAudioController_C_RemovePlayerTags::Array' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_RemovePlayerTags, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'BP_AmbientAudioController_C_RemovePlayerTags::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_RemovePlayerTags, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'BP_AmbientAudioController_C_RemovePlayerTags::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_RemovePlayerTags, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'BP_AmbientAudioController_C_RemovePlayerTags::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_RemovePlayerTags, CallFunc_Array_Get_Item) == 0x000024, "Member 'BP_AmbientAudioController_C_RemovePlayerTags::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_RemovePlayerTags, CallFunc_Less_IntInt_ReturnValue) == 0x00002C, "Member 'BP_AmbientAudioController_C_RemovePlayerTags::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_RemovePlayerTags, CallFunc_Add_IntInt_ReturnValue) == 0x000030, "Member 'BP_AmbientAudioController_C_RemovePlayerTags::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_RemovePlayerTags, CallFunc_MakeGameplayCueParameters_ReturnValue) == 0x000038, "Member 'BP_AmbientAudioController_C_RemovePlayerTags::CallFunc_MakeGameplayCueParameters_ReturnValue' has a wrong offset!");
+
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.CacheViewTarget
+// 0x0020 (0x0020 - 0x0000)
+struct BP_AmbientAudioController_C_CacheViewTarget final
+{
+public:
+	class AActor*                                 NewViewTarget;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerController*                  CallFunc_GetFirstLocalFortPlayerController_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetViewTarget_ReturnValue;                // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AmbientAudioController_C_CacheViewTarget) == 0x000008, "Wrong alignment on BP_AmbientAudioController_C_CacheViewTarget");
+static_assert(sizeof(BP_AmbientAudioController_C_CacheViewTarget) == 0x000020, "Wrong size on BP_AmbientAudioController_C_CacheViewTarget");
+static_assert(offsetof(BP_AmbientAudioController_C_CacheViewTarget, NewViewTarget) == 0x000000, "Member 'BP_AmbientAudioController_C_CacheViewTarget::NewViewTarget' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_CacheViewTarget, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000008, "Member 'BP_AmbientAudioController_C_CacheViewTarget::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_CacheViewTarget, CallFunc_GetFirstLocalFortPlayerController_ReturnValue) == 0x000010, "Member 'BP_AmbientAudioController_C_CacheViewTarget::CallFunc_GetFirstLocalFortPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_CacheViewTarget, CallFunc_GetViewTarget_ReturnValue) == 0x000018, "Member 'BP_AmbientAudioController_C_CacheViewTarget::CallFunc_GetViewTarget_ReturnValue' has a wrong offset!");
 
 // Function BP_AmbientAudioController.BP_AmbientAudioController_C.OnViewTargetChanged
 // 0x0010 (0x0010 - 0x0000)
@@ -165,48 +239,10 @@ public:
 	class AActor*                                 New_Target;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 Prev_Target;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_AmbientAudioController_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.RemovePlayerTags
-// 0x00F8 (0x00F8 - 0x0000)
-struct BP_AmbientAudioController_C_RemovePlayerTags final
-{
-public:
-	class AActor*                                 Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FGameplayTag>                   Array;                                             // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           CallFunc_Array_Get_Item;                           // 0x0024(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 CallFunc_MakeGameplayCueParameters_ReturnValue;    // 0x0038(0x00C0)(ContainsInstancedReference)
-};
-
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.UpdateSnowSetupBP
-// 0x0020 (0x0020 - 0x0000)
-struct BP_AmbientAudioController_C_UpdateSnowSetupBP final
-{
-public:
-	class UAmbientAudioSubsystem*                 CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPhysicalSurface                              CallFunc_GetSpecialSurfaceType_ReturnValue;        // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x000C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocationInSpecialSurface_ReturnValue;   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
+static_assert(alignof(BP_AmbientAudioController_C_OnViewTargetChanged) == 0x000008, "Wrong alignment on BP_AmbientAudioController_C_OnViewTargetChanged");
+static_assert(sizeof(BP_AmbientAudioController_C_OnViewTargetChanged) == 0x000010, "Wrong size on BP_AmbientAudioController_C_OnViewTargetChanged");
+static_assert(offsetof(BP_AmbientAudioController_C_OnViewTargetChanged, New_Target) == 0x000000, "Member 'BP_AmbientAudioController_C_OnViewTargetChanged::New_Target' has a wrong offset!");
+static_assert(offsetof(BP_AmbientAudioController_C_OnViewTargetChanged, Prev_Target) == 0x000008, "Member 'BP_AmbientAudioController_C_OnViewTargetChanged::Prev_Target' has a wrong offset!");
 
 }
 

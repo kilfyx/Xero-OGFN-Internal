@@ -17,23 +17,31 @@
 namespace SDK
 {
 
+// Function BuildingContainer_Physics_Parent.BuildingContainer_Physics_Parent_C.OnRep_Rep_WakeUp
+// (BlueprintCallable, BlueprintEvent)
+
+void ABuildingContainer_Physics_Parent_C::OnRep_Rep_WakeUp()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuildingContainer_Physics_Parent_C", "OnRep_Rep_WakeUp");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BuildingContainer_Physics_Parent.BuildingContainer_Physics_Parent_C.BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_1_OnLinkedActorDestroyed__DelegateSignature
 // (BlueprintEvent)
-// Parameters:
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABuildingContainer_Physics_Parent_C::BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_1_OnLinkedActorDestroyed__DelegateSignature(class AActor* DamageCauser)
+void ABuildingContainer_Physics_Parent_C::BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_1_OnLinkedActorDestroyed__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BuildingContainer_Physics_Parent_C", "BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_1_OnLinkedActorDestroyed__DelegateSignature");
 
-	Params::BuildingContainer_Physics_Parent_C_BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_1_OnLinkedActorDestroyed__DelegateSignature Parms{};
-
-	Parms.DamageCauser = DamageCauser;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -41,7 +49,7 @@ void ABuildingContainer_Physics_Parent_C::BndEvt__FortLinkToActor_K2Node_Compone
 // (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*              SimulatingComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsAwake                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsAwake                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABuildingContainer_Physics_Parent_C::BndEvt__FortPhysicsObject_K2Node_ComponentBoundEvent_0_OnPhysicsObjectAwakeChanged__DelegateSignature(class UPrimitiveComponent* SimulatingComponent, bool bIsAwake)
 {
@@ -56,6 +64,20 @@ void ABuildingContainer_Physics_Parent_C::BndEvt__FortPhysicsObject_K2Node_Compo
 	Parms.bIsAwake = bIsAwake;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BuildingContainer_Physics_Parent.BuildingContainer_Physics_Parent_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABuildingContainer_Physics_Parent_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuildingContainer_Physics_Parent_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -76,34 +98,6 @@ void ABuildingContainer_Physics_Parent_C::ExecuteUbergraph_BuildingContainer_Phy
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BuildingContainer_Physics_Parent.BuildingContainer_Physics_Parent_C.OnRep_Rep_WakeUp
-// (BlueprintCallable, BlueprintEvent)
-
-void ABuildingContainer_Physics_Parent_C::OnRep_Rep_WakeUp()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuildingContainer_Physics_Parent_C", "OnRep_Rep_WakeUp");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BuildingContainer_Physics_Parent.BuildingContainer_Physics_Parent_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABuildingContainer_Physics_Parent_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuildingContainer_Physics_Parent_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

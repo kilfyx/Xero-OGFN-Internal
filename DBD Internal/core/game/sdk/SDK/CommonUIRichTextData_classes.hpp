@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UCommonUIRichTextData_C>();
 	}
 };
+static_assert(alignof(UCommonUIRichTextData_C) == 0x000008, "Wrong alignment on UCommonUIRichTextData_C");
+static_assert(sizeof(UCommonUIRichTextData_C) == 0x000030, "Wrong size on UCommonUIRichTextData_C");
 
 }
 

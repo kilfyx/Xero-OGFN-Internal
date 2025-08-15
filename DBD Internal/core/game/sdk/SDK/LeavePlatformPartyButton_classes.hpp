@@ -11,26 +11,25 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUILegacy_classes.hpp"
+#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LeavePlatformPartyButton.LeavePlatformPartyButton_C
-// 0x0020 (0x0F20 - 0x0F00)
-class ULeavePlatformPartyButton_C final : public UCommonButtonLegacy
+// 0x0018 (0x0BB8 - 0x0BA0)
+class ULeavePlatformPartyButton_C final : public UCommonButton
 {
 public:
-	uint8                                         Pad_EF8[0x8];                                      // 0x0EF8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHover;                                           // 0x0F08(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_41;                                // 0x0F10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHover;                                           // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_41;                                // 0x0BB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnHovered();
-	void BP_OnUnhovered();
 	void ExecuteUbergraph_LeavePlatformPartyButton(int32 EntryPoint);
+	void BP_OnUnhovered();
+	void BP_OnHovered();
 	void SetText(const class FText& New_Text);
 
 public:
@@ -43,6 +42,11 @@ public:
 		return GetDefaultObjImpl<ULeavePlatformPartyButton_C>();
 	}
 };
+static_assert(alignof(ULeavePlatformPartyButton_C) == 0x000008, "Wrong alignment on ULeavePlatformPartyButton_C");
+static_assert(sizeof(ULeavePlatformPartyButton_C) == 0x000BB8, "Wrong size on ULeavePlatformPartyButton_C");
+static_assert(offsetof(ULeavePlatformPartyButton_C, UberGraphFrame) == 0x000BA0, "Member 'ULeavePlatformPartyButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ULeavePlatformPartyButton_C, OnHover) == 0x000BA8, "Member 'ULeavePlatformPartyButton_C::OnHover' has a wrong offset!");
+static_assert(offsetof(ULeavePlatformPartyButton_C, CommonTextBlock_41) == 0x000BB0, "Member 'ULeavePlatformPartyButton_C::CommonTextBlock_41' has a wrong offset!");
 
 }
 

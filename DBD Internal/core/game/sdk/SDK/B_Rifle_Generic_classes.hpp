@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Rifle_Generic.B_Rifle_Generic_C
-// 0x0000 (0x1AB0 - 0x1AB0)
+// 0x0000 (0x12A8 - 0x12A8)
 class AB_Rifle_Generic_C : public AB_Ranged_Generic_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AB_Rifle_Generic_C>();
 	}
 };
+static_assert(alignof(AB_Rifle_Generic_C) == 0x000008, "Wrong alignment on AB_Rifle_Generic_C");
+static_assert(sizeof(AB_Rifle_Generic_C) == 0x0012A8, "Wrong size on AB_Rifle_Generic_C");
 
 }
 

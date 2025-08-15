@@ -17,14 +17,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SubscriptionGiftBoxHeader.SubscriptionGiftBoxHeader_C
-// 0x0020 (0x0288 - 0x0268)
+// 0x0020 (0x0280 - 0x0260)
 class USubscriptionGiftBoxHeader_C final : public UUserWidget
 {
 public:
-	class UImage*                                 Badge_1;                                           // 0x0268(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonRichTextBlock*                   CommonRichTextBlock_41;                            // 0x0270(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_46;                                          // 0x0278(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Skin_Text_Bullet;                                  // 0x0280(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Badge_1;                                           // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   CommonRichTextBlock_41;                            // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_46;                                          // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Skin_Text_Bullet;                                  // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,11 +37,11 @@ public:
 	}
 };
 static_assert(alignof(USubscriptionGiftBoxHeader_C) == 0x000008, "Wrong alignment on USubscriptionGiftBoxHeader_C");
-static_assert(sizeof(USubscriptionGiftBoxHeader_C) == 0x000288, "Wrong size on USubscriptionGiftBoxHeader_C");
-static_assert(offsetof(USubscriptionGiftBoxHeader_C, Badge_1) == 0x000268, "Member 'USubscriptionGiftBoxHeader_C::Badge_1' has a wrong offset!");
-static_assert(offsetof(USubscriptionGiftBoxHeader_C, CommonRichTextBlock_41) == 0x000270, "Member 'USubscriptionGiftBoxHeader_C::CommonRichTextBlock_41' has a wrong offset!");
-static_assert(offsetof(USubscriptionGiftBoxHeader_C, Image_46) == 0x000278, "Member 'USubscriptionGiftBoxHeader_C::Image_46' has a wrong offset!");
-static_assert(offsetof(USubscriptionGiftBoxHeader_C, Skin_Text_Bullet) == 0x000280, "Member 'USubscriptionGiftBoxHeader_C::Skin_Text_Bullet' has a wrong offset!");
+static_assert(sizeof(USubscriptionGiftBoxHeader_C) == 0x000280, "Wrong size on USubscriptionGiftBoxHeader_C");
+static_assert(offsetof(USubscriptionGiftBoxHeader_C, Badge_1) == 0x000260, "Member 'USubscriptionGiftBoxHeader_C::Badge_1' has a wrong offset!");
+static_assert(offsetof(USubscriptionGiftBoxHeader_C, CommonRichTextBlock_41) == 0x000268, "Member 'USubscriptionGiftBoxHeader_C::CommonRichTextBlock_41' has a wrong offset!");
+static_assert(offsetof(USubscriptionGiftBoxHeader_C, Image_46) == 0x000270, "Member 'USubscriptionGiftBoxHeader_C::Image_46' has a wrong offset!");
+static_assert(offsetof(USubscriptionGiftBoxHeader_C, Skin_Text_Bullet) == 0x000278, "Member 'USubscriptionGiftBoxHeader_C::Skin_Text_Bullet' has a wrong offset!");
 
 }
 

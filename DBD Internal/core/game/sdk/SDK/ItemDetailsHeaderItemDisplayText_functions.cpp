@@ -17,6 +17,27 @@
 namespace SDK
 {
 
+// Function ItemDetailsHeaderItemDisplayText.ItemDetailsHeaderItemDisplayText_C.GetDisplayName
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            DisplayName                                            (Parm, OutParm)
+
+void UItemDetailsHeaderItemDisplayText_C::GetDisplayName(class FText* DisplayName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemDetailsHeaderItemDisplayText_C", "GetDisplayName");
+
+	Params::ItemDetailsHeaderItemDisplayText_C_GetDisplayName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (DisplayName != nullptr)
+		*DisplayName = std::move(Parms.DisplayName);
+}
+
+
 // Function ItemDetailsHeaderItemDisplayText.ItemDetailsHeaderItemDisplayText_C.HandlePostDifferentItemToDetailSet
 // (Event, Protected, BlueprintEvent)
 
@@ -62,27 +83,6 @@ void UItemDetailsHeaderItemDisplayText_C::ExecuteUbergraph_ItemDetailsHeaderItem
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemDetailsHeaderItemDisplayText.ItemDetailsHeaderItemDisplayText_C.GetDisplayName
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            DisplayName                                            (Parm, OutParm)
-
-void UItemDetailsHeaderItemDisplayText_C::GetDisplayName(class FText* DisplayName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsHeaderItemDisplayText_C", "GetDisplayName");
-
-	Params::ItemDetailsHeaderItemDisplayText_C_GetDisplayName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (DisplayName != nullptr)
-		*DisplayName = std::move(Parms.DisplayName);
 }
 
 }

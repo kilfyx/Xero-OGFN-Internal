@@ -18,21 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaPlayerLevelCompact.AthenaPlayerLevelCompact_C
-// 0x0038 (0x02C8 - 0x0290)
-class UAthenaPlayerLevelCompact_C final : public UFortSeasonDataWidget
+// 0x0020 (0x02F0 - 0x02D0)
+class UAthenaPlayerLevelCompact_C final : public UAthenaPlayerLevelDisplay
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Image_392;                                         // 0x0298(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_ProgressBar;                                 // 0x02A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaSeasonItemRewardIcon_C*          RewardIcon;                                        // 0x02A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_Level;                                        // 0x02B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(int32 Level)>   LevelChanged;                                      // 0x02B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Image_ProgressBar;                                 // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(int32 Level)>   LevelChanged;                                      // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
+	void OnUpdateRewardIcon(const class UFortItem* RewardItem, const TSoftObjectPtr<class UTexture2D>& RewardTexture, bool bHasAdditionalStylesToDisplay, int32 RewardLevel, bool bRequiresBattlePass);
+	void OnUpdateXpBar(float Progress, bool bIsMaxLevel);
 	void ExecuteUbergraph_AthenaPlayerLevelCompact(int32 EntryPoint);
-	void OnUpdateRewardIcon_1(const class UFortItem* RewardItem, const TSoftObjectPtr<class UTexture2D>& RewardTexture, bool bHasAdditionalStylesToDisplay, int32 RewardLevel, bool bRequiresBattlePass);
-	void OnUpdateXpBar_1(double Progress, bool bIsMaxLevel);
 
 public:
 	static class UClass* StaticClass()
@@ -45,13 +42,10 @@ public:
 	}
 };
 static_assert(alignof(UAthenaPlayerLevelCompact_C) == 0x000008, "Wrong alignment on UAthenaPlayerLevelCompact_C");
-static_assert(sizeof(UAthenaPlayerLevelCompact_C) == 0x0002C8, "Wrong size on UAthenaPlayerLevelCompact_C");
-static_assert(offsetof(UAthenaPlayerLevelCompact_C, UberGraphFrame) == 0x000290, "Member 'UAthenaPlayerLevelCompact_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaPlayerLevelCompact_C, Image_392) == 0x000298, "Member 'UAthenaPlayerLevelCompact_C::Image_392' has a wrong offset!");
-static_assert(offsetof(UAthenaPlayerLevelCompact_C, Image_ProgressBar) == 0x0002A0, "Member 'UAthenaPlayerLevelCompact_C::Image_ProgressBar' has a wrong offset!");
-static_assert(offsetof(UAthenaPlayerLevelCompact_C, RewardIcon) == 0x0002A8, "Member 'UAthenaPlayerLevelCompact_C::RewardIcon' has a wrong offset!");
-static_assert(offsetof(UAthenaPlayerLevelCompact_C, Text_Level) == 0x0002B0, "Member 'UAthenaPlayerLevelCompact_C::Text_Level' has a wrong offset!");
-static_assert(offsetof(UAthenaPlayerLevelCompact_C, LevelChanged) == 0x0002B8, "Member 'UAthenaPlayerLevelCompact_C::LevelChanged' has a wrong offset!");
+static_assert(sizeof(UAthenaPlayerLevelCompact_C) == 0x0002F0, "Wrong size on UAthenaPlayerLevelCompact_C");
+static_assert(offsetof(UAthenaPlayerLevelCompact_C, UberGraphFrame) == 0x0002D0, "Member 'UAthenaPlayerLevelCompact_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaPlayerLevelCompact_C, Image_ProgressBar) == 0x0002D8, "Member 'UAthenaPlayerLevelCompact_C::Image_ProgressBar' has a wrong offset!");
+static_assert(offsetof(UAthenaPlayerLevelCompact_C, LevelChanged) == 0x0002E0, "Member 'UAthenaPlayerLevelCompact_C::LevelChanged' has a wrong offset!");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass FlagTile.FlagTile_C
-// 0x0000 (0x1460 - 0x1460)
+// 0x0000 (0x0BC8 - 0x0BC8)
 class UFlagTile_C final : public UFortFlagTileButton
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<UFlagTile_C>();
 	}
 };
-static_assert(alignof(UFlagTile_C) == 0x000010, "Wrong alignment on UFlagTile_C");
-static_assert(sizeof(UFlagTile_C) == 0x001460, "Wrong size on UFlagTile_C");
+static_assert(alignof(UFlagTile_C) == 0x000008, "Wrong alignment on UFlagTile_C");
+static_assert(sizeof(UFlagTile_C) == 0x000BC8, "Wrong size on UFlagTile_C");
 
 }
 

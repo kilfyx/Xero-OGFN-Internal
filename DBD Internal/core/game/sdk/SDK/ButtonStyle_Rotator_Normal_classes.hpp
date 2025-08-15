@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ButtonStyle-Rotator-Normal.ButtonStyle-Rotator-Normal_C
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0000 (0x0570 - 0x0570)
 class UButtonStyle_Rotator_Normal_C final : public UCommonButtonStyle
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_Rotator_Normal_C>();
 	}
 };
+static_assert(alignof(UButtonStyle_Rotator_Normal_C) == 0x000008, "Wrong alignment on UButtonStyle_Rotator_Normal_C");
+static_assert(sizeof(UButtonStyle_Rotator_Normal_C) == 0x000570, "Wrong size on UButtonStyle_Rotator_Normal_C");
 
 }
 

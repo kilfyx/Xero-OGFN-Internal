@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<USniper3PCamera_C>();
 	}
 };
+static_assert(alignof(USniper3PCamera_C) == 0x000008, "Wrong alignment on USniper3PCamera_C");
+static_assert(sizeof(USniper3PCamera_C) == 0x000138, "Wrong size on USniper3PCamera_C");
 
 }
 

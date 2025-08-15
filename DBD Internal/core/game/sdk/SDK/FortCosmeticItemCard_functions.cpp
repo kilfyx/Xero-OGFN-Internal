@@ -17,81 +17,97 @@
 namespace SDK
 {
 
-// Function FortCosmeticItemCard.FortCosmeticItemCard_C.UpdateImageIconScale
-// (BlueprintCallable, BlueprintEvent)
-
-void UFortCosmeticItemCard_C::UpdateImageIconScale()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateImageIconScale");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FortCosmeticItemCard.FortCosmeticItemCard_C.SequenceEvent__ENTRYPOINTFortCosmeticItemCard
+// Function FortCosmeticItemCard.FortCosmeticItemCard_C.HandleUpdateRarity
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FFortColorPalette&         RarityColors                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
-void UFortCosmeticItemCard_C::SequenceEvent__ENTRYPOINTFortCosmeticItemCard()
+void UFortCosmeticItemCard_C::HandleUpdateRarity(const struct FFortColorPalette& RarityColors)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SequenceEvent__ENTRYPOINTFortCosmeticItemCard");
 
-	UObject::ProcessEvent(Func, nullptr);
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortCosmeticItemCard_C", "HandleUpdateRarity");
+
+	Params::FortCosmeticItemCard_C_HandleUpdateRarity Parms{};
+
+	Parms.RarityColors = std::move(RarityColors);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function FortCosmeticItemCard.FortCosmeticItemCard_C.OnUpdateVisuals
+// Function FortCosmeticItemCard.FortCosmeticItemCard_C.HandleUpdateVisuals
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bIsItem                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bIsBorderAnimated                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsHero                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsReward                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsShuffleItem                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UFortCosmeticItemCard_C::HandleUpdateVisuals(bool bIsItem, bool bIsBorderAnimated, bool IsHero, bool IsReward, bool IsShuffleItem)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortCosmeticItemCard_C", "HandleUpdateVisuals");
+
+	Params::FortCosmeticItemCard_C_HandleUpdateVisuals Parms{};
+
+	Parms.bIsItem = bIsItem;
+	Parms.bIsBorderAnimated = bIsBorderAnimated;
+	Parms.IsHero = IsHero;
+	Parms.IsReward = IsReward;
+	Parms.IsShuffleItem = IsShuffleItem;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FortCosmeticItemCard.FortCosmeticItemCard_C.UpdateVisuals
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsItem                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsBorderAnimated                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsHero                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bReward                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsShuffleItem                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bShowAsArchived                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bUseAnimations                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsItem                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bIsBorderAnimated                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bIsHero                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bReward                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bIsShuffleItem                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UFortCosmeticItemCard_C::OnUpdateVisuals(bool bIsItem, bool bIsBorderAnimated, bool bIsHero, bool bReward, bool bIsShuffleItem, bool bShowAsArchived, bool bUseAnimations)
+void UFortCosmeticItemCard_C::UpdateVisuals(bool bIsItem, bool bIsBorderAnimated, bool bIsHero, bool bReward, bool bIsShuffleItem)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateVisuals");
 
-	Params::FortCosmeticItemCard_C_OnUpdateVisuals Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortCosmeticItemCard_C", "UpdateVisuals");
+
+	Params::FortCosmeticItemCard_C_UpdateVisuals Parms{};
 
 	Parms.bIsItem = bIsItem;
 	Parms.bIsBorderAnimated = bIsBorderAnimated;
 	Parms.bIsHero = bIsHero;
 	Parms.bReward = bReward;
 	Parms.bIsShuffleItem = bIsShuffleItem;
-	Parms.bShowAsArchived = bShowAsArchived;
-	Parms.bUseAnimations = bUseAnimations;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function FortCosmeticItemCard.FortCosmeticItemCard_C.OnUpdateSeriesOrRarityColors
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// Function FortCosmeticItemCard.FortCosmeticItemCard_C.OnUpdateEnhanced
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// struct FFortColorPalette                ColorPalette                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// bool                                    bEnhanced                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UFortCosmeticItemCard_C::OnUpdateSeriesOrRarityColors(const struct FFortColorPalette& ColorPalette)
+void UFortCosmeticItemCard_C::OnUpdateEnhanced(bool bEnhanced)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateSeriesOrRarityColors");
+		Func = Class->GetFunction("FortCosmeticItemCard_C", "OnUpdateEnhanced");
 
-	Params::FortCosmeticItemCard_C_OnUpdateSeriesOrRarityColors Parms{};
+	Params::FortCosmeticItemCard_C_OnUpdateEnhanced Parms{};
 
-	Parms.ColorPalette = std::move(ColorPalette);
+	Parms.bEnhanced = bEnhanced;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -100,14 +116,14 @@ void UFortCosmeticItemCard_C::OnUpdateSeriesOrRarityColors(const struct FFortCol
 // Function FortCosmeticItemCard.FortCosmeticItemCard_C.OnUpdateItemCardMaterial
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UMaterialInterface*               Material                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInterface*               Material                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UFortCosmeticItemCard_C::OnUpdateItemCardMaterial(class UMaterialInterface* Material)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateItemCardMaterial");
+		Func = Class->GetFunction("FortCosmeticItemCard_C", "OnUpdateItemCardMaterial");
 
 	Params::FortCosmeticItemCard_C_OnUpdateItemCardMaterial Parms{};
 
@@ -120,56 +136,40 @@ void UFortCosmeticItemCard_C::OnUpdateItemCardMaterial(class UMaterialInterface*
 // Function FortCosmeticItemCard.FortCosmeticItemCard_C.OnUpdateItemCardIcon
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UTexture2D*                       Icon                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   IconScale                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UTexture2D*                       Icon                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UFortCosmeticItemCard_C::OnUpdateItemCardIcon(class UTexture2D* Icon, float IconScale)
+void UFortCosmeticItemCard_C::OnUpdateItemCardIcon(class UTexture2D* Icon)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateItemCardIcon");
+		Func = Class->GetFunction("FortCosmeticItemCard_C", "OnUpdateItemCardIcon");
 
 	Params::FortCosmeticItemCard_C_OnUpdateItemCardIcon Parms{};
 
 	Parms.Icon = Icon;
-	Parms.IconScale = IconScale;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function FortCosmeticItemCard.FortCosmeticItemCard_C.OnUpdateEnhanced
-// (Event, Protected, BlueprintEvent)
+// Function FortCosmeticItemCard.FortCosmeticItemCard_C.OnUpdateSeriesOrRarityColors
+// (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// bool                                    bEnhanced                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FFortColorPalette&         ColorPalette                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
-void UFortCosmeticItemCard_C::OnUpdateEnhanced(bool bEnhanced)
+void UFortCosmeticItemCard_C::OnUpdateSeriesOrRarityColors(const struct FFortColorPalette& ColorPalette)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateEnhanced");
+		Func = Class->GetFunction("FortCosmeticItemCard_C", "OnUpdateSeriesOrRarityColors");
 
-	Params::FortCosmeticItemCard_C_OnUpdateEnhanced Parms{};
+	Params::FortCosmeticItemCard_C_OnUpdateSeriesOrRarityColors Parms{};
 
-	Parms.bEnhanced = bEnhanced;
+	Parms.ColorPalette = std::move(ColorPalette);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortCosmeticItemCard.FortCosmeticItemCard_C.OnUnhover
-// (Event, Protected, BlueprintEvent)
-
-void UFortCosmeticItemCard_C::OnUnhover()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnUnhover");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -181,9 +181,9 @@ void UFortCosmeticItemCard_C::OnUnhover()
 void UFortCosmeticItemCard_C::OnSizeChanged(float InCardWidth)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnSizeChanged");
+		Func = Class->GetFunction("FortCosmeticItemCard_C", "OnSizeChanged");
 
 	Params::FortCosmeticItemCard_C_OnSizeChanged Parms{};
 
@@ -199,63 +199,25 @@ void UFortCosmeticItemCard_C::OnSizeChanged(float InCardWidth)
 void UFortCosmeticItemCard_C::OnHover()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnHover");
+		Func = Class->GetFunction("FortCosmeticItemCard_C", "OnHover");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function FortCosmeticItemCard.FortCosmeticItemCard_C.HandleUpdateVisuals
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bIsItem                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsBorderAnimated                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsHero                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsReward                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsShuffleItem                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ShowAsArchived                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    UseAnimations                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function FortCosmeticItemCard.FortCosmeticItemCard_C.OnUnhover
+// (Event, Protected, BlueprintEvent)
 
-void UFortCosmeticItemCard_C::HandleUpdateVisuals(bool bIsItem, bool bIsBorderAnimated, bool IsHero, bool IsReward, bool IsShuffleItem, bool ShowAsArchived, bool UseAnimations)
+void UFortCosmeticItemCard_C::OnUnhover()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HandleUpdateVisuals");
+		Func = Class->GetFunction("FortCosmeticItemCard_C", "OnUnhover");
 
-	Params::FortCosmeticItemCard_C_HandleUpdateVisuals Parms{};
-
-	Parms.bIsItem = bIsItem;
-	Parms.bIsBorderAnimated = bIsBorderAnimated;
-	Parms.IsHero = IsHero;
-	Parms.IsReward = IsReward;
-	Parms.IsShuffleItem = IsShuffleItem;
-	Parms.ShowAsArchived = ShowAsArchived;
-	Parms.UseAnimations = UseAnimations;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortCosmeticItemCard.FortCosmeticItemCard_C.HandleUpdateRarity
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FFortColorPalette                RarityColors                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-
-void UFortCosmeticItemCard_C::HandleUpdateRarity(const struct FFortColorPalette& RarityColors)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("HandleUpdateRarity");
-
-	Params::FortCosmeticItemCard_C_HandleUpdateRarity Parms{};
-
-	Parms.RarityColors = std::move(RarityColors);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -267,35 +229,13 @@ void UFortCosmeticItemCard_C::HandleUpdateRarity(const struct FFortColorPalette&
 void UFortCosmeticItemCard_C::ExecuteUbergraph_FortCosmeticItemCard(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_FortCosmeticItemCard");
+		Func = Class->GetFunction("FortCosmeticItemCard_C", "ExecuteUbergraph_FortCosmeticItemCard");
 
 	Params::FortCosmeticItemCard_C_ExecuteUbergraph_FortCosmeticItemCard Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortCosmeticItemCard.FortCosmeticItemCard_C.ArchiveAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsArchived                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    UseAnimations                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UFortCosmeticItemCard_C::ArchiveAnimation(bool IsArchived, bool UseAnimations)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ArchiveAnimation");
-
-	Params::FortCosmeticItemCard_C_ArchiveAnimation Parms{};
-
-	Parms.IsArchived = IsArchived;
-	Parms.UseAnimations = UseAnimations;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -31,15 +31,15 @@ void UAthenaBoundActionButton_C::UpdateInputActionIconSize()
 }
 
 
-// Function AthenaBoundActionButton.AthenaBoundActionButton_C.OnUpdateInputAction
-// (Event, Protected, BlueprintEvent)
+// Function AthenaBoundActionButton.AthenaBoundActionButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UAthenaBoundActionButton_C::OnUpdateInputAction()
+void UAthenaBoundActionButton_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaBoundActionButton_C", "OnUpdateInputAction");
+		Func = Class->GetFunction("AthenaBoundActionButton_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -62,20 +62,6 @@ void UAthenaBoundActionButton_C::ExecuteUbergraph_AthenaBoundActionButton(int32 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaBoundActionButton.AthenaBoundActionButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAthenaBoundActionButton_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaBoundActionButton_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

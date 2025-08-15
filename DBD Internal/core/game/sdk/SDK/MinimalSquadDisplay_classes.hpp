@@ -19,19 +19,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MinimalSquadDisplay.MinimalSquadDisplay_C
-// 0x0010 (0x02B0 - 0x02A0)
+// 0x0010 (0x02A8 - 0x0298)
 class UMinimalSquadDisplay_C final : public UAthenaTeamSquadEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 SquadRibbon;                                       // 0x02A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 SquadRibbon;                                       // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_MinimalSquadDisplay(int32 EntryPoint);
 	void OnLoaded_1B34C3FE47597A4DBA2DA7AFCF8744FB(class UObject* Loaded);
 	void OnLoaded_86B795124D19C878C8559FA7E78726E0(class UObject* Loaded);
 	void OnSquadAssigned(const struct FAthenaTeamDisplayInfo& SquadStyle);
 	void OnSquadIsEmptyChanged(bool bSquadIsEmpty, bool bMultipleSquadsPopulated);
+	void ExecuteUbergraph_MinimalSquadDisplay(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -44,9 +44,9 @@ public:
 	}
 };
 static_assert(alignof(UMinimalSquadDisplay_C) == 0x000008, "Wrong alignment on UMinimalSquadDisplay_C");
-static_assert(sizeof(UMinimalSquadDisplay_C) == 0x0002B0, "Wrong size on UMinimalSquadDisplay_C");
-static_assert(offsetof(UMinimalSquadDisplay_C, UberGraphFrame) == 0x0002A0, "Member 'UMinimalSquadDisplay_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMinimalSquadDisplay_C, SquadRibbon) == 0x0002A8, "Member 'UMinimalSquadDisplay_C::SquadRibbon' has a wrong offset!");
+static_assert(sizeof(UMinimalSquadDisplay_C) == 0x0002A8, "Wrong size on UMinimalSquadDisplay_C");
+static_assert(offsetof(UMinimalSquadDisplay_C, UberGraphFrame) == 0x000298, "Member 'UMinimalSquadDisplay_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UMinimalSquadDisplay_C, SquadRibbon) == 0x0002A0, "Member 'UMinimalSquadDisplay_C::SquadRibbon' has a wrong offset!");
 
 }
 

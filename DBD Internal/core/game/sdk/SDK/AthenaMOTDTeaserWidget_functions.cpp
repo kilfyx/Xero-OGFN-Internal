@@ -17,80 +17,6 @@
 namespace SDK
 {
 
-// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_0_OnListEntryGeneratedDynamic__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaMOTDTeaserWidget_C::BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_0_OnListEntryGeneratedDynamic__DelegateSignature(class UUserWidget* Widget)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_0_OnListEntryGeneratedDynamic__DelegateSignature");
-
-	Params::AthenaMOTDTeaserWidget_C_BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_0_OnListEntryGeneratedDynamic__DelegateSignature Parms{};
-
-	Parms.Widget = Widget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_1_OnListEntryReleasedDynamic__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaMOTDTeaserWidget_C::BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_1_OnListEntryReleasedDynamic__DelegateSignature(class UUserWidget* Widget)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_1_OnListEntryReleasedDynamic__DelegateSignature");
-
-	Params::AthenaMOTDTeaserWidget_C_BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_1_OnListEntryReleasedDynamic__DelegateSignature Parms{};
-
-	Parms.Widget = Widget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.BndEvt__SimpleCommonButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaMOTDTeaserWidget_C::BndEvt__SimpleCommonButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__SimpleCommonButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
-
-	Params::AthenaMOTDTeaserWidget_C_BndEvt__SimpleCommonButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAthenaMOTDTeaserWidget_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.ExecuteUbergraph_AthenaMOTDTeaserWidget
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -99,9 +25,9 @@ void UAthenaMOTDTeaserWidget_C::Construct()
 void UAthenaMOTDTeaserWidget_C::ExecuteUbergraph_AthenaMOTDTeaserWidget(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaMOTDTeaserWidget");
+		Func = Class->GetFunction("AthenaMOTDTeaserWidget_C", "ExecuteUbergraph_AthenaMOTDTeaserWidget");
 
 	Params::AthenaMOTDTeaserWidget_C_ExecuteUbergraph_AthenaMOTDTeaserWidget Parms{};
 
@@ -111,37 +37,17 @@ void UAthenaMOTDTeaserWidget_C::ExecuteUbergraph_AthenaMOTDTeaserWidget(int32 En
 }
 
 
-// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.HandleEntryWidgetHoveredChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    NewIsHovered                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaMOTDTeaserWidget_C::HandleEntryWidgetHoveredChanged(bool NewIsHovered)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("HandleEntryWidgetHoveredChanged");
-
-	Params::AthenaMOTDTeaserWidget_C_HandleEntryWidgetHoveredChanged Parms{};
-
-	Parms.NewIsHovered = NewIsHovered;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.OnClicked
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaMOTDTeaserWidget_C::OnClicked(class UCommonButtonLegacy* Button)
+void UAthenaMOTDTeaserWidget_C::OnClicked(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnClicked");
+		Func = Class->GetFunction("AthenaMOTDTeaserWidget_C", "OnClicked");
 
 	Params::AthenaMOTDTeaserWidget_C_OnClicked Parms{};
 
@@ -157,29 +63,69 @@ void UAthenaMOTDTeaserWidget_C::OnClicked(class UCommonButtonLegacy* Button)
 void UAthenaMOTDTeaserWidget_C::OnNewsPopulated()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnNewsPopulated");
+		Func = Class->GetFunction("AthenaMOTDTeaserWidget_C", "OnNewsPopulated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.BndEvt__SimpleCommonButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaMOTDTeaserWidget_C::PreConstruct(bool IsDesignTime)
+void UAthenaMOTDTeaserWidget_C::BndEvt__SimpleCommonButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PreConstruct");
+		Func = Class->GetFunction("AthenaMOTDTeaserWidget_C", "BndEvt__SimpleCommonButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
 
-	Params::AthenaMOTDTeaserWidget_C_PreConstruct Parms{};
+	Params::AthenaMOTDTeaserWidget_C_BndEvt__SimpleCommonButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.HandleEntryWidgetHoveredChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NewIsHovered                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaMOTDTeaserWidget_C::HandleEntryWidgetHoveredChanged(bool NewIsHovered)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMOTDTeaserWidget_C", "HandleEntryWidgetHoveredChanged");
+
+	Params::AthenaMOTDTeaserWidget_C_HandleEntryWidgetHoveredChanged Parms{};
+
+	Parms.NewIsHovered = NewIsHovered;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_1_OnListEntryReleasedDynamic__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaMOTDTeaserWidget_C::BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_1_OnListEntryReleasedDynamic__DelegateSignature(class UUserWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMOTDTeaserWidget_C", "BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_1_OnListEntryReleasedDynamic__DelegateSignature");
+
+	Params::AthenaMOTDTeaserWidget_C_BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_1_OnListEntryReleasedDynamic__DelegateSignature Parms{};
+
+	Parms.Widget = Widget;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -191,31 +137,63 @@ void UAthenaMOTDTeaserWidget_C::PreConstruct(bool IsDesignTime)
 void UAthenaMOTDTeaserWidget_C::ScrollNextItem()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ScrollNextItem");
+		Func = Class->GetFunction("AthenaMOTDTeaserWidget_C", "ScrollNextItem");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.SetDynamicColors
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_0_OnListEntryGeneratedDynamic__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// struct FLinearColor                     DarkColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FLinearColor                     LightColor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaMOTDTeaserWidget_C::SetDynamicColors(const struct FLinearColor& DarkColor, const struct FLinearColor& LightColor)
+void UAthenaMOTDTeaserWidget_C::BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_0_OnListEntryGeneratedDynamic__DelegateSignature(class UUserWidget* Widget)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetDynamicColors");
+		Func = Class->GetFunction("AthenaMOTDTeaserWidget_C", "BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_0_OnListEntryGeneratedDynamic__DelegateSignature");
 
-	Params::AthenaMOTDTeaserWidget_C_SetDynamicColors Parms{};
+	Params::AthenaMOTDTeaserWidget_C_BndEvt__FortAthenaMOTDTileListView_K2Node_ComponentBoundEvent_0_OnListEntryGeneratedDynamic__DelegateSignature Parms{};
 
-	Parms.DarkColor = std::move(DarkColor);
-	Parms.LightColor = std::move(LightColor);
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UAthenaMOTDTeaserWidget_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMOTDTeaserWidget_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaMOTDTeaserWidget_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMOTDTeaserWidget_C", "PreConstruct");
+
+	Params::AthenaMOTDTeaserWidget_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -227,11 +205,33 @@ void UAthenaMOTDTeaserWidget_C::SetDynamicColors(const struct FLinearColor& Dark
 void UAthenaMOTDTeaserWidget_C::UpdateCurDisplayedNewsVisual()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateCurDisplayedNewsVisual");
+		Func = Class->GetFunction("AthenaMOTDTeaserWidget_C", "UpdateCurDisplayedNewsVisual");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaMOTDTeaserWidget.AthenaMOTDTeaserWidget_C.SetDynamicColors
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FLinearColor&              DarkColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              LightColor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaMOTDTeaserWidget_C::SetDynamicColors(const struct FLinearColor& DarkColor, const struct FLinearColor& LightColor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMOTDTeaserWidget_C", "SetDynamicColors");
+
+	Params::AthenaMOTDTeaserWidget_C_SetDynamicColors Parms{};
+
+	Parms.DarkColor = std::move(DarkColor);
+	Parms.LightColor = std::move(LightColor);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

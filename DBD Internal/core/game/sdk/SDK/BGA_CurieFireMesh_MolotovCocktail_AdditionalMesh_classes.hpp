@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BGA_CurieFireMesh_MolotovCocktail_AdditionalMesh.BGA_CurieFireMesh_MolotovCocktail_AdditionalMesh_C
-// 0x0028 (0x0978 - 0x0950)
+// 0x0028 (0x0880 - 0x0858)
 class ABGA_CurieFireMesh_MolotovCocktail_AdditionalMesh_C final : public ABGA_GenericCurieFuel_Parent_C
 {
 public:
-	struct FScalableFloat                         SelfPropagationFuelRowValue;                       // 0x0950(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         SelfPropagationFuelRowValue;                       // 0x0858(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void UserConstructionScript();
@@ -37,6 +37,9 @@ public:
 		return GetDefaultObjImpl<ABGA_CurieFireMesh_MolotovCocktail_AdditionalMesh_C>();
 	}
 };
+static_assert(alignof(ABGA_CurieFireMesh_MolotovCocktail_AdditionalMesh_C) == 0x000008, "Wrong alignment on ABGA_CurieFireMesh_MolotovCocktail_AdditionalMesh_C");
+static_assert(sizeof(ABGA_CurieFireMesh_MolotovCocktail_AdditionalMesh_C) == 0x000880, "Wrong size on ABGA_CurieFireMesh_MolotovCocktail_AdditionalMesh_C");
+static_assert(offsetof(ABGA_CurieFireMesh_MolotovCocktail_AdditionalMesh_C, SelfPropagationFuelRowValue) == 0x000858, "Member 'ABGA_CurieFireMesh_MolotovCocktail_AdditionalMesh_C::SelfPropagationFuelRowValue' has a wrong offset!");
 
 }
 

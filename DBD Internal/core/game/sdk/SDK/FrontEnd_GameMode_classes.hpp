@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FrontEnd_GameMode.FrontEnd_GameMode_C
-// 0x0008 (0x07A8 - 0x07A0)
+// 0x0008 (0x06D0 - 0x06C8)
 class AFrontEnd_GameMode_C final : public AFortGameModeFrontEnd
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x07A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x06C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(AFrontEnd_GameMode_C) == 0x000008, "Wrong alignment on AFrontEnd_GameMode_C");
-static_assert(sizeof(AFrontEnd_GameMode_C) == 0x0007A8, "Wrong size on AFrontEnd_GameMode_C");
-static_assert(offsetof(AFrontEnd_GameMode_C, DefaultSceneRoot) == 0x0007A0, "Member 'AFrontEnd_GameMode_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(sizeof(AFrontEnd_GameMode_C) == 0x0006D0, "Wrong size on AFrontEnd_GameMode_C");
+static_assert(offsetof(AFrontEnd_GameMode_C, DefaultSceneRoot) == 0x0006C8, "Member 'AFrontEnd_GameMode_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

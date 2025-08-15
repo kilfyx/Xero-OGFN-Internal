@@ -17,30 +17,6 @@
 namespace SDK
 {
 
-// Function Prj_Athena_Bucket_Old.Prj_Athena_Bucket_Old_C.BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class AFortWaterBodyActor*              WaterBody                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFortWaterInteractionComponent*   WaterInteractionComponent_0                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsFirstBody                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APrj_Athena_Bucket_Old_C::BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_Bucket_Old_C", "BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature");
-
-	Params::Prj_Athena_Bucket_Old_C_BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature Parms{};
-
-	Parms.WaterBody = WaterBody;
-	Parms.WaterInteractionComponent_0 = WaterInteractionComponent_0;
-	Parms.bIsFirstBody = bIsFirstBody;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function Prj_Athena_Bucket_Old.Prj_Athena_Bucket_Old_C.ExecuteUbergraph_Prj_Athena_Bucket_Old
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -75,37 +51,15 @@ void APrj_Athena_Bucket_Old_C::Held_Water_Impact()
 }
 
 
-// Function Prj_Athena_Bucket_Old.Prj_Athena_Bucket_Old_C.OnExploded
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// Function Prj_Athena_Bucket_Old.Prj_Athena_Bucket_Old_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void APrj_Athena_Bucket_Old_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
+void APrj_Athena_Bucket_Old_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_Bucket_Old_C", "OnExploded");
-
-	Params::Prj_Athena_Bucket_Old_C_OnExploded Parms{};
-
-	Parms.HitActors = std::move(HitActors);
-	Parms.HitResults = std::move(HitResults);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Prj_Athena_Bucket_Old.Prj_Athena_Bucket_Old_C.OnRep_TurnOffFX
-// (BlueprintCallable, BlueprintEvent)
-
-void APrj_Athena_Bucket_Old_C::OnRep_TurnOffFX()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_Bucket_Old_C", "OnRep_TurnOffFX");
+		Func = Class->GetFunction("Prj_Athena_Bucket_Old_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -125,17 +79,49 @@ void APrj_Athena_Bucket_Old_C::PlayHitSound()
 }
 
 
-// Function Prj_Athena_Bucket_Old.Prj_Athena_Bucket_Old_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function Prj_Athena_Bucket_Old.Prj_Athena_Bucket_Old_C.BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class AFortWaterBodyActor*              WaterBody                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortWaterInteractionComponent*   WaterInteractionComponent_0                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsFirstBody                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void APrj_Athena_Bucket_Old_C::ReceiveBeginPlay()
+void APrj_Athena_Bucket_Old_C::BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Prj_Athena_Bucket_Old_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("Prj_Athena_Bucket_Old_C", "BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Prj_Athena_Bucket_Old_C_BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature Parms{};
+
+	Parms.WaterBody = WaterBody;
+	Parms.WaterInteractionComponent_0 = WaterInteractionComponent_0;
+	Parms.bIsFirstBody = bIsFirstBody;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Prj_Athena_Bucket_Old.Prj_Athena_Bucket_Old_C.OnExploded
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+
+void APrj_Athena_Bucket_Old_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_Bucket_Old_C", "OnExploded");
+
+	Params::Prj_Athena_Bucket_Old_C_OnExploded Parms{};
+
+	Parms.HitActors = std::move(HitActors);
+	Parms.HitResults = std::move(HitResults);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -145,7 +131,7 @@ void APrj_Athena_Bucket_Old_C::ReceiveBeginPlay()
 // class UPrimitiveComponent*              MyComp                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Other                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bSelfMoved                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSelfMoved                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const struct FVector&                   HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   HitNormal                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -170,6 +156,20 @@ void APrj_Athena_Bucket_Old_C::ReceiveHit(class UPrimitiveComponent* MyComp, cla
 	Parms.Hit = std::move(Hit);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Prj_Athena_Bucket_Old.Prj_Athena_Bucket_Old_C.OnRep_TurnOffFX
+// (BlueprintCallable, BlueprintEvent)
+
+void APrj_Athena_Bucket_Old_C::OnRep_TurnOffFX()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prj_Athena_Bucket_Old_C", "OnRep_TurnOffFX");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

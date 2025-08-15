@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass VaultSceneSinglePedestal.VaultSceneSinglePedestal_C
-// 0x0000 (0x0358 - 0x0358)
+// 0x0000 (0x02B8 - 0x02B8)
 class AVaultSceneSinglePedestal_C final : public AItemPreviewScene
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AVaultSceneSinglePedestal_C) == 0x000008, "Wrong alignment on AVaultSceneSinglePedestal_C");
-static_assert(sizeof(AVaultSceneSinglePedestal_C) == 0x000358, "Wrong size on AVaultSceneSinglePedestal_C");
+static_assert(sizeof(AVaultSceneSinglePedestal_C) == 0x0002B8, "Wrong size on AVaultSceneSinglePedestal_C");
 
 }
 

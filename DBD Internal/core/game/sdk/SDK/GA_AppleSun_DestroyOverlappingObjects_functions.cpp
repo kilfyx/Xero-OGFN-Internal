@@ -17,28 +17,6 @@
 namespace SDK
 {
 
-// Function GA_AppleSun_DestroyOverlappingObjects.GA_AppleSun_DestroyOverlappingObjects_C.Cancelled_96BA3C644E573EAE0D8760B88ABB3969
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UGA_AppleSun_DestroyOverlappingObjects_C::Cancelled_96BA3C644E573EAE0D8760B88ABB3969(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_AppleSun_DestroyOverlappingObjects_C", "Cancelled_96BA3C644E573EAE0D8760B88ABB3969");
-
-	Params::GA_AppleSun_DestroyOverlappingObjects_C_Cancelled_96BA3C644E573EAE0D8760B88ABB3969 Parms{};
-
-	Parms.TargetData = std::move(TargetData);
-	Parms.ApplicationTag = std::move(ApplicationTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_AppleSun_DestroyOverlappingObjects.GA_AppleSun_DestroyOverlappingObjects_C.ExecuteUbergraph_GA_AppleSun_DestroyOverlappingObjects
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -87,6 +65,28 @@ void UGA_AppleSun_DestroyOverlappingObjects_C::Targeted_96BA3C644E573EAE0D8760B8
 		Func = Class->GetFunction("GA_AppleSun_DestroyOverlappingObjects_C", "Targeted_96BA3C644E573EAE0D8760B88ABB3969");
 
 	Params::GA_AppleSun_DestroyOverlappingObjects_C_Targeted_96BA3C644E573EAE0D8760B88ABB3969 Parms{};
+
+	Parms.TargetData = std::move(TargetData);
+	Parms.ApplicationTag = std::move(ApplicationTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_AppleSun_DestroyOverlappingObjects.GA_AppleSun_DestroyOverlappingObjects_C.Cancelled_96BA3C644E573EAE0D8760B88ABB3969
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+
+void UGA_AppleSun_DestroyOverlappingObjects_C::Cancelled_96BA3C644E573EAE0D8760B88ABB3969(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_AppleSun_DestroyOverlappingObjects_C", "Cancelled_96BA3C644E573EAE0D8760B88ABB3969");
+
+	Params::GA_AppleSun_DestroyOverlappingObjects_C_Cancelled_96BA3C644E573EAE0D8760B88ABB3969 Parms{};
 
 	Parms.TargetData = std::move(TargetData);
 	Parms.ApplicationTag = std::move(ApplicationTag);

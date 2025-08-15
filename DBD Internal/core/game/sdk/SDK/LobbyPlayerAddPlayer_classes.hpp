@@ -18,17 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LobbyPlayerAddPlayer.LobbyPlayerAddPlayer_C
-// 0x0040 (0x14C0 - 0x1480)
+// 0x0030 (0x0C20 - 0x0BF0)
 class ULobbyPlayerAddPlayer_C final : public UFortLobbyAddPlayer
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1480(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       ShowPartyFinderText;                               // 0x1488(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnHovered;                                         // 0x1490(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_76;                                // 0x1498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortHUDElementWrapper_C*               FortHUDElementWrapper;                             // 0x14A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OverlayInputAction;                                // 0x14A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VB_ControlLegend;                                  // 0x14B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BF0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       ShowPartyFinderText;                               // 0x0BF8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnHovered;                                         // 0x0C00(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_76;                                // 0x0C08(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               OverlayInputAction;                                // 0x0C10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VB_ControlLegend;                                  // 0x0C18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_LobbyPlayerAddPlayer(int32 EntryPoint);
@@ -45,15 +44,14 @@ public:
 		return GetDefaultObjImpl<ULobbyPlayerAddPlayer_C>();
 	}
 };
-static_assert(alignof(ULobbyPlayerAddPlayer_C) == 0x000010, "Wrong alignment on ULobbyPlayerAddPlayer_C");
-static_assert(sizeof(ULobbyPlayerAddPlayer_C) == 0x0014C0, "Wrong size on ULobbyPlayerAddPlayer_C");
-static_assert(offsetof(ULobbyPlayerAddPlayer_C, UberGraphFrame) == 0x001480, "Member 'ULobbyPlayerAddPlayer_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ULobbyPlayerAddPlayer_C, ShowPartyFinderText) == 0x001488, "Member 'ULobbyPlayerAddPlayer_C::ShowPartyFinderText' has a wrong offset!");
-static_assert(offsetof(ULobbyPlayerAddPlayer_C, OnHovered) == 0x001490, "Member 'ULobbyPlayerAddPlayer_C::OnHovered' has a wrong offset!");
-static_assert(offsetof(ULobbyPlayerAddPlayer_C, CommonTextBlock_76) == 0x001498, "Member 'ULobbyPlayerAddPlayer_C::CommonTextBlock_76' has a wrong offset!");
-static_assert(offsetof(ULobbyPlayerAddPlayer_C, FortHUDElementWrapper) == 0x0014A0, "Member 'ULobbyPlayerAddPlayer_C::FortHUDElementWrapper' has a wrong offset!");
-static_assert(offsetof(ULobbyPlayerAddPlayer_C, OverlayInputAction) == 0x0014A8, "Member 'ULobbyPlayerAddPlayer_C::OverlayInputAction' has a wrong offset!");
-static_assert(offsetof(ULobbyPlayerAddPlayer_C, VB_ControlLegend) == 0x0014B0, "Member 'ULobbyPlayerAddPlayer_C::VB_ControlLegend' has a wrong offset!");
+static_assert(alignof(ULobbyPlayerAddPlayer_C) == 0x000008, "Wrong alignment on ULobbyPlayerAddPlayer_C");
+static_assert(sizeof(ULobbyPlayerAddPlayer_C) == 0x000C20, "Wrong size on ULobbyPlayerAddPlayer_C");
+static_assert(offsetof(ULobbyPlayerAddPlayer_C, UberGraphFrame) == 0x000BF0, "Member 'ULobbyPlayerAddPlayer_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ULobbyPlayerAddPlayer_C, ShowPartyFinderText) == 0x000BF8, "Member 'ULobbyPlayerAddPlayer_C::ShowPartyFinderText' has a wrong offset!");
+static_assert(offsetof(ULobbyPlayerAddPlayer_C, OnHovered) == 0x000C00, "Member 'ULobbyPlayerAddPlayer_C::OnHovered' has a wrong offset!");
+static_assert(offsetof(ULobbyPlayerAddPlayer_C, CommonTextBlock_76) == 0x000C08, "Member 'ULobbyPlayerAddPlayer_C::CommonTextBlock_76' has a wrong offset!");
+static_assert(offsetof(ULobbyPlayerAddPlayer_C, OverlayInputAction) == 0x000C10, "Member 'ULobbyPlayerAddPlayer_C::OverlayInputAction' has a wrong offset!");
+static_assert(offsetof(ULobbyPlayerAddPlayer_C, VB_ControlLegend) == 0x000C18, "Member 'ULobbyPlayerAddPlayer_C::VB_ControlLegend' has a wrong offset!");
 
 }
 

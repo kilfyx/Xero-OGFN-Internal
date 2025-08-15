@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Frontend_BattlePass.Frontend_BattlePass_C
-// 0x0000 (0x02A0 - 0x02A0)
+// 0x0000 (0x0238 - 0x0238)
 class AFrontend_BattlePass_C final : public AFortLevelScriptActor
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AFrontend_BattlePass_C) == 0x000008, "Wrong alignment on AFrontend_BattlePass_C");
-static_assert(sizeof(AFrontend_BattlePass_C) == 0x0002A0, "Wrong size on AFrontend_BattlePass_C");
+static_assert(sizeof(AFrontend_BattlePass_C) == 0x000238, "Wrong size on AFrontend_BattlePass_C");
 
 }
 

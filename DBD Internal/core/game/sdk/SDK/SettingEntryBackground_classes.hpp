@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SettingEntryBackground.SettingEntryBackground_C
-// 0x0028 (0x0270 - 0x0248)
+// 0x0028 (0x0288 - 0x0260)
 class USettingEntryBackground_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0248(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHover;                                           // 0x0250(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UNamedSlot*                             Content;                                           // 0x0258(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(bool IsEnterEvent)> OnMouseEnterChanged;                           // 0x0260(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHover;                                           // 0x0268(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UNamedSlot*                             Content;                                           // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(bool IsEnterEvent)> OnMouseEnterChanged;                           // 0x0278(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_SettingEntryBackground(int32 EntryPoint);
-	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
+	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 
 public:
 	static class UClass* StaticClass()
@@ -42,6 +42,12 @@ public:
 		return GetDefaultObjImpl<USettingEntryBackground_C>();
 	}
 };
+static_assert(alignof(USettingEntryBackground_C) == 0x000008, "Wrong alignment on USettingEntryBackground_C");
+static_assert(sizeof(USettingEntryBackground_C) == 0x000288, "Wrong size on USettingEntryBackground_C");
+static_assert(offsetof(USettingEntryBackground_C, UberGraphFrame) == 0x000260, "Member 'USettingEntryBackground_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USettingEntryBackground_C, OnHover) == 0x000268, "Member 'USettingEntryBackground_C::OnHover' has a wrong offset!");
+static_assert(offsetof(USettingEntryBackground_C, Content) == 0x000270, "Member 'USettingEntryBackground_C::Content' has a wrong offset!");
+static_assert(offsetof(USettingEntryBackground_C, OnMouseEnterChanged) == 0x000278, "Member 'USettingEntryBackground_C::OnMouseEnterChanged' has a wrong offset!");
 
 }
 

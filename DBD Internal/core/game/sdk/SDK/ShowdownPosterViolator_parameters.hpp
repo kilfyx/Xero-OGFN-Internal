@@ -36,7 +36,7 @@ public:
 	ETournmentPosterViolatorState                 Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETournmentPosterViolatorState                 K2Node_Event_NewTimeState;                         // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonBorder*                          K2Node_Select_Default;                             // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonBorder*                          K2Node_Select_Default;                             // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ShowdownPosterViolator_C_ExecuteUbergraph_ShowdownPosterViolator) == 0x000008, "Wrong alignment on ShowdownPosterViolator_C_ExecuteUbergraph_ShowdownPosterViolator");
 static_assert(sizeof(ShowdownPosterViolator_C_ExecuteUbergraph_ShowdownPosterViolator) == 0x000010, "Wrong size on ShowdownPosterViolator_C_ExecuteUbergraph_ShowdownPosterViolator");

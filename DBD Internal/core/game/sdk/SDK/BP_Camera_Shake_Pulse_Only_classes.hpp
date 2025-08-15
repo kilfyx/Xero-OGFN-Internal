@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBP_Camera_Shake_Pulse_Only_C>();
 	}
 };
+static_assert(alignof(UBP_Camera_Shake_Pulse_Only_C) == 0x000010, "Wrong alignment on UBP_Camera_Shake_Pulse_Only_C");
+static_assert(sizeof(UBP_Camera_Shake_Pulse_Only_C) == 0x0001B0, "Wrong size on UBP_Camera_Shake_Pulse_Only_C");
 
 }
 

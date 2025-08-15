@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Squad.Squad_C
-// 0x0028 (0x0318 - 0x02F0)
+// 0x0028 (0x0310 - 0x02E8)
 class USquad_C final : public UFortTeamSquadDetailedEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBorder*                                DarkenBorder;                                      // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        EntryLockSwitcher;                                 // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SquadLogo;                                         // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SquadRibbon;                                       // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBorder*                                DarkenBorder;                                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        EntryLockSwitcher;                                 // 0x02F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SquadLogo;                                         // 0x0300(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SquadRibbon;                                       // 0x0308(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Squad(int32 EntryPoint);
+	void OnSquadIsEmptyChanged(bool bSquadIsEmpty, bool bMultipleSquadsPopulated);
+	void OnSquadAssigned(const struct FAthenaTeamDisplayInfo& SquadStyle);
 	void OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E(class UObject* Loaded);
 	void OnLoaded_68F5F01141304474DB5D18BD77CD085C(class UObject* Loaded);
-	void OnSquadAssigned(const struct FAthenaTeamDisplayInfo& SquadStyle);
-	void OnSquadIsEmptyChanged(bool bSquadIsEmpty, bool bMultipleSquadsPopulated);
 
 public:
 	static class UClass* StaticClass()
@@ -46,12 +46,12 @@ public:
 	}
 };
 static_assert(alignof(USquad_C) == 0x000008, "Wrong alignment on USquad_C");
-static_assert(sizeof(USquad_C) == 0x000318, "Wrong size on USquad_C");
-static_assert(offsetof(USquad_C, UberGraphFrame) == 0x0002F0, "Member 'USquad_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USquad_C, DarkenBorder) == 0x0002F8, "Member 'USquad_C::DarkenBorder' has a wrong offset!");
-static_assert(offsetof(USquad_C, EntryLockSwitcher) == 0x000300, "Member 'USquad_C::EntryLockSwitcher' has a wrong offset!");
-static_assert(offsetof(USquad_C, SquadLogo) == 0x000308, "Member 'USquad_C::SquadLogo' has a wrong offset!");
-static_assert(offsetof(USquad_C, SquadRibbon) == 0x000310, "Member 'USquad_C::SquadRibbon' has a wrong offset!");
+static_assert(sizeof(USquad_C) == 0x000310, "Wrong size on USquad_C");
+static_assert(offsetof(USquad_C, UberGraphFrame) == 0x0002E8, "Member 'USquad_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USquad_C, DarkenBorder) == 0x0002F0, "Member 'USquad_C::DarkenBorder' has a wrong offset!");
+static_assert(offsetof(USquad_C, EntryLockSwitcher) == 0x0002F8, "Member 'USquad_C::EntryLockSwitcher' has a wrong offset!");
+static_assert(offsetof(USquad_C, SquadLogo) == 0x000300, "Member 'USquad_C::SquadLogo' has a wrong offset!");
+static_assert(offsetof(USquad_C, SquadRibbon) == 0x000308, "Member 'USquad_C::SquadRibbon' has a wrong offset!");
 
 }
 

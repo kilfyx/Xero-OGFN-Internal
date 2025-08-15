@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C
-// 0x0028 (0x0AD0 - 0x0AA8)
+// 0x0028 (0x0AE0 - 0x0AB8)
 class UGA_Athena_Slurp_OLD_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         IncreCheck;                                        // 0x0AB8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MaxTicks;                                          // 0x0ABC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           TimerHandle;                                       // 0x0AC0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         TickRate;                                          // 0x0AC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         IncreCheck;                                        // 0x0AC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MaxTicks;                                          // 0x0ACC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           TimerHandle;                                       // 0x0AD0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         TickRate;                                          // 0x0AD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ApplyHealthOrShield();
 	void ExecuteUbergraph_GA_Athena_Slurp_OLD(int32 EntryPoint);
-	void K2_ActivateAbility();
+	void ApplyHealthOrShield();
 	void K2_OnEndAbility(bool bWasCancelled);
+	void K2_ActivateAbility();
 
 public:
 	static class UClass* StaticClass()
@@ -45,6 +45,14 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_Slurp_OLD_C>();
 	}
 };
+static_assert(alignof(UGA_Athena_Slurp_OLD_C) == 0x000008, "Wrong alignment on UGA_Athena_Slurp_OLD_C");
+static_assert(sizeof(UGA_Athena_Slurp_OLD_C) == 0x000AE0, "Wrong size on UGA_Athena_Slurp_OLD_C");
+static_assert(offsetof(UGA_Athena_Slurp_OLD_C, UberGraphFrame) == 0x000AB8, "Member 'UGA_Athena_Slurp_OLD_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UGA_Athena_Slurp_OLD_C, PlayerPawn) == 0x000AC0, "Member 'UGA_Athena_Slurp_OLD_C::PlayerPawn' has a wrong offset!");
+static_assert(offsetof(UGA_Athena_Slurp_OLD_C, IncreCheck) == 0x000AC8, "Member 'UGA_Athena_Slurp_OLD_C::IncreCheck' has a wrong offset!");
+static_assert(offsetof(UGA_Athena_Slurp_OLD_C, MaxTicks) == 0x000ACC, "Member 'UGA_Athena_Slurp_OLD_C::MaxTicks' has a wrong offset!");
+static_assert(offsetof(UGA_Athena_Slurp_OLD_C, TimerHandle) == 0x000AD0, "Member 'UGA_Athena_Slurp_OLD_C::TimerHandle' has a wrong offset!");
+static_assert(offsetof(UGA_Athena_Slurp_OLD_C, TickRate) == 0x000AD8, "Member 'UGA_Athena_Slurp_OLD_C::TickRate' has a wrong offset!");
 
 }
 

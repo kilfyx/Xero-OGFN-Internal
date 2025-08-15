@@ -17,30 +17,25 @@
 namespace SDK
 {
 
-// Function TT_Commando_FragGrenade.TT_Commando_FragGrenade_C.GetApplicationTag
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Function TT_Commando_FragGrenade.TT_Commando_FragGrenade_C.InitializeAbilityInstanceInternal
+// (Event, Protected, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // const class UGameplayAbility*           AbilityInstance                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayTag*                    OutTag                                                 (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UFortTooltipContext*        Context                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UTT_Commando_FragGrenade_C::GetApplicationTag(const class UGameplayAbility* AbilityInstance, struct FGameplayTag* OutTag) const
+void UTT_Commando_FragGrenade_C::InitializeAbilityInstanceInternal(const class UGameplayAbility* AbilityInstance, const class UFortTooltipContext* Context) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TT_Commando_FragGrenade_C", "GetApplicationTag");
+		Func = Class->GetFunction("TT_Commando_FragGrenade_C", "InitializeAbilityInstanceInternal");
 
-	Params::TT_Commando_FragGrenade_C_GetApplicationTag Parms{};
+	Params::TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal Parms{};
 
 	Parms.AbilityInstance = AbilityInstance;
+	Parms.Context = Context;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutTag != nullptr)
-		*OutTag = std::move(Parms.OutTag);
-
-	return Parms.ReturnValue;
 }
 
 
@@ -52,7 +47,7 @@ bool UTT_Commando_FragGrenade_C::GetApplicationTag(const class UGameplayAbility*
 // const class UFortTooltipContext*        Context                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayTag&              Token                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // class FText*                            OutText                                                (Parm, OutParm)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UTT_Commando_FragGrenade_C::GetTextForTokenFromAbilityInstanceInternal(const class UGameplayAbility* AbilityInstance, const struct FGameplayTag& Tag, const class UFortTooltipContext* Context, const struct FGameplayTag& Token, class FText* OutText) const
 {
@@ -77,25 +72,30 @@ bool UTT_Commando_FragGrenade_C::GetTextForTokenFromAbilityInstanceInternal(cons
 }
 
 
-// Function TT_Commando_FragGrenade.TT_Commando_FragGrenade_C.InitializeAbilityInstanceInternal
-// (Event, Protected, BlueprintCallable, BlueprintEvent, Const)
+// Function TT_Commando_FragGrenade.TT_Commando_FragGrenade_C.GetApplicationTag
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // const class UGameplayAbility*           AbilityInstance                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UFortTooltipContext*        Context                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FGameplayTag*                    OutTag                                                 (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-void UTT_Commando_FragGrenade_C::InitializeAbilityInstanceInternal(const class UGameplayAbility* AbilityInstance, const class UFortTooltipContext* Context) const
+bool UTT_Commando_FragGrenade_C::GetApplicationTag(const class UGameplayAbility* AbilityInstance, struct FGameplayTag* OutTag) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TT_Commando_FragGrenade_C", "InitializeAbilityInstanceInternal");
+		Func = Class->GetFunction("TT_Commando_FragGrenade_C", "GetApplicationTag");
 
-	Params::TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal Parms{};
+	Params::TT_Commando_FragGrenade_C_GetApplicationTag Parms{};
 
 	Parms.AbilityInstance = AbilityInstance;
-	Parms.Context = Context;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutTag != nullptr)
+		*OutTag = std::move(Parms.OutTag);
+
+	return Parms.ReturnValue;
 }
 
 }

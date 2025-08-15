@@ -22,10 +22,10 @@ namespace SDK
 class UItemUIFunctionLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
+	static void ParseLevelRequiredFromString(const class FString& inString, class UObject* __WorldContext, int32* outInt);
 	static void Convert_Tier_To_Integer(EFortItemTier Tier, class UObject* __WorldContext, int32* Numeric_Tier);
-	static void IsNullItem(class UObject* ItemObject, class UObject* __WorldContext, bool* Is_Null_Item);
-	static void ParseLevelRequiredFromString(const class FString& InString, class UObject* __WorldContext, int32* outInt);
 	static void Truncate_Integer_Value(int32 Value, int32 Min_Fractional_Digits, int32 Max_Fractional_Digits, class UObject* __WorldContext, class FText* Formatted_Value);
+	static void IsNullItem(class UObject* ItemObject, class UObject* __WorldContext, bool* Is_Null_Item);
 
 public:
 	static class UClass* StaticClass()
@@ -37,6 +37,8 @@ public:
 		return GetDefaultObjImpl<UItemUIFunctionLibrary_C>();
 	}
 };
+static_assert(alignof(UItemUIFunctionLibrary_C) == 0x000008, "Wrong alignment on UItemUIFunctionLibrary_C");
+static_assert(sizeof(UItemUIFunctionLibrary_C) == 0x000028, "Wrong size on UItemUIFunctionLibrary_C");
 
 }
 

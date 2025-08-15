@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGET_DirectVehicleDamage_C>();
 	}
 };
+static_assert(alignof(UGET_DirectVehicleDamage_C) == 0x000008, "Wrong alignment on UGET_DirectVehicleDamage_C");
+static_assert(sizeof(UGET_DirectVehicleDamage_C) == 0x000800, "Wrong size on UGET_DirectVehicleDamage_C");
 
 }
 

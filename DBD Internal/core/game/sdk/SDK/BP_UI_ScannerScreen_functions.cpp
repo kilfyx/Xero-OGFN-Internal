@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function BP_UI_ScannerScreen.BP_UI_ScannerScreen_C.ExecuteUbergraph_BP_UI_ScannerScreen
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_UI_ScannerScreen_C::ExecuteUbergraph_BP_UI_ScannerScreen(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_UI_ScannerScreen_C", "ExecuteUbergraph_BP_UI_ScannerScreen");
+
+	Params::BP_UI_ScannerScreen_C_ExecuteUbergraph_BP_UI_ScannerScreen Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_UI_ScannerScreen.BP_UI_ScannerScreen_C.ScreenEventTargetLost
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -37,23 +57,17 @@ void ABP_UI_ScannerScreen_C::ScreenEventTargetLost(const class FText& LostText)
 }
 
 
-// Function BP_UI_ScannerScreen.BP_UI_ScannerScreen_C.ScreenEventSuccess
+// Function BP_UI_ScannerScreen.BP_UI_ScannerScreen_C.ScreenEventDismiss
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      SuccessText                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_UI_ScannerScreen_C::ScreenEventSuccess(const class FText& SuccessText)
+void ABP_UI_ScannerScreen_C::ScreenEventDismiss()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UI_ScannerScreen_C", "ScreenEventSuccess");
+		Func = Class->GetFunction("BP_UI_ScannerScreen_C", "ScreenEventDismiss");
 
-	Params::BP_UI_ScannerScreen_C_ScreenEventSuccess Parms{};
-
-	Parms.SuccessText = std::move(SuccessText);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -91,10 +105,30 @@ void ABP_UI_ScannerScreen_C::ScreenEventFailure(const class FText& FailureText)
 }
 
 
+// Function BP_UI_ScannerScreen.BP_UI_ScannerScreen_C.ScreenEventSuccess
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      SuccessText                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABP_UI_ScannerScreen_C::ScreenEventSuccess(const class FText& SuccessText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_UI_ScannerScreen_C", "ScreenEventSuccess");
+
+	Params::BP_UI_ScannerScreen_C_ScreenEventSuccess Parms{};
+
+	Parms.SuccessText = std::move(SuccessText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_UI_ScannerScreen.BP_UI_ScannerScreen_C.ScreenEventError
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Reverse                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Reverse                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABP_UI_ScannerScreen_C::ScreenEventError(bool Reverse)
 {
@@ -111,20 +145,6 @@ void ABP_UI_ScannerScreen_C::ScreenEventError(bool Reverse)
 }
 
 
-// Function BP_UI_ScannerScreen.BP_UI_ScannerScreen_C.ScreenEventDismiss
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_UI_ScannerScreen_C::ScreenEventDismiss()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UI_ScannerScreen_C", "ScreenEventDismiss");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_UI_ScannerScreen.BP_UI_ScannerScreen_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -136,26 +156,6 @@ void ABP_UI_ScannerScreen_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_UI_ScannerScreen_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_UI_ScannerScreen.BP_UI_ScannerScreen_C.ExecuteUbergraph_BP_UI_ScannerScreen
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_UI_ScannerScreen_C::ExecuteUbergraph_BP_UI_ScannerScreen(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UI_ScannerScreen_C", "ExecuteUbergraph_BP_UI_ScannerScreen");
-
-	Params::BP_UI_ScannerScreen_C_ExecuteUbergraph_BP_UI_ScannerScreen Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function BuildWatermark.BuildWatermark_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UBuildWatermark_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuildWatermark_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BuildWatermark.BuildWatermark_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UBuildWatermark_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuildWatermark_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BuildWatermark.BuildWatermark_C.ExecuteUbergraph_BuildWatermark
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -65,20 +37,6 @@ void UBuildWatermark_C::ExecuteUbergraph_BuildWatermark(int32 EntryPoint)
 }
 
 
-// Function BuildWatermark.BuildWatermark_C.HandlePartyJoined
-// (BlueprintCallable, BlueprintEvent)
-
-void UBuildWatermark_C::HandlePartyJoined()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuildWatermark_C", "HandlePartyJoined");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BuildWatermark.BuildWatermark_C.HandlePlayerStateChanged
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -96,6 +54,48 @@ void UBuildWatermark_C::HandlePlayerStateChanged(const struct FFortTeamMemberInf
 	Parms.PlayerInfo = std::move(PlayerInfo);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BuildWatermark.BuildWatermark_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UBuildWatermark_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuildWatermark_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BuildWatermark.BuildWatermark_C.HandlePartyJoined
+// (BlueprintCallable, BlueprintEvent)
+
+void UBuildWatermark_C::HandlePartyJoined()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuildWatermark_C", "HandlePartyJoined");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BuildWatermark.BuildWatermark_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UBuildWatermark_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuildWatermark_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

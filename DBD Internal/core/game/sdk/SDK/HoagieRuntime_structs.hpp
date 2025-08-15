@@ -11,10 +11,6 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "FortniteGame_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 
 
 namespace SDK
@@ -32,23 +28,6 @@ enum class EHoagieBoostState : uint8
 	EHoagieBoostState_MAX                    = 5,
 };
 
-// Enum HoagieRuntime.EHoagieState
-// NumValues: 0x000B
-enum class EHoagieState : uint32
-{
-	STARTUP                                  = 0,
-	STARTUP_LIFT                             = 1,
-	FLIGHT                                   = 2,
-	AUTO_LANDING                             = 3,
-	SPIN_CRASHING                            = 4,
-	CRASHING_NO_SPIN                         = 5,
-	CRASH_LANDED                             = 6,
-	LANDED                                   = 7,
-	EXPLODING                                = 8,
-	NONE                                     = 9,
-	EHoagieState_MAX                         = 10,
-};
-
 // ScriptStruct HoagieRuntime.FortHeliFlightModel
 // 0x0110 (0x0110 - 0x0000)
 struct FFortHeliFlightModel final
@@ -57,15 +36,22 @@ public:
 	uint8                                         Pad_0[0x108];                                      // 0x0000(0x0108)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFortHoagieVehicleConfigs*              Configs;                                           // 0x0108(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
+static_assert(alignof(FFortHeliFlightModel) == 0x000008, "Wrong alignment on FFortHeliFlightModel");
+static_assert(sizeof(FFortHeliFlightModel) == 0x000110, "Wrong size on FFortHeliFlightModel");
+static_assert(offsetof(FFortHeliFlightModel, Configs) == 0x000108, "Member 'FFortHeliFlightModel::Configs' has a wrong offset!");
 
-// ScriptStruct HoagieRuntime.RotorHit
-// 0x001C (0x001C - 0x0000)
-struct FRotorHit final
+// ScriptStruct HoagieRuntime.ReplicatedHeliControlState
+// 0x0018 (0x0018 - 0x0000)
+struct FReplicatedHeliControlState final
 {
 public:
-	struct FActorInstanceHandle                   HitObjectHandle;                                   // 0x0000(0x0018)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LastHitTimer;                                      // 0x0018(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector_NetQuantizeNormal              Up;                                                // 0x0000(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector_NetQuantizeNormal              Forward;                                           // 0x000C(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FReplicatedHeliControlState) == 0x000004, "Wrong alignment on FReplicatedHeliControlState");
+static_assert(sizeof(FReplicatedHeliControlState) == 0x000018, "Wrong size on FReplicatedHeliControlState");
+static_assert(offsetof(FReplicatedHeliControlState, Up) == 0x000000, "Member 'FReplicatedHeliControlState::Up' has a wrong offset!");
+static_assert(offsetof(FReplicatedHeliControlState, Forward) == 0x00000C, "Member 'FReplicatedHeliControlState::Forward' has a wrong offset!");
 
 // ScriptStruct HoagieRuntime.CachedSeatCollision
 // 0x0008 (0x0008 - 0x0000)
@@ -76,71 +62,23 @@ public:
 	bool                                          bOccupied;                                         // 0x0004(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FCachedSeatCollision) == 0x000004, "Wrong alignment on FCachedSeatCollision");
+static_assert(sizeof(FCachedSeatCollision) == 0x000008, "Wrong size on FCachedSeatCollision");
+static_assert(offsetof(FCachedSeatCollision, SeatIndex) == 0x000000, "Member 'FCachedSeatCollision::SeatIndex' has a wrong offset!");
+static_assert(offsetof(FCachedSeatCollision, bOccupied) == 0x000004, "Member 'FCachedSeatCollision::bOccupied' has a wrong offset!");
 
-// ScriptStruct HoagieRuntime.ReplicatedHeliControlState
-// 0x0018 (0x0018 - 0x0000)
-struct FReplicatedHeliControlState final
+// ScriptStruct HoagieRuntime.RotorHit
+// 0x000C (0x000C - 0x0000)
+struct FRotorHit final
 {
 public:
-	struct FVector_NetQuantizeNormal              Up;                                                // 0x0000(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector_NetQuantizeNormal              Forward;                                           // 0x000C(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class AActor>                  HitActor;                                          // 0x0000(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LastHitTimer;                                      // 0x0008(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct HoagieRuntime.HoagieCmd
-// 0x0044 (0x0044 - 0x0000)
-struct alignas(0x04) FHoagieCmd final
-{
-public:
-	uint8                                         Pad_0[0x44];                                       // 0x0000(0x0044)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct HoagieRuntime.HoagieInPersistent
-// 0x0028 (0x0170 - 0x0148)
-struct FHoagieInPersistent final : public FFortVehicleInPersistent
-{
-public:
-	class UFortHoagieVehicleConfigs*              FortHoagieVehicleConfigs;                          // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHoagieState                                  CurrentHoagieState;                                // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LastRotorImpulseTime;                              // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                RotorHitLinearImpulse;                             // 0x0158(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                RotorHitAngularImpulse;                            // 0x0164(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct HoagieRuntime.HoagieInternal
-// 0x0118 (0x0170 - 0x0058)
-struct FHoagieInternal final : public FFortVehicleInternalPersistent
-{
-public:
-	struct FFortHeliFlightModel                   FlightModel;                                       // 0x0058(0x0110)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_168[0x8];                                      // 0x0168(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct HoagieRuntime.HoagieOutContinuous
-// 0x0000 (0x0028 - 0x0028)
-struct FHoagieOutContinuous final : public FFortVehicleOutContinuous
-{
-};
-
-// ScriptStruct HoagieRuntime.HoagieOutPersistent
-// 0x0000 (0x0010 - 0x0010)
-struct FHoagieOutPersistent final : public FFortVehicleOutPersistent
-{
-};
-
-// ScriptStruct HoagieRuntime.HoagieDeathEffectInfo
-// 0x00F8 (0x00F8 - 0x0000)
-struct FHoagieDeathEffectInfo final
-{
-public:
-	float                                         Damage;                                            // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  DamageTags;                                        // 0x0008(0x0020)(NativeAccessSpecifierPublic)
-	struct FVector                                Momentum;                                          // 0x0028(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FHitResult                             HitInfo;                                           // 0x0034(0x009C)(IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	class AFortPawn*                              InstigatedBy;                                      // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 DamageCauser;                                      // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00E0(0x0018)(NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FRotorHit) == 0x000004, "Wrong alignment on FRotorHit");
+static_assert(sizeof(FRotorHit) == 0x00000C, "Wrong size on FRotorHit");
+static_assert(offsetof(FRotorHit, HitActor) == 0x000000, "Member 'FRotorHit::HitActor' has a wrong offset!");
+static_assert(offsetof(FRotorHit, LastHitTimer) == 0x000008, "Member 'FRotorHit::LastHitTimer' has a wrong offset!");
 
 }
 

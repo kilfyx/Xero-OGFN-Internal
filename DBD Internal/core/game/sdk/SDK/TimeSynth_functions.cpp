@@ -171,7 +171,7 @@ void UTimeSynthComponent::SetEnvelopeFollowerEnabled(bool bInIsEnabled)
 // Function TimeSynth.TimeSynthComponent.SetEnvelopeFollowerSettings
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const struct FTimeSynthEnvelopeFollowerSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FTimeSynthEnvelopeFollowerSettings&InSettings                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void UTimeSynthComponent::SetEnvelopeFollowerSettings(const struct FTimeSynthEnvelopeFollowerSettings& InSettings)
 {
@@ -249,7 +249,7 @@ void UTimeSynthComponent::SetFilterEnabled(ETimeSynthFilter Filter, bool bIsEnab
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // ETimeSynthFilter                        Filter                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FTimeSynthFilterSettings&  InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FTimeSynthFilterSettings&  InSettings                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void UTimeSynthComponent::SetFilterSettings(ETimeSynthFilter Filter, const struct FTimeSynthFilterSettings& InSettings)
 {
@@ -541,7 +541,7 @@ int32 UTimeSynthComponent::GetMaxActiveClipLimit() const
 // Function TimeSynth.TimeSynthComponent.GetSpectralData
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FTimeSynthSpectralData>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TArray<struct FTimeSynthSpectralData>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<struct FTimeSynthSpectralData> UTimeSynthComponent::GetSpectralData() const
 {

@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function SocialPanelTab.SocialPanelTab_C.ExecuteUbergraph_SocialPanelTab
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USocialPanelTab_C::ExecuteUbergraph_SocialPanelTab(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanelTab_C", "ExecuteUbergraph_SocialPanelTab");
+
+	Params::SocialPanelTab_C_ExecuteUbergraph_SocialPanelTab Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function SocialPanelTab.SocialPanelTab_C.BP_OnDeselected
 // (Event, Protected, BlueprintEvent)
 
@@ -26,20 +46,6 @@ void USocialPanelTab_C::BP_OnDeselected()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("SocialPanelTab_C", "BP_OnDeselected");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialPanelTab.SocialPanelTab_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void USocialPanelTab_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanelTab_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -73,23 +79,17 @@ void USocialPanelTab_C::BP_OnUnhovered()
 }
 
 
-// Function SocialPanelTab.SocialPanelTab_C.ExecuteUbergraph_SocialPanelTab
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function SocialPanelTab.SocialPanelTab_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
 
-void USocialPanelTab_C::ExecuteUbergraph_SocialPanelTab(int32 EntryPoint)
+void USocialPanelTab_C::BP_OnHovered()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanelTab_C", "ExecuteUbergraph_SocialPanelTab");
+		Func = Class->GetFunction("SocialPanelTab_C", "BP_OnHovered");
 
-	Params::SocialPanelTab_C_ExecuteUbergraph_SocialPanelTab Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

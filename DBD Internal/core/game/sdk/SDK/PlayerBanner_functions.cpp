@@ -17,6 +17,40 @@
 namespace SDK
 {
 
+// Function PlayerBanner.PlayerBanner_C.ExecuteUbergraph_PlayerBanner
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UPlayerBanner_C::ExecuteUbergraph_PlayerBanner(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerBanner_C", "ExecuteUbergraph_PlayerBanner");
+
+	Params::PlayerBanner_C_ExecuteUbergraph_PlayerBanner Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PlayerBanner.PlayerBanner_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UPlayerBanner_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerBanner_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function PlayerBanner.PlayerBanner_C.Account Info Changed
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -37,63 +71,85 @@ void UPlayerBanner_C::Account_Info_Changed(const struct FFortPublicAccountInfo& 
 }
 
 
-// Function PlayerBanner.PlayerBanner_C.ClearBannerState
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UPlayerBanner_C::ClearBannerState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBanner_C", "ClearBannerState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PlayerBanner.PlayerBanner_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UPlayerBanner_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBanner_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PlayerBanner.PlayerBanner_C.EnableSurround
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UPlayerBanner_C::EnableSurround()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBanner_C", "EnableSurround");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PlayerBanner.PlayerBanner_C.ExecuteUbergraph_PlayerBanner
-// (Final, UbergraphFunction, HasDefaults)
+// Function PlayerBanner.PlayerBanner_C.SetBannerImage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FFortHomeBaseInfo&         Image_info                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UPlayerBanner_C::ExecuteUbergraph_PlayerBanner(int32 EntryPoint)
+void UPlayerBanner_C::SetBannerImage(const struct FFortHomeBaseInfo& Image_info, bool* Success)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBanner_C", "ExecuteUbergraph_PlayerBanner");
+		Func = Class->GetFunction("PlayerBanner_C", "SetBannerImage");
 
-	Params::PlayerBanner_C_ExecuteUbergraph_PlayerBanner Parms{};
+	Params::PlayerBanner_C_SetBannerImage Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Image_info = std::move(Image_info);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Success != nullptr)
+		*Success = Parms.Success;
+}
+
+
+// Function PlayerBanner.PlayerBanner_C.SetBannerIconId
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             InBannerIconId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UPlayerBanner_C::SetBannerIconId(class FName InBannerIconId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerBanner_C", "SetBannerIconId");
+
+	Params::PlayerBanner_C_SetBannerIconId Parms{};
+
+	Parms.InBannerIconId = InBannerIconId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PlayerBanner.PlayerBanner_C.SetBannerColorId
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             InBannerColorId                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UPlayerBanner_C::SetBannerColorId(class FName InBannerColorId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerBanner_C", "SetBannerColorId");
+
+	Params::PlayerBanner_C_SetBannerColorId Parms{};
+
+	Parms.InBannerColorId = InBannerColorId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PlayerBanner.PlayerBanner_C.SetBannerOwner
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FUniqueNetIdRepl&          OwnerId                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void UPlayerBanner_C::SetBannerOwner(const struct FUniqueNetIdRepl& OwnerId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerBanner_C", "SetBannerOwner");
+
+	Params::PlayerBanner_C_SetBannerOwner Parms{};
+
+	Parms.OwnerId = std::move(OwnerId);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -140,6 +196,34 @@ void UPlayerBanner_C::OnBannerIconLoaded(class UObject* LoadedObject)
 }
 
 
+// Function PlayerBanner.PlayerBanner_C.ClearBannerState
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UPlayerBanner_C::ClearBannerState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerBanner_C", "ClearBannerState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PlayerBanner.PlayerBanner_C.EnableSurround
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UPlayerBanner_C::EnableSurround()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerBanner_C", "EnableSurround");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function PlayerBanner.PlayerBanner_C.OnSurroundIconLoaded
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -180,21 +264,21 @@ void UPlayerBanner_C::RefreshSurround(int32 Level)
 }
 
 
-// Function PlayerBanner.PlayerBanner_C.SetBannerColorId
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function PlayerBanner.PlayerBanner_C.ToggleBannerMask
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             InBannerColorId                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UPlayerBanner_C::SetBannerColorId(class FName InBannerColorId)
+void UPlayerBanner_C::ToggleBannerMask(bool Enable)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBanner_C", "SetBannerColorId");
+		Func = Class->GetFunction("PlayerBanner_C", "ToggleBannerMask");
 
-	Params::PlayerBanner_C_SetBannerColorId Parms{};
+	Params::PlayerBanner_C_ToggleBannerMask Parms{};
 
-	Parms.InBannerColorId = InBannerColorId;
+	Parms.Enable = Enable;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -236,70 +320,6 @@ void UPlayerBanner_C::SetBannerIconAndColorFromProfile()
 }
 
 
-// Function PlayerBanner.PlayerBanner_C.SetBannerIconId
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             InBannerIconId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UPlayerBanner_C::SetBannerIconId(class FName InBannerIconId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBanner_C", "SetBannerIconId");
-
-	Params::PlayerBanner_C_SetBannerIconId Parms{};
-
-	Parms.InBannerIconId = InBannerIconId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PlayerBanner.PlayerBanner_C.SetBannerImage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FFortHomeBaseInfo&         Image_info                                             (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UPlayerBanner_C::SetBannerImage(const struct FFortHomeBaseInfo& Image_info, bool* Success)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBanner_C", "SetBannerImage");
-
-	Params::PlayerBanner_C_SetBannerImage Parms{};
-
-	Parms.Image_info = std::move(Image_info);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Success != nullptr)
-		*Success = Parms.Success;
-}
-
-
-// Function PlayerBanner.PlayerBanner_C.SetBannerOwner
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FUniqueNetIdRepl&          OwnerId                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void UPlayerBanner_C::SetBannerOwner(const struct FUniqueNetIdRepl& OwnerId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBanner_C", "SetBannerOwner");
-
-	Params::PlayerBanner_C_SetBannerOwner Parms{};
-
-	Parms.OwnerId = std::move(OwnerId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function PlayerBanner.PlayerBanner_C.SetupSurround
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -311,26 +331,6 @@ void UPlayerBanner_C::SetupSurround()
 		Func = Class->GetFunction("PlayerBanner_C", "SetupSurround");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PlayerBanner.PlayerBanner_C.ToggleBannerMask
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UPlayerBanner_C::ToggleBannerMask(bool Enable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBanner_C", "ToggleBannerMask");
-
-	Params::PlayerBanner_C_ToggleBannerMask Parms{};
-
-	Parms.Enable = Enable;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

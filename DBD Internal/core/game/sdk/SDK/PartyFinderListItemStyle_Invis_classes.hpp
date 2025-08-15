@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PartyFinderListItemStyle_Invis.PartyFinderListItemStyle_Invis_C
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0000 (0x0570 - 0x0570)
 class UPartyFinderListItemStyle_Invis_C final : public UButtonStyle_Base_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UPartyFinderListItemStyle_Invis_C>();
 	}
 };
+static_assert(alignof(UPartyFinderListItemStyle_Invis_C) == 0x000008, "Wrong alignment on UPartyFinderListItemStyle_Invis_C");
+static_assert(sizeof(UPartyFinderListItemStyle_Invis_C) == 0x000570, "Wrong size on UPartyFinderListItemStyle_Invis_C");
 
 }
 

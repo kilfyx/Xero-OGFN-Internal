@@ -19,21 +19,21 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C
-// 0x0020 (0x0AC8 - 0x0AA8)
+// 0x0020 (0x0AD8 - 0x0AB8)
 class UGA_SurfaceChange_Ice_IceCheckOnTimer_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        FortPlayerPawn;                                    // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           TraceTimer;                                        // 0x0AB8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           OffIceTimer;                                       // 0x0AC0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        FortPlayerPawn;                                    // 0x0AC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           TraceTimer;                                        // 0x0AC8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           OffIceTimer;                                       // 0x0AD0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_SurfaceChange_Ice_IceCheckOnTimer(int32 EntryPoint);
-	void K2_ActivateAbility();
-	void K2_OnEndAbility(bool bWasCancelled);
 	void RemoveIceGE();
 	void TraceForTerrain();
+	void K2_OnEndAbility(bool bWasCancelled);
+	void K2_ActivateAbility();
 
 public:
 	static class UClass* StaticClass()
@@ -45,6 +45,12 @@ public:
 		return GetDefaultObjImpl<UGA_SurfaceChange_Ice_IceCheckOnTimer_C>();
 	}
 };
+static_assert(alignof(UGA_SurfaceChange_Ice_IceCheckOnTimer_C) == 0x000008, "Wrong alignment on UGA_SurfaceChange_Ice_IceCheckOnTimer_C");
+static_assert(sizeof(UGA_SurfaceChange_Ice_IceCheckOnTimer_C) == 0x000AD8, "Wrong size on UGA_SurfaceChange_Ice_IceCheckOnTimer_C");
+static_assert(offsetof(UGA_SurfaceChange_Ice_IceCheckOnTimer_C, UberGraphFrame) == 0x000AB8, "Member 'UGA_SurfaceChange_Ice_IceCheckOnTimer_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UGA_SurfaceChange_Ice_IceCheckOnTimer_C, FortPlayerPawn) == 0x000AC0, "Member 'UGA_SurfaceChange_Ice_IceCheckOnTimer_C::FortPlayerPawn' has a wrong offset!");
+static_assert(offsetof(UGA_SurfaceChange_Ice_IceCheckOnTimer_C, TraceTimer) == 0x000AC8, "Member 'UGA_SurfaceChange_Ice_IceCheckOnTimer_C::TraceTimer' has a wrong offset!");
+static_assert(offsetof(UGA_SurfaceChange_Ice_IceCheckOnTimer_C, OffIceTimer) == 0x000AD0, "Member 'UGA_SurfaceChange_Ice_IceCheckOnTimer_C::OffIceTimer' has a wrong offset!");
 
 }
 

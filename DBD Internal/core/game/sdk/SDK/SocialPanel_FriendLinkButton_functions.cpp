@@ -17,48 +17,6 @@
 namespace SDK
 {
 
-// Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void USocialPanel_FriendLinkButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_FriendLinkButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void USocialPanel_FriendLinkButton_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_FriendLinkButton_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void USocialPanel_FriendLinkButton_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_FriendLinkButton_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.ExecuteUbergraph_SocialPanel_FriendLinkButton
 // (Final, UbergraphFunction)
 // Parameters:
@@ -79,20 +37,6 @@ void USocialPanel_FriendLinkButton_C::ExecuteUbergraph_SocialPanel_FriendLinkBut
 }
 
 
-// Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.OnCopiedToClipboard
-// (Event, Protected, BlueprintEvent)
-
-void USocialPanel_FriendLinkButton_C::OnCopiedToClipboard()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_FriendLinkButton_C", "OnCopiedToClipboard");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.OnShareButtonTypeSet
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -110,6 +54,62 @@ void USocialPanel_FriendLinkButton_C::OnShareButtonTypeSet(EFriendLinkShareButto
 	Parms.Type = Type;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USocialPanel_FriendLinkButton_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanel_FriendLinkButton_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void USocialPanel_FriendLinkButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanel_FriendLinkButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.OnCopiedToClipboard
+// (Event, Protected, BlueprintEvent)
+
+void USocialPanel_FriendLinkButton_C::OnCopiedToClipboard()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanel_FriendLinkButton_C", "OnCopiedToClipboard");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void USocialPanel_FriendLinkButton_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanel_FriendLinkButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

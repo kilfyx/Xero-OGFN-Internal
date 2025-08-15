@@ -18,28 +18,28 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass DivisionDetailsScreen.DivisionDetailsScreen_C
-// 0x0058 (0x0590 - 0x0538)
+// 0x0058 (0x0508 - 0x04B0)
 class UDivisionDetailsScreen_C final : public UFortDivisionDetailsScreen
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0538(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x0540(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UEventsSimpleButton_C*                  BackButton;                                        // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           GeneralDivisionInfo;                               // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_12;                                          // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_PanelBG;                                     // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_PanelBorder;                                 // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEventsSimpleButton_C*                  NextButton;                                        // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_1;                                        // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           ScoringPayoutInfo;                                 // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_TopContainer;                              // 0x0588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro;                                             // 0x04B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UEventsSimpleButton_C*                  BackButton;                                        // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           GeneralDivisionInfo;                               // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_12;                                          // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_PanelBG;                                     // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_PanelBorder;                                 // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEventsSimpleButton_C*                  NextButton;                                        // 0x04E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_1;                                        // 0x04F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           ScoringPayoutInfo;                                 // 0x04F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_TopContainer;                              // 0x0500(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button);
-	void BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button);
+	void ExecuteUbergraph_DivisionDetailsScreen(int32 EntryPoint);
+	void BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void BP_OnActivated();
 	void EmptyFunction(bool* Handled);
-	void ExecuteUbergraph_DivisionDetailsScreen(int32 EntryPoint);
 	void LeftShoulderButton(bool* Handled);
 	void RightShoulderButton(bool* Handled);
 
@@ -54,18 +54,18 @@ public:
 	}
 };
 static_assert(alignof(UDivisionDetailsScreen_C) == 0x000008, "Wrong alignment on UDivisionDetailsScreen_C");
-static_assert(sizeof(UDivisionDetailsScreen_C) == 0x000590, "Wrong size on UDivisionDetailsScreen_C");
-static_assert(offsetof(UDivisionDetailsScreen_C, UberGraphFrame) == 0x000538, "Member 'UDivisionDetailsScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UDivisionDetailsScreen_C, Intro) == 0x000540, "Member 'UDivisionDetailsScreen_C::Intro' has a wrong offset!");
-static_assert(offsetof(UDivisionDetailsScreen_C, BackButton) == 0x000548, "Member 'UDivisionDetailsScreen_C::BackButton' has a wrong offset!");
-static_assert(offsetof(UDivisionDetailsScreen_C, GeneralDivisionInfo) == 0x000550, "Member 'UDivisionDetailsScreen_C::GeneralDivisionInfo' has a wrong offset!");
-static_assert(offsetof(UDivisionDetailsScreen_C, Image_12) == 0x000558, "Member 'UDivisionDetailsScreen_C::Image_12' has a wrong offset!");
-static_assert(offsetof(UDivisionDetailsScreen_C, Image_PanelBG) == 0x000560, "Member 'UDivisionDetailsScreen_C::Image_PanelBG' has a wrong offset!");
-static_assert(offsetof(UDivisionDetailsScreen_C, Image_PanelBorder) == 0x000568, "Member 'UDivisionDetailsScreen_C::Image_PanelBorder' has a wrong offset!");
-static_assert(offsetof(UDivisionDetailsScreen_C, NextButton) == 0x000570, "Member 'UDivisionDetailsScreen_C::NextButton' has a wrong offset!");
-static_assert(offsetof(UDivisionDetailsScreen_C, SafeZone_1) == 0x000578, "Member 'UDivisionDetailsScreen_C::SafeZone_1' has a wrong offset!");
-static_assert(offsetof(UDivisionDetailsScreen_C, ScoringPayoutInfo) == 0x000580, "Member 'UDivisionDetailsScreen_C::ScoringPayoutInfo' has a wrong offset!");
-static_assert(offsetof(UDivisionDetailsScreen_C, SizeBox_TopContainer) == 0x000588, "Member 'UDivisionDetailsScreen_C::SizeBox_TopContainer' has a wrong offset!");
+static_assert(sizeof(UDivisionDetailsScreen_C) == 0x000508, "Wrong size on UDivisionDetailsScreen_C");
+static_assert(offsetof(UDivisionDetailsScreen_C, UberGraphFrame) == 0x0004B0, "Member 'UDivisionDetailsScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UDivisionDetailsScreen_C, Intro) == 0x0004B8, "Member 'UDivisionDetailsScreen_C::Intro' has a wrong offset!");
+static_assert(offsetof(UDivisionDetailsScreen_C, BackButton) == 0x0004C0, "Member 'UDivisionDetailsScreen_C::BackButton' has a wrong offset!");
+static_assert(offsetof(UDivisionDetailsScreen_C, GeneralDivisionInfo) == 0x0004C8, "Member 'UDivisionDetailsScreen_C::GeneralDivisionInfo' has a wrong offset!");
+static_assert(offsetof(UDivisionDetailsScreen_C, Image_12) == 0x0004D0, "Member 'UDivisionDetailsScreen_C::Image_12' has a wrong offset!");
+static_assert(offsetof(UDivisionDetailsScreen_C, Image_PanelBG) == 0x0004D8, "Member 'UDivisionDetailsScreen_C::Image_PanelBG' has a wrong offset!");
+static_assert(offsetof(UDivisionDetailsScreen_C, Image_PanelBorder) == 0x0004E0, "Member 'UDivisionDetailsScreen_C::Image_PanelBorder' has a wrong offset!");
+static_assert(offsetof(UDivisionDetailsScreen_C, NextButton) == 0x0004E8, "Member 'UDivisionDetailsScreen_C::NextButton' has a wrong offset!");
+static_assert(offsetof(UDivisionDetailsScreen_C, SafeZone_1) == 0x0004F0, "Member 'UDivisionDetailsScreen_C::SafeZone_1' has a wrong offset!");
+static_assert(offsetof(UDivisionDetailsScreen_C, ScoringPayoutInfo) == 0x0004F8, "Member 'UDivisionDetailsScreen_C::ScoringPayoutInfo' has a wrong offset!");
+static_assert(offsetof(UDivisionDetailsScreen_C, SizeBox_TopContainer) == 0x000500, "Member 'UDivisionDetailsScreen_C::SizeBox_TopContainer' has a wrong offset!");
 
 }
 

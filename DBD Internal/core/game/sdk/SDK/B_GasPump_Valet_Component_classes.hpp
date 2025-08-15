@@ -11,27 +11,26 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "ModularGameplay_classes.hpp"
 #include "FortniteGame_structs.hpp"
+#include "ModularGameplay_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_GasPump_Valet_Component.B_GasPump_Valet_Component_C
-// 0x0020 (0x00D0 - 0x00B0)
+// 0x0018 (0x00C8 - 0x00B0)
 class UB_GasPump_Valet_Component_C final : public UGameFrameworkComponent
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class FName                                   Gas_Pump_Icon_Enabled;                             // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 Gas_Pump_IndicatorManager_Class;                   // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UValet_GasPumpIndicatorManagerV2_C*     Gas_Pump_IndicatorManager;                         // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          FoundCloseFuelIndicator;                           // 0x00B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Gas_Pump_Icon_Enabled;                             // 0x00BC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_GasPump_Valet_Component(int32 EntryPoint);
 	void ReceiveBeginPlay();
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 
 public:
 	static class UClass* StaticClass()
@@ -43,6 +42,11 @@ public:
 		return GetDefaultObjImpl<UB_GasPump_Valet_Component_C>();
 	}
 };
+static_assert(alignof(UB_GasPump_Valet_Component_C) == 0x000008, "Wrong alignment on UB_GasPump_Valet_Component_C");
+static_assert(sizeof(UB_GasPump_Valet_Component_C) == 0x0000C8, "Wrong size on UB_GasPump_Valet_Component_C");
+static_assert(offsetof(UB_GasPump_Valet_Component_C, UberGraphFrame) == 0x0000B0, "Member 'UB_GasPump_Valet_Component_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UB_GasPump_Valet_Component_C, FoundCloseFuelIndicator) == 0x0000B8, "Member 'UB_GasPump_Valet_Component_C::FoundCloseFuelIndicator' has a wrong offset!");
+static_assert(offsetof(UB_GasPump_Valet_Component_C, Gas_Pump_Icon_Enabled) == 0x0000BC, "Member 'UB_GasPump_Valet_Component_C::Gas_Pump_Icon_Enabled' has a wrong offset!");
 
 }
 

@@ -10,9 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CommonConversationRuntime_structs.hpp"
+#include "CommonDialogueRuntime_structs.hpp"
 #include "FortniteConversationRuntime_structs.hpp"
-#include "FortniteGame_structs.hpp"
 
 
 namespace SDK::Params
@@ -27,6 +26,10 @@ public:
 	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortConversationContextCondition_DoesContextPass) == 0x000008, "Wrong alignment on FortConversationContextCondition_DoesContextPass");
+static_assert(sizeof(FortConversationContextCondition_DoesContextPass) == 0x000040, "Wrong size on FortConversationContextCondition_DoesContextPass");
+static_assert(offsetof(FortConversationContextCondition_DoesContextPass, Context) == 0x000000, "Member 'FortConversationContextCondition_DoesContextPass::Context' has a wrong offset!");
+static_assert(offsetof(FortConversationContextCondition_DoesContextPass, ReturnValue) == 0x000038, "Member 'FortConversationContextCondition_DoesContextPass::ReturnValue' has a wrong offset!");
 
 // Function FortniteConversationRuntime.FortConversationContextConditionHelpers.GetMessageForContext
 // 0x0068 (0x0068 - 0x0000)
@@ -39,36 +42,12 @@ public:
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// Function FortniteConversationRuntime.FortConversationParamLibrary.ExtractConversationParameterValue
-// 0x0038 (0x0038 - 0x0000)
-struct FortConversationParamLibrary_ExtractConversationParameterValue final
-{
-public:
-	TArray<struct FConversationNodeParameterPair> ConversationParameters;                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class FString                                 DesiredParameterName;                              // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ParameterValueOut;                                 // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function FortniteConversationRuntime.FortPlayerConversationComponent.ClientReceiveConversationGiftUINotification
-// 0x0030 (0x0030 - 0x0000)
-struct FortPlayerConversationComponent_ClientReceiveConversationGiftUINotification final
-{
-public:
-	struct FGiftUINotificationInfo                ConversationGiftUINotification;                    // 0x0000(0x0030)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function FortniteConversationRuntime.FortPlayerConversationComponent.HandleDBNOChanged
-// 0x0010 (0x0010 - 0x0000)
-struct FortPlayerConversationComponent_HandleDBNOChanged final
-{
-public:
-	class AFortPawn*                              Pawn;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsDBNO;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+static_assert(alignof(FortConversationContextConditionHelpers_GetMessageForContext) == 0x000008, "Wrong alignment on FortConversationContextConditionHelpers_GetMessageForContext");
+static_assert(sizeof(FortConversationContextConditionHelpers_GetMessageForContext) == 0x000068, "Wrong size on FortConversationContextConditionHelpers_GetMessageForContext");
+static_assert(offsetof(FortConversationContextConditionHelpers_GetMessageForContext, Messages) == 0x000000, "Member 'FortConversationContextConditionHelpers_GetMessageForContext::Messages' has a wrong offset!");
+static_assert(offsetof(FortConversationContextConditionHelpers_GetMessageForContext, Context) == 0x000010, "Member 'FortConversationContextConditionHelpers_GetMessageForContext::Context' has a wrong offset!");
+static_assert(offsetof(FortConversationContextConditionHelpers_GetMessageForContext, OutText) == 0x000048, "Member 'FortConversationContextConditionHelpers_GetMessageForContext::OutText' has a wrong offset!");
+static_assert(offsetof(FortConversationContextConditionHelpers_GetMessageForContext, ReturnValue) == 0x000060, "Member 'FortConversationContextConditionHelpers_GetMessageForContext::ReturnValue' has a wrong offset!");
 
 // Function FortniteConversationRuntime.FortPlayerConversationComponent.HandleWaponEquipped
 // 0x0010 (0x0010 - 0x0000)
@@ -78,6 +57,10 @@ public:
 	class AFortWeapon*                            NewWeapon;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AFortWeapon*                            PrevWeapon;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortPlayerConversationComponent_HandleWaponEquipped) == 0x000008, "Wrong alignment on FortPlayerConversationComponent_HandleWaponEquipped");
+static_assert(sizeof(FortPlayerConversationComponent_HandleWaponEquipped) == 0x000010, "Wrong size on FortPlayerConversationComponent_HandleWaponEquipped");
+static_assert(offsetof(FortPlayerConversationComponent_HandleWaponEquipped, NewWeapon) == 0x000000, "Member 'FortPlayerConversationComponent_HandleWaponEquipped::NewWeapon' has a wrong offset!");
+static_assert(offsetof(FortPlayerConversationComponent_HandleWaponEquipped, PrevWeapon) == 0x000008, "Member 'FortPlayerConversationComponent_HandleWaponEquipped::PrevWeapon' has a wrong offset!");
 
 }
 

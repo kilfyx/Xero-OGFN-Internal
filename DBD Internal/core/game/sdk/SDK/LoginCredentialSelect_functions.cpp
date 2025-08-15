@@ -23,9 +23,9 @@ namespace SDK
 void ULoginCredentialSelect_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
+		Func = Class->GetFunction("LoginCredentialSelect_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -39,9 +39,9 @@ void ULoginCredentialSelect_C::Construct()
 void ULoginCredentialSelect_C::ExecuteUbergraph_LoginCredentialSelect(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_LoginCredentialSelect");
+		Func = Class->GetFunction("LoginCredentialSelect_C", "ExecuteUbergraph_LoginCredentialSelect");
 
 	Params::LoginCredentialSelect_C_ExecuteUbergraph_LoginCredentialSelect Parms{};
 

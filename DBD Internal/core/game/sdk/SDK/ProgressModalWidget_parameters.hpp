@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -28,6 +28,13 @@ public:
 	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x0130(0x00B8)()
 	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x01E8(0x00B8)()
 };
+static_assert(alignof(ProgressModalWidget_C_OnAnalogValueChanged) == 0x000008, "Wrong alignment on ProgressModalWidget_C_OnAnalogValueChanged");
+static_assert(sizeof(ProgressModalWidget_C_OnAnalogValueChanged) == 0x0002A0, "Wrong size on ProgressModalWidget_C_OnAnalogValueChanged");
+static_assert(offsetof(ProgressModalWidget_C_OnAnalogValueChanged, MyGeometry) == 0x000000, "Member 'ProgressModalWidget_C_OnAnalogValueChanged::MyGeometry' has a wrong offset!");
+static_assert(offsetof(ProgressModalWidget_C_OnAnalogValueChanged, InAnalogInputEvent) == 0x000038, "Member 'ProgressModalWidget_C_OnAnalogValueChanged::InAnalogInputEvent' has a wrong offset!");
+static_assert(offsetof(ProgressModalWidget_C_OnAnalogValueChanged, ReturnValue) == 0x000078, "Member 'ProgressModalWidget_C_OnAnalogValueChanged::ReturnValue' has a wrong offset!");
+static_assert(offsetof(ProgressModalWidget_C_OnAnalogValueChanged, CallFunc_Unhandled_ReturnValue) == 0x000130, "Member 'ProgressModalWidget_C_OnAnalogValueChanged::CallFunc_Unhandled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ProgressModalWidget_C_OnAnalogValueChanged, CallFunc_Handled_ReturnValue) == 0x0001E8, "Member 'ProgressModalWidget_C_OnAnalogValueChanged::CallFunc_Handled_ReturnValue' has a wrong offset!");
 
 // Function ProgressModalWidget.ProgressModalWidget_C.ExecuteUbergraph_ProgressModalWidget
 // 0x0044 (0x0044 - 0x0000)
@@ -40,6 +47,13 @@ public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0024(0x0010)(ZeroConstructor, NoDestructor)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0034(0x0010)(ZeroConstructor, NoDestructor)
 };
+static_assert(alignof(ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget) == 0x000004, "Wrong alignment on ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget");
+static_assert(sizeof(ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget) == 0x000044, "Wrong size on ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget");
+static_assert(offsetof(ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget, EntryPoint) == 0x000000, "Member 'ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget::EntryPoint' has a wrong offset!");
+static_assert(offsetof(ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget, K2Node_CreateDelegate_OutputDelegate_1) == 0x000014, "Member 'ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget, K2Node_CreateDelegate_OutputDelegate_2) == 0x000024, "Member 'ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget, K2Node_CreateDelegate_OutputDelegate_3) == 0x000034, "Member 'ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
 
 }
 

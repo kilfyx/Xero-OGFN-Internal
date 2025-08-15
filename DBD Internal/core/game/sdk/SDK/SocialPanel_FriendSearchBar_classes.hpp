@@ -18,26 +18,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SocialPanel_FriendSearchBar.SocialPanel_FriendSearchBar_C
-// 0x0050 (0x0FE0 - 0x0F90)
+// 0x0038 (0x0C70 - 0x0C38)
 class USocialPanel_FriendSearchBar_C final : public UFortFriendSearchButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHovered;                                         // 0x0F98(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 AddFriendBanIcon;                                  // 0x0FA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                ClickCapture;                                      // 0x0FA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonRichTextBlock*                   RichText_CannotAddFriends;                         // 0x0FB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonRichTextBlock*                   RichText_SocialBan;                                // 0x0FB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortMobileImage*                       SharingIcon;                                       // 0x0FC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortSimpleWidgetAnimationsPanel*       SimpleWidgetAnimationsPanel;                       // 0x0FC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FName                                   ShakeAnimation;                                    // 0x0FD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bShakeAnimationIsPlaying;                          // 0x0FD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C38(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHovered;                                         // 0x0C40(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 AddFriendBanIcon;                                  // 0x0C48(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                ClickCapture;                                      // 0x0C50(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   RichText_CannotAddFriends;                         // 0x0C58(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   RichText_SocialBan;                                // 0x0C60(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortMobileImage*                       SharingIcon;                                       // 0x0C68(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__EditableText_AddFriend_K2Node_ComponentBoundEvent_0_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text);
-	void BP_OnHovered();
-	void BP_OnUnhovered();
 	void ExecuteUbergraph_SocialPanel_FriendSearchBar(int32 EntryPoint);
+	void BP_OnUnhovered();
+	void BP_OnHovered();
 	struct FEventReply On_ClickCapture_MouseButtonDown_0(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 
 public:
@@ -50,6 +46,15 @@ public:
 		return GetDefaultObjImpl<USocialPanel_FriendSearchBar_C>();
 	}
 };
+static_assert(alignof(USocialPanel_FriendSearchBar_C) == 0x000008, "Wrong alignment on USocialPanel_FriendSearchBar_C");
+static_assert(sizeof(USocialPanel_FriendSearchBar_C) == 0x000C70, "Wrong size on USocialPanel_FriendSearchBar_C");
+static_assert(offsetof(USocialPanel_FriendSearchBar_C, UberGraphFrame) == 0x000C38, "Member 'USocialPanel_FriendSearchBar_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USocialPanel_FriendSearchBar_C, OnHovered) == 0x000C40, "Member 'USocialPanel_FriendSearchBar_C::OnHovered' has a wrong offset!");
+static_assert(offsetof(USocialPanel_FriendSearchBar_C, AddFriendBanIcon) == 0x000C48, "Member 'USocialPanel_FriendSearchBar_C::AddFriendBanIcon' has a wrong offset!");
+static_assert(offsetof(USocialPanel_FriendSearchBar_C, ClickCapture) == 0x000C50, "Member 'USocialPanel_FriendSearchBar_C::ClickCapture' has a wrong offset!");
+static_assert(offsetof(USocialPanel_FriendSearchBar_C, RichText_CannotAddFriends) == 0x000C58, "Member 'USocialPanel_FriendSearchBar_C::RichText_CannotAddFriends' has a wrong offset!");
+static_assert(offsetof(USocialPanel_FriendSearchBar_C, RichText_SocialBan) == 0x000C60, "Member 'USocialPanel_FriendSearchBar_C::RichText_SocialBan' has a wrong offset!");
+static_assert(offsetof(USocialPanel_FriendSearchBar_C, SharingIcon) == 0x000C68, "Member 'USocialPanel_FriendSearchBar_C::SharingIcon' has a wrong offset!");
 
 }
 

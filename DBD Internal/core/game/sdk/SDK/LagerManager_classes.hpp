@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass LagerManager.LagerManager_C
-// 0x0000 (0x0840 - 0x0840)
+// 0x0000 (0x0410 - 0x0410)
 class ULagerManager_C final : public UFortAthenaLivingWorldManager
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ULagerManager_C>();
 	}
 };
+static_assert(alignof(ULagerManager_C) == 0x000008, "Wrong alignment on ULagerManager_C");
+static_assert(sizeof(ULagerManager_C) == 0x000410, "Wrong size on ULagerManager_C");
 
 }
 

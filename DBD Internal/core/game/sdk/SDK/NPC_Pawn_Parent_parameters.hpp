@@ -10,661 +10,336 @@
 
 #include "Basic.hpp"
 
-#include "Enum_NPC_TargetSlots_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Enum_NPC_TargetSlots_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "Struct_NPC_TargetSlots_structs.hpp"
 #include "Enum_NPC_AlertLevel_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.CheckSoundLibraryAdded
-// 0x0028 (0x0028 - 0x0000)
-struct NPC_Pawn_Parent_C_CheckSoundLibraryAdded final
-{
-public:
-	TArray<class UClass*>                         Libraries;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class USoundLibrarySubsystem*                 CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.CheckSoundLibraryRemoved
-// 0x0020 (0x0020 - 0x0000)
-struct NPC_Pawn_Parent_C_CheckSoundLibraryRemoved final
-{
-public:
-	TArray<class UClass*>                         Libraries;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundLibrarySubsystem*                 CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.Debug_AlertLevel_ForceLevel
-// 0x0001 (0x0001 - 0x0000)
-struct NPC_Pawn_Parent_C_Debug_AlertLevel_ForceLevel final
-{
-public:
-	Enum_NPC_AlertLevel                           NewNPC_AlertLevel;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
 // Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.ExecuteUbergraph_NPC_Pawn_Parent
-// 0x0B00 (0x0B00 - 0x0000)
+// 0x0528 (0x0528 - 0x0000)
 struct NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortGameplayDataTrackerComponentManager* CallFunc_GetCurrent_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortGameplayDataTrackerComponentManager* CallFunc_GetCurrent_ReturnValue_1;               // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UNPCStatusWidget_C*                     K2Node_DynamicCast_AsNPCStatus_Widget;             // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_NPC_AlertLevel                           CallFunc_NPC_GetAlertLevelInfo_AlertLevel;         // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B[0x1];                                       // 0x003B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           CallFunc_NPC_GetAlertLevelInfo_AlertLevelTag;      // 0x003C(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetAlertLevelInfo_ValidDataFound;     // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bVisible;                       // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_CustomEvent_Vehicle;                        // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_CustomEvent_Velocity;                       // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortRarity                                   CallFunc_NPC_SetBestLootRarityInInventory_NPC_BestLootRarityInInventory; // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x005E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F[0x1];                                       // 0x005F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_Damage_1;                             // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  K2Node_Event_DamageTags_1;                         // 0x0068(0x0020)(ConstParm)
-	struct FVector                                K2Node_Event_Momentum_1;                           // 0x0088(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_Event_HitInfo_1;                            // 0x0094(0x009C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AFortPawn*                              K2Node_Event_InstigatedBy_1;                       // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_DamageCauser_1;                       // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext_1;                      // 0x0140(0x0018)()
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue_1;        // 0x0160(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UNPCStatusWidget_C*                     K2Node_DynamicCast_AsNPCStatus_Widget_1;           // 0x0168(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            K2Node_Event_NewController;                        // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue; // 0x0180(0x0020)()
-	bool                                          CallFunc_NotEqual_GameplayTagContainer_ReturnValue; // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_NPC_AlertLevel                           K2Node_CustomEvent_NPC_AlertLevel_1;               // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A2[0x2];                                      // 0x01A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool bVisible)>                K2Node_CreateDelegate_OutputDelegate;              // 0x01A4(0x0010)(ZeroConstructor, NoDestructor)
-	float                                         CallFunc_GetMaxHealth_ReturnValue;                 // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_NPC_AlertLevel                           K2Node_CustomEvent_NPC_AlertLevel;                 // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BA[0x2];                                      // 0x01BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_1;            // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C9[0x3];                                      // 0x01C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetHealth_ReturnValue;                    // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_Damage;                               // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  K2Node_Event_DamageTags;                           // 0x01D8(0x0020)(ConstParm)
-	struct FVector                                K2Node_Event_Momentum;                             // 0x01F8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_Event_HitInfo;                              // 0x0204(0x009C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AController*                            K2Node_Event_InstigatedBy;                         // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_DamageCauser;                         // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext;                        // 0x02B0(0x0018)()
-	bool                                          CallFunc_NPC_TryToDropLootOnDeath_CanDropLoot;     // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x02C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x02CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool;   // 0x02CB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded; // 0x02CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat;  // 0x02D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x02D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D5[0x3];                                      // 0x02D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue_2;        // 0x02D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UNPCStatusWidget_C*                     K2Node_DynamicCast_AsNPCStatus_Widget_2;           // 0x02E0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x02E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_NPC_AlertLevel                           K2Node_CustomEvent_NewNPC_AlertLevel;              // 0x02EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2EB[0x5];                                      // 0x02EB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortAIPawn*                            K2Node_CustomEvent_AI;                             // 0x02F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerController*                  K2Node_CustomEvent_InteractingPlayerController;    // 0x02F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteractionBeingAttempted                    K2Node_CustomEvent_InteractionBeingAttempted;      // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_301[0x7];                                      // 0x0301(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_CustomEvent_AIPawn;                         // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        K2Node_CustomEvent_InteractingPlayerPawn;          // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        CallFunc_GetPlayerPawn_ReturnValue;                // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_321[0x3];                                      // 0x0321(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_Damage_2;                             // 0x0324(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  K2Node_Event_DamageTags_2;                         // 0x0328(0x0020)(ConstParm)
-	struct FVector                                K2Node_Event_Momentum_2;                           // 0x0348(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_Event_HitInfo_2;                            // 0x0354(0x009C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AController*                            K2Node_Event_InstigatedBy_2;                       // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_DamageCauser_2;                       // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext_2;                      // 0x0400(0x0018)()
-	struct FVector                                K2Node_Event_WaterSurfaceLocation;                 // 0x0418(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_WaterDepth;                           // 0x0424(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_Success_;                       // 0x0428(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_429[0x7];                                      // 0x0429(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_CustomEvent_Leader;                         // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue_2;               // 0x0439(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_UpdateInteract_EnabledInteract;       // 0x043A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_UpdateInteract_EnabledInteract_1;     // 0x043B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x043C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 CallFunc_MakeGameplayCueParameters_ReturnValue;    // 0x0448(0x00C0)(ContainsInstancedReference)
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0508(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TryActivateAbilitiesByTag_ReturnValue;    // 0x0509(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_CheckIsInSafeZone_TestSucceeded;      // 0x050A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_CheckIsInSafeZone_isInSafeZone;       // 0x050B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_1; // 0x050C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50D[0x3];                                      // 0x050D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_1; // 0x0510(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_1; // 0x0514(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0518(0x0010)(ZeroConstructor, NoDestructor)
-	float                                         CallFunc_RandomFloatInRange_ReturnValue_1;         // 0x0528(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue_3;               // 0x052C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52D[0x3];                                      // 0x052D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0530(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_Reset_Timer;                    // 0x0538(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_539[0x3];                                      // 0x0539(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x053C(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_54C[0x4];                                      // 0x054C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_1;        // 0x0550(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_2; // 0x0558(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_559[0x3];                                      // 0x0559(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_2; // 0x055C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_2; // 0x0560(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0564(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0565(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0566(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0567(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0568(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0569(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_3; // 0x056A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56B[0x1];                                      // 0x056B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_3; // 0x056C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_3; // 0x0570(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0574(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0584(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x0585(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x0586(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_587[0x1];                                      // 0x0587(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0588(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x058C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_58D[0x3];                                      // 0x058D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue_3;        // 0x0590(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_NPC_AlertLevel                           K2Node_CustomEvent_NPCAlertLevel;                  // 0x0598(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_599[0x7];                                      // 0x0599(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNPCStatusWidget_C*                     K2Node_DynamicCast_AsNPCStatus_Widget_3;           // 0x05A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x05A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x05A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x05AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x05AB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x05AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5AD[0x3];                                      // 0x05AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayEventData                     K2Node_MakeStruct_GameplayEventData;               // 0x05B0(0x00B0)()
-	struct FGameplayEventData                     K2Node_MakeStruct_GameplayEventData_1;             // 0x0660(0x00B0)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0710(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x0711(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_712[0x2];                                      // 0x0712(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0714(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_724[0x4];                                      // 0x0724(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AFortPlayerController*>          CallFunc_GetLocalFortPlayerControllers_ReturnValue; // 0x0728(0x0010)(ReferenceParm)
-	class AFortPlayerController*                  CallFunc_Array_Get_Item;                           // 0x0738(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0740(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_744[0x4];                                      // 0x0744(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0748(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetDistanceBetweenActors_Distance;        // 0x0750(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_754[0x4];                                      // 0x0754(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortWaterBodyActor*                    K2Node_Event_WaterBody_1;                          // 0x0758(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsFirstBody;                         // 0x0760(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_761[0x7];                                      // 0x0761(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortWaterBodyActor*                    K2Node_Event_WaterBody;                            // 0x0768(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsLastBody;                          // 0x0770(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_771[0x7];                                      // 0x0771(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBlackboardComponent*                   CallFunc_GetBlackboard_ReturnValue;                // 0x0778(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_NPC_AlertLevel                           K2Node_CustomEvent_AlertLevel;                     // 0x0780(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x0781(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_782[0x6];                                      // 0x0782(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_GetValueAsObject_ReturnValue;             // 0x0788(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortProjectileBase*                    K2Node_DynamicCast_AsFort_Projectile_Base;         // 0x0790(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0798(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_799[0x7];                                      // 0x0799(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 CallFunc_MakeGameplayCueParameters_ReturnValue_1;  // 0x07A0(0x00C0)(ContainsInstancedReference)
-	class AFortPickup*                            K2Node_DynamicCast_AsFort_Pickup;                  // 0x0860(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0868(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_11;                   // 0x0869(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGameplayTagValid_ReturnValue;           // 0x086A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x086B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_12;                   // 0x086C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x086D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_86E[0x2];                                      // 0x086E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToSelf_ReturnValue; // 0x0870(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidClass_ReturnValue_1;               // 0x0878(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RemoveActiveGameplayEffect_ReturnValue;   // 0x0879(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_87A[0x6];                                      // 0x087A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortWaterBodyActor*                    K2Node_CustomEvent_Water_Body_1;                   // 0x0880(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortWaterBodyActor*                    K2Node_CustomEvent_Water_Body;                     // 0x0888(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_13;                   // 0x0890(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_891[0x3];                                      // 0x0891(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class AFortAIPawn* AI, class AFortPlayerController* InteractingPlayerController, EInteractionBeingAttempted InteractionBeingAttempted)> K2Node_CreateDelegate_OutputDelegate_5; // 0x0894(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_8A4[0x4];                                      // 0x08A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue_1; // 0x08A8(0x0020)()
-	bool                                          CallFunc_TryActivateAbilitiesByTag_ReturnValue_1;  // 0x08C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue_1;      // 0x08C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue_2;      // 0x08CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_4; // 0x08CB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_4; // 0x08CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_4; // 0x08D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_5; // 0x08D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D5[0x3];                                      // 0x08D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_5; // 0x08D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_5; // 0x08DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x08E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x08E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x08E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_6; // 0x08E3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_6; // 0x08E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_6; // 0x08E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8EC[0x4];                                      // 0x08EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundLibrarySubsystem*                 CallFunc_GetWorldSubsystem_ReturnValue;            // 0x08F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_7; // 0x08F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8F9[0x3];                                      // 0x08F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_7; // 0x08FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_7; // 0x0900(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_14;                   // 0x0904(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_15;                   // 0x0905(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_8; // 0x0906(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_907[0x1];                                      // 0x0907(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_8; // 0x0908(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_8; // 0x090C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_9; // 0x0910(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_911[0x3];                                      // 0x0911(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_9; // 0x0914(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_9; // 0x0918(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_10; // 0x091C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91D[0x3];                                      // 0x091D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_10; // 0x0920(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_10; // 0x0924(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_11; // 0x0928(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_929[0x3];                                      // 0x0929(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_11; // 0x092C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_11; // 0x0930(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x0934(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGameplayTagValid_ReturnValue_1;         // 0x0935(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x0936(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_937[0x1];                                      // 0x0937(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToSelf_ReturnValue_1; // 0x0938(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToSelf_ReturnValue_2; // 0x0940(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToSelf_ReturnValue_3; // 0x0948(0x0008)(NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_NPC_GetSafeZonePhase_SafeZonePhase;       // 0x0950(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_16;                   // 0x0954(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_955[0x3];                                      // 0x0955(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue_4;        // 0x0958(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UNPCStatusWidget_C*                     K2Node_DynamicCast_AsNPCStatus_Widget_4;           // 0x0960(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0968(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x0969(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x096A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_96B[0x1];                                      // 0x096B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_VLerp_ReturnValue;                        // 0x096C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue_2; // 0x0978(0x0020)()
-	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue_3; // 0x0998(0x0020)()
-	bool                                          CallFunc_CanActivateAbilityWithMatchingTag_ReturnValue; // 0x09B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TryActivateAbilitiesByTag_ReturnValue_2;  // 0x09B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_GameplayTagContainer_ReturnValue_1; // 0x09BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x09BB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           K2Node_Select_Default;                             // 0x09BC(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_CanBeInteractedWith_CanInteract;      // 0x09C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayVoiceLine_Success;                    // 0x09C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_UpdateInteract_EnabledInteract_2;     // 0x09C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_CanBeInteractedWith_CanInteract_1;    // 0x09C7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_UpdateInteract_EnabledInteract_3;     // 0x09C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x09C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x09CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x09CB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9CC[0x4];                                      // 0x09CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 CallFunc_MakeGameplayCueParameters_ReturnValue_2;  // 0x09D0(0x00C0)(ContainsInstancedReference)
-	struct FGameplayTag                           CallFunc_MakeLiteralGameplayTag_ReturnValue;       // 0x0A90(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_GameplayTag_ReturnValue;         // 0x0A98(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x0A99(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_7;                 // 0x0A9A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_NPC_AlertLevel                           CallFunc_NPC_GetAlertLevelInfo_AlertLevel_1;       // 0x0A9B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           CallFunc_NPC_GetAlertLevelInfo_AlertLevelTag_1;    // 0x0A9C(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetAlertLevelInfo_ValidDataFound_1;   // 0x0AA4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AA5[0x3];                                      // 0x0AA5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortGameplayDataTrackerComponentManager* CallFunc_GetCurrent_ReturnValue_2;               // 0x0AA8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_17;                   // 0x0AB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AB1[0x3];                                      // 0x0AB1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_6;            // 0x0AB4(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_AC4[0x4];                                      // 0x0AC4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_2;        // 0x0AC8(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0AD0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AD1[0x3];                                      // 0x0AD1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_BoolToInt_ReturnValue;               // 0x0AD4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IAudioParameterInterface> CallFunc_SetIntParameter_self_CastInput;        // 0x0AD8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0AE8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AE9[0x3];                                      // 0x0AE9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0AEC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x0AF0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0AF1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_8;                 // 0x0AF2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AF3[0x1];                                      // 0x0AF3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0AF4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TryActivateAbilitiesByTag_ReturnValue_3;  // 0x0AF8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_18;                   // 0x0AF9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.GetSoundFoleyLibrary
-// 0x0058 (0x0058 - 0x0000)
-struct NPC_Pawn_Parent_C_GetSoundFoleyLibrary final
-{
-public:
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_Array_Get_Item;                           // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundLibrarySubsystem*                 CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_Array_Get_Item_1;                         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundLibrarySubsystem*                 CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ClassClass_ReturnValue;          // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_Array_Get_Item_2;                         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_Array_Get_Item_3;                         // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ClassClass_ReturnValue_1;        // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundLibrarySubsystem*                 CallFunc_GetWorldSubsystem_ReturnValue_2;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.LuredOnServer
-// 0x0001 (0x0001 - 0x0000)
-struct NPC_Pawn_Parent_C_LuredOnServer final
-{
-public:
-	Enum_NPC_AlertLevel                           AlertLevel;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC AlertLevelChangedServer
-// 0x0001 (0x0001 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_AlertLevelChangedServer final
-{
-public:
-	Enum_NPC_AlertLevel                           NPCAlertLevel;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC ApplyGameplayEffectWithMMRScaling
-// 0x0028 (0x0028 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GE_Class;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 ApplyGeToThisActor;                                // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Option_B___If_false__use_Option_A_Variable; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_Select_Default;                             // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNPCStatusWidget_C*                     K2Node_DynamicCast_AsNPCStatus_Widget;             // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_Damage_3;                             // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  K2Node_Event_DamageTags_3;                         // 0x0040(0x0020)(ConstParm)
+	struct FVector                                K2Node_Event_Momentum_3;                           // 0x0060(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             K2Node_Event_HitInfo_3;                            // 0x006C(0x008C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AController*                            K2Node_Event_InstigatedBy_3;                       // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_DamageCauser_3;                       // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext_3;                      // 0x0108(0x0018)()
+	float                                         CallFunc_GetHealth_ReturnValue;                    // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool bVisible)>                K2Node_CreateDelegate_OutputDelegate_1;            // 0x0124(0x0010)(ZeroConstructor, NoDestructor)
+	float                                         CallFunc_GetMaxHealth_ReturnValue;                 // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_Damage_2;                             // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  K2Node_Event_DamageTags_2;                         // 0x0140(0x0020)(ConstParm)
+	struct FVector                                K2Node_Event_Momentum_2;                           // 0x0160(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             K2Node_Event_HitInfo_2;                            // 0x016C(0x008C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AFortPawn*                              K2Node_Event_InstigatedBy_2;                       // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_DamageCauser_2;                       // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext_2;                      // 0x0208(0x0018)()
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetDistanceBetweenActors_Distance;        // 0x0224(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAuthority_ReturnValue_2;               // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_22A[0x6];                                      // 0x022A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortGameplayDataTrackerComponentManager* CallFunc_GetCurrent_ReturnValue;                 // 0x0230(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0239(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_23A[0x6];                                      // 0x023A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue_1;        // 0x0240(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNPCStatusWidget_C*                     K2Node_DynamicCast_AsNPCStatus_Widget_1;           // 0x0250(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0259(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_25A[0x6];                                      // 0x025A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue_2;        // 0x0260(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNPCStatusWidget_C*                     K2Node_DynamicCast_AsNPCStatus_Widget_2;           // 0x0268(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_271[0x7];                                      // 0x0271(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortGameplayDataTrackerComponentManager* CallFunc_GetCurrent_ReturnValue_1;               // 0x0278(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0281(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	Enum_NPC_AlertLevel                           CallFunc_NPC_GetAlertLevelInfo_AlertLevel;         // 0x0282(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_283[0x1];                                      // 0x0283(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           CallFunc_NPC_GetAlertLevelInfo_AlertLevelTag;      // 0x0284(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NPC_GetAlertLevelInfo_ValidDataFound;     // 0x028C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_CustomEvent_bVisible;                       // 0x028D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x028E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_TryActivateAbilitiesByTag_ReturnValue;    // 0x028F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class AActor*                                 K2Node_CustomEvent_Vehicle;                        // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                K2Node_CustomEvent_Velocity;                       // 0x0298(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue_3;               // 0x02A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAuthority_ReturnValue_4;               // 0x02A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EFortRarity                                   CallFunc_NPC_SetBestLootRarityInInventory_NPC_BestLootRarityInInventory; // 0x02A6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x02A7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_Damage_1;                             // 0x02A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  K2Node_Event_DamageTags_1;                         // 0x02B0(0x0020)(ConstParm)
+	struct FVector                                K2Node_Event_Momentum_1;                           // 0x02D0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             K2Node_Event_HitInfo_1;                            // 0x02DC(0x008C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AFortPawn*                              K2Node_Event_InstigatedBy_1;                       // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_DamageCauser_1;                       // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext_1;                      // 0x0378(0x0018)()
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0391(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_392[0x2];                                      // 0x0392(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0394(0x0010)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_3A4[0x4];                                      // 0x03A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AController*                            K2Node_Event_NewController;                        // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue; // 0x03B0(0x0020)()
+	bool                                          CallFunc_NotEqual_GameplayTagContainer_ReturnValue; // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_TryActivateAbilitiesByTag_ReturnValue_1;  // 0x03D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	Enum_NPC_AlertLevel                           K2Node_CustomEvent_NPC_AlertLevel_1;               // 0x03D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x03D3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	Enum_NPC_AlertLevel                           K2Node_CustomEvent_NPC_AlertLevel;                 // 0x03D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x03D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3D6[0x2];                                      // 0x03D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x03D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3DC[0x4];                                      // 0x03DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue_3;        // 0x03E0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNPCStatusWidget_C*                     K2Node_DynamicCast_AsNPCStatus_Widget_3;           // 0x03E8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3F1[0x3];                                      // 0x03F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_1;            // 0x03F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x03F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0400(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x0409(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_40A[0x6];                                      // 0x040A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue_4;        // 0x0410(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNPCStatusWidget_C*                     K2Node_DynamicCast_AsNPCStatus_Widget_4;           // 0x0418(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_421[0x3];                                      // 0x0421(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_Damage;                               // 0x0424(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  K2Node_Event_DamageTags;                           // 0x0428(0x0020)(ConstParm)
+	struct FVector                                K2Node_Event_Momentum;                             // 0x0448(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             K2Node_Event_HitInfo;                              // 0x0454(0x008C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AController*                            K2Node_Event_InstigatedBy;                         // 0x04E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_DamageCauser;                         // 0x04E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext;                        // 0x04F0(0x0018)()
+	bool                                          CallFunc_NPC_TryToDropLootOnDeath_CanDropLoot;     // 0x0508(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_509[0x3];                                      // 0x0509(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           K2Node_Select_Default;                             // 0x050C(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0514(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0515(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool;   // 0x0516(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_517[0x1];                                      // 0x0517(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded; // 0x0518(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat;  // 0x051C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x0520(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent");
+static_assert(sizeof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent) == 0x000528, "Wrong size on NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, EntryPoint) == 0x000000, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::EntryPoint' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_IsValid_ReturnValue_1) == 0x000005, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, Temp_bool_Variable) == 0x000018, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_HasAuthority_ReturnValue) == 0x000019, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_IsValid_ReturnValue_2) == 0x00001A, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_GetUserWidgetObject_ReturnValue) == 0x000020, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_GetUserWidgetObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_HasAuthority_ReturnValue_1) == 0x000028, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_DynamicCast_AsNPCStatus_Widget) == 0x000030, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_DynamicCast_AsNPCStatus_Widget' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_Damage_3) == 0x00003C, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_Damage_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_DamageTags_3) == 0x000040, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_DamageTags_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_Momentum_3) == 0x000060, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_Momentum_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_HitInfo_3) == 0x00006C, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_HitInfo_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_InstigatedBy_3) == 0x0000F8, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_InstigatedBy_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_DamageCauser_3) == 0x000100, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_DamageCauser_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_EffectContext_3) == 0x000108, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_EffectContext_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_GetHealth_ReturnValue) == 0x000120, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_GetHealth_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_CreateDelegate_OutputDelegate_1) == 0x000124, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_GetMaxHealth_ReturnValue) == 0x000134, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_GetMaxHealth_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_Damage_2) == 0x000138, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_Damage_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_DamageTags_2) == 0x000140, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_DamageTags_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_Momentum_2) == 0x000160, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_Momentum_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_HitInfo_2) == 0x00016C, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_HitInfo_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_InstigatedBy_2) == 0x0001F8, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_InstigatedBy_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_DamageCauser_2) == 0x000200, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_DamageCauser_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_EffectContext_2) == 0x000208, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_EffectContext_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000220, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_GetDistanceBetweenActors_Distance) == 0x000224, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_GetDistanceBetweenActors_Distance' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_Less_FloatFloat_ReturnValue) == 0x000228, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_HasAuthority_ReturnValue_2) == 0x000229, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_HasAuthority_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_GetCurrent_ReturnValue) == 0x000230, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_GetCurrent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_IsValid_ReturnValue_3) == 0x000238, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_IsValid_ReturnValue_4) == 0x000239, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_GetUserWidgetObject_ReturnValue_1) == 0x000240, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_GetUserWidgetObject_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_EndPlayReason) == 0x000248, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_EndPlayReason' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_DynamicCast_AsNPCStatus_Widget_1) == 0x000250, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_DynamicCast_AsNPCStatus_Widget_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_DynamicCast_bSuccess_1) == 0x000258, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_IsValid_ReturnValue_5) == 0x000259, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_GetUserWidgetObject_ReturnValue_2) == 0x000260, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_GetUserWidgetObject_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_DynamicCast_AsNPCStatus_Widget_2) == 0x000268, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_DynamicCast_AsNPCStatus_Widget_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_DynamicCast_bSuccess_2) == 0x000270, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_GetCurrent_ReturnValue_1) == 0x000278, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_GetCurrent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_IsVisible_ReturnValue) == 0x000280, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_IsValid_ReturnValue_6) == 0x000281, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_NPC_GetAlertLevelInfo_AlertLevel) == 0x000282, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_NPC_GetAlertLevelInfo_AlertLevel' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_NPC_GetAlertLevelInfo_AlertLevelTag) == 0x000284, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_NPC_GetAlertLevelInfo_AlertLevelTag' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_NPC_GetAlertLevelInfo_ValidDataFound) == 0x00028C, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_NPC_GetAlertLevelInfo_ValidDataFound' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_CustomEvent_bVisible) == 0x00028D, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_CustomEvent_bVisible' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_IsValid_ReturnValue_7) == 0x00028E, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_TryActivateAbilitiesByTag_ReturnValue) == 0x00028F, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_TryActivateAbilitiesByTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_CustomEvent_Vehicle) == 0x000290, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_CustomEvent_Vehicle' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_CustomEvent_Velocity) == 0x000298, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_CustomEvent_Velocity' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_HasAuthority_ReturnValue_3) == 0x0002A4, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_HasAuthority_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_HasAuthority_ReturnValue_4) == 0x0002A5, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_HasAuthority_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_NPC_SetBestLootRarityInInventory_NPC_BestLootRarityInInventory) == 0x0002A6, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_NPC_SetBestLootRarityInInventory_NPC_BestLootRarityInInventory' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_Not_PreBool_ReturnValue) == 0x0002A7, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_Damage_1) == 0x0002A8, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_Damage_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_DamageTags_1) == 0x0002B0, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_DamageTags_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_Momentum_1) == 0x0002D0, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_Momentum_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_HitInfo_1) == 0x0002DC, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_HitInfo_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_InstigatedBy_1) == 0x000368, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_InstigatedBy_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_DamageCauser_1) == 0x000370, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_DamageCauser_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_EffectContext_1) == 0x000378, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_EffectContext_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_BooleanAND_ReturnValue) == 0x000390, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000391, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_CreateDelegate_OutputDelegate_2) == 0x000394, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_NewController) == 0x0003A8, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_NewController' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_MakeLiteralGameplayTagContainer_ReturnValue) == 0x0003B0, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_MakeLiteralGameplayTagContainer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_NotEqual_GameplayTagContainer_ReturnValue) == 0x0003D0, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_NotEqual_GameplayTagContainer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_TryActivateAbilitiesByTag_ReturnValue_1) == 0x0003D1, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_TryActivateAbilitiesByTag_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_CustomEvent_NPC_AlertLevel_1) == 0x0003D2, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_CustomEvent_NPC_AlertLevel_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x0003D3, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_CustomEvent_NPC_AlertLevel) == 0x0003D4, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_CustomEvent_NPC_AlertLevel' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_IsValid_ReturnValue_8) == 0x0003D5, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_GetValueAtLevel_ReturnValue) == 0x0003D8, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_GetValueAtLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_GetUserWidgetObject_ReturnValue_3) == 0x0003E0, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_GetUserWidgetObject_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_DynamicCast_AsNPCStatus_Widget_3) == 0x0003E8, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_DynamicCast_AsNPCStatus_Widget_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_DynamicCast_bSuccess_3) == 0x0003F0, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_GetValueAtLevel_ReturnValue_1) == 0x0003F4, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_GetValueAtLevel_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_RandomFloatInRange_ReturnValue) == 0x0003F8, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000400, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000408, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_IsValid_ReturnValue_9) == 0x000409, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_GetUserWidgetObject_ReturnValue_4) == 0x000410, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_GetUserWidgetObject_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_DynamicCast_AsNPCStatus_Widget_4) == 0x000418, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_DynamicCast_AsNPCStatus_Widget_4' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_DynamicCast_bSuccess_4) == 0x000420, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_Damage) == 0x000424, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_Damage' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_DamageTags) == 0x000428, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_DamageTags' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_Momentum) == 0x000448, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_Momentum' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_HitInfo) == 0x000454, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_HitInfo' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_InstigatedBy) == 0x0004E0, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_InstigatedBy' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_DamageCauser) == 0x0004E8, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_DamageCauser' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Event_EffectContext) == 0x0004F0, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Event_EffectContext' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_NPC_TryToDropLootOnDeath_CanDropLoot) == 0x000508, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_NPC_TryToDropLootOnDeath_CanDropLoot' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, K2Node_Select_Default) == 0x00050C, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_Not_PreBool_ReturnValue_1) == 0x000514, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_BooleanAND_ReturnValue_1) == 0x000515, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_NPC_GetScalableFloatHotfixValue_AsBool) == 0x000516, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_NPC_GetScalableFloatHotfixValue_AsBool' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded) == 0x000518, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat) == 0x00051C, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x000520, "Member 'NPC_Pawn_Parent_C_ExecuteUbergraph_NPC_Pawn_Parent::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC ApplyRecentlyDamagedTag
-// 0x0020 (0x0020 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnDeathServer
+// 0x00E8 (0x00E8 - 0x0000)
+struct NPC_Pawn_Parent_C_OnDeathServer final
 {
 public:
-	class UClass*                                 RecentlyDamagedOverride;                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidClass_ReturnValue_1;               // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue; // 0x000C(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_1; // 0x0014(0x0008)(NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC AttemptToSetLeader
-// 0x0018 (0x0018 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_AttemptToSetLeader final
-{
-public:
-	class AActor*                                 PossibleLeader;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_SetLeader_Success_;                   // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_NPC_SetLeader_LeaderSet;                  // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC CanBeInteractedWith
-// 0x0001 (0x0001 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_CanBeInteractedWith final
-{
-public:
-	bool                                          CanInteract;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC CheckForDespawnIfStaleToPlayers
-// 0x0040 (0x0040 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_CheckForDespawnIfStaleToPlayers final
-{
-public:
-	class AFortPlayerPawn*                        ClosestFortPlayerPawn;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool;   // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded; // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat;  // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_1; // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_1; // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_1; // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_2;         // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue_1;       // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_3;         // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetDistanceBetweenActors_Distance;        // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_4;         // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC CheckIsInSafeZone
-// 0x0050 (0x0050 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone final
-{
-public:
-	bool                                          TestSucceeded;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsInSafeZone;                                      // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AAthena_GameState_C*                    K2Node_DynamicCast_AsAthena_Game_State;            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortSafeZoneIndicator*                 CallFunc_GetSafeZoneIndicator_ReturnValue;         // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetSafeZoneCenter_ReturnValue;            // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Vector_DistanceSquared_ReturnValue;       // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetSafeZoneRadius_ReturnValue;            // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Square_ReturnValue;                       // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC ClearOutTargetSlots
-// 0x0058 (0x0058 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_ClearOutTargetSlots final
-{
-public:
-	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue; // 0x0000(0x0020)()
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_GetOwnedGameplayTags_self_CastInput; // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  CallFunc_GetOwnedGameplayTags_TagContainer;        // 0x0030(0x0020)()
-	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasTag_ReturnValue_1;                     // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAnyTags_ReturnValue;                   // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC DamageAttemptDisableIntroPhaseBehavior
-// 0x0028 (0x0028 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior final
-{
-public:
-	struct FGameplayTagContainer                  DamageTags;                                        // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DoesContainerMatchTagQuery_ReturnValue;   // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsTagQueryEmpty_ReturnValue;              // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC DisableIntroPhaseBehavior
-// 0x0010 (0x0010 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue; // 0x0004(0x0008)(NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_RemoveActiveEffectsWithAppliedTags_ReturnValue; // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC GetAlertLevelInfo
-// 0x001C (0x001C - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo final
-{
-public:
-	Enum_NPC_AlertLevel                           AlertLevel;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           AlertLevelTag;                                     // 0x0004(0x0008)(Parm, OutParm, NoDestructor, HasGetValueTypeHash)
-	bool                                          ValidDataFound;                                    // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           CallFunc_Map_Find_Value;                           // 0x0010(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC GetInventoryInformation
-// 0x00A0 (0x00A0 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_GetInventoryInformation final
-{
-public:
-	bool                                          HasItemInInventory;                                // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TotalNumberOfInventoryItems;                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         LastInventoryItemIndex;                            // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasEnoughItemsToDeliver;                           // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ConsumedEnoughItemsToBeConsideredFull;             // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool;   // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded; // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat;  // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_1; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_1; // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_1; // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_BuildString_Bool_ReturnValue;             // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TScriptInterface<class IFortInventoryOwnerInterface> CallFunc_GetItemsFromInventoryOwner_InventoryOwner_CastInput; // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TArray<class UFortWorldItem*>                 CallFunc_GetItemsFromInventoryOwner_Items;         // 0x0048(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_BuildString_Bool_ReturnValue_1;           // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_BuildString_Bool_ReturnValue_2;           // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_BuildString_Bool_ReturnValue_3;           // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC GetSafeZonePhase
-// 0x0020 (0x0020 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_GetSafeZonePhase final
-{
-public:
-	int32                                         SafeZonePhase;                                     // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Damage;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AAthena_GameState_C*                    K2Node_DynamicCast_AsAthena_Game_State;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  DamageTags;                                        // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FVector                                Momentum;                                          // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             HitInfo;                                           // 0x0034(0x008C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AController*                            InstigatedBy;                                      // 0x00C0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 DamageCauser;                                      // 0x00C8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00D0(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_OnDeathServer) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_OnDeathServer");
+static_assert(sizeof(NPC_Pawn_Parent_C_OnDeathServer) == 0x0000E8, "Wrong size on NPC_Pawn_Parent_C_OnDeathServer");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathServer, Damage) == 0x000000, "Member 'NPC_Pawn_Parent_C_OnDeathServer::Damage' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathServer, DamageTags) == 0x000008, "Member 'NPC_Pawn_Parent_C_OnDeathServer::DamageTags' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathServer, Momentum) == 0x000028, "Member 'NPC_Pawn_Parent_C_OnDeathServer::Momentum' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathServer, HitInfo) == 0x000034, "Member 'NPC_Pawn_Parent_C_OnDeathServer::HitInfo' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathServer, InstigatedBy) == 0x0000C0, "Member 'NPC_Pawn_Parent_C_OnDeathServer::InstigatedBy' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathServer, DamageCauser) == 0x0000C8, "Member 'NPC_Pawn_Parent_C_OnDeathServer::DamageCauser' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathServer, EffectContext) == 0x0000D0, "Member 'NPC_Pawn_Parent_C_OnDeathServer::EffectContext' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC GetScalableFloatHotfixValue
-// 0x0048 (0x0048 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPCAlertLevelChanged
+// 0x0001 (0x0001 - 0x0000)
+struct NPC_Pawn_Parent_C_NPCAlertLevelChanged final
 {
 public:
-	struct FScalableFloat                         ScalableFloatHotfix;                               // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	float                                         AtLevel;                                           // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AsBool;                                            // 0x002C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         AsIntRounded;                                      // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         AsFloat;                                           // 0x0034(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue;                        // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_ScalableFloatIsValid_Valid;           // 0x0046(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_NPC_AlertLevel                           NPC_AlertLevel_0;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_NPCAlertLevelChanged) == 0x000001, "Wrong alignment on NPC_Pawn_Parent_C_NPCAlertLevelChanged");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPCAlertLevelChanged) == 0x000001, "Wrong size on NPC_Pawn_Parent_C_NPCAlertLevelChanged");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPCAlertLevelChanged, NPC_AlertLevel_0) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPCAlertLevelChanged::NPC_AlertLevel_0' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC HandleAlertLevelVoice
-// 0x002C (0x002C - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.RequestUpdateNPCAlertLevel
+// 0x0001 (0x0001 - 0x0000)
+struct NPC_Pawn_Parent_C_RequestUpdateNPCAlertLevel final
 {
 public:
-	Enum_NPC_AlertLevel                           Temp_byte_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           Temp_struct_Variable;                              // 0x0004(0x0008)(ConstParm, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           Temp_struct_Variable_1;                            // 0x000C(0x0008)(ConstParm, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           Temp_struct_Variable_2;                            // 0x0014(0x0008)(ConstParm, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayVoiceLine_Success;                    // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayVoiceLine_Success_1;                  // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F[0x1];                                       // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           K2Node_Select_Default;                             // 0x0020(0x0008)(ConstParm, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayVoiceLine_Success_2;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_NPC_AlertLevel                           NPC_AlertLevel_0;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_RequestUpdateNPCAlertLevel) == 0x000001, "Wrong alignment on NPC_Pawn_Parent_C_RequestUpdateNPCAlertLevel");
+static_assert(sizeof(NPC_Pawn_Parent_C_RequestUpdateNPCAlertLevel) == 0x000001, "Wrong size on NPC_Pawn_Parent_C_RequestUpdateNPCAlertLevel");
+static_assert(offsetof(NPC_Pawn_Parent_C_RequestUpdateNPCAlertLevel, NPC_AlertLevel_0) == 0x000000, "Member 'NPC_Pawn_Parent_C_RequestUpdateNPCAlertLevel::NPC_AlertLevel_0' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC HasLeader?
-// 0x0018 (0x0018 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_HasLeader_ final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.ReceivePossessed
+// 0x0008 (0x0008 - 0x0000)
+struct NPC_Pawn_Parent_C_ReceivePossessed final
 {
 public:
-	bool                                          HasLeader_;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Leader;                                            // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AController*                            NewController;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_ReceivePossessed) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_ReceivePossessed");
+static_assert(sizeof(NPC_Pawn_Parent_C_ReceivePossessed) == 0x000008, "Wrong size on NPC_Pawn_Parent_C_ReceivePossessed");
+static_assert(offsetof(NPC_Pawn_Parent_C_ReceivePossessed, NewController) == 0x000000, "Member 'NPC_Pawn_Parent_C_ReceivePossessed::NewController' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC LeaderSet
-// 0x0010 (0x0010 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_LeaderSet final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnDeathPlayEffects
+// 0x00E8 (0x00E8 - 0x0000)
+struct NPC_Pawn_Parent_C_OnDeathPlayEffects final
 {
 public:
-	bool                                          Success_;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Leader;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Damage;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  DamageTags;                                        // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FVector                                Momentum;                                          // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             HitInfo;                                           // 0x0034(0x008C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AFortPawn*                              InstigatedBy;                                      // 0x00C0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 DamageCauser;                                      // 0x00C8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00D0(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_OnDeathPlayEffects) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_OnDeathPlayEffects");
+static_assert(sizeof(NPC_Pawn_Parent_C_OnDeathPlayEffects) == 0x0000E8, "Wrong size on NPC_Pawn_Parent_C_OnDeathPlayEffects");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathPlayEffects, Damage) == 0x000000, "Member 'NPC_Pawn_Parent_C_OnDeathPlayEffects::Damage' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathPlayEffects, DamageTags) == 0x000008, "Member 'NPC_Pawn_Parent_C_OnDeathPlayEffects::DamageTags' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathPlayEffects, Momentum) == 0x000028, "Member 'NPC_Pawn_Parent_C_OnDeathPlayEffects::Momentum' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathPlayEffects, HitInfo) == 0x000034, "Member 'NPC_Pawn_Parent_C_OnDeathPlayEffects::HitInfo' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathPlayEffects, InstigatedBy) == 0x0000C0, "Member 'NPC_Pawn_Parent_C_OnDeathPlayEffects::InstigatedBy' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathPlayEffects, DamageCauser) == 0x0000C8, "Member 'NPC_Pawn_Parent_C_OnDeathPlayEffects::DamageCauser' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDeathPlayEffects, EffectContext) == 0x0000D0, "Member 'NPC_Pawn_Parent_C_OnDeathPlayEffects::EffectContext' has a wrong offset!");
 
 // Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC ParentLaunchVehicle
 // 0x0018 (0x0018 - 0x0000)
@@ -674,85 +349,176 @@ public:
 	class AActor*                                 Vehicle;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Velocity;                                          // 0x0008(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_ParentLaunchVehicle) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_ParentLaunchVehicle");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_ParentLaunchVehicle) == 0x000018, "Wrong size on NPC_Pawn_Parent_C_NPC_ParentLaunchVehicle");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ParentLaunchVehicle, Vehicle) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_ParentLaunchVehicle::Vehicle' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ParentLaunchVehicle, Velocity) == 0x000008, "Member 'NPC_Pawn_Parent_C_NPC_ParentLaunchVehicle::Velocity' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC Pawn Interact
-// 0x0018 (0x0018 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_Pawn_Interact final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.WidgetVisibilityChanged
+// 0x0001 (0x0001 - 0x0000)
+struct NPC_Pawn_Parent_C_WidgetVisibilityChanged final
 {
 public:
-	class AFortAIPawn*                            AI;                                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerController*                  InteractingPlayerController;                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInteractionBeingAttempted                    InteractionBeingAttempted;                         // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bVisible;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_WidgetVisibilityChanged) == 0x000001, "Wrong alignment on NPC_Pawn_Parent_C_WidgetVisibilityChanged");
+static_assert(sizeof(NPC_Pawn_Parent_C_WidgetVisibilityChanged) == 0x000001, "Wrong size on NPC_Pawn_Parent_C_WidgetVisibilityChanged");
+static_assert(offsetof(NPC_Pawn_Parent_C_WidgetVisibilityChanged, bVisible) == 0x000000, "Member 'NPC_Pawn_Parent_C_WidgetVisibilityChanged::bVisible' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC PawnDebugMessage
-// 0x0088 (0x0088 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_PawnDebugMessage final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct NPC_Pawn_Parent_C_ReceiveEndPlay final
 {
 public:
-	class FString                                 String;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          OnlyWhenDebug;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on NPC_Pawn_Parent_C_ReceiveEndPlay");
+static_assert(sizeof(NPC_Pawn_Parent_C_ReceiveEndPlay) == 0x000001, "Wrong size on NPC_Pawn_Parent_C_ReceiveEndPlay");
+static_assert(offsetof(NPC_Pawn_Parent_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'NPC_Pawn_Parent_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC PickupDropped
-// 0x0008 (0x0008 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_PickupDropped final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnDamagePlayEffects
+// 0x00E8 (0x00E8 - 0x0000)
+struct NPC_Pawn_Parent_C_OnDamagePlayEffects final
 {
 public:
-	class AFortPickup*                            FortPickupDropped;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Damage;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  DamageTags;                                        // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FVector                                Momentum;                                          // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             HitInfo;                                           // 0x0034(0x008C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AFortPawn*                              InstigatedBy;                                      // 0x00C0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 DamageCauser;                                      // 0x00C8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00D0(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_OnDamagePlayEffects) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_OnDamagePlayEffects");
+static_assert(sizeof(NPC_Pawn_Parent_C_OnDamagePlayEffects) == 0x0000E8, "Wrong size on NPC_Pawn_Parent_C_OnDamagePlayEffects");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamagePlayEffects, Damage) == 0x000000, "Member 'NPC_Pawn_Parent_C_OnDamagePlayEffects::Damage' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamagePlayEffects, DamageTags) == 0x000008, "Member 'NPC_Pawn_Parent_C_OnDamagePlayEffects::DamageTags' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamagePlayEffects, Momentum) == 0x000028, "Member 'NPC_Pawn_Parent_C_OnDamagePlayEffects::Momentum' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamagePlayEffects, HitInfo) == 0x000034, "Member 'NPC_Pawn_Parent_C_OnDamagePlayEffects::HitInfo' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamagePlayEffects, InstigatedBy) == 0x0000C0, "Member 'NPC_Pawn_Parent_C_OnDamagePlayEffects::InstigatedBy' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamagePlayEffects, DamageCauser) == 0x0000C8, "Member 'NPC_Pawn_Parent_C_OnDamagePlayEffects::DamageCauser' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamagePlayEffects, EffectContext) == 0x0000D0, "Member 'NPC_Pawn_Parent_C_OnDamagePlayEffects::EffectContext' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC PickupGrabbed
-// 0x0008 (0x0008 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_PickupGrabbed final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnDamageServer
+// 0x00E8 (0x00E8 - 0x0000)
+struct NPC_Pawn_Parent_C_OnDamageServer final
 {
 public:
-	class AFortPickup*                            FortPickupGrabbed;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Damage;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  DamageTags;                                        // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FVector                                Momentum;                                          // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             HitInfo;                                           // 0x0034(0x008C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AController*                            InstigatedBy;                                      // 0x00C0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 DamageCauser;                                      // 0x00C8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00D0(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_OnDamageServer) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_OnDamageServer");
+static_assert(sizeof(NPC_Pawn_Parent_C_OnDamageServer) == 0x0000E8, "Wrong size on NPC_Pawn_Parent_C_OnDamageServer");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamageServer, Damage) == 0x000000, "Member 'NPC_Pawn_Parent_C_OnDamageServer::Damage' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamageServer, DamageTags) == 0x000008, "Member 'NPC_Pawn_Parent_C_OnDamageServer::DamageTags' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamageServer, Momentum) == 0x000028, "Member 'NPC_Pawn_Parent_C_OnDamageServer::Momentum' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamageServer, HitInfo) == 0x000034, "Member 'NPC_Pawn_Parent_C_OnDamageServer::HitInfo' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamageServer, InstigatedBy) == 0x0000C0, "Member 'NPC_Pawn_Parent_C_OnDamageServer::InstigatedBy' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamageServer, DamageCauser) == 0x0000C8, "Member 'NPC_Pawn_Parent_C_OnDamageServer::DamageCauser' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnDamageServer, EffectContext) == 0x0000D0, "Member 'NPC_Pawn_Parent_C_OnDamageServer::EffectContext' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC PickupGrabbed_Destroyed
-// 0x0008 (0x0008 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_PickupGrabbed_Destroyed final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.ShouldUpdateSkeletalMesh
+// 0x0001 (0x0001 - 0x0000)
+struct NPC_Pawn_Parent_C_ShouldUpdateSkeletalMesh final
 {
 public:
-	class AActor*                                 ActorGrabbed;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_ShouldUpdateSkeletalMesh) == 0x000001, "Wrong alignment on NPC_Pawn_Parent_C_ShouldUpdateSkeletalMesh");
+static_assert(sizeof(NPC_Pawn_Parent_C_ShouldUpdateSkeletalMesh) == 0x000001, "Wrong size on NPC_Pawn_Parent_C_ShouldUpdateSkeletalMesh");
+static_assert(offsetof(NPC_Pawn_Parent_C_ShouldUpdateSkeletalMesh, ReturnValue) == 0x000000, "Member 'NPC_Pawn_Parent_C_ShouldUpdateSkeletalMesh::ReturnValue' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC ScalableFloatIsValid
-// 0x0030 (0x0030 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC ApplyRecentlyDamagedTag
+// 0x0020 (0x0020 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag final
 {
 public:
-	struct FScalableFloat                         ScalableFloat;                                     // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          Valid;                                             // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 RecentlyDamagedOverride;                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValidClass_ReturnValue_1;               // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue; // 0x000C(0x0008)(NoDestructor, HasGetValueTypeHash)
+	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_1; // 0x0014(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag) == 0x000020, "Wrong size on NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag, RecentlyDamagedOverride) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag::RecentlyDamagedOverride' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag, CallFunc_HasAuthority_ReturnValue) == 0x000008, "Member 'NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag, CallFunc_IsValidClass_ReturnValue) == 0x000009, "Member 'NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag, CallFunc_IsValidClass_ReturnValue_1) == 0x00000A, "Member 'NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag::CallFunc_IsValidClass_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag, CallFunc_IsValid_ReturnValue) == 0x00000B, "Member 'NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue) == 0x00000C, "Member 'NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_1) == 0x000014, "Member 'NPC_Pawn_Parent_C_NPC_ApplyRecentlyDamagedTag::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_1' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC SendGameplayCuePickupGrabbed
-// 0x00D8 (0x00D8 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC GetAlertLevelInfo
+// 0x001C (0x001C - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo final
 {
 public:
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 CallFunc_MakeGameplayCueParameters_ReturnValue;    // 0x0008(0x00C0)(ContainsInstancedReference)
-	struct FGameplayTag                           CallFunc_MakeLiteralGameplayTag_ReturnValue;       // 0x00C8(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGameplayTagValid_ReturnValue;           // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_NPC_AlertLevel                           AlertLevel;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           AlertLevelTag;                                     // 0x0004(0x0008)(Parm, OutParm, NoDestructor, HasGetValueTypeHash)
+	bool                                          ValidDataFound;                                    // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           CallFunc_Map_Find_Value;                           // 0x0010(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo) == 0x000004, "Wrong alignment on NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo) == 0x00001C, "Wrong size on NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo, AlertLevel) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo::AlertLevel' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo, AlertLevelTag) == 0x000004, "Member 'NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo::AlertLevelTag' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo, ValidDataFound) == 0x00000C, "Member 'NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo::ValidDataFound' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo, CallFunc_Map_Find_Value) == 0x000010, "Member 'NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo, CallFunc_Map_Find_ReturnValue) == 0x000018, "Member 'NPC_Pawn_Parent_C_NPC_GetAlertLevelInfo::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnRep_NPC_AlertLevel
+// 0x0068 (0x0068 - 0x0000)
+struct NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel final
+{
+public:
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_BoolToInt_ReturnValue;               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortGameplayDataTrackerComponentManager* CallFunc_GetCurrent_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_NPC_AlertLevel                           CallFunc_NPC_GetAlertLevelInfo_AlertLevel;         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           CallFunc_NPC_GetAlertLevelInfo_AlertLevelTag;      // 0x001C(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NPC_GetAlertLevelInfo_ValidDataFound;     // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetTagName_ReturnValue;                   // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_BuildString_Name_ReturnValue;             // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_BuildString_Name_ReturnValue_1;           // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel");
+static_assert(sizeof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel) == 0x000068, "Wrong size on NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000000, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_Conv_BoolToInt_ReturnValue) == 0x000004, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_Conv_BoolToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_HasAuthority_ReturnValue) == 0x000008, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_HasAuthority_ReturnValue_1) == 0x000009, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_GetCurrent_ReturnValue) == 0x000010, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_GetCurrent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_NPC_GetAlertLevelInfo_AlertLevel) == 0x000018, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_NPC_GetAlertLevelInfo_AlertLevel' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_NPC_GetAlertLevelInfo_AlertLevelTag) == 0x00001C, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_NPC_GetAlertLevelInfo_AlertLevelTag' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_NPC_GetAlertLevelInfo_ValidDataFound) == 0x000024, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_NPC_GetAlertLevelInfo_ValidDataFound' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_IsValid_ReturnValue) == 0x000025, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_GetTagName_ReturnValue) == 0x000028, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_GetTagName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000030, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_Conv_StringToName_ReturnValue) == 0x000040, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_BuildString_Name_ReturnValue) == 0x000048, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_BuildString_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel, CallFunc_BuildString_Name_ReturnValue_1) == 0x000058, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel::CallFunc_BuildString_Name_ReturnValue_1' has a wrong offset!");
 
 // Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC SetBestLootRarityInInventory
 // 0x0118 (0x0118 - 0x0000)
@@ -763,15 +529,15 @@ public:
 	EFortRarity                                   NPC_BestLootRarityInventoryFound;                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_ByteByte_ReturnValue;             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_ByteByte_ReturnValue;             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IFortInventoryOwnerInterface> CallFunc_GetItemsFromInventoryOwner_InventoryOwner_CastInput; // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TArray<class UFortWorldItem*>                 CallFunc_GetItemsFromInventoryOwner_Items;         // 0x0040(0x0010)(ReferenceParm)
+	TScriptInterface<class IFortInventoryOwnerInterface> CallFunc_GetItemsFromInventoryOwner_InventoryOwner_CastInput; // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TArray<class UFortWorldItem*>                 CallFunc_GetItemsFromInventoryOwner_Items;         // 0x0040(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	class FName                                   CallFunc_GetEnumeratorName_ReturnValue;            // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UFortWorldItem*                         CallFunc_Array_Get_Item;                           // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_BuildString_Name_ReturnValue;             // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -785,52 +551,241 @@ public:
 	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_ByteByte_ReturnValue_1;           // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_ByteByte_ReturnValue_1;           // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_5;              // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory) == 0x000118, "Wrong size on NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, NPC_BestLootRarityInInventory_0) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::NPC_BestLootRarityInInventory_0' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, NPC_BestLootRarityInventoryFound) == 0x000001, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::NPC_BestLootRarityInventoryFound' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Concat_StrStr_ReturnValue) == 0x000008, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_HasAuthority_ReturnValue) == 0x000018, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, Temp_int_Loop_Counter_Variable) == 0x00001C, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, Temp_int_Array_Index_Variable) == 0x000024, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Greater_ByteByte_ReturnValue) == 0x000028, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Greater_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_GetItemsFromInventoryOwner_InventoryOwner_CastInput) == 0x000030, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_GetItemsFromInventoryOwner_InventoryOwner_CastInput' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_GetItemsFromInventoryOwner_Items) == 0x000040, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_GetItemsFromInventoryOwner_Items' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_GetEnumeratorName_ReturnValue) == 0x000050, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_GetEnumeratorName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Array_Get_Item) == 0x000058, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_BuildString_Name_ReturnValue) == 0x000060, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_BuildString_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_GetDisplayName_ReturnValue) == 0x000070, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Conv_TextToString_ReturnValue) == 0x000088, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_GetRarity_ReturnValue) == 0x000098, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_GetRarity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Concat_StrStr_ReturnValue_1) == 0x0000A0, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_GetEnumeratorName_ReturnValue_1) == 0x0000B0, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_GetEnumeratorName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0000B8, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Conv_NameToString_ReturnValue) == 0x0000C8, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Concat_StrStr_ReturnValue_3) == 0x0000D8, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Concat_StrStr_ReturnValue_4) == 0x0000E8, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Greater_ByteByte_ReturnValue_1) == 0x0000F8, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Greater_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Concat_StrStr_ReturnValue_5) == 0x000100, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Concat_StrStr_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Array_Length_ReturnValue) == 0x000110, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory, CallFunc_Less_IntInt_ReturnValue) == 0x000114, "Member 'NPC_Pawn_Parent_C_NPC_SetBestLootRarityInInventory::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC SetCanDropLoot
-// 0x0001 (0x0001 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_SetCanDropLoot final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC GetInventoryInformation
+// 0x00A0 (0x00A0 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_GetInventoryInformation final
 {
 public:
-	bool                                          CanDropLoot;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC SetLeader
-// 0x0040 (0x0040 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_SetLeader final
-{
-public:
-	class AActor*                                 Leader;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Success_;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 LeaderSet;                                         // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_HasLeader__HasLeader_;                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_NPC_HasLeader__Leader;                    // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBlackboardComponent*                   CallFunc_GetBlackboard_ReturnValue;                // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC SetLootCollectionPhaseCompleteToBlackboard
-// 0x0020 (0x0020 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard final
-{
-public:
-	bool                                          LootCollectionPhaseComplete;                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasItemInInventory;                                // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBlackboardComponent*                   CallFunc_GetBlackboard_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetValueAsBool_ReturnValue;               // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TotalNumberOfInventoryItems;                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         LastInventoryItemIndex;                            // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasEnoughItemsToDeliver;                           // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          ConsumedEnoughItemsToBeConsideredFull;             // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool;   // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded; // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat;  // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_1; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_1; // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_1; // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_BuildString_Bool_ReturnValue;             // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TScriptInterface<class IFortInventoryOwnerInterface> CallFunc_GetItemsFromInventoryOwner_InventoryOwner_CastInput; // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TArray<class UFortWorldItem*>                 CallFunc_GetItemsFromInventoryOwner_Items;         // 0x0048(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_BuildString_Bool_ReturnValue_1;           // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_BuildString_Bool_ReturnValue_2;           // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_BuildString_Bool_ReturnValue_3;           // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_GetInventoryInformation");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation) == 0x0000A0, "Wrong size on NPC_Pawn_Parent_C_NPC_GetInventoryInformation");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, HasItemInInventory) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::HasItemInInventory' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, TotalNumberOfInventoryItems) == 0x000004, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::TotalNumberOfInventoryItems' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, LastInventoryItemIndex) == 0x000008, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::LastInventoryItemIndex' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, HasEnoughItemsToDeliver) == 0x00000C, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::HasEnoughItemsToDeliver' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, ConsumedEnoughItemsToBeConsideredFull) == 0x00000D, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::ConsumedEnoughItemsToBeConsideredFull' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_NPC_GetScalableFloatHotfixValue_AsBool) == 0x00000E, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_NPC_GetScalableFloatHotfixValue_AsBool' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded) == 0x000010, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat) == 0x000014, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_1) == 0x000018, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_1) == 0x00001C, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_1) == 0x000020, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_Greater_IntInt_ReturnValue) == 0x000024, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_BuildString_Bool_ReturnValue) == 0x000028, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_BuildString_Bool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_GetItemsFromInventoryOwner_InventoryOwner_CastInput) == 0x000038, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_GetItemsFromInventoryOwner_InventoryOwner_CastInput' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_GetItemsFromInventoryOwner_Items) == 0x000048, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_GetItemsFromInventoryOwner_Items' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_Array_LastIndex_ReturnValue) == 0x00005C, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000060, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_GreaterEqual_IntInt_ReturnValue_1) == 0x000061, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_GreaterEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000062, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_BooleanAND_ReturnValue) == 0x000063, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_BuildString_Bool_ReturnValue_1) == 0x000068, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_BuildString_Bool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_BooleanAND_ReturnValue_1) == 0x000078, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_BuildString_Bool_ReturnValue_2) == 0x000080, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_BuildString_Bool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetInventoryInformation, CallFunc_BuildString_Bool_ReturnValue_3) == 0x000090, "Member 'NPC_Pawn_Parent_C_NPC_GetInventoryInformation::CallFunc_BuildString_Bool_ReturnValue_3' has a wrong offset!");
+
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC PawnDebugMessage
+// 0x0088 (0x0088 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_PawnDebugMessage final
+{
+public:
+	class FString                                 String;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          OnlyWhenDebug;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_PawnDebugMessage) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_PawnDebugMessage");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_PawnDebugMessage) == 0x000088, "Wrong size on NPC_Pawn_Parent_C_NPC_PawnDebugMessage");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_PawnDebugMessage, String) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_PawnDebugMessage::String' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_PawnDebugMessage, OnlyWhenDebug) == 0x000010, "Member 'NPC_Pawn_Parent_C_NPC_PawnDebugMessage::OnlyWhenDebug' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_PawnDebugMessage, CallFunc_Concat_StrStr_ReturnValue) == 0x000018, "Member 'NPC_Pawn_Parent_C_NPC_PawnDebugMessage::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_PawnDebugMessage, CallFunc_Not_PreBool_ReturnValue) == 0x000028, "Member 'NPC_Pawn_Parent_C_NPC_PawnDebugMessage::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_PawnDebugMessage, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000030, "Member 'NPC_Pawn_Parent_C_NPC_PawnDebugMessage::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_PawnDebugMessage, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000040, "Member 'NPC_Pawn_Parent_C_NPC_PawnDebugMessage::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_PawnDebugMessage, CallFunc_BooleanAND_ReturnValue) == 0x000050, "Member 'NPC_Pawn_Parent_C_NPC_PawnDebugMessage::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_PawnDebugMessage, CallFunc_BooleanOR_ReturnValue) == 0x000051, "Member 'NPC_Pawn_Parent_C_NPC_PawnDebugMessage::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_PawnDebugMessage, CallFunc_GetObjectName_ReturnValue) == 0x000058, "Member 'NPC_Pawn_Parent_C_NPC_PawnDebugMessage::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_PawnDebugMessage, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000068, "Member 'NPC_Pawn_Parent_C_NPC_PawnDebugMessage::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_PawnDebugMessage, CallFunc_Concat_StrStr_ReturnValue_4) == 0x000078, "Member 'NPC_Pawn_Parent_C_NPC_PawnDebugMessage::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
+
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC SendGameplayCuePickupGrabbed
+// 0x00D0 (0x00D0 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed final
+{
+public:
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayCueParameters                 CallFunc_MakeGameplayCueParameters_ReturnValue;    // 0x0008(0x00B8)(ContainsInstancedReference)
+	struct FGameplayTag                           CallFunc_MakeLiteralGameplayTag_ReturnValue;       // 0x00C0(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGameplayTagValid_ReturnValue;           // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed) == 0x0000D0, "Wrong size on NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed, CallFunc_IsDedicatedServer_ReturnValue) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed, CallFunc_MakeGameplayCueParameters_ReturnValue) == 0x000008, "Member 'NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed::CallFunc_MakeGameplayCueParameters_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed, CallFunc_MakeLiteralGameplayTag_ReturnValue) == 0x0000C0, "Member 'NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed::CallFunc_MakeLiteralGameplayTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed, CallFunc_IsGameplayTagValid_ReturnValue) == 0x0000C8, "Member 'NPC_Pawn_Parent_C_NPC_SendGameplayCuePickupGrabbed::CallFunc_IsGameplayTagValid_ReturnValue' has a wrong offset!");
+
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnRep_NPC BestLootRarityInInventory
+// 0x0001 (0x0001 - 0x0000)
+struct NPC_Pawn_Parent_C_OnRep_NPC_BestLootRarityInInventory final
+{
+public:
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(NPC_Pawn_Parent_C_OnRep_NPC_BestLootRarityInInventory) == 0x000001, "Wrong alignment on NPC_Pawn_Parent_C_OnRep_NPC_BestLootRarityInInventory");
+static_assert(sizeof(NPC_Pawn_Parent_C_OnRep_NPC_BestLootRarityInInventory) == 0x000001, "Wrong size on NPC_Pawn_Parent_C_OnRep_NPC_BestLootRarityInInventory");
+static_assert(offsetof(NPC_Pawn_Parent_C_OnRep_NPC_BestLootRarityInInventory, CallFunc_IsDedicatedServer_ReturnValue) == 0x000000, "Member 'NPC_Pawn_Parent_C_OnRep_NPC_BestLootRarityInInventory::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC PickupGrabbed
+// 0x0008 (0x0008 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_PickupGrabbed final
+{
+public:
+	class AFortPickup*                            FortPickupGrabbed;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_PickupGrabbed) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_PickupGrabbed");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_PickupGrabbed) == 0x000008, "Wrong size on NPC_Pawn_Parent_C_NPC_PickupGrabbed");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_PickupGrabbed, FortPickupGrabbed) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_PickupGrabbed::FortPickupGrabbed' has a wrong offset!");
+
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC PickupDropped
+// 0x0008 (0x0008 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_PickupDropped final
+{
+public:
+	class AFortPickup*                            FortPickupDropped;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_PickupDropped) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_PickupDropped");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_PickupDropped) == 0x000008, "Wrong size on NPC_Pawn_Parent_C_NPC_PickupDropped");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_PickupDropped, FortPickupDropped) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_PickupDropped::FortPickupDropped' has a wrong offset!");
+
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC ScalableFloatIsValid
+// 0x0030 (0x0030 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid final
+{
+public:
+	struct FScalableFloat                         ScalableFloat;                                     // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          Valid;                                             // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid) == 0x000030, "Wrong size on NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid, ScalableFloat) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid::ScalableFloat' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid, Valid) == 0x000028, "Member 'NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid::Valid' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid, CallFunc_IsValid_ReturnValue) == 0x000029, "Member 'NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid, CallFunc_NotEqual_NameName_ReturnValue) == 0x00002A, "Member 'NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid::CallFunc_NotEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid, CallFunc_BooleanAND_ReturnValue) == 0x00002B, "Member 'NPC_Pawn_Parent_C_NPC_ScalableFloatIsValid::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC GetScalableFloatHotfixValue
+// 0x0048 (0x0048 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue final
+{
+public:
+	struct FScalableFloat                         ScalableFloatHotfix;                               // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	float                                         AtLevel;                                           // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AsBool;                                            // 0x002C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         AsIntRounded;                                      // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         AsFloat;                                           // 0x0034(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue;                        // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NPC_ScalableFloatIsValid_Valid;           // 0x0046(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue) == 0x000048, "Wrong size on NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue, ScalableFloatHotfix) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue::ScalableFloatHotfix' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue, AtLevel) == 0x000028, "Member 'NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue::AtLevel' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue, AsBool) == 0x00002C, "Member 'NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue::AsBool' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue, AsIntRounded) == 0x000030, "Member 'NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue::AsIntRounded' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue, AsFloat) == 0x000034, "Member 'NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue::AsFloat' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue, CallFunc_GetValueAtLevel_ReturnValue) == 0x000038, "Member 'NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue::CallFunc_GetValueAtLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue, CallFunc_Round_ReturnValue) == 0x00003C, "Member 'NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue::CallFunc_Round_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue, CallFunc_Round_ReturnValue_1) == 0x000040, "Member 'NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue::CallFunc_Round_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue, CallFunc_Greater_IntInt_ReturnValue) == 0x000044, "Member 'NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000045, "Member 'NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue, CallFunc_NPC_ScalableFloatIsValid_Valid) == 0x000046, "Member 'NPC_Pawn_Parent_C_NPC_GetScalableFloatHotfixValue::CallFunc_NPC_ScalableFloatIsValid_Valid' has a wrong offset!");
 
 // Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC SetReturnGatheredLootToBlackboard
 // 0x0028 (0x0028 - 0x0000)
@@ -838,21 +793,209 @@ struct NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard final
 {
 public:
 	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetInventoryInformation_HasItemInInventory; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NPC_GetInventoryInformation_HasItemInInventory; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_NPC_GetInventoryInformation_TotalNumberOfInventoryItems; // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_NPC_GetInventoryInformation_LastInventoryItemIndex; // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetInventoryInformation_HasEnoughItemsToDeliver; // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetInventoryInformation_ConsumedEnoughItemsToBeConsideredFull; // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NPC_GetInventoryInformation_HasEnoughItemsToDeliver; // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NPC_GetInventoryInformation_ConsumedEnoughItemsToBeConsideredFull; // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBlackboardComponent*                   CallFunc_GetBlackboard_ReturnValue;                // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetValueAsBool_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue_1;          // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetValueAsBool_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue_1;          // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard) == 0x000028, "Wrong size on NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard, CallFunc_MakeLiteralName_ReturnValue) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard, CallFunc_NPC_GetInventoryInformation_HasItemInInventory) == 0x000008, "Member 'NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard::CallFunc_NPC_GetInventoryInformation_HasItemInInventory' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard, CallFunc_NPC_GetInventoryInformation_TotalNumberOfInventoryItems) == 0x00000C, "Member 'NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard::CallFunc_NPC_GetInventoryInformation_TotalNumberOfInventoryItems' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard, CallFunc_NPC_GetInventoryInformation_LastInventoryItemIndex) == 0x000010, "Member 'NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard::CallFunc_NPC_GetInventoryInformation_LastInventoryItemIndex' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard, CallFunc_NPC_GetInventoryInformation_HasEnoughItemsToDeliver) == 0x000014, "Member 'NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard::CallFunc_NPC_GetInventoryInformation_HasEnoughItemsToDeliver' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard, CallFunc_NPC_GetInventoryInformation_ConsumedEnoughItemsToBeConsideredFull) == 0x000015, "Member 'NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard::CallFunc_NPC_GetInventoryInformation_ConsumedEnoughItemsToBeConsideredFull' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard, CallFunc_GetBlackboard_ReturnValue) == 0x000018, "Member 'NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard::CallFunc_GetBlackboard_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard, CallFunc_GetValueAsBool_ReturnValue) == 0x000020, "Member 'NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard::CallFunc_GetValueAsBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000021, "Member 'NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard, CallFunc_NotEqual_BoolBool_ReturnValue_1) == 0x000022, "Member 'NPC_Pawn_Parent_C_NPC_SetReturnGatheredLootToBlackboard::CallFunc_NotEqual_BoolBool_ReturnValue_1' has a wrong offset!");
+
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC SetLootCollectionPhaseCompleteToBlackboard
+// 0x0020 (0x0020 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard final
+{
+public:
+	bool                                          LootCollectionPhaseComplete;                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBlackboardComponent*                   CallFunc_GetBlackboard_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetValueAsBool_ReturnValue;               // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard) == 0x000020, "Wrong size on NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard, LootCollectionPhaseComplete) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard::LootCollectionPhaseComplete' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard, CallFunc_MakeLiteralName_ReturnValue) == 0x000004, "Member 'NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard, CallFunc_GetBlackboard_ReturnValue) == 0x000010, "Member 'NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard::CallFunc_GetBlackboard_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard, CallFunc_GetValueAsBool_ReturnValue) == 0x000018, "Member 'NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard::CallFunc_GetValueAsBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000019, "Member 'NPC_Pawn_Parent_C_NPC_SetLootCollectionPhaseCompleteToBlackboard::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
+
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC ApplyGameplayEffectWithMMRScaling
+// 0x0028 (0x0028 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_Class;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 ApplyGeToThisActor;                                // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Option_B___If_false__use_Option_A_Variable; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_Select_Default;                             // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling) == 0x000028, "Wrong size on NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling, Actor) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling::Actor' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling, GE_Class) == 0x000008, "Member 'NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling::GE_Class' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling, ApplyGeToThisActor) == 0x000010, "Member 'NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling::ApplyGeToThisActor' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling, Temp_bool_Option_B___If_false__use_Option_A_Variable) == 0x000018, "Member 'NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling::Temp_bool_Option_B___If_false__use_Option_A_Variable' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling, Temp_bool_Variable) == 0x00001A, "Member 'NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling, K2Node_Select_Default) == 0x000020, "Member 'NPC_Pawn_Parent_C_NPC_ApplyGameplayEffectWithMMRScaling::K2Node_Select_Default' has a wrong offset!");
+
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC TryToDropLootOnDeath
+// 0x0230 (0x0230 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath final
+{
+public:
+	struct FGameplayTagContainer                  DamageTags;                                        // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          CanDropLoot;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CanDropLootBool;                                   // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue; // 0x0030(0x0020)()
+	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_GameplayTagContainer_ReturnValue; // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_GameplayTagContainer_ReturnValue_1; // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_GameplayTagContainer_ReturnValue; // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAnyTags_ReturnValue;                   // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_GameplayTagContainer_ReturnValue_1; // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0056(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAnyTags_ReturnValue_1;                 // 0x0057(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5B[0x5];                                       // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFortItemEntry>                 CallFunc_PickLootDrops_OutLootToDrop;              // 0x0060(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	bool                                          CallFunc_PickLootDrops_ReturnValue;                // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortItemEntry                         CallFunc_Array_Get_Item;                           // 0x0078(0x0190)()
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_209[0x3];                                      // 0x0209(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x020C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0211(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_212[0x6];                                      // 0x0212(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IFortInventoryOwnerInterface> CallFunc_GiveItemEntryToInventoryOwner_InventoryOwner_CastInput; // 0x0218(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GiveItemEntryToInventoryOwner_ReturnValue; // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath) == 0x000230, "Wrong size on NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, DamageTags) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::DamageTags' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CanDropLoot) == 0x000020, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CanDropLoot' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CanDropLootBool) == 0x000021, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CanDropLootBool' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, Temp_int_Array_Index_Variable) == 0x000024, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, Temp_int_Loop_Counter_Variable) == 0x000028, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_MakeLiteralGameplayTagContainer_ReturnValue) == 0x000030, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_MakeLiteralGameplayTagContainer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_NotEqual_NameName_ReturnValue) == 0x000050, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_NotEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_EqualEqual_GameplayTagContainer_ReturnValue) == 0x000051, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_EqualEqual_GameplayTagContainer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_EqualEqual_GameplayTagContainer_ReturnValue_1) == 0x000052, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_EqualEqual_GameplayTagContainer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_NotEqual_GameplayTagContainer_ReturnValue) == 0x000053, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_NotEqual_GameplayTagContainer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_HasAnyTags_ReturnValue) == 0x000054, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_HasAnyTags_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_NotEqual_GameplayTagContainer_ReturnValue_1) == 0x000055, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_NotEqual_GameplayTagContainer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_BooleanAND_ReturnValue) == 0x000056, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_HasAnyTags_ReturnValue_1) == 0x000057, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_HasAnyTags_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_BooleanOR_ReturnValue) == 0x000058, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_Not_PreBool_ReturnValue) == 0x000059, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_BooleanAND_ReturnValue_1) == 0x00005A, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_PickLootDrops_OutLootToDrop) == 0x000060, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_PickLootDrops_OutLootToDrop' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_PickLootDrops_ReturnValue) == 0x000070, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_PickLootDrops_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_BooleanOR_ReturnValue_1) == 0x000071, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_Array_Get_Item) == 0x000078, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_BooleanAND_ReturnValue_2) == 0x000208, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_Array_Length_ReturnValue) == 0x00020C, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_BooleanAND_ReturnValue_3) == 0x000210, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_Less_IntInt_ReturnValue) == 0x000211, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_GiveItemEntryToInventoryOwner_InventoryOwner_CastInput) == 0x000218, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_GiveItemEntryToInventoryOwner_InventoryOwner_CastInput' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath, CallFunc_GiveItemEntryToInventoryOwner_ReturnValue) == 0x000228, "Member 'NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath::CallFunc_GiveItemEntryToInventoryOwner_ReturnValue' has a wrong offset!");
+
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC HandleAlertLevelVoice
+// 0x0028 (0x0028 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice final
+{
+public:
+	Enum_NPC_AlertLevel                           Temp_byte_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           Temp_struct_Variable;                              // 0x0004(0x0008)(ConstParm, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           Temp_struct_Variable_1;                            // 0x000C(0x0008)(ConstParm, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           Temp_struct_Variable_2;                            // 0x0014(0x0008)(ConstParm, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           K2Node_Select_Default;                             // 0x0020(0x0008)(ConstParm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice) == 0x000004, "Wrong alignment on NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice) == 0x000028, "Wrong size on NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice, Temp_byte_Variable) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice, Temp_struct_Variable) == 0x000004, "Member 'NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice, Temp_struct_Variable_1) == 0x00000C, "Member 'NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice, Temp_struct_Variable_2) == 0x000014, "Member 'NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice::Temp_struct_Variable_2' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice, K2Node_SwitchEnum_CmpSuccess) == 0x00001C, "Member 'NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice, K2Node_Select_Default) == 0x000020, "Member 'NPC_Pawn_Parent_C_NPC_HandleAlertLevelVoice::K2Node_Select_Default' has a wrong offset!");
+
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC CheckIsInSafeZone
+// 0x0050 (0x0050 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone final
+{
+public:
+	bool                                          TestSucceeded;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          isInSafeZone;                                      // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AAthena_GameState_C*                    K2Node_DynamicCast_AsAthena_Game_State;            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortSafeZoneIndicator*                 CallFunc_GetSafeZoneIndicator_ReturnValue;         // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetSafeZoneCenter_ReturnValue;            // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Vector_DistanceSquared_ReturnValue;       // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetSafeZoneRadius_ReturnValue;            // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Square_ReturnValue;                       // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone) == 0x000050, "Wrong size on NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone, TestSucceeded) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone::TestSucceeded' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone, isInSafeZone) == 0x000001, "Member 'NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone::isInSafeZone' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000004, "Member 'NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone, CallFunc_GetGameState_ReturnValue) == 0x000010, "Member 'NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone, K2Node_DynamicCast_AsAthena_Game_State) == 0x000018, "Member 'NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone::K2Node_DynamicCast_AsAthena_Game_State' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone, CallFunc_GetSafeZoneIndicator_ReturnValue) == 0x000028, "Member 'NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone::CallFunc_GetSafeZoneIndicator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone, CallFunc_GetSafeZoneCenter_ReturnValue) == 0x000030, "Member 'NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone::CallFunc_GetSafeZoneCenter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone, CallFunc_IsValid_ReturnValue) == 0x00003C, "Member 'NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone, CallFunc_Vector_DistanceSquared_ReturnValue) == 0x000040, "Member 'NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone::CallFunc_Vector_DistanceSquared_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone, CallFunc_GetSafeZoneRadius_ReturnValue) == 0x000044, "Member 'NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone::CallFunc_GetSafeZoneRadius_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone, CallFunc_Square_ReturnValue) == 0x000048, "Member 'NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone::CallFunc_Square_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone, CallFunc_Less_FloatFloat_ReturnValue) == 0x00004C, "Member 'NPC_Pawn_Parent_C_NPC_CheckIsInSafeZone::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
 
 // Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC TargetSlotInfo
-// 0x01F0 (0x01F0 - 0x0000)
+// 0x01D8 (0x01D8 - 0x0000)
 struct NPC_Pawn_Parent_C_NPC_TargetSlotInfo final
 {
 public:
@@ -862,441 +1005,195 @@ public:
 	int32                                         TargetSlotCount;                                   // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         TargetSlotMax;                                     // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         NPC_TargetSlotsRequired;                           // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TargetSlotsMaxOrMore;                              // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TargetSlotCountIsExactlyMax;                       // 0x001D(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NPC_IsTargetSlotOwner;                             // 0x001E(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NPC_HasSpaceToSlotOnTarget;                        // 0x001F(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_NPC_TargetSlots                          TargetSlotTypeOut;                                 // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 TargetSlotCountingGE;                              // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         AI_TargetSlotSizeHF;                               // 0x0030(0x0028)(Parm, OutParm)
-	struct FScalableFloat                         AI_TargetSlotDurationHF;                           // 0x0058(0x0028)(Parm, OutParm)
-	class UClass*                                 TargetSlotOverrideGE;                              // 0x0080(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 TargetSlotOwnerGE;                                 // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 TargetSlotCountingMaxedGE;                         // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 NPC_TargetSlotCountingMaxedGE;                     // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 NPC_TargetSlotOwnerGE;                             // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 NPC_TargetSlotOverrideGE;                          // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         NPC_AI_TargetSlotDurationHF;                       // 0x00B0(0x0028)(Edit, BlueprintVisible)
-	struct FScalableFloat                         NPC_AI_TargetSlotSizeHF;                           // 0x00D8(0x0028)(Edit, BlueprintVisible)
-	class UClass*                                 NPC_TargetSlotCountingGE;                          // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySystemComponent*                CallFunc_GetAbilitySystemComponent_ReturnValue;    // 0x0110(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11A[0x2];                                      // 0x011A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UClass*>                         K2Node_MakeArray_Array;                            // 0x0120(0x0010)(ReferenceParm)
-	int32                                         CallFunc_GetTotalGameplayEffectCount_FinalEffectCount; // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0134(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool;   // 0x0135(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_136[0x2];                                      // 0x0136(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded; // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat;  // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UClass*>                         K2Node_MakeArray_Array_1;                          // 0x0140(0x0010)(ReferenceParm)
-	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetTotalGameplayEffectCount_FinalEffectCount_1; // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_NPC_TargetSlots                CallFunc_Array_Get_Item;                           // 0x0160(0x0078)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DF[0x1];                                      // 0x01DF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x01EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x01ED(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01EE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TargetSlotsMaxOrMore;                              // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          TargetSlotCountIsExactlyMax;                       // 0x001D(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          NPC_HasSpaceToSlotOnTarget;                        // 0x001E(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	Enum_NPC_TargetSlots                          TargetSlotTypeOut;                                 // 0x001F(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 TargetSlotCountingGE;                              // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         AI_TargetSlotSizeHF;                               // 0x0028(0x0028)(Parm, OutParm)
+	struct FScalableFloat                         AI_TargetSlotDurationHF;                           // 0x0050(0x0028)(Parm, OutParm)
+	class UClass*                                 TargetSlotOverrideGE;                              // 0x0078(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 TargetSlotOwnerGE;                                 // 0x0080(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 TargetSlotCountingMaxedGE;                         // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 NPC_TargetSlotCountingMaxedGE;                     // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 NPC_TargetSlotOwnerGE;                             // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 NPC_TargetSlotOverrideGE;                          // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         NPC_AI_TargetSlotDurationHF;                       // 0x00A8(0x0028)(Edit, BlueprintVisible)
+	struct FScalableFloat                         NPC_AI_TargetSlotSizeHF;                           // 0x00D0(0x0028)(Edit, BlueprintVisible)
+	class UClass*                                 NPC_TargetSlotCountingGE;                          // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilitySystemComponent*                CallFunc_GetAbilitySystemComponent_ReturnValue;    // 0x0108(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_112[0x2];                                      // 0x0112(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool;   // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_119[0x3];                                      // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded; // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat;  // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UClass*>                         K2Node_MakeArray_Array;                            // 0x0128(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetTotalGameplayEffectCount_FinalEffectCount; // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_144[0x4];                                      // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruct_NPC_TargetSlots                CallFunc_Array_Get_Item;                           // 0x0148(0x0078)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1C7[0x1];                                      // 0x01C7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x01D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x01D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01D6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_TargetSlotInfo");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo) == 0x0001D8, "Wrong size on NPC_Pawn_Parent_C_NPC_TargetSlotInfo");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, TargetSlotType) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::TargetSlotType' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, TargetWeWantToSlotOnto) == 0x000008, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::TargetWeWantToSlotOnto' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, TargetSlotCount) == 0x000010, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::TargetSlotCount' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, TargetSlotMax) == 0x000014, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::TargetSlotMax' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, NPC_TargetSlotsRequired) == 0x000018, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::NPC_TargetSlotsRequired' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, TargetSlotsMaxOrMore) == 0x00001C, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::TargetSlotsMaxOrMore' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, TargetSlotCountIsExactlyMax) == 0x00001D, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::TargetSlotCountIsExactlyMax' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, NPC_HasSpaceToSlotOnTarget) == 0x00001E, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::NPC_HasSpaceToSlotOnTarget' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, TargetSlotTypeOut) == 0x00001F, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::TargetSlotTypeOut' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, TargetSlotCountingGE) == 0x000020, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::TargetSlotCountingGE' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, AI_TargetSlotSizeHF) == 0x000028, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::AI_TargetSlotSizeHF' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, AI_TargetSlotDurationHF) == 0x000050, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::AI_TargetSlotDurationHF' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, TargetSlotOverrideGE) == 0x000078, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::TargetSlotOverrideGE' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, TargetSlotOwnerGE) == 0x000080, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::TargetSlotOwnerGE' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, TargetSlotCountingMaxedGE) == 0x000088, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::TargetSlotCountingMaxedGE' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, NPC_TargetSlotCountingMaxedGE) == 0x000090, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::NPC_TargetSlotCountingMaxedGE' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, NPC_TargetSlotOwnerGE) == 0x000098, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::NPC_TargetSlotOwnerGE' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, NPC_TargetSlotOverrideGE) == 0x0000A0, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::NPC_TargetSlotOverrideGE' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, NPC_AI_TargetSlotDurationHF) == 0x0000A8, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::NPC_AI_TargetSlotDurationHF' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, NPC_AI_TargetSlotSizeHF) == 0x0000D0, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::NPC_AI_TargetSlotSizeHF' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, NPC_TargetSlotCountingGE) == 0x0000F8, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::NPC_TargetSlotCountingGE' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, Temp_bool_True_if_break_was_hit_Variable) == 0x000100, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_GetAbilitySystemComponent_ReturnValue) == 0x000108, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_GetAbilitySystemComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_IsValid_ReturnValue) == 0x000110, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_Not_PreBool_ReturnValue) == 0x000111, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, Temp_int_Array_Index_Variable) == 0x000114, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_NPC_GetScalableFloatHotfixValue_AsBool) == 0x000118, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_NPC_GetScalableFloatHotfixValue_AsBool' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded) == 0x00011C, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat) == 0x000120, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, K2Node_MakeArray_Array) == 0x000128, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_IsValidClass_ReturnValue) == 0x000138, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_GetTotalGameplayEffectCount_FinalEffectCount) == 0x00013C, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_GetTotalGameplayEffectCount_FinalEffectCount' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, Temp_int_Loop_Counter_Variable) == 0x000140, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_Array_Get_Item) == 0x000148, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_Array_Length_ReturnValue) == 0x0001C0, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_Less_IntInt_ReturnValue) == 0x0001C4, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_BooleanAND_ReturnValue) == 0x0001C5, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0001C6, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_Add_IntInt_ReturnValue) == 0x0001C8, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_MakeLiteralInt_ReturnValue) == 0x0001CC, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_MakeLiteralInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_Subtract_IntInt_ReturnValue) == 0x0001D0, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x0001D4, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0001D5, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotInfo, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0001D6, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotInfo::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC TargetSlotIsUsingOverride
-// 0x00D8 (0x00D8 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride final
 {
 public:
 	Enum_NPC_TargetSlots                          TargetSlotType;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 TargetWeWantToSlotOnto;                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Override;                                          // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Override;                                          // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 NPC_TargetSlotOverrideGE;                          // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_NPC_TargetSlotInfo_TargetSlotCount;       // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_NPC_TargetSlotInfo_TargetSlotMax;         // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_NPC_TargetSlotInfo_NPC_TargetSlotsRequired; // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_TargetSlotInfo_TargetSlotsMaxOrMore;  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_TargetSlotInfo_TargetSlotCountIsExactlyMax; // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_TargetSlotInfo_NPC_IsTargetSlotOwner; // 0x002E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_TargetSlotInfo_NPC_HasSpaceToSlotOnTarget; // 0x002F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_NPC_TargetSlots                          CallFunc_NPC_TargetSlotInfo_TargetSlotTypeOut;     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_NPC_TargetSlotInfo_TargetSlotCountingGE;  // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         CallFunc_NPC_TargetSlotInfo_AI_TargetSlotSizeHF;   // 0x0040(0x0028)()
-	struct FScalableFloat                         CallFunc_NPC_TargetSlotInfo_AI_TargetSlotDurationHF; // 0x0068(0x0028)()
-	class UClass*                                 CallFunc_NPC_TargetSlotInfo_TargetSlotOverrideGE;  // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_NPC_TargetSlotInfo_TargetSlotOwnerGE;     // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_NPC_TargetSlotInfo_TargetSlotCountingMaxedGE; // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySystemComponent*                CallFunc_GetAbilitySystemComponent_ReturnValue;    // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UClass*>                         K2Node_MakeArray_Array;                            // 0x00C0(0x0010)(ReferenceParm)
-	int32                                         CallFunc_GetTotalGameplayEffectCount_FinalEffectCount; // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NPC_TargetSlotInfo_TargetSlotsMaxOrMore;  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NPC_TargetSlotInfo_TargetSlotCountIsExactlyMax; // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NPC_TargetSlotInfo_NPC_HasSpaceToSlotOnTarget; // 0x002E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	Enum_NPC_TargetSlots                          CallFunc_NPC_TargetSlotInfo_TargetSlotTypeOut;     // 0x002F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_NPC_TargetSlotInfo_TargetSlotCountingGE;  // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         CallFunc_NPC_TargetSlotInfo_AI_TargetSlotSizeHF;   // 0x0038(0x0028)()
+	struct FScalableFloat                         CallFunc_NPC_TargetSlotInfo_AI_TargetSlotDurationHF; // 0x0060(0x0028)()
+	class UClass*                                 CallFunc_NPC_TargetSlotInfo_TargetSlotOverrideGE;  // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_NPC_TargetSlotInfo_TargetSlotOwnerGE;     // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_NPC_TargetSlotInfo_TargetSlotCountingMaxedGE; // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilitySystemComponent*                CallFunc_GetAbilitySystemComponent_ReturnValue;    // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UClass*>                         K2Node_MakeArray_Array;                            // 0x00B8(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         CallFunc_GetTotalGameplayEffectCount_FinalEffectCount; // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride) == 0x0000D0, "Wrong size on NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, TargetSlotType) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::TargetSlotType' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, TargetWeWantToSlotOnto) == 0x000008, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::TargetWeWantToSlotOnto' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, Override) == 0x000010, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::Override' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, NPC_TargetSlotOverrideGE) == 0x000018, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::NPC_TargetSlotOverrideGE' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NPC_TargetSlotInfo_TargetSlotCount) == 0x000020, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NPC_TargetSlotInfo_TargetSlotCount' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NPC_TargetSlotInfo_TargetSlotMax) == 0x000024, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NPC_TargetSlotInfo_TargetSlotMax' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NPC_TargetSlotInfo_NPC_TargetSlotsRequired) == 0x000028, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NPC_TargetSlotInfo_NPC_TargetSlotsRequired' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NPC_TargetSlotInfo_TargetSlotsMaxOrMore) == 0x00002C, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NPC_TargetSlotInfo_TargetSlotsMaxOrMore' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NPC_TargetSlotInfo_TargetSlotCountIsExactlyMax) == 0x00002D, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NPC_TargetSlotInfo_TargetSlotCountIsExactlyMax' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NPC_TargetSlotInfo_NPC_HasSpaceToSlotOnTarget) == 0x00002E, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NPC_TargetSlotInfo_NPC_HasSpaceToSlotOnTarget' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NPC_TargetSlotInfo_TargetSlotTypeOut) == 0x00002F, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NPC_TargetSlotInfo_TargetSlotTypeOut' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NPC_TargetSlotInfo_TargetSlotCountingGE) == 0x000030, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NPC_TargetSlotInfo_TargetSlotCountingGE' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NPC_TargetSlotInfo_AI_TargetSlotSizeHF) == 0x000038, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NPC_TargetSlotInfo_AI_TargetSlotSizeHF' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NPC_TargetSlotInfo_AI_TargetSlotDurationHF) == 0x000060, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NPC_TargetSlotInfo_AI_TargetSlotDurationHF' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NPC_TargetSlotInfo_TargetSlotOverrideGE) == 0x000088, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NPC_TargetSlotInfo_TargetSlotOverrideGE' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NPC_TargetSlotInfo_TargetSlotOwnerGE) == 0x000090, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NPC_TargetSlotInfo_TargetSlotOwnerGE' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NPC_TargetSlotInfo_TargetSlotCountingMaxedGE) == 0x000098, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NPC_TargetSlotInfo_TargetSlotCountingMaxedGE' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_IsValidClass_ReturnValue) == 0x0000A0, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_GetAbilitySystemComponent_ReturnValue) == 0x0000A8, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_GetAbilitySystemComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_IsValid_ReturnValue) == 0x0000B0, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, K2Node_MakeArray_Array) == 0x0000B8, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_GetTotalGameplayEffectCount_FinalEffectCount) == 0x0000C8, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_GetTotalGameplayEffectCount_FinalEffectCount' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride, CallFunc_NotEqual_IntInt_ReturnValue) == 0x0000CC, "Member 'NPC_Pawn_Parent_C_NPC_TargetSlotIsUsingOverride::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC TryToDropLootOnDeath
-// 0x0248 (0x0248 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_TryToDropLootOnDeath final
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC DamageAttemptDisableIntroPhaseBehavior
+// 0x0028 (0x0028 - 0x0000)
+struct NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior final
 {
 public:
 	struct FGameplayTagContainer                  DamageTags;                                        // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          CanDropLoot;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanDropLootBool;                                   // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue; // 0x0038(0x0020)()
-	bool                                          CallFunc_EqualEqual_GameplayTagContainer_ReturnValue; // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_GameplayTagContainer_ReturnValue_1; // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_GameplayTagContainer_ReturnValue; // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAnyTags_ReturnValue;                   // 0x005B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_GameplayTagContainer_ReturnValue_1; // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAnyTags_ReturnValue_1;                 // 0x005E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x005F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFortItemEntry>                 CallFunc_PickLootDrops_OutLootToDrop;              // 0x0068(0x0010)(ReferenceParm)
-	bool                                          CallFunc_PickLootDrops_ReturnValue;                // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortItemEntry                         CallFunc_Array_Get_Item;                           // 0x0080(0x01A0)()
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_221[0x3];                                      // 0x0221(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0224(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_229[0x7];                                      // 0x0229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IFortInventoryOwnerInterface> CallFunc_GiveItemEntryToInventoryOwner_InventoryOwner_CastInput; // 0x0230(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	bool                                          CallFunc_GiveItemEntryToInventoryOwner_ReturnValue; // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_DoesContainerMatchTagQuery_ReturnValue;   // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsTagQueryEmpty_ReturnValue;              // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior) == 0x000008, "Wrong alignment on NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior) == 0x000028, "Wrong size on NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior, DamageTags) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior::DamageTags' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior, CallFunc_HasAuthority_ReturnValue) == 0x000020, "Member 'NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior, CallFunc_DoesContainerMatchTagQuery_ReturnValue) == 0x000021, "Member 'NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior::CallFunc_DoesContainerMatchTagQuery_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior, CallFunc_IsTagQueryEmpty_ReturnValue) == 0x000022, "Member 'NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior::CallFunc_IsTagQueryEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior, CallFunc_Not_PreBool_ReturnValue) == 0x000023, "Member 'NPC_Pawn_Parent_C_NPC_DamageAttemptDisableIntroPhaseBehavior::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC UpdateInteract
-// 0x0020 (0x0020 - 0x0000)
-struct NPC_Pawn_Parent_C_NPC_UpdateInteract final
-{
-public:
-	bool                                          CanInteract;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          EnabledInteract;                                   // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          wasInteractEnabled;                                // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool;   // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded; // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat;  // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_HasLeader__HasLeader_;                // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_NPC_HasLeader__Leader;                    // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPCAlertLevelChangedClient
-// 0x0001 (0x0001 - 0x0000)
-struct NPC_Pawn_Parent_C_NPCAlertLevelChangedClient final
-{
-public:
-	Enum_NPC_AlertLevel                           NPC_AlertLevel_0;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.On NPC PawnInteractedWith
+// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPC DisableIntroPhaseBehavior
 // 0x0010 (0x0010 - 0x0000)
-struct NPC_Pawn_Parent_C_On_NPC_PawnInteractedWith final
+struct NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior final
 {
 public:
-	class AActor*                                 AIPawn;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        InteractingPlayerPawn;                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue; // 0x0004(0x0008)(NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_RemoveActiveEffectsWithAppliedTags_ReturnValue; // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnBeginDeepWaterInteraction
-// 0x0010 (0x0010 - 0x0000)
-struct NPC_Pawn_Parent_C_OnBeginDeepWaterInteraction final
-{
-public:
-	struct FVector                                WaterSurfaceLocation;                              // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         WaterDepth;                                        // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnDamageServer
-// 0x00F8 (0x00F8 - 0x0000)
-struct NPC_Pawn_Parent_C_OnDamageServer final
-{
-public:
-	float                                         Damage;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  DamageTags;                                        // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FVector                                Momentum;                                          // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             HitInfo;                                           // 0x0034(0x009C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AController*                            InstigatedBy;                                      // 0x00D0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 DamageCauser;                                      // 0x00D8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00E0(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnDeathPlayEffects
-// 0x00F8 (0x00F8 - 0x0000)
-struct NPC_Pawn_Parent_C_OnDeathPlayEffects final
-{
-public:
-	float                                         Damage;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  DamageTags;                                        // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FVector                                Momentum;                                          // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             HitInfo;                                           // 0x0034(0x009C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AFortPawn*                              InstigatedBy;                                      // 0x00D0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 DamageCauser;                                      // 0x00D8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00E0(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnDeathServer
-// 0x00F8 (0x00F8 - 0x0000)
-struct NPC_Pawn_Parent_C_OnDeathServer final
-{
-public:
-	float                                         Damage;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  DamageTags;                                        // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FVector                                Momentum;                                          // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             HitInfo;                                           // 0x0034(0x009C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AController*                            InstigatedBy;                                      // 0x00D0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 DamageCauser;                                      // 0x00D8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00E0(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnEnteredWaterBody
-// 0x0010 (0x0010 - 0x0000)
-struct NPC_Pawn_Parent_C_OnEnteredWaterBody final
-{
-public:
-	class AFortWaterBodyActor*                    WaterBody;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsFirstBody;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnExitedWaterBody
-// 0x0010 (0x0010 - 0x0000)
-struct NPC_Pawn_Parent_C_OnExitedWaterBody final
-{
-public:
-	class AFortWaterBodyActor*                    WaterBody;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsLastBody;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnRep_NPC BestLootRarityInInventory
-// 0x0001 (0x0001 - 0x0000)
-struct NPC_Pawn_Parent_C_OnRep_NPC_BestLootRarityInInventory final
-{
-public:
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnRep_NPC Leader
-// 0x00C8 (0x00C8 - 0x0000)
-struct NPC_Pawn_Parent_C_OnRep_NPC_Leader final
-{
-public:
-	bool                                          CallFunc_IsGameplayTagValid_ReturnValue;           // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 CallFunc_MakeGameplayCueParameters_ReturnValue;    // 0x0008(0x00C0)(ContainsInstancedReference)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.OnRep_NPC_AlertLevel
-// 0x0001 (0x0001 - 0x0000)
-struct NPC_Pawn_Parent_C_OnRep_NPC_AlertLevel final
-{
-public:
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.Play Water Splash at Water Surface
-// 0x0120 (0x0120 - 0x0000)
-struct NPC_Pawn_Parent_C_Play_Water_Splash_at_Water_Surface final
-{
-public:
-	class AFortWaterBodyActor*                    Water_Body;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Enter_Water_0;                                     // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x000C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetWaterSurfaceInfo_WaterPlaneLocation;   // 0x001C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetWaterSurfaceInfo_WaterPlaneNormal;     // 0x0028(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetWaterSurfaceInfo_WaterSurfacePosition; // 0x0034(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetWaterSurfaceInfo_WaterDepth;           // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetWaterSurfaceInfo_WaterBodyIdx;         // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetWaterSurfaceInfo_WaterVelocity;        // 0x0048(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 CallFunc_MakeGameplayCueParameters_ReturnValue;    // 0x0058(0x00C0)(ContainsInstancedReference)
-	struct FGameplayTag                           K2Node_Select_Default;                             // 0x0118(0x0008)(NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.PlayEnterWaterSplash
-// 0x0008 (0x0008 - 0x0000)
-struct NPC_Pawn_Parent_C_PlayEnterWaterSplash final
-{
-public:
-	class AFortWaterBodyActor*                    Water_Body;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.PlayExitWaterSplash
-// 0x0008 (0x0008 - 0x0000)
-struct NPC_Pawn_Parent_C_PlayExitWaterSplash final
-{
-public:
-	class AFortWaterBodyActor*                    Water_Body;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct NPC_Pawn_Parent_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.ReceivePossessed
-// 0x0008 (0x0008 - 0x0000)
-struct NPC_Pawn_Parent_C_ReceivePossessed final
-{
-public:
-	class AController*                            NewController;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.RequestUpdateNPCAlertLevel
-// 0x0001 (0x0001 - 0x0000)
-struct NPC_Pawn_Parent_C_RequestUpdateNPCAlertLevel final
-{
-public:
-	Enum_NPC_AlertLevel                           NPC_AlertLevel_0;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.ResetMaterialFromDeath
-// 0x0030 (0x0030 - 0x0000)
-struct NPC_Pawn_Parent_C_ResetMaterialFromDeath final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0018(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.SelectPrimitiveDataFloat
-// 0x0028 (0x0028 - 0x0000)
-struct NPC_Pawn_Parent_C_SelectPrimitiveDataFloat final
-{
-public:
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool;   // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded; // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat;  // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_1; // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_1; // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_1; // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool_2; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded_2; // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat_2; // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.SetPrimitiveDataFloat
-// 0x000C (0x000C - 0x0000)
-struct NPC_Pawn_Parent_C_SetPrimitiveDataFloat final
-{
-public:
-	bool                                          CallFunc_NPC_GetScalableFloatHotfixValue_AsBool;   // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsIntRounded; // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NPC_GetScalableFloatHotfixValue_AsFloat;  // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.ShouldUpdateSkeletalMesh
-// 0x0001 (0x0001 - 0x0000)
-struct NPC_Pawn_Parent_C_ShouldUpdateSkeletalMesh final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.TryToDespawnDueToStorm
-// 0x0001 (0x0001 - 0x0000)
-struct NPC_Pawn_Parent_C_TryToDespawnDueToStorm final
-{
-public:
-	bool                                          Reset_Timer;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.UpdateSoundLibrary
-// 0x0070 (0x0070 - 0x0000)
-struct NPC_Pawn_Parent_C_UpdateSoundLibrary final
-{
-public:
-	Enum_NPC_AlertLevel                           Alert_Level;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidClass_ReturnValue_1;               // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPlaying_ReturnValue;                    // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundLibrarySubsystem*                 CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             Temp_object_Variable;                              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Temp_object_Variable_1;                            // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ClassClass_ReturnValue;          // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_Array_Get_Item_1;                         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ClassClass_ReturnValue_1;        // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_Array_Get_Item_2;                         // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ClassClass_ReturnValue_2;        // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_2;         // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_NPC_AlertLevel                           Temp_byte_Variable;                                // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             K2Node_Select_Default;                             // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x0068(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function NPC_Pawn_Parent.NPC_Pawn_Parent_C.WidgetVisibilityChanged
-// 0x0001 (0x0001 - 0x0000)
-struct NPC_Pawn_Parent_C_WidgetVisibilityChanged final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
+static_assert(alignof(NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior) == 0x000004, "Wrong alignment on NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior");
+static_assert(sizeof(NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior) == 0x000010, "Wrong size on NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior, CallFunc_IsValidClass_ReturnValue) == 0x000001, "Member 'NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue) == 0x000004, "Member 'NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior, CallFunc_RemoveActiveEffectsWithAppliedTags_ReturnValue) == 0x00000C, "Member 'NPC_Pawn_Parent_C_NPC_DisableIntroPhaseBehavior::CallFunc_RemoveActiveEffectsWithAppliedTags_ReturnValue' has a wrong offset!");
 
 }
 

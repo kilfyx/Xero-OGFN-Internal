@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UMelee_CameraShake_C>();
 	}
 };
+static_assert(alignof(UMelee_CameraShake_C) == 0x000010, "Wrong alignment on UMelee_CameraShake_C");
+static_assert(sizeof(UMelee_CameraShake_C) == 0x0001B0, "Wrong size on UMelee_CameraShake_C");
 
 }
 

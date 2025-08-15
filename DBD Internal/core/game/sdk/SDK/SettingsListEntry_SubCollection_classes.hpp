@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SettingsListEntry_SubCollection.SettingsListEntry_SubCollection_C
-// 0x0010 (0x02D0 - 0x02C0)
+// 0x0010 (0x02E8 - 0x02D8)
 class USettingsListEntry_SubCollection_C final : public UFortSettingsListEntrySetting_Navigation
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHover;                                           // 0x02C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHover;                                           // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_SettingsListEntry_SubCollection(int32 EntryPoint);
 	class UWidget* GetPrimaryGamepadFocusWidget();
+	void OnSettingAssigned(const class FText& ActionText);
 	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
-	void OnSettingAssigned(const class FText& ActionText);
+	void ExecuteUbergraph_SettingsListEntry_SubCollection(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -42,6 +42,10 @@ public:
 		return GetDefaultObjImpl<USettingsListEntry_SubCollection_C>();
 	}
 };
+static_assert(alignof(USettingsListEntry_SubCollection_C) == 0x000008, "Wrong alignment on USettingsListEntry_SubCollection_C");
+static_assert(sizeof(USettingsListEntry_SubCollection_C) == 0x0002E8, "Wrong size on USettingsListEntry_SubCollection_C");
+static_assert(offsetof(USettingsListEntry_SubCollection_C, UberGraphFrame) == 0x0002D8, "Member 'USettingsListEntry_SubCollection_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USettingsListEntry_SubCollection_C, OnHover) == 0x0002E0, "Member 'USettingsListEntry_SubCollection_C::OnHover' has a wrong offset!");
 
 }
 

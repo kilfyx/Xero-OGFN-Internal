@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function AthenaSupplyDropBalloon.AthenaSupplyDropBalloon_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function AthenaSupplyDropBalloon.AthenaSupplyDropBalloon_C.ExecuteUbergraph_AthenaSupplyDropBalloon
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AAthenaSupplyDropBalloon_C::ReceiveBeginPlay()
+void AAthenaSupplyDropBalloon_C::ExecuteUbergraph_AthenaSupplyDropBalloon(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDropBalloon_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("AthenaSupplyDropBalloon_C", "ExecuteUbergraph_AthenaSupplyDropBalloon");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::AthenaSupplyDropBalloon_C_ExecuteUbergraph_AthenaSupplyDropBalloon Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -95,6 +101,20 @@ void AAthenaSupplyDropBalloon_C::OnDeathPlayEffects(float Damage, const struct F
 }
 
 
+// Function AthenaSupplyDropBalloon.AthenaSupplyDropBalloon_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AAthenaSupplyDropBalloon_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDropBalloon_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function AthenaSupplyDropBalloon.AthenaSupplyDropBalloon_C.OnDamageServer
 // (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -122,26 +142,6 @@ void AAthenaSupplyDropBalloon_C::OnDamageServer(float Damage, const struct FGame
 	Parms.InstigatedBy = InstigatedBy;
 	Parms.DamageCauser = DamageCauser;
 	Parms.EffectContext = std::move(EffectContext);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaSupplyDropBalloon.AthenaSupplyDropBalloon_C.ExecuteUbergraph_AthenaSupplyDropBalloon
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AAthenaSupplyDropBalloon_C::ExecuteUbergraph_AthenaSupplyDropBalloon(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaSupplyDropBalloon_C", "ExecuteUbergraph_AthenaSupplyDropBalloon");
-
-	Params::AthenaSupplyDropBalloon_C_ExecuteUbergraph_AthenaSupplyDropBalloon Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

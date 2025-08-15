@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UCurieExecution_Water_C>();
 	}
 };
+static_assert(alignof(UCurieExecution_Water_C) == 0x000008, "Wrong alignment on UCurieExecution_Water_C");
+static_assert(sizeof(UCurieExecution_Water_C) == 0x000048, "Wrong size on UCurieExecution_Water_C");
 
 }
 

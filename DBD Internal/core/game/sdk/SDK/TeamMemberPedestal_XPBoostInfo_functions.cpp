@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function TeamMemberPedestal_XPBoostInfo.TeamMemberPedestal_XPBoostInfo_C.ExecuteUbergraph_TeamMemberPedestal_XPBoostInfo
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTeamMemberPedestal_XPBoostInfo_C::ExecuteUbergraph_TeamMemberPedestal_XPBoostInfo(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_XPBoostInfo_C", "ExecuteUbergraph_TeamMemberPedestal_XPBoostInfo");
+
+	Params::TeamMemberPedestal_XPBoostInfo_C_ExecuteUbergraph_TeamMemberPedestal_XPBoostInfo Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function TeamMemberPedestal_XPBoostInfo.TeamMemberPedestal_XPBoostInfo_C.OnCameraChanged
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -26,34 +46,14 @@ namespace SDK
 void UTeamMemberPedestal_XPBoostInfo_C::OnCameraChanged(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnCameraChanged");
+		Func = Class->GetFunction("TeamMemberPedestal_XPBoostInfo_C", "OnCameraChanged");
 
 	Params::TeamMemberPedestal_XPBoostInfo_C_OnCameraChanged Parms{};
 
 	Parms.NewCamera = NewCamera;
 	Parms.OldCamera = OldCamera;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal_XPBoostInfo.TeamMemberPedestal_XPBoostInfo_C.ExecuteUbergraph_TeamMemberPedestal_XPBoostInfo
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTeamMemberPedestal_XPBoostInfo_C::ExecuteUbergraph_TeamMemberPedestal_XPBoostInfo(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_TeamMemberPedestal_XPBoostInfo");
-
-	Params::TeamMemberPedestal_XPBoostInfo_C_ExecuteUbergraph_TeamMemberPedestal_XPBoostInfo Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -65,9 +65,9 @@ void UTeamMemberPedestal_XPBoostInfo_C::ExecuteUbergraph_TeamMemberPedestal_XPBo
 void UTeamMemberPedestal_XPBoostInfo_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
+		Func = Class->GetFunction("TeamMemberPedestal_XPBoostInfo_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -17,17 +17,37 @@
 namespace SDK
 {
 
-// Function WrapPreview.WrapPreview_C.UpdateSettings
-// (BlueprintCallable, BlueprintEvent)
+// Function WrapPreview.WrapPreview_C.UpdateFloorVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AWrapPreview_C::UpdateSettings()
+void AWrapPreview_C::UpdateFloorVisibility()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateSettings");
+		Func = Class->GetFunction("WrapPreview_C", "UpdateFloorVisibility");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WrapPreview.WrapPreview_C.SwitchErebusLighting
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AWrapPreview_C::SwitchErebusLighting(bool Visibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WrapPreview_C", "SwitchErebusLighting");
+
+	Params::WrapPreview_C_SwitchErebusLighting Parms{};
+
+	Parms.Visibility = Visibility;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -37,25 +57,65 @@ void AWrapPreview_C::UpdateSettings()
 void AWrapPreview_C::UpdateLightingScale()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateLightingScale");
+		Func = Class->GetFunction("WrapPreview_C", "UpdateLightingScale");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WrapPreview.WrapPreview_C.SetFloorEnabled
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Floor_Enabled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AWrapPreview_C::SetFloorEnabled(bool Floor_Enabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WrapPreview_C", "SetFloorEnabled");
+
+	Params::WrapPreview_C_SetFloorEnabled Parms{};
+
+	Parms.Floor_Enabled = Floor_Enabled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WrapPreview.WrapPreview_C.LightControl
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AWrapPreview_C::LightControl(bool Active)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WrapPreview_C", "LightControl");
+
+	Params::WrapPreview_C_LightControl Parms{};
+
+	Parms.Active = Active;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function WrapPreview.WrapPreview_C.SwitchPCLighting
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AWrapPreview_C::SwitchPCLighting(bool Visibility)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SwitchPCLighting");
+		Func = Class->GetFunction("WrapPreview_C", "SwitchPCLighting");
 
 	Params::WrapPreview_C_SwitchPCLighting Parms{};
 
@@ -68,14 +128,14 @@ void AWrapPreview_C::SwitchPCLighting(bool Visibility)
 // Function WrapPreview.WrapPreview_C.SwitchMobileLighting
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AWrapPreview_C::SwitchMobileLighting(bool NewParam)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SwitchMobileLighting");
+		Func = Class->GetFunction("WrapPreview_C", "SwitchMobileLighting");
 
 	Params::WrapPreview_C_SwitchMobileLighting Parms{};
 
@@ -85,71 +145,45 @@ void AWrapPreview_C::SwitchMobileLighting(bool NewParam)
 }
 
 
-// Function WrapPreview.WrapPreview_C.UpdateFloorVisibility
+// Function WrapPreview.WrapPreview_C.HandleLightingScale
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void AWrapPreview_C::UpdateFloorVisibility()
+void AWrapPreview_C::HandleLightingScale()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateFloorVisibility");
+		Func = Class->GetFunction("WrapPreview_C", "HandleLightingScale");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WrapPreview.WrapPreview_C.SwitchErebusLighting
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WrapPreview.WrapPreview_C.UpdateSettings
+// (BlueprintCallable, BlueprintEvent)
 
-void AWrapPreview_C::SwitchErebusLighting(bool Visibility)
+void AWrapPreview_C::UpdateSettings()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SwitchErebusLighting");
+		Func = Class->GetFunction("WrapPreview_C", "UpdateSettings");
 
-	Params::WrapPreview_C_SwitchErebusLighting Parms{};
-
-	Parms.Visibility = Visibility;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WrapPreview.WrapPreview_C.SetFloorEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Floor_Enabled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AWrapPreview_C::SetFloorEnabled(bool Floor_Enabled)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetFloorEnabled");
-
-	Params::WrapPreview_C_SetFloorEnabled Parms{};
-
-	Parms.Floor_Enabled = Floor_Enabled;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function WrapPreview.WrapPreview_C.OnSetFloorMaterial
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class UMaterialInterface*               InMaterialInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInterface*               InMaterialInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AWrapPreview_C::OnSetFloorMaterial(class UMaterialInterface* InMaterialInstance)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnSetFloorMaterial");
+		Func = Class->GetFunction("WrapPreview_C", "OnSetFloorMaterial");
 
 	Params::WrapPreview_C_OnSetFloorMaterial Parms{};
 
@@ -159,63 +193,35 @@ void AWrapPreview_C::OnSetFloorMaterial(class UMaterialInterface* InMaterialInst
 }
 
 
+// Function WrapPreview.WrapPreview_C.OnPreviewVisualsSpawned
+// (Event, Protected, BlueprintEvent)
+
+void AWrapPreview_C::OnPreviewVisualsSpawned()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WrapPreview_C", "OnPreviewVisualsSpawned");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WrapPreview.WrapPreview_C.OnUpdateFloorMaterial
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bEnableAutotestBackground                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEnableAutotestBackground                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AWrapPreview_C::OnUpdateFloorMaterial(bool bEnableAutotestBackground)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateFloorMaterial");
+		Func = Class->GetFunction("WrapPreview_C", "OnUpdateFloorMaterial");
 
 	Params::WrapPreview_C_OnUpdateFloorMaterial Parms{};
 
 	Parms.bEnableAutotestBackground = bEnableAutotestBackground;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WrapPreview.WrapPreview_C.OnPreviewVisualsSpawned
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bUseSecondaryTransitionEffects                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bShowFloor                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AWrapPreview_C::OnPreviewVisualsSpawned(const bool bUseSecondaryTransitionEffects, const bool bShowFloor)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnPreviewVisualsSpawned");
-
-	Params::WrapPreview_C_OnPreviewVisualsSpawned Parms{};
-
-	Parms.bUseSecondaryTransitionEffects = bUseSecondaryTransitionEffects;
-	Parms.bShowFloor = bShowFloor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WrapPreview.WrapPreview_C.LightControl
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AWrapPreview_C::LightControl(bool Active)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("LightControl");
-
-	Params::WrapPreview_C_LightControl Parms{};
-
-	Parms.Active = Active;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -229,29 +235,15 @@ void AWrapPreview_C::LightControl(bool Active)
 void AWrapPreview_C::ExecuteUbergraph_WrapPreview(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_WrapPreview");
+		Func = Class->GetFunction("WrapPreview_C", "ExecuteUbergraph_WrapPreview");
 
 	Params::WrapPreview_C_ExecuteUbergraph_WrapPreview Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WrapPreview.WrapPreview_C.HandleLightingScale
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AWrapPreview_C::HandleLightingScale()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("HandleLightingScale");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

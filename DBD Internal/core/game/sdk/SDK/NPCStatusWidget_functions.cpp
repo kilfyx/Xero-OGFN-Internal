@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function NPCStatusWidget.NPCStatusWidget_C.ExecuteUbergraph_NPCStatusWidget
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UNPCStatusWidget_C::ExecuteUbergraph_NPCStatusWidget(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NPCStatusWidget_C", "ExecuteUbergraph_NPCStatusWidget");
+
+	Params::NPCStatusWidget_C_ExecuteUbergraph_NPCStatusWidget Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function NPCStatusWidget.NPCStatusWidget_C.ChangeWidgetVisibleDuration
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -34,20 +54,6 @@ void UNPCStatusWidget_C::ChangeWidgetVisibleDuration(float StatusWidgetVisibleDu
 	Parms.StatusWidgetVisibleDuration_0 = StatusWidgetVisibleDuration_0;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function NPCStatusWidget.NPCStatusWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UNPCStatusWidget_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NPCStatusWidget_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -69,10 +75,8 @@ void UNPCStatusWidget_C::EventHideStatus()
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   Health                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Shield                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ShowShield                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UNPCStatusWidget_C::EventUpdateStatus(float Health, float Shield, bool ShowShield)
+void UNPCStatusWidget_C::EventUpdateStatus(float Health)
 {
 	static class UFunction* Func = nullptr;
 
@@ -82,30 +86,22 @@ void UNPCStatusWidget_C::EventUpdateStatus(float Health, float Shield, bool Show
 	Params::NPCStatusWidget_C_EventUpdateStatus Parms{};
 
 	Parms.Health = Health;
-	Parms.Shield = Shield;
-	Parms.ShowShield = ShowShield;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function NPCStatusWidget.NPCStatusWidget_C.ExecuteUbergraph_NPCStatusWidget
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function NPCStatusWidget.NPCStatusWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UNPCStatusWidget_C::ExecuteUbergraph_NPCStatusWidget(int32 EntryPoint)
+void UNPCStatusWidget_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("NPCStatusWidget_C", "ExecuteUbergraph_NPCStatusWidget");
+		Func = Class->GetFunction("NPCStatusWidget_C", "Construct");
 
-	Params::NPCStatusWidget_C_ExecuteUbergraph_NPCStatusWidget Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

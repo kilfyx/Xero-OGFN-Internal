@@ -10,7 +10,7 @@
 
 #include "Basic.hpp"
 
-#include "LiveLinkAnimationCore_classes.hpp"
+#include "LiveLink_classes.hpp"
 
 
 namespace SDK
@@ -35,6 +35,10 @@ public:
 		return GetDefaultObjImpl<UFacialLiveLinkRemapAsset>();
 	}
 };
+static_assert(alignof(UFacialLiveLinkRemapAsset) == 0x000008, "Wrong alignment on UFacialLiveLinkRemapAsset");
+static_assert(sizeof(UFacialLiveLinkRemapAsset) == 0x000030, "Wrong size on UFacialLiveLinkRemapAsset");
+static_assert(offsetof(UFacialLiveLinkRemapAsset, bExtractBoneTransform) == 0x000028, "Member 'UFacialLiveLinkRemapAsset::bExtractBoneTransform' has a wrong offset!");
+static_assert(offsetof(UFacialLiveLinkRemapAsset, bExtractCurve) == 0x000029, "Member 'UFacialLiveLinkRemapAsset::bExtractCurve' has a wrong offset!");
 
 }
 

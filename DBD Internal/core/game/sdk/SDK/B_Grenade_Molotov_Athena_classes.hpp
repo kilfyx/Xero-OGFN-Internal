@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Grenade_Molotov_Athena.B_Grenade_Molotov_Athena_C
-// 0x0020 (0x1490 - 0x1470)
+// 0x0020 (0x0D38 - 0x0D18)
 class AB_Grenade_Molotov_Athena_C final : public AB_ConsumableSmall_Athena_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_Grenade_Molotov_Athena_C;         // 0x1470(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        AmbientAudio;                                      // 0x1478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      Niagara_Light;                                     // 0x1480(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x1488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_Grenade_Molotov_Athena_C;         // 0x0D18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        AmbientAudio;                                      // 0x0D20(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      Niagara_Light;                                     // 0x0D28(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0D30(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_Grenade_Molotov_Athena(int32 EntryPoint);
@@ -42,6 +42,12 @@ public:
 		return GetDefaultObjImpl<AB_Grenade_Molotov_Athena_C>();
 	}
 };
+static_assert(alignof(AB_Grenade_Molotov_Athena_C) == 0x000008, "Wrong alignment on AB_Grenade_Molotov_Athena_C");
+static_assert(sizeof(AB_Grenade_Molotov_Athena_C) == 0x000D38, "Wrong size on AB_Grenade_Molotov_Athena_C");
+static_assert(offsetof(AB_Grenade_Molotov_Athena_C, UberGraphFrame_B_Grenade_Molotov_Athena_C) == 0x000D18, "Member 'AB_Grenade_Molotov_Athena_C::UberGraphFrame_B_Grenade_Molotov_Athena_C' has a wrong offset!");
+static_assert(offsetof(AB_Grenade_Molotov_Athena_C, AmbientAudio) == 0x000D20, "Member 'AB_Grenade_Molotov_Athena_C::AmbientAudio' has a wrong offset!");
+static_assert(offsetof(AB_Grenade_Molotov_Athena_C, Niagara_Light) == 0x000D28, "Member 'AB_Grenade_Molotov_Athena_C::Niagara_Light' has a wrong offset!");
+static_assert(offsetof(AB_Grenade_Molotov_Athena_C, StaticMesh) == 0x000D30, "Member 'AB_Grenade_Molotov_Athena_C::StaticMesh' has a wrong offset!");
 
 }
 

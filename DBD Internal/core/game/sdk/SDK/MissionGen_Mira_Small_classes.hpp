@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MissionGen_Mira_Small.MissionGen_Mira_Small_C
-// 0x0000 (0x07E0 - 0x07E0)
+// 0x0000 (0x06C8 - 0x06C8)
 class UMissionGen_Mira_Small_C final : public UFortMissionGenerator
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UMissionGen_Mira_Small_C>();
 	}
 };
+static_assert(alignof(UMissionGen_Mira_Small_C) == 0x000008, "Wrong alignment on UMissionGen_Mira_Small_C");
+static_assert(sizeof(UMissionGen_Mira_Small_C) == 0x0006C8, "Wrong size on UMissionGen_Mira_Small_C");
 
 }
 

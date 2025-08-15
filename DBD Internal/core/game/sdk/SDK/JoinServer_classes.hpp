@@ -19,17 +19,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass JoinServer.JoinServer_C
-// 0x0010 (0x0580 - 0x0570)
+// 0x0010 (0x04F0 - 0x04E0)
 class UJoinServer_C final : public UFortUIStateWidget_JoinServer
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0570(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBuildWatermark_C*                      BuildWatermark;                                    // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBuildWatermark_C*                      BuildWatermark;                                    // 0x04E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
+	void OnEnterState(EFortUIState PreviousUIState);
 	void OnShowTutorialDialog();
 	void ExecuteUbergraph_JoinServer(int32 EntryPoint);
-	void OnEnterState(EFortUIState PreviousUIState);
 
 public:
 	static class UClass* StaticClass()
@@ -42,9 +42,9 @@ public:
 	}
 };
 static_assert(alignof(UJoinServer_C) == 0x000008, "Wrong alignment on UJoinServer_C");
-static_assert(sizeof(UJoinServer_C) == 0x000580, "Wrong size on UJoinServer_C");
-static_assert(offsetof(UJoinServer_C, UberGraphFrame) == 0x000570, "Member 'UJoinServer_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UJoinServer_C, BuildWatermark) == 0x000578, "Member 'UJoinServer_C::BuildWatermark' has a wrong offset!");
+static_assert(sizeof(UJoinServer_C) == 0x0004F0, "Wrong size on UJoinServer_C");
+static_assert(offsetof(UJoinServer_C, UberGraphFrame) == 0x0004E0, "Member 'UJoinServer_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UJoinServer_C, BuildWatermark) == 0x0004E8, "Member 'UJoinServer_C::BuildWatermark' has a wrong offset!");
 
 }
 

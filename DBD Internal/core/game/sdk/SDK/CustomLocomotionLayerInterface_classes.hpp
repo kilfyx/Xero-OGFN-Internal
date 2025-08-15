@@ -21,9 +21,9 @@ namespace SDK
 class ICustomLocomotionLayerInterface_C final
 {
 public:
-	void CustomLocomotionFullBodyAdditive(const struct FPoseLink& InPoseFullBodyAdditive, struct FPoseLink* CustomLocomotionFullBodyAdditive_0);
 	void CustomLocomotionFullBodyLayer(const struct FPoseLink& PassThroughCustomFullBody, struct FPoseLink* CustomLocomotionFullBodyLayer_0);
 	void CustomLocomotionPreIKLayer(const struct FPoseLink& InPosePreIK, struct FPoseLink* CustomLocomotionPreIKLayer_0);
+	void CustomLocomotionFullBodyAdditive(const struct FPoseLink& InPoseFullBodyAdditive, struct FPoseLink* CustomLocomotionFullBodyAdditive_0);
 
 public:
 	static class UClass* StaticClass()
@@ -44,6 +44,8 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+static_assert(alignof(ICustomLocomotionLayerInterface_C) == 0x000001, "Wrong alignment on ICustomLocomotionLayerInterface_C");
+static_assert(sizeof(ICustomLocomotionLayerInterface_C) == 0x000001, "Wrong size on ICustomLocomotionLayerInterface_C");
 
 }
 

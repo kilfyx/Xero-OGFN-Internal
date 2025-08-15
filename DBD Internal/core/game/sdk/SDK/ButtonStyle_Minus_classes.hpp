@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ButtonStyle_Minus.ButtonStyle_Minus_C
-// 0x0000 (0x0730 - 0x0730)
+// 0x0000 (0x0570 - 0x0570)
 class UButtonStyle_Minus_C final : public UButtonStyle_MediumTransparentNoCues_C
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_Minus_C>();
 	}
 };
-static_assert(alignof(UButtonStyle_Minus_C) == 0x000010, "Wrong alignment on UButtonStyle_Minus_C");
-static_assert(sizeof(UButtonStyle_Minus_C) == 0x000730, "Wrong size on UButtonStyle_Minus_C");
+static_assert(alignof(UButtonStyle_Minus_C) == 0x000008, "Wrong alignment on UButtonStyle_Minus_C");
+static_assert(sizeof(UButtonStyle_Minus_C) == 0x000570, "Wrong size on UButtonStyle_Minus_C");
 
 }
 

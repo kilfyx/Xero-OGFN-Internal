@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function RebootVanIndicator.RebootVanIndicator_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void URebootVanIndicator_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RebootVanIndicator_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function RebootVanIndicator.RebootVanIndicator_C.ExecuteUbergraph_RebootVanIndicator
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void URebootVanIndicator_C::ExecuteUbergraph_RebootVanIndicator(int32 EntryPoint
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function RebootVanIndicator.RebootVanIndicator_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void URebootVanIndicator_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RebootVanIndicator_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

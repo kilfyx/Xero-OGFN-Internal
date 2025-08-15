@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SettingsListEntry_Scalar.SettingsListEntry_Scalar_C
-// 0x0020 (0x02F0 - 0x02D0)
+// 0x0020 (0x0308 - 0x02E8)
 class USettingsListEntry_Scalar_C final : public UFortSettingsListEntrySetting_Scalar
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHover;                                           // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 DefaultValueLayer;                                 // 0x02E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USimpleMaterialProgressBar_C*           Progress;                                          // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHover;                                           // 0x02F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 DefaultValueLayer;                                 // 0x02F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USimpleMaterialProgressBar_C*           Progress;                                          // 0x0300(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_SettingsListEntry_Scalar(int32 EntryPoint);
 	class UWidget* GetPrimaryGamepadFocusWidget();
+	void OnValueChanged(float Value);
 	void OnDefaultValueChanged(float DefaultValue);
 	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
-	void OnValueChanged(float Value);
+	void ExecuteUbergraph_SettingsListEntry_Scalar(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -45,6 +45,12 @@ public:
 		return GetDefaultObjImpl<USettingsListEntry_Scalar_C>();
 	}
 };
+static_assert(alignof(USettingsListEntry_Scalar_C) == 0x000008, "Wrong alignment on USettingsListEntry_Scalar_C");
+static_assert(sizeof(USettingsListEntry_Scalar_C) == 0x000308, "Wrong size on USettingsListEntry_Scalar_C");
+static_assert(offsetof(USettingsListEntry_Scalar_C, UberGraphFrame) == 0x0002E8, "Member 'USettingsListEntry_Scalar_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USettingsListEntry_Scalar_C, OnHover) == 0x0002F0, "Member 'USettingsListEntry_Scalar_C::OnHover' has a wrong offset!");
+static_assert(offsetof(USettingsListEntry_Scalar_C, DefaultValueLayer) == 0x0002F8, "Member 'USettingsListEntry_Scalar_C::DefaultValueLayer' has a wrong offset!");
+static_assert(offsetof(USettingsListEntry_Scalar_C, Progress) == 0x000300, "Member 'USettingsListEntry_Scalar_C::Progress' has a wrong offset!");
 
 }
 

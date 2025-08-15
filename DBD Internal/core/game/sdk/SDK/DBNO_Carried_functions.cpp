@@ -17,24 +17,23 @@
 namespace SDK
 {
 
-// Function DBNO_Carried.DBNO_Carried_C.AnimGraph
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function DBNO_Carried.DBNO_Carried_C.ExecuteUbergraph_DBNO_Carried
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDBNO_Carried_C::AnimGraph(struct FPoseLink* AnimGraph_0)
+void UDBNO_Carried_C::ExecuteUbergraph_DBNO_Carried(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DBNO_Carried_C", "AnimGraph");
+		Func = Class->GetFunction("DBNO_Carried_C", "ExecuteUbergraph_DBNO_Carried");
 
-	Params::DBNO_Carried_C_AnimGraph Parms{};
+	Params::DBNO_Carried_C_ExecuteUbergraph_DBNO_Carried Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (AnimGraph_0 != nullptr)
-		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
 
@@ -72,20 +71,6 @@ void UDBNO_Carried_C::BlueprintUpdateAnimation(float DeltaTimeX)
 }
 
 
-// Function DBNO_Carried.DBNO_Carried_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DBNO_Carried_AnimGraphNode_ApplyAdditive_56B19EE040BEEBC25D674F8DC99831B9
-// (BlueprintEvent)
-
-void UDBNO_Carried_C::EvaluateGraphExposedInputs_ExecuteUbergraph_DBNO_Carried_AnimGraphNode_ApplyAdditive_56B19EE040BEEBC25D674F8DC99831B9()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DBNO_Carried_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_DBNO_Carried_AnimGraphNode_ApplyAdditive_56B19EE040BEEBC25D674F8DC99831B9");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function DBNO_Carried.DBNO_Carried_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DBNO_Carried_AnimGraphNode_ModifyBone_59E069244645BEF22808AB9196186F3F
 // (BlueprintEvent)
 
@@ -100,23 +85,38 @@ void UDBNO_Carried_C::EvaluateGraphExposedInputs_ExecuteUbergraph_DBNO_Carried_A
 }
 
 
-// Function DBNO_Carried.DBNO_Carried_C.ExecuteUbergraph_DBNO_Carried
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function DBNO_Carried.DBNO_Carried_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DBNO_Carried_AnimGraphNode_ApplyAdditive_56B19EE040BEEBC25D674F8DC99831B9
+// (BlueprintEvent)
 
-void UDBNO_Carried_C::ExecuteUbergraph_DBNO_Carried(int32 EntryPoint)
+void UDBNO_Carried_C::EvaluateGraphExposedInputs_ExecuteUbergraph_DBNO_Carried_AnimGraphNode_ApplyAdditive_56B19EE040BEEBC25D674F8DC99831B9()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DBNO_Carried_C", "ExecuteUbergraph_DBNO_Carried");
+		Func = Class->GetFunction("DBNO_Carried_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_DBNO_Carried_AnimGraphNode_ApplyAdditive_56B19EE040BEEBC25D674F8DC99831B9");
 
-	Params::DBNO_Carried_C_ExecuteUbergraph_DBNO_Carried Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function DBNO_Carried.DBNO_Carried_C.AnimGraph
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+
+void UDBNO_Carried_C::AnimGraph(struct FPoseLink* AnimGraph_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DBNO_Carried_C", "AnimGraph");
+
+	Params::DBNO_Carried_C_AnimGraph Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
 }

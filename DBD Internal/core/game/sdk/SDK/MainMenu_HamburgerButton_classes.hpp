@@ -11,25 +11,25 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUILegacy_classes.hpp"
+#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MainMenu_HamburgerButton.MainMenu_HamburgerButton_C
-// 0x0040 (0x1470 - 0x1430)
-class UMainMenu_HamburgerButton_C final : public UCommonButtonLegacy
+// 0x0040 (0x0BE0 - 0x0BA0)
+class UMainMenu_HamburgerButton_C final : public UCommonButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1430(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Hover_Grow;                                        // 0x1438(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hover_Bounce;                                      // 0x1440(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hover;                                             // 0x1448(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 ButtonBacking;                                     // 0x1450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortMobileImage*                       Icon;                                              // 0x1458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                IconColor;                                         // 0x1460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               VariableSize;                                      // 0x1468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Hover_Grow;                                        // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover_Bounce;                                      // 0x0BB0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover;                                             // 0x0BB8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 ButtonBacking;                                     // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortMobileImage*                       Icon;                                              // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                IconColor;                                         // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               VariableSize;                                      // 0x0BD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void BP_OnHovered();
@@ -47,16 +47,16 @@ public:
 		return GetDefaultObjImpl<UMainMenu_HamburgerButton_C>();
 	}
 };
-static_assert(alignof(UMainMenu_HamburgerButton_C) == 0x000010, "Wrong alignment on UMainMenu_HamburgerButton_C");
-static_assert(sizeof(UMainMenu_HamburgerButton_C) == 0x001470, "Wrong size on UMainMenu_HamburgerButton_C");
-static_assert(offsetof(UMainMenu_HamburgerButton_C, UberGraphFrame) == 0x001430, "Member 'UMainMenu_HamburgerButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMainMenu_HamburgerButton_C, Hover_Grow) == 0x001438, "Member 'UMainMenu_HamburgerButton_C::Hover_Grow' has a wrong offset!");
-static_assert(offsetof(UMainMenu_HamburgerButton_C, Hover_Bounce) == 0x001440, "Member 'UMainMenu_HamburgerButton_C::Hover_Bounce' has a wrong offset!");
-static_assert(offsetof(UMainMenu_HamburgerButton_C, Hover) == 0x001448, "Member 'UMainMenu_HamburgerButton_C::Hover' has a wrong offset!");
-static_assert(offsetof(UMainMenu_HamburgerButton_C, ButtonBacking) == 0x001450, "Member 'UMainMenu_HamburgerButton_C::ButtonBacking' has a wrong offset!");
-static_assert(offsetof(UMainMenu_HamburgerButton_C, Icon) == 0x001458, "Member 'UMainMenu_HamburgerButton_C::Icon' has a wrong offset!");
-static_assert(offsetof(UMainMenu_HamburgerButton_C, IconColor) == 0x001460, "Member 'UMainMenu_HamburgerButton_C::IconColor' has a wrong offset!");
-static_assert(offsetof(UMainMenu_HamburgerButton_C, VariableSize) == 0x001468, "Member 'UMainMenu_HamburgerButton_C::VariableSize' has a wrong offset!");
+static_assert(alignof(UMainMenu_HamburgerButton_C) == 0x000008, "Wrong alignment on UMainMenu_HamburgerButton_C");
+static_assert(sizeof(UMainMenu_HamburgerButton_C) == 0x000BE0, "Wrong size on UMainMenu_HamburgerButton_C");
+static_assert(offsetof(UMainMenu_HamburgerButton_C, UberGraphFrame) == 0x000BA0, "Member 'UMainMenu_HamburgerButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UMainMenu_HamburgerButton_C, Hover_Grow) == 0x000BA8, "Member 'UMainMenu_HamburgerButton_C::Hover_Grow' has a wrong offset!");
+static_assert(offsetof(UMainMenu_HamburgerButton_C, Hover_Bounce) == 0x000BB0, "Member 'UMainMenu_HamburgerButton_C::Hover_Bounce' has a wrong offset!");
+static_assert(offsetof(UMainMenu_HamburgerButton_C, Hover) == 0x000BB8, "Member 'UMainMenu_HamburgerButton_C::Hover' has a wrong offset!");
+static_assert(offsetof(UMainMenu_HamburgerButton_C, ButtonBacking) == 0x000BC0, "Member 'UMainMenu_HamburgerButton_C::ButtonBacking' has a wrong offset!");
+static_assert(offsetof(UMainMenu_HamburgerButton_C, Icon) == 0x000BC8, "Member 'UMainMenu_HamburgerButton_C::Icon' has a wrong offset!");
+static_assert(offsetof(UMainMenu_HamburgerButton_C, IconColor) == 0x000BD0, "Member 'UMainMenu_HamburgerButton_C::IconColor' has a wrong offset!");
+static_assert(offsetof(UMainMenu_HamburgerButton_C, VariableSize) == 0x000BD8, "Member 'UMainMenu_HamburgerButton_C::VariableSize' has a wrong offset!");
 
 }
 

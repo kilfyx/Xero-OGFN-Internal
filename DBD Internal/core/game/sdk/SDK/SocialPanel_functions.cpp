@@ -17,68 +17,6 @@
 namespace SDK
 {
 
-// Function SocialPanel.SocialPanel_C.BndEvt__SocialPanel_TopBarExtension_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USocialPanel_C::BndEvt__SocialPanel_TopBarExtension_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_C", "BndEvt__SocialPanel_TopBarExtension_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
-
-	Params::SocialPanel_C_BndEvt__SocialPanel_TopBarExtension_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SocialPanel.SocialPanel_C.ClosePanel
-// (Event, Protected, BlueprintEvent)
-
-void USocialPanel_C::ClosePanel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_C", "ClosePanel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialPanel.SocialPanel_C.ClosePanelAfterAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void USocialPanel_C::ClosePanelAfterAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_C", "ClosePanelAfterAnimation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialPanel.SocialPanel_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void USocialPanel_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function SocialPanel.SocialPanel_C.ExecuteUbergraph_SocialPanel
 // (Final, UbergraphFunction)
 // Parameters:
@@ -99,6 +37,20 @@ void USocialPanel_C::ExecuteUbergraph_SocialPanel(int32 EntryPoint)
 }
 
 
+// Function SocialPanel.SocialPanel_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USocialPanel_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanel_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function SocialPanel.SocialPanel_C.HandleIntroEnded
 // (BlueprintCallable, BlueprintEvent)
 
@@ -108,20 +60,6 @@ void USocialPanel_C::HandleIntroEnded()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("SocialPanel_C", "HandleIntroEnded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialPanel.SocialPanel_C.HandleOutroEnded
-// (BlueprintCallable, BlueprintEvent)
-
-void USocialPanel_C::HandleOutroEnded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_C", "HandleOutroEnded");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -155,6 +93,54 @@ void USocialPanel_C::OnBeginOutro()
 }
 
 
+// Function SocialPanel.SocialPanel_C.HandleOutroEnded
+// (BlueprintCallable, BlueprintEvent)
+
+void USocialPanel_C::HandleOutroEnded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanel_C", "HandleOutroEnded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialPanel.SocialPanel_C.ClosePanel
+// (Event, Protected, BlueprintEvent)
+
+void USocialPanel_C::ClosePanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanel_C", "ClosePanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialPanel.SocialPanel_C.BndEvt__SocialPanel_TopBarExtension_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USocialPanel_C::BndEvt__SocialPanel_TopBarExtension_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanel_C", "BndEvt__SocialPanel_TopBarExtension_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+
+	Params::SocialPanel_C_BndEvt__SocialPanel_TopBarExtension_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function SocialPanel.SocialPanel_C.OnMouseButtonDown_0
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -177,6 +163,20 @@ struct FEventReply USocialPanel_C::OnMouseButtonDown_0(const struct FGeometry& M
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function SocialPanel.SocialPanel_C.ClosePanelAfterAnimation
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void USocialPanel_C::ClosePanelAfterAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanel_C", "ClosePanelAfterAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

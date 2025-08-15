@@ -18,44 +18,44 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C
-// 0x0080 (0x0608 - 0x0588)
+// 0x0078 (0x0578 - 0x0500)
 class UEnableMultiFactorAuthModalBP_C final : public UEnableMultiFactorModal
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0588(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro_V2;                                          // 0x0590(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ArrowPulse;                                        // 0x0598(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Intro;                                             // 0x05A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       ConsoleTextBlock;                                  // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CT_LimitedTimeHeader;                              // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CT_TakenToWebsite;                                 // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        EnableButtonSwitcher;                              // 0x05C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_GoToWebsite;                                 // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UItemInfoWidget_C*                      ItemInfoWidget_FromSocialImport;                   // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortLazyImage*                         lazyImage;                                         // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone;                                          // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScaleBox*                              ScaleBox_TitleHeader;                              // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        HeartbeatDelayIntroAnimation;                      // 0x05F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHasReward;                                        // 0x05F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F9[0x7];                                      // 0x05F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 MobileLimitedTimeHeaderStyle;                      // 0x0600(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0500(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro_V2;                                          // 0x0508(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ArrowPulse;                                        // 0x0510(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Intro;                                             // 0x0518(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ConsoleTextBlock;                                  // 0x0520(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CT_LimitedTimeHeader;                              // 0x0528(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CT_TakenToWebsite;                                 // 0x0530(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        EnableButtonSwitcher;                              // 0x0538(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_GoToWebsite;                                 // 0x0540(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UItemInfoWidget_C*                      ItemInfoWidget_FromSocialImport;                   // 0x0548(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortLazyImage*                         lazyImage;                                         // 0x0550(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone;                                          // 0x0558(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                              ScaleBox_TitleHeader;                              // 0x0560(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	float                                         HeartbeatDelayIntroAnimation;                      // 0x0568(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHasReward;                                        // 0x056C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_56D[0x3];                                      // 0x056D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 MobileLimitedTimeHeaderStyle;                      // 0x0570(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AnimationFullyCompleteBP();
-	void BP_OnActivated();
-	void Construct();
-	void ExecuteUbergraph_EnableMultiFactorAuthModalBP(int32 EntryPoint);
-	void HandleHeaderText();
-	void HandleSetScreenMode();
-	void NavRight();
-	void NavUp();
-	void OnConsoleDisplayURLProvided(const class FText& UniquePlayerURLText);
-	void OnIncentivizedSet(bool bIncentivized);
-	void OnInputModeChanged(bool bUsingGamepad);
-	void OnSetExitButtonText(const class FText& NewButtonText);
-	void OnSetScreenConfiguration(bool bIsConsole);
-	void PreConstruct(bool IsDesignTime);
 	void ScaleTitleForCulture();
+	void AnimationFullyCompleteBP();
+	void HandleSetScreenMode();
+	void NavUp();
+	void NavRight();
+	void BP_OnActivated();
+	void PreConstruct(bool IsDesignTime);
+	void HandleHeaderText();
+	void OnIncentivizedSet(bool bIncentivized);
+	void OnSetExitButtonText(const class FText& NewButtonText);
+	void OnConsoleDisplayURLProvided(const class FText& UniquePlayerURLText);
+	void OnSetScreenConfiguration(bool bIsConsole);
+	void Construct();
+	void OnInputModeChanged(bool bUsingGamepad);
+	void ExecuteUbergraph_EnableMultiFactorAuthModalBP(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -68,23 +68,23 @@ public:
 	}
 };
 static_assert(alignof(UEnableMultiFactorAuthModalBP_C) == 0x000008, "Wrong alignment on UEnableMultiFactorAuthModalBP_C");
-static_assert(sizeof(UEnableMultiFactorAuthModalBP_C) == 0x000608, "Wrong size on UEnableMultiFactorAuthModalBP_C");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, UberGraphFrame) == 0x000588, "Member 'UEnableMultiFactorAuthModalBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, Intro_V2) == 0x000590, "Member 'UEnableMultiFactorAuthModalBP_C::Intro_V2' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, ArrowPulse) == 0x000598, "Member 'UEnableMultiFactorAuthModalBP_C::ArrowPulse' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, Intro) == 0x0005A0, "Member 'UEnableMultiFactorAuthModalBP_C::Intro' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, ConsoleTextBlock) == 0x0005A8, "Member 'UEnableMultiFactorAuthModalBP_C::ConsoleTextBlock' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, CT_LimitedTimeHeader) == 0x0005B0, "Member 'UEnableMultiFactorAuthModalBP_C::CT_LimitedTimeHeader' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, CT_TakenToWebsite) == 0x0005B8, "Member 'UEnableMultiFactorAuthModalBP_C::CT_TakenToWebsite' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, EnableButtonSwitcher) == 0x0005C0, "Member 'UEnableMultiFactorAuthModalBP_C::EnableButtonSwitcher' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, Image_GoToWebsite) == 0x0005C8, "Member 'UEnableMultiFactorAuthModalBP_C::Image_GoToWebsite' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, ItemInfoWidget_FromSocialImport) == 0x0005D0, "Member 'UEnableMultiFactorAuthModalBP_C::ItemInfoWidget_FromSocialImport' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, lazyImage) == 0x0005D8, "Member 'UEnableMultiFactorAuthModalBP_C::lazyImage' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, SafeZone) == 0x0005E0, "Member 'UEnableMultiFactorAuthModalBP_C::SafeZone' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, ScaleBox_TitleHeader) == 0x0005E8, "Member 'UEnableMultiFactorAuthModalBP_C::ScaleBox_TitleHeader' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, HeartbeatDelayIntroAnimation) == 0x0005F0, "Member 'UEnableMultiFactorAuthModalBP_C::HeartbeatDelayIntroAnimation' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, bHasReward) == 0x0005F8, "Member 'UEnableMultiFactorAuthModalBP_C::bHasReward' has a wrong offset!");
-static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, MobileLimitedTimeHeaderStyle) == 0x000600, "Member 'UEnableMultiFactorAuthModalBP_C::MobileLimitedTimeHeaderStyle' has a wrong offset!");
+static_assert(sizeof(UEnableMultiFactorAuthModalBP_C) == 0x000578, "Wrong size on UEnableMultiFactorAuthModalBP_C");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, UberGraphFrame) == 0x000500, "Member 'UEnableMultiFactorAuthModalBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, Intro_V2) == 0x000508, "Member 'UEnableMultiFactorAuthModalBP_C::Intro_V2' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, ArrowPulse) == 0x000510, "Member 'UEnableMultiFactorAuthModalBP_C::ArrowPulse' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, Intro) == 0x000518, "Member 'UEnableMultiFactorAuthModalBP_C::Intro' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, ConsoleTextBlock) == 0x000520, "Member 'UEnableMultiFactorAuthModalBP_C::ConsoleTextBlock' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, CT_LimitedTimeHeader) == 0x000528, "Member 'UEnableMultiFactorAuthModalBP_C::CT_LimitedTimeHeader' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, CT_TakenToWebsite) == 0x000530, "Member 'UEnableMultiFactorAuthModalBP_C::CT_TakenToWebsite' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, EnableButtonSwitcher) == 0x000538, "Member 'UEnableMultiFactorAuthModalBP_C::EnableButtonSwitcher' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, Image_GoToWebsite) == 0x000540, "Member 'UEnableMultiFactorAuthModalBP_C::Image_GoToWebsite' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, ItemInfoWidget_FromSocialImport) == 0x000548, "Member 'UEnableMultiFactorAuthModalBP_C::ItemInfoWidget_FromSocialImport' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, lazyImage) == 0x000550, "Member 'UEnableMultiFactorAuthModalBP_C::lazyImage' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, SafeZone) == 0x000558, "Member 'UEnableMultiFactorAuthModalBP_C::SafeZone' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, ScaleBox_TitleHeader) == 0x000560, "Member 'UEnableMultiFactorAuthModalBP_C::ScaleBox_TitleHeader' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, HeartbeatDelayIntroAnimation) == 0x000568, "Member 'UEnableMultiFactorAuthModalBP_C::HeartbeatDelayIntroAnimation' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, bHasReward) == 0x00056C, "Member 'UEnableMultiFactorAuthModalBP_C::bHasReward' has a wrong offset!");
+static_assert(offsetof(UEnableMultiFactorAuthModalBP_C, MobileLimitedTimeHeaderStyle) == 0x000570, "Member 'UEnableMultiFactorAuthModalBP_C::MobileLimitedTimeHeaderStyle' has a wrong offset!");
 
 }
 

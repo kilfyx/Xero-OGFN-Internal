@@ -20,61 +20,27 @@
 namespace SDK::Params
 {
 
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.ExecuteUbergraph_ItemInfoHeaderWidget
-// 0x0020 (0x0020 - 0x0000)
-struct ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetQuantity_ReturnValue;                  // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortItemDefinition*                    CallFunc_GetItemDefinition_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget");
-static_assert(sizeof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget) == 0x000020, "Wrong size on ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget");
-static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, EntryPoint) == 0x000000, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, Temp_byte_Variable) == 0x000004, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, Temp_byte_Variable_1) == 0x000005, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, Temp_bool_Variable) == 0x000006, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, Temp_byte_Variable_2) == 0x000007, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, Temp_byte_Variable_3) == 0x000008, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, CallFunc_GetQuantity_ReturnValue) == 0x00000C, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::CallFunc_GetQuantity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, CallFunc_GetItemDefinition_ReturnValue) == 0x000010, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::CallFunc_GetItemDefinition_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, Temp_bool_Variable_1) == 0x000018, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, K2Node_Select_Default) == 0x00001A, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, K2Node_Select_Default_1) == 0x00001B, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::K2Node_Select_Default_1' has a wrong offset!");
-
 // Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.GetAlternateNameForItem
 // 0x00C0 (0x00C0 - 0x0000)
 struct ItemInfoHeaderWidget_C_GetAlternateNameForItem final
 {
 public:
-	class UFortItemDefinition*                    ItemDef;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UFortItemDefinition*                    ItemDef;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm)
 	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
 	EFortItemType                                 CallFunc_GetItemType_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetEmptyText_ReturnValue;                 // 0x0040(0x0018)()
 	class FText                                   Temp_text_Variable_1;                              // 0x0058(0x0018)()
-	bool                                          Temp_bool_Variable;                                // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	EFortItemType                                 CallFunc_GetItemType_ReturnValue_1;                // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Map_Find_Value;                           // 0x0078(0x0018)()
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortWorkerType*                        K2Node_DynamicCast_AsFort_Worker_Type;             // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortWorkerType*                        K2Node_DynamicCast_AsFort_Worker_Type;             // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_Select_Default;                             // 0x00A8(0x0018)()
 };
@@ -100,16 +66,35 @@ static_assert(offsetof(ItemInfoHeaderWidget_C_GetAlternateNameForItem, K2Node_Se
 struct ItemInfoHeaderWidget_C_HasValidItemDefinition final
 {
 public:
-	bool                                          HasValidDescription;                               // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasValidDescription;                               // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortItemDefinition*                    CallFunc_GetItemDefinition_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortItemDefinition*                    CallFunc_GetItemDefinition_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(ItemInfoHeaderWidget_C_HasValidItemDefinition) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_HasValidItemDefinition");
 static_assert(sizeof(ItemInfoHeaderWidget_C_HasValidItemDefinition) == 0x000018, "Wrong size on ItemInfoHeaderWidget_C_HasValidItemDefinition");
 static_assert(offsetof(ItemInfoHeaderWidget_C_HasValidItemDefinition, HasValidDescription) == 0x000000, "Member 'ItemInfoHeaderWidget_C_HasValidItemDefinition::HasValidDescription' has a wrong offset!");
 static_assert(offsetof(ItemInfoHeaderWidget_C_HasValidItemDefinition, CallFunc_GetItemDefinition_ReturnValue) == 0x000008, "Member 'ItemInfoHeaderWidget_C_HasValidItemDefinition::CallFunc_GetItemDefinition_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ItemInfoHeaderWidget_C_HasValidItemDefinition, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'ItemInfoHeaderWidget_C_HasValidItemDefinition::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateColorRarity
+// 0x0070 (0x0070 - 0x0000)
+struct ItemInfoHeaderWidget_C_UpdateColorRarity final
+{
+public:
+	struct FFortColorPalette                      Colors;                                            // 0x0000(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicFontMaterial_ReturnValue;       // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue_1;         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue_2;         // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ItemInfoHeaderWidget_C_UpdateColorRarity) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_UpdateColorRarity");
+static_assert(sizeof(ItemInfoHeaderWidget_C_UpdateColorRarity) == 0x000070, "Wrong size on ItemInfoHeaderWidget_C_UpdateColorRarity");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateColorRarity, Colors) == 0x000000, "Member 'ItemInfoHeaderWidget_C_UpdateColorRarity::Colors' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateColorRarity, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000050, "Member 'ItemInfoHeaderWidget_C_UpdateColorRarity::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateColorRarity, CallFunc_GetDynamicFontMaterial_ReturnValue) == 0x000058, "Member 'ItemInfoHeaderWidget_C_UpdateColorRarity::CallFunc_GetDynamicFontMaterial_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateColorRarity, CallFunc_GetDynamicMaterial_ReturnValue_1) == 0x000060, "Member 'ItemInfoHeaderWidget_C_UpdateColorRarity::CallFunc_GetDynamicMaterial_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateColorRarity, CallFunc_GetDynamicMaterial_ReturnValue_2) == 0x000068, "Member 'ItemInfoHeaderWidget_C_UpdateColorRarity::CallFunc_GetDynamicMaterial_ReturnValue_2' has a wrong offset!");
 
 // Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.OverrideHeaderAndDescription
 // 0x00D0 (0x00D0 - 0x0000)
@@ -119,18 +104,18 @@ public:
 	class FText                                   Header;                                            // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class FText                                   Description;                                       // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class FText                                   ItemType;                                          // 0x0030(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          bUseAlternateHeaderBG;                             // 0x0048(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUseAlternateHeaderBG;                             // 0x0048(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	EFortRarity                                   Rarity;                                            // 0x0049(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0050(0x0018)()
-	bool                                          Temp_bool_Variable;                                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFortColorPalette                      CallFunc_BPGetRarityColorPalette_ReturnValue;      // 0x006C(0x0050)(NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                K2Node_Select_Default;                             // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                K2Node_Select_Default;                             // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ItemInfoHeaderWidget_C_OverrideHeaderAndDescription) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_OverrideHeaderAndDescription");
@@ -149,12 +134,34 @@ static_assert(offsetof(ItemInfoHeaderWidget_C_OverrideHeaderAndDescription, K2No
 static_assert(offsetof(ItemInfoHeaderWidget_C_OverrideHeaderAndDescription, Temp_bool_Variable_1) == 0x0000C8, "Member 'ItemInfoHeaderWidget_C_OverrideHeaderAndDescription::Temp_bool_Variable_1' has a wrong offset!");
 static_assert(offsetof(ItemInfoHeaderWidget_C_OverrideHeaderAndDescription, K2Node_Select_Default_1) == 0x0000C9, "Member 'ItemInfoHeaderWidget_C_OverrideHeaderAndDescription::K2Node_Select_Default_1' has a wrong offset!");
 
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateDetailVisibility
+// 0x0018 (0x0018 - 0x0000)
+struct ItemInfoHeaderWidget_C_UpdateDetailVisibility final
+{
+public:
+	EHorizontalAlignment                          Temp_byte_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHorizontalAlignment                          Temp_byte_Variable_1;                              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOverlaySlot*                           K2Node_DynamicCast_AsOverlay_Slot;                 // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EHorizontalAlignment                          K2Node_Select_Default;                             // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ItemInfoHeaderWidget_C_UpdateDetailVisibility) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_UpdateDetailVisibility");
+static_assert(sizeof(ItemInfoHeaderWidget_C_UpdateDetailVisibility) == 0x000018, "Wrong size on ItemInfoHeaderWidget_C_UpdateDetailVisibility");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateDetailVisibility, Temp_byte_Variable) == 0x000000, "Member 'ItemInfoHeaderWidget_C_UpdateDetailVisibility::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateDetailVisibility, Temp_byte_Variable_1) == 0x000001, "Member 'ItemInfoHeaderWidget_C_UpdateDetailVisibility::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateDetailVisibility, Temp_bool_Variable) == 0x000002, "Member 'ItemInfoHeaderWidget_C_UpdateDetailVisibility::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateDetailVisibility, K2Node_DynamicCast_AsOverlay_Slot) == 0x000008, "Member 'ItemInfoHeaderWidget_C_UpdateDetailVisibility::K2Node_DynamicCast_AsOverlay_Slot' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateDetailVisibility, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'ItemInfoHeaderWidget_C_UpdateDetailVisibility::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateDetailVisibility, K2Node_Select_Default) == 0x000011, "Member 'ItemInfoHeaderWidget_C_UpdateDetailVisibility::K2Node_Select_Default' has a wrong offset!");
+
 // Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.SetLocked
 // 0x0020 (0x0020 - 0x0000)
 struct ItemInfoHeaderWidget_C_SetLocked final
 {
 public:
-	bool                                          ShouldShowLocked;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldShowLocked;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   LockReason;                                        // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -168,7 +175,7 @@ static_assert(offsetof(ItemInfoHeaderWidget_C_SetLocked, LockReason) == 0x000008
 struct ItemInfoHeaderWidget_C_SetRemainingQuantity final
 {
 public:
-	bool                                          ShouldShowRemainingQuantity;                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldShowRemainingQuantity;                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NewRemainingQuantity;                              // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -177,15 +184,61 @@ static_assert(sizeof(ItemInfoHeaderWidget_C_SetRemainingQuantity) == 0x000008, "
 static_assert(offsetof(ItemInfoHeaderWidget_C_SetRemainingQuantity, ShouldShowRemainingQuantity) == 0x000000, "Member 'ItemInfoHeaderWidget_C_SetRemainingQuantity::ShouldShowRemainingQuantity' has a wrong offset!");
 static_assert(offsetof(ItemInfoHeaderWidget_C_SetRemainingQuantity, NewRemainingQuantity) == 0x000004, "Member 'ItemInfoHeaderWidget_C_SetRemainingQuantity::NewRemainingQuantity' has a wrong offset!");
 
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateRemainingQuantity
+// 0x00C0 (0x00C0 - 0x0000)
+struct ItemInfoHeaderWidget_C_UpdateRemainingQuantity final
+{
+public:
+	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0008(0x0018)()
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0028(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0040(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0080(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0090(0x0018)()
+	class FText                                   K2Node_Select_Default;                             // 0x00A8(0x0018)()
+};
+static_assert(alignof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_UpdateRemainingQuantity");
+static_assert(sizeof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity) == 0x0000C0, "Wrong size on ItemInfoHeaderWidget_C_UpdateRemainingQuantity");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, Temp_bool_Variable) == 0x000000, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, Temp_text_Variable) == 0x000008, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, CallFunc_Conv_IntToText_ReturnValue) == 0x000028, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, K2Node_MakeStruct_FormatArgumentData) == 0x000040, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, K2Node_MakeArray_Array) == 0x000080, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, CallFunc_Format_ReturnValue) == 0x000090, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, K2Node_Select_Default) == 0x0000A8, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::K2Node_Select_Default' has a wrong offset!");
+
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateCard
+// 0x0020 (0x0020 - 0x0000)
+struct ItemInfoHeaderWidget_C_UpdateCard final
+{
+public:
+	int32                                         CallFunc_GetQuantity_ReturnValue;                  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortItemDefinition*                    CallFunc_GetItemDefinition_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortItem*                              CallFunc_CreateTemporaryItemInstanceBP_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ItemInfoHeaderWidget_C_UpdateCard) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_UpdateCard");
+static_assert(sizeof(ItemInfoHeaderWidget_C_UpdateCard) == 0x000020, "Wrong size on ItemInfoHeaderWidget_C_UpdateCard");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateCard, CallFunc_GetQuantity_ReturnValue) == 0x000000, "Member 'ItemInfoHeaderWidget_C_UpdateCard::CallFunc_GetQuantity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateCard, CallFunc_GetItemDefinition_ReturnValue) == 0x000008, "Member 'ItemInfoHeaderWidget_C_UpdateCard::CallFunc_GetItemDefinition_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateCard, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'ItemInfoHeaderWidget_C_UpdateCard::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateCard, CallFunc_CreateTemporaryItemInstanceBP_ReturnValue) == 0x000018, "Member 'ItemInfoHeaderWidget_C_UpdateCard::CallFunc_CreateTemporaryItemInstanceBP_ReturnValue' has a wrong offset!");
+
 // Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.Setup
 // 0x0004 (0x0004 - 0x0000)
 struct ItemInfoHeaderWidget_C_Setup final
 {
 public:
-	bool                                          ShouldShowCard;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldShowCard;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	EFortItemCardSize                             CardSize_0;                                        // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldShowDetails;                                 // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldShowDescription;                             // 0x0003(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldShowDetails;                                 // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          ShouldShowDescription;                             // 0x0003(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(ItemInfoHeaderWidget_C_Setup) == 0x000001, "Wrong alignment on ItemInfoHeaderWidget_C_Setup");
 static_assert(sizeof(ItemInfoHeaderWidget_C_Setup) == 0x000004, "Wrong size on ItemInfoHeaderWidget_C_Setup");
@@ -194,12 +247,81 @@ static_assert(offsetof(ItemInfoHeaderWidget_C_Setup, CardSize_0) == 0x000001, "M
 static_assert(offsetof(ItemInfoHeaderWidget_C_Setup, ShouldShowDetails) == 0x000002, "Member 'ItemInfoHeaderWidget_C_Setup::ShouldShowDetails' has a wrong offset!");
 static_assert(offsetof(ItemInfoHeaderWidget_C_Setup, ShouldShowDescription) == 0x000003, "Member 'ItemInfoHeaderWidget_C_Setup::ShouldShowDescription' has a wrong offset!");
 
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateNameText
+// 0x02E0 (0x02E0 - 0x0000)
+struct ItemInfoHeaderWidget_C_UpdateNameText final
+{
+public:
+	class UFortItemDefinition*                    ItemDefinition_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Quantity;                                          // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   DisplayName;                                       // 0x0010(0x0018)(Edit, BlueprintVisible)
+	class FText                                   CallFunc_GetAlternateNameForItem_ReturnValue;      // 0x0028(0x0018)()
+	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0040(0x0018)()
+	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x0058(0x0018)()
+	class FText                                   CallFunc_TextToUpper_ReturnValue_2;                // 0x0070(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0088(0x0040)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00C8(0x0040)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0108(0x0040)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0148(0x0040)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0188(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01C8(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x01D8(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01E8(0x0018)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0200(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0218(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0258(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_269[0x7];                                      // 0x0269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0270(0x0018)()
+	class FString                                 CallFunc_GetPersistentName_ReturnValue;            // 0x0288(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetDisplayName_ReturnValue;               // 0x0298(0x0018)()
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortTokenType*                         K2Node_DynamicCast_AsFort_Token_Type;              // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x02C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C3[0x5];                                      // 0x02C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x02C8(0x0018)()
+};
+static_assert(alignof(ItemInfoHeaderWidget_C_UpdateNameText) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_UpdateNameText");
+static_assert(sizeof(ItemInfoHeaderWidget_C_UpdateNameText) == 0x0002E0, "Wrong size on ItemInfoHeaderWidget_C_UpdateNameText");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, ItemDefinition_0) == 0x000000, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::ItemDefinition_0' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, Quantity) == 0x000008, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::Quantity' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, DisplayName) == 0x000010, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::DisplayName' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_GetAlternateNameForItem_ReturnValue) == 0x000028, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_GetAlternateNameForItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_TextToUpper_ReturnValue) == 0x000040, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_TextToUpper_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_TextToUpper_ReturnValue_1) == 0x000058, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_TextToUpper_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_TextToUpper_ReturnValue_2) == 0x000070, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_TextToUpper_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeStruct_FormatArgumentData) == 0x000088, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000C8, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeStruct_FormatArgumentData_2) == 0x000108, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeStruct_FormatArgumentData_3) == 0x000148, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeStruct_FormatArgumentData_4) == 0x000188, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeArray_Array) == 0x0001C8, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeArray_Array_1) == 0x0001D8, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_Format_ReturnValue) == 0x0001E8, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_Format_ReturnValue_1) == 0x000200, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeStruct_FormatArgumentData_5) == 0x000218, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeArray_Array_2) == 0x000258, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_Greater_IntInt_ReturnValue) == 0x000268, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_Format_ReturnValue_2) == 0x000270, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_GetPersistentName_ReturnValue) == 0x000288, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_GetPersistentName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_GetDisplayName_ReturnValue) == 0x000298, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x0002B0, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_DynamicCast_AsFort_Token_Type) == 0x0002B8, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_DynamicCast_AsFort_Token_Type' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_DynamicCast_bSuccess) == 0x0002C0, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_TextIsEmpty_ReturnValue) == 0x0002C1, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, Temp_bool_Variable) == 0x0002C2, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_Select_Default) == 0x0002C8, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_Select_Default' has a wrong offset!");
+
 // Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.Update
 // 0x00B8 (0x00B8 - 0x0000)
 struct ItemInfoHeaderWidget_C_Update final
 {
 public:
-	class UFortItemDefinition*                    ItemDefinition_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UFortItemDefinition*                    ItemDefinition_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Quantity;                                          // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -208,12 +330,12 @@ public:
 	EFortItemType                                 CallFunc_GetItemType_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetShortDescription_ReturnValue;          // 0x0048(0x0018)()
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_62[0x2];                                       // 0x0062(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFortColorPalette                      CallFunc_GetRarityOrSeriesColors_ReturnValue;      // 0x0064(0x0050)(NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x00B6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ItemInfoHeaderWidget_C_Update) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_Update");
@@ -232,168 +354,39 @@ static_assert(offsetof(ItemInfoHeaderWidget_C_Update, Temp_byte_Variable_1) == 0
 static_assert(offsetof(ItemInfoHeaderWidget_C_Update, Temp_bool_Variable) == 0x0000B5, "Member 'ItemInfoHeaderWidget_C_Update::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(ItemInfoHeaderWidget_C_Update, K2Node_Select_Default) == 0x0000B6, "Member 'ItemInfoHeaderWidget_C_Update::K2Node_Select_Default' has a wrong offset!");
 
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateCard
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.ExecuteUbergraph_ItemInfoHeaderWidget
 // 0x0020 (0x0020 - 0x0000)
-struct ItemInfoHeaderWidget_C_UpdateCard final
+struct ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget final
 {
 public:
-	int32                                         CallFunc_GetQuantity_ReturnValue;                  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortItemDefinition*                    CallFunc_GetItemDefinition_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortItem*                              CallFunc_CreateTemporaryItemInstanceBP_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetQuantity_ReturnValue;                  // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortItemDefinition*                    CallFunc_GetItemDefinition_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ItemInfoHeaderWidget_C_UpdateCard) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_UpdateCard");
-static_assert(sizeof(ItemInfoHeaderWidget_C_UpdateCard) == 0x000020, "Wrong size on ItemInfoHeaderWidget_C_UpdateCard");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateCard, CallFunc_GetQuantity_ReturnValue) == 0x000000, "Member 'ItemInfoHeaderWidget_C_UpdateCard::CallFunc_GetQuantity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateCard, CallFunc_GetItemDefinition_ReturnValue) == 0x000008, "Member 'ItemInfoHeaderWidget_C_UpdateCard::CallFunc_GetItemDefinition_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateCard, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'ItemInfoHeaderWidget_C_UpdateCard::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateCard, CallFunc_CreateTemporaryItemInstanceBP_ReturnValue) == 0x000018, "Member 'ItemInfoHeaderWidget_C_UpdateCard::CallFunc_CreateTemporaryItemInstanceBP_ReturnValue' has a wrong offset!");
-
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateColorRarity
-// 0x0070 (0x0070 - 0x0000)
-struct ItemInfoHeaderWidget_C_UpdateColorRarity final
-{
-public:
-	struct FFortColorPalette                      Colors;                                            // 0x0000(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicFontMaterial_ReturnValue;       // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue_1;         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue_2;         // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ItemInfoHeaderWidget_C_UpdateColorRarity) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_UpdateColorRarity");
-static_assert(sizeof(ItemInfoHeaderWidget_C_UpdateColorRarity) == 0x000070, "Wrong size on ItemInfoHeaderWidget_C_UpdateColorRarity");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateColorRarity, Colors) == 0x000000, "Member 'ItemInfoHeaderWidget_C_UpdateColorRarity::Colors' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateColorRarity, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000050, "Member 'ItemInfoHeaderWidget_C_UpdateColorRarity::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateColorRarity, CallFunc_GetDynamicFontMaterial_ReturnValue) == 0x000058, "Member 'ItemInfoHeaderWidget_C_UpdateColorRarity::CallFunc_GetDynamicFontMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateColorRarity, CallFunc_GetDynamicMaterial_ReturnValue_1) == 0x000060, "Member 'ItemInfoHeaderWidget_C_UpdateColorRarity::CallFunc_GetDynamicMaterial_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateColorRarity, CallFunc_GetDynamicMaterial_ReturnValue_2) == 0x000068, "Member 'ItemInfoHeaderWidget_C_UpdateColorRarity::CallFunc_GetDynamicMaterial_ReturnValue_2' has a wrong offset!");
-
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateDetailVisibility
-// 0x0018 (0x0018 - 0x0000)
-struct ItemInfoHeaderWidget_C_UpdateDetailVisibility final
-{
-public:
-	EHorizontalAlignment                          Temp_byte_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EHorizontalAlignment                          Temp_byte_Variable_1;                              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOverlaySlot*                           K2Node_DynamicCast_AsOverlay_Slot;                 // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EHorizontalAlignment                          K2Node_Select_Default;                             // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ItemInfoHeaderWidget_C_UpdateDetailVisibility) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_UpdateDetailVisibility");
-static_assert(sizeof(ItemInfoHeaderWidget_C_UpdateDetailVisibility) == 0x000018, "Wrong size on ItemInfoHeaderWidget_C_UpdateDetailVisibility");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateDetailVisibility, Temp_byte_Variable) == 0x000000, "Member 'ItemInfoHeaderWidget_C_UpdateDetailVisibility::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateDetailVisibility, Temp_byte_Variable_1) == 0x000001, "Member 'ItemInfoHeaderWidget_C_UpdateDetailVisibility::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateDetailVisibility, Temp_bool_Variable) == 0x000002, "Member 'ItemInfoHeaderWidget_C_UpdateDetailVisibility::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateDetailVisibility, K2Node_DynamicCast_AsOverlay_Slot) == 0x000008, "Member 'ItemInfoHeaderWidget_C_UpdateDetailVisibility::K2Node_DynamicCast_AsOverlay_Slot' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateDetailVisibility, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'ItemInfoHeaderWidget_C_UpdateDetailVisibility::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateDetailVisibility, K2Node_Select_Default) == 0x000011, "Member 'ItemInfoHeaderWidget_C_UpdateDetailVisibility::K2Node_Select_Default' has a wrong offset!");
-
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateNameText
-// 0x0360 (0x0360 - 0x0000)
-struct ItemInfoHeaderWidget_C_UpdateNameText final
-{
-public:
-	class UFortItemDefinition*                    ItemDefinition_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Quantity;                                          // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   DisplayName;                                       // 0x0010(0x0018)(Edit, BlueprintVisible)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetAlternateNameForItem_ReturnValue;      // 0x0030(0x0018)()
-	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0048(0x0018)()
-	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x0060(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0078(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_TextToUpper_ReturnValue_2;                // 0x00C8(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00E0(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0130(0x0050)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0190(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x01E0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0230(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0240(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0250(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0268(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0288(0x0050)(HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D9[0x7];                                      // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x02E0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x02F0(0x0018)()
-	class FString                                 CallFunc_GetPersistentName_ReturnValue;            // 0x0308(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetDisplayName_ReturnValue;               // 0x0318(0x0018)()
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_331[0x7];                                      // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortTokenType*                         K2Node_DynamicCast_AsFort_Token_Type;              // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0341(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_342[0x6];                                      // 0x0342(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0348(0x0018)()
-};
-static_assert(alignof(ItemInfoHeaderWidget_C_UpdateNameText) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_UpdateNameText");
-static_assert(sizeof(ItemInfoHeaderWidget_C_UpdateNameText) == 0x000360, "Wrong size on ItemInfoHeaderWidget_C_UpdateNameText");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, ItemDefinition_0) == 0x000000, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::ItemDefinition_0' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, Quantity) == 0x000008, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::Quantity' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, DisplayName) == 0x000010, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::DisplayName' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_TextIsEmpty_ReturnValue) == 0x000028, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_GetAlternateNameForItem_ReturnValue) == 0x000030, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_GetAlternateNameForItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_TextToUpper_ReturnValue) == 0x000048, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_TextToUpper_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_TextToUpper_ReturnValue_1) == 0x000060, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_TextToUpper_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeStruct_FormatArgumentData) == 0x000078, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_TextToUpper_ReturnValue_2) == 0x0000C8, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_TextToUpper_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000E0, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeStruct_FormatArgumentData_2) == 0x000130, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000180, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000188, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeStruct_FormatArgumentData_3) == 0x000190, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeStruct_FormatArgumentData_4) == 0x0001E0, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeArray_Array) == 0x000230, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeArray_Array_1) == 0x000240, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_Format_ReturnValue) == 0x000250, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_Format_ReturnValue_1) == 0x000268, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_Conv_IntToInt64_ReturnValue_2) == 0x000280, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_Conv_IntToInt64_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeStruct_FormatArgumentData_5) == 0x000288, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_Greater_IntInt_ReturnValue) == 0x0002D8, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_MakeArray_Array_2) == 0x0002E0, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_Format_ReturnValue_2) == 0x0002F0, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_GetPersistentName_ReturnValue) == 0x000308, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_GetPersistentName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_GetDisplayName_ReturnValue) == 0x000318, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000330, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_DynamicCast_AsFort_Token_Type) == 0x000338, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_DynamicCast_AsFort_Token_Type' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_DynamicCast_bSuccess) == 0x000340, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, Temp_bool_Variable) == 0x000341, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateNameText, K2Node_Select_Default) == 0x000348, "Member 'ItemInfoHeaderWidget_C_UpdateNameText::K2Node_Select_Default' has a wrong offset!");
-
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateRemainingQuantity
-// 0x00D0 (0x00D0 - 0x0000)
-struct ItemInfoHeaderWidget_C_UpdateRemainingQuantity final
-{
-public:
-	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0008(0x0018)()
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0028(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0040(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0090(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A0(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x00B8(0x0018)()
-};
-static_assert(alignof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_UpdateRemainingQuantity");
-static_assert(sizeof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity) == 0x0000D0, "Wrong size on ItemInfoHeaderWidget_C_UpdateRemainingQuantity");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, Temp_bool_Variable) == 0x000000, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, Temp_text_Variable) == 0x000008, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, CallFunc_Conv_IntToText_ReturnValue) == 0x000028, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, K2Node_MakeStruct_FormatArgumentData) == 0x000040, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, K2Node_MakeArray_Array) == 0x000090, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, CallFunc_Format_ReturnValue) == 0x0000A0, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemInfoHeaderWidget_C_UpdateRemainingQuantity, K2Node_Select_Default) == 0x0000B8, "Member 'ItemInfoHeaderWidget_C_UpdateRemainingQuantity::K2Node_Select_Default' has a wrong offset!");
+static_assert(alignof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget) == 0x000008, "Wrong alignment on ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget");
+static_assert(sizeof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget) == 0x000020, "Wrong size on ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget");
+static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, EntryPoint) == 0x000000, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::EntryPoint' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, Temp_byte_Variable) == 0x000004, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, Temp_byte_Variable_1) == 0x000005, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, Temp_bool_Variable) == 0x000006, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, Temp_byte_Variable_2) == 0x000007, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::Temp_byte_Variable_2' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, Temp_byte_Variable_3) == 0x000008, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::Temp_byte_Variable_3' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, CallFunc_GetQuantity_ReturnValue) == 0x00000C, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::CallFunc_GetQuantity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, CallFunc_GetItemDefinition_ReturnValue) == 0x000010, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::CallFunc_GetItemDefinition_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, Temp_bool_Variable_1) == 0x000018, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, K2Node_Select_Default) == 0x00001A, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget, K2Node_Select_Default_1) == 0x00001B, "Member 'ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget::K2Node_Select_Default_1' has a wrong offset!");
 
 }
 

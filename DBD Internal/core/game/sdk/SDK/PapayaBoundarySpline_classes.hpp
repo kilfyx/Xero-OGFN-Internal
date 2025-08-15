@@ -34,6 +34,10 @@ public:
 		return GetDefaultObjImpl<APapayaBoundarySpline_C>();
 	}
 };
+static_assert(alignof(APapayaBoundarySpline_C) == 0x000008, "Wrong alignment on APapayaBoundarySpline_C");
+static_assert(sizeof(APapayaBoundarySpline_C) == 0x000230, "Wrong size on APapayaBoundarySpline_C");
+static_assert(offsetof(APapayaBoundarySpline_C, Spline2) == 0x000220, "Member 'APapayaBoundarySpline_C::Spline2' has a wrong offset!");
+static_assert(offsetof(APapayaBoundarySpline_C, DefaultSceneRoot) == 0x000228, "Member 'APapayaBoundarySpline_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

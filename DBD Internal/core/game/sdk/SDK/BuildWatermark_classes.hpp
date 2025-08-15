@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass BuildWatermark.BuildWatermark_C
-// 0x0008 (0x02D0 - 0x02C8)
+// 0x0008 (0x02F0 - 0x02E8)
 class UBuildWatermark_C final : public UFortBuildWatermark
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void Construct();
-	void Destruct();
 	void ExecuteUbergraph_BuildWatermark(int32 EntryPoint);
-	void HandlePartyJoined();
 	void HandlePlayerStateChanged(const struct FFortTeamMemberInfo& PlayerInfo);
+	void Destruct();
+	void HandlePartyJoined();
+	void Construct();
 
 public:
 	static class UClass* StaticClass()
@@ -41,6 +41,9 @@ public:
 		return GetDefaultObjImpl<UBuildWatermark_C>();
 	}
 };
+static_assert(alignof(UBuildWatermark_C) == 0x000008, "Wrong alignment on UBuildWatermark_C");
+static_assert(sizeof(UBuildWatermark_C) == 0x0002F0, "Wrong size on UBuildWatermark_C");
+static_assert(offsetof(UBuildWatermark_C, UberGraphFrame) == 0x0002E8, "Member 'UBuildWatermark_C::UberGraphFrame' has a wrong offset!");
 
 }
 

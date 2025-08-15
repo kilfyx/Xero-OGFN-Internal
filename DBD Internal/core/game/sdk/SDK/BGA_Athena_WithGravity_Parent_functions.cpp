@@ -17,6 +17,40 @@
 namespace SDK
 {
 
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.ExecuteUbergraph_BGA_Athena_WithGravity_Parent
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_Athena_WithGravity_Parent_C::ExecuteUbergraph_BGA_Athena_WithGravity_Parent(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "ExecuteUbergraph_BGA_Athena_WithGravity_Parent");
+
+	Params::BGA_Athena_WithGravity_Parent_C_ExecuteUbergraph_BGA_Athena_WithGravity_Parent Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.SlidingDoorOpened
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_WithGravity_Parent_C::SlidingDoorOpened()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "SlidingDoorOpened");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.AttachedWasDestroyed
 // (BlueprintCallable, BlueprintEvent)
 
@@ -31,41 +65,91 @@ void ABGA_Athena_WithGravity_Parent_C::AttachedWasDestroyed()
 }
 
 
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.AttachToBindedActor
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              AttachComp                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.SpawnFXSounds
+// (BlueprintCallable, BlueprintEvent)
 
-void ABGA_Athena_WithGravity_Parent_C::AttachToBindedActor(class UPrimitiveComponent* AttachComp)
+void ABGA_Athena_WithGravity_Parent_C::SpawnFXSounds()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "AttachToBindedActor");
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "SpawnFXSounds");
 
-	Params::BGA_Athena_WithGravity_Parent_C_AttachToBindedActor Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.AttachComp = AttachComp;
+
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.PlayHitFX
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_WithGravity_Parent_C::PlayHitFX()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "PlayHitFX");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.Impulse
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DelayBeforeImpulse                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DelayBeforeCollision                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   ImpulseOrigin                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   ImpulseAmount                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    SetCollisionAfterImpulse                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABGA_Athena_WithGravity_Parent_C::Impulse(float DelayBeforeImpulse, float DelayBeforeCollision, const struct FVector& ImpulseOrigin, const struct FVector& ImpulseAmount, bool SetCollisionAfterImpulse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "Impulse");
+
+	Params::BGA_Athena_WithGravity_Parent_C_Impulse Parms{};
+
+	Parms.DelayBeforeImpulse = DelayBeforeImpulse;
+	Parms.DelayBeforeCollision = DelayBeforeCollision;
+	Parms.ImpulseOrigin = std::move(ImpulseOrigin);
+	Parms.ImpulseAmount = std::move(ImpulseAmount);
+	Parms.SetCollisionAfterImpulse = SetCollisionAfterImpulse;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.BaseDestroyed
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           DestroyedActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABGA_Athena_WithGravity_Parent_C::BaseDestroyed(class AActor* DestroyedActor)
+void ABGA_Athena_WithGravity_Parent_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "BaseDestroyed");
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "ReceiveBeginPlay");
 
-	Params::BGA_Athena_WithGravity_Parent_C_BaseDestroyed Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.DestroyedActor = DestroyedActor;
+
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.StopSim
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FHitResult&                Hit                                                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void ABGA_Athena_WithGravity_Parent_C::StopSim(const struct FHitResult& Hit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "StopSim");
+
+	Params::BGA_Athena_WithGravity_Parent_C_StopSim Parms{};
+
+	Parms.Hit = std::move(Hit);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -105,285 +189,13 @@ void ABGA_Athena_WithGravity_Parent_C::BaseDied(class AActor* DamagedActor, floa
 }
 
 
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.BounceBGA
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_WithGravity_Parent_C::BounceBGA()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "BounceBGA");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.BounceBGAAwayFromLocation
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   LocationToBounceAwayFrom                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_WithGravity_Parent_C::BounceBGAAwayFromLocation(const struct FVector& LocationToBounceAwayFrom)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "BounceBGAAwayFromLocation");
-
-	Params::BGA_Athena_WithGravity_Parent_C_BounceBGAAwayFromLocation Parms{};
-
-	Parms.LocationToBounceAwayFrom = std::move(LocationToBounceAwayFrom);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.CheckForSameClassToBounce
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Hit                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   HitSameClass                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_WithGravity_Parent_C::CheckForSameClassToBounce(class AActor* Hit, bool* HitSameClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "CheckForSameClassToBounce");
-
-	Params::BGA_Athena_WithGravity_Parent_C_CheckForSameClassToBounce Parms{};
-
-	Parms.Hit = Hit;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (HitSameClass != nullptr)
-		*HitSameClass = Parms.HitSameClass;
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.ExecuteUbergraph_BGA_Athena_WithGravity_Parent
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_WithGravity_Parent_C::ExecuteUbergraph_BGA_Athena_WithGravity_Parent(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "ExecuteUbergraph_BGA_Athena_WithGravity_Parent");
-
-	Params::BGA_Athena_WithGravity_Parent_C_ExecuteUbergraph_BGA_Athena_WithGravity_Parent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.ForceBounceBGA
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_WithGravity_Parent_C::ForceBounceBGA()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "ForceBounceBGA");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.HandleBinding
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              HitComp                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_WithGravity_Parent_C::HandleBinding(class AActor* Actor, class UPrimitiveComponent* HitComp)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "HandleBinding");
-
-	Params::BGA_Athena_WithGravity_Parent_C_HandleBinding Parms{};
-
-	Parms.Actor = Actor;
-	Parms.HitComp = HitComp;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.Impulse
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DelayBeforeImpulse                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   DelayBeforeCollision                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   ImpulseOrigin                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   ImpulseAmount                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    SetCollisionAfterImpulse                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_WithGravity_Parent_C::Impulse(float DelayBeforeImpulse, float DelayBeforeCollision, const struct FVector& ImpulseOrigin, const struct FVector& ImpulseAmount, bool SetCollisionAfterImpulse)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "Impulse");
-
-	Params::BGA_Athena_WithGravity_Parent_C_Impulse Parms{};
-
-	Parms.DelayBeforeImpulse = DelayBeforeImpulse;
-	Parms.DelayBeforeCollision = DelayBeforeCollision;
-	Parms.ImpulseOrigin = std::move(ImpulseOrigin);
-	Parms.ImpulseAmount = std::move(ImpulseAmount);
-	Parms.SetCollisionAfterImpulse = SetCollisionAfterImpulse;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.Init
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   GravHitNormal_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_WithGravity_Parent_C::Init(const struct FVector& GravHitNormal_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "Init");
-
-	Params::BGA_Athena_WithGravity_Parent_C_Init Parms{};
-
-	Parms.GravHitNormal_0 = std::move(GravHitNormal_0);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.OnAttach
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           AttachedActor                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABGA_Athena_WithGravity_Parent_C::OnAttach(class AActor* AttachedActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "OnAttach");
-
-	Params::BGA_Athena_WithGravity_Parent_C_OnAttach Parms{};
-
-	Parms.AttachedActor = AttachedActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.OnRep_bResumeSimulation
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_WithGravity_Parent_C::OnRep_bResumeSimulation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "OnRep_bResumeSimulation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.OnRep_RepCollision
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_WithGravity_Parent_C::OnRep_RepCollision()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "OnRep_RepCollision");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.OnRep_StopLocation
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_WithGravity_Parent_C::OnRep_StopLocation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "OnRep_StopLocation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.OnRep_StopSimServerLocation
-// (HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_WithGravity_Parent_C::OnRep_StopSimServerLocation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "OnRep_StopSimServerLocation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.PlayHitFX
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FHitResult&                HitResult                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void ABGA_Athena_WithGravity_Parent_C::PlayHitFX(const struct FHitResult& HitResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "PlayHitFX");
-
-	Params::BGA_Athena_WithGravity_Parent_C_PlayHitFX Parms{};
-
-	Parms.HitResult = std::move(HitResult);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABGA_Athena_WithGravity_Parent_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.ReceiveHit
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*              MyComp                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Other                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bSelfMoved                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSelfMoved                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const struct FVector&                   HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   HitNormal                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -411,6 +223,148 @@ void ABGA_Athena_WithGravity_Parent_C::ReceiveHit(class UPrimitiveComponent* MyC
 }
 
 
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.HandleBinding
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              HitComp                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_Athena_WithGravity_Parent_C::HandleBinding(class AActor* Actor, class UPrimitiveComponent* HitComp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "HandleBinding");
+
+	Params::BGA_Athena_WithGravity_Parent_C_HandleBinding Parms{};
+
+	Parms.Actor = Actor;
+	Parms.HitComp = HitComp;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.BaseDestroyed
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           DestroyedActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_Athena_WithGravity_Parent_C::BaseDestroyed(class AActor* DestroyedActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "BaseDestroyed");
+
+	Params::BGA_Athena_WithGravity_Parent_C_BaseDestroyed Parms{};
+
+	Parms.DestroyedActor = DestroyedActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.OnRep_bResumeSimulation
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_WithGravity_Parent_C::OnRep_bResumeSimulation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "OnRep_bResumeSimulation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.ForceBounceBGA
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_WithGravity_Parent_C::ForceBounceBGA()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "ForceBounceBGA");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.OnRep_RepCollision
+// (BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_WithGravity_Parent_C::OnRep_RepCollision()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "OnRep_RepCollision");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.CheckForSameClassToBounce
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Hit                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   HitSameClass                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABGA_Athena_WithGravity_Parent_C::CheckForSameClassToBounce(class AActor* Hit, bool* HitSameClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "CheckForSameClassToBounce");
+
+	Params::BGA_Athena_WithGravity_Parent_C_CheckForSameClassToBounce Parms{};
+
+	Parms.Hit = Hit;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (HitSameClass != nullptr)
+		*HitSameClass = Parms.HitSameClass;
+}
+
+
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.BounceBGA
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABGA_Athena_WithGravity_Parent_C::BounceBGA()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "BounceBGA");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.AttachToBindedActor
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              AttachComp                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_Athena_WithGravity_Parent_C::AttachToBindedActor(class UPrimitiveComponent* AttachComp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "AttachToBindedActor");
+
+	Params::BGA_Athena_WithGravity_Parent_C_AttachToBindedActor Parms{};
+
+	Parms.AttachComp = AttachComp;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.RestartSimulation
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -425,49 +379,41 @@ void ABGA_Athena_WithGravity_Parent_C::RestartSimulation()
 }
 
 
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.SlidingDoorOpened
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_WithGravity_Parent_C::SlidingDoorOpened()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "SlidingDoorOpened");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.SpawnFXSounds
-// (BlueprintCallable, BlueprintEvent)
-
-void ABGA_Athena_WithGravity_Parent_C::SpawnFXSounds()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "SpawnFXSounds");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.StopSim
-// (BlueprintCallable, BlueprintEvent)
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.OnAttach
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FHitResult&                Hit                                                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// class AActor*                           AttachedActor                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABGA_Athena_WithGravity_Parent_C::StopSim(const struct FHitResult& Hit)
+void ABGA_Athena_WithGravity_Parent_C::OnAttach(class AActor* AttachedActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "StopSim");
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "OnAttach");
 
-	Params::BGA_Athena_WithGravity_Parent_C_StopSim Parms{};
+	Params::BGA_Athena_WithGravity_Parent_C_OnAttach Parms{};
 
-	Parms.Hit = std::move(Hit);
+	Parms.AttachedActor = AttachedActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.Init
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   GravHitNormal_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_Athena_WithGravity_Parent_C::Init(const struct FVector& GravHitNormal_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_Athena_WithGravity_Parent_C", "Init");
+
+	Params::BGA_Athena_WithGravity_Parent_C_Init Parms{};
+
+	Parms.GravHitNormal_0 = std::move(GravHitNormal_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

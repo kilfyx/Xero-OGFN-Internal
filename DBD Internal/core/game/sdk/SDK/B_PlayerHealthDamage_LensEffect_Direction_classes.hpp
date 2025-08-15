@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AB_PlayerHealthDamage_LensEffect_Direction_C>();
 	}
 };
+static_assert(alignof(AB_PlayerHealthDamage_LensEffect_Direction_C) == 0x000010, "Wrong alignment on AB_PlayerHealthDamage_LensEffect_Direction_C");
+static_assert(sizeof(AB_PlayerHealthDamage_LensEffect_Direction_C) == 0x000310, "Wrong size on AB_PlayerHealthDamage_LensEffect_Direction_C");
 
 }
 

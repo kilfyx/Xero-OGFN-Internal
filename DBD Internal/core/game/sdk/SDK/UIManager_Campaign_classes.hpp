@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass UIManager_Campaign.UIManager_Campaign_C
-// 0x0000 (0x00B8 - 0x00B8)
+// 0x0000 (0x00F8 - 0x00F8)
 class UUIManager_Campaign_C final : public UFortUIManager_Campaign
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UUIManager_Campaign_C>();
 	}
 };
+static_assert(alignof(UUIManager_Campaign_C) == 0x000008, "Wrong alignment on UUIManager_Campaign_C");
+static_assert(sizeof(UUIManager_Campaign_C) == 0x0000F8, "Wrong size on UUIManager_Campaign_C");
 
 }
 

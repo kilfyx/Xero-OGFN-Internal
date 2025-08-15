@@ -10,32 +10,32 @@
 
 #include "Basic.hpp"
 
-#include "FortniteUI_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass VoiceChatMemberListEntry.VoiceChatMemberListEntry_C
-// 0x0050 (0x0FE0 - 0x0F90)
+// 0x0048 (0x0C58 - 0x0C10)
 class UVoiceChatMemberListEntry_C final : public UFortVoiceChatMemberListEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Selected;                                          // 0x0F98(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hovered;                                           // 0x0FA0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Arrow;                                             // 0x0FA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIconTextButton_C*                      EmptyButtonToEatOneMouseUpEvent;                   // 0x0FB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FLinearColor                           EncourageEpicFriend_IdleColor;                     // 0x0FB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EncourageEpicFriend_HoveredColor;                  // 0x0FC8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Selected;                                          // 0x0C18(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hovered;                                           // 0x0C20(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Arrow;                                             // 0x0C28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIconTextButton_C*                      EmptyButtonToEatOneMouseUpEvent;                   // 0x0C30(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FLinearColor                           EncourageEpicFriend_IdleColor;                     // 0x0C38(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EncourageEpicFriend_HoveredColor;                  // 0x0C48(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);
-	void BP_OnHovered();
-	void BP_OnUnhovered();
 	void ExecuteUbergraph_VoiceChatMemberListEntry(int32 EntryPoint);
+	void BP_OnHovered();
+	void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);
+	void BP_OnUnhovered();
 
 public:
 	static class UClass* StaticClass()
@@ -47,6 +47,15 @@ public:
 		return GetDefaultObjImpl<UVoiceChatMemberListEntry_C>();
 	}
 };
+static_assert(alignof(UVoiceChatMemberListEntry_C) == 0x000008, "Wrong alignment on UVoiceChatMemberListEntry_C");
+static_assert(sizeof(UVoiceChatMemberListEntry_C) == 0x000C58, "Wrong size on UVoiceChatMemberListEntry_C");
+static_assert(offsetof(UVoiceChatMemberListEntry_C, UberGraphFrame) == 0x000C10, "Member 'UVoiceChatMemberListEntry_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UVoiceChatMemberListEntry_C, Selected) == 0x000C18, "Member 'UVoiceChatMemberListEntry_C::Selected' has a wrong offset!");
+static_assert(offsetof(UVoiceChatMemberListEntry_C, Hovered) == 0x000C20, "Member 'UVoiceChatMemberListEntry_C::Hovered' has a wrong offset!");
+static_assert(offsetof(UVoiceChatMemberListEntry_C, Arrow) == 0x000C28, "Member 'UVoiceChatMemberListEntry_C::Arrow' has a wrong offset!");
+static_assert(offsetof(UVoiceChatMemberListEntry_C, EmptyButtonToEatOneMouseUpEvent) == 0x000C30, "Member 'UVoiceChatMemberListEntry_C::EmptyButtonToEatOneMouseUpEvent' has a wrong offset!");
+static_assert(offsetof(UVoiceChatMemberListEntry_C, EncourageEpicFriend_IdleColor) == 0x000C38, "Member 'UVoiceChatMemberListEntry_C::EncourageEpicFriend_IdleColor' has a wrong offset!");
+static_assert(offsetof(UVoiceChatMemberListEntry_C, EncourageEpicFriend_HoveredColor) == 0x000C48, "Member 'UVoiceChatMemberListEntry_C::EncourageEpicFriend_HoveredColor' has a wrong offset!");
 
 }
 

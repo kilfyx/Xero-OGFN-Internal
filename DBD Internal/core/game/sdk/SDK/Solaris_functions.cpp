@@ -17,104 +17,151 @@
 namespace SDK
 {
 
-// Function Solaris.SolarisArrayLibrary.Add
-// (Final, Native, Static, Public, HasOutParams)
+// Function Solaris.SolarisMathLibrary_String.equal
+// (Final, Native, Static, Public)
 // Parameters:
-// TArray<struct FGenericElementType>      Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FGenericElementType              new_item                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Lhs                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Rhs                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int64 USolarisArrayLibrary::Add(const TArray<struct FGenericElementType>& Array, const struct FGenericElementType& new_item)
+bool USolarisMathLibrary_String::equal(const class FString& Lhs, const class FString& Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Add");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_String", "equal");
 
-	Params::SolarisArrayLibrary_Add Parms{};
+	Params::SolarisMathLibrary_String_equal Parms{};
 
-	Parms.Array = std::move(Array);
-	Parms.new_item = std::move(new_item);
+	Parms.Lhs = std::move(Lhs);
+	Parms.Rhs = std::move(Rhs);
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisArrayLibrary.Call
-// (Final, Native, Static, Public, HasOutParams)
+// Function Solaris.SolarisMathLibrary_String.not_equal
+// (Final, Native, Static, Public)
 // Parameters:
-// TArray<struct FGenericElementType>      Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// int64                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Lhs                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Rhs                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisArrayLibrary::Call(const TArray<struct FGenericElementType>& Array, int64 Index_0)
+bool USolarisMathLibrary_String::not_equal(const class FString& Lhs, const class FString& Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Call");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_String", "not_equal");
 
-	Params::SolarisArrayLibrary_Call Parms{};
+	Params::SolarisMathLibrary_String_not_equal Parms{};
+
+	Parms.Lhs = std::move(Lhs);
+	Parms.Rhs = std::move(Rhs);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisArrayLibrary.Add
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const TArray<int32>&                    Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32&                            new_item                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 USolarisArrayLibrary::Add(const TArray<int32>& Array, const int32& new_item)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisArrayLibrary", "Add");
+
+	Params::SolarisArrayLibrary_Add Parms{};
 
 	Parms.Array = std::move(Array);
-	Parms.Index_0 = Index_0;
+	Parms.new_item = new_item;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
 // Function Solaris.SolarisArrayLibrary.Concat
 // (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// TArray<struct FGenericElementType>      LHS                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<struct FGenericElementType>      RHS                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<struct FGenericElementType>      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    Lhs                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    Rhs                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-TArray<struct FGenericElementType> USolarisArrayLibrary::Concat(const TArray<struct FGenericElementType>& LHS, const TArray<struct FGenericElementType>& RHS)
+TArray<int32> USolarisArrayLibrary::Concat(const TArray<int32>& Lhs, const TArray<int32>& Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Concat");
+		Func = StaticClass()->GetFunction("SolarisArrayLibrary", "Concat");
 
 	Params::SolarisArrayLibrary_Concat Parms{};
 
-	Parms.LHS = std::move(LHS);
-	Parms.RHS = std::move(RHS);
+	Parms.Lhs = std::move(Lhs);
+	Parms.Rhs = std::move(Rhs);
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisArrayLibrary.ConcatEquals
+// Function Solaris.SolarisArrayLibrary.Contains
 // (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// TArray<struct FGenericElementType>      LHS                                                    (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// TArray<struct FGenericElementType>      RHS                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<struct FGenericElementType>      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32&                            search_item                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-TArray<struct FGenericElementType> USolarisArrayLibrary::ConcatEquals(TArray<struct FGenericElementType>* LHS, const TArray<struct FGenericElementType>& RHS)
+bool USolarisArrayLibrary::Contains(const TArray<int32>& Array, const int32& search_item)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("ConcatEquals");
+		Func = StaticClass()->GetFunction("SolarisArrayLibrary", "Contains");
 
-	Params::SolarisArrayLibrary_ConcatEquals Parms{};
+	Params::SolarisArrayLibrary_Contains Parms{};
 
-	Parms.RHS = std::move(RHS);
+	Parms.Array = std::move(Array);
+	Parms.search_item = search_item;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	if (LHS != nullptr)
-		*LHS = std::move(Parms.LHS);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
@@ -123,43 +170,53 @@ TArray<struct FGenericElementType> USolarisArrayLibrary::ConcatEquals(TArray<str
 // Function Solaris.SolarisArrayLibrary.Empty
 // (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// TArray<struct FGenericElementType>      Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisArrayLibrary::Empty(const TArray<struct FGenericElementType>& Array)
+void USolarisArrayLibrary::Empty(const TArray<int32>& Array)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Empty");
+		Func = StaticClass()->GetFunction("SolarisArrayLibrary", "Empty");
 
 	Params::SolarisArrayLibrary_Empty Parms{};
 
 	Parms.Array = std::move(Array);
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
-// Function Solaris.SolarisArrayLibrary.Length
+// Function Solaris.SolarisArrayLibrary.IsValidIndex
 // (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// TArray<struct FGenericElementType>      Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int64 USolarisArrayLibrary::Length(const TArray<struct FGenericElementType>& Array)
+bool USolarisArrayLibrary::IsValidIndex(const TArray<int32>& Array, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Length");
+		Func = StaticClass()->GetFunction("SolarisArrayLibrary", "IsValidIndex");
 
-	Params::SolarisArrayLibrary_Length Parms{};
+	Params::SolarisArrayLibrary_IsValidIndex Parms{};
 
 	Parms.Array = std::move(Array);
+	Parms.Index_0 = Index_0;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
@@ -168,904 +225,741 @@ int64 USolarisArrayLibrary::Length(const TArray<struct FGenericElementType>& Arr
 // Function Solaris.SolarisArrayLibrary.Move
 // (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// TArray<struct FGenericElementType>      Target                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<struct FGenericElementType>      Source                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    Target                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    Source                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisArrayLibrary::Move(const TArray<struct FGenericElementType>& Target, const TArray<struct FGenericElementType>& Source)
+void USolarisArrayLibrary::Move(const TArray<int32>& Target, const TArray<int32>& Source)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Move");
+		Func = StaticClass()->GetFunction("SolarisArrayLibrary", "Move");
 
 	Params::SolarisArrayLibrary_Move Parms{};
 
 	Parms.Target = std::move(Target);
 	Parms.Source = std::move(Source);
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
-// Function Solaris.SolarisArrayLibrary.RefCall
+// Function Solaris.SolarisArrayLibrary.Num
 // (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// TArray<struct FGenericElementType>      Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// int64                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisArrayLibrary::RefCall(const TArray<struct FGenericElementType>& Array, int64 Index_0)
+int32 USolarisArrayLibrary::Num(const TArray<int32>& Array)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("RefCall");
+		Func = StaticClass()->GetFunction("SolarisArrayLibrary", "Num");
 
-	Params::SolarisArrayLibrary_RefCall Parms{};
+	Params::SolarisArrayLibrary_Num Parms{};
 
 	Parms.Array = std::move(Array);
-	Parms.Index_0 = Index_0;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-// Function Solaris.SolarisArrayLibrary.UnsafeCall
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// TArray<struct FGenericElementType>      Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// int64                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USolarisArrayLibrary::UnsafeCall(const TArray<struct FGenericElementType>& Array, int64 Index_0)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("UnsafeCall");
-
-	Params::SolarisArrayLibrary_UnsafeCall Parms{};
-
-	Parms.Array = std::move(Array);
-	Parms.Index_0 = Index_0;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisCoroutineLibrary.TaskCancel
-// (Final, Native, Static, Public)
-// Parameters:
-// class UObject*                          Task                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USolarisCoroutineLibrary::TaskCancel(class UObject* Task)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("TaskCancel");
-
-	Params::SolarisCoroutineLibrary_TaskCancel Parms{};
-
-	Parms.Task = Task;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisCoroutineLibrary.TaskFree
-// (Final, Native, Static, Public)
-// Parameters:
-// class UObject*                          Task                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USolarisCoroutineLibrary::TaskFree(class UObject* Task)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("TaskFree");
-
-	Params::SolarisCoroutineLibrary_TaskFree Parms{};
-
-	Parms.Task = Task;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisCoroutineLibrary.TaskGetReturnProperty
-// (Final, Native, Static, Public)
-// Parameters:
-// class UObject*                          Task                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USolarisCoroutineLibrary::TaskGetReturnProperty(class UObject* Task)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("TaskGetReturnProperty");
-
-	Params::SolarisCoroutineLibrary_TaskGetReturnProperty Parms{};
-
-	Parms.Task = Task;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisCoroutineLibrary.TaskGetState
-// (Final, Native, Static, Public)
-// Parameters:
-// class UObject*                          Task                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int64 USolarisCoroutineLibrary::TaskGetState(class UObject* Task)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("TaskGetState");
-
-	Params::SolarisCoroutineLibrary_TaskGetState Parms{};
-
-	Parms.Task = Task;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisCoroutineLibrary.TaskMake
+// Function Solaris.SolarisCoroutineLibrary.Abort
 // (Final, Native, Static, Public)
 // Parameters:
-// class UClass*                           Type                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UObject*                          Caller                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   CallerResumeState                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   CallerCancelState                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UObject*                          OwnerInstance                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Context                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAbortCallers                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UObject* USolarisCoroutineLibrary::TaskMake(class UClass* Type, class UObject* Caller, int64 CallerResumeState, int64 CallerCancelState, class UObject* OwnerInstance)
+void USolarisCoroutineLibrary::Abort(class UObject* Context, bool bAbortCallers)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("TaskMake");
+		Func = StaticClass()->GetFunction("SolarisCoroutineLibrary", "Abort");
 
-	Params::SolarisCoroutineLibrary_TaskMake Parms{};
+	Params::SolarisCoroutineLibrary_Abort Parms{};
+
+	Parms.Context = Context;
+	Parms.bAbortCallers = bAbortCallers;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Solaris.SolarisCoroutineLibrary.AllocateFinal
+// (Final, Native, Static, Public)
+// Parameters:
+// class UClass*                           Type                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Caller                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   CallerResumeState                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* USolarisCoroutineLibrary::AllocateFinal(class UClass* Type, class UObject* Caller, int32 CallerResumeState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisCoroutineLibrary", "AllocateFinal");
+
+	Params::SolarisCoroutineLibrary_AllocateFinal Parms{};
 
 	Parms.Type = Type;
 	Parms.Caller = Caller;
 	Parms.CallerResumeState = CallerResumeState;
-	Parms.CallerCancelState = CallerCancelState;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisCoroutineLibrary.AllocateVirtual
+// (Final, Native, Static, Public)
+// Parameters:
+// class FName                             ContextName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Caller                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   CallerResumeState                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          OwnerInstance                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* USolarisCoroutineLibrary::AllocateVirtual(class FName ContextName, class UObject* Caller, int32 CallerResumeState, class UObject* OwnerInstance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisCoroutineLibrary", "AllocateVirtual");
+
+	Params::SolarisCoroutineLibrary_AllocateVirtual Parms{};
+
+	Parms.ContextName = ContextName;
+	Parms.Caller = Caller;
+	Parms.CallerResumeState = CallerResumeState;
 	Parms.OwnerInstance = OwnerInstance;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMapLibrary.Add
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// TMap<struct FGenericKeyType, struct FGenericValueType>Map                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FGenericKeyType                  Key                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGenericValueType                Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-void USolarisMapLibrary::Add(const TMap<struct FGenericKeyType, struct FGenericValueType>& Map, const struct FGenericKeyType& Key, const struct FGenericValueType& Value)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Add");
-
-	Params::SolarisMapLibrary_Add Parms{};
-
-	Parms.Map = std::move(Map);
-	Parms.Key = std::move(Key);
-	Parms.Value = std::move(Value);
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisMapLibrary.Call
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// TMap<struct FGenericKeyType, struct FGenericValueType>Map                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FGenericKeyType                  Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USolarisMapLibrary::Call(const TMap<struct FGenericKeyType, struct FGenericValueType>& Map, const struct FGenericKeyType& Key)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Call");
-
-	Params::SolarisMapLibrary_Call Parms{};
-
-	Parms.Map = std::move(Map);
-	Parms.Key = std::move(Key);
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisMapLibrary.CompletelyAssignedRefCall
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// TMap<struct FGenericKeyType, struct FGenericValueType>Map                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FGenericKeyType                  Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USolarisMapLibrary::CompletelyAssignedRefCall(const TMap<struct FGenericKeyType, struct FGenericValueType>& Map, const struct FGenericKeyType& Key)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("CompletelyAssignedRefCall");
-
-	Params::SolarisMapLibrary_CompletelyAssignedRefCall Parms{};
-
-	Parms.Map = std::move(Map);
-	Parms.Key = std::move(Key);
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisMapLibrary.Concat
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// TMap<struct FGenericKeyType, struct FGenericValueType>LHS                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// TMap<struct FGenericKeyType, struct FGenericValueType>RHS                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// TMap<struct FGenericKeyType, struct FGenericValueType>ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-TMap<struct FGenericKeyType, struct FGenericValueType> USolarisMapLibrary::Concat(const TMap<struct FGenericKeyType, struct FGenericValueType>& LHS, const TMap<struct FGenericKeyType, struct FGenericValueType>& RHS)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Concat");
-
-	Params::SolarisMapLibrary_Concat Parms{};
-
-	Parms.LHS = std::move(LHS);
-	Parms.RHS = std::move(RHS);
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisMapLibrary.GetKeyByIndex
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// TMap<struct FGenericKeyType, struct FGenericValueType>Map                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// int64                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGenericKeyType                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FGenericKeyType USolarisMapLibrary::GetKeyByIndex(const TMap<struct FGenericKeyType, struct FGenericValueType>& Map, int64 Index_0)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("GetKeyByIndex");
-
-	Params::SolarisMapLibrary_GetKeyByIndex Parms{};
-
-	Parms.Map = std::move(Map);
-	Parms.Index_0 = Index_0;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisMapLibrary.GetNextValidIndex
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// TMap<struct FGenericKeyType, struct FGenericValueType>Map                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// int64                                   InitialIndex                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int64 USolarisMapLibrary::GetNextValidIndex(const TMap<struct FGenericKeyType, struct FGenericValueType>& Map, int64 InitialIndex)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("GetNextValidIndex");
-
-	Params::SolarisMapLibrary_GetNextValidIndex Parms{};
-
-	Parms.Map = std::move(Map);
-	Parms.InitialIndex = InitialIndex;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisMapLibrary.GetValueByIndex
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// TMap<struct FGenericKeyType, struct FGenericValueType>Map                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// int64                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGenericValueType                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FGenericValueType USolarisMapLibrary::GetValueByIndex(const TMap<struct FGenericKeyType, struct FGenericValueType>& Map, int64 Index_0)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("GetValueByIndex");
-
-	Params::SolarisMapLibrary_GetValueByIndex Parms{};
-
-	Parms.Map = std::move(Map);
-	Parms.Index_0 = Index_0;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisMapLibrary.InitMap
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// TMap<struct FGenericKeyType, struct FGenericValueType>Map                                                    (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void USolarisMapLibrary::InitMap(TMap<struct FGenericKeyType, struct FGenericValueType>* Map)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("InitMap");
-
-	Params::SolarisMapLibrary_InitMap Parms{};
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	if (Map != nullptr)
-		*Map = std::move(Parms.Map);
-}
-
-
-// Function Solaris.SolarisMapLibrary.Length
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// TMap<struct FGenericKeyType, struct FGenericValueType>Map                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int64 USolarisMapLibrary::Length(const TMap<struct FGenericKeyType, struct FGenericValueType>& Map)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Length");
-
-	Params::SolarisMapLibrary_Length Parms{};
-
-	Parms.Map = std::move(Map);
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisMapLibrary.Move
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// TMap<struct FGenericKeyType, struct FGenericValueType>Dest                                                   (Parm, OutParm, NativeAccessSpecifierPublic)
-// TMap<struct FGenericKeyType, struct FGenericValueType>Src                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void USolarisMapLibrary::Move(TMap<struct FGenericKeyType, struct FGenericValueType>* Dest, const TMap<struct FGenericKeyType, struct FGenericValueType>& Src)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Move");
-
-	Params::SolarisMapLibrary_Move Parms{};
-
-	Parms.Src = std::move(Src);
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	if (Dest != nullptr)
-		*Dest = std::move(Parms.Dest);
-}
-
-
-// Function Solaris.SolarisMapLibrary.RefCall
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// TMap<struct FGenericKeyType, struct FGenericValueType>Map                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FGenericKeyType                  Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USolarisMapLibrary::RefCall(const TMap<struct FGenericKeyType, struct FGenericValueType>& Map, const struct FGenericKeyType& Key)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("RefCall");
-
-	Params::SolarisMapLibrary_RefCall Parms{};
-
-	Parms.Map = std::move(Map);
-	Parms.Key = std::move(Key);
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisMathLibrary_Bool.Query
+// Function Solaris.SolarisCoroutineLibrary.Deallocate
 // (Final, Native, Static, Public)
+// Parameters:
+// class UObject*                          Context                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Bool::Query()
+void USolarisCoroutineLibrary::Deallocate(class UObject* Context)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Query");
+		Func = StaticClass()->GetFunction("SolarisCoroutineLibrary", "Deallocate");
 
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
+	Params::SolarisCoroutineLibrary_Deallocate Parms{};
+
+	Parms.Context = Context;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Solaris.SolarisCoroutineLibrary.GetState
+// (Final, Native, Static, Public)
+// Parameters:
+// class UObject*                          Context                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 USolarisCoroutineLibrary::GetState(class UObject* Context)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisCoroutineLibrary", "GetState");
+
+	Params::SolarisCoroutineLibrary_GetState Parms{};
+
+	Parms.Context = Context;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisMathLibrary_Bool.equal
+// (Final, Native, Static, Public)
+// Parameters:
+// bool                                    Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USolarisMathLibrary_Bool::equal(bool Lhs, bool Rhs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Bool", "equal");
+
+	Params::SolarisMathLibrary_Bool_equal Parms{};
+
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisMathLibrary_Bool.logical_xor
+// (Final, Native, Static, Public)
+// Parameters:
+// bool                                    Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USolarisMathLibrary_Bool::logical_xor(bool Lhs, bool Rhs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Bool", "logical_xor");
+
+	Params::SolarisMathLibrary_Bool_logical_xor Parms{};
+
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
 // Function Solaris.SolarisMathLibrary_Int.abs
 // (Final, Native, Static, Public)
 // Parameters:
-// int64                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Int::abs(int64 Value)
+int32 USolarisMathLibrary_Int::abs(int32 Value)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("abs");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "abs");
 
 	Params::SolarisMathLibrary_Int_abs Parms{};
 
 	Parms.Value = Value;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
 // Function Solaris.SolarisMathLibrary_Int.Add
 // (Final, Native, Static, Public)
 // Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Int::Add(int64 LHS, int64 RHS)
+int32 USolarisMathLibrary_Int::Add(int32 Lhs, int32 Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Add");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "Add");
 
 	Params::SolarisMathLibrary_Int_Add Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Int.AddEquals
+// Function Solaris.SolarisMathLibrary_Int.add_equals
 // (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// int64                                   LHS                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  Lhs                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Int::AddEquals(int64* LHS, int64 RHS)
+int32 USolarisMathLibrary_Int::add_equals(int32* Lhs, int32 Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("AddEquals");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "add_equals");
 
-	Params::SolarisMathLibrary_Int_AddEquals Parms{};
+	Params::SolarisMathLibrary_Int_add_equals Parms{};
 
-	Parms.RHS = RHS;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	if (LHS != nullptr)
-		*LHS = Parms.LHS;
-}
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
+	Func->FunctionFlags = Flgs;
 
-// Function Solaris.SolarisMathLibrary_Int.CheckConstrainedInt
-// (Final, Native, Static, Public)
-// Parameters:
-// int64                                   min_0                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   max_0                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	if (Lhs != nullptr)
+		*Lhs = Parms.Lhs;
 
-void USolarisMathLibrary_Int::CheckConstrainedInt(int64 min_0, int64 max_0, int64 Value)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("CheckConstrainedInt");
-
-	Params::SolarisMathLibrary_Int_CheckConstrainedInt Parms{};
-
-	Parms.min_0 = min_0;
-	Parms.max_0 = max_0;
-	Parms.Value = Value;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	return Parms.ReturnValue;
 }
 
 
 // Function Solaris.SolarisMathLibrary_Int.Divide
 // (Final, Native, Static, Public)
 // Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Int::Divide(int64 LHS, int64 RHS)
+int32 USolarisMathLibrary_Int::Divide(int32 Lhs, int32 Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Divide");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "Divide");
 
 	Params::SolarisMathLibrary_Int_Divide Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Int.Greater
-// (Final, Native, Static, Public)
+// Function Solaris.SolarisMathLibrary_Int.divide_equals
+// (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  Lhs                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Int::Greater(int64 LHS, int64 RHS)
+int32 USolarisMathLibrary_Int::divide_equals(int32* Lhs, int32 Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Greater");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "divide_equals");
 
-	Params::SolarisMathLibrary_Int_Greater Parms{};
+	Params::SolarisMathLibrary_Int_divide_equals Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Lhs != nullptr)
+		*Lhs = Parms.Lhs;
+
+	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Int.GreaterEqual
+// Function Solaris.SolarisMathLibrary_Int.equal
 // (Final, Native, Static, Public)
 // Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Int::GreaterEqual(int64 LHS, int64 RHS)
+bool USolarisMathLibrary_Int::equal(int32 Lhs, int32 Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("GreaterEqual");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "equal");
 
-	Params::SolarisMathLibrary_Int_GreaterEqual Parms{};
+	Params::SolarisMathLibrary_Int_equal Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Int.Less
+// Function Solaris.SolarisMathLibrary_Int.greater
 // (Final, Native, Static, Public)
 // Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Int::Less(int64 LHS, int64 RHS)
+bool USolarisMathLibrary_Int::greater(int32 Lhs, int32 Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Less");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "greater");
 
-	Params::SolarisMathLibrary_Int_Less Parms{};
+	Params::SolarisMathLibrary_Int_greater Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Int.LessEqual
+// Function Solaris.SolarisMathLibrary_Int.greater_equal
 // (Final, Native, Static, Public)
 // Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Int::LessEqual(int64 LHS, int64 RHS)
+bool USolarisMathLibrary_Int::greater_equal(int32 Lhs, int32 Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("LessEqual");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "greater_equal");
 
-	Params::SolarisMathLibrary_Int_LessEqual Parms{};
+	Params::SolarisMathLibrary_Int_greater_equal Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisMathLibrary_Int.less
+// (Final, Native, Static, Public)
+// Parameters:
+// int32                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USolarisMathLibrary_Int::less(int32 Lhs, int32 Rhs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "less");
+
+	Params::SolarisMathLibrary_Int_less Parms{};
+
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisMathLibrary_Int.less_equal
+// (Final, Native, Static, Public)
+// Parameters:
+// int32                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USolarisMathLibrary_Int::less_equal(int32 Lhs, int32 Rhs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "less_equal");
+
+	Params::SolarisMathLibrary_Int_less_equal Parms{};
+
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisMathLibrary_Int.max
+// (Final, Native, Static, Public)
+// Parameters:
+// int32                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 USolarisMathLibrary_Int::max_0(int32 Lhs, int32 Rhs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "max");
+
+	Params::SolarisMathLibrary_Int_max_0 Parms{};
+
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisMathLibrary_Int.min
+// (Final, Native, Static, Public)
+// Parameters:
+// int32                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 USolarisMathLibrary_Int::min_0(int32 Lhs, int32 Rhs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "min");
+
+	Params::SolarisMathLibrary_Int_min_0 Parms{};
+
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
 // Function Solaris.SolarisMathLibrary_Int.Multiply
 // (Final, Native, Static, Public)
 // Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Int::Multiply(int64 LHS, int64 RHS)
+int32 USolarisMathLibrary_Int::Multiply(int32 Lhs, int32 Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Multiply");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "Multiply");
 
 	Params::SolarisMathLibrary_Int_Multiply Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Int.MultiplyEquals
+// Function Solaris.SolarisMathLibrary_Int.multiply_equals
 // (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// int64                                   LHS                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  Lhs                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Int::MultiplyEquals(int64* LHS, int64 RHS)
+int32 USolarisMathLibrary_Int::multiply_equals(int32* Lhs, int32 Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MultiplyEquals");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "multiply_equals");
 
-	Params::SolarisMathLibrary_Int_MultiplyEquals Parms{};
+	Params::SolarisMathLibrary_Int_multiply_equals Parms{};
 
-	Parms.RHS = RHS;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	if (LHS != nullptr)
-		*LHS = Parms.LHS;
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Lhs != nullptr)
+		*Lhs = Parms.Lhs;
+
+	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Int.Negate
+// Function Solaris.SolarisMathLibrary_Int.negate
 // (Final, Native, Static, Public)
 // Parameters:
-// int64                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Int::Negate(int64 Value)
+int32 USolarisMathLibrary_Int::negate(int32 Value)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Negate");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "negate");
 
-	Params::SolarisMathLibrary_Int_Negate Parms{};
+	Params::SolarisMathLibrary_Int_negate Parms{};
 
 	Parms.Value = Value;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-// Function Solaris.SolarisMathLibrary_Int.PredicateEqual
-// (Final, Native, Static, Public)
-// Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USolarisMathLibrary_Int::PredicateEqual(int64 LHS, int64 RHS)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("PredicateEqual");
-
-	Params::SolarisMathLibrary_Int_PredicateEqual Parms{};
-
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Int.PredicateGreater
+// Function Solaris.SolarisMathLibrary_Int.not_equal
 // (Final, Native, Static, Public)
 // Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool USolarisMathLibrary_Int::PredicateGreater(int64 LHS, int64 RHS)
+bool USolarisMathLibrary_Int::not_equal(int32 Lhs, int32 Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("PredicateGreater");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "not_equal");
 
-	Params::SolarisMathLibrary_Int_PredicateGreater Parms{};
+	Params::SolarisMathLibrary_Int_not_equal Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	return Parms.ReturnValue;
-}
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-
-// Function Solaris.SolarisMathLibrary_Int.PredicateGreaterEqual
-// (Final, Native, Static, Public)
-// Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USolarisMathLibrary_Int::PredicateGreaterEqual(int64 LHS, int64 RHS)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("PredicateGreaterEqual");
-
-	Params::SolarisMathLibrary_Int_PredicateGreaterEqual Parms{};
-
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisMathLibrary_Int.PredicateLess
-// (Final, Native, Static, Public)
-// Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USolarisMathLibrary_Int::PredicateLess(int64 LHS, int64 RHS)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("PredicateLess");
-
-	Params::SolarisMathLibrary_Int_PredicateLess Parms{};
-
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisMathLibrary_Int.PredicateLessEqual
-// (Final, Native, Static, Public)
-// Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USolarisMathLibrary_Int::PredicateLessEqual(int64 LHS, int64 RHS)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("PredicateLessEqual");
-
-	Params::SolarisMathLibrary_Int_PredicateLessEqual Parms{};
-
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisMathLibrary_Int.PredicateNotEqual
-// (Final, Native, Static, Public)
-// Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USolarisMathLibrary_Int::PredicateNotEqual(int64 LHS, int64 RHS)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("PredicateNotEqual");
-
-	Params::SolarisMathLibrary_Int_PredicateNotEqual Parms{};
-
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
@@ -1074,136 +968,88 @@ bool USolarisMathLibrary_Int::PredicateNotEqual(int64 LHS, int64 RHS)
 // Function Solaris.SolarisMathLibrary_Int.Subtract
 // (Final, Native, Static, Public)
 // Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Int::Subtract(int64 LHS, int64 RHS)
+int32 USolarisMathLibrary_Int::Subtract(int32 Lhs, int32 Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Subtract");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "Subtract");
 
 	Params::SolarisMathLibrary_Int_Subtract Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-// Function Solaris.SolarisMathLibrary_Int.SubtractEquals
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// int64                                   LHS                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USolarisMathLibrary_Int::SubtractEquals(int64* LHS, int64 RHS)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("SubtractEquals");
-
-	Params::SolarisMathLibrary_Int_SubtractEquals Parms{};
-
-	Parms.RHS = RHS;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	if (LHS != nullptr)
-		*LHS = Parms.LHS;
-}
-
-
-// Function Solaris.SolarisMathLibrary_Int.UncheckedConvertI32I64
-// (Final, Native, Static, Public)
-// Parameters:
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 USolarisMathLibrary_Int::UncheckedConvertI32I64(int64 RHS)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("UncheckedConvertI32I64");
-
-	Params::SolarisMathLibrary_Int_UncheckedConvertI32I64 Parms{};
-
-	Parms.RHS = RHS;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Rational.ceil
-// (Final, Native, Static, Public)
+// Function Solaris.SolarisMathLibrary_Int.subtract_equals
+// (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// struct FVerseRational                   Val                                                    (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// int32*                                  Lhs                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Rational::ceil(const struct FVerseRational& Val)
+int32 USolarisMathLibrary_Int::subtract_equals(int32* Lhs, int32 Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("ceil");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Int", "subtract_equals");
 
-	Params::SolarisMathLibrary_Rational_ceil Parms{};
+	Params::SolarisMathLibrary_Int_subtract_equals Parms{};
 
-	Parms.Val = std::move(Val);
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-// Function Solaris.SolarisMathLibrary_Rational.floor
-// (Final, Native, Static, Public)
-// Parameters:
-// struct FVerseRational                   Val                                                    (Parm, NoDestructor, NativeAccessSpecifierPublic)
+	Func->FunctionFlags = Flgs;
 
-void USolarisMathLibrary_Rational::floor(const struct FVerseRational& Val)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
+	if (Lhs != nullptr)
+		*Lhs = Parms.Lhs;
 
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("floor");
-
-	Params::SolarisMathLibrary_Rational_floor Parms{};
-
-	Parms.Val = std::move(Val);
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	return Parms.ReturnValue;
 }
 
 
 // Function Solaris.SolarisMathLibrary_Float.abs
 // (Final, Native, Static, Public)
 // Parameters:
-// double                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-double USolarisMathLibrary_Float::abs(double Value)
+float USolarisMathLibrary_Float::abs(float Value)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("abs");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "abs");
 
 	Params::SolarisMathLibrary_Float_abs Parms{};
 
 	Parms.Value = Value;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
@@ -1212,353 +1058,484 @@ double USolarisMathLibrary_Float::abs(double Value)
 // Function Solaris.SolarisMathLibrary_Float.Add
 // (Final, Native, Static, Public)
 // Parameters:
-// double                                  LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-double USolarisMathLibrary_Float::Add(double LHS, double RHS)
+float USolarisMathLibrary_Float::Add(float Lhs, float Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Add");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "Add");
 
 	Params::SolarisMathLibrary_Float_Add Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Float.AddEquals
+// Function Solaris.SolarisMathLibrary_Float.add_equals
 // (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// double                                  LHS                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  Lhs                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-double USolarisMathLibrary_Float::AddEquals(double* LHS, double RHS)
+float USolarisMathLibrary_Float::add_equals(float* Lhs, float Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("AddEquals");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "add_equals");
 
-	Params::SolarisMathLibrary_Float_AddEquals Parms{};
+	Params::SolarisMathLibrary_Float_add_equals Parms{};
 
-	Parms.RHS = RHS;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	if (LHS != nullptr)
-		*LHS = Parms.LHS;
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Lhs != nullptr)
+		*Lhs = Parms.Lhs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Float.CheckConstrainedFloat
-// (Final, Native, Static, Public)
+// Function Solaris.SolarisMathLibrary_Float.assign
+// (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// double                                  min_0                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  max_0                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  Lhs                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Float::CheckConstrainedFloat(double min_0, double max_0, double Value)
+float USolarisMathLibrary_Float::assign(float* Lhs, float Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("CheckConstrainedFloat");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "assign");
 
-	Params::SolarisMathLibrary_Float_CheckConstrainedFloat Parms{};
+	Params::SolarisMathLibrary_Float_assign Parms{};
 
-	Parms.min_0 = min_0;
-	Parms.max_0 = max_0;
-	Parms.Value = Value;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Lhs != nullptr)
+		*Lhs = Parms.Lhs;
+
+	return Parms.ReturnValue;
 }
 
 
 // Function Solaris.SolarisMathLibrary_Float.Divide
 // (Final, Native, Static, Public)
 // Parameters:
-// double                                  LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-double USolarisMathLibrary_Float::Divide(double LHS, double RHS)
+float USolarisMathLibrary_Float::Divide(float Lhs, float Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Divide");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "Divide");
 
 	Params::SolarisMathLibrary_Float_Divide Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Float.DivideEquals
+// Function Solaris.SolarisMathLibrary_Float.divide_equals
 // (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// double                                  LHS                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  Lhs                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-double USolarisMathLibrary_Float::DivideEquals(double* LHS, double RHS)
+float USolarisMathLibrary_Float::divide_equals(float* Lhs, float Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("DivideEquals");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "divide_equals");
 
-	Params::SolarisMathLibrary_Float_DivideEquals Parms{};
+	Params::SolarisMathLibrary_Float_divide_equals Parms{};
 
-	Parms.RHS = RHS;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	if (LHS != nullptr)
-		*LHS = Parms.LHS;
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Lhs != nullptr)
+		*Lhs = Parms.Lhs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Float.Greater
+// Function Solaris.SolarisMathLibrary_Float.equal
 // (Final, Native, Static, Public)
 // Parameters:
-// double                                  LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Float::Greater(double LHS, double RHS)
+bool USolarisMathLibrary_Float::equal(float Lhs, float Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Greater");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "equal");
 
-	Params::SolarisMathLibrary_Float_Greater Parms{};
+	Params::SolarisMathLibrary_Float_equal Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Float.GreaterEqual
+// Function Solaris.SolarisMathLibrary_Float.greater
 // (Final, Native, Static, Public)
 // Parameters:
-// double                                  LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Float::GreaterEqual(double LHS, double RHS)
+bool USolarisMathLibrary_Float::greater(float Lhs, float Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("GreaterEqual");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "greater");
 
-	Params::SolarisMathLibrary_Float_GreaterEqual Parms{};
+	Params::SolarisMathLibrary_Float_greater Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Float.Less
+// Function Solaris.SolarisMathLibrary_Float.greater_equal
 // (Final, Native, Static, Public)
 // Parameters:
-// double                                  LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Float::Less(double LHS, double RHS)
+bool USolarisMathLibrary_Float::greater_equal(float Lhs, float Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Less");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "greater_equal");
 
-	Params::SolarisMathLibrary_Float_Less Parms{};
+	Params::SolarisMathLibrary_Float_greater_equal Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Float.LessEqual
+// Function Solaris.SolarisMathLibrary_Float.less
 // (Final, Native, Static, Public)
 // Parameters:
-// double                                  LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_Float::LessEqual(double LHS, double RHS)
+bool USolarisMathLibrary_Float::less(float Lhs, float Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("LessEqual");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "less");
 
-	Params::SolarisMathLibrary_Float_LessEqual Parms{};
+	Params::SolarisMathLibrary_Float_less Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisMathLibrary_Float.less_equal
+// (Final, Native, Static, Public)
+// Parameters:
+// float                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USolarisMathLibrary_Float::less_equal(float Lhs, float Rhs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "less_equal");
+
+	Params::SolarisMathLibrary_Float_less_equal Parms{};
+
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisMathLibrary_Float.max
+// (Final, Native, Static, Public)
+// Parameters:
+// float                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float USolarisMathLibrary_Float::max_0(float Lhs, float Rhs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "max");
+
+	Params::SolarisMathLibrary_Float_max_0 Parms{};
+
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisMathLibrary_Float.min
+// (Final, Native, Static, Public)
+// Parameters:
+// float                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float USolarisMathLibrary_Float::min_0(float Lhs, float Rhs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "min");
+
+	Params::SolarisMathLibrary_Float_min_0 Parms{};
+
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
 // Function Solaris.SolarisMathLibrary_Float.Multiply
 // (Final, Native, Static, Public)
 // Parameters:
-// double                                  LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-double USolarisMathLibrary_Float::Multiply(double LHS, double RHS)
+float USolarisMathLibrary_Float::Multiply(float Lhs, float Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Multiply");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "Multiply");
 
 	Params::SolarisMathLibrary_Float_Multiply Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Float.MultiplyEquals
+// Function Solaris.SolarisMathLibrary_Float.multiply_equals
 // (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// double                                  LHS                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  Lhs                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-double USolarisMathLibrary_Float::MultiplyEquals(double* LHS, double RHS)
+float USolarisMathLibrary_Float::multiply_equals(float* Lhs, float Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MultiplyEquals");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "multiply_equals");
 
-	Params::SolarisMathLibrary_Float_MultiplyEquals Parms{};
+	Params::SolarisMathLibrary_Float_multiply_equals Parms{};
 
-	Parms.RHS = RHS;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	if (LHS != nullptr)
-		*LHS = Parms.LHS;
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Lhs != nullptr)
+		*Lhs = Parms.Lhs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_Float.MultiplyFloatInt
+// Function Solaris.SolarisMathLibrary_Float.negate
 // (Final, Native, Static, Public)
 // Parameters:
-// double                                  LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-double USolarisMathLibrary_Float::MultiplyFloatInt(double LHS, int64 RHS)
+float USolarisMathLibrary_Float::negate(float Value)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MultiplyFloatInt");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "negate");
 
-	Params::SolarisMathLibrary_Float_MultiplyFloatInt Parms{};
-
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisMathLibrary_Float.MultiplyIntFloat
-// (Final, Native, Static, Public)
-// Parameters:
-// int64                                   LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-double USolarisMathLibrary_Float::MultiplyIntFloat(int64 LHS, double RHS)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MultiplyIntFloat");
-
-	Params::SolarisMathLibrary_Float_MultiplyIntFloat Parms{};
-
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisMathLibrary_Float.Negate
-// (Final, Native, Static, Public)
-// Parameters:
-// double                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-double USolarisMathLibrary_Float::Negate(double Value)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Negate");
-
-	Params::SolarisMathLibrary_Float_Negate Parms{};
+	Params::SolarisMathLibrary_Float_negate Parms{};
 
 	Parms.Value = Value;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisMathLibrary_Float.not_equal
+// (Final, Native, Static, Public)
+// Parameters:
+// float                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USolarisMathLibrary_Float::not_equal(float Lhs, float Rhs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "not_equal");
+
+	Params::SolarisMathLibrary_Float_not_equal Parms{};
+
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
@@ -1567,1073 +1544,433 @@ double USolarisMathLibrary_Float::Negate(double Value)
 // Function Solaris.SolarisMathLibrary_Float.Subtract
 // (Final, Native, Static, Public)
 // Parameters:
-// double                                  LHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-double USolarisMathLibrary_Float::Subtract(double LHS, double RHS)
+float USolarisMathLibrary_Float::Subtract(float Lhs, float Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Subtract");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "Subtract");
 
 	Params::SolarisMathLibrary_Float_Subtract Parms{};
 
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	return Parms.ReturnValue;
-}
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-
-// Function Solaris.SolarisMathLibrary_Float.SubtractEquals
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// double                                  LHS                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  RHS                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-double USolarisMathLibrary_Float::SubtractEquals(double* LHS, double RHS)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("SubtractEquals");
-
-	Params::SolarisMathLibrary_Float_SubtractEquals Parms{};
-
-	Parms.RHS = RHS;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	if (LHS != nullptr)
-		*LHS = Parms.LHS;
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_String.Add
+// Function Solaris.SolarisMathLibrary_Float.subtract_equals
 // (Final, Native, Static, Public, HasOutParams)
 // Parameters:
-// int32                                   String                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int8                                    Character                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  Lhs                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisMathLibrary_String::Add(const int32& String, int8 Character)
+float USolarisMathLibrary_Float::subtract_equals(float* Lhs, float Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Add");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Float", "subtract_equals");
 
-	Params::SolarisMathLibrary_String_Add Parms{};
+	Params::SolarisMathLibrary_Float_subtract_equals Parms{};
 
-	Parms.String = String;
-	Parms.Character = Character;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-// Function Solaris.SolarisMathLibrary_String.Call
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// int32                                   String                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	Func->FunctionFlags = Flgs;
 
-void USolarisMathLibrary_String::Call(const int32& String, int64 Index_0)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Call");
-
-	Params::SolarisMathLibrary_String_Call Parms{};
-
-	Parms.String = String;
-	Parms.Index_0 = Index_0;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisMathLibrary_String.Concat
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// int32                                   LHS                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   RHS                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 USolarisMathLibrary_String::Concat(const int32& LHS, const int32& RHS)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Concat");
-
-	Params::SolarisMathLibrary_String_Concat Parms{};
-
-	Parms.LHS = LHS;
-	Parms.RHS = RHS;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	if (Lhs != nullptr)
+		*Lhs = Parms.Lhs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisMathLibrary_String.ConcatEquals
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// int32                                   LHS                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   RHS                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 USolarisMathLibrary_String::ConcatEquals(int32* LHS, const int32& RHS)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("ConcatEquals");
-
-	Params::SolarisMathLibrary_String_ConcatEquals Parms{};
-
-	Parms.RHS = RHS;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	if (LHS != nullptr)
-		*LHS = Parms.LHS;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisMathLibrary_String.Length
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// int32                                   Array                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int64 USolarisMathLibrary_String::Length(const int32& Array)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Length");
-
-	Params::SolarisMathLibrary_String_Length Parms{};
-
-	Parms.Array = Array;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisMathLibrary_String.Make
-// (Final, Native, Static, Public)
-
-void USolarisMathLibrary_String::Make()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Make");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.SolarisMathLibrary_String.MakeLiteral
+// Function Solaris.SolarisMathLibrary_Object.equal
 // (Final, Native, Static, Public)
 // Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 USolarisMathLibrary_String::MakeLiteral()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeLiteral");
-
-	Params::SolarisMathLibrary_String_MakeLiteral Parms{};
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisMathLibrary_String.Move
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// int32                                   Destination                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Source                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USolarisMathLibrary_String::Move(const int32& Destination, const int32& Source)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Move");
-
-	Params::SolarisMathLibrary_String_Move Parms{};
-
-	Parms.Destination = Destination;
-	Parms.Source = Source;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisMathLibrary_String.RefCall
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// int32                                   String                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USolarisMathLibrary_String::RefCall(const int32& String, int64 Index_0)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("RefCall");
-
-	Params::SolarisMathLibrary_String_RefCall Parms{};
-
-	Parms.String = String;
-	Parms.Index_0 = Index_0;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisMathLibrary_String.UncheckedCall
-// (Final, Native, Static, Public, HasOutParams)
-// Parameters:
-// int32                                   String                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USolarisMathLibrary_String::UncheckedCall(const int32& String, int64 Index_0)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("UncheckedCall");
-
-	Params::SolarisMathLibrary_String_UncheckedCall Parms{};
-
-	Parms.String = String;
-	Parms.Index_0 = Index_0;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisMathLibrary_Option.Make
-// (Final, Native, Static, Public)
-
-void USolarisMathLibrary_Option::Make()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Make");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.SolarisMathLibrary_Option.Query
-// (Final, Native, Static, Public)
-
-void USolarisMathLibrary_Option::Query()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Query");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.SolarisUtilLibrary.AddPropertyToSubobjectExclusionList
-// (Final, Native, Static, Public)
-// Parameters:
-// int64                                   InstancingGraph                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Property                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USolarisUtilLibrary::AddPropertyToSubobjectExclusionList(int64 InstancingGraph, int64 Property)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("AddPropertyToSubobjectExclusionList");
-
-	Params::SolarisUtilLibrary_AddPropertyToSubobjectExclusionList Parms{};
-
-	Parms.InstancingGraph = InstancingGraph;
-	Parms.Property = Property;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisUtilLibrary.CallFinalFunctionWithContext
-// (Final, Native, Static, Public)
-
-void USolarisUtilLibrary::CallFinalFunctionWithContext()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("CallFinalFunctionWithContext");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.SolarisUtilLibrary.CallFunction
-// (Final, Native, Static, Public)
-
-void USolarisUtilLibrary::CallFunction()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("CallFunction");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.SolarisUtilLibrary.Dereference
-// (Final, Native, Static, Public)
-// Parameters:
-// int64                                   Reference                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int64 USolarisUtilLibrary::Dereference(int64 Reference)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Dereference");
-
-	Params::SolarisUtilLibrary_Dereference Parms{};
-
-	Parms.Reference = Reference;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisUtilLibrary.GetCurrentlyInstantiatedObject
-// (Final, Native, Static, Public)
-// Parameters:
-// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UObject* USolarisUtilLibrary::GetCurrentlyInstantiatedObject()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("GetCurrentlyInstantiatedObject");
-
-	Params::SolarisUtilLibrary_GetCurrentlyInstantiatedObject Parms{};
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisUtilLibrary.GetFunctionForInterfaceMethod
-// (Final, Native, Static, Public)
-// Parameters:
-// class UObject*                          Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             MethodName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USolarisUtilLibrary::GetFunctionForInterfaceMethod(class UObject* Object, class FName MethodName)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("GetFunctionForInterfaceMethod");
-
-	Params::SolarisUtilLibrary_GetFunctionForInterfaceMethod Parms{};
-
-	Parms.Object = Object;
-	Parms.MethodName = MethodName;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.SolarisUtilLibrary.GetOptionValue
-// (Final, Native, Static, Public)
-// Parameters:
-// int64                                   Option                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int64 USolarisUtilLibrary::GetOptionValue(int64 Option)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("GetOptionValue");
-
-	Params::SolarisUtilLibrary_GetOptionValue Parms{};
-
-	Parms.Option = Option;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisUtilLibrary.HasInterface
-// (Final, Native, Static, Public)
-// Parameters:
-// class UObject*                          Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UClass*                           InterfaceClass                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool USolarisUtilLibrary::HasInterface(class UObject* Object, class UClass* InterfaceClass)
+bool USolarisMathLibrary_Object::equal(class UObject* Lhs, class UObject* Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("HasInterface");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Object", "equal");
 
-	Params::SolarisUtilLibrary_HasInterface Parms{};
+	Params::SolarisMathLibrary_Object_equal Parms{};
 
-	Parms.Object = Object;
-	Parms.InterfaceClass = InterfaceClass;
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisUtilLibrary.InstanceFunction
+// Function Solaris.SolarisMathLibrary_Object.not_equal
 // (Final, Native, Static, Public)
 // Parameters:
-// class UObject*                          Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             MethodName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisUtilLibrary::InstanceFunction(class UObject* Object, class FName MethodName)
+bool USolarisMathLibrary_Object::not_equal(class UObject* Lhs, class UObject* Rhs)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("InstanceFunction");
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Object", "not_equal");
 
-	Params::SolarisUtilLibrary_InstanceFunction Parms{};
+	Params::SolarisMathLibrary_Object_not_equal Parms{};
+
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisMathLibrary_Enum.equal
+// (Final, Native, Static, Public)
+// Parameters:
+// uint8                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USolarisMathLibrary_Enum::equal(uint8 Lhs, uint8 Rhs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Enum", "equal");
+
+	Params::SolarisMathLibrary_Enum_equal Parms{};
+
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisMathLibrary_Enum.not_equal
+// (Final, Native, Static, Public)
+// Parameters:
+// uint8                                   Lhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   Rhs                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USolarisMathLibrary_Enum::not_equal(uint8 Lhs, uint8 Rhs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisMathLibrary_Enum", "not_equal");
+
+	Params::SolarisMathLibrary_Enum_not_equal Parms{};
+
+	Parms.Lhs = Lhs;
+	Parms.Rhs = Rhs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisUtilLibrary.CallDelegate
+// (Final, Native, Static, Public)
+
+void USolarisUtilLibrary::CallDelegate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisUtilLibrary", "CallDelegate");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Solaris.SolarisUtilLibrary.GetClass
+// (Final, Native, Static, Public)
+// Parameters:
+// class UObject*                          Object                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UClass* USolarisUtilLibrary::GetClass(class UObject* Object)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisUtilLibrary", "GetClass");
+
+	Params::SolarisUtilLibrary_GetClass Parms{};
 
 	Parms.Object = Object;
-	Parms.MethodName = MethodName;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisUtilLibrary.GetOptionalValue
+// (Final, Native, Static, Public)
+// Parameters:
+// class UObject*                          Property                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Optional                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 USolarisUtilLibrary::GetOptionalValue(class UObject* Property, int32 Optional)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisUtilLibrary", "GetOptionalValue");
+
+	Params::SolarisUtilLibrary_GetOptionalValue Parms{};
+
+	Parms.Property = Property;
+	Parms.Optional = Optional;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Solaris.SolarisUtilLibrary.HasTrait
+// (Final, Native, Static, Public)
+// Parameters:
+// class UObject*                          Object                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           TraitClass                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USolarisUtilLibrary::HasTrait(class UObject* Object, class UClass* TraitClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SolarisUtilLibrary", "HasTrait");
+
+	Params::SolarisUtilLibrary_HasTrait Parms{};
+
+	Parms.Object = Object;
+	Parms.TraitClass = TraitClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
 // Function Solaris.SolarisUtilLibrary.InstantiateObject
 // (Final, Native, Static, Public)
 // Parameters:
-// class UClass*                           Class_0                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   InstancingGraph                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           Type                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USolarisUtilLibrary::InstantiateObject(class UClass* Class_0, int64 InstancingGraph)
+class UObject* USolarisUtilLibrary::InstantiateObject(class UClass* Type)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("InstantiateObject");
+		Func = StaticClass()->GetFunction("SolarisUtilLibrary", "InstantiateObject");
 
 	Params::SolarisUtilLibrary_InstantiateObject Parms{};
 
-	Parms.Class_0 = Class_0;
-	Parms.InstancingGraph = InstancingGraph;
+	Parms.Type = Type;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
 // Function Solaris.SolarisUtilLibrary.IsNonNullObject
 // (Final, Native, Static, Public)
 // Parameters:
-// class UObject*                          Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Object                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool USolarisUtilLibrary::IsNonNullObject(class UObject* Object)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("IsNonNullObject");
+		Func = StaticClass()->GetFunction("SolarisUtilLibrary", "IsNonNullObject");
 
 	Params::SolarisUtilLibrary_IsNonNullObject Parms{};
 
 	Parms.Object = Object;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisUtilLibrary.IsOptionSet
+// Function Solaris.SolarisUtilLibrary.IsOptionalSet
 // (Final, Native, Static, Public)
 // Parameters:
-// int64                                   Option                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Property                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Optional                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool USolarisUtilLibrary::IsOptionSet(int64 Option)
+bool USolarisUtilLibrary::IsOptionalSet(class UObject* Property, int32 Optional)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("IsOptionSet");
+		Func = StaticClass()->GetFunction("SolarisUtilLibrary", "IsOptionalSet");
 
-	Params::SolarisUtilLibrary_IsOptionSet Parms{};
+	Params::SolarisUtilLibrary_IsOptionalSet Parms{};
 
-	Parms.Option = Option;
+	Parms.Property = Property;
+	Parms.Optional = Optional;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisUtilLibrary.MakeOptionFromValue
+// Function Solaris.SolarisUtilLibrary.MakeOptionalFromValue
 // (Final, Native, Static, Public)
 // Parameters:
-// class UObject*                          Property                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Property                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool USolarisUtilLibrary::MakeOptionFromValue(class UObject* Property, int64 Value)
+bool USolarisUtilLibrary::MakeOptionalFromValue(class UObject* Property, int32 Value)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeOptionFromValue");
+		Func = StaticClass()->GetFunction("SolarisUtilLibrary", "MakeOptionalFromValue");
 
-	Params::SolarisUtilLibrary_MakeOptionFromValue Parms{};
+	Params::SolarisUtilLibrary_MakeOptionalFromValue Parms{};
 
 	Parms.Property = Property;
 	Parms.Value = Value;
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function Solaris.SolarisUtilLibrary.MakeUnsetOption
+// Function Solaris.SolarisUtilLibrary.MakeUnsetOptional
 // (Final, Native, Static, Public)
 // Parameters:
-// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Property                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int64 USolarisUtilLibrary::MakeUnsetOption()
+int32 USolarisUtilLibrary::MakeUnsetOptional(class UObject* Property)
 {
 	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
 
 	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeUnsetOption");
+		Func = StaticClass()->GetFunction("SolarisUtilLibrary", "MakeUnsetOptional");
 
-	Params::SolarisUtilLibrary_MakeUnsetOption Parms{};
+	Params::SolarisUtilLibrary_MakeUnsetOptional Parms{};
 
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
+	Parms.Property = Property;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisUtilLibrary.ObjectHasNoFlags
-// (Final, Native, Static, Public)
-// Parameters:
-// class UObject*                          Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USolarisUtilLibrary::ObjectHasNoFlags(class UObject* Object, int32 Flags_0)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("ObjectHasNoFlags");
-
-	Params::SolarisUtilLibrary_ObjectHasNoFlags Parms{};
-
-	Parms.Object = Object;
-	Parms.Flags_0 = Flags_0;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisUtilLibrary.ReferenceIsValid
-// (Final, Native, Static, Public)
-// Parameters:
-// int64                                   Reference                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USolarisUtilLibrary::ReferenceIsValid(int64 Reference)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("ReferenceIsValid");
-
-	Params::SolarisUtilLibrary_ReferenceIsValid Parms{};
-
-	Parms.Reference = Reference;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.SolarisUtilLibrary.ReplaceOptionValue
-// (Final, Native, Static, Public)
-// Parameters:
-// int64                                   ResultProperty                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Option                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int64 USolarisUtilLibrary::ReplaceOptionValue(int64 ResultProperty, int64 Option, int64 Value)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("ReplaceOptionValue");
-
-	Params::SolarisUtilLibrary_ReplaceOptionValue Parms{};
-
-	Parms.ResultProperty = ResultProperty;
-	Parms.Option = Option;
-	Parms.Value = Value;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.ConvertFromDynamicallyTypedValue
-// (Final, Native, Static, Public)
-// Parameters:
-// int32                                   RuntimeType                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVerseDynamicallyTypedValueLibrary::ConvertFromDynamicallyTypedValue(int32 RuntimeType, int32 Value)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("ConvertFromDynamicallyTypedValue");
-
-	Params::VerseDynamicallyTypedValueLibrary_ConvertFromDynamicallyTypedValue Parms{};
-
-	Parms.RuntimeType = RuntimeType;
-	Parms.Value = Value;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.ConvertToDynamicallyTypedValue
-// (Final, Native, Static, Public)
-// Parameters:
-// int32                                   RuntimeType                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVerseDynamicallyTypedValueLibrary::ConvertToDynamicallyTypedValue(int32 RuntimeType, int32 Value)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("ConvertToDynamicallyTypedValue");
-
-	Params::VerseDynamicallyTypedValueLibrary_ConvertToDynamicallyTypedValue Parms{};
-
-	Parms.RuntimeType = RuntimeType;
-	Parms.Value = Value;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.Equal
-// (Final, Native, Static, Public)
-// Parameters:
-// int32                                   Left                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Right                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVerseDynamicallyTypedValueLibrary::Equal(int32 Left, int32 Right)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("Equal");
-
-	Params::VerseDynamicallyTypedValueLibrary_Equal Parms{};
-
-	Parms.Left = Left;
-	Parms.Right = Right;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeArray
-// (Final, Native, Static, Public)
-// Parameters:
-// int32                                   ElementType                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeArray(int32 ElementType)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeArray");
-
-	Params::VerseDynamicallyTypedValueLibrary_MakeRuntimeTypeArray Parms{};
-
-	Parms.ElementType = ElementType;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeChar32
-// (Final, Native, Static, Public)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeChar32()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeChar32");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeChar8
-// (Final, Native, Static, Public)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeChar8()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeChar8");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeClass
-// (Final, Native, Static, Public)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeClass()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeClass");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeDynamic
-// (Final, Native, Static, Public)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeDynamic()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeDynamic");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeEnum
-// (Final, Native, Static, Public)
-// Parameters:
-// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeEnum(class FName Name_0)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeEnum");
-
-	Params::VerseDynamicallyTypedValueLibrary_MakeRuntimeTypeEnum Parms{};
-
-	Parms.Name_0 = Name_0;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeFloat
-// (Final, Native, Static, Public)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeFloat()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeFloat");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeFunction
-// (Final, Native, Static, Public)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeFunction()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeFunction");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeInt64
-// (Final, Native, Static, Public)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeInt64()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeInt64");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeLogic
-// (Final, Native, Static, Public)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeLogic()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeLogic");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeMap
-// (Final, Native, Static, Public)
-// Parameters:
-// int32                                   KeyType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ValueType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeMap(int32 KeyType, int32 ValueType)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeMap");
-
-	Params::VerseDynamicallyTypedValueLibrary_MakeRuntimeTypeMap Parms{};
-
-	Parms.KeyType = KeyType;
-	Parms.ValueType = ValueType;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeObject
-// (Final, Native, Static, Public)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeObject()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeObject");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeOption
-// (Final, Native, Static, Public)
-// Parameters:
-// int32                                   ValueType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeOption(int32 ValueType)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeOption");
-
-	Params::VerseDynamicallyTypedValueLibrary_MakeRuntimeTypeOption Parms{};
-
-	Parms.ValueType = ValueType;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeString
-// (Final, Native, Static, Public)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeString()
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeString");
-
-	StaticClss->DefaultObject->ProcessEvent(Func, nullptr);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeStruct
-// (Final, Native, Static, Public)
-// Parameters:
-// class UStruct*                          Struct                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeStruct(class UStruct* Struct)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeStruct");
-
-	Params::VerseDynamicallyTypedValueLibrary_MakeRuntimeTypeStruct Parms{};
-
-	Parms.Struct = Struct;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.MakeRuntimeTypeTuple
-// (Final, Native, Static, Public)
-// Parameters:
-// TArray<int32>                           ValueType                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UVerseDynamicallyTypedValueLibrary::MakeRuntimeTypeTuple(const TArray<int32>& ValueType)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("MakeRuntimeTypeTuple");
-
-	Params::VerseDynamicallyTypedValueLibrary_MakeRuntimeTypeTuple Parms{};
-
-	Parms.ValueType = std::move(ValueType);
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Solaris.VerseDynamicallyTypedValueLibrary.NotEqual
-// (Final, Native, Static, Public)
-// Parameters:
-// int32                                   Left                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Right                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVerseDynamicallyTypedValueLibrary::NotEqual(int32 Left, int32 Right)
-{
-	static class UFunction* Func = nullptr;
-	class UClass* StaticClss = StaticClass();
-
-	if (Func == nullptr)
-		Func = StaticClss->FindFunction("NotEqual");
-
-	Params::VerseDynamicallyTypedValueLibrary_NotEqual Parms{};
-
-	Parms.Left = Left;
-	Parms.Right = Right;
-
-	StaticClss->DefaultObject->ProcessEvent(Func, &Parms);
 }
 
 }

@@ -34,6 +34,8 @@ public:
 		return GetDefaultObjImpl<UWumba_ItemCostComponent_Horizontal_C>();
 	}
 };
+static_assert(alignof(UWumba_ItemCostComponent_Horizontal_C) == 0x000008, "Wrong alignment on UWumba_ItemCostComponent_Horizontal_C");
+static_assert(sizeof(UWumba_ItemCostComponent_Horizontal_C) == 0x0000B0, "Wrong size on UWumba_ItemCostComponent_Horizontal_C");
 
 }
 

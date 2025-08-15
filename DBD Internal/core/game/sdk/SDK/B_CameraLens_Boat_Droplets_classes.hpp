@@ -30,10 +30,10 @@ public:
 
 public:
 	void ExecuteUbergraph_B_CameraLens_Boat_Droplets(int32 EntryPoint);
-	void ReceiveBeginPlay();
 	void ReceiveDestroyed();
-	void Timeline_0__FinishedFunc();
+	void ReceiveBeginPlay();
 	void Timeline_0__UpdateFunc();
+	void Timeline_0__FinishedFunc();
 
 public:
 	static class UClass* StaticClass()
@@ -45,6 +45,12 @@ public:
 		return GetDefaultObjImpl<AB_CameraLens_Boat_Droplets_C>();
 	}
 };
+static_assert(alignof(AB_CameraLens_Boat_Droplets_C) == 0x000010, "Wrong alignment on AB_CameraLens_Boat_Droplets_C");
+static_assert(sizeof(AB_CameraLens_Boat_Droplets_C) == 0x000300, "Wrong size on AB_CameraLens_Boat_Droplets_C");
+static_assert(offsetof(AB_CameraLens_Boat_Droplets_C, UberGraphFrame) == 0x0002E0, "Member 'AB_CameraLens_Boat_Droplets_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_CameraLens_Boat_Droplets_C, Timeline_0_Alpha_0C9ACFAF463718824428D0A86CC5D789) == 0x0002E8, "Member 'AB_CameraLens_Boat_Droplets_C::Timeline_0_Alpha_0C9ACFAF463718824428D0A86CC5D789' has a wrong offset!");
+static_assert(offsetof(AB_CameraLens_Boat_Droplets_C, Timeline_0__Direction_0C9ACFAF463718824428D0A86CC5D789) == 0x0002EC, "Member 'AB_CameraLens_Boat_Droplets_C::Timeline_0__Direction_0C9ACFAF463718824428D0A86CC5D789' has a wrong offset!");
+static_assert(offsetof(AB_CameraLens_Boat_Droplets_C, Timeline_0) == 0x0002F0, "Member 'AB_CameraLens_Boat_Droplets_C::Timeline_0' has a wrong offset!");
 
 }
 

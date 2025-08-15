@@ -14,25 +14,26 @@
 namespace SDK
 {
 
-// Enum GooglePAD.EGooglePADErrorCode
-// NumValues: 0x000F
-enum class EGooglePADErrorCode : uint8
+// Enum GooglePAD.EGooglePADCellularDataConfirmStatus
+// NumValues: 0x0005
+enum class EGooglePADCellularDataConfirmStatus : uint8
 {
-	AssetPack_NO_ERROR                       = 0,
-	AssetPack_APP_UNAVAILABLE                = 1,
-	AssetPack_UNAVAILABLE                    = 2,
-	AssetPack_INVALID_REQUEST                = 3,
-	AssetPack_DOWNLOAD_NOT_FOUND             = 4,
-	AssetPack_API_NOT_AVAILABLE              = 5,
-	AssetPack_NETWORK_ERROR                  = 6,
-	AssetPack_ACCESS_DENIED                  = 7,
-	AssetPack_INSUFFICIENT_STORAGE           = 8,
-	AssetPack_PLAY_STORE_NOT_FOUND           = 9,
-	AssetPack_NETWORK_UNRESTRICTED           = 10,
-	AssetPack_INTERNAL_ERROR                 = 11,
-	AssetPack_INITIALIZATION_NEEDED          = 12,
-	AssetPack_INITIALIZATION_FAILED          = 13,
-	AssetPack_MAX                            = 14,
+	AssetPack_CONFIRM_UNKNOWN                = 0,
+	AssetPack_CONFIRM_PENDING                = 1,
+	AssetPack_CONFIRM_USER_APPROVED          = 2,
+	AssetPack_CONFIRM_USER_CANCELED          = 3,
+	AssetPack_CONFIRM_MAX                    = 4,
+};
+
+// Enum GooglePAD.EGooglePADStorageMethod
+// NumValues: 0x0005
+enum class EGooglePADStorageMethod : uint8
+{
+	AssetPack_STORAGE_FILES                  = 0,
+	AssetPack_STORAGE_APK                    = 1,
+	AssetPack_STORAGE_UNKNOWN                = 2,
+	AssetPack_STORAGE_NOT_INSTALLED          = 3,
+	AssetPack_STORAGE_MAX                    = 4,
 };
 
 // Enum GooglePAD.EGooglePADDownloadStatus
@@ -55,26 +56,25 @@ enum class EGooglePADDownloadStatus : uint8
 	AssetPack_MAX                            = 13,
 };
 
-// Enum GooglePAD.EGooglePADStorageMethod
-// NumValues: 0x0005
-enum class EGooglePADStorageMethod : uint8
+// Enum GooglePAD.EGooglePADErrorCode
+// NumValues: 0x000F
+enum class EGooglePADErrorCode : uint8
 {
-	AssetPack_STORAGE_FILES                  = 0,
-	AssetPack_STORAGE_APK                    = 1,
-	AssetPack_STORAGE_UNKNOWN                = 2,
-	AssetPack_STORAGE_NOT_INSTALLED          = 3,
-	AssetPack_STORAGE_MAX                    = 4,
-};
-
-// Enum GooglePAD.EGooglePADCellularDataConfirmStatus
-// NumValues: 0x0005
-enum class EGooglePADCellularDataConfirmStatus : uint8
-{
-	AssetPack_CONFIRM_UNKNOWN                = 0,
-	AssetPack_CONFIRM_PENDING                = 1,
-	AssetPack_CONFIRM_USER_APPROVED          = 2,
-	AssetPack_CONFIRM_USER_CANCELED          = 3,
-	AssetPack_CONFIRM_MAX                    = 4,
+	AssetPack_NO_ERROR                       = 0,
+	AssetPack_APP_UNAVAILABLE                = 1,
+	AssetPack_UNAVAILABLE                    = 2,
+	AssetPack_INVALID_REQUEST                = 3,
+	AssetPack_DOWNLOAD_NOT_FOUND             = 4,
+	AssetPack_API_NOT_AVAILABLE              = 5,
+	AssetPack_NETWORK_ERROR                  = 6,
+	AssetPack_ACCESS_DENIED                  = 7,
+	AssetPack_INSUFFICIENT_STORAGE           = 8,
+	AssetPack_PLAY_STORE_NOT_FOUND           = 9,
+	AssetPack_NETWORK_UNRESTRICTED           = 10,
+	AssetPack_INTERNAL_ERROR                 = 11,
+	AssetPack_INITIALIZATION_NEEDED          = 12,
+	AssetPack_INITIALIZATION_FAILED          = 13,
+	AssetPack_MAX                            = 14,
 };
 
 }

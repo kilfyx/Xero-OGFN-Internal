@@ -19,44 +19,44 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SquadMemberTile.SquadMemberTile_C
-// 0x0080 (0x1520 - 0x14A0)
+// 0x0078 (0x0C80 - 0x0C08)
 class USquadMemberTile_C final : public UAthenaSquadMemberDetailedEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x14A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnIntro;                                           // 0x14A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnLocalUserDefined;                                // 0x14B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnSelected;                                        // 0x14B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       SetRibbonRotation;                                 // 0x14C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       StyleEmpty;                                        // 0x14C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       StyleNotReady;                                     // 0x14D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       StyleReady;                                        // 0x14D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       StyleSitOut;                                       // 0x14E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnHovered;                                         // 0x14E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                EntryBorder;                                       // 0x14F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LoadingThrobberBacking;                            // 0x14F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LocalUserIcon;                                     // 0x1500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SquadOverlay;                                      // 0x1508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SquadRibbon;                                       // 0x1510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C08(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnIntro;                                           // 0x0C10(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnLocalUserDefined;                                // 0x0C18(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnSelected;                                        // 0x0C20(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SetRibbonRotation;                                 // 0x0C28(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       StyleEmpty;                                        // 0x0C30(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       StyleNotReady;                                     // 0x0C38(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       StyleReady;                                        // 0x0C40(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       StyleSitOut;                                       // 0x0C48(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnHovered;                                         // 0x0C50(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                EntryBorder;                                       // 0x0C58(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LoadingThrobberBacking;                            // 0x0C60(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LocalUserIcon;                                     // 0x0C68(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SquadOverlay;                                      // 0x0C70(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SquadRibbon;                                       // 0x0C78(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnDeselected();
-	void BP_OnHovered();
-	void BP_OnSelected();
-	void BP_OnTeamMemberEstablished(bool bHasValidMember);
-	void BP_OnUnhovered();
-	void Construct();
-	void ExecuteUbergraph_SquadMemberTile(int32 EntryPoint);
-	void OnLoaded_A3B69DDA4214DBAA66546FAB9F43D5E7(class UObject* Loaded);
-	void OnMemberGameReadinessChanged(EGameReadiness ReadyStatus);
-	void OnMemberIsInFrontendChanged(bool bIsInFrontEnd);
-	void OnSquadAssigned();
-	void PreConstruct(bool IsDesignTime);
-	void SetEmptyVisuals();
-	void SetNotReadyVisuals();
-	void SetReadyVisuals();
-	void SetSitOutVisuals();
 	void SetVisuals(EGameReadiness Member_Readiness, bool Is_In_Frontend);
+	void SetEmptyVisuals();
+	void SetSitOutVisuals();
+	void SetReadyVisuals();
+	void SetNotReadyVisuals();
+	void OnLoaded_A3B69DDA4214DBAA66546FAB9F43D5E7(class UObject* Loaded);
+	void BP_OnUnhovered();
+	void BP_OnHovered();
+	void OnSquadAssigned();
+	void Construct();
+	void PreConstruct(bool IsDesignTime);
+	void OnMemberGameReadinessChanged(EGameReadiness ReadyStatus);
+	void BP_OnSelected();
+	void BP_OnDeselected();
+	void BP_OnTeamMemberEstablished(bool bHasValidMember);
+	void OnMemberIsInFrontendChanged(bool bIsInFrontEnd);
+	void ExecuteUbergraph_SquadMemberTile(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -68,23 +68,23 @@ public:
 		return GetDefaultObjImpl<USquadMemberTile_C>();
 	}
 };
-static_assert(alignof(USquadMemberTile_C) == 0x000010, "Wrong alignment on USquadMemberTile_C");
-static_assert(sizeof(USquadMemberTile_C) == 0x001520, "Wrong size on USquadMemberTile_C");
-static_assert(offsetof(USquadMemberTile_C, UberGraphFrame) == 0x0014A0, "Member 'USquadMemberTile_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, OnIntro) == 0x0014A8, "Member 'USquadMemberTile_C::OnIntro' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, OnLocalUserDefined) == 0x0014B0, "Member 'USquadMemberTile_C::OnLocalUserDefined' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, OnSelected) == 0x0014B8, "Member 'USquadMemberTile_C::OnSelected' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, SetRibbonRotation) == 0x0014C0, "Member 'USquadMemberTile_C::SetRibbonRotation' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, StyleEmpty) == 0x0014C8, "Member 'USquadMemberTile_C::StyleEmpty' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, StyleNotReady) == 0x0014D0, "Member 'USquadMemberTile_C::StyleNotReady' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, StyleReady) == 0x0014D8, "Member 'USquadMemberTile_C::StyleReady' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, StyleSitOut) == 0x0014E0, "Member 'USquadMemberTile_C::StyleSitOut' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, OnHovered) == 0x0014E8, "Member 'USquadMemberTile_C::OnHovered' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, EntryBorder) == 0x0014F0, "Member 'USquadMemberTile_C::EntryBorder' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, LoadingThrobberBacking) == 0x0014F8, "Member 'USquadMemberTile_C::LoadingThrobberBacking' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, LocalUserIcon) == 0x001500, "Member 'USquadMemberTile_C::LocalUserIcon' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, SquadOverlay) == 0x001508, "Member 'USquadMemberTile_C::SquadOverlay' has a wrong offset!");
-static_assert(offsetof(USquadMemberTile_C, SquadRibbon) == 0x001510, "Member 'USquadMemberTile_C::SquadRibbon' has a wrong offset!");
+static_assert(alignof(USquadMemberTile_C) == 0x000008, "Wrong alignment on USquadMemberTile_C");
+static_assert(sizeof(USquadMemberTile_C) == 0x000C80, "Wrong size on USquadMemberTile_C");
+static_assert(offsetof(USquadMemberTile_C, UberGraphFrame) == 0x000C08, "Member 'USquadMemberTile_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, OnIntro) == 0x000C10, "Member 'USquadMemberTile_C::OnIntro' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, OnLocalUserDefined) == 0x000C18, "Member 'USquadMemberTile_C::OnLocalUserDefined' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, OnSelected) == 0x000C20, "Member 'USquadMemberTile_C::OnSelected' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, SetRibbonRotation) == 0x000C28, "Member 'USquadMemberTile_C::SetRibbonRotation' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, StyleEmpty) == 0x000C30, "Member 'USquadMemberTile_C::StyleEmpty' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, StyleNotReady) == 0x000C38, "Member 'USquadMemberTile_C::StyleNotReady' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, StyleReady) == 0x000C40, "Member 'USquadMemberTile_C::StyleReady' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, StyleSitOut) == 0x000C48, "Member 'USquadMemberTile_C::StyleSitOut' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, OnHovered) == 0x000C50, "Member 'USquadMemberTile_C::OnHovered' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, EntryBorder) == 0x000C58, "Member 'USquadMemberTile_C::EntryBorder' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, LoadingThrobberBacking) == 0x000C60, "Member 'USquadMemberTile_C::LoadingThrobberBacking' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, LocalUserIcon) == 0x000C68, "Member 'USquadMemberTile_C::LocalUserIcon' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, SquadOverlay) == 0x000C70, "Member 'USquadMemberTile_C::SquadOverlay' has a wrong offset!");
+static_assert(offsetof(USquadMemberTile_C, SquadRibbon) == 0x000C78, "Member 'USquadMemberTile_C::SquadRibbon' has a wrong offset!");
 
 }
 

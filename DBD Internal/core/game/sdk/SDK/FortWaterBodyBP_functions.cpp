@@ -70,5 +70,19 @@ void AFortWaterBodyBP_C::ReceiveBeginPlay()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function FortWaterBodyBP.FortWaterBodyBP_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AFortWaterBodyBP_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortWaterBodyBP_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 }
 

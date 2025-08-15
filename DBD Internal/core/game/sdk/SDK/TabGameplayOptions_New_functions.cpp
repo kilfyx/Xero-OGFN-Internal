@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function TabGameplayOptions_New.TabGameplayOptions_New_C.CenterOnTab
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UTabGameplayOptions_New_C::CenterOnTab()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabGameplayOptions_New_C", "CenterOnTab");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function TabGameplayOptions_New.TabGameplayOptions_New_C.ExecuteUbergraph_TabGameplayOptions_New
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UTabGameplayOptions_New_C::ExecuteUbergraph_TabGameplayOptions_New(int32 En
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TabGameplayOptions_New.TabGameplayOptions_New_C.CenterOnTab
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+
+void UTabGameplayOptions_New_C::CenterOnTab()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabGameplayOptions_New_C", "CenterOnTab");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

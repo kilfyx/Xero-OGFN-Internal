@@ -17,45 +17,23 @@
 namespace SDK
 {
 
-// Function FortVolumeActor_Base.FortVolumeActor_Base_C.TransitionTL__UpdateFunc
-// (BlueprintEvent)
+// Function FortVolumeActor_Base.FortVolumeActor_Base_C.ExecuteUbergraph_FortVolumeActor_Base
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AFortVolumeActor_Base_C::TransitionTL__UpdateFunc()
+void AFortVolumeActor_Base_C::ExecuteUbergraph_FortVolumeActor_Base(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortVolumeActor_Base_C", "TransitionTL__UpdateFunc");
+		Func = Class->GetFunction("FortVolumeActor_Base_C", "ExecuteUbergraph_FortVolumeActor_Base");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::FortVolumeActor_Base_C_ExecuteUbergraph_FortVolumeActor_Base Parms{};
 
+	Parms.EntryPoint = EntryPoint;
 
-// Function FortVolumeActor_Base.FortVolumeActor_Base_C.TransitionTL__FinishedFunc
-// (BlueprintEvent)
-
-void AFortVolumeActor_Base_C::TransitionTL__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortVolumeActor_Base_C", "TransitionTL__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FortVolumeActor_Base.FortVolumeActor_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AFortVolumeActor_Base_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortVolumeActor_Base_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -91,23 +69,45 @@ void AFortVolumeActor_Base_C::OnDeathPlayEffects_1(float Damage, const struct FG
 }
 
 
-// Function FortVolumeActor_Base.FortVolumeActor_Base_C.ExecuteUbergraph_FortVolumeActor_Base
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function FortVolumeActor_Base.FortVolumeActor_Base_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AFortVolumeActor_Base_C::ExecuteUbergraph_FortVolumeActor_Base(int32 EntryPoint)
+void AFortVolumeActor_Base_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortVolumeActor_Base_C", "ExecuteUbergraph_FortVolumeActor_Base");
+		Func = Class->GetFunction("FortVolumeActor_Base_C", "ReceiveBeginPlay");
 
-	Params::FortVolumeActor_Base_C_ExecuteUbergraph_FortVolumeActor_Base Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function FortVolumeActor_Base.FortVolumeActor_Base_C.TransitionTL__UpdateFunc
+// (BlueprintEvent)
+
+void AFortVolumeActor_Base_C::TransitionTL__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortVolumeActor_Base_C", "TransitionTL__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FortVolumeActor_Base.FortVolumeActor_Base_C.TransitionTL__FinishedFunc
+// (BlueprintEvent)
+
+void AFortVolumeActor_Base_C::TransitionTL__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortVolumeActor_Base_C", "TransitionTL__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

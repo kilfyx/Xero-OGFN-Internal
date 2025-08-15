@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapGroundMoveEdge_C>();
 	}
 };
+static_assert(alignof(ABP_BattleMapGroundMoveEdge_C) == 0x000008, "Wrong alignment on ABP_BattleMapGroundMoveEdge_C");
+static_assert(sizeof(ABP_BattleMapGroundMoveEdge_C) == 0x000288, "Wrong size on ABP_BattleMapGroundMoveEdge_C");
 
 }
 

@@ -25,7 +25,7 @@ public:
 	EFortReloadFXState                            ReloadStage;                                       // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
+	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation) const;
 
 public:
 	static class UClass* StaticClass()
@@ -37,6 +37,9 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlayReloadFX_C>();
 	}
 };
+static_assert(alignof(UAnimNotify_PlayReloadFX_C) == 0x000008, "Wrong alignment on UAnimNotify_PlayReloadFX_C");
+static_assert(sizeof(UAnimNotify_PlayReloadFX_C) == 0x000040, "Wrong size on UAnimNotify_PlayReloadFX_C");
+static_assert(offsetof(UAnimNotify_PlayReloadFX_C, ReloadStage) == 0x000038, "Member 'UAnimNotify_PlayReloadFX_C::ReloadStage' has a wrong offset!");
 
 }
 

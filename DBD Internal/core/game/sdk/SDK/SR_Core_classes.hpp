@@ -18,25 +18,25 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass SR_Core.SR_Core_C
-// 0x0010 (0x0458 - 0x0448)
+// 0x0010 (0x0438 - 0x0428)
 class USR_Core_C final : public UStreamingRadioPlayerComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0448(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          bMixIsActive;                                      // 0x0450(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsADS;                                            // 0x0451(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsInsideVehicle;                                  // 0x0452(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0428(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          bMixIsActive;                                      // 0x0430(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsADS;                                            // 0x0431(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsInsideVehicle;                                  // 0x0432(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_SR_Core(int32 EntryPoint);
-	void GetIsMixAllowed(bool* MixAllowed);
-	void HandleADSStateUpdated(bool Is_Targeting);
-	void HandleOnSourcePlayed(class UStreamingRadioPlayerComponent* Component, const struct FAthenaRadioStation& AffectedSource);
+	void OnPawnExitSeat(const TScriptInterface<class IFortVehicleInterface>& Vehicle, class AFortPawn* PlayerPawn, int32 SeatIndex);
+	void OnPawnEnterSeat(const TScriptInterface<class IFortVehicleInterface>& Vehicle, class AFortPawn* PlayerPawn, int32 SeatIndex);
 	void HandleSeatStateUpdated(class AFortPawn* Pawn, bool Entering, int32 SeatIdx);
 	void HandleWeaponStateUpdated(class AFortWeapon* NewWeapon, class AFortWeapon* PrevWeapon);
-	void OnPawnEnterSeat(const TScriptInterface<class IFortVehicleInterface>& Vehicle, class AFortPawn* PlayerPawn, int32 SeatIndex);
-	void OnPawnExitSeat(const TScriptInterface<class IFortVehicleInterface>& Vehicle, class AFortPawn* PlayerPawn, int32 SeatIndex);
+	void HandleADSStateUpdated(bool Is_Targeting);
+	void HandleOnSourcePlayed(class UStreamingRadioPlayerComponent* Component, const struct FAthenaRadioStation& AffectedSource);
 	void UpdateMixState();
+	void GetIsMixAllowed(bool* MixAllowed);
 
 public:
 	static class UClass* StaticClass()
@@ -48,6 +48,12 @@ public:
 		return GetDefaultObjImpl<USR_Core_C>();
 	}
 };
+static_assert(alignof(USR_Core_C) == 0x000008, "Wrong alignment on USR_Core_C");
+static_assert(sizeof(USR_Core_C) == 0x000438, "Wrong size on USR_Core_C");
+static_assert(offsetof(USR_Core_C, UberGraphFrame) == 0x000428, "Member 'USR_Core_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USR_Core_C, bMixIsActive) == 0x000430, "Member 'USR_Core_C::bMixIsActive' has a wrong offset!");
+static_assert(offsetof(USR_Core_C, bIsADS) == 0x000431, "Member 'USR_Core_C::bIsADS' has a wrong offset!");
+static_assert(offsetof(USR_Core_C, bIsInsideVehicle) == 0x000432, "Member 'USR_Core_C::bIsInsideVehicle' has a wrong offset!");
 
 }
 

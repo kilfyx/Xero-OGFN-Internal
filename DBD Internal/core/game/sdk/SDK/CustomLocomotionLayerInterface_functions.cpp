@@ -17,30 +17,6 @@
 namespace SDK
 {
 
-// Function CustomLocomotionLayerInterface.CustomLocomotionLayerInterface_C.CustomLocomotionFullBodyAdditive
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FPoseLink&                 InPoseFullBodyAdditive                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink*                       CustomLocomotionFullBodyAdditive_0                     (Parm, OutParm, NoDestructor)
-
-void ICustomLocomotionLayerInterface_C::CustomLocomotionFullBodyAdditive(const struct FPoseLink& InPoseFullBodyAdditive, struct FPoseLink* CustomLocomotionFullBodyAdditive_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("CustomLocomotionLayerInterface_C", "CustomLocomotionFullBodyAdditive");
-
-	Params::CustomLocomotionLayerInterface_C_CustomLocomotionFullBodyAdditive Parms{};
-
-	Parms.InPoseFullBodyAdditive = std::move(InPoseFullBodyAdditive);
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (CustomLocomotionFullBodyAdditive_0 != nullptr)
-		*CustomLocomotionFullBodyAdditive_0 = std::move(Parms.CustomLocomotionFullBodyAdditive_0);
-}
-
-
 // Function CustomLocomotionLayerInterface.CustomLocomotionLayerInterface_C.CustomLocomotionFullBodyLayer
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -86,6 +62,30 @@ void ICustomLocomotionLayerInterface_C::CustomLocomotionPreIKLayer(const struct 
 
 	if (CustomLocomotionPreIKLayer_0 != nullptr)
 		*CustomLocomotionPreIKLayer_0 = std::move(Parms.CustomLocomotionPreIKLayer_0);
+}
+
+
+// Function CustomLocomotionLayerInterface.CustomLocomotionLayerInterface_C.CustomLocomotionFullBodyAdditive
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPoseLink&                 InPoseFullBodyAdditive                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       CustomLocomotionFullBodyAdditive_0                     (Parm, OutParm, NoDestructor)
+
+void ICustomLocomotionLayerInterface_C::CustomLocomotionFullBodyAdditive(const struct FPoseLink& InPoseFullBodyAdditive, struct FPoseLink* CustomLocomotionFullBodyAdditive_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("CustomLocomotionLayerInterface_C", "CustomLocomotionFullBodyAdditive");
+
+	Params::CustomLocomotionLayerInterface_C_CustomLocomotionFullBodyAdditive Parms{};
+
+	Parms.InPoseFullBodyAdditive = std::move(InPoseFullBodyAdditive);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (CustomLocomotionFullBodyAdditive_0 != nullptr)
+		*CustomLocomotionFullBodyAdditive_0 = std::move(Parms.CustomLocomotionFullBodyAdditive_0);
 }
 
 }

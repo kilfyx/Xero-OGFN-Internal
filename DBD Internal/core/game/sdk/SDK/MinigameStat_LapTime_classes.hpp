@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UMinigameStat_LapTime_C>();
 	}
 };
+static_assert(alignof(UMinigameStat_LapTime_C) == 0x000008, "Wrong alignment on UMinigameStat_LapTime_C");
+static_assert(sizeof(UMinigameStat_LapTime_C) == 0x000190, "Wrong size on UMinigameStat_LapTime_C");
 
 }
 

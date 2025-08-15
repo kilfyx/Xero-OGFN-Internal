@@ -220,7 +220,7 @@ void UResonanceAudioReverbPluginPreset::SetRoomDimensions(const struct FVector& 
 // Function ResonanceAudio.ResonanceAudioReverbPluginPreset.SetRoomMaterials
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TArray<ERaMaterialName>&          InMaterials                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<ERaMaterialName>&          InMaterials                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UResonanceAudioReverbPluginPreset::SetRoomMaterials(const TArray<ERaMaterialName>& InMaterials)
 {

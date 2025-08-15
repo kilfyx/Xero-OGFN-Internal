@@ -10,134 +10,25 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
-#include "GameFeatures_structs.hpp"
-#include "DeveloperSettings_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "GameFeatures_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
 
 
 namespace SDK
 {
 
-// Class GameFeatures.GameFeatureAction
-// 0x0000 (0x0028 - 0x0028)
-class UGameFeatureAction : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GameFeatureAction">();
-	}
-	static class UGameFeatureAction* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameFeatureAction>();
-	}
-};
-
-// Class GameFeatures.GameFeatureAction_AddCheats
-// 0x0028 (0x0050 - 0x0028)
-class UGameFeatureAction_AddCheats final : public UGameFeatureAction
-{
-public:
-	TArray<TSubclassOf<class UCheatManagerExtension>> CheatManagers;                                 // 0x0028(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TWeakObjectPtr<class UCheatManagerExtension>> SpawnedCheatManagers;                       // 0x0040(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GameFeatureAction_AddCheats">();
-	}
-	static class UGameFeatureAction_AddCheats* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameFeatureAction_AddCheats>();
-	}
-};
-
-// Class GameFeatures.GameFeatureAction_AddComponents
-// 0x0028 (0x0050 - 0x0028)
-class UGameFeatureAction_AddComponents final : public UGameFeatureAction
-{
-public:
-	TArray<struct FGameFeatureComponentEntry>     ComponentList;                                     // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x18];                                      // 0x0038(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GameFeatureAction_AddComponents">();
-	}
-	static class UGameFeatureAction_AddComponents* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameFeatureAction_AddComponents>();
-	}
-};
-
-// Class GameFeatures.GameFeatureAction_DataRegistry
-// 0x0010 (0x0038 - 0x0028)
-class UGameFeatureAction_DataRegistry final : public UGameFeatureAction
-{
-public:
-	TArray<TSoftObjectPtr<class UDataRegistry>>   RegistriesToAdd;                                   // 0x0028(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GameFeatureAction_DataRegistry">();
-	}
-	static class UGameFeatureAction_DataRegistry* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameFeatureAction_DataRegistry>();
-	}
-};
-
-// Class GameFeatures.GameFeatureAction_DataRegistrySource
-// 0x0010 (0x0038 - 0x0028)
-class UGameFeatureAction_DataRegistrySource final : public UGameFeatureAction
-{
-public:
-	TArray<struct FDataRegistrySourceToAdd>       SourcesToAdd;                                      // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GameFeatureAction_DataRegistrySource">();
-	}
-	static class UGameFeatureAction_DataRegistrySource* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameFeatureAction_DataRegistrySource>();
-	}
-};
-
-// Class GameFeatures.GameFeatureData
-// 0x0020 (0x0050 - 0x0030)
-class UGameFeatureData : public UPrimaryDataAsset
-{
-public:
-	TArray<class UGameFeatureAction*>             Actions;                                           // 0x0030(0x0010)(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FPrimaryAssetTypeInfo>          PrimaryAssetTypesToScan;                           // 0x0040(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GameFeatureData">();
-	}
-	static class UGameFeatureData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameFeatureData>();
-	}
-};
-
 // Class GameFeatures.GameFeaturePluginStateMachine
-// 0x0198 (0x01C0 - 0x0028)
+// 0x0130 (0x0158 - 0x0028)
 class UGameFeaturePluginStateMachine final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameFeaturePluginStateMachineProperties StateProperties;                                 // 0x0048(0x00A0)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_E8[0xD8];                                      // 0x00E8(0x00D8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameFeaturePluginStateMachineProperties StateProperties;                                 // 0x0048(0x0070)(Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_B8[0xA0];                                      // 0x00B8(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -149,6 +40,34 @@ public:
 		return GetDefaultObjImpl<UGameFeaturePluginStateMachine>();
 	}
 };
+static_assert(alignof(UGameFeaturePluginStateMachine) == 0x000008, "Wrong alignment on UGameFeaturePluginStateMachine");
+static_assert(sizeof(UGameFeaturePluginStateMachine) == 0x000158, "Wrong size on UGameFeaturePluginStateMachine");
+static_assert(offsetof(UGameFeaturePluginStateMachine, StateProperties) == 0x000048, "Member 'UGameFeaturePluginStateMachine::StateProperties' has a wrong offset!");
+
+// Class GameFeatures.GameFeatureData
+// 0x0030 (0x0060 - 0x0030)
+class UGameFeatureData : public UPrimaryDataAsset
+{
+public:
+	TArray<struct FGameFeatureComponentEntry>     ComponentList;                                     // 0x0030(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FPrimaryAssetTypeInfo>          PrimaryAssetTypesToScan;                           // 0x0040(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<TSubclassOf<class UCheatManagerExtension>> CheatManagers;                                 // 0x0050(0x0010)(Edit, ZeroConstructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GameFeatureData">();
+	}
+	static class UGameFeatureData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameFeatureData>();
+	}
+};
+static_assert(alignof(UGameFeatureData) == 0x000008, "Wrong alignment on UGameFeatureData");
+static_assert(sizeof(UGameFeatureData) == 0x000060, "Wrong size on UGameFeatureData");
+static_assert(offsetof(UGameFeatureData, ComponentList) == 0x000030, "Member 'UGameFeatureData::ComponentList' has a wrong offset!");
+static_assert(offsetof(UGameFeatureData, PrimaryAssetTypesToScan) == 0x000040, "Member 'UGameFeatureData::PrimaryAssetTypesToScan' has a wrong offset!");
+static_assert(offsetof(UGameFeatureData, CheatManagers) == 0x000050, "Member 'UGameFeatureData::CheatManagers' has a wrong offset!");
 
 // Class GameFeatures.GameFeaturesProjectPolicies
 // 0x0000 (0x0028 - 0x0028)
@@ -164,6 +83,8 @@ public:
 		return GetDefaultObjImpl<UGameFeaturesProjectPolicies>();
 	}
 };
+static_assert(alignof(UGameFeaturesProjectPolicies) == 0x000008, "Wrong alignment on UGameFeaturesProjectPolicies");
+static_assert(sizeof(UGameFeaturesProjectPolicies) == 0x000028, "Wrong size on UGameFeaturesProjectPolicies");
 
 // Class GameFeatures.DefaultGameFeaturesProjectPolicies
 // 0x0000 (0x0028 - 0x0028)
@@ -179,17 +100,19 @@ public:
 		return GetDefaultObjImpl<UDefaultGameFeaturesProjectPolicies>();
 	}
 };
+static_assert(alignof(UDefaultGameFeaturesProjectPolicies) == 0x000008, "Wrong alignment on UDefaultGameFeaturesProjectPolicies");
+static_assert(sizeof(UDefaultGameFeaturesProjectPolicies) == 0x000028, "Wrong size on UDefaultGameFeaturesProjectPolicies");
 
 // Class GameFeatures.GameFeaturesSubsystem
-// 0x00C0 (0x00F0 - 0x0030)
+// 0x00C8 (0x00F8 - 0x0030)
 class UGameFeaturesSubsystem final : public UEngineSubsystem
 {
 public:
 	TMap<class FString, class UGameFeaturePluginStateMachine*> GameFeaturePluginStateMachines;       // 0x0030(0x0050)(Transient, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_80[0x50];                                      // 0x0080(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UObject*>                        Observers;                                         // 0x00D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<class UGameFeatureStateChangeObserver*> Observers;                                        // 0x00D0(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UGameFeaturesProjectPolicies*           GameSpecificPolicies;                              // 0x00E0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_E8[0x8];                                       // 0x00E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E8[0x10];                                      // 0x00E8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -201,17 +124,58 @@ public:
 		return GetDefaultObjImpl<UGameFeaturesSubsystem>();
 	}
 };
+static_assert(alignof(UGameFeaturesSubsystem) == 0x000008, "Wrong alignment on UGameFeaturesSubsystem");
+static_assert(sizeof(UGameFeaturesSubsystem) == 0x0000F8, "Wrong size on UGameFeaturesSubsystem");
+static_assert(offsetof(UGameFeaturesSubsystem, GameFeaturePluginStateMachines) == 0x000030, "Member 'UGameFeaturesSubsystem::GameFeaturePluginStateMachines' has a wrong offset!");
+static_assert(offsetof(UGameFeaturesSubsystem, Observers) == 0x0000D0, "Member 'UGameFeaturesSubsystem::Observers' has a wrong offset!");
+static_assert(offsetof(UGameFeaturesSubsystem, GameSpecificPolicies) == 0x0000E0, "Member 'UGameFeaturesSubsystem::GameSpecificPolicies' has a wrong offset!");
+
+// Class GameFeatures.GameFeatureStateChangeObserver
+// 0x0000 (0x0028 - 0x0028)
+class UGameFeatureStateChangeObserver : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GameFeatureStateChangeObserver">();
+	}
+	static class UGameFeatureStateChangeObserver* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameFeatureStateChangeObserver>();
+	}
+};
+static_assert(alignof(UGameFeatureStateChangeObserver) == 0x000008, "Wrong alignment on UGameFeatureStateChangeObserver");
+static_assert(sizeof(UGameFeatureStateChangeObserver) == 0x000028, "Wrong size on UGameFeatureStateChangeObserver");
+
+// Class GameFeatures.GameFeature_ComponentObserver
+// 0x0050 (0x0078 - 0x0028)
+class UGameFeature_ComponentObserver final : public UGameFeatureStateChangeObserver
+{
+public:
+	uint8                                         Pad_28[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GameFeature_ComponentObserver">();
+	}
+	static class UGameFeature_ComponentObserver* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameFeature_ComponentObserver>();
+	}
+};
+static_assert(alignof(UGameFeature_ComponentObserver) == 0x000008, "Wrong alignment on UGameFeature_ComponentObserver");
+static_assert(sizeof(UGameFeature_ComponentObserver) == 0x000078, "Wrong size on UGameFeature_ComponentObserver");
 
 // Class GameFeatures.GameFeaturesSubsystemSettings
-// 0x0050 (0x0088 - 0x0038)
+// 0x0048 (0x0080 - 0x0038)
 class UGameFeaturesSubsystemSettings final : public UDeveloperSettings
 {
 public:
 	struct FSoftClassPath                         GameFeaturesManagerClassName;                      // 0x0038(0x0018)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         DisabledPlugins;                                   // 0x0050(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<class FString>                         AdditionalPluginMetadataKeys;                      // 0x0060(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FString>                         DisabledPlugins;                                   // 0x0050(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         AdditionalPluginMetadataKeys;                      // 0x0060(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 BuiltInGameFeaturePluginsFolder;                   // 0x0070(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UGameFeatureData>           DefaultGameFeatureDataClass;                       // 0x0080(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -223,30 +187,12 @@ public:
 		return GetDefaultObjImpl<UGameFeaturesSubsystemSettings>();
 	}
 };
-
-// Class GameFeatures.GameFeatureStateChangeObserver
-// 0x0000 (0x0000 - 0x0000)
-class IGameFeatureStateChangeObserver final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GameFeatureStateChangeObserver">();
-	}
-	static class IGameFeatureStateChangeObserver* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IGameFeatureStateChangeObserver>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
+static_assert(alignof(UGameFeaturesSubsystemSettings) == 0x000008, "Wrong alignment on UGameFeaturesSubsystemSettings");
+static_assert(sizeof(UGameFeaturesSubsystemSettings) == 0x000080, "Wrong size on UGameFeaturesSubsystemSettings");
+static_assert(offsetof(UGameFeaturesSubsystemSettings, GameFeaturesManagerClassName) == 0x000038, "Member 'UGameFeaturesSubsystemSettings::GameFeaturesManagerClassName' has a wrong offset!");
+static_assert(offsetof(UGameFeaturesSubsystemSettings, DisabledPlugins) == 0x000050, "Member 'UGameFeaturesSubsystemSettings::DisabledPlugins' has a wrong offset!");
+static_assert(offsetof(UGameFeaturesSubsystemSettings, AdditionalPluginMetadataKeys) == 0x000060, "Member 'UGameFeaturesSubsystemSettings::AdditionalPluginMetadataKeys' has a wrong offset!");
+static_assert(offsetof(UGameFeaturesSubsystemSettings, BuiltInGameFeaturePluginsFolder) == 0x000070, "Member 'UGameFeaturesSubsystemSettings::BuiltInGameFeaturePluginsFolder' has a wrong offset!");
 
 }
 

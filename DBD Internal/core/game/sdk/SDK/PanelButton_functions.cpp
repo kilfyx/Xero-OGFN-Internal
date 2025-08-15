@@ -17,68 +17,6 @@
 namespace SDK
 {
 
-// Function PanelButton.PanelButton_C.BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UPanelButton_C::BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PanelButton_C", "BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature");
-
-	Params::PanelButton_C_BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature Parms{};
-
-	Parms.bUsingGamepad = bUsingGamepad;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PanelButton.PanelButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UPanelButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PanelButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PanelButton.PanelButton_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void UPanelButton_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PanelButton_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PanelButton.PanelButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UPanelButton_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PanelButton_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function PanelButton.PanelButton_C.ExecuteUbergraph_PanelButton
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -99,15 +37,43 @@ void UPanelButton_C::ExecuteUbergraph_PanelButton(int32 EntryPoint)
 }
 
 
-// Function PanelButton.PanelButton_C.InitializeButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function PanelButton.PanelButton_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
 
-void UPanelButton_C::InitializeButton()
+void UPanelButton_C::BP_OnUnhovered()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PanelButton_C", "InitializeButton");
+		Func = Class->GetFunction("PanelButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PanelButton.PanelButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UPanelButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PanelButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PanelButton.PanelButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UPanelButton_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PanelButton_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -167,10 +133,30 @@ void UPanelButton_C::OnTriggeredInputActionChanged(const struct FDataTableRowHan
 }
 
 
+// Function PanelButton.PanelButton_C.BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UPanelButton_C::BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PanelButton_C", "BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature");
+
+	Params::PanelButton_C_BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature Parms{};
+
+	Parms.bUsingGamepad = bUsingGamepad;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function PanelButton.PanelButton_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UPanelButton_C::PreConstruct(bool IsDesignTime)
 {
@@ -187,15 +173,29 @@ void UPanelButton_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function PanelButton.PanelButton_C.UpdateInputActionLayout
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function PanelButton.PanelButton_C.UpdateTextAndStyle
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UPanelButton_C::UpdateInputActionLayout()
+void UPanelButton_C::UpdateTextAndStyle()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PanelButton_C", "UpdateInputActionLayout");
+		Func = Class->GetFunction("PanelButton_C", "UpdateTextAndStyle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PanelButton.PanelButton_C.InitializeButton
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UPanelButton_C::InitializeButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PanelButton_C", "InitializeButton");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -204,7 +204,7 @@ void UPanelButton_C::UpdateInputActionLayout()
 // Function PanelButton.PanelButton_C.UpdateStyle
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UPanelButton_C::UpdateStyle(bool bUsingGamepad)
 {
@@ -221,15 +221,15 @@ void UPanelButton_C::UpdateStyle(bool bUsingGamepad)
 }
 
 
-// Function PanelButton.PanelButton_C.UpdateTextAndStyle
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function PanelButton.PanelButton_C.UpdateInputActionLayout
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UPanelButton_C::UpdateTextAndStyle()
+void UPanelButton_C::UpdateInputActionLayout()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PanelButton_C", "UpdateTextAndStyle");
+		Func = Class->GetFunction("PanelButton_C", "UpdateInputActionLayout");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BroadcastSpectatorPC.BP_BroadcastSpectatorPC_C
-// 0x0000 (0x35F0 - 0x35F0)
+// 0x0000 (0x3190 - 0x3190)
 class ABP_BroadcastSpectatorPC_C final : public AFortLiveBroadcastController
 {
 public:
@@ -33,6 +33,8 @@ public:
 		return GetDefaultObjImpl<ABP_BroadcastSpectatorPC_C>();
 	}
 };
+static_assert(alignof(ABP_BroadcastSpectatorPC_C) == 0x000010, "Wrong alignment on ABP_BroadcastSpectatorPC_C");
+static_assert(sizeof(ABP_BroadcastSpectatorPC_C) == 0x003190, "Wrong size on ABP_BroadcastSpectatorPC_C");
 
 }
 

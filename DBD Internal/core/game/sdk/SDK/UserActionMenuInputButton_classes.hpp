@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "CommonUILegacy_classes.hpp"
+#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass UserActionMenuInputButton.UserActionMenuInputButton_C
-// 0x0000 (0x0F00 - 0x0F00)
-class UUserActionMenuInputButton_C final : public UCommonButtonLegacy
+// 0x0000 (0x0BA0 - 0x0BA0)
+class UUserActionMenuInputButton_C final : public UCommonButton
 {
 public:
 	static class UClass* StaticClass()
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UUserActionMenuInputButton_C>();
 	}
 };
+static_assert(alignof(UUserActionMenuInputButton_C) == 0x000008, "Wrong alignment on UUserActionMenuInputButton_C");
+static_assert(sizeof(UUserActionMenuInputButton_C) == 0x000BA0, "Wrong size on UUserActionMenuInputButton_C");
 
 }
 

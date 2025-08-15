@@ -22,7 +22,7 @@ namespace SDK
 class UMaterialShaderQualitySettings final : public UObject
 {
 public:
-	TMap<class FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                      // 0x0028(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<class FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                      // 0x0028(0x0050)(NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -34,6 +34,9 @@ public:
 		return GetDefaultObjImpl<UMaterialShaderQualitySettings>();
 	}
 };
+static_assert(alignof(UMaterialShaderQualitySettings) == 0x000008, "Wrong alignment on UMaterialShaderQualitySettings");
+static_assert(sizeof(UMaterialShaderQualitySettings) == 0x000078, "Wrong size on UMaterialShaderQualitySettings");
+static_assert(offsetof(UMaterialShaderQualitySettings, ForwardSettingMap) == 0x000028, "Member 'UMaterialShaderQualitySettings::ForwardSettingMap' has a wrong offset!");
 
 // Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings
 // 0x0038 (0x0060 - 0x0028)
@@ -53,6 +56,9 @@ public:
 		return GetDefaultObjImpl<UShaderPlatformQualitySettings>();
 	}
 };
+static_assert(alignof(UShaderPlatformQualitySettings) == 0x000008, "Wrong alignment on UShaderPlatformQualitySettings");
+static_assert(sizeof(UShaderPlatformQualitySettings) == 0x000060, "Wrong size on UShaderPlatformQualitySettings");
+static_assert(offsetof(UShaderPlatformQualitySettings, QualityOverrides) == 0x000028, "Member 'UShaderPlatformQualitySettings::QualityOverrides' has a wrong offset!");
 
 }
 

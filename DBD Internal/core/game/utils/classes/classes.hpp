@@ -44,6 +44,7 @@ public:
 	static inline SDK::FKey S = SDK::FKey();
 	static inline SDK::FKey D = SDK::FKey();
 	static inline SDK::FKey LeftShift = SDK::FKey();
+	static inline SDK::FKey RightShift = SDK::FKey();
 	static inline SDK::FKey LeftControl = SDK::FKey();
 	static inline SDK::FKey Insert = SDK::FKey();
 	static inline bool DrawMenu = bool(true);

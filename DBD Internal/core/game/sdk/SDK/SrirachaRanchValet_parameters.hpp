@@ -21,6 +21,9 @@ struct StreamingRadioPlayerComponent_Valet_ValetVehicleExploded final
 public:
 	class AFortDagwoodVehicle*                    Veh;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(StreamingRadioPlayerComponent_Valet_ValetVehicleExploded) == 0x000008, "Wrong alignment on StreamingRadioPlayerComponent_Valet_ValetVehicleExploded");
+static_assert(sizeof(StreamingRadioPlayerComponent_Valet_ValetVehicleExploded) == 0x000008, "Wrong size on StreamingRadioPlayerComponent_Valet_ValetVehicleExploded");
+static_assert(offsetof(StreamingRadioPlayerComponent_Valet_ValetVehicleExploded, Veh) == 0x000000, "Member 'StreamingRadioPlayerComponent_Valet_ValetVehicleExploded::Veh' has a wrong offset!");
 
 }
 

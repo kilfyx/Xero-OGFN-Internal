@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Quest_TagCarrier_C>();
 	}
 };
+static_assert(alignof(UGE_Quest_TagCarrier_C) == 0x000008, "Wrong alignment on UGE_Quest_TagCarrier_C");
+static_assert(sizeof(UGE_Quest_TagCarrier_C) == 0x000800, "Wrong size on UGE_Quest_TagCarrier_C");
 
 }
 

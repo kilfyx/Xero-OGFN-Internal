@@ -14,13 +14,16 @@
 namespace SDK::Params
 {
 
-// Function SettingsRotator.SettingsRotator_C.BP_OnDefaultOptionSpecified
+// Function SettingsRotator.SettingsRotator_C.BP_OnOptionsPopulated
 // 0x0004 (0x0004 - 0x0000)
-struct SettingsRotator_C_BP_OnDefaultOptionSpecified final
+struct SettingsRotator_C_BP_OnOptionsPopulated final
 {
 public:
-	int32                                         DefaultOptionIndex;                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Count;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(SettingsRotator_C_BP_OnOptionsPopulated) == 0x000004, "Wrong alignment on SettingsRotator_C_BP_OnOptionsPopulated");
+static_assert(sizeof(SettingsRotator_C_BP_OnOptionsPopulated) == 0x000004, "Wrong size on SettingsRotator_C_BP_OnOptionsPopulated");
+static_assert(offsetof(SettingsRotator_C_BP_OnOptionsPopulated, Count) == 0x000000, "Member 'SettingsRotator_C_BP_OnOptionsPopulated::Count' has a wrong offset!");
 
 // Function SettingsRotator.SettingsRotator_C.BP_OnOptionSelected
 // 0x0004 (0x0004 - 0x0000)
@@ -29,14 +32,20 @@ struct SettingsRotator_C_BP_OnOptionSelected final
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(SettingsRotator_C_BP_OnOptionSelected) == 0x000004, "Wrong alignment on SettingsRotator_C_BP_OnOptionSelected");
+static_assert(sizeof(SettingsRotator_C_BP_OnOptionSelected) == 0x000004, "Wrong size on SettingsRotator_C_BP_OnOptionSelected");
+static_assert(offsetof(SettingsRotator_C_BP_OnOptionSelected, Index_0) == 0x000000, "Member 'SettingsRotator_C_BP_OnOptionSelected::Index_0' has a wrong offset!");
 
-// Function SettingsRotator.SettingsRotator_C.BP_OnOptionsPopulated
+// Function SettingsRotator.SettingsRotator_C.BP_OnDefaultOptionSpecified
 // 0x0004 (0x0004 - 0x0000)
-struct SettingsRotator_C_BP_OnOptionsPopulated final
+struct SettingsRotator_C_BP_OnDefaultOptionSpecified final
 {
 public:
-	int32                                         Count;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         DefaultOptionIndex;                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(SettingsRotator_C_BP_OnDefaultOptionSpecified) == 0x000004, "Wrong alignment on SettingsRotator_C_BP_OnDefaultOptionSpecified");
+static_assert(sizeof(SettingsRotator_C_BP_OnDefaultOptionSpecified) == 0x000004, "Wrong size on SettingsRotator_C_BP_OnDefaultOptionSpecified");
+static_assert(offsetof(SettingsRotator_C_BP_OnDefaultOptionSpecified, DefaultOptionIndex) == 0x000000, "Member 'SettingsRotator_C_BP_OnDefaultOptionSpecified::DefaultOptionIndex' has a wrong offset!");
 
 // Function SettingsRotator.SettingsRotator_C.ExecuteUbergraph_SettingsRotator
 // 0x0040 (0x0040 - 0x0000)
@@ -56,6 +65,18 @@ public:
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue_2;         // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Conv_IntToFloat_ReturnValue_2;            // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(SettingsRotator_C_ExecuteUbergraph_SettingsRotator) == 0x000008, "Wrong alignment on SettingsRotator_C_ExecuteUbergraph_SettingsRotator");
+static_assert(sizeof(SettingsRotator_C_ExecuteUbergraph_SettingsRotator) == 0x000040, "Wrong size on SettingsRotator_C_ExecuteUbergraph_SettingsRotator");
+static_assert(offsetof(SettingsRotator_C_ExecuteUbergraph_SettingsRotator, EntryPoint) == 0x000000, "Member 'SettingsRotator_C_ExecuteUbergraph_SettingsRotator::EntryPoint' has a wrong offset!");
+static_assert(offsetof(SettingsRotator_C_ExecuteUbergraph_SettingsRotator, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000008, "Member 'SettingsRotator_C_ExecuteUbergraph_SettingsRotator::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SettingsRotator_C_ExecuteUbergraph_SettingsRotator, K2Node_Event_Count) == 0x000010, "Member 'SettingsRotator_C_ExecuteUbergraph_SettingsRotator::K2Node_Event_Count' has a wrong offset!");
+static_assert(offsetof(SettingsRotator_C_ExecuteUbergraph_SettingsRotator, CallFunc_GetDynamicMaterial_ReturnValue_1) == 0x000018, "Member 'SettingsRotator_C_ExecuteUbergraph_SettingsRotator::CallFunc_GetDynamicMaterial_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(SettingsRotator_C_ExecuteUbergraph_SettingsRotator, CallFunc_Conv_IntToFloat_ReturnValue) == 0x000020, "Member 'SettingsRotator_C_ExecuteUbergraph_SettingsRotator::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(SettingsRotator_C_ExecuteUbergraph_SettingsRotator, K2Node_Event_Index) == 0x000024, "Member 'SettingsRotator_C_ExecuteUbergraph_SettingsRotator::K2Node_Event_Index' has a wrong offset!");
+static_assert(offsetof(SettingsRotator_C_ExecuteUbergraph_SettingsRotator, CallFunc_Conv_IntToFloat_ReturnValue_1) == 0x000028, "Member 'SettingsRotator_C_ExecuteUbergraph_SettingsRotator::CallFunc_Conv_IntToFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(SettingsRotator_C_ExecuteUbergraph_SettingsRotator, K2Node_Event_DefaultOptionIndex) == 0x00002C, "Member 'SettingsRotator_C_ExecuteUbergraph_SettingsRotator::K2Node_Event_DefaultOptionIndex' has a wrong offset!");
+static_assert(offsetof(SettingsRotator_C_ExecuteUbergraph_SettingsRotator, CallFunc_GetDynamicMaterial_ReturnValue_2) == 0x000030, "Member 'SettingsRotator_C_ExecuteUbergraph_SettingsRotator::CallFunc_GetDynamicMaterial_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(SettingsRotator_C_ExecuteUbergraph_SettingsRotator, CallFunc_Conv_IntToFloat_ReturnValue_2) == 0x000038, "Member 'SettingsRotator_C_ExecuteUbergraph_SettingsRotator::CallFunc_Conv_IntToFloat_ReturnValue_2' has a wrong offset!");
 
 }
 

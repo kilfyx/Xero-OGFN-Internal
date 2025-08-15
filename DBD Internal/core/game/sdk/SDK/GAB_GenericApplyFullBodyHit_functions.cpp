@@ -25,9 +25,9 @@ namespace SDK
 void UGAB_GenericApplyFullBodyHit_C::ExecuteUbergraph_GAB_GenericApplyFullBodyHit(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_GAB_GenericApplyFullBodyHit");
+		Func = Class->GetFunction("GAB_GenericApplyFullBodyHit_C", "ExecuteUbergraph_GAB_GenericApplyFullBodyHit");
 
 	Params::GAB_GenericApplyFullBodyHit_C_ExecuteUbergraph_GAB_GenericApplyFullBodyHit Parms{};
 
@@ -37,17 +37,31 @@ void UGAB_GenericApplyFullBodyHit_C::ExecuteUbergraph_GAB_GenericApplyFullBodyHi
 }
 
 
+// Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.PickFullBodyHitMontageSection
+// (BlueprintCallable, BlueprintEvent)
+
+void UGAB_GenericApplyFullBodyHit_C::PickFullBodyHitMontageSection()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_GenericApplyFullBodyHit_C", "PickFullBodyHitMontageSection");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.K2_ActivateAbilityFromEvent
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FGameplayEventData               EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayEventData&        EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UGAB_GenericApplyFullBodyHit_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("K2_ActivateAbilityFromEvent");
+		Func = Class->GetFunction("GAB_GenericApplyFullBodyHit_C", "K2_ActivateAbilityFromEvent");
 
 	Params::GAB_GenericApplyFullBodyHit_C_K2_ActivateAbilityFromEvent Parms{};
 
@@ -57,82 +71,20 @@ void UGAB_GenericApplyFullBodyHit_C::K2_ActivateAbilityFromEvent(const struct FG
 }
 
 
-// Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_GenericApplyFullBodyHit_C::K2_OnEndAbility(bool bWasCancelled)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("K2_OnEndAbility");
-
-	Params::GAB_GenericApplyFullBodyHit_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.OnBlendOut_25E5E66442E815EB40A6DB8205FE0D98
-// (BlueprintCallable, BlueprintEvent)
-
-void UGAB_GenericApplyFullBodyHit_C::OnBlendOut_25E5E66442E815EB40A6DB8205FE0D98()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnBlendOut_25E5E66442E815EB40A6DB8205FE0D98");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.OnCancelled_25E5E66442E815EB40A6DB8205FE0D98
-// (BlueprintCallable, BlueprintEvent)
-
-void UGAB_GenericApplyFullBodyHit_C::OnCancelled_25E5E66442E815EB40A6DB8205FE0D98()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnCancelled_25E5E66442E815EB40A6DB8205FE0D98");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.OnCompleted_25E5E66442E815EB40A6DB8205FE0D98
-// (BlueprintCallable, BlueprintEvent)
-
-void UGAB_GenericApplyFullBodyHit_C::OnCompleted_25E5E66442E815EB40A6DB8205FE0D98()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnCompleted_25E5E66442E815EB40A6DB8205FE0D98");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.OnHitPawn
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           SelfActor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FHitResult                       Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// class AActor*                           SelfActor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
 void UGAB_GenericApplyFullBodyHit_C::OnHitPawn(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnHitPawn");
+		Func = Class->GetFunction("GAB_GenericApplyFullBodyHit_C", "OnHitPawn");
 
 	Params::GAB_GenericApplyFullBodyHit_C_OnHitPawn Parms{};
 
@@ -145,29 +97,77 @@ void UGAB_GenericApplyFullBodyHit_C::OnHitPawn(class AActor* SelfActor, class AA
 }
 
 
+// Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGAB_GenericApplyFullBodyHit_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_GenericApplyFullBodyHit_C", "K2_OnEndAbility");
+
+	Params::GAB_GenericApplyFullBodyHit_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.OnCompleted_25E5E66442E815EB40A6DB8205FE0D98
+// (BlueprintCallable, BlueprintEvent)
+
+void UGAB_GenericApplyFullBodyHit_C::OnCompleted_25E5E66442E815EB40A6DB8205FE0D98()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_GenericApplyFullBodyHit_C", "OnCompleted_25E5E66442E815EB40A6DB8205FE0D98");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.OnBlendOut_25E5E66442E815EB40A6DB8205FE0D98
+// (BlueprintCallable, BlueprintEvent)
+
+void UGAB_GenericApplyFullBodyHit_C::OnBlendOut_25E5E66442E815EB40A6DB8205FE0D98()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_GenericApplyFullBodyHit_C", "OnBlendOut_25E5E66442E815EB40A6DB8205FE0D98");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.OnInterrupted_25E5E66442E815EB40A6DB8205FE0D98
 // (BlueprintCallable, BlueprintEvent)
 
 void UGAB_GenericApplyFullBodyHit_C::OnInterrupted_25E5E66442E815EB40A6DB8205FE0D98()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnInterrupted_25E5E66442E815EB40A6DB8205FE0D98");
+		Func = Class->GetFunction("GAB_GenericApplyFullBodyHit_C", "OnInterrupted_25E5E66442E815EB40A6DB8205FE0D98");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.PickFullBodyHitMontageSection
+// Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.OnCancelled_25E5E66442E815EB40A6DB8205FE0D98
 // (BlueprintCallable, BlueprintEvent)
 
-void UGAB_GenericApplyFullBodyHit_C::PickFullBodyHitMontageSection()
+void UGAB_GenericApplyFullBodyHit_C::OnCancelled_25E5E66442E815EB40A6DB8205FE0D98()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PickFullBodyHitMontageSection");
+		Func = Class->GetFunction("GAB_GenericApplyFullBodyHit_C", "OnCancelled_25E5E66442E815EB40A6DB8205FE0D98");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -176,17 +176,17 @@ void UGAB_GenericApplyFullBodyHit_C::PickFullBodyHitMontageSection()
 // Function GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.K2_CanActivateAbility
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// struct FGameplayAbilityActorInfo        ActorInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
-// struct FGameplayAbilitySpecHandle       Handle                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayTagContainer            RelevantTags                                           (Parm, OutParm)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayAbilityActorInfo& ActorInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+// const struct FGameplayAbilitySpecHandle&Handle                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// struct FGameplayTagContainer*           RelevantTags                                           (Parm, OutParm)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UGAB_GenericApplyFullBodyHit_C::K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayAbilitySpecHandle& Handle, struct FGameplayTagContainer* RelevantTags) const
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("K2_CanActivateAbility");
+		Func = Class->GetFunction("GAB_GenericApplyFullBodyHit_C", "K2_CanActivateAbility");
 
 	Params::GAB_GenericApplyFullBodyHit_C_K2_CanActivateAbility Parms{};
 

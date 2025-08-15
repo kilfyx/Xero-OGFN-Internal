@@ -17,21 +17,97 @@
 namespace SDK
 {
 
-// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.ExecuteUbergraph_AthenaMatchmakingModeButton
-// (Final, UbergraphFunction, HasDefaults)
+// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.RefreshLimitedPoolWarning
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsCrossplayEnabled                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaMatchmakingModeButton_C::ExecuteUbergraph_AthenaMatchmakingModeButton(int32 EntryPoint)
+void UAthenaMatchmakingModeButton_C::RefreshLimitedPoolWarning(bool IsCrossplayEnabled)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaMatchmakingModeButton");
+		Func = Class->GetFunction("AthenaMatchmakingModeButton_C", "RefreshLimitedPoolWarning");
 
-	Params::AthenaMatchmakingModeButton_C_ExecuteUbergraph_AthenaMatchmakingModeButton Parms{};
+	Params::AthenaMatchmakingModeButton_C_RefreshLimitedPoolWarning Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsCrossplayEnabled = IsCrossplayEnabled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.RefreshFillText
+// (Protected, BlueprintCallable, BlueprintEvent)
+
+void UAthenaMatchmakingModeButton_C::RefreshFillText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMatchmakingModeButton_C", "RefreshFillText");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.SetSquadFillText
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bFill                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaMatchmakingModeButton_C::SetSquadFillText(bool bFill)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMatchmakingModeButton_C", "SetSquadFillText");
+
+	Params::AthenaMatchmakingModeButton_C_SetSquadFillText Parms{};
+
+	Parms.bFill = bFill;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.PlaylistChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortPlaylistAthena*              NewPlaylist                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      OverrideName                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UAthenaMatchmakingModeButton_C::PlaylistChanged(class UFortPlaylistAthena* NewPlaylist, const class FText& OverrideName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMatchmakingModeButton_C", "PlaylistChanged");
+
+	Params::AthenaMatchmakingModeButton_C_PlaylistChanged Parms{};
+
+	Parms.NewPlaylist = NewPlaylist;
+	Parms.OverrideName = std::move(OverrideName);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.SetTabLabelInfo
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FFortTabButtonLabelInfo&   TabLabelInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UAthenaMatchmakingModeButton_C::SetTabLabelInfo(const struct FFortTabButtonLabelInfo& TabLabelInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMatchmakingModeButton_C", "SetTabLabelInfo");
+
+	Params::AthenaMatchmakingModeButton_C_SetTabLabelInfo Parms{};
+
+	Parms.TabLabelInfo = std::move(TabLabelInfo);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -40,15 +116,15 @@ void UAthenaMatchmakingModeButton_C::ExecuteUbergraph_AthenaMatchmakingModeButto
 // Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.OnMouseEnter
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UAthenaMatchmakingModeButton_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnMouseEnter");
+		Func = Class->GetFunction("AthenaMatchmakingModeButton_C", "OnMouseEnter");
 
 	Params::AthenaMatchmakingModeButton_C_OnMouseEnter Parms{};
 
@@ -62,14 +138,14 @@ void UAthenaMatchmakingModeButton_C::OnMouseEnter(const struct FGeometry& MyGeom
 // Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.OnMouseLeave
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UAthenaMatchmakingModeButton_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnMouseLeave");
+		Func = Class->GetFunction("AthenaMatchmakingModeButton_C", "OnMouseLeave");
 
 	Params::AthenaMatchmakingModeButton_C_OnMouseLeave Parms{};
 
@@ -79,97 +155,21 @@ void UAthenaMatchmakingModeButton_C::OnMouseLeave(const struct FPointerEvent& Mo
 }
 
 
-// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.PlaylistChanged
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.ExecuteUbergraph_AthenaMatchmakingModeButton
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UFortPlaylistAthena*              NewPlaylist                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FText                             OverrideName                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaMatchmakingModeButton_C::PlaylistChanged(class UFortPlaylistAthena* NewPlaylist, const class FText& OverrideName)
+void UAthenaMatchmakingModeButton_C::ExecuteUbergraph_AthenaMatchmakingModeButton(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PlaylistChanged");
+		Func = Class->GetFunction("AthenaMatchmakingModeButton_C", "ExecuteUbergraph_AthenaMatchmakingModeButton");
 
-	Params::AthenaMatchmakingModeButton_C_PlaylistChanged Parms{};
+	Params::AthenaMatchmakingModeButton_C_ExecuteUbergraph_AthenaMatchmakingModeButton Parms{};
 
-	Parms.NewPlaylist = NewPlaylist;
-	Parms.OverrideName = std::move(OverrideName);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.RefreshFillText
-// (Protected, BlueprintCallable, BlueprintEvent)
-
-void UAthenaMatchmakingModeButton_C::RefreshFillText()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshFillText");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.RefreshLimitedPoolWarning
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsCrossplayEnabled                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaMatchmakingModeButton_C::RefreshLimitedPoolWarning(bool IsCrossplayEnabled)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshLimitedPoolWarning");
-
-	Params::AthenaMatchmakingModeButton_C_RefreshLimitedPoolWarning Parms{};
-
-	Parms.IsCrossplayEnabled = IsCrossplayEnabled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.SetSquadFillText
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bFill                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaMatchmakingModeButton_C::SetSquadFillText(bool bFill)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetSquadFillText");
-
-	Params::AthenaMatchmakingModeButton_C_SetSquadFillText Parms{};
-
-	Parms.bFill = bFill;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.SetTabLabelInfo
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FFortTabButtonLabelInfo          TabLabelInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UAthenaMatchmakingModeButton_C::SetTabLabelInfo(const struct FFortTabButtonLabelInfo& TabLabelInfo)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetTabLabelInfo");
-
-	Params::AthenaMatchmakingModeButton_C_SetTabLabelInfo Parms{};
-
-	Parms.TabLabelInfo = std::move(TabLabelInfo);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

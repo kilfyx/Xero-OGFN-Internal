@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_TrapArmGeneric_C>();
 	}
 };
+static_assert(alignof(UGE_TrapArmGeneric_C) == 0x000008, "Wrong alignment on UGE_TrapArmGeneric_C");
+static_assert(sizeof(UGE_TrapArmGeneric_C) == 0x000800, "Wrong size on UGE_TrapArmGeneric_C");
 
 }
 

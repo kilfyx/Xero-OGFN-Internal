@@ -17,12 +17,86 @@
 namespace SDK
 {
 
+// Function AudioSynesthesia.OnsetNRT.GetChannelOnsetsBetweenTimes
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const float                             InStartSeconds                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             InEndSeconds                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InChannel                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<float>*                          OutOnsetTimestamps                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<float>*                          OutOnsetStrengths                                      (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UOnsetNRT::GetChannelOnsetsBetweenTimes(const float InStartSeconds, const float InEndSeconds, const int32 InChannel, TArray<float>* OutOnsetTimestamps, TArray<float>* OutOnsetStrengths) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnsetNRT", "GetChannelOnsetsBetweenTimes");
+
+	Params::OnsetNRT_GetChannelOnsetsBetweenTimes Parms{};
+
+	Parms.InStartSeconds = InStartSeconds;
+	Parms.InEndSeconds = InEndSeconds;
+	Parms.InChannel = InChannel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutOnsetTimestamps != nullptr)
+		*OutOnsetTimestamps = std::move(Parms.OutOnsetTimestamps);
+
+	if (OutOnsetStrengths != nullptr)
+		*OutOnsetStrengths = std::move(Parms.OutOnsetStrengths);
+}
+
+
+// Function AudioSynesthesia.OnsetNRT.GetNormalizedChannelOnsetsBetweenTimes
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const float                             InStartSeconds                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             InEndSeconds                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InChannel                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<float>*                          OutOnsetTimestamps                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<float>*                          OutOnsetStrengths                                      (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UOnsetNRT::GetNormalizedChannelOnsetsBetweenTimes(const float InStartSeconds, const float InEndSeconds, const int32 InChannel, TArray<float>* OutOnsetTimestamps, TArray<float>* OutOnsetStrengths) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnsetNRT", "GetNormalizedChannelOnsetsBetweenTimes");
+
+	Params::OnsetNRT_GetNormalizedChannelOnsetsBetweenTimes Parms{};
+
+	Parms.InStartSeconds = InStartSeconds;
+	Parms.InEndSeconds = InEndSeconds;
+	Parms.InChannel = InChannel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutOnsetTimestamps != nullptr)
+		*OutOnsetTimestamps = std::move(Parms.OutOnsetTimestamps);
+
+	if (OutOnsetStrengths != nullptr)
+		*OutOnsetStrengths = std::move(Parms.OutOnsetStrengths);
+}
+
+
 // Function AudioSynesthesia.ConstantQNRT.GetChannelConstantQAtTime
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const float                             InSeconds                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const int32                             InChannel                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<float>*                          OutConstantQ                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<float>*                          OutConstantQ                                           (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UConstantQNRT::GetChannelConstantQAtTime(const float InSeconds, const int32 InChannel, TArray<float>* OutConstantQ) const
 {
@@ -53,7 +127,7 @@ void UConstantQNRT::GetChannelConstantQAtTime(const float InSeconds, const int32
 // Parameters:
 // const float                             InSeconds                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const int32                             InChannel                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<float>*                          OutConstantQ                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<float>*                          OutConstantQ                                           (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UConstantQNRT::GetNormalizedChannelConstantQAtTime(const float InSeconds, const int32 InChannel, TArray<float>* OutConstantQ) const
 {
@@ -196,80 +270,6 @@ void ULoudnessNRT::GetNormalizedLoudnessAtTime(const float InSeconds, float* Out
 
 	if (OutLoudness != nullptr)
 		*OutLoudness = Parms.OutLoudness;
-}
-
-
-// Function AudioSynesthesia.OnsetNRT.GetChannelOnsetsBetweenTimes
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const float                             InStartSeconds                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             InEndSeconds                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             InChannel                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<float>*                          OutOnsetTimestamps                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// TArray<float>*                          OutOnsetStrengths                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UOnsetNRT::GetChannelOnsetsBetweenTimes(const float InStartSeconds, const float InEndSeconds, const int32 InChannel, TArray<float>* OutOnsetTimestamps, TArray<float>* OutOnsetStrengths) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnsetNRT", "GetChannelOnsetsBetweenTimes");
-
-	Params::OnsetNRT_GetChannelOnsetsBetweenTimes Parms{};
-
-	Parms.InStartSeconds = InStartSeconds;
-	Parms.InEndSeconds = InEndSeconds;
-	Parms.InChannel = InChannel;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutOnsetTimestamps != nullptr)
-		*OutOnsetTimestamps = std::move(Parms.OutOnsetTimestamps);
-
-	if (OutOnsetStrengths != nullptr)
-		*OutOnsetStrengths = std::move(Parms.OutOnsetStrengths);
-}
-
-
-// Function AudioSynesthesia.OnsetNRT.GetNormalizedChannelOnsetsBetweenTimes
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const float                             InStartSeconds                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             InEndSeconds                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             InChannel                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<float>*                          OutOnsetTimestamps                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// TArray<float>*                          OutOnsetStrengths                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UOnsetNRT::GetNormalizedChannelOnsetsBetweenTimes(const float InStartSeconds, const float InEndSeconds, const int32 InChannel, TArray<float>* OutOnsetTimestamps, TArray<float>* OutOnsetStrengths) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnsetNRT", "GetNormalizedChannelOnsetsBetweenTimes");
-
-	Params::OnsetNRT_GetNormalizedChannelOnsetsBetweenTimes Parms{};
-
-	Parms.InStartSeconds = InStartSeconds;
-	Parms.InEndSeconds = InEndSeconds;
-	Parms.InChannel = InChannel;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutOnsetTimestamps != nullptr)
-		*OutOnsetTimestamps = std::move(Parms.OutOnsetTimestamps);
-
-	if (OutOnsetStrengths != nullptr)
-		*OutOnsetStrengths = std::move(Parms.OutOnsetStrengths);
 }
 
 }

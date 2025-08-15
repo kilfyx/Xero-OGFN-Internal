@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function TabAccountOptions_New.TabAccountOptions_New_C.ExecuteUbergraph_TabAccountOptions_New
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTabAccountOptions_New_C::ExecuteUbergraph_TabAccountOptions_New(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabAccountOptions_New_C", "ExecuteUbergraph_TabAccountOptions_New");
+
+	Params::TabAccountOptions_New_C_ExecuteUbergraph_TabAccountOptions_New Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function TabAccountOptions_New.TabAccountOptions_New_C.BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -39,6 +59,26 @@ void UTabAccountOptions_New_C::BndEvt__Settings_Panel_K2Node_ComponentBoundEvent
 }
 
 
+// Function TabAccountOptions_New.TabAccountOptions_New_C.SettingValueChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTabAccountOptions_New_C::SettingValueChanged(float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabAccountOptions_New_C", "SettingValueChanged");
+
+	Params::TabAccountOptions_New_C_SettingValueChanged Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function TabAccountOptions_New.TabAccountOptions_New_C.CenterOnTab
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
 
@@ -53,21 +93,21 @@ void UTabAccountOptions_New_C::CenterOnTab()
 }
 
 
-// Function TabAccountOptions_New.TabAccountOptions_New_C.ExecuteUbergraph_TabAccountOptions_New
-// (Final, UbergraphFunction)
+// Function TabAccountOptions_New.TabAccountOptions_New_C.OnComplete_E454F9624DC58E051C39D9813595C807
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      UserWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTabAccountOptions_New_C::ExecuteUbergraph_TabAccountOptions_New(int32 EntryPoint)
+void UTabAccountOptions_New_C::OnComplete_E454F9624DC58E051C39D9813595C807(class UUserWidget* UserWidget)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TabAccountOptions_New_C", "ExecuteUbergraph_TabAccountOptions_New");
+		Func = Class->GetFunction("TabAccountOptions_New_C", "OnComplete_E454F9624DC58E051C39D9813595C807");
 
-	Params::TabAccountOptions_New_C_ExecuteUbergraph_TabAccountOptions_New Parms{};
+	Params::TabAccountOptions_New_C_OnComplete_E454F9624DC58E051C39D9813595C807 Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.UserWidget = UserWidget;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -108,26 +148,6 @@ void UTabAccountOptions_New_C::OnComplete_DB10A9674F5CF800B883C79A4229D87C(class
 	Params::TabAccountOptions_New_C_OnComplete_DB10A9674F5CF800B883C79A4229D87C Parms{};
 
 	Parms.UserWidget = UserWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TabAccountOptions_New.TabAccountOptions_New_C.SettingValueChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTabAccountOptions_New_C::SettingValueChanged(float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabAccountOptions_New_C", "SettingValueChanged");
-
-	Params::TabAccountOptions_New_C_SettingValueChanged Parms{};
-
-	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

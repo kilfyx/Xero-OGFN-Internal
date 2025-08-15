@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MinimalTeamDisplay.MinimalTeamDisplay_C
-// 0x0000 (0x0268 - 0x0268)
+// 0x0000 (0x0260 - 0x0260)
 class UMinimalTeamDisplay_C final : public UUserWidget
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UMinimalTeamDisplay_C) == 0x000008, "Wrong alignment on UMinimalTeamDisplay_C");
-static_assert(sizeof(UMinimalTeamDisplay_C) == 0x000268, "Wrong size on UMinimalTeamDisplay_C");
+static_assert(sizeof(UMinimalTeamDisplay_C) == 0x000260, "Wrong size on UMinimalTeamDisplay_C");
 
 }
 

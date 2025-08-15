@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C
-// 0x0050 (0x0270 - 0x0220)
+// 0x0048 (0x0268 - 0x0220)
 class AFort_Entry_Music_Controller_BP_C final : public AFortEntryMusicController
 {
 public:
@@ -30,22 +30,21 @@ public:
 	float                                         FadeOutTime;                                       // 0x0248(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundBase*                             CurrentMusic;                                      // 0x0250(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Is_Music_Activate_Override;                        // 0x0258(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Is_Music_Activate_Override;                        // 0x0258(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_259[0x7];                                      // 0x0259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAthenaMusicPackItemDefinition*         MusicPackToPlayLater;                              // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bCanRetriggerNextMusicPack;                        // 0x0268(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void StartMusic();
+	void Change_Music(class USoundBase* New_Music, float StartTime);
+	void ListenToMusicPacks();
 	void OnMusicPackChanged(const class UAthenaMusicPackItemDefinition* NewMusicPack, float StartTimeOffset);
 	void Lobby_Music_Override(bool Lobby_Music_Activate, class USoundBase* New_Music);
-	void ListenToMusicPacks();
-	void SetCanRetriggerNextMusicPack();
-	void ExecuteUbergraph_Fort_Entry_Music_Controller_BP(int32 EntryPoint);
-	void ReceiveBeginPlay();
+	void MakeNextMusicPackStartFromBeginning();
+	void DelayedPlayMusicPack(class UAthenaMusicPackItemDefinition* MusicPackToPlayLater_0);
+	void ClearDelayedPlayMusicPack();
 	void PlayEquippedMusicPack();
-	void Crossfade_Music(float Start_Time, const struct FGameplayTag& EventTag);
-	void Change_Music(class USoundBase* New_Music, float StartTime, const struct FGameplayTag& Event_Tag);
+	void StartMusic();
+	void ExecuteUbergraph_Fort_Entry_Music_Controller_BP(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -57,6 +56,17 @@ public:
 		return GetDefaultObjImpl<AFort_Entry_Music_Controller_BP_C>();
 	}
 };
+static_assert(alignof(AFort_Entry_Music_Controller_BP_C) == 0x000008, "Wrong alignment on AFort_Entry_Music_Controller_BP_C");
+static_assert(sizeof(AFort_Entry_Music_Controller_BP_C) == 0x000268, "Wrong size on AFort_Entry_Music_Controller_BP_C");
+static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, UberGraphFrame) == 0x000220, "Member 'AFort_Entry_Music_Controller_BP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, Enter_Menu_Loop) == 0x000228, "Member 'AFort_Entry_Music_Controller_BP_C::Enter_Menu_Loop' has a wrong offset!");
+static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, MenuMusic_B) == 0x000230, "Member 'AFort_Entry_Music_Controller_BP_C::MenuMusic_B' has a wrong offset!");
+static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, MenuMusic_A) == 0x000238, "Member 'AFort_Entry_Music_Controller_BP_C::MenuMusic_A' has a wrong offset!");
+static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, LoginMusic) == 0x000240, "Member 'AFort_Entry_Music_Controller_BP_C::LoginMusic' has a wrong offset!");
+static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, FadeOutTime) == 0x000248, "Member 'AFort_Entry_Music_Controller_BP_C::FadeOutTime' has a wrong offset!");
+static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, CurrentMusic) == 0x000250, "Member 'AFort_Entry_Music_Controller_BP_C::CurrentMusic' has a wrong offset!");
+static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, Is_Music_Activate_Override) == 0x000258, "Member 'AFort_Entry_Music_Controller_BP_C::Is_Music_Activate_Override' has a wrong offset!");
+static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, MusicPackToPlayLater) == 0x000260, "Member 'AFort_Entry_Music_Controller_BP_C::MusicPackToPlayLater' has a wrong offset!");
 
 }
 

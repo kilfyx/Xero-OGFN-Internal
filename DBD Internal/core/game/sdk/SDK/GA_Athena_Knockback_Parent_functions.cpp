@@ -17,128 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.CalculateDistanceMod
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   TargetLocation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   KnockOrigin                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float*                                  ModAmount                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   AboveMax                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_Knockback_Parent_C::CalculateDistanceMod(const struct FVector& TargetLocation, const struct FVector& KnockOrigin, float* ModAmount, bool* AboveMax)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "CalculateDistanceMod");
-
-	Params::GA_Athena_Knockback_Parent_C_CalculateDistanceMod Parms{};
-
-	Parms.TargetLocation = std::move(TargetLocation);
-	Parms.KnockOrigin = std::move(KnockOrigin);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ModAmount != nullptr)
-		*ModAmount = Parms.ModAmount;
-
-	if (AboveMax != nullptr)
-		*AboveMax = Parms.AboveMax;
-}
-
-
-// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.CalculateVelocityMaintained
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class AActor*                           LaunchTarget                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   LaunchMagIn                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector*                         ModifiedLaunchSpeed                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_Knockback_Parent_C::CalculateVelocityMaintained(class AActor* LaunchTarget, const struct FVector& LaunchMagIn, struct FVector* ModifiedLaunchSpeed)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "CalculateVelocityMaintained");
-
-	Params::GA_Athena_Knockback_Parent_C_CalculateVelocityMaintained Parms{};
-
-	Parms.LaunchTarget = LaunchTarget;
-	Parms.LaunchMagIn = std::move(LaunchMagIn);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ModifiedLaunchSpeed != nullptr)
-		*ModifiedLaunchSpeed = std::move(Parms.ModifiedLaunchSpeed);
-}
-
-
-// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.CalcVehicleMult
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const struct FVector&                   InVec                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-struct FVector UGA_Athena_Knockback_Parent_C::CalcVehicleMult(const struct FVector& InVec)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "CalcVehicleMult");
-
-	Params::GA_Athena_Knockback_Parent_C_CalcVehicleMult Parms{};
-
-	Parms.InVec = std::move(InVec);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.CheckGravityScale
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const struct FGameplayAttribute&        Attribute_Gravity_Scale                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-float UGA_Athena_Knockback_Parent_C::CheckGravityScale(const struct FGameplayAttribute& Attribute_Gravity_Scale)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "CheckGravityScale");
-
-	Params::GA_Athena_Knockback_Parent_C_CheckGravityScale Parms{};
-
-	Parms.Attribute_Gravity_Scale = std::move(Attribute_Gravity_Scale);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.DoLaunch
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   Vel                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_Knockback_Parent_C::DoLaunch(const struct FVector& Vel)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "DoLaunch");
-
-	Params::GA_Athena_Knockback_Parent_C_DoLaunch Parms{};
-
-	Parms.Vel = std::move(Vel);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.ExecuteUbergraph_GA_Athena_Knockback_Parent
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -173,27 +51,173 @@ void UGA_Athena_Knockback_Parent_C::FailsafeEndAbility()
 }
 
 
-// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.Find Launcher
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.OwningPawnDied
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           DefaultLauncher                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor**                          LauncherOut                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamagedActor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              FHitComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             BoneName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Athena_Knockback_Parent_C::Find_Launcher(class AActor* DefaultLauncher, class AActor** LauncherOut)
+void UGA_Athena_Knockback_Parent_C::OwningPawnDied(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "Find Launcher");
+		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "OwningPawnDied");
 
-	Params::GA_Athena_Knockback_Parent_C_Find_Launcher Parms{};
+	Params::GA_Athena_Knockback_Parent_C_OwningPawnDied Parms{};
 
-	Parms.DefaultLauncher = DefaultLauncher;
+	Parms.DamagedActor = DamagedActor;
+	Parms.Damage = Damage;
+	Parms.InstigatedBy = InstigatedBy;
+	Parms.DamageCauser = DamageCauser;
+	Parms.HitLocation = std::move(HitLocation);
+	Parms.FHitComponent = FHitComponent;
+	Parms.BoneName = BoneName;
+	Parms.Momentum = std::move(Momentum);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.LaunchBuldingActors
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_Knockback_Parent_C::LaunchBuldingActors(class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "LaunchBuldingActors");
+
+	Params::GA_Athena_Knockback_Parent_C_LaunchBuldingActors Parms{};
+
+	Parms.Actor = Actor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.LaunchFinished
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_Knockback_Parent_C::LaunchFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "LaunchFinished");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.DoLaunch
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   vel                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_Knockback_Parent_C::DoLaunch(const struct FVector& vel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "DoLaunch");
+
+	Params::GA_Athena_Knockback_Parent_C_DoLaunch Parms{};
+
+	Parms.vel = std::move(vel);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Athena_Knockback_Parent_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.OnTimedOut_C8C9B5D948887DE06B469CAFC5621C02
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_Knockback_Parent_C::OnTimedOut_C8C9B5D948887DE06B469CAFC5621C02()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "OnTimedOut_C8C9B5D948887DE06B469CAFC5621C02");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.OnTimedOutAndDestinationReached_C8C9B5D948887DE06B469CAFC5621C02
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_Knockback_Parent_C::OnTimedOutAndDestinationReached_C8C9B5D948887DE06B469CAFC5621C02()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "OnTimedOutAndDestinationReached_C8C9B5D948887DE06B469CAFC5621C02");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.OnFinish_78B7A0C144DB79535B9890B75AE5F853
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_Knockback_Parent_C::OnFinish_78B7A0C144DB79535B9890B75AE5F853()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "OnFinish_78B7A0C144DB79535B9890B75AE5F853");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.CalculateVelocityMaintained
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class AActor*                           LaunchTarget                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   LaunchMagIn                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         ModifiedLaunchSpeed                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_Knockback_Parent_C::CalculateVelocityMaintained(class AActor* LaunchTarget, const struct FVector& LaunchMagIn, struct FVector* ModifiedLaunchSpeed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "CalculateVelocityMaintained");
+
+	Params::GA_Athena_Knockback_Parent_C_CalculateVelocityMaintained Parms{};
+
+	Parms.LaunchTarget = LaunchTarget;
+	Parms.LaunchMagIn = std::move(LaunchMagIn);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (LauncherOut != nullptr)
-		*LauncherOut = Parms.LauncherOut;
+	if (ModifiedLaunchSpeed != nullptr)
+		*ModifiedLaunchSpeed = std::move(Parms.ModifiedLaunchSpeed);
 }
 
 
@@ -244,6 +268,59 @@ struct FVector UGA_Athena_Knockback_Parent_C::GetKnockbackOrigin(class AActor* O
 }
 
 
+// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.CalculateDistanceMod
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   TargetLocation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   KnockOrigin                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  ModAmount                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   AboveMax                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGA_Athena_Knockback_Parent_C::CalculateDistanceMod(const struct FVector& TargetLocation, const struct FVector& KnockOrigin, float* ModAmount, bool* AboveMax)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "CalculateDistanceMod");
+
+	Params::GA_Athena_Knockback_Parent_C_CalculateDistanceMod Parms{};
+
+	Parms.TargetLocation = std::move(TargetLocation);
+	Parms.KnockOrigin = std::move(KnockOrigin);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ModAmount != nullptr)
+		*ModAmount = Parms.ModAmount;
+
+	if (AboveMax != nullptr)
+		*AboveMax = Parms.AboveMax;
+}
+
+
+// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.CalcVehicleMult
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FVector&                   InVec                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+struct FVector UGA_Athena_Knockback_Parent_C::CalcVehicleMult(const struct FVector& InVec)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "CalcVehicleMult");
+
+	Params::GA_Athena_Knockback_Parent_C_CalcVehicleMult Parms{};
+
+	Parms.InVec = std::move(InVec);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.GetTargetLocation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -264,127 +341,50 @@ struct FVector UGA_Athena_Knockback_Parent_C::GetTargetLocation()
 }
 
 
-// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_Athena_Knockback_Parent_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.LaunchBuldingActors
-// (BlueprintCallable, BlueprintEvent)
+// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.Find Launcher
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DefaultLauncher                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor**                          LauncherOut                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Athena_Knockback_Parent_C::LaunchBuldingActors(class AActor* Actor)
+void UGA_Athena_Knockback_Parent_C::Find_Launcher(class AActor* DefaultLauncher, class AActor** LauncherOut)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "LaunchBuldingActors");
+		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "Find Launcher");
 
-	Params::GA_Athena_Knockback_Parent_C_LaunchBuldingActors Parms{};
+	Params::GA_Athena_Knockback_Parent_C_Find_Launcher Parms{};
 
-	Parms.Actor = Actor;
+	Parms.DefaultLauncher = DefaultLauncher;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (LauncherOut != nullptr)
+		*LauncherOut = Parms.LauncherOut;
 }
 
 
-// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.LaunchFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_Knockback_Parent_C::LaunchFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "LaunchFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.OnFinish_78B7A0C144DB79535B9890B75AE5F853
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_Knockback_Parent_C::OnFinish_78B7A0C144DB79535B9890B75AE5F853()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "OnFinish_78B7A0C144DB79535B9890B75AE5F853");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.OnTimedOut_C8C9B5D948887DE06B469CAFC5621C02
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_Knockback_Parent_C::OnTimedOut_C8C9B5D948887DE06B469CAFC5621C02()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "OnTimedOut_C8C9B5D948887DE06B469CAFC5621C02");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.OnTimedOutAndDestinationReached_C8C9B5D948887DE06B469CAFC5621C02
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_Knockback_Parent_C::OnTimedOutAndDestinationReached_C8C9B5D948887DE06B469CAFC5621C02()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "OnTimedOutAndDestinationReached_C8C9B5D948887DE06B469CAFC5621C02");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.OwningPawnDied
-// (BlueprintCallable, BlueprintEvent)
+// Function GA_Athena_Knockback_Parent.GA_Athena_Knockback_Parent_C.CheckGravityScale
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AActor*                           DamagedActor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              FHitComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             BoneName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayAttribute&        Attribute_Gravity_Scale                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Athena_Knockback_Parent_C::OwningPawnDied(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum)
+float UGA_Athena_Knockback_Parent_C::CheckGravityScale(const struct FGameplayAttribute& Attribute_Gravity_Scale)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "OwningPawnDied");
+		Func = Class->GetFunction("GA_Athena_Knockback_Parent_C", "CheckGravityScale");
 
-	Params::GA_Athena_Knockback_Parent_C_OwningPawnDied Parms{};
+	Params::GA_Athena_Knockback_Parent_C_CheckGravityScale Parms{};
 
-	Parms.DamagedActor = DamagedActor;
-	Parms.Damage = Damage;
-	Parms.InstigatedBy = InstigatedBy;
-	Parms.DamageCauser = DamageCauser;
-	Parms.HitLocation = std::move(HitLocation);
-	Parms.FHitComponent = FHitComponent;
-	Parms.BoneName = BoneName;
-	Parms.Momentum = std::move(Momentum);
+	Parms.Attribute_Gravity_Scale = std::move(Attribute_Gravity_Scale);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

@@ -10,62 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "ValetRuntime_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "FortniteGame_structs.hpp"
+#include "ValetRuntime_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function ValetRuntime.DagwoodNetworkPhysicsComponent.SetPendingInputCmd
-// 0x001C (0x001C - 0x0000)
-struct DagwoodNetworkPhysicsComponent_SetPendingInputCmd final
-{
-public:
-	struct FFortDagwoodCmd                        In;                                                // 0x0000(0x001C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function ValetRuntime.DagwoodNetworkPhysicsComponent.SetState_GT
-// 0x0230 (0x0230 - 0x0000)
-struct DagwoodNetworkPhysicsComponent_SetState_GT final
-{
-public:
-	struct FDagwoodInPersistent                   In;                                                // 0x0000(0x0230)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function ValetRuntime.DagwoodNetworkPhysicsComponent.GetPendingInputCmd
-// 0x001C (0x001C - 0x0000)
-struct DagwoodNetworkPhysicsComponent_GetPendingInputCmd final
-{
-public:
-	struct FFortDagwoodCmd                        ReturnValue;                                       // 0x0000(0x001C)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function ValetRuntime.DagwoodNetworkPhysicsComponent.GetState_GT
-// 0x0230 (0x0230 - 0x0000)
-struct DagwoodNetworkPhysicsComponent_GetState_GT final
-{
-public:
-	struct FDagwoodInPersistent                   ReturnValue;                                       // 0x0000(0x0230)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function ValetRuntime.DagwoodNetworkPhysicsComponent.GetState_PT
-// 0x0158 (0x0158 - 0x0000)
-struct DagwoodNetworkPhysicsComponent_GetState_PT final
-{
-public:
-	struct FDagwoodState_PT                       ReturnValue;                                       // 0x0000(0x0158)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function ValetRuntime.FortAthenaMutator_OverrideValetVehicleParameters.OnPlaylistLoaded
-// 0x0028 (0x0028 - 0x0000)
-struct FortAthenaMutator_OverrideValetVehicleParameters_OnPlaylistLoaded final
-{
-public:
-	class FName                                   PlaylistName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  PlaylistContainerTags;                             // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
 
 // Function ValetRuntime.FortContextualTutorial_VehicleValetLowFuel.HandleVehicleStateChanged
 // 0x0018 (0x0018 - 0x0000)
@@ -76,23 +26,44 @@ public:
 	class AActor*                                 NewVehicle;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 OldVehicle;                                        // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortContextualTutorial_VehicleValetLowFuel_HandleVehicleStateChanged) == 0x000008, "Wrong alignment on FortContextualTutorial_VehicleValetLowFuel_HandleVehicleStateChanged");
+static_assert(sizeof(FortContextualTutorial_VehicleValetLowFuel_HandleVehicleStateChanged) == 0x000018, "Wrong size on FortContextualTutorial_VehicleValetLowFuel_HandleVehicleStateChanged");
+static_assert(offsetof(FortContextualTutorial_VehicleValetLowFuel_HandleVehicleStateChanged, PlayerPawn) == 0x000000, "Member 'FortContextualTutorial_VehicleValetLowFuel_HandleVehicleStateChanged::PlayerPawn' has a wrong offset!");
+static_assert(offsetof(FortContextualTutorial_VehicleValetLowFuel_HandleVehicleStateChanged, NewVehicle) == 0x000008, "Member 'FortContextualTutorial_VehicleValetLowFuel_HandleVehicleStateChanged::NewVehicle' has a wrong offset!");
+static_assert(offsetof(FortContextualTutorial_VehicleValetLowFuel_HandleVehicleStateChanged, OldVehicle) == 0x000010, "Member 'FortContextualTutorial_VehicleValetLowFuel_HandleVehicleStateChanged::OldVehicle' has a wrong offset!");
 
-// Function ValetRuntime.FortDagwoodVehicle.GetCurrentDagwoodRuntimeProperties
-// 0x0088 (0x0088 - 0x0000)
-struct FortDagwoodVehicle_GetCurrentDagwoodRuntimeProperties final
+// Function ValetRuntime.FortDagwoodVehicle.ApplyTireMod
+// 0x0008 (0x0008 - 0x0000)
+struct FortDagwoodVehicle_ApplyTireMod final
 {
 public:
-	struct FDagwoodRuntimeModifiers               ReturnValue;                                       // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           NewTireModTag;                                     // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_ApplyTireMod) == 0x000004, "Wrong alignment on FortDagwoodVehicle_ApplyTireMod");
+static_assert(sizeof(FortDagwoodVehicle_ApplyTireMod) == 0x000008, "Wrong size on FortDagwoodVehicle_ApplyTireMod");
+static_assert(offsetof(FortDagwoodVehicle_ApplyTireMod, NewTireModTag) == 0x000000, "Member 'FortDagwoodVehicle_ApplyTireMod::NewTireModTag' has a wrong offset!");
 
-// Function ValetRuntime.FortDagwoodVehicle.HandleCurrentPlaylistLoaded
-// 0x0028 (0x0028 - 0x0000)
-struct FortDagwoodVehicle_HandleCurrentPlaylistLoaded final
+// Function ValetRuntime.FortDagwoodVehicle.ApplyVehicleModMountedGun
+// 0x0008 (0x0008 - 0x0000)
+struct FortDagwoodVehicle_ApplyVehicleModMountedGun final
 {
 public:
-	class FName                                   PlaylistName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  PlaylistContextTags;                               // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UFortDagwoodModsConfigs*                ModConfigsRef;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_ApplyVehicleModMountedGun) == 0x000008, "Wrong alignment on FortDagwoodVehicle_ApplyVehicleModMountedGun");
+static_assert(sizeof(FortDagwoodVehicle_ApplyVehicleModMountedGun) == 0x000008, "Wrong size on FortDagwoodVehicle_ApplyVehicleModMountedGun");
+static_assert(offsetof(FortDagwoodVehicle_ApplyVehicleModMountedGun, ModConfigsRef) == 0x000000, "Member 'FortDagwoodVehicle_ApplyVehicleModMountedGun::ModConfigsRef' has a wrong offset!");
+
+// Function ValetRuntime.FortDagwoodVehicle.GetCurrentRuntimeProperties
+// 0x0050 (0x0050 - 0x0000)
+struct FortDagwoodVehicle_GetCurrentRuntimeProperties final
+{
+public:
+	struct FVehicleRuntimeModifiers               ReturnValue;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FortDagwoodVehicle_GetCurrentRuntimeProperties) == 0x000008, "Wrong alignment on FortDagwoodVehicle_GetCurrentRuntimeProperties");
+static_assert(sizeof(FortDagwoodVehicle_GetCurrentRuntimeProperties) == 0x000050, "Wrong size on FortDagwoodVehicle_GetCurrentRuntimeProperties");
+static_assert(offsetof(FortDagwoodVehicle_GetCurrentRuntimeProperties, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_GetCurrentRuntimeProperties::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.MakeOperable
 // 0x0001 (0x0001 - 0x0000)
@@ -101,6 +72,9 @@ struct FortDagwoodVehicle_MakeOperable final
 public:
 	bool                                          bAddGas;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_MakeOperable) == 0x000001, "Wrong alignment on FortDagwoodVehicle_MakeOperable");
+static_assert(sizeof(FortDagwoodVehicle_MakeOperable) == 0x000001, "Wrong size on FortDagwoodVehicle_MakeOperable");
+static_assert(offsetof(FortDagwoodVehicle_MakeOperable, bAddGas) == 0x000000, "Member 'FortDagwoodVehicle_MakeOperable::bAddGas' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.NativeOnFuelChanged
 // 0x0008 (0x0008 - 0x0000)
@@ -110,6 +84,10 @@ public:
 	float                                         NewFuelPercent;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OldFuelPercent;                                    // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_NativeOnFuelChanged) == 0x000004, "Wrong alignment on FortDagwoodVehicle_NativeOnFuelChanged");
+static_assert(sizeof(FortDagwoodVehicle_NativeOnFuelChanged) == 0x000008, "Wrong size on FortDagwoodVehicle_NativeOnFuelChanged");
+static_assert(offsetof(FortDagwoodVehicle_NativeOnFuelChanged, NewFuelPercent) == 0x000000, "Member 'FortDagwoodVehicle_NativeOnFuelChanged::NewFuelPercent' has a wrong offset!");
+static_assert(offsetof(FortDagwoodVehicle_NativeOnFuelChanged, OldFuelPercent) == 0x000004, "Member 'FortDagwoodVehicle_NativeOnFuelChanged::OldFuelPercent' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.OnClientBeginAltInteract
 // 0x0008 (0x0008 - 0x0000)
@@ -118,6 +96,9 @@ struct FortDagwoodVehicle_OnClientBeginAltInteract final
 public:
 	class AFortPawn*                              Pawn;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_OnClientBeginAltInteract) == 0x000008, "Wrong alignment on FortDagwoodVehicle_OnClientBeginAltInteract");
+static_assert(sizeof(FortDagwoodVehicle_OnClientBeginAltInteract) == 0x000008, "Wrong size on FortDagwoodVehicle_OnClientBeginAltInteract");
+static_assert(offsetof(FortDagwoodVehicle_OnClientBeginAltInteract, Pawn) == 0x000000, "Member 'FortDagwoodVehicle_OnClientBeginAltInteract::Pawn' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.OnDestroyedPropFromCollision
 // 0x0008 (0x0008 - 0x0000)
@@ -126,6 +107,9 @@ struct FortDagwoodVehicle_OnDestroyedPropFromCollision final
 public:
 	const class ABuildingActor*                   BuildingHitActor;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_OnDestroyedPropFromCollision) == 0x000008, "Wrong alignment on FortDagwoodVehicle_OnDestroyedPropFromCollision");
+static_assert(sizeof(FortDagwoodVehicle_OnDestroyedPropFromCollision) == 0x000008, "Wrong size on FortDagwoodVehicle_OnDestroyedPropFromCollision");
+static_assert(offsetof(FortDagwoodVehicle_OnDestroyedPropFromCollision, BuildingHitActor) == 0x000000, "Member 'FortDagwoodVehicle_OnDestroyedPropFromCollision::BuildingHitActor' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.OnGainedFuel
 // 0x0004 (0x0004 - 0x0000)
@@ -134,24 +118,9 @@ struct FortDagwoodVehicle_OnGainedFuel final
 public:
 	float                                         NewPercent;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function ValetRuntime.FortDagwoodVehicle.OnHoldSelfDestructStarted
-// 0x0010 (0x0010 - 0x0000)
-struct FortDagwoodVehicle_OnHoldSelfDestructStarted final
-{
-public:
-	class AFortPawn*                              DriverPawn;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ExitDuration;                                      // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function ValetRuntime.FortDagwoodVehicle.OnHoldSelfDestructStopped
-// 0x0008 (0x0008 - 0x0000)
-struct FortDagwoodVehicle_OnHoldSelfDestructStopped final
-{
-public:
-	class AFortPawn*                              DriverPawn;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FortDagwoodVehicle_OnGainedFuel) == 0x000004, "Wrong alignment on FortDagwoodVehicle_OnGainedFuel");
+static_assert(sizeof(FortDagwoodVehicle_OnGainedFuel) == 0x000004, "Wrong size on FortDagwoodVehicle_OnGainedFuel");
+static_assert(offsetof(FortDagwoodVehicle_OnGainedFuel, NewPercent) == 0x000000, "Member 'FortDagwoodVehicle_OnGainedFuel::NewPercent' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.OnInoperableChanged
 // 0x0001 (0x0001 - 0x0000)
@@ -160,40 +129,53 @@ struct FortDagwoodVehicle_OnInoperableChanged final
 public:
 	bool                                          bInoperable;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_OnInoperableChanged) == 0x000001, "Wrong alignment on FortDagwoodVehicle_OnInoperableChanged");
+static_assert(sizeof(FortDagwoodVehicle_OnInoperableChanged) == 0x000001, "Wrong size on FortDagwoodVehicle_OnInoperableChanged");
+static_assert(offsetof(FortDagwoodVehicle_OnInoperableChanged, bInoperable) == 0x000000, "Member 'FortDagwoodVehicle_OnInoperableChanged::bInoperable' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.OnPoppedTire
-// 0x0008 (0x0008 - 0x0000)
+// 0x0004 (0x0004 - 0x0000)
 struct FortDagwoodVehicle_OnPoppedTire final
 {
 public:
-	int32                                         TireIndex;                                         // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFakeTire;                                         // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         TireIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_OnPoppedTire) == 0x000004, "Wrong alignment on FortDagwoodVehicle_OnPoppedTire");
+static_assert(sizeof(FortDagwoodVehicle_OnPoppedTire) == 0x000004, "Wrong size on FortDagwoodVehicle_OnPoppedTire");
+static_assert(offsetof(FortDagwoodVehicle_OnPoppedTire, TireIndex) == 0x000000, "Member 'FortDagwoodVehicle_OnPoppedTire::TireIndex' has a wrong offset!");
 
-// Function ValetRuntime.FortDagwoodVehicle.OnRep_DagwoodRuntimeModifiers
-// 0x0088 (0x0088 - 0x0000)
-struct FortDagwoodVehicle_OnRep_DagwoodRuntimeModifiers final
+// Function ValetRuntime.FortDagwoodVehicle.OnRep_MountedWeapon
+// 0x0068 (0x0068 - 0x0000)
+struct FortDagwoodVehicle_OnRep_MountedWeapon final
 {
 public:
-	struct FDagwoodRuntimeModifiers               PrevMods;                                          // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMountedGun                            PrevMountedWeapon;                                 // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_OnRep_MountedWeapon) == 0x000008, "Wrong alignment on FortDagwoodVehicle_OnRep_MountedWeapon");
+static_assert(sizeof(FortDagwoodVehicle_OnRep_MountedWeapon) == 0x000068, "Wrong size on FortDagwoodVehicle_OnRep_MountedWeapon");
+static_assert(offsetof(FortDagwoodVehicle_OnRep_MountedWeapon, PrevMountedWeapon) == 0x000000, "Member 'FortDagwoodVehicle_OnRep_MountedWeapon::PrevMountedWeapon' has a wrong offset!");
 
-// Function ValetRuntime.FortDagwoodVehicle.OnRep_FakeTires
-// 0x0010 (0x0010 - 0x0000)
-struct FortDagwoodVehicle_OnRep_FakeTires final
+// Function ValetRuntime.FortDagwoodVehicle.OnRep_RuntimeModifiers
+// 0x0050 (0x0050 - 0x0000)
+struct FortDagwoodVehicle_OnRep_RuntimeModifiers final
 {
 public:
-	TArray<ETireStates>                           PrevTireStates;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVehicleRuntimeModifiers               PrevMods;                                          // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_OnRep_RuntimeModifiers) == 0x000008, "Wrong alignment on FortDagwoodVehicle_OnRep_RuntimeModifiers");
+static_assert(sizeof(FortDagwoodVehicle_OnRep_RuntimeModifiers) == 0x000050, "Wrong size on FortDagwoodVehicle_OnRep_RuntimeModifiers");
+static_assert(offsetof(FortDagwoodVehicle_OnRep_RuntimeModifiers, PrevMods) == 0x000000, "Member 'FortDagwoodVehicle_OnRep_RuntimeModifiers::PrevMods' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.OnRep_Tires
 // 0x0010 (0x0010 - 0x0000)
 struct FortDagwoodVehicle_OnRep_Tires final
 {
 public:
-	TArray<ETireStates>                           PrevTireStates;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<ETireStates>                           PrevTireStates;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_OnRep_Tires) == 0x000008, "Wrong alignment on FortDagwoodVehicle_OnRep_Tires");
+static_assert(sizeof(FortDagwoodVehicle_OnRep_Tires) == 0x000010, "Wrong size on FortDagwoodVehicle_OnRep_Tires");
+static_assert(offsetof(FortDagwoodVehicle_OnRep_Tires, PrevTireStates) == 0x000000, "Member 'FortDagwoodVehicle_OnRep_Tires::PrevTireStates' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.OnRimScrapeDamage
 // 0x0004 (0x0004 - 0x0000)
@@ -202,6 +184,9 @@ struct FortDagwoodVehicle_OnRimScrapeDamage final
 public:
 	int32                                         TireIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_OnRimScrapeDamage) == 0x000004, "Wrong alignment on FortDagwoodVehicle_OnRimScrapeDamage");
+static_assert(sizeof(FortDagwoodVehicle_OnRimScrapeDamage) == 0x000004, "Wrong size on FortDagwoodVehicle_OnRimScrapeDamage");
+static_assert(offsetof(FortDagwoodVehicle_OnRimScrapeDamage, TireIndex) == 0x000000, "Member 'FortDagwoodVehicle_OnRimScrapeDamage::TireIndex' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.OnServerAltInteract
 // 0x0008 (0x0008 - 0x0000)
@@ -210,6 +195,20 @@ struct FortDagwoodVehicle_OnServerAltInteract final
 public:
 	class AFortPawn*                              Pawn;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_OnServerAltInteract) == 0x000008, "Wrong alignment on FortDagwoodVehicle_OnServerAltInteract");
+static_assert(sizeof(FortDagwoodVehicle_OnServerAltInteract) == 0x000008, "Wrong size on FortDagwoodVehicle_OnServerAltInteract");
+static_assert(offsetof(FortDagwoodVehicle_OnServerAltInteract, Pawn) == 0x000000, "Member 'FortDagwoodVehicle_OnServerAltInteract::Pawn' has a wrong offset!");
+
+// Function ValetRuntime.FortDagwoodVehicle.OnSpawnLeakProjectile
+// 0x0008 (0x0008 - 0x0000)
+struct FortDagwoodVehicle_OnSpawnLeakProjectile final
+{
+public:
+	class AFortProjectileBase*                    SpawnProjectile;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FortDagwoodVehicle_OnSpawnLeakProjectile) == 0x000008, "Wrong alignment on FortDagwoodVehicle_OnSpawnLeakProjectile");
+static_assert(sizeof(FortDagwoodVehicle_OnSpawnLeakProjectile) == 0x000008, "Wrong size on FortDagwoodVehicle_OnSpawnLeakProjectile");
+static_assert(offsetof(FortDagwoodVehicle_OnSpawnLeakProjectile, SpawnProjectile) == 0x000000, "Member 'FortDagwoodVehicle_OnSpawnLeakProjectile::SpawnProjectile' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.OnTickAudioController
 // 0x0004 (0x0004 - 0x0000)
@@ -218,6 +217,9 @@ struct FortDagwoodVehicle_OnTickAudioController final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_OnTickAudioController) == 0x000004, "Wrong alignment on FortDagwoodVehicle_OnTickAudioController");
+static_assert(sizeof(FortDagwoodVehicle_OnTickAudioController) == 0x000004, "Wrong size on FortDagwoodVehicle_OnTickAudioController");
+static_assert(offsetof(FortDagwoodVehicle_OnTickAudioController, DeltaTime) == 0x000000, "Member 'FortDagwoodVehicle_OnTickAudioController::DeltaTime' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.OnTickAudioFade
 // 0x0004 (0x0004 - 0x0000)
@@ -226,41 +228,31 @@ struct FortDagwoodVehicle_OnTickAudioFade final
 public:
 	float                                         FadeParam;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_OnTickAudioFade) == 0x000004, "Wrong alignment on FortDagwoodVehicle_OnTickAudioFade");
+static_assert(sizeof(FortDagwoodVehicle_OnTickAudioFade) == 0x000004, "Wrong size on FortDagwoodVehicle_OnTickAudioFade");
+static_assert(offsetof(FortDagwoodVehicle_OnTickAudioFade, FadeParam) == 0x000000, "Member 'FortDagwoodVehicle_OnTickAudioFade::FadeParam' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.ServerAddRuntimeGearsInfo
 // 0x0010 (0x0010 - 0x0000)
 struct FortDagwoodVehicle_ServerAddRuntimeGearsInfo final
 {
 public:
-	struct FRuntimeGearInfo                       GearInfo;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRuntimeGearInfo                       GearInfo;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-
-// Function ValetRuntime.FortDagwoodVehicle.ServerSetDestructionInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FortDagwoodVehicle_ServerSetDestructionInfo final
-{
-public:
-	float                                         SelfDestructTime;                                  // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTimeZeroHealth;                                 // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTimeSelfDestructCleanup;                        // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTimeExplosion;                                  // 0x000C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function ValetRuntime.FortDagwoodVehicle.ServerSetFadeDuration
-// 0x0004 (0x0004 - 0x0000)
-struct FortDagwoodVehicle_ServerSetFadeDuration final
-{
-public:
-	float                                         NewFadeDuration;                                   // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FortDagwoodVehicle_ServerAddRuntimeGearsInfo) == 0x000004, "Wrong alignment on FortDagwoodVehicle_ServerAddRuntimeGearsInfo");
+static_assert(sizeof(FortDagwoodVehicle_ServerAddRuntimeGearsInfo) == 0x000010, "Wrong size on FortDagwoodVehicle_ServerAddRuntimeGearsInfo");
+static_assert(offsetof(FortDagwoodVehicle_ServerAddRuntimeGearsInfo, GearInfo) == 0x000000, "Member 'FortDagwoodVehicle_ServerAddRuntimeGearsInfo::GearInfo' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.ServerSetRuntimeBoostInfo
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct FortDagwoodVehicle_ServerSetRuntimeBoostInfo final
 {
 public:
-	struct FRuntimeBoostInfo                      BoostInfo;                                         // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRuntimeBoostInfo                      BoostInfo;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_ServerSetRuntimeBoostInfo) == 0x000004, "Wrong alignment on FortDagwoodVehicle_ServerSetRuntimeBoostInfo");
+static_assert(sizeof(FortDagwoodVehicle_ServerSetRuntimeBoostInfo) == 0x000010, "Wrong size on FortDagwoodVehicle_ServerSetRuntimeBoostInfo");
+static_assert(offsetof(FortDagwoodVehicle_ServerSetRuntimeBoostInfo, BoostInfo) == 0x000000, "Member 'FortDagwoodVehicle_ServerSetRuntimeBoostInfo::BoostInfo' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.ServerSetRuntimeDriveInfo
 // 0x0008 (0x0008 - 0x0000)
@@ -270,14 +262,21 @@ public:
 	float                                         MaxIncline;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxTilt;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_ServerSetRuntimeDriveInfo) == 0x000004, "Wrong alignment on FortDagwoodVehicle_ServerSetRuntimeDriveInfo");
+static_assert(sizeof(FortDagwoodVehicle_ServerSetRuntimeDriveInfo) == 0x000008, "Wrong size on FortDagwoodVehicle_ServerSetRuntimeDriveInfo");
+static_assert(offsetof(FortDagwoodVehicle_ServerSetRuntimeDriveInfo, MaxIncline) == 0x000000, "Member 'FortDagwoodVehicle_ServerSetRuntimeDriveInfo::MaxIncline' has a wrong offset!");
+static_assert(offsetof(FortDagwoodVehicle_ServerSetRuntimeDriveInfo, MaxTilt) == 0x000004, "Member 'FortDagwoodVehicle_ServerSetRuntimeDriveInfo::MaxTilt' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.ServerSetRuntimeFuelInfo
 // 0x000C (0x000C - 0x0000)
 struct FortDagwoodVehicle_ServerSetRuntimeFuelInfo final
 {
 public:
-	struct FRuntimeFuelInfo                       FuelInfo;                                          // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRuntimeFuelInfo                       FuelInfo;                                          // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_ServerSetRuntimeFuelInfo) == 0x000004, "Wrong alignment on FortDagwoodVehicle_ServerSetRuntimeFuelInfo");
+static_assert(sizeof(FortDagwoodVehicle_ServerSetRuntimeFuelInfo) == 0x00000C, "Wrong size on FortDagwoodVehicle_ServerSetRuntimeFuelInfo");
+static_assert(offsetof(FortDagwoodVehicle_ServerSetRuntimeFuelInfo, FuelInfo) == 0x000000, "Member 'FortDagwoodVehicle_ServerSetRuntimeFuelInfo::FuelInfo' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.ServerSetRuntimeGravity
 // 0x0004 (0x0004 - 0x0000)
@@ -286,25 +285,31 @@ struct FortDagwoodVehicle_ServerSetRuntimeGravity final
 public:
 	float                                         GravMult;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_ServerSetRuntimeGravity) == 0x000004, "Wrong alignment on FortDagwoodVehicle_ServerSetRuntimeGravity");
+static_assert(sizeof(FortDagwoodVehicle_ServerSetRuntimeGravity) == 0x000004, "Wrong size on FortDagwoodVehicle_ServerSetRuntimeGravity");
+static_assert(offsetof(FortDagwoodVehicle_ServerSetRuntimeGravity, GravMult) == 0x000000, "Member 'FortDagwoodVehicle_ServerSetRuntimeGravity::GravMult' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.ServerSetRuntimeSpringsInfo
-// 0x0020 (0x0020 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct FortDagwoodVehicle_ServerSetRuntimeSpringsInfo final
 {
 public:
-	struct FRuntimeSpringsInfo                    SpringsInfo;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRuntimeSpringsInfo                    SpringsInfo;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_ServerSetRuntimeSpringsInfo) == 0x000004, "Wrong alignment on FortDagwoodVehicle_ServerSetRuntimeSpringsInfo");
+static_assert(sizeof(FortDagwoodVehicle_ServerSetRuntimeSpringsInfo) == 0x000010, "Wrong size on FortDagwoodVehicle_ServerSetRuntimeSpringsInfo");
+static_assert(offsetof(FortDagwoodVehicle_ServerSetRuntimeSpringsInfo, SpringsInfo) == 0x000000, "Member 'FortDagwoodVehicle_ServerSetRuntimeSpringsInfo::SpringsInfo' has a wrong offset!");
 
-// Function ValetRuntime.FortDagwoodVehicle.SetDamageInfoOnServer
-// 0x0004 (0x0004 - 0x0000)
-struct FortDagwoodVehicle_SetDamageInfoOnServer final
+// Function ValetRuntime.FortDagwoodVehicle.ServerSetTireModTag
+// 0x0008 (0x0008 - 0x0000)
+struct FortDagwoodVehicle_ServerSetTireModTag final
 {
 public:
-	bool                                          bInDamageFriendlyVehicles;                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInDamageOtherVehicles;                            // 0x0001(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInDamageOwnVehicle;                               // 0x0002(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInDamageAllowedFromOtherVehicle;                  // 0x0003(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           TireModTag;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_ServerSetTireModTag) == 0x000004, "Wrong alignment on FortDagwoodVehicle_ServerSetTireModTag");
+static_assert(sizeof(FortDagwoodVehicle_ServerSetTireModTag) == 0x000008, "Wrong size on FortDagwoodVehicle_ServerSetTireModTag");
+static_assert(offsetof(FortDagwoodVehicle_ServerSetTireModTag, TireModTag) == 0x000000, "Member 'FortDagwoodVehicle_ServerSetTireModTag::TireModTag' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.SetFuel
 // 0x0004 (0x0004 - 0x0000)
@@ -313,6 +318,20 @@ struct FortDagwoodVehicle_SetFuel final
 public:
 	float                                         NewFuel;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_SetFuel) == 0x000004, "Wrong alignment on FortDagwoodVehicle_SetFuel");
+static_assert(sizeof(FortDagwoodVehicle_SetFuel) == 0x000004, "Wrong size on FortDagwoodVehicle_SetFuel");
+static_assert(offsetof(FortDagwoodVehicle_SetFuel, NewFuel) == 0x000000, "Member 'FortDagwoodVehicle_SetFuel::NewFuel' has a wrong offset!");
+
+// Function ValetRuntime.FortDagwoodVehicle.SetNormalizedAudioRPM
+// 0x0004 (0x0004 - 0x0000)
+struct FortDagwoodVehicle_SetNormalizedAudioRPM final
+{
+public:
+	float                                         InRPM;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FortDagwoodVehicle_SetNormalizedAudioRPM) == 0x000004, "Wrong alignment on FortDagwoodVehicle_SetNormalizedAudioRPM");
+static_assert(sizeof(FortDagwoodVehicle_SetNormalizedAudioRPM) == 0x000004, "Wrong size on FortDagwoodVehicle_SetNormalizedAudioRPM");
+static_assert(offsetof(FortDagwoodVehicle_SetNormalizedAudioRPM, InRPM) == 0x000000, "Member 'FortDagwoodVehicle_SetNormalizedAudioRPM::InRPM' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.SetOnFire
 // 0x0001 (0x0001 - 0x0000)
@@ -321,14 +340,20 @@ struct FortDagwoodVehicle_SetOnFire final
 public:
 	bool                                          bNewFire;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_SetOnFire) == 0x000001, "Wrong alignment on FortDagwoodVehicle_SetOnFire");
+static_assert(sizeof(FortDagwoodVehicle_SetOnFire) == 0x000001, "Wrong size on FortDagwoodVehicle_SetOnFire");
+static_assert(offsetof(FortDagwoodVehicle_SetOnFire, bNewFire) == 0x000000, "Member 'FortDagwoodVehicle_SetOnFire::bNewFire' has a wrong offset!");
 
-// Function ValetRuntime.FortDagwoodVehicle.SetValetAudioController
-// 0x0008 (0x0008 - 0x0000)
-struct FortDagwoodVehicle_SetValetAudioController final
+// Function ValetRuntime.FortDagwoodVehicle.AreAnyTiresPopped
+// 0x0001 (0x0001 - 0x0000)
+struct FortDagwoodVehicle_AreAnyTiresPopped final
 {
 public:
-	class AFortValetAudioController*              ValetAudio_0;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_AreAnyTiresPopped) == 0x000001, "Wrong alignment on FortDagwoodVehicle_AreAnyTiresPopped");
+static_assert(sizeof(FortDagwoodVehicle_AreAnyTiresPopped) == 0x000001, "Wrong size on FortDagwoodVehicle_AreAnyTiresPopped");
+static_assert(offsetof(FortDagwoodVehicle_AreAnyTiresPopped, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_AreAnyTiresPopped::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.ForwardOrReverseInputPressed
 // 0x0001 (0x0001 - 0x0000)
@@ -337,6 +362,9 @@ struct FortDagwoodVehicle_ForwardOrReverseInputPressed final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_ForwardOrReverseInputPressed) == 0x000001, "Wrong alignment on FortDagwoodVehicle_ForwardOrReverseInputPressed");
+static_assert(sizeof(FortDagwoodVehicle_ForwardOrReverseInputPressed) == 0x000001, "Wrong size on FortDagwoodVehicle_ForwardOrReverseInputPressed");
+static_assert(offsetof(FortDagwoodVehicle_ForwardOrReverseInputPressed, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_ForwardOrReverseInputPressed::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.GetBumpiness
 // 0x0004 (0x0004 - 0x0000)
@@ -345,14 +373,9 @@ struct FortDagwoodVehicle_GetBumpiness final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function ValetRuntime.FortDagwoodVehicle.GetExplosionDelay
-// 0x0004 (0x0004 - 0x0000)
-struct FortDagwoodVehicle_GetExplosionDelay final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FortDagwoodVehicle_GetBumpiness) == 0x000004, "Wrong alignment on FortDagwoodVehicle_GetBumpiness");
+static_assert(sizeof(FortDagwoodVehicle_GetBumpiness) == 0x000004, "Wrong size on FortDagwoodVehicle_GetBumpiness");
+static_assert(offsetof(FortDagwoodVehicle_GetBumpiness, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_GetBumpiness::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.GetFuel
 // 0x0004 (0x0004 - 0x0000)
@@ -361,6 +384,9 @@ struct FortDagwoodVehicle_GetFuel final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_GetFuel) == 0x000004, "Wrong alignment on FortDagwoodVehicle_GetFuel");
+static_assert(sizeof(FortDagwoodVehicle_GetFuel) == 0x000004, "Wrong size on FortDagwoodVehicle_GetFuel");
+static_assert(offsetof(FortDagwoodVehicle_GetFuel, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_GetFuel::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.GetFuelCapacity
 // 0x0004 (0x0004 - 0x0000)
@@ -369,22 +395,42 @@ struct FortDagwoodVehicle_GetFuelCapacity final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_GetFuelCapacity) == 0x000004, "Wrong alignment on FortDagwoodVehicle_GetFuelCapacity");
+static_assert(sizeof(FortDagwoodVehicle_GetFuelCapacity) == 0x000004, "Wrong size on FortDagwoodVehicle_GetFuelCapacity");
+static_assert(offsetof(FortDagwoodVehicle_GetFuelCapacity, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_GetFuelCapacity::ReturnValue' has a wrong offset!");
 
-// Function ValetRuntime.FortDagwoodVehicle.GetMaxZeroHealthTime
+// Function ValetRuntime.FortDagwoodVehicle.GetHUDTopSpeed
 // 0x0004 (0x0004 - 0x0000)
-struct FortDagwoodVehicle_GetMaxZeroHealthTime final
+struct FortDagwoodVehicle_GetHUDTopSpeed final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_GetHUDTopSpeed) == 0x000004, "Wrong alignment on FortDagwoodVehicle_GetHUDTopSpeed");
+static_assert(sizeof(FortDagwoodVehicle_GetHUDTopSpeed) == 0x000004, "Wrong size on FortDagwoodVehicle_GetHUDTopSpeed");
+static_assert(offsetof(FortDagwoodVehicle_GetHUDTopSpeed, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_GetHUDTopSpeed::ReturnValue' has a wrong offset!");
 
-// Function ValetRuntime.FortDagwoodVehicle.GetMiddleAxleForwardAdjust
+// Function ValetRuntime.FortDagwoodVehicle.GetModSocketNames
+// 0x0010 (0x0010 - 0x0000)
+struct FortDagwoodVehicle_GetModSocketNames final
+{
+public:
+	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FortDagwoodVehicle_GetModSocketNames) == 0x000008, "Wrong alignment on FortDagwoodVehicle_GetModSocketNames");
+static_assert(sizeof(FortDagwoodVehicle_GetModSocketNames) == 0x000010, "Wrong size on FortDagwoodVehicle_GetModSocketNames");
+static_assert(offsetof(FortDagwoodVehicle_GetModSocketNames, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_GetModSocketNames::ReturnValue' has a wrong offset!");
+
+// Function ValetRuntime.FortDagwoodVehicle.GetNormalizedAudioRPM
 // 0x0004 (0x0004 - 0x0000)
-struct FortDagwoodVehicle_GetMiddleAxleForwardAdjust final
+struct FortDagwoodVehicle_GetNormalizedAudioRPM final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_GetNormalizedAudioRPM) == 0x000004, "Wrong alignment on FortDagwoodVehicle_GetNormalizedAudioRPM");
+static_assert(sizeof(FortDagwoodVehicle_GetNormalizedAudioRPM) == 0x000004, "Wrong size on FortDagwoodVehicle_GetNormalizedAudioRPM");
+static_assert(offsetof(FortDagwoodVehicle_GetNormalizedAudioRPM, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_GetNormalizedAudioRPM::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.GetOnFire
 // 0x0001 (0x0001 - 0x0000)
@@ -393,22 +439,20 @@ struct FortDagwoodVehicle_GetOnFire final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_GetOnFire) == 0x000001, "Wrong alignment on FortDagwoodVehicle_GetOnFire");
+static_assert(sizeof(FortDagwoodVehicle_GetOnFire) == 0x000001, "Wrong size on FortDagwoodVehicle_GetOnFire");
+static_assert(offsetof(FortDagwoodVehicle_GetOnFire, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_GetOnFire::ReturnValue' has a wrong offset!");
 
-// Function ValetRuntime.FortDagwoodVehicle.GetSelfDestructCleanupDelay
-// 0x0004 (0x0004 - 0x0000)
-struct FortDagwoodVehicle_GetSelfDestructCleanupDelay final
+// Function ValetRuntime.FortDagwoodVehicle.GetPlayerFacingName
+// 0x0010 (0x0010 - 0x0000)
+struct FortDagwoodVehicle_GetPlayerFacingName final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function ValetRuntime.FortDagwoodVehicle.GetSelfDestructDelay
-// 0x0004 (0x0004 - 0x0000)
-struct FortDagwoodVehicle_GetSelfDestructDelay final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FortDagwoodVehicle_GetPlayerFacingName) == 0x000008, "Wrong alignment on FortDagwoodVehicle_GetPlayerFacingName");
+static_assert(sizeof(FortDagwoodVehicle_GetPlayerFacingName) == 0x000010, "Wrong size on FortDagwoodVehicle_GetPlayerFacingName");
+static_assert(offsetof(FortDagwoodVehicle_GetPlayerFacingName, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_GetPlayerFacingName::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.GetTireHealthPercent
 // 0x0008 (0x0008 - 0x0000)
@@ -419,6 +463,10 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_GetTireHealthPercent) == 0x000004, "Wrong alignment on FortDagwoodVehicle_GetTireHealthPercent");
+static_assert(sizeof(FortDagwoodVehicle_GetTireHealthPercent) == 0x000008, "Wrong size on FortDagwoodVehicle_GetTireHealthPercent");
+static_assert(offsetof(FortDagwoodVehicle_GetTireHealthPercent, TireIndex) == 0x000000, "Member 'FortDagwoodVehicle_GetTireHealthPercent::TireIndex' has a wrong offset!");
+static_assert(offsetof(FortDagwoodVehicle_GetTireHealthPercent, ReturnValue) == 0x000004, "Member 'FortDagwoodVehicle_GetTireHealthPercent::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.GetTireState
 // 0x0008 (0x0008 - 0x0000)
@@ -429,6 +477,10 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortDagwoodVehicle_GetTireState) == 0x000004, "Wrong alignment on FortDagwoodVehicle_GetTireState");
+static_assert(sizeof(FortDagwoodVehicle_GetTireState) == 0x000008, "Wrong size on FortDagwoodVehicle_GetTireState");
+static_assert(offsetof(FortDagwoodVehicle_GetTireState, TireIndex) == 0x000000, "Member 'FortDagwoodVehicle_GetTireState::TireIndex' has a wrong offset!");
+static_assert(offsetof(FortDagwoodVehicle_GetTireState, ReturnValue) == 0x000004, "Member 'FortDagwoodVehicle_GetTireState::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.GetTireSurface
 // 0x0002 (0x0002 - 0x0000)
@@ -438,6 +490,21 @@ public:
 	ETireLocations                                TireIndex;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETireSurfaces                                 ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_GetTireSurface) == 0x000001, "Wrong alignment on FortDagwoodVehicle_GetTireSurface");
+static_assert(sizeof(FortDagwoodVehicle_GetTireSurface) == 0x000002, "Wrong size on FortDagwoodVehicle_GetTireSurface");
+static_assert(offsetof(FortDagwoodVehicle_GetTireSurface, TireIndex) == 0x000000, "Member 'FortDagwoodVehicle_GetTireSurface::TireIndex' has a wrong offset!");
+static_assert(offsetof(FortDagwoodVehicle_GetTireSurface, ReturnValue) == 0x000001, "Member 'FortDagwoodVehicle_GetTireSurface::ReturnValue' has a wrong offset!");
+
+// Function ValetRuntime.FortDagwoodVehicle.IsInoperable
+// 0x0001 (0x0001 - 0x0000)
+struct FortDagwoodVehicle_IsInoperable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FortDagwoodVehicle_IsInoperable) == 0x000001, "Wrong alignment on FortDagwoodVehicle_IsInoperable");
+static_assert(sizeof(FortDagwoodVehicle_IsInoperable) == 0x000001, "Wrong size on FortDagwoodVehicle_IsInoperable");
+static_assert(offsetof(FortDagwoodVehicle_IsInoperable, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_IsInoperable::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.IsNativeBPTickEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -446,6 +513,9 @@ struct FortDagwoodVehicle_IsNativeBPTickEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_IsNativeBPTickEnabled) == 0x000001, "Wrong alignment on FortDagwoodVehicle_IsNativeBPTickEnabled");
+static_assert(sizeof(FortDagwoodVehicle_IsNativeBPTickEnabled) == 0x000001, "Wrong size on FortDagwoodVehicle_IsNativeBPTickEnabled");
+static_assert(offsetof(FortDagwoodVehicle_IsNativeBPTickEnabled, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_IsNativeBPTickEnabled::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.IsOffroad
 // 0x0001 (0x0001 - 0x0000)
@@ -454,6 +524,9 @@ struct FortDagwoodVehicle_IsOffroad final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_IsOffroad) == 0x000001, "Wrong alignment on FortDagwoodVehicle_IsOffroad");
+static_assert(sizeof(FortDagwoodVehicle_IsOffroad) == 0x000001, "Wrong size on FortDagwoodVehicle_IsOffroad");
+static_assert(offsetof(FortDagwoodVehicle_IsOffroad, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_IsOffroad::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.IsOnDirt
 // 0x0001 (0x0001 - 0x0000)
@@ -462,6 +535,9 @@ struct FortDagwoodVehicle_IsOnDirt final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_IsOnDirt) == 0x000001, "Wrong alignment on FortDagwoodVehicle_IsOnDirt");
+static_assert(sizeof(FortDagwoodVehicle_IsOnDirt) == 0x000001, "Wrong size on FortDagwoodVehicle_IsOnDirt");
+static_assert(offsetof(FortDagwoodVehicle_IsOnDirt, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_IsOnDirt::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.IsOnLandscape
 // 0x0001 (0x0001 - 0x0000)
@@ -470,6 +546,9 @@ struct FortDagwoodVehicle_IsOnLandscape final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_IsOnLandscape) == 0x000001, "Wrong alignment on FortDagwoodVehicle_IsOnLandscape");
+static_assert(sizeof(FortDagwoodVehicle_IsOnLandscape) == 0x000001, "Wrong size on FortDagwoodVehicle_IsOnLandscape");
+static_assert(offsetof(FortDagwoodVehicle_IsOnLandscape, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_IsOnLandscape::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.IsOnRoad
 // 0x0001 (0x0001 - 0x0000)
@@ -478,6 +557,9 @@ struct FortDagwoodVehicle_IsOnRoad final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_IsOnRoad) == 0x000001, "Wrong alignment on FortDagwoodVehicle_IsOnRoad");
+static_assert(sizeof(FortDagwoodVehicle_IsOnRoad) == 0x000001, "Wrong size on FortDagwoodVehicle_IsOnRoad");
+static_assert(offsetof(FortDagwoodVehicle_IsOnRoad, ReturnValue) == 0x000000, "Member 'FortDagwoodVehicle_IsOnRoad::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.IsTireSkidding
 // 0x0014 (0x0014 - 0x0000)
@@ -491,6 +573,13 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortDagwoodVehicle_IsTireSkidding) == 0x000004, "Wrong alignment on FortDagwoodVehicle_IsTireSkidding");
+static_assert(sizeof(FortDagwoodVehicle_IsTireSkidding) == 0x000014, "Wrong size on FortDagwoodVehicle_IsTireSkidding");
+static_assert(offsetof(FortDagwoodVehicle_IsTireSkidding, MinSpeedForSkid) == 0x000000, "Member 'FortDagwoodVehicle_IsTireSkidding::MinSpeedForSkid' has a wrong offset!");
+static_assert(offsetof(FortDagwoodVehicle_IsTireSkidding, AngleForSkid) == 0x000004, "Member 'FortDagwoodVehicle_IsTireSkidding::AngleForSkid' has a wrong offset!");
+static_assert(offsetof(FortDagwoodVehicle_IsTireSkidding, SpeedForPeelout) == 0x000008, "Member 'FortDagwoodVehicle_IsTireSkidding::SpeedForPeelout' has a wrong offset!");
+static_assert(offsetof(FortDagwoodVehicle_IsTireSkidding, SpeedForBraking) == 0x00000C, "Member 'FortDagwoodVehicle_IsTireSkidding::SpeedForBraking' has a wrong offset!");
+static_assert(offsetof(FortDagwoodVehicle_IsTireSkidding, ReturnValue) == 0x000010, "Member 'FortDagwoodVehicle_IsTireSkidding::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.IsVehicleAcceleratingWithSpeedThreshold
 // 0x0008 (0x0008 - 0x0000)
@@ -501,6 +590,10 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortDagwoodVehicle_IsVehicleAcceleratingWithSpeedThreshold) == 0x000004, "Wrong alignment on FortDagwoodVehicle_IsVehicleAcceleratingWithSpeedThreshold");
+static_assert(sizeof(FortDagwoodVehicle_IsVehicleAcceleratingWithSpeedThreshold) == 0x000008, "Wrong size on FortDagwoodVehicle_IsVehicleAcceleratingWithSpeedThreshold");
+static_assert(offsetof(FortDagwoodVehicle_IsVehicleAcceleratingWithSpeedThreshold, SpeedThreshold) == 0x000000, "Member 'FortDagwoodVehicle_IsVehicleAcceleratingWithSpeedThreshold::SpeedThreshold' has a wrong offset!");
+static_assert(offsetof(FortDagwoodVehicle_IsVehicleAcceleratingWithSpeedThreshold, ReturnValue) == 0x000004, "Member 'FortDagwoodVehicle_IsVehicleAcceleratingWithSpeedThreshold::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicle.NativeCalculateAccelRumbleIntensity
 // 0x0008 (0x0008 - 0x0000)
@@ -510,6 +603,10 @@ public:
 	float                                         MaxIntensity;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicle_NativeCalculateAccelRumbleIntensity) == 0x000004, "Wrong alignment on FortDagwoodVehicle_NativeCalculateAccelRumbleIntensity");
+static_assert(sizeof(FortDagwoodVehicle_NativeCalculateAccelRumbleIntensity) == 0x000008, "Wrong size on FortDagwoodVehicle_NativeCalculateAccelRumbleIntensity");
+static_assert(offsetof(FortDagwoodVehicle_NativeCalculateAccelRumbleIntensity, MaxIntensity) == 0x000000, "Member 'FortDagwoodVehicle_NativeCalculateAccelRumbleIntensity::MaxIntensity' has a wrong offset!");
+static_assert(offsetof(FortDagwoodVehicle_NativeCalculateAccelRumbleIntensity, ReturnValue) == 0x000004, "Member 'FortDagwoodVehicle_NativeCalculateAccelRumbleIntensity::ReturnValue' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicleManager.CustomHandleActorStreamedInEditor
 // 0x0008 (0x0008 - 0x0000)
@@ -518,6 +615,9 @@ struct FortDagwoodVehicleManager_CustomHandleActorStreamedInEditor final
 public:
 	class AActor*                                 SourceActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicleManager_CustomHandleActorStreamedInEditor) == 0x000008, "Wrong alignment on FortDagwoodVehicleManager_CustomHandleActorStreamedInEditor");
+static_assert(sizeof(FortDagwoodVehicleManager_CustomHandleActorStreamedInEditor) == 0x000008, "Wrong size on FortDagwoodVehicleManager_CustomHandleActorStreamedInEditor");
+static_assert(offsetof(FortDagwoodVehicleManager_CustomHandleActorStreamedInEditor, SourceActor) == 0x000000, "Member 'FortDagwoodVehicleManager_CustomHandleActorStreamedInEditor::SourceActor' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicleManager.OnVehicleSpawned
 // 0x0008 (0x0008 - 0x0000)
@@ -526,6 +626,9 @@ struct FortDagwoodVehicleManager_OnVehicleSpawned final
 public:
 	class AFortAthenaVehicle*                     Vehicle;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortDagwoodVehicleManager_OnVehicleSpawned) == 0x000008, "Wrong alignment on FortDagwoodVehicleManager_OnVehicleSpawned");
+static_assert(sizeof(FortDagwoodVehicleManager_OnVehicleSpawned) == 0x000008, "Wrong size on FortDagwoodVehicleManager_OnVehicleSpawned");
+static_assert(offsetof(FortDagwoodVehicleManager_OnVehicleSpawned, Vehicle) == 0x000000, "Member 'FortDagwoodVehicleManager_OnVehicleSpawned::Vehicle' has a wrong offset!");
 
 // Function ValetRuntime.FortDagwoodVehicleManager.OnVehicleSpawnsUpdated
 // 0x0020 (0x0020 - 0x0000)
@@ -533,10 +636,15 @@ struct FortDagwoodVehicleManager_OnVehicleSpawnsUpdated final
 {
 public:
 	class UFortVehicleItemDefinition*             VehicleItemDef;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                         SpawnedVehicles;                                   // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         SpawnedVehicles;                                   // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NewVehicleCount;                                   // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortDagwoodVehicleManager_OnVehicleSpawnsUpdated) == 0x000008, "Wrong alignment on FortDagwoodVehicleManager_OnVehicleSpawnsUpdated");
+static_assert(sizeof(FortDagwoodVehicleManager_OnVehicleSpawnsUpdated) == 0x000020, "Wrong size on FortDagwoodVehicleManager_OnVehicleSpawnsUpdated");
+static_assert(offsetof(FortDagwoodVehicleManager_OnVehicleSpawnsUpdated, VehicleItemDef) == 0x000000, "Member 'FortDagwoodVehicleManager_OnVehicleSpawnsUpdated::VehicleItemDef' has a wrong offset!");
+static_assert(offsetof(FortDagwoodVehicleManager_OnVehicleSpawnsUpdated, SpawnedVehicles) == 0x000008, "Member 'FortDagwoodVehicleManager_OnVehicleSpawnsUpdated::SpawnedVehicles' has a wrong offset!");
+static_assert(offsetof(FortDagwoodVehicleManager_OnVehicleSpawnsUpdated, NewVehicleCount) == 0x000018, "Member 'FortDagwoodVehicleManager_OnVehicleSpawnsUpdated::NewVehicleCount' has a wrong offset!");
 
 // Function ValetRuntime.FortValetAudioController.CacheValetVehicle
 // 0x0008 (0x0008 - 0x0000)
@@ -545,6 +653,9 @@ struct FortValetAudioController_CacheValetVehicle final
 public:
 	class AFortDagwoodVehicle*                    InVehicle;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortValetAudioController_CacheValetVehicle) == 0x000008, "Wrong alignment on FortValetAudioController_CacheValetVehicle");
+static_assert(sizeof(FortValetAudioController_CacheValetVehicle) == 0x000008, "Wrong size on FortValetAudioController_CacheValetVehicle");
+static_assert(offsetof(FortValetAudioController_CacheValetVehicle, InVehicle) == 0x000000, "Member 'FortValetAudioController_CacheValetVehicle::InVehicle' has a wrong offset!");
 
 // Function ValetRuntime.FortValetAudioController.OnSuspensionCollision_Native
 // 0x0008 (0x0008 - 0x0000)
@@ -555,14 +666,10 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OutMagnitude;                                      // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function ValetRuntime.FortValetAudioController.OnTireModApplied
-// 0x01A8 (0x01A8 - 0x0000)
-struct FortValetAudioController_OnTireModApplied final
-{
-public:
-	struct FTireInfo                              AppliedTireMod;                                    // 0x0000(0x01A8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FortValetAudioController_OnSuspensionCollision_Native) == 0x000004, "Wrong alignment on FortValetAudioController_OnSuspensionCollision_Native");
+static_assert(sizeof(FortValetAudioController_OnSuspensionCollision_Native) == 0x000008, "Wrong size on FortValetAudioController_OnSuspensionCollision_Native");
+static_assert(offsetof(FortValetAudioController_OnSuspensionCollision_Native, OutResult) == 0x000000, "Member 'FortValetAudioController_OnSuspensionCollision_Native::OutResult' has a wrong offset!");
+static_assert(offsetof(FortValetAudioController_OnSuspensionCollision_Native, OutMagnitude) == 0x000004, "Member 'FortValetAudioController_OnSuspensionCollision_Native::OutMagnitude' has a wrong offset!");
 
 }
 

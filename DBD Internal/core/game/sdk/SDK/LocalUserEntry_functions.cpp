@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function LocalUserEntry.LocalUserEntry_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void ULocalUserEntry_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LocalUserEntry_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function LocalUserEntry.LocalUserEntry_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void ULocalUserEntry_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LocalUserEntry_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function LocalUserEntry.LocalUserEntry_C.ExecuteUbergraph_LocalUserEntry
 // (Final, UbergraphFunction)
 // Parameters:
@@ -65,26 +37,6 @@ void ULocalUserEntry_C::ExecuteUbergraph_LocalUserEntry(int32 EntryPoint)
 }
 
 
-// Function LocalUserEntry.LocalUserEntry_C.HandleOnlineIndicatorView
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ELocalUserOnlineStatus                  InLocalUserOnlineStatus                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULocalUserEntry_C::HandleOnlineIndicatorView(ELocalUserOnlineStatus InLocalUserOnlineStatus)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LocalUserEntry_C", "HandleOnlineIndicatorView");
-
-	Params::LocalUserEntry_C_HandleOnlineIndicatorView Parms{};
-
-	Parms.InLocalUserOnlineStatus = InLocalUserOnlineStatus;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function LocalUserEntry.LocalUserEntry_C.OnOnlineStatusChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -100,6 +52,54 @@ void ULocalUserEntry_C::OnOnlineStatusChanged(ELocalUserOnlineStatus OnlineStatu
 	Params::LocalUserEntry_C_OnOnlineStatusChanged Parms{};
 
 	Parms.OnlineStatus = OnlineStatus;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LocalUserEntry.LocalUserEntry_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void ULocalUserEntry_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LocalUserEntry_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LocalUserEntry.LocalUserEntry_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void ULocalUserEntry_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LocalUserEntry_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LocalUserEntry.LocalUserEntry_C.HandleOnlineIndicatorView
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ELocalUserOnlineStatus                  InLocalUserOnlineStatus                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULocalUserEntry_C::HandleOnlineIndicatorView(ELocalUserOnlineStatus InLocalUserOnlineStatus)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LocalUserEntry_C", "HandleOnlineIndicatorView");
+
+	Params::LocalUserEntry_C_HandleOnlineIndicatorView Parms{};
+
+	Parms.InLocalUserOnlineStatus = InLocalUserOnlineStatus;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

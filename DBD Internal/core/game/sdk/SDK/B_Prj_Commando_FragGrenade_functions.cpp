@@ -17,57 +17,6 @@
 namespace SDK
 {
 
-// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.Bind Destroy Grenade
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Commando_FragGrenade_C::Bind_Destroy_Grenade()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "Bind Destroy Grenade");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.CalcGrenadeSpeed
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// float                                   Angle                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-float AB_Prj_Commando_FragGrenade_C::CalcGrenadeSpeed(float Angle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "CalcGrenadeSpeed");
-
-	Params::B_Prj_Commando_FragGrenade_C_CalcGrenadeSpeed Parms{};
-
-	Parms.Angle = Angle;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.CheckKeepOutAndCluster
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Commando_FragGrenade_C::CheckKeepOutAndCluster()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "CheckKeepOutAndCluster");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.ExecuteUbergraph_B_Prj_Commando_FragGrenade
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -88,6 +37,96 @@ void AB_Prj_Commando_FragGrenade_C::ExecuteUbergraph_B_Prj_Commando_FragGrenade(
 }
 
 
+// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.SendExplodedEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_Commando_FragGrenade_C::SendExplodedEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "SendExplodedEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.ReceiveActorBeginOverlap
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Prj_Commando_FragGrenade_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "ReceiveActorBeginOverlap");
+
+	Params::B_Prj_Commando_FragGrenade_C_ReceiveActorBeginOverlap Parms{};
+
+	Parms.OtherActor = OtherActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.CheckKeepOutAndCluster
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_Commando_FragGrenade_C::CheckKeepOutAndCluster()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "CheckKeepOutAndCluster");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void AB_Prj_Commando_FragGrenade_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.TriggerDoExplsoion
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_Commando_FragGrenade_C::TriggerDoExplsoion()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "TriggerDoExplsoion");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.Unbind Destroy Grenade
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_Commando_FragGrenade_C::Unbind_Destroy_Grenade()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "Unbind Destroy Grenade");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.Force On Exploded Effects
 // (BlueprintCallable, BlueprintEvent)
 
@@ -97,6 +136,20 @@ void AB_Prj_Commando_FragGrenade_C::Force_On_Exploded_Effects()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "Force On Exploded Effects");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.Bind Destroy Grenade
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_Commando_FragGrenade_C::Bind_Destroy_Grenade()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "Bind Destroy Grenade");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,82 +195,6 @@ void AB_Prj_Commando_FragGrenade_C::OnBounce(const struct FHitResult& Hit)
 }
 
 
-// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.OnExploded
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-
-void AB_Prj_Commando_FragGrenade_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "OnExploded");
-
-	Params::B_Prj_Commando_FragGrenade_C_OnExploded Parms{};
-
-	Parms.HitActors = std::move(HitActors);
-	Parms.HitResults = std::move(HitResults);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.OnRep_StoredHit
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Commando_FragGrenade_C::OnRep_StoredHit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "OnRep_StoredHit");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.OnStop
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void AB_Prj_Commando_FragGrenade_C::OnStop(const struct FHitResult& Hit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "OnStop");
-
-	Params::B_Prj_Commando_FragGrenade_C_OnStop Parms{};
-
-	Parms.Hit = std::move(Hit);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.ReceiveActorBeginOverlap
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Prj_Commando_FragGrenade_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "ReceiveActorBeginOverlap");
-
-	Params::B_Prj_Commando_FragGrenade_C_ReceiveActorBeginOverlap Parms{};
-
-	Parms.OtherActor = OtherActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.ReceiveAnyDamage
 // (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
 // Parameters:
@@ -244,6 +221,62 @@ void AB_Prj_Commando_FragGrenade_C::ReceiveAnyDamage(float Damage, const class U
 }
 
 
+// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.OnExploded
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+
+void AB_Prj_Commando_FragGrenade_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "OnExploded");
+
+	Params::B_Prj_Commando_FragGrenade_C_OnExploded Parms{};
+
+	Parms.HitActors = std::move(HitActors);
+	Parms.HitResults = std::move(HitResults);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.Stop_Rotation
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_Commando_FragGrenade_C::Stop_Rotation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "Stop_Rotation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.OnStop
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void AB_Prj_Commando_FragGrenade_C::OnStop(const struct FHitResult& Hit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "OnStop");
+
+	Params::B_Prj_Commando_FragGrenade_C_OnStop Parms{};
+
+	Parms.Hit = std::move(Hit);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -258,31 +291,54 @@ void AB_Prj_Commando_FragGrenade_C::ReceiveBeginPlay()
 }
 
 
-// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
+// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void AB_Prj_Commando_FragGrenade_C::ReceiveDestroyed()
+void AB_Prj_Commando_FragGrenade_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "ReceiveDestroyed");
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.SendExplodedEvent
+// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.OnRep_StoredHit
 // (BlueprintCallable, BlueprintEvent)
 
-void AB_Prj_Commando_FragGrenade_C::SendExplodedEvent()
+void AB_Prj_Commando_FragGrenade_C::OnRep_StoredHit()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "SendExplodedEvent");
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "OnRep_StoredHit");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.CalcGrenadeSpeed
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                                   Angle                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+float AB_Prj_Commando_FragGrenade_C::CalcGrenadeSpeed(float Angle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "CalcGrenadeSpeed");
+
+	Params::B_Prj_Commando_FragGrenade_C_CalcGrenadeSpeed Parms{};
+
+	Parms.Angle = Angle;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -309,62 +365,6 @@ void AB_Prj_Commando_FragGrenade_C::SpawnKeepOut()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "SpawnKeepOut");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.Stop_Rotation
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Commando_FragGrenade_C::Stop_Rotation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "Stop_Rotation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.TriggerDoExplsoion
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Commando_FragGrenade_C::TriggerDoExplsoion()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "TriggerDoExplsoion");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.Unbind Destroy Grenade
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Commando_FragGrenade_C::Unbind_Destroy_Grenade()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "Unbind Destroy Grenade");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Commando_FragGrenade_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Commando_FragGrenade_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

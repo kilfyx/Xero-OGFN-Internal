@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaRichColorVariantPicker.AthenaRichColorVariantPicker_C
-// 0x0000 (0x03B8 - 0x03B8)
+// 0x0000 (0x0338 - 0x0338)
 class UAthenaRichColorVariantPicker_C final : public UFortVariantRichColorPicker
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UAthenaRichColorVariantPicker_C) == 0x000008, "Wrong alignment on UAthenaRichColorVariantPicker_C");
-static_assert(sizeof(UAthenaRichColorVariantPicker_C) == 0x0003B8, "Wrong size on UAthenaRichColorVariantPicker_C");
+static_assert(sizeof(UAthenaRichColorVariantPicker_C) == 0x000338, "Wrong size on UAthenaRichColorVariantPicker_C");
 
 }
 

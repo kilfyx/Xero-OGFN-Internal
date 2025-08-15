@@ -10,23 +10,34 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
+#include "GameplayTags_structs.hpp"
 #include "Curie_structs.hpp"
+#include "Engine_classes.hpp"
+#include "ModularGameplay_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "GameplayTags_structs.hpp"
-#include "ModularGameplay_classes.hpp"
 
 
 namespace SDK
 {
 
 // Class Curie.CurieComponent
-// 0x0018 (0x00C8 - 0x00B0)
+// 0x0030 (0x00E0 - 0x00B0)
 class UCurieComponent : public UActorComponent
 {
 public:
-	uint8                                         Pad_B0[0x18];                                      // 0x00B0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B0[0x8];                                       // 0x00B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           Identifier;                                        // 0x00B8(0x0008)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	ECurieEntityType                              EntityType;                                        // 0x00C0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C1[0x1F];                                      // 0x00C1(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void HandleOwningActorDestroyed(class AActor* Owner);
+
+	bool HasAnyElementAttached(const struct FGameplayTagContainer& ElementIdentifiers) const;
+	bool HasElementAttached(const struct FGameplayTag& ElementIdentifier) const;
+	bool HasStateAttached(const struct FGameplayTag& StateIdentifier) const;
+	bool IsInteractingWithElement(const struct FGameplayTag& Element) const;
 
 public:
 	static class UClass* StaticClass()
@@ -38,35 +49,58 @@ public:
 		return GetDefaultObjImpl<UCurieComponent>();
 	}
 };
+static_assert(alignof(UCurieComponent) == 0x000008, "Wrong alignment on UCurieComponent");
+static_assert(sizeof(UCurieComponent) == 0x0000E0, "Wrong size on UCurieComponent");
+static_assert(offsetof(UCurieComponent, Identifier) == 0x0000B8, "Member 'UCurieComponent::Identifier' has a wrong offset!");
+static_assert(offsetof(UCurieComponent, EntityType) == 0x0000C0, "Member 'UCurieComponent::EntityType' has a wrong offset!");
 
-// Class Curie.CurieElementGameplayEffectOwner
-// 0x0000 (0x0028 - 0x0028)
-class UCurieElementGameplayEffectOwner : public UObject
+// Class Curie.CurieElementBehavior
+// 0x0070 (0x0098 - 0x0028)
+class UCurieElementBehavior : public UObject
 {
+public:
+	TArray<struct FCurieEffectContainer>          OnBeginAttachmentEffects;                          // 0x0028(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FCurieEffectContainer>          OngoingAttachmentEffects;                          // 0x0038(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FCurieEffectContainer>          OnEndAttachmentEffects;                            // 0x0048(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FCurieEffectContainer>          OnInstantInteractionEffects;                       // 0x0058(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FCurieEffectContainer>          OnBeginInteractionEffects;                         // 0x0068(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FCurieEffectContainer>          OngoingInteractionEffects;                         // 0x0078(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FCurieEffectContainer>          OnEndInteractionEffects;                           // 0x0088(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CurieElementGameplayEffectOwner">();
+		return StaticClassImpl<"CurieElementBehavior">();
 	}
-	static class UCurieElementGameplayEffectOwner* GetDefaultObj()
+	static class UCurieElementBehavior* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UCurieElementGameplayEffectOwner>();
+		return GetDefaultObjImpl<UCurieElementBehavior>();
 	}
 };
+static_assert(alignof(UCurieElementBehavior) == 0x000008, "Wrong alignment on UCurieElementBehavior");
+static_assert(sizeof(UCurieElementBehavior) == 0x000098, "Wrong size on UCurieElementBehavior");
+static_assert(offsetof(UCurieElementBehavior, OnBeginAttachmentEffects) == 0x000028, "Member 'UCurieElementBehavior::OnBeginAttachmentEffects' has a wrong offset!");
+static_assert(offsetof(UCurieElementBehavior, OngoingAttachmentEffects) == 0x000038, "Member 'UCurieElementBehavior::OngoingAttachmentEffects' has a wrong offset!");
+static_assert(offsetof(UCurieElementBehavior, OnEndAttachmentEffects) == 0x000048, "Member 'UCurieElementBehavior::OnEndAttachmentEffects' has a wrong offset!");
+static_assert(offsetof(UCurieElementBehavior, OnInstantInteractionEffects) == 0x000058, "Member 'UCurieElementBehavior::OnInstantInteractionEffects' has a wrong offset!");
+static_assert(offsetof(UCurieElementBehavior, OnBeginInteractionEffects) == 0x000068, "Member 'UCurieElementBehavior::OnBeginInteractionEffects' has a wrong offset!");
+static_assert(offsetof(UCurieElementBehavior, OngoingInteractionEffects) == 0x000078, "Member 'UCurieElementBehavior::OngoingInteractionEffects' has a wrong offset!");
+static_assert(offsetof(UCurieElementBehavior, OnEndInteractionEffects) == 0x000088, "Member 'UCurieElementBehavior::OnEndInteractionEffects' has a wrong offset!");
 
 // Class Curie.CurieEntityStateBehavior
 // 0x0098 (0x00C0 - 0x0028)
-class UCurieEntityStateBehavior : public UCurieElementGameplayEffectOwner
+class UCurieEntityStateBehavior : public UObject
 {
 public:
 	struct FGameplayTagContainer                  RequiredAttachedElements;                          // 0x0028(0x0020)(Edit, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	struct FGameplayTagContainer                  RequiredInteractingElements;                       // 0x0048(0x0020)(Edit, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	struct FGameplayTagContainer                  AllowedAttachmentEntityTypes;                      // 0x0068(0x0020)(Edit, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FCurieEffectContainer>          OnBeginEffects;                                    // 0x0088(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FCurieEffectContainer>          OngoingEffects;                                    // 0x0098(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FCurieEffectContainer>          OnEndEffects;                                      // 0x00A8(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	uint8                                         bShouldDetach : 1;                                 // 0x00B8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bSkipExecuteAttachDetach : 1;                      // 0x00B8(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	TArray<struct FCurieEffectContainer>          OnBeginEffects;                                    // 0x0088(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FCurieEffectContainer>          OngoingEffects;                                    // 0x0098(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FCurieEffectContainer>          OnEndEffects;                                      // 0x00A8(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         bIsConsumable : 1;                                 // 0x00B8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bShouldDetach : 1;                                 // 0x00B8(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bSkipExecuteAttachDetach : 1;                      // 0x00B8(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -79,6 +113,14 @@ public:
 		return GetDefaultObjImpl<UCurieEntityStateBehavior>();
 	}
 };
+static_assert(alignof(UCurieEntityStateBehavior) == 0x000008, "Wrong alignment on UCurieEntityStateBehavior");
+static_assert(sizeof(UCurieEntityStateBehavior) == 0x0000C0, "Wrong size on UCurieEntityStateBehavior");
+static_assert(offsetof(UCurieEntityStateBehavior, RequiredAttachedElements) == 0x000028, "Member 'UCurieEntityStateBehavior::RequiredAttachedElements' has a wrong offset!");
+static_assert(offsetof(UCurieEntityStateBehavior, RequiredInteractingElements) == 0x000048, "Member 'UCurieEntityStateBehavior::RequiredInteractingElements' has a wrong offset!");
+static_assert(offsetof(UCurieEntityStateBehavior, AllowedAttachmentEntityTypes) == 0x000068, "Member 'UCurieEntityStateBehavior::AllowedAttachmentEntityTypes' has a wrong offset!");
+static_assert(offsetof(UCurieEntityStateBehavior, OnBeginEffects) == 0x000088, "Member 'UCurieEntityStateBehavior::OnBeginEffects' has a wrong offset!");
+static_assert(offsetof(UCurieEntityStateBehavior, OngoingEffects) == 0x000098, "Member 'UCurieEntityStateBehavior::OngoingEffects' has a wrong offset!");
+static_assert(offsetof(UCurieEntityStateBehavior, OnEndEffects) == 0x0000A8, "Member 'UCurieEntityStateBehavior::OnEndEffects' has a wrong offset!");
 
 // Class Curie.CurieGlobals
 // 0x0028 (0x0050 - 0x0028)
@@ -100,137 +142,26 @@ public:
 		return GetDefaultObjImpl<UCurieGlobals>();
 	}
 };
-
-// Class Curie.CurieElementInteractWithElementHandler
-// 0x0010 (0x0038 - 0x0028)
-class UCurieElementInteractWithElementHandler : public UObject
-{
-public:
-	ECurieHandlerPriority                         HandlerPriority;                                   // 0x0028(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ECurieHandlerBehavior                         HandlerBehavior;                                   // 0x0029(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           ElementTag;                                        // 0x002C(0x0008)(Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"CurieElementInteractWithElementHandler">();
-	}
-	static class UCurieElementInteractWithElementHandler* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCurieElementInteractWithElementHandler>();
-	}
-};
-
-// Class Curie.CurieElementInteractWithMaterialHandler
-// 0x0010 (0x0038 - 0x0028)
-class UCurieElementInteractWithMaterialHandler : public UObject
-{
-public:
-	ECurieHandlerPriority                         HandlerPriority;                                   // 0x0028(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ECurieHandlerBehavior                         HandlerBehavior;                                   // 0x0029(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           ElementTag;                                        // 0x002C(0x0008)(Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"CurieElementInteractWithMaterialHandler">();
-	}
-	static class UCurieElementInteractWithMaterialHandler* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCurieElementInteractWithMaterialHandler>();
-	}
-};
-
-// Class Curie.CurieElementAttachHandler
-// 0x0040 (0x0068 - 0x0028)
-class UCurieElementAttachHandler : public UCurieElementGameplayEffectOwner
-{
-public:
-	ECurieHandlerPriority                         HandlerPriority;                                   // 0x0028(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	ECurieHandlerBehavior                         HandlerBehavior;                                   // 0x0029(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           ElementTag;                                        // 0x002C(0x0008)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FCurieEffectContainer>          OnBeginAttachmentEffects;                          // 0x0038(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<struct FCurieEffectContainer>          OngoingAttachmentEffects;                          // 0x0048(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<struct FCurieEffectContainer>          OnEndAttachmentEffects;                            // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"CurieElementAttachHandler">();
-	}
-	static class UCurieElementAttachHandler* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCurieElementAttachHandler>();
-	}
-};
-
-// Class Curie.CurieElementAttachConditionHandler
-// 0x0010 (0x0038 - 0x0028)
-class UCurieElementAttachConditionHandler : public UObject
-{
-public:
-	ECurieHandlerPriority                         HandlerPriority;                                   // 0x0028(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           ElementTag;                                        // 0x002C(0x0008)(Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"CurieElementAttachConditionHandler">();
-	}
-	static class UCurieElementAttachConditionHandler* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCurieElementAttachConditionHandler>();
-	}
-};
-
-// Class Curie.CurieElementInteractWithContainerHandler
-// 0x0050 (0x0078 - 0x0028)
-class UCurieElementInteractWithContainerHandler : public UCurieElementGameplayEffectOwner
-{
-public:
-	ECurieHandlerPriority                         HandlerPriority;                                   // 0x0028(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	ECurieHandlerBehavior                         HandlerBehavior;                                   // 0x0029(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           ElementTag;                                        // 0x002C(0x0008)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FCurieEffectContainer>          OnInstantInteractionEffects;                       // 0x0038(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<struct FCurieEffectContainer>          OnBeginInteractionEffects;                         // 0x0048(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<struct FCurieEffectContainer>          OngoingInteractionEffects;                         // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<struct FCurieEffectContainer>          OnEndInteractionEffects;                           // 0x0068(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"CurieElementInteractWithContainerHandler">();
-	}
-	static class UCurieElementInteractWithContainerHandler* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCurieElementInteractWithContainerHandler>();
-	}
-};
+static_assert(alignof(UCurieGlobals) == 0x000008, "Wrong alignment on UCurieGlobals");
+static_assert(sizeof(UCurieGlobals) == 0x000050, "Wrong size on UCurieGlobals");
+static_assert(offsetof(UCurieGlobals, bEnableCurie) == 0x000028, "Member 'UCurieGlobals::bEnableCurie' has a wrong offset!");
+static_assert(offsetof(UCurieGlobals, CurieGlobalsClassName) == 0x000030, "Member 'UCurieGlobals::CurieGlobalsClassName' has a wrong offset!");
+static_assert(offsetof(UCurieGlobals, RegisteredCurieManager) == 0x000048, "Member 'UCurieGlobals::RegisteredCurieManager' has a wrong offset!");
 
 // Class Curie.CurieInterface
 // 0x0000 (0x0000 - 0x0000)
 class ICurieInterface final
 {
 public:
-	void OnCurieContainerAcquired_BP(const struct FCurieContainerHandle& CurieContainerHandle);
-	void OnCurieContainerReleased_BP(const struct FCurieContainerHandle& CurieContainerHandle);
-	void OnCurieContainerReparented_BP(const struct FCurieContainerHandle& CurieContainerHandle);
+	void OnCurieContainerInitialized_BP(const struct FCurieContainerHandle& CurieContainerHandle);
+	void OnCurieContainerShutdown_BP(const struct FCurieContainerHandle& CurieContainerHandle);
 	void OnCurieElementAttached_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& ElementTag);
 	void OnCurieElementDetached_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& ElementTag);
 	void OnCurieElementInteract_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& ElementTag, const struct FCurieInteractParamsHandle& InteractParamsHandle);
 	void OnCurieElementInteractBegun_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& ElementTag, const struct FCurieInteractParamsHandle& InteractParamsHandle);
 	void OnCurieElementInteractEnded_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& ElementTag, const struct FCurieInteractParamsHandle& InteractParamsHandle);
 	void OnCurieStateAttached_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& StateTag);
+	void OnCurieStateConsumed_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& StateTag);
 	void OnCurieStateDetached_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& StateTag);
 
 public:
@@ -252,23 +183,19 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+static_assert(alignof(ICurieInterface) == 0x000001, "Wrong alignment on ICurieInterface");
+static_assert(sizeof(ICurieInterface) == 0x000001, "Wrong size on ICurieInterface");
 
 // Class Curie.CurieManager
-// 0x0500 (0x05B0 - 0x00B0)
+// 0x0118 (0x01C8 - 0x00B0)
 class UCurieManager : public UGameStateComponent
 {
 public:
 	TSubclassOf<class UCurieComponent>            CurieComponentClass;                               // 0x00B0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FName                                   MaterialDataRegistryName;                          // 0x00B8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FName                                   ElementDataRegistryName;                           // 0x00C0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FName                                   EntityStateDataRegistryName;                       // 0x00C8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_D0[0x2F8];                                     // 0x00D0(0x02F8)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FGameplayTag, struct FCurieElementAttachHandlersContainer> ElementAttachmentHandlers; // 0x03C8(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	TMap<struct FGameplayTag, struct FCurieElementAttachConditionHandlersContainer> ElementAttachmentConditionHandlers; // 0x0418(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	TMap<struct FCurieElementPairKey, struct FCurieElementInteractWithElementHandlersContainer> ElementInteractWithElementHandlers; // 0x0468(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	TMap<struct FGameplayTag, struct FCurieElementInteractWithMaterialHandlersContainer> ElementInteractWithMaterialHandlers; // 0x04B8(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	TMap<struct FGameplayTag, struct FCurieElementInteractWithContainerHandlersContainer> ElementInteractWithContainerHandlers; // 0x0508(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_558[0x58];                                     // 0x0558(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UDataTable*                             MaterialDefinitionsTable;                          // 0x00B8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UDataTable*                             ElementDefinitionsTable;                           // 0x00C0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UDataTable*                             EntityStateDefinitionsTable;                       // 0x00C8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_D0[0xF8];                                      // 0x00D0(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BindDelegateForCurieElementAttached(class UObject* CurieOwner, const TDelegate<void(class UObject* Owner, const struct FCurieContainerHandle& ContainerHandle, const struct FGameplayTag& ElementIdentifier)>& Delegate);
@@ -278,7 +205,6 @@ public:
 	void BindDelegateForCurieElementInteract(class UObject* CurieOwner, const TDelegate<void(class UObject* Owner, const struct FCurieContainerHandle& ContainerHandle, const struct FGameplayTag& ElementIdentifier)>& Delegate);
 	void BindDelegateForCurieStateAttached(class UObject* CurieOwner, const TDelegate<void(class UObject* Owner, const struct FCurieContainerHandle& ContainerHandle, const struct FGameplayTag& StateIdentifier)>& Delegate);
 	void BindDelegateForCurieStateDetached(class UObject* CurieOwner, const TDelegate<void(class UObject* Owner, const struct FCurieContainerHandle& ContainerHandle, const struct FGameplayTag& StateIdentifier)>& Delegate);
-	void HandleContainerOwnerDestroyed(class AActor* OwnerActor);
 	void UnbindDelegateForCurieElementAttached(class UObject* CurieOwner, const TDelegate<void(class UObject* Owner, const struct FCurieContainerHandle& ContainerHandle, const struct FGameplayTag& ElementIdentifier)>& Delegate);
 	void UnbindDelegateForCurieElementBeginInteract(class UObject* CurieOwner, const TDelegate<void(class UObject* Owner, const struct FCurieContainerHandle& ContainerHandle, const struct FGameplayTag& ElementIdentifier)>& Delegate);
 	void UnbindDelegateForCurieElementDetached(class UObject* CurieOwner, const TDelegate<void(class UObject* Owner, const struct FCurieContainerHandle& ContainerHandle, const struct FGameplayTag& ElementIdentifier)>& Delegate);
@@ -297,6 +223,12 @@ public:
 		return GetDefaultObjImpl<UCurieManager>();
 	}
 };
+static_assert(alignof(UCurieManager) == 0x000008, "Wrong alignment on UCurieManager");
+static_assert(sizeof(UCurieManager) == 0x0001C8, "Wrong size on UCurieManager");
+static_assert(offsetof(UCurieManager, CurieComponentClass) == 0x0000B0, "Member 'UCurieManager::CurieComponentClass' has a wrong offset!");
+static_assert(offsetof(UCurieManager, MaterialDefinitionsTable) == 0x0000B8, "Member 'UCurieManager::MaterialDefinitionsTable' has a wrong offset!");
+static_assert(offsetof(UCurieManager, ElementDefinitionsTable) == 0x0000C0, "Member 'UCurieManager::ElementDefinitionsTable' has a wrong offset!");
+static_assert(offsetof(UCurieManager, EntityStateDefinitionsTable) == 0x0000C8, "Member 'UCurieManager::EntityStateDefinitionsTable' has a wrong offset!");
 
 }
 

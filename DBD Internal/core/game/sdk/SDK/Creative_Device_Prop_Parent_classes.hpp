@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
 #include "EVisibleInGameState_structs.hpp"
@@ -21,61 +20,54 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C
-// 0x0080 (0x0DD8 - 0x0D58)
-class ACreative_Device_Prop_Parent_C final : public AFortCreativeDeviceProp
+// 0x0078 (0x0C20 - 0x0BA8)
+class ACreative_Device_Prop_Parent_C final : public ABuildingProp
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D58(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCreative_VisibleInGame_Component_C*    VisibleInGameComponent;                            // 0x0D60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCreative_Enabled_Component_C*          EnabledComponent;                                  // 0x0D68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UFortMinigameProgressComponent*         FortMinigameProgress;                              // 0x0D70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UToyOptionsComponent_C*                 ToyOptionsComponent;                               // 0x0D78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	int32                                         ActivateOnGamePhase;                               // 0x0D80(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         EnabledIndex;                                      // 0x0D84(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              On_Device_Activated;                               // 0x0D88(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class AController*                            Instigating_Controller;                            // 0x0D98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsVisible;                                        // 0x0DA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DA1[0x7];                                      // 0x0DA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              On_Device_Initialized;                             // 0x0DA8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(bool New_Play_Mode)> On_Play_Mode_Changed;                         // 0x0DB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          Update_on_Minigame_State_Change;                   // 0x0DC8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Update_on_Play_Mode_Changed;                       // 0x0DC9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Initialize_during_Preview;                         // 0x0DCA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DCB[0x1];                                      // 0x0DCB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxHealth;                                         // 0x0DCC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FActiveGameplayEffectHandle            MaxHealthEffectHandler;                            // 0x0DD0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCreative_VisibleInGame_Component_C*    VisibleInGameComponent;                            // 0x0BB0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCreative_Enabled_Component_C*          EnabledComponent;                                  // 0x0BB8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UFortMinigameProgressComponent*         FortMinigameProgress;                              // 0x0BC0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UToyOptionsComponent_C*                 ToyOptionsComponent;                               // 0x0BC8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         ActivateOnGamePhase;                               // 0x0BD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EnabledIndex;                                      // 0x0BD4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              On_Device_Activated;                               // 0x0BD8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class AController*                            Instigating_Controller;                            // 0x0BE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsVisible;                                        // 0x0BF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BF1[0x7];                                      // 0x0BF1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              On_Device_Initialized;                             // 0x0BF8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool New_Play_Mode)> On_Play_Mode_Changed;                         // 0x0C08(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          Update_on_Minigame_State_Change;                   // 0x0C18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Update_on_Play_Mode_Changed;                       // 0x0C19(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void Update_Visibility_In_Game();
-	void Update_Preview_Only_Visibility();
-	void ResetHealthIfSet();
-	void ReceiveBeginPlay();
-	void Play_Mode_Changed(class AFortMinigame* Minigame, bool bIsInPlayMode);
-	void OnWorldReady();
-	void OnMinigameStarted();
-	void OnMinigameEnded();
-	void On_Mingame_State_Changed(class AFortMinigame* Minigame, EFortMinigameState MinigameState);
-	void Is_Visible_In_Game(bool* Visible);
-	void Initialize_Device();
-	void GetVisibilityComponentsWithCollisionOverrides(TMap<class USceneComponent*, ECollisionEnabled>* VisibilityComponents);
-	void GetVisibilityComponents(TArray<class USceneComponent*>* VisibilityComponents);
 	void ExecuteUbergraph_Creative_Device_Prop_Parent(int32 EntryPoint);
-	void BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_3_AnyPropertyChangedDelegate__DelegateSignature();
-	void BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_2_AnyPropertyChangedDelegate__DelegateSignature();
+	void OnMinigameEnded();
+	void OnMinigameStarted();
 	void BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_5_SimpleDynamicMulticastDelegate__DelegateSignature();
+	void BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_0_SimpleDynamicMulticastDelegate__DelegateSignature();
+	void OnWorldReady();
+	void ReceiveBeginPlay();
+	void On_Mingame_State_Changed(class AFortMinigame* Minigame, EFortMinigameState MinigameState);
 	void BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_4_OnMinigameAssignmentChanged__DelegateSignature(class AFortMinigame* Minigame);
 	void BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_1_OnMinigameAssignmentChanged__DelegateSignature(class AFortMinigame* Minigame);
-	void BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_0_SimpleDynamicMulticastDelegate__DelegateSignature();
-	bool BlueprintOnLocalInteract(class AFortPlayerPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted);
-	float BlueprintModifyIncomingDamage(float Damage, const struct FGameplayTagContainer& InTags, const struct FGameplayEffectContextHandle& EffectContext, class AController* EventInstigator, class AActor* DamageCauser);
-	void Attempt_Activate_Device(class AController* Instigating_Controller_0, bool Additional_Requirements);
+	void BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_3_AnyPropertyChangedDelegate__DelegateSignature();
+	void BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_2_AnyPropertyChangedDelegate__DelegateSignature();
+	void PlayModeChanged(class AFortMinigame* Minigame, bool bIsInPlayMode);
 	void Activate_on_Phase(EFortMinigameState State);
-	void Activate_Device_Failed();
 	void Activate_Device();
+	bool BlueprintOnLocalInteract(class AFortPlayerPawn* InteractingPawn);
+	void Initialize_Device();
+	void Attempt_Activate_Device(class AController* Instigating_Controller_0, bool Additional_Requirements);
+	void Activate_Device_Failed();
+	float BlueprintModifyIncomingDamage(float Damage, const struct FGameplayTagContainer& InTags, const struct FGameplayEffectContextHandle& EffectContext, class AController* EventInstigator, class AActor* DamageCauser);
+	void Is_Visible_In_Game(bool* Visible);
+	void Update_Visibility_In_Game();
+	void GetVisibilityComponents(TArray<class USceneComponent*>* VisibilityComponents);
+	void GetVisibilityComponentsWithCollisionOverrides(TMap<class USceneComponent*, ECollisionEnabled>* VisibilityComponents);
 
-	void IsInPlayMode(bool* bIsInPlayMode) const;
-	void GetMoveToolPreviewComponents(TArray<class USceneComponent*>* ForceHideInPreview, TArray<class USceneComponent*>* ForceShowInPreview) const;
 	bool BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const;
+	void IsInPlayMode(bool* bIsInPlayMode) const;
 
 public:
 	static class UClass* StaticClass()
@@ -87,6 +79,22 @@ public:
 		return GetDefaultObjImpl<ACreative_Device_Prop_Parent_C>();
 	}
 };
+static_assert(alignof(ACreative_Device_Prop_Parent_C) == 0x000008, "Wrong alignment on ACreative_Device_Prop_Parent_C");
+static_assert(sizeof(ACreative_Device_Prop_Parent_C) == 0x000C20, "Wrong size on ACreative_Device_Prop_Parent_C");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, UberGraphFrame) == 0x000BA8, "Member 'ACreative_Device_Prop_Parent_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, VisibleInGameComponent) == 0x000BB0, "Member 'ACreative_Device_Prop_Parent_C::VisibleInGameComponent' has a wrong offset!");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, EnabledComponent) == 0x000BB8, "Member 'ACreative_Device_Prop_Parent_C::EnabledComponent' has a wrong offset!");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, FortMinigameProgress) == 0x000BC0, "Member 'ACreative_Device_Prop_Parent_C::FortMinigameProgress' has a wrong offset!");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, ToyOptionsComponent) == 0x000BC8, "Member 'ACreative_Device_Prop_Parent_C::ToyOptionsComponent' has a wrong offset!");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, ActivateOnGamePhase) == 0x000BD0, "Member 'ACreative_Device_Prop_Parent_C::ActivateOnGamePhase' has a wrong offset!");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, EnabledIndex) == 0x000BD4, "Member 'ACreative_Device_Prop_Parent_C::EnabledIndex' has a wrong offset!");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, On_Device_Activated) == 0x000BD8, "Member 'ACreative_Device_Prop_Parent_C::On_Device_Activated' has a wrong offset!");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, Instigating_Controller) == 0x000BE8, "Member 'ACreative_Device_Prop_Parent_C::Instigating_Controller' has a wrong offset!");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, bIsVisible) == 0x000BF0, "Member 'ACreative_Device_Prop_Parent_C::bIsVisible' has a wrong offset!");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, On_Device_Initialized) == 0x000BF8, "Member 'ACreative_Device_Prop_Parent_C::On_Device_Initialized' has a wrong offset!");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, On_Play_Mode_Changed) == 0x000C08, "Member 'ACreative_Device_Prop_Parent_C::On_Play_Mode_Changed' has a wrong offset!");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, Update_on_Minigame_State_Change) == 0x000C18, "Member 'ACreative_Device_Prop_Parent_C::Update_on_Minigame_State_Change' has a wrong offset!");
+static_assert(offsetof(ACreative_Device_Prop_Parent_C, Update_on_Play_Mode_Changed) == 0x000C19, "Member 'ACreative_Device_Prop_Parent_C::Update_on_Play_Mode_Changed' has a wrong offset!");
 
 }
 

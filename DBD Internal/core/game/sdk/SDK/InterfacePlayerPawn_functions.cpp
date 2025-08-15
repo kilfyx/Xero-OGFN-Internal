@@ -17,6 +17,67 @@
 namespace SDK
 {
 
+// Function InterfacePlayerPawn.InterfacePlayerPawn_C.MeleeSwingRight
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    First_Right                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void IInterfacePlayerPawn_C::MeleeSwingRight(bool First_Right)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "MeleeSwingRight");
+
+	Params::InterfacePlayerPawn_C_MeleeSwingRight Parms{};
+
+	Parms.First_Right = First_Right;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function InterfacePlayerPawn.InterfacePlayerPawn_C.MeleeSwingLeft
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    First_Left                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void IInterfacePlayerPawn_C::MeleeSwingLeft(bool First_Left)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "MeleeSwingLeft");
+
+	Params::InterfacePlayerPawn_C_MeleeSwingLeft Parms{};
+
+	Parms.First_Left = First_Left;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function InterfacePlayerPawn.InterfacePlayerPawn_C.Melee_Effect_Color
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FVector*                         Melee_Color_Set                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IInterfacePlayerPawn_C::Melee_Effect_Color(struct FVector* Melee_Color_Set)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "Melee_Effect_Color");
+
+	Params::InterfacePlayerPawn_C_Melee_Effect_Color Parms{};
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (Melee_Color_Set != nullptr)
+		*Melee_Color_Set = std::move(Parms.Melee_Color_Set);
+}
+
+
 // Function InterfacePlayerPawn.InterfacePlayerPawn_C.FootStepLeft
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -45,44 +106,17 @@ void IInterfacePlayerPawn_C::FootStepRight()
 }
 
 
-// Function InterfacePlayerPawn.InterfacePlayerPawn_C.Melee_Effect_Color
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FVector*                         Melee_Color_Set                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function InterfacePlayerPawn.InterfacePlayerPawn_C.MeleeSwingRight_End
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void IInterfacePlayerPawn_C::Melee_Effect_Color(struct FVector* Melee_Color_Set)
+void IInterfacePlayerPawn_C::MeleeSwingRight_End()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "Melee_Effect_Color");
+		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "MeleeSwingRight_End");
 
-	Params::InterfacePlayerPawn_C_Melee_Effect_Color Parms{};
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (Melee_Color_Set != nullptr)
-		*Melee_Color_Set = std::move(Parms.Melee_Color_Set);
-}
-
-
-// Function InterfacePlayerPawn.InterfacePlayerPawn_C.MeleeSwingLeft
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    First_Left                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IInterfacePlayerPawn_C::MeleeSwingLeft(bool First_Left)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "MeleeSwingLeft");
-
-	Params::InterfacePlayerPawn_C_MeleeSwingLeft Parms{};
-
-	Parms.First_Left = First_Left;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
+	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 
@@ -95,40 +129,6 @@ void IInterfacePlayerPawn_C::MeleeSwingLeft_End()
 
 	if (Func == nullptr)
 		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "MeleeSwingLeft_End");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function InterfacePlayerPawn.InterfacePlayerPawn_C.MeleeSwingRight
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    First_Right                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IInterfacePlayerPawn_C::MeleeSwingRight(bool First_Right)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "MeleeSwingRight");
-
-	Params::InterfacePlayerPawn_C_MeleeSwingRight Parms{};
-
-	Parms.First_Right = First_Right;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function InterfacePlayerPawn.InterfacePlayerPawn_C.MeleeSwingRight_End
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IInterfacePlayerPawn_C::MeleeSwingRight_End()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "MeleeSwingRight_End");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }

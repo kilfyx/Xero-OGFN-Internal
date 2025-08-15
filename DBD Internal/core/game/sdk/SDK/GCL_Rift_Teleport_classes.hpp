@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCL_Rift_Teleport.GCL_Rift_Teleport_C
-// 0x0000 (0x0308 - 0x0308)
+// 0x0000 (0x0318 - 0x0318)
 class AGCL_Rift_Teleport_C final : public AFortGameplayCueNotify_Looping
 {
 public:
@@ -37,6 +37,8 @@ public:
 		return GetDefaultObjImpl<AGCL_Rift_Teleport_C>();
 	}
 };
+static_assert(alignof(AGCL_Rift_Teleport_C) == 0x000008, "Wrong alignment on AGCL_Rift_Teleport_C");
+static_assert(sizeof(AGCL_Rift_Teleport_C) == 0x000318, "Wrong size on AGCL_Rift_Teleport_C");
 
 }
 

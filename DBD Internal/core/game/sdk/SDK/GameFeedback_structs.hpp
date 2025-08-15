@@ -26,8 +26,16 @@ public:
 	int32                                         LogTailKb;                                         // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LogSubmitChance;                                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         DoNotUploadReasons;                                // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         DoNotUploadReasons;                                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FLogSubmitOptions) == 0x000008, "Wrong alignment on FLogSubmitOptions");
+static_assert(sizeof(FLogSubmitOptions) == 0x000030, "Wrong size on FLogSubmitOptions");
+static_assert(offsetof(FLogSubmitOptions, EventName) == 0x000000, "Member 'FLogSubmitOptions::EventName' has a wrong offset!");
+static_assert(offsetof(FLogSubmitOptions, bSubmitLogs) == 0x000010, "Member 'FLogSubmitOptions::bSubmitLogs' has a wrong offset!");
+static_assert(offsetof(FLogSubmitOptions, bSubmitLogsInOptionState) == 0x000011, "Member 'FLogSubmitOptions::bSubmitLogsInOptionState' has a wrong offset!");
+static_assert(offsetof(FLogSubmitOptions, LogTailKb) == 0x000014, "Member 'FLogSubmitOptions::LogTailKb' has a wrong offset!");
+static_assert(offsetof(FLogSubmitOptions, LogSubmitChance) == 0x000018, "Member 'FLogSubmitOptions::LogSubmitChance' has a wrong offset!");
+static_assert(offsetof(FLogSubmitOptions, DoNotUploadReasons) == 0x000020, "Member 'FLogSubmitOptions::DoNotUploadReasons' has a wrong offset!");
 
 }
 

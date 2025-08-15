@@ -18,32 +18,32 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C
-// 0x0018 (0x08E0 - 0x08C8)
+// 0x0018 (0x0890 - 0x0878)
 class AB_Prj_ThrownConsumable_Parent_C : public AFortProjectileBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         BouncePawnAgainstPawnGravityScale;                 // 0x08D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FuseTime;                                          // 0x08D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSimulationRunning;                                // 0x08D8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          bShouldRestartSimulating;                          // 0x08D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0878(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         BouncePawnAgainstPawnGravityScale;                 // 0x0880(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FuseTime;                                          // 0x0884(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSimulationRunning;                                // 0x0888(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
+	bool                                          bShouldRestartSimulating;                          // 0x0889(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void SetBounceVelocityPawn();
-	void ResetSimulatedComponents();
+	void ExecuteUbergraph_B_Prj_ThrownConsumable_Parent(int32 EntryPoint);
 	void ReceiveBeginPlay();
-	void ReceiveAnyDamage(float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, class AActor* DamageCauser);
-	void OnRep_bSimulationRunning();
-	void SetBounceVelocity();
-	void RestartSimulating();
 	void OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults);
 	void OnBounce(const struct FHitResult& Hit);
-	void ExecuteUbergraph_B_Prj_ThrownConsumable_Parent(int32 EntryPoint);
+	void RestartSimulating();
 	void Event_OnVehicleDestroyed(class AActor* DestroyedActor);
 	void Event_BuildingActorDied(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum);
 	void BndEvt__ProjectileMovementComponent_K2Node_ComponentBoundEvent_1_OnProjectileStopDelegate__DelegateSignature(const struct FHitResult& ImpactResult);
 	void BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void ReceiveAnyDamage(float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, class AActor* DamageCauser);
 	void FuseEnded();
+	void SetBounceVelocity();
+	void SetBounceVelocityPawn();
+	void OnRep_bSimulationRunning();
+	void ResetSimulatedComponents();
 
 public:
 	static class UClass* StaticClass()
@@ -55,6 +55,13 @@ public:
 		return GetDefaultObjImpl<AB_Prj_ThrownConsumable_Parent_C>();
 	}
 };
+static_assert(alignof(AB_Prj_ThrownConsumable_Parent_C) == 0x000008, "Wrong alignment on AB_Prj_ThrownConsumable_Parent_C");
+static_assert(sizeof(AB_Prj_ThrownConsumable_Parent_C) == 0x000890, "Wrong size on AB_Prj_ThrownConsumable_Parent_C");
+static_assert(offsetof(AB_Prj_ThrownConsumable_Parent_C, UberGraphFrame) == 0x000878, "Member 'AB_Prj_ThrownConsumable_Parent_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_Prj_ThrownConsumable_Parent_C, BouncePawnAgainstPawnGravityScale) == 0x000880, "Member 'AB_Prj_ThrownConsumable_Parent_C::BouncePawnAgainstPawnGravityScale' has a wrong offset!");
+static_assert(offsetof(AB_Prj_ThrownConsumable_Parent_C, FuseTime) == 0x000884, "Member 'AB_Prj_ThrownConsumable_Parent_C::FuseTime' has a wrong offset!");
+static_assert(offsetof(AB_Prj_ThrownConsumable_Parent_C, bSimulationRunning) == 0x000888, "Member 'AB_Prj_ThrownConsumable_Parent_C::bSimulationRunning' has a wrong offset!");
+static_assert(offsetof(AB_Prj_ThrownConsumable_Parent_C, bShouldRestartSimulating) == 0x000889, "Member 'AB_Prj_ThrownConsumable_Parent_C::bShouldRestartSimulating' has a wrong offset!");
 
 }
 

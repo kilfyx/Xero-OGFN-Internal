@@ -40,7 +40,7 @@ void USocialBanModal_C::ExecuteUbergraph_SocialBanModal(int32 EntryPoint)
 // Function SocialBanModal.SocialBanModal_C.OnDisplayModeSet
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsBanned                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsBanned                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void USocialBanModal_C::OnDisplayModeSet(bool bIsBanned)
 {

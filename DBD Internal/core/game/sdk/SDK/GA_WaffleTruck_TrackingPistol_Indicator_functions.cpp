@@ -37,6 +37,26 @@ void UGA_WaffleTruck_TrackingPistol_Indicator_C::ExecuteUbergraph_GA_WaffleTruck
 }
 
 
+// Function GA_WaffleTruck_TrackingPistol_Indicator.GA_WaffleTruck_TrackingPistol_Indicator_C.K2_ActivateAbilityFromEvent
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FGameplayEventData&        EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UGA_WaffleTruck_TrackingPistol_Indicator_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_WaffleTruck_TrackingPistol_Indicator_C", "K2_ActivateAbilityFromEvent");
+
+	Params::GA_WaffleTruck_TrackingPistol_Indicator_C_K2_ActivateAbilityFromEvent Parms{};
+
+	Parms.EventData = std::move(EventData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GA_WaffleTruck_TrackingPistol_Indicator.GA_WaffleTruck_TrackingPistol_Indicator_C.GetAvatarAsFortPawn
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -82,7 +102,7 @@ class AFortPlayerController* UGA_WaffleTruck_TrackingPistol_Indicator_C::GetAvat
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // const struct FGameplayEventData&        GameplayEventData                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<class AActor*>                   ReturnValue                                            (Parm, OutParm, ReturnParm)
+// TArray<class AActor*>                   ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash)
 
 TArray<class AActor*> UGA_WaffleTruck_TrackingPistol_Indicator_C::GetHitActorsFromEventData(const struct FGameplayEventData& GameplayEventData)
 {
@@ -101,35 +121,12 @@ TArray<class AActor*> UGA_WaffleTruck_TrackingPistol_Indicator_C::GetHitActorsFr
 }
 
 
-// Function GA_WaffleTruck_TrackingPistol_Indicator.GA_WaffleTruck_TrackingPistol_Indicator_C.IsDamgeFromSourceWeapon
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const struct FGameplayEventData&        GameplayEventData                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool UGA_WaffleTruck_TrackingPistol_Indicator_C::IsDamgeFromSourceWeapon(const struct FGameplayEventData& GameplayEventData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_WaffleTruck_TrackingPistol_Indicator_C", "IsDamgeFromSourceWeapon");
-
-	Params::GA_WaffleTruck_TrackingPistol_Indicator_C_IsDamgeFromSourceWeapon Parms{};
-
-	Parms.GameplayEventData = std::move(GameplayEventData);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function GA_WaffleTruck_TrackingPistol_Indicator.GA_WaffleTruck_TrackingPistol_Indicator_C.IsPawnAndNotFriendly
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // const class AActor*                     OwningController                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class AActor*                     HitActor                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UGA_WaffleTruck_TrackingPistol_Indicator_C::IsPawnAndNotFriendly(const class AActor* OwningController, const class AActor* HitActor)
 {
@@ -149,23 +146,26 @@ bool UGA_WaffleTruck_TrackingPistol_Indicator_C::IsPawnAndNotFriendly(const clas
 }
 
 
-// Function GA_WaffleTruck_TrackingPistol_Indicator.GA_WaffleTruck_TrackingPistol_Indicator_C.K2_ActivateAbilityFromEvent
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// Function GA_WaffleTruck_TrackingPistol_Indicator.GA_WaffleTruck_TrackingPistol_Indicator_C.IsDamgeFromSourceWeapon
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// const struct FGameplayEventData&        EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayEventData&        GameplayEventData                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-void UGA_WaffleTruck_TrackingPistol_Indicator_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
+bool UGA_WaffleTruck_TrackingPistol_Indicator_C::IsDamgeFromSourceWeapon(const struct FGameplayEventData& GameplayEventData)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_WaffleTruck_TrackingPistol_Indicator_C", "K2_ActivateAbilityFromEvent");
+		Func = Class->GetFunction("GA_WaffleTruck_TrackingPistol_Indicator_C", "IsDamgeFromSourceWeapon");
 
-	Params::GA_WaffleTruck_TrackingPistol_Indicator_C_K2_ActivateAbilityFromEvent Parms{};
+	Params::GA_WaffleTruck_TrackingPistol_Indicator_C_IsDamgeFromSourceWeapon Parms{};
 
-	Parms.EventData = std::move(EventData);
+	Parms.GameplayEventData = std::move(GameplayEventData);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

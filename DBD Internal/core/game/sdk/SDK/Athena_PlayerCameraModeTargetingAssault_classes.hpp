@@ -17,8 +17,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Athena_PlayerCameraModeTargetingAssault.Athena_PlayerCameraModeTargetingAssault_C
-// 0x0000 (0x0EA0 - 0x0EA0)
-class UAthena_PlayerCameraModeTargetingAssault_C final : public UAthena_PlayerCameraModeRangedTargeting_C
+// 0x0000 (0x0DD0 - 0x0DD0)
+class UAthena_PlayerCameraModeTargetingAssault_C : public UAthena_PlayerCameraModeRangedTargeting_C
 {
 public:
 	static class UClass* StaticClass()
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UAthena_PlayerCameraModeTargetingAssault_C>();
 	}
 };
+static_assert(alignof(UAthena_PlayerCameraModeTargetingAssault_C) == 0x000010, "Wrong alignment on UAthena_PlayerCameraModeTargetingAssault_C");
+static_assert(sizeof(UAthena_PlayerCameraModeTargetingAssault_C) == 0x000DD0, "Wrong size on UAthena_PlayerCameraModeTargetingAssault_C");
 
 }
 

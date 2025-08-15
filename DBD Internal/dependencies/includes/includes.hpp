@@ -57,3 +57,7 @@
 //Minhook
 
 #include <dependencies/minhook/minhook.hpp>
+
+//Aimbot
+
+#include <aimbot.hpp>

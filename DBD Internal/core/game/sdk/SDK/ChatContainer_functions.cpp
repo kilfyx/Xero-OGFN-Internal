@@ -17,119 +17,70 @@
 namespace SDK
 {
 
-// Function ChatContainer.ChatContainer_C.BndEvt__ChatContainer_ChatList_Messages_K2Node_ComponentBoundEvent_1_OnListEntryGeneratedDynamic__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UChatContainer_C::BndEvt__ChatContainer_ChatList_Messages_K2Node_ComponentBoundEvent_1_OnListEntryGeneratedDynamic__DelegateSignature(class UUserWidget* Widget)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__ChatContainer_ChatList_Messages_K2Node_ComponentBoundEvent_1_OnListEntryGeneratedDynamic__DelegateSignature");
-
-	Params::ChatContainer_C_BndEvt__ChatContainer_ChatList_Messages_K2Node_ComponentBoundEvent_1_OnListEntryGeneratedDynamic__DelegateSignature Parms{};
-
-	Parms.Widget = Widget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ChatContainer.ChatContainer_C.BndEvt__ChatContainer_ConsoleChatShortcut_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UChatContainer_C::BndEvt__ChatContainer_ConsoleChatShortcut_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__ChatContainer_ConsoleChatShortcut_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::ChatContainer_C_BndEvt__ChatContainer_ConsoleChatShortcut_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ChatContainer.ChatContainer_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UChatContainer_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ChatContainer.ChatContainer_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UChatContainer_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ChatContainer.ChatContainer_C.ExecuteUbergraph_ChatContainer
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UChatContainer_C::ExecuteUbergraph_ChatContainer(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_ChatContainer");
-
-	Params::ChatContainer_C_ExecuteUbergraph_ChatContainer Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ChatContainer.ChatContainer_C.FocusChat
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void UChatContainer_C::FocusChat()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("FocusChat");
+		Func = Class->GetFunction("ChatContainer_C", "FocusChat");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ChatContainer.ChatContainer_C.HandleChatOpenChanged
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function ChatContainer.ChatContainer_C.SetChatBoxStyle
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UChatContainer_C::SetChatBoxStyle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChatContainer_C", "SetChatBoxStyle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ChatContainer.ChatContainer_C.OnKeyDown
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bChatShouldBeOpen                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FKeyEvent&                 InKeyEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FEventReply UChatContainer_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChatContainer_C", "OnKeyDown");
+
+	Params::ChatContainer_C_OnKeyDown Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InKeyEvent = std::move(InKeyEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChatContainer.ChatContainer_C.HandleChatOpenChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bChatShouldBeOpen                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UChatContainer_C::HandleChatOpenChanged(bool bChatShouldBeOpen)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HandleChatOpenChanged");
+		Func = Class->GetFunction("ChatContainer_C", "HandleChatOpenChanged");
 
 	Params::ChatContainer_C_HandleChatOpenChanged Parms{};
 
@@ -139,19 +90,33 @@ void UChatContainer_C::HandleChatOpenChanged(bool bChatShouldBeOpen)
 }
 
 
+// Function ChatContainer.ChatContainer_C.OnSizeAnimationComplete
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UChatContainer_C::OnSizeAnimationComplete()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChatContainer_C", "OnSizeAnimationComplete");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ChatContainer.ChatContainer_C.HandleCursorModeChanged
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class FName                             ActionName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UChatContainer_C::HandleCursorModeChanged(bool bEnabled, class FName ActionName, class UUserWidget* Widget)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HandleCursorModeChanged");
+		Func = Class->GetFunction("ChatContainer_C", "HandleCursorModeChanged");
 
 	Params::ChatContainer_C_HandleCursorModeChanged Parms{};
 
@@ -166,14 +131,14 @@ void UChatContainer_C::HandleCursorModeChanged(bool bEnabled, class FName Action
 // Function ChatContainer.ChatContainer_C.OnChatOpenChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bShouldBeOpen                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bShouldBeOpen                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UChatContainer_C::OnChatOpenChanged(bool bShouldBeOpen)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnChatOpenChanged");
+		Func = Class->GetFunction("ChatContainer_C", "OnChatOpenChanged");
 
 	Params::ChatContainer_C_OnChatOpenChanged Parms{};
 
@@ -183,84 +148,17 @@ void UChatContainer_C::OnChatOpenChanged(bool bShouldBeOpen)
 }
 
 
-// Function ChatContainer.ChatContainer_C.OnKeyDown
-// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FKeyEvent                        InKeyEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-struct FEventReply UChatContainer_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnKeyDown");
-
-	Params::ChatContainer_C_OnKeyDown Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InKeyEvent = std::move(InKeyEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ChatContainer.ChatContainer_C.OnMouseEnter
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UChatContainer_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnMouseEnter");
-
-	Params::ChatContainer_C_OnMouseEnter Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ChatContainer.ChatContainer_C.OnMouseLeave
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UChatContainer_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnMouseLeave");
-
-	Params::ChatContainer_C_OnMouseLeave Parms{};
-
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ChatContainer.ChatContainer_C.OnSendButtonDisplayChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bShowSendButton                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bShowSendButton                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UChatContainer_C::OnSendButtonDisplayChanged(bool bShowSendButton)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnSendButtonDisplayChanged");
+		Func = Class->GetFunction("ChatContainer_C", "OnSendButtonDisplayChanged");
 
 	Params::ChatContainer_C_OnSendButtonDisplayChanged Parms{};
 
@@ -270,29 +168,49 @@ void UChatContainer_C::OnSendButtonDisplayChanged(bool bShowSendButton)
 }
 
 
-// Function ChatContainer.ChatContainer_C.OnSizeAnimationComplete
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function ChatContainer.ChatContainer_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UChatContainer_C::OnSizeAnimationComplete()
+void UChatContainer_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnSizeAnimationComplete");
+		Func = Class->GetFunction("ChatContainer_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ChatContainer.ChatContainer_C.SetChatBoxStyle
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function ChatContainer.ChatContainer_C.BndEvt__ConsoleChatShortcut_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UChatContainer_C::SetChatBoxStyle()
+void UChatContainer_C::BndEvt__ConsoleChatShortcut_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetChatBoxStyle");
+		Func = Class->GetFunction("ChatContainer_C", "BndEvt__ConsoleChatShortcut_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+
+	Params::ChatContainer_C_BndEvt__ConsoleChatShortcut_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ChatContainer.ChatContainer_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UChatContainer_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChatContainer_C", "Destruct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -301,15 +219,15 @@ void UChatContainer_C::SetChatBoxStyle()
 // Function ChatContainer.ChatContainer_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 // float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UChatContainer_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Tick");
+		Func = Class->GetFunction("ChatContainer_C", "Tick");
 
 	Params::ChatContainer_C_Tick Parms{};
 
@@ -320,25 +238,21 @@ void UChatContainer_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTim
 }
 
 
-// Function ChatContainer.ChatContainer_C.TransitionState
-// (Private, BlueprintCallable, BlueprintEvent)
+// Function ChatContainer.ChatContainer_C.ExecuteUbergraph_ChatContainer
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UWidgetAnimation*                 TransitionAnimation                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  TransitionTime                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    PlayForward                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UChatContainer_C::TransitionState(class UWidgetAnimation* TransitionAnimation, double TransitionTime, bool PlayForward)
+void UChatContainer_C::ExecuteUbergraph_ChatContainer(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("TransitionState");
+		Func = Class->GetFunction("ChatContainer_C", "ExecuteUbergraph_ChatContainer");
 
-	Params::ChatContainer_C_TransitionState Parms{};
+	Params::ChatContainer_C_ExecuteUbergraph_ChatContainer Parms{};
 
-	Parms.TransitionAnimation = TransitionAnimation;
-	Parms.TransitionTime = TransitionTime;
-	Parms.PlayForward = PlayForward;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

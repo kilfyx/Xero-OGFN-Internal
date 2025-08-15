@@ -25,13 +25,47 @@ namespace SDK
 void UAthenaChatWidgetModalWrapper_C::ExecuteUbergraph_AthenaChatWidgetModalWrapper(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaChatWidgetModalWrapper");
+		Func = Class->GetFunction("AthenaChatWidgetModalWrapper_C", "ExecuteUbergraph_AthenaChatWidgetModalWrapper");
 
 	Params::AthenaChatWidgetModalWrapper_C_ExecuteUbergraph_AthenaChatWidgetModalWrapper Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaChatWidgetModalWrapper.AthenaChatWidgetModalWrapper_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UAthenaChatWidgetModalWrapper_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaChatWidgetModalWrapper_C", "OnInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaChatWidgetModalWrapper.AthenaChatWidgetModalWrapper_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaChatWidgetModalWrapper_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaChatWidgetModalWrapper_C", "PreConstruct");
+
+	Params::AthenaChatWidgetModalWrapper_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -43,45 +77,11 @@ void UAthenaChatWidgetModalWrapper_C::ExecuteUbergraph_AthenaChatWidgetModalWrap
 void UAthenaChatWidgetModalWrapper_C::FocusChat()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("FocusChat");
+		Func = Class->GetFunction("AthenaChatWidgetModalWrapper_C", "FocusChat");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaChatWidgetModalWrapper.AthenaChatWidgetModalWrapper_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAthenaChatWidgetModalWrapper_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaChatWidgetModalWrapper.AthenaChatWidgetModalWrapper_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaChatWidgetModalWrapper_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PreConstruct");
-
-	Params::AthenaChatWidgetModalWrapper_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

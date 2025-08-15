@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ItemSeriesOrRarity.ItemSeriesOrRarity_C
-// 0x0028 (0x0290 - 0x0268)
+// 0x0028 (0x0288 - 0x0260)
 class UItemSeriesOrRarity_C final : public UUserWidget
 {
 public:
-	class UWidgetSwitcher*                        RarityOrSeriesSwitcher;                            // 0x0268(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       RarityTextBlock;                                   // 0x0270(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                SeriesBorder;                                      // 0x0278(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       SeriesTextBlock;                                   // 0x0280(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          OnlyShowSeries;                                    // 0x0288(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        RarityOrSeriesSwitcher;                            // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       RarityTextBlock;                                   // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                SeriesBorder;                                      // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       SeriesTextBlock;                                   // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          OnlyShowSeries;                                    // 0x0280(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void UpdateItemDefinition(class UFortItemDefinition* ItemDefinition);
@@ -43,12 +43,12 @@ public:
 	}
 };
 static_assert(alignof(UItemSeriesOrRarity_C) == 0x000008, "Wrong alignment on UItemSeriesOrRarity_C");
-static_assert(sizeof(UItemSeriesOrRarity_C) == 0x000290, "Wrong size on UItemSeriesOrRarity_C");
-static_assert(offsetof(UItemSeriesOrRarity_C, RarityOrSeriesSwitcher) == 0x000268, "Member 'UItemSeriesOrRarity_C::RarityOrSeriesSwitcher' has a wrong offset!");
-static_assert(offsetof(UItemSeriesOrRarity_C, RarityTextBlock) == 0x000270, "Member 'UItemSeriesOrRarity_C::RarityTextBlock' has a wrong offset!");
-static_assert(offsetof(UItemSeriesOrRarity_C, SeriesBorder) == 0x000278, "Member 'UItemSeriesOrRarity_C::SeriesBorder' has a wrong offset!");
-static_assert(offsetof(UItemSeriesOrRarity_C, SeriesTextBlock) == 0x000280, "Member 'UItemSeriesOrRarity_C::SeriesTextBlock' has a wrong offset!");
-static_assert(offsetof(UItemSeriesOrRarity_C, OnlyShowSeries) == 0x000288, "Member 'UItemSeriesOrRarity_C::OnlyShowSeries' has a wrong offset!");
+static_assert(sizeof(UItemSeriesOrRarity_C) == 0x000288, "Wrong size on UItemSeriesOrRarity_C");
+static_assert(offsetof(UItemSeriesOrRarity_C, RarityOrSeriesSwitcher) == 0x000260, "Member 'UItemSeriesOrRarity_C::RarityOrSeriesSwitcher' has a wrong offset!");
+static_assert(offsetof(UItemSeriesOrRarity_C, RarityTextBlock) == 0x000268, "Member 'UItemSeriesOrRarity_C::RarityTextBlock' has a wrong offset!");
+static_assert(offsetof(UItemSeriesOrRarity_C, SeriesBorder) == 0x000270, "Member 'UItemSeriesOrRarity_C::SeriesBorder' has a wrong offset!");
+static_assert(offsetof(UItemSeriesOrRarity_C, SeriesTextBlock) == 0x000278, "Member 'UItemSeriesOrRarity_C::SeriesTextBlock' has a wrong offset!");
+static_assert(offsetof(UItemSeriesOrRarity_C, OnlyShowSeries) == 0x000280, "Member 'UItemSeriesOrRarity_C::OnlyShowSeries' has a wrong offset!");
 
 }
 

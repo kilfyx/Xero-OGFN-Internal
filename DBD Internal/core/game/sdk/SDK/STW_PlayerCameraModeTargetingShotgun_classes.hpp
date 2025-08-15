@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass STW_PlayerCameraModeTargetingShotgun.STW_PlayerCameraModeTargetingShotgun_C
-// 0x0000 (0x0EA0 - 0x0EA0)
+// 0x0000 (0x0DD0 - 0x0DD0)
 class USTW_PlayerCameraModeTargetingShotgun_C final : public UAthena_PlayerCameraModeTargetingShotgun_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<USTW_PlayerCameraModeTargetingShotgun_C>();
 	}
 };
+static_assert(alignof(USTW_PlayerCameraModeTargetingShotgun_C) == 0x000010, "Wrong alignment on USTW_PlayerCameraModeTargetingShotgun_C");
+static_assert(sizeof(USTW_PlayerCameraModeTargetingShotgun_C) == 0x000DD0, "Wrong size on USTW_PlayerCameraModeTargetingShotgun_C");
 
 }
 

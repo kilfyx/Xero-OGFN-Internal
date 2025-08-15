@@ -11,28 +11,27 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUILegacy_classes.hpp"
+#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SocialPanel_TopBarExtension.SocialPanel_TopBarExtension_C
-// 0x0030 (0x0F30 - 0x0F00)
-class USocialPanel_TopBarExtension_C final : public UCommonButtonLegacy
+// 0x0028 (0x0BC8 - 0x0BA0)
+class USocialPanel_TopBarExtension_C final : public UCommonButton
 {
 public:
-	uint8                                         Pad_EF8[0x8];                                      // 0x0EF8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Hovered;                                           // 0x0F08(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Arrow;                                             // 0x0F10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_PlatformIcon;                                // 0x0F18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMiniPartyBar_C*                        MiniPartyBar;                                      // 0x0F20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Hovered;                                           // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Arrow;                                             // 0x0BB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_PlatformIcon;                                // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMiniPartyBar_C*                        MiniPartyBar;                                      // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnHovered();
-	void BP_OnUnhovered();
 	void ExecuteUbergraph_SocialPanel_TopBarExtension(int32 EntryPoint);
+	void BP_OnUnhovered();
+	void BP_OnHovered();
 
 public:
 	static class UClass* StaticClass()
@@ -44,6 +43,13 @@ public:
 		return GetDefaultObjImpl<USocialPanel_TopBarExtension_C>();
 	}
 };
+static_assert(alignof(USocialPanel_TopBarExtension_C) == 0x000008, "Wrong alignment on USocialPanel_TopBarExtension_C");
+static_assert(sizeof(USocialPanel_TopBarExtension_C) == 0x000BC8, "Wrong size on USocialPanel_TopBarExtension_C");
+static_assert(offsetof(USocialPanel_TopBarExtension_C, UberGraphFrame) == 0x000BA0, "Member 'USocialPanel_TopBarExtension_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USocialPanel_TopBarExtension_C, Hovered) == 0x000BA8, "Member 'USocialPanel_TopBarExtension_C::Hovered' has a wrong offset!");
+static_assert(offsetof(USocialPanel_TopBarExtension_C, Arrow) == 0x000BB0, "Member 'USocialPanel_TopBarExtension_C::Arrow' has a wrong offset!");
+static_assert(offsetof(USocialPanel_TopBarExtension_C, Image_PlatformIcon) == 0x000BB8, "Member 'USocialPanel_TopBarExtension_C::Image_PlatformIcon' has a wrong offset!");
+static_assert(offsetof(USocialPanel_TopBarExtension_C, MiniPartyBar) == 0x000BC0, "Member 'USocialPanel_TopBarExtension_C::MiniPartyBar' has a wrong offset!");
 
 }
 

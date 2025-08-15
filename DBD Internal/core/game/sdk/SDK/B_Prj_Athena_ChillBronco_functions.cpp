@@ -17,21 +17,41 @@
 namespace SDK
 {
 
-// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.ApplyWaterInRadiusIfCurieEnabled
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.ExecuteUbergraph_B_Prj_Athena_ChillBronco
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const struct FHitResult&                HitResult                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Prj_Athena_ChillBronco_C::ApplyWaterInRadiusIfCurieEnabled(const struct FHitResult& HitResult)
+void AB_Prj_Athena_ChillBronco_C::ExecuteUbergraph_B_Prj_Athena_ChillBronco(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "ApplyWaterInRadiusIfCurieEnabled");
+		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "ExecuteUbergraph_B_Prj_Athena_ChillBronco");
 
-	Params::B_Prj_Athena_ChillBronco_C_ApplyWaterInRadiusIfCurieEnabled Parms{};
+	Params::B_Prj_Athena_ChillBronco_C_ExecuteUbergraph_B_Prj_Athena_ChillBronco Parms{};
 
-	Parms.HitResult = std::move(HitResult);
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.DoHealCheck
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<class AActor*>&            HitActors_0                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+
+void AB_Prj_Athena_ChillBronco_C::DoHealCheck(const TArray<class AActor*>& HitActors_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "DoHealCheck");
+
+	Params::B_Prj_Athena_ChillBronco_C_DoHealCheck Parms{};
+
+	Parms.HitActors_0 = std::move(HitActors_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -42,7 +62,7 @@ void AB_Prj_Athena_ChillBronco_C::ApplyWaterInRadiusIfCurieEnabled(const struct 
 // Parameters:
 // class AFortWaterBodyActor*              WaterBody                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UFortWaterInteractionComponent*   WaterInteractionComponent_0                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsFirstBody                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsFirstBody                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AB_Prj_Athena_ChillBronco_C::BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody)
 {
@@ -56,26 +76,6 @@ void AB_Prj_Athena_ChillBronco_C::BndEvt__WaterInteractionComponent_K2Node_Compo
 	Parms.WaterBody = WaterBody;
 	Parms.WaterInteractionComponent_0 = WaterInteractionComponent_0;
 	Parms.bIsFirstBody = bIsFirstBody;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.DoHealCheck
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<class AActor*>&            HitActors_0                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void AB_Prj_Athena_ChillBronco_C::DoHealCheck(const TArray<class AActor*>& HitActors_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "DoHealCheck");
-
-	Params::B_Prj_Athena_ChillBronco_C_DoHealCheck Parms{};
-
-	Parms.HitActors_0 = std::move(HitActors_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -95,23 +95,141 @@ void AB_Prj_Athena_ChillBronco_C::EnableCollision()
 }
 
 
-// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.ExecuteUbergraph_B_Prj_Athena_ChillBronco
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.KillDelay
+// (BlueprintCallable, BlueprintEvent)
 
-void AB_Prj_Athena_ChillBronco_C::ExecuteUbergraph_B_Prj_Athena_ChillBronco(int32 EntryPoint)
+void AB_Prj_Athena_ChillBronco_C::KillDelay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "ExecuteUbergraph_B_Prj_Athena_ChillBronco");
+		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "KillDelay");
 
-	Params::B_Prj_Athena_ChillBronco_C_ExecuteUbergraph_B_Prj_Athena_ChillBronco Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.HealPlayer
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_Athena_ChillBronco_C::HealPlayer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "HealPlayer");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AB_Prj_Athena_ChillBronco_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.ReceiveHit
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              MyComp                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Other                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSelfMoved                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FVector&                   HitLocation_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   HitNormal_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void AB_Prj_Athena_ChillBronco_C::ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const struct FVector& HitLocation_0, const struct FVector& HitNormal_0, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "ReceiveHit");
+
+	Params::B_Prj_Athena_ChillBronco_C_ReceiveHit Parms{};
+
+	Parms.MyComp = MyComp;
+	Parms.Other = Other;
+	Parms.OtherComp = OtherComp;
+	Parms.bSelfMoved = bSelfMoved;
+	Parms.HitLocation_0 = std::move(HitLocation_0);
+	Parms.HitNormal_0 = std::move(HitNormal_0);
+	Parms.NormalImpulse = std::move(NormalImpulse);
+	Parms.Hit = std::move(Hit);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.OnTouched
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                HitResult                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// bool                                    bIsOverlap                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_Prj_Athena_ChillBronco_C::OnTouched(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FHitResult& HitResult, bool bIsOverlap)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "OnTouched");
+
+	Params::B_Prj_Athena_ChillBronco_C_OnTouched Parms{};
+
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.HitResult = std::move(HitResult);
+	Parms.bIsOverlap = bIsOverlap;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.OnExploded
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const TArray<class AActor*>&            HitActors_0                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+
+void AB_Prj_Athena_ChillBronco_C::OnExploded(const TArray<class AActor*>& HitActors_0, const TArray<struct FHitResult>& HitResults)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "OnExploded");
+
+	Params::B_Prj_Athena_ChillBronco_C_OnExploded Parms{};
+
+	Parms.HitActors_0 = std::move(HitActors_0);
+	Parms.HitResults = std::move(HitResults);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_Athena_ChillBronco_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -157,53 +275,17 @@ void AB_Prj_Athena_ChillBronco_C::GetMissingShield(float* MissingShield)
 }
 
 
-// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.HealPlayer
-// (BlueprintCallable, BlueprintEvent)
+// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.ResetVariables
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AB_Prj_Athena_ChillBronco_C::HealPlayer()
+void AB_Prj_Athena_ChillBronco_C::ResetVariables()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "HealPlayer");
+		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "ResetVariables");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.KillDelay
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Athena_ChillBronco_C::KillDelay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "KillDelay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.OnExploded
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const TArray<class AActor*>&            HitActors_0                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-
-void AB_Prj_Athena_ChillBronco_C::OnExploded(const TArray<class AActor*>& HitActors_0, const TArray<struct FHitResult>& HitResults)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "OnExploded");
-
-	Params::B_Prj_Athena_ChillBronco_C_OnExploded Parms{};
-
-	Parms.HitActors_0 = std::move(HitActors_0);
-	Parms.HitResults = std::move(HitResults);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -218,32 +300,6 @@ void AB_Prj_Athena_ChillBronco_C::OnRep_PlayerPawn()
 		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "OnRep_PlayerPawn");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.OnTouched
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                HitResult                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-// bool                                    bIsOverlap                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Prj_Athena_ChillBronco_C::OnTouched(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FHitResult& HitResult, bool bIsOverlap)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "OnTouched");
-
-	Params::B_Prj_Athena_ChillBronco_C_OnTouched Parms{};
-
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.HitResult = std::move(HitResult);
-	Parms.bIsOverlap = bIsOverlap;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -267,65 +323,23 @@ void AB_Prj_Athena_ChillBronco_C::QuestCheckSquadMember(class AFortPawn* PlayerP
 }
 
 
-// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AB_Prj_Athena_ChillBronco_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.ReceiveHit
-// (Event, Public, HasOutParams, BlueprintEvent)
+// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.ApplyWaterInRadiusIfCurieEnabled
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPrimitiveComponent*              MyComp                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Other                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bSelfMoved                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   HitLocation_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   HitNormal_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// const struct FHitResult&                HitResult                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
-void AB_Prj_Athena_ChillBronco_C::ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const struct FVector& HitLocation_0, const struct FVector& HitNormal_0, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+void AB_Prj_Athena_ChillBronco_C::ApplyWaterInRadiusIfCurieEnabled(const struct FHitResult& HitResult)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "ReceiveHit");
+		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "ApplyWaterInRadiusIfCurieEnabled");
 
-	Params::B_Prj_Athena_ChillBronco_C_ReceiveHit Parms{};
+	Params::B_Prj_Athena_ChillBronco_C_ApplyWaterInRadiusIfCurieEnabled Parms{};
 
-	Parms.MyComp = MyComp;
-	Parms.Other = Other;
-	Parms.OtherComp = OtherComp;
-	Parms.bSelfMoved = bSelfMoved;
-	Parms.HitLocation_0 = std::move(HitLocation_0);
-	Parms.HitNormal_0 = std::move(HitNormal_0);
-	Parms.NormalImpulse = std::move(NormalImpulse);
-	Parms.Hit = std::move(Hit);
+	Parms.HitResult = std::move(HitResult);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.ResetVariables
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Athena_ChillBronco_C::ResetVariables()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "ResetVariables");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -338,20 +352,6 @@ void AB_Prj_Athena_ChillBronco_C::UpdateHealthShieldHealAmounts()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "UpdateHealthShieldHealAmounts");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_ChillBronco.B_Prj_Athena_ChillBronco_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Athena_ChillBronco_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_ChillBronco_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -17,15 +17,37 @@
 namespace SDK
 {
 
-// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.StartMusic
-// (Event, Public, BlueprintEvent)
+// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.Change Music
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USoundBase*                       New_Music                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AFort_Entry_Music_Controller_BP_C::StartMusic()
+void AFort_Entry_Music_Controller_BP_C::Change_Music(class USoundBase* New_Music, float StartTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "StartMusic");
+		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "Change Music");
+
+	Params::Fort_Entry_Music_Controller_BP_C_Change_Music Parms{};
+
+	Parms.New_Music = New_Music;
+	Parms.StartTime = StartTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.ListenToMusicPacks
+// (BlueprintCallable, BlueprintEvent)
+
+void AFort_Entry_Music_Controller_BP_C::ListenToMusicPacks()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "ListenToMusicPacks");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,7 +78,7 @@ void AFort_Entry_Music_Controller_BP_C::OnMusicPackChanged(const class UAthenaMu
 // Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.Lobby Music Override
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Lobby_Music_Activate                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Lobby_Music_Activate                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class USoundBase*                       New_Music                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AFort_Entry_Music_Controller_BP_C::Lobby_Music_Override(bool Lobby_Music_Activate, class USoundBase* New_Music)
@@ -75,63 +97,49 @@ void AFort_Entry_Music_Controller_BP_C::Lobby_Music_Override(bool Lobby_Music_Ac
 }
 
 
-// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.ListenToMusicPacks
+// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.MakeNextMusicPackStartFromBeginning
 // (BlueprintCallable, BlueprintEvent)
 
-void AFort_Entry_Music_Controller_BP_C::ListenToMusicPacks()
+void AFort_Entry_Music_Controller_BP_C::MakeNextMusicPackStartFromBeginning()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "ListenToMusicPacks");
+		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "MakeNextMusicPackStartFromBeginning");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.SetCanRetriggerNextMusicPack
+// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.DelayedPlayMusicPack
 // (BlueprintCallable, BlueprintEvent)
-
-void AFort_Entry_Music_Controller_BP_C::SetCanRetriggerNextMusicPack()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "SetCanRetriggerNextMusicPack");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.ExecuteUbergraph_Fort_Entry_Music_Controller_BP
-// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAthenaMusicPackItemDefinition*   MusicPackToPlayLater_0                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AFort_Entry_Music_Controller_BP_C::ExecuteUbergraph_Fort_Entry_Music_Controller_BP(int32 EntryPoint)
+void AFort_Entry_Music_Controller_BP_C::DelayedPlayMusicPack(class UAthenaMusicPackItemDefinition* MusicPackToPlayLater_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "ExecuteUbergraph_Fort_Entry_Music_Controller_BP");
+		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "DelayedPlayMusicPack");
 
-	Params::Fort_Entry_Music_Controller_BP_C_ExecuteUbergraph_Fort_Entry_Music_Controller_BP Parms{};
+	Params::Fort_Entry_Music_Controller_BP_C_DelayedPlayMusicPack Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.MusicPackToPlayLater_0 = MusicPackToPlayLater_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.ClearDelayedPlayMusicPack
+// (BlueprintCallable, BlueprintEvent)
 
-void AFort_Entry_Music_Controller_BP_C::ReceiveBeginPlay()
+void AFort_Entry_Music_Controller_BP_C::ClearDelayedPlayMusicPack()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "ClearDelayedPlayMusicPack");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -151,47 +159,35 @@ void AFort_Entry_Music_Controller_BP_C::PlayEquippedMusicPack()
 }
 
 
-// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.Crossfade Music
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Start_Time                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTag&              EventTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.StartMusic
+// (Event, Public, BlueprintEvent)
 
-void AFort_Entry_Music_Controller_BP_C::Crossfade_Music(float Start_Time, const struct FGameplayTag& EventTag)
+void AFort_Entry_Music_Controller_BP_C::StartMusic()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "Crossfade Music");
+		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "StartMusic");
 
-	Params::Fort_Entry_Music_Controller_BP_C_Crossfade_Music Parms{};
-
-	Parms.Start_Time = Start_Time;
-	Parms.EventTag = std::move(EventTag);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.Change Music
-// (BlueprintCallable, BlueprintEvent)
+// Function Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.ExecuteUbergraph_Fort_Entry_Music_Controller_BP
+// (Final, UbergraphFunction)
 // Parameters:
-// class USoundBase*                       New_Music                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTag&              Event_Tag                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AFort_Entry_Music_Controller_BP_C::Change_Music(class USoundBase* New_Music, float StartTime, const struct FGameplayTag& Event_Tag)
+void AFort_Entry_Music_Controller_BP_C::ExecuteUbergraph_Fort_Entry_Music_Controller_BP(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "Change Music");
+		Func = Class->GetFunction("Fort_Entry_Music_Controller_BP_C", "ExecuteUbergraph_Fort_Entry_Music_Controller_BP");
 
-	Params::Fort_Entry_Music_Controller_BP_C_Change_Music Parms{};
+	Params::Fort_Entry_Music_Controller_BP_C_ExecuteUbergraph_Fort_Entry_Music_Controller_BP Parms{};
 
-	Parms.New_Music = New_Music;
-	Parms.StartTime = StartTime;
-	Parms.Event_Tag = std::move(Event_Tag);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

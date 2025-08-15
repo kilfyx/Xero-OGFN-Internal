@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ButtonStyle-TextOnlyBase.ButtonStyle-TextOnlyBase_C
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0000 (0x0570 - 0x0570)
 class UButtonStyle_TextOnlyBase_C : public UButtonStyle_Base_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_TextOnlyBase_C>();
 	}
 };
+static_assert(alignof(UButtonStyle_TextOnlyBase_C) == 0x000008, "Wrong alignment on UButtonStyle_TextOnlyBase_C");
+static_assert(sizeof(UButtonStyle_TextOnlyBase_C) == 0x000570, "Wrong size on UButtonStyle_TextOnlyBase_C");
 
 }
 

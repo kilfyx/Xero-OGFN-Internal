@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function SettingsRotator.SettingsRotator_C.BP_OnDefaultOptionSpecified
+// Function SettingsRotator.SettingsRotator_C.BP_OnOptionsPopulated
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// int32                                   DefaultOptionIndex                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Count                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USettingsRotator_C::BP_OnDefaultOptionSpecified(int32 DefaultOptionIndex)
+void USettingsRotator_C::BP_OnOptionsPopulated(int32 Count)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsRotator_C", "BP_OnDefaultOptionSpecified");
+		Func = Class->GetFunction("SettingsRotator_C", "BP_OnOptionsPopulated");
 
-	Params::SettingsRotator_C_BP_OnDefaultOptionSpecified Parms{};
+	Params::SettingsRotator_C_BP_OnOptionsPopulated Parms{};
 
-	Parms.DefaultOptionIndex = DefaultOptionIndex;
+	Parms.Count = Count;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -57,21 +57,21 @@ void USettingsRotator_C::BP_OnOptionSelected(int32 Index_0)
 }
 
 
-// Function SettingsRotator.SettingsRotator_C.BP_OnOptionsPopulated
+// Function SettingsRotator.SettingsRotator_C.BP_OnDefaultOptionSpecified
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// int32                                   Count                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   DefaultOptionIndex                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USettingsRotator_C::BP_OnOptionsPopulated(int32 Count)
+void USettingsRotator_C::BP_OnDefaultOptionSpecified(int32 DefaultOptionIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsRotator_C", "BP_OnOptionsPopulated");
+		Func = Class->GetFunction("SettingsRotator_C", "BP_OnDefaultOptionSpecified");
 
-	Params::SettingsRotator_C_BP_OnOptionsPopulated Parms{};
+	Params::SettingsRotator_C_BP_OnDefaultOptionSpecified Parms{};
 
-	Parms.Count = Count;
+	Parms.DefaultOptionIndex = DefaultOptionIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

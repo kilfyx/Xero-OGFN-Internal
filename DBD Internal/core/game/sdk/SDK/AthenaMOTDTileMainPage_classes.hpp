@@ -10,10 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
-#include "FortniteUI_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteUI_classes.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -21,56 +20,44 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaMOTDTileMainPage.AthenaMOTDTileMainPage_C
-// 0x0710 (0x1B90 - 0x1480)
+// 0x00A8 (0x0C98 - 0x0BF0)
 class UAthenaMOTDTileMainPage_C final : public UFortAthenaMOTDTile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1480(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHover_Mobile;                                    // 0x1488(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnSelected_Mobile;                                 // 0x1490(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnHover;                                           // 0x1498(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnSelected;                                        // 0x14A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBackgroundBlur*                        BackgroundBlur_0;                                  // 0x14A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Border_0;                                          // 0x14B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Border_Details;                                    // 0x14B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Border_Mobile;                                     // 0x14C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Border_PipDisplay;                                 // 0x14C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonLoadGuard*                       CommonLoadGuard_0;                                 // 0x14D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fill;                                              // 0x14D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_leftStick;                                   // 0x14E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_SelectedPointer;                             // 0x14E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_SelectedPointer_Shadow;                      // 0x14F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LoadingImage;                                      // 0x14F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               LoadingImageOvr;                                   // 0x1500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            LoadSwitcher;                                      // 0x1508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScaleBox*                              NewsItemScale;                                     // 0x1510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_1;                                         // 0x1518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_2;                                         // 0x1520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_1;                                         // 0x1528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_Tile;                                      // 0x1530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bShowImageOnly;                                    // 0x1538(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1539[0x3];                                     // 0x1539(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         PreviewPipCount;                                   // 0x153C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(bool NewIsHovered)> OnHoveredChanged;                                  // 0x1540(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FLinearColor                           DefaultColor;                                      // 0x1550(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               MID_Font;                                          // 0x1560(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1568[0x8];                                     // 0x1568(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTextBlockStyle                        MobileTextStyle;                                   // 0x1570(0x0310)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FTextBlockStyle                        OriginalTextStyle;                                 // 0x1880(0x0310)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BF0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHover;                                           // 0x0BF8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnSelected;                                        // 0x0C00(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Intro;                                             // 0x0C08(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                Border_Details;                                    // 0x0C10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                Border_PipDisplay;                                 // 0x0C18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonLoadGuard*                       CommonLoadGuard_0;                                 // 0x0C20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fill;                                              // 0x0C28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_SelectedPointer;                             // 0x0C30(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_SelectedPointer_Shadow;                      // 0x0C38(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LoadingImage;                                      // 0x0C40(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               LoadingImageOvr;                                   // 0x0C48(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  LoadSwitcher;                                      // 0x0C50(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                              NewsItemScale;                                     // 0x0C58(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_Tile;                                      // 0x0C60(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bShowImageOnly;                                    // 0x0C68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C69[0x3];                                      // 0x0C69(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PreviewPipCount;                                   // 0x0C6C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(bool NewIsHovered)> OnHoveredChanged;                              // 0x0C70(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FLinearColor                           DefaultColor;                                      // 0x0C80(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               MID_Font;                                          // 0x0C90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_OnDeselected();
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void BP_OnSelected();
-	void Construct();
-	void ExecuteUbergraph_AthenaMOTDTileMainPage(int32 EntryPoint);
-	void OnInitialized();
+	void UpdateDisplay();
+	void ShowImageOnly();
+	void PreConstruct(bool IsDesignTime);
 	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
 	void OnPopulateNews(const struct FAthenaMOTDBase& NewsEntry);
-	void PreConstruct(bool IsDesignTime);
-	void ShowImageOnly();
-	void UpdateDisplay();
+	void BP_OnSelected();
+	void BP_OnDeselected();
+	void OnInitialized();
+	void ExecuteUbergraph_AthenaMOTDTileMainPage(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -82,38 +69,28 @@ public:
 		return GetDefaultObjImpl<UAthenaMOTDTileMainPage_C>();
 	}
 };
-static_assert(alignof(UAthenaMOTDTileMainPage_C) == 0x000010, "Wrong alignment on UAthenaMOTDTileMainPage_C");
-static_assert(sizeof(UAthenaMOTDTileMainPage_C) == 0x001B90, "Wrong size on UAthenaMOTDTileMainPage_C");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, UberGraphFrame) == 0x001480, "Member 'UAthenaMOTDTileMainPage_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, OnHover_Mobile) == 0x001488, "Member 'UAthenaMOTDTileMainPage_C::OnHover_Mobile' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, OnSelected_Mobile) == 0x001490, "Member 'UAthenaMOTDTileMainPage_C::OnSelected_Mobile' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, OnHover) == 0x001498, "Member 'UAthenaMOTDTileMainPage_C::OnHover' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, OnSelected) == 0x0014A0, "Member 'UAthenaMOTDTileMainPage_C::OnSelected' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, BackgroundBlur_0) == 0x0014A8, "Member 'UAthenaMOTDTileMainPage_C::BackgroundBlur_0' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, Border_0) == 0x0014B0, "Member 'UAthenaMOTDTileMainPage_C::Border_0' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, Border_Details) == 0x0014B8, "Member 'UAthenaMOTDTileMainPage_C::Border_Details' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, Border_Mobile) == 0x0014C0, "Member 'UAthenaMOTDTileMainPage_C::Border_Mobile' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, Border_PipDisplay) == 0x0014C8, "Member 'UAthenaMOTDTileMainPage_C::Border_PipDisplay' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, CommonLoadGuard_0) == 0x0014D0, "Member 'UAthenaMOTDTileMainPage_C::CommonLoadGuard_0' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, Fill) == 0x0014D8, "Member 'UAthenaMOTDTileMainPage_C::Fill' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, Image_leftStick) == 0x0014E0, "Member 'UAthenaMOTDTileMainPage_C::Image_leftStick' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, Image_SelectedPointer) == 0x0014E8, "Member 'UAthenaMOTDTileMainPage_C::Image_SelectedPointer' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, Image_SelectedPointer_Shadow) == 0x0014F0, "Member 'UAthenaMOTDTileMainPage_C::Image_SelectedPointer_Shadow' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, LoadingImage) == 0x0014F8, "Member 'UAthenaMOTDTileMainPage_C::LoadingImage' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, LoadingImageOvr) == 0x001500, "Member 'UAthenaMOTDTileMainPage_C::LoadingImageOvr' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, LoadSwitcher) == 0x001508, "Member 'UAthenaMOTDTileMainPage_C::LoadSwitcher' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, NewsItemScale) == 0x001510, "Member 'UAthenaMOTDTileMainPage_C::NewsItemScale' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, Overlay_1) == 0x001518, "Member 'UAthenaMOTDTileMainPage_C::Overlay_1' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, Overlay_2) == 0x001520, "Member 'UAthenaMOTDTileMainPage_C::Overlay_2' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, SizeBox_1) == 0x001528, "Member 'UAthenaMOTDTileMainPage_C::SizeBox_1' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, SizeBox_Tile) == 0x001530, "Member 'UAthenaMOTDTileMainPage_C::SizeBox_Tile' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, bShowImageOnly) == 0x001538, "Member 'UAthenaMOTDTileMainPage_C::bShowImageOnly' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, PreviewPipCount) == 0x00153C, "Member 'UAthenaMOTDTileMainPage_C::PreviewPipCount' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, OnHoveredChanged) == 0x001540, "Member 'UAthenaMOTDTileMainPage_C::OnHoveredChanged' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, DefaultColor) == 0x001550, "Member 'UAthenaMOTDTileMainPage_C::DefaultColor' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, MID_Font) == 0x001560, "Member 'UAthenaMOTDTileMainPage_C::MID_Font' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, MobileTextStyle) == 0x001570, "Member 'UAthenaMOTDTileMainPage_C::MobileTextStyle' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDTileMainPage_C, OriginalTextStyle) == 0x001880, "Member 'UAthenaMOTDTileMainPage_C::OriginalTextStyle' has a wrong offset!");
+static_assert(alignof(UAthenaMOTDTileMainPage_C) == 0x000008, "Wrong alignment on UAthenaMOTDTileMainPage_C");
+static_assert(sizeof(UAthenaMOTDTileMainPage_C) == 0x000C98, "Wrong size on UAthenaMOTDTileMainPage_C");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, UberGraphFrame) == 0x000BF0, "Member 'UAthenaMOTDTileMainPage_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, OnHover) == 0x000BF8, "Member 'UAthenaMOTDTileMainPage_C::OnHover' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, OnSelected) == 0x000C00, "Member 'UAthenaMOTDTileMainPage_C::OnSelected' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, Intro) == 0x000C08, "Member 'UAthenaMOTDTileMainPage_C::Intro' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, Border_Details) == 0x000C10, "Member 'UAthenaMOTDTileMainPage_C::Border_Details' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, Border_PipDisplay) == 0x000C18, "Member 'UAthenaMOTDTileMainPage_C::Border_PipDisplay' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, CommonLoadGuard_0) == 0x000C20, "Member 'UAthenaMOTDTileMainPage_C::CommonLoadGuard_0' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, Fill) == 0x000C28, "Member 'UAthenaMOTDTileMainPage_C::Fill' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, Image_SelectedPointer) == 0x000C30, "Member 'UAthenaMOTDTileMainPage_C::Image_SelectedPointer' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, Image_SelectedPointer_Shadow) == 0x000C38, "Member 'UAthenaMOTDTileMainPage_C::Image_SelectedPointer_Shadow' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, LoadingImage) == 0x000C40, "Member 'UAthenaMOTDTileMainPage_C::LoadingImage' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, LoadingImageOvr) == 0x000C48, "Member 'UAthenaMOTDTileMainPage_C::LoadingImageOvr' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, LoadSwitcher) == 0x000C50, "Member 'UAthenaMOTDTileMainPage_C::LoadSwitcher' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, NewsItemScale) == 0x000C58, "Member 'UAthenaMOTDTileMainPage_C::NewsItemScale' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, SizeBox_Tile) == 0x000C60, "Member 'UAthenaMOTDTileMainPage_C::SizeBox_Tile' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, bShowImageOnly) == 0x000C68, "Member 'UAthenaMOTDTileMainPage_C::bShowImageOnly' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, PreviewPipCount) == 0x000C6C, "Member 'UAthenaMOTDTileMainPage_C::PreviewPipCount' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, OnHoveredChanged) == 0x000C70, "Member 'UAthenaMOTDTileMainPage_C::OnHoveredChanged' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, DefaultColor) == 0x000C80, "Member 'UAthenaMOTDTileMainPage_C::DefaultColor' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDTileMainPage_C, MID_Font) == 0x000C90, "Member 'UAthenaMOTDTileMainPage_C::MID_Font' has a wrong offset!");
 
 }
 

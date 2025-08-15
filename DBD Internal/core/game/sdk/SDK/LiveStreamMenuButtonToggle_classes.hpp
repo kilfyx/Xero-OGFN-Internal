@@ -12,32 +12,30 @@
 
 #include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LiveStreamMenuButtonToggle.LiveStreamMenuButtonToggle_C
-// 0x0040 (0x0F50 - 0x0F10)
+// 0x0038 (0x0BE0 - 0x0BA8)
 class ULiveStreamMenuButtonToggle_C final : public ULiveStreamMenuToggleButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Hover;                                             // 0x0F18(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Art;                                               // 0x0F20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ButtonBacking;                                     // 0x0F28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       ButtonText;                                        // 0x0F30(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               IconBox;                                           // 0x0F38(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULiveViolator_C*                        LiveViolator;                                      // 0x0F40(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Spikes_1;                                          // 0x0F48(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Hover;                                             // 0x0BB0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Art;                                               // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ButtonBacking;                                     // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ButtonText;                                        // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULiveViolator_C*                        LiveViolator;                                      // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Spikes_1;                                          // 0x0BD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
+	void RefreshButton(bool IsLiveStreamEnabled);
 	void BP_OnHovered();
 	void BP_OnUnhovered();
 	void Construct();
 	void ExecuteUbergraph_LiveStreamMenuButtonToggle(int32 EntryPoint);
-	void RefreshButton(bool IsLiveStreamEnabled);
 
 public:
 	static class UClass* StaticClass()
@@ -49,6 +47,15 @@ public:
 		return GetDefaultObjImpl<ULiveStreamMenuButtonToggle_C>();
 	}
 };
+static_assert(alignof(ULiveStreamMenuButtonToggle_C) == 0x000008, "Wrong alignment on ULiveStreamMenuButtonToggle_C");
+static_assert(sizeof(ULiveStreamMenuButtonToggle_C) == 0x000BE0, "Wrong size on ULiveStreamMenuButtonToggle_C");
+static_assert(offsetof(ULiveStreamMenuButtonToggle_C, UberGraphFrame) == 0x000BA8, "Member 'ULiveStreamMenuButtonToggle_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ULiveStreamMenuButtonToggle_C, Hover) == 0x000BB0, "Member 'ULiveStreamMenuButtonToggle_C::Hover' has a wrong offset!");
+static_assert(offsetof(ULiveStreamMenuButtonToggle_C, Art) == 0x000BB8, "Member 'ULiveStreamMenuButtonToggle_C::Art' has a wrong offset!");
+static_assert(offsetof(ULiveStreamMenuButtonToggle_C, ButtonBacking) == 0x000BC0, "Member 'ULiveStreamMenuButtonToggle_C::ButtonBacking' has a wrong offset!");
+static_assert(offsetof(ULiveStreamMenuButtonToggle_C, ButtonText) == 0x000BC8, "Member 'ULiveStreamMenuButtonToggle_C::ButtonText' has a wrong offset!");
+static_assert(offsetof(ULiveStreamMenuButtonToggle_C, LiveViolator) == 0x000BD0, "Member 'ULiveStreamMenuButtonToggle_C::LiveViolator' has a wrong offset!");
+static_assert(offsetof(ULiveStreamMenuButtonToggle_C, Spikes_1) == 0x000BD8, "Member 'ULiveStreamMenuButtonToggle_C::Spikes_1' has a wrong offset!");
 
 }
 

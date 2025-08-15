@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_ColdBreath_V2_C>();
 	}
 };
+static_assert(alignof(UGE_ColdBreath_V2_C) == 0x000008, "Wrong alignment on UGE_ColdBreath_V2_C");
+static_assert(sizeof(UGE_ColdBreath_V2_C) == 0x000800, "Wrong size on UGE_ColdBreath_V2_C");
 
 }
 

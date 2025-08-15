@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "SocialUMG_classes.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -20,26 +20,23 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SocialInteraction.SocialInteraction_C
-// 0x0060 (0x0FD0 - 0x0F70)
+// 0x0048 (0x0C48 - 0x0C00)
 class USocialInteraction_C final : public USocialInteractionButton
 {
 public:
-	uint8                                         Pad_F68[0x8];                                      // 0x0F68(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F70(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHover;                                           // 0x0F78(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 EncourageEpicFriend;                               // 0x0F80(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 InteractionIcon;                                   // 0x0F88(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMenuAnchor*                            MenuAnchor_Actions;                                // 0x0F90(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FLinearColor                           EncourageEpicFriend_IdleColor;                     // 0x0F98(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EncourageEpicFriend_HoveredColor;                  // 0x0FA8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           AddFriendColor;                                    // 0x0FB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHover;                                           // 0x0C08(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 EncourageEpicFriend;                               // 0x0C10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 InteractionIcon;                                   // 0x0C18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuAnchor*                            MenuAnchor_Actions;                                // 0x0C20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FLinearColor                           EncourageEpicFriend_IdleColor;                     // 0x0C28(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EncourageEpicFriend_HoveredColor;                  // 0x0C38(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_OnHovered();
-	void BP_OnUnhovered();
-	void Construct();
 	void ExecuteUbergraph_SocialInteraction(int32 EntryPoint);
 	void OnInteractionSet();
+	void BP_OnUnhovered();
+	void BP_OnHovered();
 
 public:
 	static class UClass* StaticClass()
@@ -51,6 +48,15 @@ public:
 		return GetDefaultObjImpl<USocialInteraction_C>();
 	}
 };
+static_assert(alignof(USocialInteraction_C) == 0x000008, "Wrong alignment on USocialInteraction_C");
+static_assert(sizeof(USocialInteraction_C) == 0x000C48, "Wrong size on USocialInteraction_C");
+static_assert(offsetof(USocialInteraction_C, UberGraphFrame) == 0x000C00, "Member 'USocialInteraction_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USocialInteraction_C, OnHover) == 0x000C08, "Member 'USocialInteraction_C::OnHover' has a wrong offset!");
+static_assert(offsetof(USocialInteraction_C, EncourageEpicFriend) == 0x000C10, "Member 'USocialInteraction_C::EncourageEpicFriend' has a wrong offset!");
+static_assert(offsetof(USocialInteraction_C, InteractionIcon) == 0x000C18, "Member 'USocialInteraction_C::InteractionIcon' has a wrong offset!");
+static_assert(offsetof(USocialInteraction_C, MenuAnchor_Actions) == 0x000C20, "Member 'USocialInteraction_C::MenuAnchor_Actions' has a wrong offset!");
+static_assert(offsetof(USocialInteraction_C, EncourageEpicFriend_IdleColor) == 0x000C28, "Member 'USocialInteraction_C::EncourageEpicFriend_IdleColor' has a wrong offset!");
+static_assert(offsetof(USocialInteraction_C, EncourageEpicFriend_HoveredColor) == 0x000C38, "Member 'USocialInteraction_C::EncourageEpicFriend_HoveredColor' has a wrong offset!");
 
 }
 

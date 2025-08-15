@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SettingsListEntry_Missing.SettingsListEntry_Missing_C
-// 0x0018 (0x02C8 - 0x02B0)
+// 0x0018 (0x02E0 - 0x02C8)
 class USettingsListEntry_Missing_C final : public UFortSettingsListEntry_Setting
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHover;                                           // 0x02B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_SettingName_1;                                // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHover;                                           // 0x02D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_SettingName_1;                                // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_SettingsListEntry_Missing(int32 EntryPoint);
-	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
+	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 
 public:
 	static class UClass* StaticClass()
@@ -41,6 +41,11 @@ public:
 		return GetDefaultObjImpl<USettingsListEntry_Missing_C>();
 	}
 };
+static_assert(alignof(USettingsListEntry_Missing_C) == 0x000008, "Wrong alignment on USettingsListEntry_Missing_C");
+static_assert(sizeof(USettingsListEntry_Missing_C) == 0x0002E0, "Wrong size on USettingsListEntry_Missing_C");
+static_assert(offsetof(USettingsListEntry_Missing_C, UberGraphFrame) == 0x0002C8, "Member 'USettingsListEntry_Missing_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USettingsListEntry_Missing_C, OnHover) == 0x0002D0, "Member 'USettingsListEntry_Missing_C::OnHover' has a wrong offset!");
+static_assert(offsetof(USettingsListEntry_Missing_C, Text_SettingName_1) == 0x0002D8, "Member 'USettingsListEntry_Missing_C::Text_SettingName_1' has a wrong offset!");
 
 }
 

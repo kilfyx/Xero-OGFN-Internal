@@ -33,6 +33,8 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlaySoundWithCondition_C>();
 	}
 };
+static_assert(alignof(UAnimNotify_PlaySoundWithCondition_C) == 0x000008, "Wrong alignment on UAnimNotify_PlaySoundWithCondition_C");
+static_assert(sizeof(UAnimNotify_PlaySoundWithCondition_C) == 0x000058, "Wrong size on UAnimNotify_PlaySoundWithCondition_C");
 
 }
 

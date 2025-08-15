@@ -25,9 +25,9 @@ namespace SDK
 void AGCN_RezOut_NPC_C::ExecuteUbergraph_GCN_RezOut_NPC(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_GCN_RezOut_NPC");
+		Func = Class->GetFunction("GCN_RezOut_NPC_C", "ExecuteUbergraph_GCN_RezOut_NPC");
 
 	Params::GCN_RezOut_NPC_C_ExecuteUbergraph_GCN_RezOut_NPC Parms{};
 
@@ -43,9 +43,9 @@ void AGCN_RezOut_NPC_C::ExecuteUbergraph_GCN_RezOut_NPC(int32 EntryPoint)
 void AGCN_RezOut_NPC_C::Pre_Sequence_Change()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Pre-Sequence Change");
+		Func = Class->GetFunction("GCN_RezOut_NPC_C", "Pre-Sequence Change");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

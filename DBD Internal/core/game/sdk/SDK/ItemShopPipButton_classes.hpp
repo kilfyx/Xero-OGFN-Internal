@@ -19,23 +19,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ItemShopPipButton.ItemShopPipButton_C
-// 0x0030 (0x1500 - 0x14D0)
+// 0x0028 (0x0BF0 - 0x0BC8)
 class UItemShopPipButton_C final : public UFortTextButton
 {
 public:
-	uint8                                         Pad_14C8[0x8];                                     // 0x14C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x14D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Hover;                                             // 0x14D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Selected;                                          // 0x14E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 BacchusMobileShadow;                               // 0x14E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PIP;                                               // 0x14F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BC8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Hover;                                             // 0x0BD0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Selected;                                          // 0x0BD8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 BacchusMobileShadow;                               // 0x0BE0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PIP;                                               // 0x0BE8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnDeselected();
-	void BP_OnSelected();
-	void Construct();
-	void ExecuteUbergraph_ItemShopPipButton(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void Construct();
+	void BP_OnSelected();
+	void BP_OnDeselected();
+	void ExecuteUbergraph_ItemShopPipButton(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -47,13 +46,13 @@ public:
 		return GetDefaultObjImpl<UItemShopPipButton_C>();
 	}
 };
-static_assert(alignof(UItemShopPipButton_C) == 0x000010, "Wrong alignment on UItemShopPipButton_C");
-static_assert(sizeof(UItemShopPipButton_C) == 0x001500, "Wrong size on UItemShopPipButton_C");
-static_assert(offsetof(UItemShopPipButton_C, UberGraphFrame) == 0x0014D0, "Member 'UItemShopPipButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UItemShopPipButton_C, Hover) == 0x0014D8, "Member 'UItemShopPipButton_C::Hover' has a wrong offset!");
-static_assert(offsetof(UItemShopPipButton_C, Selected) == 0x0014E0, "Member 'UItemShopPipButton_C::Selected' has a wrong offset!");
-static_assert(offsetof(UItemShopPipButton_C, BacchusMobileShadow) == 0x0014E8, "Member 'UItemShopPipButton_C::BacchusMobileShadow' has a wrong offset!");
-static_assert(offsetof(UItemShopPipButton_C, PIP) == 0x0014F0, "Member 'UItemShopPipButton_C::PIP' has a wrong offset!");
+static_assert(alignof(UItemShopPipButton_C) == 0x000008, "Wrong alignment on UItemShopPipButton_C");
+static_assert(sizeof(UItemShopPipButton_C) == 0x000BF0, "Wrong size on UItemShopPipButton_C");
+static_assert(offsetof(UItemShopPipButton_C, UberGraphFrame) == 0x000BC8, "Member 'UItemShopPipButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UItemShopPipButton_C, Hover) == 0x000BD0, "Member 'UItemShopPipButton_C::Hover' has a wrong offset!");
+static_assert(offsetof(UItemShopPipButton_C, Selected) == 0x000BD8, "Member 'UItemShopPipButton_C::Selected' has a wrong offset!");
+static_assert(offsetof(UItemShopPipButton_C, BacchusMobileShadow) == 0x000BE0, "Member 'UItemShopPipButton_C::BacchusMobileShadow' has a wrong offset!");
+static_assert(offsetof(UItemShopPipButton_C, PIP) == 0x000BE8, "Member 'UItemShopPipButton_C::PIP' has a wrong offset!");
 
 }
 

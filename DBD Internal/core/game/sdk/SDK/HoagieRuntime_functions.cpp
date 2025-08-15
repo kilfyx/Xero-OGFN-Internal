@@ -197,6 +197,20 @@ void AFortHoagieVehicle::OnCritRotor(float Damage, const struct FVector& ImpactL
 }
 
 
+// Function HoagieRuntime.FortHoagieVehicle.OnExplode
+// (Event, Protected, BlueprintEvent)
+
+void AFortHoagieVehicle::OnExplode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortHoagieVehicle", "OnExplode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function HoagieRuntime.FortHoagieVehicle.OnImpactOtherHoagie
 // (Event, Protected, HasOutParams, HasDefaults, BlueprintEvent)
 // Parameters:
@@ -280,6 +294,25 @@ void AFortHoagieVehicle::OnRep_HoagieState()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("FortHoagieVehicle", "OnRep_HoagieState");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HoagieRuntime.FortHoagieVehicle.OnRep_VehicleFuelSystemState
+// (Final, Native, Protected)
+
+void AFortHoagieVehicle::OnRep_VehicleFuelSystemState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortHoagieVehicle", "OnRep_VehicleFuelSystemState");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -381,6 +414,20 @@ void AFortHoagieVehicle::OnRotorsStop()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("FortHoagieVehicle", "OnRotorsStop");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function HoagieRuntime.FortHoagieVehicle.OnStartCriticalHealth
+// (Event, Protected, BlueprintEvent)
+
+void AFortHoagieVehicle::OnStartCriticalHealth()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortHoagieVehicle", "OnStartCriticalHealth");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -561,25 +608,6 @@ void AFortHoagieVehicle::UpdateDamageStateNative(float Damage)
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HoagieRuntime.FortHoagieVehicle.UpdateHoagieAnimBP
-// (Native, Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void AFortHoagieVehicle::UpdateHoagieAnimBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortHoagieVehicle", "UpdateHoagieAnimBP");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }

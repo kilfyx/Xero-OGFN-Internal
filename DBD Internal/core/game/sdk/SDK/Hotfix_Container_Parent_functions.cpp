@@ -17,40 +17,6 @@
 namespace SDK
 {
 
-// Function Hotfix_Container_Parent.Hotfix_Container_Parent_C.ExecuteUbergraph_Hotfix_Container_Parent
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AHotfix_Container_Parent_C::ExecuteUbergraph_Hotfix_Container_Parent(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Hotfix_Container_Parent_C", "ExecuteUbergraph_Hotfix_Container_Parent");
-
-	Params::Hotfix_Container_Parent_C_ExecuteUbergraph_Hotfix_Container_Parent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Hotfix_Container_Parent.Hotfix_Container_Parent_C.OnLoot
-// (Event, Public, BlueprintEvent)
-
-void AHotfix_Container_Parent_C::OnLoot()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Hotfix_Container_Parent_C", "OnLoot");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Hotfix_Container_Parent.Hotfix_Container_Parent_C.OnReady_8BE6ADB6479A5EF3145F32B245E584C6
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -86,6 +52,40 @@ void AHotfix_Container_Parent_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("Hotfix_Container_Parent_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Hotfix_Container_Parent.Hotfix_Container_Parent_C.OnLoot
+// (Event, Public, BlueprintEvent)
+
+void AHotfix_Container_Parent_C::OnLoot()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Hotfix_Container_Parent_C", "OnLoot");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Hotfix_Container_Parent.Hotfix_Container_Parent_C.ExecuteUbergraph_Hotfix_Container_Parent
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AHotfix_Container_Parent_C::ExecuteUbergraph_Hotfix_Container_Parent(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Hotfix_Container_Parent_C", "ExecuteUbergraph_Hotfix_Container_Parent");
+
+	Params::Hotfix_Container_Parent_C_ExecuteUbergraph_Hotfix_Container_Parent Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DetailLevelMesh.BP_DetailLevelMesh_C
-// 0x0020 (0x02A8 - 0x0288)
+// 0x0020 (0x0240 - 0x0220)
 class ABP_DetailLevelMesh_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0290(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          AlwaysVisible;                                     // 0x02A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NotVisibleOnSwitch;                                // 0x02A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          AlwaysVisible;                                     // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          NotVisibleOnSwitch;                                // 0x0239(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_DetailLevelMesh(int32 EntryPoint);
@@ -42,12 +42,12 @@ public:
 	}
 };
 static_assert(alignof(ABP_DetailLevelMesh_C) == 0x000008, "Wrong alignment on ABP_DetailLevelMesh_C");
-static_assert(sizeof(ABP_DetailLevelMesh_C) == 0x0002A8, "Wrong size on ABP_DetailLevelMesh_C");
-static_assert(offsetof(ABP_DetailLevelMesh_C, UberGraphFrame) == 0x000288, "Member 'ABP_DetailLevelMesh_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_DetailLevelMesh_C, StaticMesh) == 0x000290, "Member 'ABP_DetailLevelMesh_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_DetailLevelMesh_C, DefaultSceneRoot) == 0x000298, "Member 'ABP_DetailLevelMesh_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_DetailLevelMesh_C, AlwaysVisible) == 0x0002A0, "Member 'ABP_DetailLevelMesh_C::AlwaysVisible' has a wrong offset!");
-static_assert(offsetof(ABP_DetailLevelMesh_C, NotVisibleOnSwitch) == 0x0002A1, "Member 'ABP_DetailLevelMesh_C::NotVisibleOnSwitch' has a wrong offset!");
+static_assert(sizeof(ABP_DetailLevelMesh_C) == 0x000240, "Wrong size on ABP_DetailLevelMesh_C");
+static_assert(offsetof(ABP_DetailLevelMesh_C, UberGraphFrame) == 0x000220, "Member 'ABP_DetailLevelMesh_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_DetailLevelMesh_C, StaticMesh) == 0x000228, "Member 'ABP_DetailLevelMesh_C::StaticMesh' has a wrong offset!");
+static_assert(offsetof(ABP_DetailLevelMesh_C, DefaultSceneRoot) == 0x000230, "Member 'ABP_DetailLevelMesh_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_DetailLevelMesh_C, AlwaysVisible) == 0x000238, "Member 'ABP_DetailLevelMesh_C::AlwaysVisible' has a wrong offset!");
+static_assert(offsetof(ABP_DetailLevelMesh_C, NotVisibleOnSwitch) == 0x000239, "Member 'ABP_DetailLevelMesh_C::NotVisibleOnSwitch' has a wrong offset!");
 
 }
 

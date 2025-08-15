@@ -20,38 +20,18 @@ namespace SDK
 // Function ItemPreviewPedestal.ItemPreviewPedestal_C.Remove Floor
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFortItemPreviewActor*            Preview                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AFortItemPreviewActor*            Preview                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AItemPreviewPedestal_C::Remove_Floor(class AFortItemPreviewActor* Preview)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Remove Floor");
+		Func = Class->GetFunction("ItemPreviewPedestal_C", "Remove Floor");
 
 	Params::ItemPreviewPedestal_C_Remove_Floor Parms{};
 
 	Parms.Preview = Preview;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemPreviewPedestal.ItemPreviewPedestal_C.ExecuteUbergraph_ItemPreviewPedestal
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AItemPreviewPedestal_C::ExecuteUbergraph_ItemPreviewPedestal(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_ItemPreviewPedestal");
-
-	Params::ItemPreviewPedestal_C_ExecuteUbergraph_ItemPreviewPedestal Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -65,13 +45,33 @@ void AItemPreviewPedestal_C::ExecuteUbergraph_ItemPreviewPedestal(int32 EntryPoi
 void AItemPreviewPedestal_C::OnItemDisplayed(EFortItemType ItemType)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnItemDisplayed");
+		Func = Class->GetFunction("ItemPreviewPedestal_C", "OnItemDisplayed");
 
 	Params::ItemPreviewPedestal_C_OnItemDisplayed Parms{};
 
 	Parms.ItemType = ItemType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemPreviewPedestal.ItemPreviewPedestal_C.ExecuteUbergraph_ItemPreviewPedestal
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AItemPreviewPedestal_C::ExecuteUbergraph_ItemPreviewPedestal(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPreviewPedestal_C", "ExecuteUbergraph_ItemPreviewPedestal");
+
+	Params::ItemPreviewPedestal_C_ExecuteUbergraph_ItemPreviewPedestal Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

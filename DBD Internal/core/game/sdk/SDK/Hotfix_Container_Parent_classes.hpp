@@ -10,34 +10,34 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 #include "FortniteGame_classes.hpp"
+#include "GameplayAbilities_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Hotfix_Container_Parent.Hotfix_Container_Parent_C
-// 0x0080 (0x0F38 - 0x0EB8)
+// 0x0080 (0x0D80 - 0x0D00)
 class AHotfix_Container_Parent_C : public ABuildingContainer
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0EB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FScalableFloat                         Row_ActorEnabled;                                  // 0x0EC0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         Row_InteractEnabled;                               // 0x0EE8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UParticleSystem*                        FX_Open;                                           // 0x0F10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                FX_OpenOffsetLocation;                             // 0x0F18(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FX_OpenPitchOffset;                                // 0x0F24(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Sound_Open;                                        // 0x0F28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DisableLootOnDisableInteract;                      // 0x0F30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FScalableFloat                         Row_ActorEnabled;                                  // 0x0D08(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         Row_InteractEnabled;                               // 0x0D30(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UParticleSystem*                        FX_Open;                                           // 0x0D58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                FX_OpenOffsetLocation;                             // 0x0D60(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FX_OpenPitchOffset;                                // 0x0D6C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Sound_Open;                                        // 0x0D70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DisableLootOnDisableInteract;                      // 0x0D78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void ExecuteUbergraph_Hotfix_Container_Parent(int32 EntryPoint);
-	void OnLoot();
 	void OnReady_8BE6ADB6479A5EF3145F32B245E584C6(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags);
 	void ReceiveBeginPlay();
+	void OnLoot();
+	void ExecuteUbergraph_Hotfix_Container_Parent(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -49,6 +49,16 @@ public:
 		return GetDefaultObjImpl<AHotfix_Container_Parent_C>();
 	}
 };
+static_assert(alignof(AHotfix_Container_Parent_C) == 0x000008, "Wrong alignment on AHotfix_Container_Parent_C");
+static_assert(sizeof(AHotfix_Container_Parent_C) == 0x000D80, "Wrong size on AHotfix_Container_Parent_C");
+static_assert(offsetof(AHotfix_Container_Parent_C, UberGraphFrame) == 0x000D00, "Member 'AHotfix_Container_Parent_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AHotfix_Container_Parent_C, Row_ActorEnabled) == 0x000D08, "Member 'AHotfix_Container_Parent_C::Row_ActorEnabled' has a wrong offset!");
+static_assert(offsetof(AHotfix_Container_Parent_C, Row_InteractEnabled) == 0x000D30, "Member 'AHotfix_Container_Parent_C::Row_InteractEnabled' has a wrong offset!");
+static_assert(offsetof(AHotfix_Container_Parent_C, FX_Open) == 0x000D58, "Member 'AHotfix_Container_Parent_C::FX_Open' has a wrong offset!");
+static_assert(offsetof(AHotfix_Container_Parent_C, FX_OpenOffsetLocation) == 0x000D60, "Member 'AHotfix_Container_Parent_C::FX_OpenOffsetLocation' has a wrong offset!");
+static_assert(offsetof(AHotfix_Container_Parent_C, FX_OpenPitchOffset) == 0x000D6C, "Member 'AHotfix_Container_Parent_C::FX_OpenPitchOffset' has a wrong offset!");
+static_assert(offsetof(AHotfix_Container_Parent_C, Sound_Open) == 0x000D70, "Member 'AHotfix_Container_Parent_C::Sound_Open' has a wrong offset!");
+static_assert(offsetof(AHotfix_Container_Parent_C, DisableLootOnDisableInteract) == 0x000D78, "Member 'AHotfix_Container_Parent_C::DisableLootOnDisableInteract' has a wrong offset!");
 
 }
 

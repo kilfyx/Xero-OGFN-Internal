@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_TrapBuildGeneric.GA_TrapBuildGeneric_C
-// 0x0010 (0x0AB8 - 0x0AA8)
+// 0x0010 (0x0AC8 - 0x0AB8)
 class UGA_TrapBuildGeneric_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTag                           PlacedCue;                                         // 0x0AB0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTag                           PlacedCue;                                         // 0x0AC0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_TrapBuildGeneric(int32 EntryPoint);
@@ -40,6 +40,10 @@ public:
 		return GetDefaultObjImpl<UGA_TrapBuildGeneric_C>();
 	}
 };
+static_assert(alignof(UGA_TrapBuildGeneric_C) == 0x000008, "Wrong alignment on UGA_TrapBuildGeneric_C");
+static_assert(sizeof(UGA_TrapBuildGeneric_C) == 0x000AC8, "Wrong size on UGA_TrapBuildGeneric_C");
+static_assert(offsetof(UGA_TrapBuildGeneric_C, UberGraphFrame) == 0x000AB8, "Member 'UGA_TrapBuildGeneric_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UGA_TrapBuildGeneric_C, PlacedCue) == 0x000AC0, "Member 'UGA_TrapBuildGeneric_C::PlacedCue' has a wrong offset!");
 
 }
 

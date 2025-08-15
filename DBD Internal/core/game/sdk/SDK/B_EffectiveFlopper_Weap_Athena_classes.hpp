@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_EffectiveFlopper_Weap_Athena.B_EffectiveFlopper_Weap_Athena_C
-// 0x0008 (0x1478 - 0x1470)
+// 0x0008 (0x0D20 - 0x0D18)
 class AB_EffectiveFlopper_Weap_Athena_C final : public AB_UtilityItem_Generic_Athena_C
 {
 public:
-	class UParticleSystemComponent*               P_Flopper_Catch_Drips;                             // 0x1470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               P_Flopper_Catch_Drips;                             // 0x0D18(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -33,6 +33,9 @@ public:
 		return GetDefaultObjImpl<AB_EffectiveFlopper_Weap_Athena_C>();
 	}
 };
+static_assert(alignof(AB_EffectiveFlopper_Weap_Athena_C) == 0x000008, "Wrong alignment on AB_EffectiveFlopper_Weap_Athena_C");
+static_assert(sizeof(AB_EffectiveFlopper_Weap_Athena_C) == 0x000D20, "Wrong size on AB_EffectiveFlopper_Weap_Athena_C");
+static_assert(offsetof(AB_EffectiveFlopper_Weap_Athena_C, P_Flopper_Catch_Drips) == 0x000D18, "Member 'AB_EffectiveFlopper_Weap_Athena_C::P_Flopper_Catch_Drips' has a wrong offset!");
 
 }
 

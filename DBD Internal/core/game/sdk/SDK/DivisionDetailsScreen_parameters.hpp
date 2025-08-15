@@ -14,39 +14,6 @@
 namespace SDK::Params
 {
 
-// Function DivisionDetailsScreen.DivisionDetailsScreen_C.BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonLegacy*                    Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong alignment on DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
-static_assert(sizeof(DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong size on DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
-static_assert(offsetof(DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature, Button) == 0x000000, "Member 'DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function DivisionDetailsScreen.DivisionDetailsScreen_C.BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonLegacy*                    Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong alignment on DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
-static_assert(sizeof(DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong size on DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
-static_assert(offsetof(DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature, Button) == 0x000000, "Member 'DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function DivisionDetailsScreen.DivisionDetailsScreen_C.EmptyFunction
-// 0x0001 (0x0001 - 0x0000)
-struct DivisionDetailsScreen_C_EmptyFunction final
-{
-public:
-	bool                                          Handled;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(DivisionDetailsScreen_C_EmptyFunction) == 0x000001, "Wrong alignment on DivisionDetailsScreen_C_EmptyFunction");
-static_assert(sizeof(DivisionDetailsScreen_C_EmptyFunction) == 0x000001, "Wrong size on DivisionDetailsScreen_C_EmptyFunction");
-static_assert(offsetof(DivisionDetailsScreen_C_EmptyFunction, Handled) == 0x000000, "Member 'DivisionDetailsScreen_C_EmptyFunction::Handled' has a wrong offset!");
-
 // Function DivisionDetailsScreen.DivisionDetailsScreen_C.ExecuteUbergraph_DivisionDetailsScreen
 // 0x00D0 (0x00D0 - 0x0000)
 struct DivisionDetailsScreen_C_ExecuteUbergraph_DivisionDetailsScreen final
@@ -59,16 +26,16 @@ public:
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Temp_text_Variable_1;                              // 0x0028(0x0018)()
 	class FText                                   Temp_text_Variable_2;                              // 0x0040(0x0018)()
-	class UCommonButtonLegacy*                    K2Node_ComponentBoundEvent_Button_1;               // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButton*                          K2Node_ComponentBoundEvent_Button_1;               // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetNumWidgets_ReturnValue;                // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonButtonLegacy*                    K2Node_ComponentBoundEvent_Button;                 // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButton*                          K2Node_ComponentBoundEvent_Button;                 // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_Select_Default;                             // 0x0080(0x0018)()
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   Temp_text_Variable_3;                              // 0x00A0(0x0018)()
 	class FText                                   K2Node_Select_Default_1;                           // 0x00B8(0x0018)()
 };
@@ -91,15 +58,48 @@ static_assert(offsetof(DivisionDetailsScreen_C_ExecuteUbergraph_DivisionDetailsS
 static_assert(offsetof(DivisionDetailsScreen_C_ExecuteUbergraph_DivisionDetailsScreen, Temp_text_Variable_3) == 0x0000A0, "Member 'DivisionDetailsScreen_C_ExecuteUbergraph_DivisionDetailsScreen::Temp_text_Variable_3' has a wrong offset!");
 static_assert(offsetof(DivisionDetailsScreen_C_ExecuteUbergraph_DivisionDetailsScreen, K2Node_Select_Default_1) == 0x0000B8, "Member 'DivisionDetailsScreen_C_ExecuteUbergraph_DivisionDetailsScreen::K2Node_Select_Default_1' has a wrong offset!");
 
+// Function DivisionDetailsScreen.DivisionDetailsScreen_C.BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature final
+{
+public:
+	class UCommonButton*                          Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong alignment on DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
+static_assert(sizeof(DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong size on DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
+static_assert(offsetof(DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature, Button) == 0x000000, "Member 'DivisionDetailsScreen_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature::Button' has a wrong offset!");
+
+// Function DivisionDetailsScreen.DivisionDetailsScreen_C.BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature final
+{
+public:
+	class UCommonButton*                          Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong alignment on DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+static_assert(sizeof(DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong size on DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+static_assert(offsetof(DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature, Button) == 0x000000, "Member 'DivisionDetailsScreen_C_BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature::Button' has a wrong offset!");
+
+// Function DivisionDetailsScreen.DivisionDetailsScreen_C.EmptyFunction
+// 0x0001 (0x0001 - 0x0000)
+struct DivisionDetailsScreen_C_EmptyFunction final
+{
+public:
+	bool                                          Handled;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(DivisionDetailsScreen_C_EmptyFunction) == 0x000001, "Wrong alignment on DivisionDetailsScreen_C_EmptyFunction");
+static_assert(sizeof(DivisionDetailsScreen_C_EmptyFunction) == 0x000001, "Wrong size on DivisionDetailsScreen_C_EmptyFunction");
+static_assert(offsetof(DivisionDetailsScreen_C_EmptyFunction, Handled) == 0x000000, "Member 'DivisionDetailsScreen_C_EmptyFunction::Handled' has a wrong offset!");
+
 // Function DivisionDetailsScreen.DivisionDetailsScreen_C.LeftShoulderButton
 // 0x000C (0x000C - 0x0000)
 struct DivisionDetailsScreen_C_LeftShoulderButton final
 {
 public:
-	bool                                          Handled;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Handled;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(DivisionDetailsScreen_C_LeftShoulderButton) == 0x000004, "Wrong alignment on DivisionDetailsScreen_C_LeftShoulderButton");
 static_assert(sizeof(DivisionDetailsScreen_C_LeftShoulderButton) == 0x00000C, "Wrong size on DivisionDetailsScreen_C_LeftShoulderButton");
@@ -112,10 +112,10 @@ static_assert(offsetof(DivisionDetailsScreen_C_LeftShoulderButton, CallFunc_Equa
 struct DivisionDetailsScreen_C_RightShoulderButton final
 {
 public:
-	bool                                          Handled;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Handled;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(DivisionDetailsScreen_C_RightShoulderButton) == 0x000004, "Wrong alignment on DivisionDetailsScreen_C_RightShoulderButton");
 static_assert(sizeof(DivisionDetailsScreen_C_RightShoulderButton) == 0x00000C, "Wrong size on DivisionDetailsScreen_C_RightShoulderButton");

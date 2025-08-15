@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TextStyle-BurbankSmall-XS-Cyan.TextStyle-BurbankSmall-XS-Cyan_C
-// 0x0000 (0x0180 - 0x0180)
+// 0x0000 (0x0148 - 0x0148)
 class UTextStyle_BurbankSmall_XS_Cyan_C final : public UTextStyle_BaseParent_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UTextStyle_BurbankSmall_XS_Cyan_C>();
 	}
 };
+static_assert(alignof(UTextStyle_BurbankSmall_XS_Cyan_C) == 0x000008, "Wrong alignment on UTextStyle_BurbankSmall_XS_Cyan_C");
+static_assert(sizeof(UTextStyle_BurbankSmall_XS_Cyan_C) == 0x000148, "Wrong size on UTextStyle_BurbankSmall_XS_Cyan_C");
 
 }
 

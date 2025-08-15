@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass JoinVoiceChannelButton.JoinVoiceChannelButton_C
-// 0x0010 (0x0F10 - 0x0F00)
+// 0x0010 (0x0BB0 - 0x0BA0)
 class UJoinVoiceChannelButton_C final : public UFortJoinVoiceChannelButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHover;                                           // 0x0F08(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHover;                                           // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_OnHovered();
-	void BP_OnUnhovered();
 	void ExecuteUbergraph_JoinVoiceChannelButton(int32 EntryPoint);
+	void BP_OnUnhovered();
+	void BP_OnHovered();
 
 public:
 	static class UClass* StaticClass()
@@ -40,6 +40,10 @@ public:
 		return GetDefaultObjImpl<UJoinVoiceChannelButton_C>();
 	}
 };
+static_assert(alignof(UJoinVoiceChannelButton_C) == 0x000008, "Wrong alignment on UJoinVoiceChannelButton_C");
+static_assert(sizeof(UJoinVoiceChannelButton_C) == 0x000BB0, "Wrong size on UJoinVoiceChannelButton_C");
+static_assert(offsetof(UJoinVoiceChannelButton_C, UberGraphFrame) == 0x000BA0, "Member 'UJoinVoiceChannelButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UJoinVoiceChannelButton_C, OnHover) == 0x000BA8, "Member 'UJoinVoiceChannelButton_C::OnHover' has a wrong offset!");
 
 }
 

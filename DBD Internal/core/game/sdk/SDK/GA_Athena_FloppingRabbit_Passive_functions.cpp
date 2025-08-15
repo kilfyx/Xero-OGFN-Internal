@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Athena_FloppingRabbit_Passive.GA_Athena_FloppingRabbit_Passive_C.EndFishing
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_FloppingRabbit_Passive_C::EndFishing()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_FloppingRabbit_Passive_C", "EndFishing");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_Athena_FloppingRabbit_Passive.GA_Athena_FloppingRabbit_Passive_C.ExecuteUbergraph_GA_Athena_FloppingRabbit_Passive
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -51,69 +37,15 @@ void UGA_Athena_FloppingRabbit_Passive_C::ExecuteUbergraph_GA_Athena_FloppingRab
 }
 
 
-// Function GA_Athena_FloppingRabbit_Passive.GA_Athena_FloppingRabbit_Passive_C.K2_ActivateAbilityFromEvent
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FGameplayEventData&        EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UGA_Athena_FloppingRabbit_Passive_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_FloppingRabbit_Passive_C", "K2_ActivateAbilityFromEvent");
-
-	Params::GA_Athena_FloppingRabbit_Passive_C_K2_ActivateAbilityFromEvent Parms{};
-
-	Parms.EventData = std::move(EventData);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Athena_FloppingRabbit_Passive.GA_Athena_FloppingRabbit_Passive_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_FloppingRabbit_Passive_C::K2_OnEndAbility(bool bWasCancelled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_FloppingRabbit_Passive_C", "K2_OnEndAbility");
-
-	Params::GA_Athena_FloppingRabbit_Passive_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Athena_FloppingRabbit_Passive.GA_Athena_FloppingRabbit_Passive_C.Removed_DCA556AE47E7D8C25D9A27899D5C963C
+// Function GA_Athena_FloppingRabbit_Passive.GA_Athena_FloppingRabbit_Passive_C.EndFishing
 // (BlueprintCallable, BlueprintEvent)
 
-void UGA_Athena_FloppingRabbit_Passive_C::Removed_DCA556AE47E7D8C25D9A27899D5C963C()
+void UGA_Athena_FloppingRabbit_Passive_C::EndFishing()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_FloppingRabbit_Passive_C", "Removed_DCA556AE47E7D8C25D9A27899D5C963C");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_FloppingRabbit_Passive.GA_Athena_FloppingRabbit_Passive_C.SaveOutRod
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_FloppingRabbit_Passive_C::SaveOutRod()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_FloppingRabbit_Passive_C", "SaveOutRod");
+		Func = Class->GetFunction("GA_Athena_FloppingRabbit_Passive_C", "EndFishing");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -139,10 +71,64 @@ void UGA_Athena_FloppingRabbit_Passive_C::Seat_Changed(int32 SeatIndex)
 }
 
 
+// Function GA_Athena_FloppingRabbit_Passive.GA_Athena_FloppingRabbit_Passive_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGA_Athena_FloppingRabbit_Passive_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_FloppingRabbit_Passive_C", "K2_OnEndAbility");
+
+	Params::GA_Athena_FloppingRabbit_Passive_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_FloppingRabbit_Passive.GA_Athena_FloppingRabbit_Passive_C.K2_ActivateAbilityFromEvent
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FGameplayEventData&        EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UGA_Athena_FloppingRabbit_Passive_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_FloppingRabbit_Passive_C", "K2_ActivateAbilityFromEvent");
+
+	Params::GA_Athena_FloppingRabbit_Passive_C_K2_ActivateAbilityFromEvent Parms{};
+
+	Parms.EventData = std::move(EventData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_FloppingRabbit_Passive.GA_Athena_FloppingRabbit_Passive_C.Removed_DCA556AE47E7D8C25D9A27899D5C963C
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_FloppingRabbit_Passive_C::Removed_DCA556AE47E7D8C25D9A27899D5C963C()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_FloppingRabbit_Passive_C", "Removed_DCA556AE47E7D8C25D9A27899D5C963C");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_Athena_FloppingRabbit_Passive.GA_Athena_FloppingRabbit_Passive_C.SetBobberHidden
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    HideBobber                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    HideBobber                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class AFortWeapon**                     CurrentWeapon                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AB_FloppingRabbit_Weap_Athena_C** CastedToRabbitWeapon                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -164,6 +150,20 @@ void UGA_Athena_FloppingRabbit_Passive_C::SetBobberHidden(bool HideBobber, class
 
 	if (CastedToRabbitWeapon != nullptr)
 		*CastedToRabbitWeapon = Parms.CastedToRabbitWeapon;
+}
+
+
+// Function GA_Athena_FloppingRabbit_Passive.GA_Athena_FloppingRabbit_Passive_C.SaveOutRod
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_FloppingRabbit_Passive_C::SaveOutRod()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_FloppingRabbit_Passive_C", "SaveOutRod");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

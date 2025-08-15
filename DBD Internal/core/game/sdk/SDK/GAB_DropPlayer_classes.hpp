@@ -18,20 +18,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GAB_DropPlayer.GAB_DropPlayer_C
-// 0x0010 (0x0AE8 - 0x0AD8)
+// 0x0010 (0x0AF8 - 0x0AE8)
 class UGAB_DropPlayer_C final : public UFortGameplayAbility_CarryPlayer
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AE8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_GAB_DropPlayer(int32 EntryPoint);
+	void K2_OnEndAbility(bool bWasCancelled);
+	void K2_ActivateAbility();
+	void Triggered_89F288114D44792D5568298354B7216C(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void Cancelled_89F288114D44792D5568298354B7216C(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void Completed_89F288114D44792D5568298354B7216C(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
-	void ExecuteUbergraph_GAB_DropPlayer(int32 EntryPoint);
-	void K2_ActivateAbility();
-	void K2_OnEndAbility(bool bWasCancelled);
-	void Triggered_89F288114D44792D5568298354B7216C(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 
 public:
 	static class UClass* StaticClass()
@@ -43,6 +43,10 @@ public:
 		return GetDefaultObjImpl<UGAB_DropPlayer_C>();
 	}
 };
+static_assert(alignof(UGAB_DropPlayer_C) == 0x000008, "Wrong alignment on UGAB_DropPlayer_C");
+static_assert(sizeof(UGAB_DropPlayer_C) == 0x000AF8, "Wrong size on UGAB_DropPlayer_C");
+static_assert(offsetof(UGAB_DropPlayer_C, UberGraphFrame) == 0x000AE8, "Member 'UGAB_DropPlayer_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UGAB_DropPlayer_C, PlayerPawn) == 0x000AF0, "Member 'UGAB_DropPlayer_C::PlayerPawn' has a wrong offset!");
 
 }
 

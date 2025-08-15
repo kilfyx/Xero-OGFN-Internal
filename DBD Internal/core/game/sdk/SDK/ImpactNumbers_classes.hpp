@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
@@ -17,11 +19,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ImpactNumbers.ImpactNumbers_C
-// 0x0008 (0x0518 - 0x0510)
+// 0x0010 (0x0448 - 0x0438)
 class AImpactNumbers_C final : public AFortDamageNumbersActor
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0510(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ExecuteUbergraph_ImpactNumbers(int32 EntryPoint);
+	void OnNewDamageNumber(const struct FFortDamageNumberInfo& NewDamageNumberInfo);
+	void init_a_new_number_set(struct FFortDamageNumberInfo& NewDamageHitInfoStruct, struct FTransform* OutCameraTransform, struct FVector* OutNumberLocation);
 
 public:
 	static class UClass* StaticClass()
@@ -33,6 +41,10 @@ public:
 		return GetDefaultObjImpl<AImpactNumbers_C>();
 	}
 };
+static_assert(alignof(AImpactNumbers_C) == 0x000008, "Wrong alignment on AImpactNumbers_C");
+static_assert(sizeof(AImpactNumbers_C) == 0x000448, "Wrong size on AImpactNumbers_C");
+static_assert(offsetof(AImpactNumbers_C, UberGraphFrame) == 0x000438, "Member 'AImpactNumbers_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AImpactNumbers_C, DefaultSceneRoot) == 0x000440, "Member 'AImpactNumbers_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

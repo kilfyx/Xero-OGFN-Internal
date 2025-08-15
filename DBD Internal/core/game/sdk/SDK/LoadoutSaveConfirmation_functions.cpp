@@ -25,9 +25,9 @@ namespace SDK
 void ULoadoutSaveConfirmation_C::ExecuteUbergraph_LoadoutSaveConfirmation(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_LoadoutSaveConfirmation");
+		Func = Class->GetFunction("LoadoutSaveConfirmation_C", "ExecuteUbergraph_LoadoutSaveConfirmation");
 
 	Params::LoadoutSaveConfirmation_C_ExecuteUbergraph_LoadoutSaveConfirmation Parms{};
 
@@ -40,14 +40,14 @@ void ULoadoutSaveConfirmation_C::ExecuteUbergraph_LoadoutSaveConfirmation(int32 
 // Function LoadoutSaveConfirmation.LoadoutSaveConfirmation_C.OnCanSaveAsNew
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bCanSaveAsNew                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bCanSaveAsNew                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ULoadoutSaveConfirmation_C::OnCanSaveAsNew(bool bCanSaveAsNew)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnCanSaveAsNew");
+		Func = Class->GetFunction("LoadoutSaveConfirmation_C", "OnCanSaveAsNew");
 
 	Params::LoadoutSaveConfirmation_C_OnCanSaveAsNew Parms{};
 
@@ -60,14 +60,14 @@ void ULoadoutSaveConfirmation_C::OnCanSaveAsNew(bool bCanSaveAsNew)
 // Function LoadoutSaveConfirmation.LoadoutSaveConfirmation_C.Toggle Save as New Visibility
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    CanSaveAsNew                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CanSaveAsNew                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ULoadoutSaveConfirmation_C::Toggle_Save_as_New_Visibility(bool CanSaveAsNew)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Toggle Save as New Visibility");
+		Func = Class->GetFunction("LoadoutSaveConfirmation_C", "Toggle Save as New Visibility");
 
 	Params::LoadoutSaveConfirmation_C_Toggle_Save_as_New_Visibility Parms{};
 

@@ -17,15 +17,175 @@
 namespace SDK
 {
 
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.ExecuteUbergraph_B_AnimBP_HightowerRadish
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_AnimBP_HightowerRadish_C::ExecuteUbergraph_B_AnimBP_HightowerRadish(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "ExecuteUbergraph_B_AnimBP_HightowerRadish");
+
+	Params::B_AnimBP_HightowerRadish_C_ExecuteUbergraph_B_AnimBP_HightowerRadish Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_ABA3DEB64FC0D464431656B263E3F3A2
+// (BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_ABA3DEB64FC0D464431656B263E3F3A2()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_ABA3DEB64FC0D464431656B263E3F3A2");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_5C837FF249FF9355BF40228CAAAE6D9A
+// (BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_5C837FF249FF9355BF40228CAAAE6D9A()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_5C837FF249FF9355BF40228CAAAE6D9A");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_D08BDA374885D7D5508B3E92E2866858
+// (BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_D08BDA374885D7D5508B3E92E2866858()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_D08BDA374885D7D5508B3E92E2866858");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_F59AA4E14A462B4A19497C8C767DD53D
+// (BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_F59AA4E14A462B4A19497C8C767DD53D()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_F59AA4E14A462B4A19497C8C767DD53D");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_7063B86B4BA21930F893DBA578CF6DAD
+// (BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_7063B86B4BA21930F893DBA578CF6DAD()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_7063B86B4BA21930F893DBA578CF6DAD");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_6A3E377141BC7D9E977B559FD264D2C1
+// (BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_6A3E377141BC7D9E977B559FD264D2C1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_6A3E377141BC7D9E977B559FD264D2C1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_7EE58A3E4BB99FE8255E10A0010DF965
+// (BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_7EE58A3E4BB99FE8255E10A0010DF965()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_7EE58A3E4BB99FE8255E10A0010DF965");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_E782F54B46E04DB8500E219C2BDB85A9
+// (BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_E782F54B46E04DB8500E219C2BDB85A9()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_E782F54B46E04DB8500E219C2BDB85A9");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_BF7DBB41478DB50F3D546C911ADE2010
+// (BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_BF7DBB41478DB50F3D546C911ADE2010()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_BF7DBB41478DB50F3D546C911ADE2010");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_49876C5C4B40E3CC99C6BD95BC31923B
+// (BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_49876C5C4B40E3CC99C6BD95BC31923B()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_49876C5C4B40E3CC99C6BD95BC31923B");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.OnExitedVehicle
 // (Event, Protected, BlueprintEvent)
 
 void UB_AnimBP_HightowerRadish_C::OnExitedVehicle()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnExitedVehicle");
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "OnExitedVehicle");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,9 +197,79 @@ void UB_AnimBP_HightowerRadish_C::OnExitedVehicle()
 void UB_AnimBP_HightowerRadish_C::OnEnteredVehicle()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnEnteredVehicle");
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "OnEnteredVehicle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.AnimNotify_MoveLoopRandomEntered
+// (BlueprintCallable, BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::AnimNotify_MoveLoopRandomEntered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "AnimNotify_MoveLoopRandomEntered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.AnimNotify_TriggerRandomizer
+// (BlueprintCallable, BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::AnimNotify_TriggerRandomizer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "AnimNotify_TriggerRandomizer");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.AnimNotify_FwdToBwd_Entered
+// (BlueprintCallable, BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::AnimNotify_FwdToBwd_Entered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "AnimNotify_FwdToBwd_Entered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.AnimNotify_BwdToFwd_Entered
+// (BlueprintCallable, BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::AnimNotify_BwdToFwd_Entered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "AnimNotify_BwdToFwd_Entered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.AnimNotify_RandomIdlePick
+// (BlueprintCallable, BlueprintEvent)
+
+void UB_AnimBP_HightowerRadish_C::AnimNotify_RandomIdlePick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "AnimNotify_RandomIdlePick");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,9 +281,9 @@ void UB_AnimBP_HightowerRadish_C::OnEnteredVehicle()
 void UB_AnimBP_HightowerRadish_C::HighTowerRadish_Lobby_SkyDive_Gliding()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HighTowerRadish_Lobby SkyDive Gliding");
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "HighTowerRadish_Lobby SkyDive Gliding");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,43 +295,23 @@ void UB_AnimBP_HightowerRadish_C::HighTowerRadish_Lobby_SkyDive_Gliding()
 void UB_AnimBP_HightowerRadish_C::HighTowerRadish_Lobby_SkyDive_Diving()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HighTowerRadish_Lobby SkyDive Diving");
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "HighTowerRadish_Lobby SkyDive Diving");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.ExecuteUbergraph_B_AnimBP_HightowerRadish
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.AnimNotify_FullyBlended_DirectionChangePose
+// (BlueprintCallable, BlueprintEvent)
 
-void UB_AnimBP_HightowerRadish_C::ExecuteUbergraph_B_AnimBP_HightowerRadish(int32 EntryPoint)
+void UB_AnimBP_HightowerRadish_C::AnimNotify_FullyBlended_DirectionChangePose()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_B_AnimBP_HightowerRadish");
-
-	Params::B_AnimBP_HightowerRadish_C_ExecuteUbergraph_B_AnimBP_HightowerRadish Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_7063B86B4BA21930F893DBA578CF6DAD
-// (BlueprintEvent)
-
-void UB_AnimBP_HightowerRadish_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_7063B86B4BA21930F893DBA578CF6DAD()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EvaluateGraphExposedInputs_ExecuteUbergraph_B_AnimBP_HightowerRadish_AnimGraphNode_TransitionResult_7063B86B4BA21930F893DBA578CF6DAD");
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "AnimNotify_FullyBlended_DirectionChangePose");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -115,9 +325,9 @@ void UB_AnimBP_HightowerRadish_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_
 void UB_AnimBP_HightowerRadish_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BlueprintUpdateAnimation");
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "BlueprintUpdateAnimation");
 
 	Params::B_AnimBP_HightowerRadish_C_BlueprintUpdateAnimation Parms{};
 
@@ -127,87 +337,17 @@ void UB_AnimBP_HightowerRadish_C::BlueprintUpdateAnimation(float DeltaTimeX)
 }
 
 
-// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.AnimNotify_TriggerRandomizer
-// (BlueprintCallable, BlueprintEvent)
-
-void UB_AnimBP_HightowerRadish_C::AnimNotify_TriggerRandomizer()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("AnimNotify_TriggerRandomizer");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.AnimNotify_RandomIdlePick
-// (BlueprintCallable, BlueprintEvent)
-
-void UB_AnimBP_HightowerRadish_C::AnimNotify_RandomIdlePick()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("AnimNotify_RandomIdlePick");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.AnimNotify_MoveLoopRandomEntered
-// (BlueprintCallable, BlueprintEvent)
-
-void UB_AnimBP_HightowerRadish_C::AnimNotify_MoveLoopRandomEntered()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("AnimNotify_MoveLoopRandomEntered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.AnimNotify_FwdToBwd_Entered
-// (BlueprintCallable, BlueprintEvent)
-
-void UB_AnimBP_HightowerRadish_C::AnimNotify_FwdToBwd_Entered()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("AnimNotify_FwdToBwd_Entered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.AnimNotify_BwdToFwd_Entered
-// (BlueprintCallable, BlueprintEvent)
-
-void UB_AnimBP_HightowerRadish_C::AnimNotify_BwdToFwd_Entered()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("AnimNotify_BwdToFwd_Entered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_AnimBP_HightowerRadish.B_AnimBP_HightowerRadish_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
 void UB_AnimBP_HightowerRadish_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("AnimGraph");
+		Func = Class->GetFunction("B_AnimBP_HightowerRadish_C", "AnimGraph");
 
 	Params::B_AnimBP_HightowerRadish_C_AnimGraph Parms{};
 

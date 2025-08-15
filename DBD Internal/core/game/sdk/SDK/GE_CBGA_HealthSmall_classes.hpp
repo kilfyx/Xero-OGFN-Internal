@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_CBGA_HealthSmall_C>();
 	}
 };
+static_assert(alignof(UGE_CBGA_HealthSmall_C) == 0x000008, "Wrong alignment on UGE_CBGA_HealthSmall_C");
+static_assert(sizeof(UGE_CBGA_HealthSmall_C) == 0x000800, "Wrong size on UGE_CBGA_HealthSmall_C");
 
 }
 

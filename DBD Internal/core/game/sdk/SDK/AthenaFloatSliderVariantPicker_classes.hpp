@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaFloatSliderVariantPicker.AthenaFloatSliderVariantPicker_C
-// 0x0018 (0x03B8 - 0x03A0)
+// 0x0018 (0x0350 - 0x0338)
 class UAthenaFloatSliderVariantPicker_C final : public UFortFloatSliderVariantPicker
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UOverlay*                               Panel_Value;                                       // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USimpleMaterialProgressBar_C*           Progress;                                          // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0338(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UOverlay*                               Panel_Value;                                       // 0x0340(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USimpleMaterialProgressBar_C*           Progress;                                          // 0x0348(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void OnUpdateValue(float NormalizedValue, bool bIsLocked);
+	void OnUpdateValue(float NormalizedValue);
 	void ExecuteUbergraph_AthenaFloatSliderVariantPicker(int32 EntryPoint);
 
 public:
@@ -41,10 +41,10 @@ public:
 	}
 };
 static_assert(alignof(UAthenaFloatSliderVariantPicker_C) == 0x000008, "Wrong alignment on UAthenaFloatSliderVariantPicker_C");
-static_assert(sizeof(UAthenaFloatSliderVariantPicker_C) == 0x0003B8, "Wrong size on UAthenaFloatSliderVariantPicker_C");
-static_assert(offsetof(UAthenaFloatSliderVariantPicker_C, UberGraphFrame) == 0x0003A0, "Member 'UAthenaFloatSliderVariantPicker_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaFloatSliderVariantPicker_C, Panel_Value) == 0x0003A8, "Member 'UAthenaFloatSliderVariantPicker_C::Panel_Value' has a wrong offset!");
-static_assert(offsetof(UAthenaFloatSliderVariantPicker_C, Progress) == 0x0003B0, "Member 'UAthenaFloatSliderVariantPicker_C::Progress' has a wrong offset!");
+static_assert(sizeof(UAthenaFloatSliderVariantPicker_C) == 0x000350, "Wrong size on UAthenaFloatSliderVariantPicker_C");
+static_assert(offsetof(UAthenaFloatSliderVariantPicker_C, UberGraphFrame) == 0x000338, "Member 'UAthenaFloatSliderVariantPicker_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaFloatSliderVariantPicker_C, Panel_Value) == 0x000340, "Member 'UAthenaFloatSliderVariantPicker_C::Panel_Value' has a wrong offset!");
+static_assert(offsetof(UAthenaFloatSliderVariantPicker_C, Progress) == 0x000348, "Member 'UAthenaFloatSliderVariantPicker_C::Progress' has a wrong offset!");
 
 }
 

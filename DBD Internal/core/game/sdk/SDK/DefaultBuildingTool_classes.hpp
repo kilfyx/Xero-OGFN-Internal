@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass DefaultBuildingTool.DefaultBuildingTool_C
-// 0x0000 (0x15B8 - 0x15B8)
+// 0x0000 (0x0E50 - 0x0E50)
 class ADefaultBuildingTool_C final : public AFortWeap_BuildingTool
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ADefaultBuildingTool_C>();
 	}
 };
+static_assert(alignof(ADefaultBuildingTool_C) == 0x000008, "Wrong alignment on ADefaultBuildingTool_C");
+static_assert(sizeof(ADefaultBuildingTool_C) == 0x000E50, "Wrong size on ADefaultBuildingTool_C");
 
 }
 

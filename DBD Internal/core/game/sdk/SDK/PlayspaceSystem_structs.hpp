@@ -12,7 +12,6 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "NetCore_structs.hpp"
 
 
 namespace SDK
@@ -28,17 +27,15 @@ enum class EPlayspaceCreationType : uint8
 	EPlayspaceCreationType_MAX               = 3,
 };
 
-// ScriptStruct PlayspaceSystem.ReplicatedSpawnInfo
-// 0x002C (0x002C - 0x0000)
-struct FReplicatedSpawnInfo final
+// ScriptStruct PlayspaceSystem.ActorOverlapEvent
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FActorOverlapEvent final
 {
 public:
-	struct FVector                                SpawnLocation;                                     // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               SpawnRotation;                                     // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ServerSpawnTime;                                   // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                LastLocation;                                      // 0x001C(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinTimeForCameraFadeTransition;                    // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FActorOverlapEvent) == 0x000008, "Wrong alignment on FActorOverlapEvent");
+static_assert(sizeof(FActorOverlapEvent) == 0x000010, "Wrong size on FActorOverlapEvent");
 
 // ScriptStruct PlayspaceSystem.PlayspaceUser
 // 0x0044 (0x0050 - 0x000C)
@@ -51,6 +48,31 @@ public:
 	class APlayerState*                           PlayerStateCached;                                 // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class AController*                            ControllerCached;                                  // 0x0048(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
+static_assert(alignof(FPlayspaceUser) == 0x000008, "Wrong alignment on FPlayspaceUser");
+static_assert(sizeof(FPlayspaceUser) == 0x000050, "Wrong size on FPlayspaceUser");
+static_assert(offsetof(FPlayspaceUser, UserId) == 0x000010, "Member 'FPlayspaceUser::UserId' has a wrong offset!");
+static_assert(offsetof(FPlayspaceUser, LeafPlayspace) == 0x000038, "Member 'FPlayspaceUser::LeafPlayspace' has a wrong offset!");
+static_assert(offsetof(FPlayspaceUser, PlayerStateCached) == 0x000040, "Member 'FPlayspaceUser::PlayerStateCached' has a wrong offset!");
+static_assert(offsetof(FPlayspaceUser, ControllerCached) == 0x000048, "Member 'FPlayspaceUser::ControllerCached' has a wrong offset!");
+
+// ScriptStruct PlayspaceSystem.ReplicatedSpawnInfo
+// 0x002C (0x002C - 0x0000)
+struct FReplicatedSpawnInfo final
+{
+public:
+	struct FVector                                SpawnLocation;                                     // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               SpawnRotation;                                     // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ServerSpawnTime;                                   // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                LastLocation;                                      // 0x001C(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinTimeForCameraFadeTransition;                    // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FReplicatedSpawnInfo) == 0x000004, "Wrong alignment on FReplicatedSpawnInfo");
+static_assert(sizeof(FReplicatedSpawnInfo) == 0x00002C, "Wrong size on FReplicatedSpawnInfo");
+static_assert(offsetof(FReplicatedSpawnInfo, SpawnLocation) == 0x000000, "Member 'FReplicatedSpawnInfo::SpawnLocation' has a wrong offset!");
+static_assert(offsetof(FReplicatedSpawnInfo, SpawnRotation) == 0x00000C, "Member 'FReplicatedSpawnInfo::SpawnRotation' has a wrong offset!");
+static_assert(offsetof(FReplicatedSpawnInfo, ServerSpawnTime) == 0x000018, "Member 'FReplicatedSpawnInfo::ServerSpawnTime' has a wrong offset!");
+static_assert(offsetof(FReplicatedSpawnInfo, LastLocation) == 0x00001C, "Member 'FReplicatedSpawnInfo::LastLocation' has a wrong offset!");
+static_assert(offsetof(FReplicatedSpawnInfo, MinTimeForCameraFadeTransition) == 0x000028, "Member 'FReplicatedSpawnInfo::MinTimeForCameraFadeTransition' has a wrong offset!");
 
 // ScriptStruct PlayspaceSystem.PlayspaceSpawningInfo
 // 0x0068 (0x0068 - 0x0000)
@@ -67,25 +89,32 @@ public:
 	float                                         MinTimeForCameraFadeTransition;                    // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// ScriptStruct PlayspaceSystem.ActorOverlapEvent
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FActorOverlapEvent final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+static_assert(alignof(FPlayspaceSpawningInfo) == 0x000008, "Wrong alignment on FPlayspaceSpawningInfo");
+static_assert(sizeof(FPlayspaceSpawningInfo) == 0x000068, "Wrong size on FPlayspaceSpawningInfo");
+static_assert(offsetof(FPlayspaceSpawningInfo, UserId) == 0x000000, "Member 'FPlayspaceSpawningInfo::UserId' has a wrong offset!");
+static_assert(offsetof(FPlayspaceSpawningInfo, RequestingPlayspace) == 0x000028, "Member 'FPlayspaceSpawningInfo::RequestingPlayspace' has a wrong offset!");
+static_assert(offsetof(FPlayspaceSpawningInfo, SpawnLocationActor) == 0x000030, "Member 'FPlayspaceSpawningInfo::SpawnLocationActor' has a wrong offset!");
+static_assert(offsetof(FPlayspaceSpawningInfo, SpawnLocation) == 0x000038, "Member 'FPlayspaceSpawningInfo::SpawnLocation' has a wrong offset!");
+static_assert(offsetof(FPlayspaceSpawningInfo, SpawnRotation) == 0x000044, "Member 'FPlayspaceSpawningInfo::SpawnRotation' has a wrong offset!");
+static_assert(offsetof(FPlayspaceSpawningInfo, SpawnTimeServer) == 0x000050, "Member 'FPlayspaceSpawningInfo::SpawnTimeServer' has a wrong offset!");
+static_assert(offsetof(FPlayspaceSpawningInfo, LastLocation) == 0x000054, "Member 'FPlayspaceSpawningInfo::LastLocation' has a wrong offset!");
+static_assert(offsetof(FPlayspaceSpawningInfo, MinTimeForCameraFadeTransition) == 0x000060, "Member 'FPlayspaceSpawningInfo::MinTimeForCameraFadeTransition' has a wrong offset!");
 
 // ScriptStruct PlayspaceSystem.PlayspaceUserList
 // 0x0020 (0x0128 - 0x0108)
 struct FPlayspaceUserList final : public FFastArraySerializer
 {
 public:
-	TArray<struct FPlayspaceUser>                 PlayspaceUsers;                                    // 0x0108(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FPlayspaceUser>                 PlayspaceUsers;                                    // 0x0108(0x0010)(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bIsInitialized;                                    // 0x0118(0x0001)(ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayspace*                             Playspace;                                         // 0x0120(0x0008)(ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FPlayspaceUserList) == 0x000008, "Wrong alignment on FPlayspaceUserList");
+static_assert(sizeof(FPlayspaceUserList) == 0x000128, "Wrong size on FPlayspaceUserList");
+static_assert(offsetof(FPlayspaceUserList, PlayspaceUsers) == 0x000108, "Member 'FPlayspaceUserList::PlayspaceUsers' has a wrong offset!");
+static_assert(offsetof(FPlayspaceUserList, bIsInitialized) == 0x000118, "Member 'FPlayspaceUserList::bIsInitialized' has a wrong offset!");
+static_assert(offsetof(FPlayspaceUserList, Playspace) == 0x000120, "Member 'FPlayspaceUserList::Playspace' has a wrong offset!");
 
 }
 

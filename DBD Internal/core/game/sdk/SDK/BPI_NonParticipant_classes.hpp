@@ -42,6 +42,8 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+static_assert(alignof(IBPI_NonParticipant_C) == 0x000001, "Wrong alignment on IBPI_NonParticipant_C");
+static_assert(sizeof(IBPI_NonParticipant_C) == 0x000001, "Wrong size on IBPI_NonParticipant_C");
 
 }
 

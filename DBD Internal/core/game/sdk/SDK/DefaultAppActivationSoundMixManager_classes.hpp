@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UDefaultAppActivationSoundMixManager_C>();
 	}
 };
+static_assert(alignof(UDefaultAppActivationSoundMixManager_C) == 0x000008, "Wrong alignment on UDefaultAppActivationSoundMixManager_C");
+static_assert(sizeof(UDefaultAppActivationSoundMixManager_C) == 0x000058, "Wrong size on UDefaultAppActivationSoundMixManager_C");
 
 }
 

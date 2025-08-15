@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function SettingsListEntry_Scalar.SettingsListEntry_Scalar_C.ExecuteUbergraph_SettingsListEntry_Scalar
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USettingsListEntry_Scalar_C::ExecuteUbergraph_SettingsListEntry_Scalar(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsListEntry_Scalar_C", "ExecuteUbergraph_SettingsListEntry_Scalar");
-
-	Params::SettingsListEntry_Scalar_C_ExecuteUbergraph_SettingsListEntry_Scalar Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function SettingsListEntry_Scalar.SettingsListEntry_Scalar_C.GetPrimaryGamepadFocusWidget
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -54,6 +34,26 @@ class UWidget* USettingsListEntry_Scalar_C::GetPrimaryGamepadFocusWidget()
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function SettingsListEntry_Scalar.SettingsListEntry_Scalar_C.OnValueChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USettingsListEntry_Scalar_C::OnValueChanged(float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SettingsListEntry_Scalar_C", "OnValueChanged");
+
+	Params::SettingsListEntry_Scalar_C_OnValueChanged Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -119,21 +119,21 @@ void USettingsListEntry_Scalar_C::OnMouseLeave(const struct FPointerEvent& Mouse
 }
 
 
-// Function SettingsListEntry_Scalar.SettingsListEntry_Scalar_C.OnValueChanged
-// (Event, Protected, BlueprintEvent)
+// Function SettingsListEntry_Scalar.SettingsListEntry_Scalar_C.ExecuteUbergraph_SettingsListEntry_Scalar
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USettingsListEntry_Scalar_C::OnValueChanged(float Value)
+void USettingsListEntry_Scalar_C::ExecuteUbergraph_SettingsListEntry_Scalar(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsListEntry_Scalar_C", "OnValueChanged");
+		Func = Class->GetFunction("SettingsListEntry_Scalar_C", "ExecuteUbergraph_SettingsListEntry_Scalar");
 
-	Params::SettingsListEntry_Scalar_C_OnValueChanged Parms{};
+	Params::SettingsListEntry_Scalar_C_ExecuteUbergraph_SettingsListEntry_Scalar Parms{};
 
-	Parms.Value = Value;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

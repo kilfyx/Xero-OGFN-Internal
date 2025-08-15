@@ -18,23 +18,23 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventPlayerStatProfileSelector.EventPlayerStatProfileSelector_C
-// 0x0040 (0x0570 - 0x0530)
+// 0x0040 (0x04E8 - 0x04A8)
 class UEventPlayerStatProfileSelector_C final : public UFortEventPlayerStatProfileSelector
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0530(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x0538(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UIconTextButton_C*                      CloseMainPanel;                                    // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_0;                                    // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Background;                                  // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_0;                                        // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        Switcher_Content;                                  // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_WindowTitle;                                  // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro;                                             // 0x04B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UIconTextButton_C*                      CloseMainPanel;                                    // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_0;                                    // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Background;                                  // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_0;                                        // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        Switcher_Content;                                  // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_WindowTitle;                                  // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__CloseMainPanel_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button);
-	void BP_OnActivated();
 	void ExecuteUbergraph_EventPlayerStatProfileSelector(int32 EntryPoint);
+	void BP_OnActivated();
+	void BndEvt__CloseMainPanel_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void Set_Up_Profile_Selector_Style(const struct FFortTournamentDisplayInfo& Tournament_Display_Info);
 
 public:
@@ -48,15 +48,15 @@ public:
 	}
 };
 static_assert(alignof(UEventPlayerStatProfileSelector_C) == 0x000008, "Wrong alignment on UEventPlayerStatProfileSelector_C");
-static_assert(sizeof(UEventPlayerStatProfileSelector_C) == 0x000570, "Wrong size on UEventPlayerStatProfileSelector_C");
-static_assert(offsetof(UEventPlayerStatProfileSelector_C, UberGraphFrame) == 0x000530, "Member 'UEventPlayerStatProfileSelector_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventPlayerStatProfileSelector_C, Intro) == 0x000538, "Member 'UEventPlayerStatProfileSelector_C::Intro' has a wrong offset!");
-static_assert(offsetof(UEventPlayerStatProfileSelector_C, CloseMainPanel) == 0x000540, "Member 'UEventPlayerStatProfileSelector_C::CloseMainPanel' has a wrong offset!");
-static_assert(offsetof(UEventPlayerStatProfileSelector_C, CommonBorder_0) == 0x000548, "Member 'UEventPlayerStatProfileSelector_C::CommonBorder_0' has a wrong offset!");
-static_assert(offsetof(UEventPlayerStatProfileSelector_C, Image_Background) == 0x000550, "Member 'UEventPlayerStatProfileSelector_C::Image_Background' has a wrong offset!");
-static_assert(offsetof(UEventPlayerStatProfileSelector_C, SafeZone_0) == 0x000558, "Member 'UEventPlayerStatProfileSelector_C::SafeZone_0' has a wrong offset!");
-static_assert(offsetof(UEventPlayerStatProfileSelector_C, Switcher_Content) == 0x000560, "Member 'UEventPlayerStatProfileSelector_C::Switcher_Content' has a wrong offset!");
-static_assert(offsetof(UEventPlayerStatProfileSelector_C, Text_WindowTitle) == 0x000568, "Member 'UEventPlayerStatProfileSelector_C::Text_WindowTitle' has a wrong offset!");
+static_assert(sizeof(UEventPlayerStatProfileSelector_C) == 0x0004E8, "Wrong size on UEventPlayerStatProfileSelector_C");
+static_assert(offsetof(UEventPlayerStatProfileSelector_C, UberGraphFrame) == 0x0004A8, "Member 'UEventPlayerStatProfileSelector_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UEventPlayerStatProfileSelector_C, Intro) == 0x0004B0, "Member 'UEventPlayerStatProfileSelector_C::Intro' has a wrong offset!");
+static_assert(offsetof(UEventPlayerStatProfileSelector_C, CloseMainPanel) == 0x0004B8, "Member 'UEventPlayerStatProfileSelector_C::CloseMainPanel' has a wrong offset!");
+static_assert(offsetof(UEventPlayerStatProfileSelector_C, CommonBorder_0) == 0x0004C0, "Member 'UEventPlayerStatProfileSelector_C::CommonBorder_0' has a wrong offset!");
+static_assert(offsetof(UEventPlayerStatProfileSelector_C, Image_Background) == 0x0004C8, "Member 'UEventPlayerStatProfileSelector_C::Image_Background' has a wrong offset!");
+static_assert(offsetof(UEventPlayerStatProfileSelector_C, SafeZone_0) == 0x0004D0, "Member 'UEventPlayerStatProfileSelector_C::SafeZone_0' has a wrong offset!");
+static_assert(offsetof(UEventPlayerStatProfileSelector_C, Switcher_Content) == 0x0004D8, "Member 'UEventPlayerStatProfileSelector_C::Switcher_Content' has a wrong offset!");
+static_assert(offsetof(UEventPlayerStatProfileSelector_C, Text_WindowTitle) == 0x0004E0, "Member 'UEventPlayerStatProfileSelector_C::Text_WindowTitle' has a wrong offset!");
 
 }
 

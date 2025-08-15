@@ -17,187 +17,21 @@
 namespace SDK
 {
 
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.Timeline_1__UpdateFunc
-// (BlueprintEvent)
-
-void AItemPreviewSideSwap_C::Timeline_1__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Timeline_1__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.UpdateSettings
-// (BlueprintCallable, BlueprintEvent)
-
-void AItemPreviewSideSwap_C::UpdateSettings()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateSettings");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.Timeline_0__UpdateFunc
-// (BlueprintEvent)
-
-void AItemPreviewSideSwap_C::Timeline_0__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Timeline_0__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.Timeline_1__FinishedFunc
-// (BlueprintEvent)
-
-void AItemPreviewSideSwap_C::Timeline_1__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Timeline_1__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.Timeline_0__FinishedFunc
-// (BlueprintEvent)
-
-void AItemPreviewSideSwap_C::Timeline_0__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Timeline_0__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.SwitchPCLighting_LOWDetail
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.ExecuteUbergraph_ItemPreviewSideSwap
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AItemPreviewSideSwap_C::SwitchPCLighting_LOWDetail(bool Visibility)
+void AItemPreviewSideSwap_C::ExecuteUbergraph_ItemPreviewSideSwap(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SwitchPCLighting_LOWDetail");
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "ExecuteUbergraph_ItemPreviewSideSwap");
 
-	Params::ItemPreviewSideSwap_C_SwitchPCLighting_LOWDetail Parms{};
+	Params::ItemPreviewSideSwap_C_ExecuteUbergraph_ItemPreviewSideSwap Parms{};
 
-	Parms.Visibility = Visibility;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.SwitchPCLighting
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AItemPreviewSideSwap_C::SwitchPCLighting(bool Visibility)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SwitchPCLighting");
-
-	Params::ItemPreviewSideSwap_C_SwitchPCLighting Parms{};
-
-	Parms.Visibility = Visibility;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.SwitchMobileLighting
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AItemPreviewSideSwap_C::SwitchMobileLighting(bool Visibility)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SwitchMobileLighting");
-
-	Params::ItemPreviewSideSwap_C_SwitchMobileLighting Parms{};
-
-	Parms.Visibility = Visibility;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AItemPreviewSideSwap_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.OnTargetRotationOffsetSet
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// struct FRotator                         TargetRotationOffset_0                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-
-void AItemPreviewSideSwap_C::OnTargetRotationOffsetSet(const struct FRotator& TargetRotationOffset_0)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnTargetRotationOffsetSet");
-
-	Params::ItemPreviewSideSwap_C_OnTargetRotationOffsetSet Parms{};
-
-	Parms.TargetRotationOffset_0 = std::move(TargetRotationOffset_0);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.OnReadyToSwap
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// class UFortAccountItemDefinition*       PrimaryRequestedItem                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FSceneTransitionOptions          Options                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-
-void AItemPreviewSideSwap_C::OnReadyToSwap(const class UFortAccountItemDefinition* PrimaryRequestedItem, const struct FSceneTransitionOptions& Options)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnReadyToSwap");
-
-	Params::ItemPreviewSideSwap_C_OnReadyToSwap Parms{};
-
-	Parms.PrimaryRequestedItem = PrimaryRequestedItem;
-	Parms.Options = std::move(Options);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -211,9 +45,9 @@ void AItemPreviewSideSwap_C::OnReadyToSwap(const class UFortAccountItemDefinitio
 void AItemPreviewSideSwap_C::OnTargetZoomLevelSet(float TargetZoomLevel_0)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnTargetZoomLevelSet");
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "OnTargetZoomLevelSet");
 
 	Params::ItemPreviewSideSwap_C_OnTargetZoomLevelSet Parms{};
 
@@ -223,15 +57,15 @@ void AItemPreviewSideSwap_C::OnTargetZoomLevelSet(float TargetZoomLevel_0)
 }
 
 
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.MoveOutRight__UpdateFunc
-// (BlueprintEvent)
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.UpdateSettings
+// (BlueprintCallable, BlueprintEvent)
 
-void AItemPreviewSideSwap_C::MoveOutRight__UpdateFunc()
+void AItemPreviewSideSwap_C::UpdateSettings()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("MoveOutRight__UpdateFunc");
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "UpdateSettings");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -240,15 +74,15 @@ void AItemPreviewSideSwap_C::MoveOutRight__UpdateFunc()
 // Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.OnNewSceneRequested
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// class UFortAccountItemDefinition*       PrimaryRequestedItem                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FSceneTransitionOptions          TransitionOptions                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// const class UFortAccountItemDefinition* PrimaryRequestedItem                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FSceneTransitionOptions&   TransitionOptions                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
 void AItemPreviewSideSwap_C::OnNewSceneRequested(const class UFortAccountItemDefinition* PrimaryRequestedItem, const struct FSceneTransitionOptions& TransitionOptions)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnNewSceneRequested");
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "OnNewSceneRequested");
 
 	Params::ItemPreviewSideSwap_C_OnNewSceneRequested Parms{};
 
@@ -259,57 +93,93 @@ void AItemPreviewSideSwap_C::OnNewSceneRequested(const class UFortAccountItemDef
 }
 
 
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.OnReadyToSwap
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class UFortAccountItemDefinition* PrimaryRequestedItem                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FSceneTransitionOptions&   Options                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+
+void AItemPreviewSideSwap_C::OnReadyToSwap(const class UFortAccountItemDefinition* PrimaryRequestedItem, const struct FSceneTransitionOptions& Options)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "OnReadyToSwap");
+
+	Params::ItemPreviewSideSwap_C_OnReadyToSwap Parms{};
+
+	Parms.PrimaryRequestedItem = PrimaryRequestedItem;
+	Parms.Options = std::move(Options);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AItemPreviewSideSwap_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.Timeline_0__UpdateFunc
+// (BlueprintEvent)
+
+void AItemPreviewSideSwap_C::Timeline_0__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "Timeline_0__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.Timeline_0__FinishedFunc
+// (BlueprintEvent)
+
+void AItemPreviewSideSwap_C::Timeline_0__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "Timeline_0__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.MoveOutRight__UpdateFunc
+// (BlueprintEvent)
+
+void AItemPreviewSideSwap_C::MoveOutRight__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "MoveOutRight__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.MoveOutRight__FinishedFunc
 // (BlueprintEvent)
 
 void AItemPreviewSideSwap_C::MoveOutRight__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("MoveOutRight__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.MoveOutLeft__FinishedFunc
-// (BlueprintEvent)
-
-void AItemPreviewSideSwap_C::MoveOutLeft__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("MoveOutLeft__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.MoveOutLeft__UpdateFunc
-// (BlueprintEvent)
-
-void AItemPreviewSideSwap_C::MoveOutLeft__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("MoveOutLeft__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.MoveInRight__FinishedFunc
-// (BlueprintEvent)
-
-void AItemPreviewSideSwap_C::MoveInRight__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("MoveInRight__FinishedFunc");
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "MoveOutRight__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -321,23 +191,23 @@ void AItemPreviewSideSwap_C::MoveInRight__FinishedFunc()
 void AItemPreviewSideSwap_C::MoveInRight__UpdateFunc()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("MoveInRight__UpdateFunc");
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "MoveInRight__UpdateFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.MoveInLeft__FinishedFunc
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.MoveInRight__FinishedFunc
 // (BlueprintEvent)
 
-void AItemPreviewSideSwap_C::MoveInLeft__FinishedFunc()
+void AItemPreviewSideSwap_C::MoveInRight__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("MoveInLeft__FinishedFunc");
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "MoveInRight__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -349,29 +219,111 @@ void AItemPreviewSideSwap_C::MoveInLeft__FinishedFunc()
 void AItemPreviewSideSwap_C::MoveInLeft__UpdateFunc()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("MoveInLeft__UpdateFunc");
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "MoveInLeft__UpdateFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.ExecuteUbergraph_ItemPreviewSideSwap
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.MoveInLeft__FinishedFunc
+// (BlueprintEvent)
 
-void AItemPreviewSideSwap_C::ExecuteUbergraph_ItemPreviewSideSwap(int32 EntryPoint)
+void AItemPreviewSideSwap_C::MoveInLeft__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_ItemPreviewSideSwap");
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "MoveInLeft__FinishedFunc");
 
-	Params::ItemPreviewSideSwap_C_ExecuteUbergraph_ItemPreviewSideSwap Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.MoveOutLeft__UpdateFunc
+// (BlueprintEvent)
+
+void AItemPreviewSideSwap_C::MoveOutLeft__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "MoveOutLeft__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.MoveOutLeft__FinishedFunc
+// (BlueprintEvent)
+
+void AItemPreviewSideSwap_C::MoveOutLeft__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "MoveOutLeft__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.SwitchMobileLighting
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AItemPreviewSideSwap_C::SwitchMobileLighting(bool Visibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "SwitchMobileLighting");
+
+	Params::ItemPreviewSideSwap_C_SwitchMobileLighting Parms{};
+
+	Parms.Visibility = Visibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.SwitchPCLighting_LOWDetail
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AItemPreviewSideSwap_C::SwitchPCLighting_LOWDetail(bool Visibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "SwitchPCLighting_LOWDetail");
+
+	Params::ItemPreviewSideSwap_C_SwitchPCLighting_LOWDetail Parms{};
+
+	Parms.Visibility = Visibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.SwitchPCLighting
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AItemPreviewSideSwap_C::SwitchPCLighting(bool Visibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "SwitchPCLighting");
+
+	Params::ItemPreviewSideSwap_C_SwitchPCLighting Parms{};
+
+	Parms.Visibility = Visibility;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -380,14 +332,14 @@ void AItemPreviewSideSwap_C::ExecuteUbergraph_ItemPreviewSideSwap(int32 EntryPoi
 // Function ItemPreviewSideSwap.ItemPreviewSideSwap_C.LightControl
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AItemPreviewSideSwap_C::LightControl(bool Active)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("LightControl");
+		Func = Class->GetFunction("ItemPreviewSideSwap_C", "LightControl");
 
 	Params::ItemPreviewSideSwap_C_LightControl Parms{};
 

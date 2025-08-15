@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UNavLink_StairR_C>();
 	}
 };
+static_assert(alignof(UNavLink_StairR_C) == 0x000008, "Wrong alignment on UNavLink_StairR_C");
+static_assert(sizeof(UNavLink_StairR_C) == 0x000080, "Wrong size on UNavLink_StairR_C");
 
 }
 

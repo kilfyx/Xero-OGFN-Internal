@@ -17,6 +17,28 @@
 namespace SDK
 {
 
+// Function NPC_VoiceComponent.NPC_VoiceComponent_C.PlayVoiceLine
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayTag&              Gameplay_Tag                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class UAudioComponent*                  AudioComponent_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UNPC_VoiceComponent_C::PlayVoiceLine(const struct FGameplayTag& Gameplay_Tag, class UAudioComponent* AudioComponent_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NPC_VoiceComponent_C", "PlayVoiceLine");
+
+	Params::NPC_VoiceComponent_C_PlayVoiceLine Parms{};
+
+	Parms.Gameplay_Tag = std::move(Gameplay_Tag);
+	Parms.AudioComponent_0 = AudioComponent_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function NPC_VoiceComponent.NPC_VoiceComponent_C.Deprecated Set Sound Bank
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -55,52 +77,6 @@ void UNPC_VoiceComponent_C::Internal_Get_Voice_Sound_Bank(class UFortTaggedSound
 
 	if (Sound_Bank != nullptr)
 		*Sound_Bank = Parms.Sound_Bank;
-}
-
-
-// Function NPC_VoiceComponent.NPC_VoiceComponent_C.PlayVoiceLine
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              Gameplay_Tag                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-// class UAudioComponent*                  AudioComponent                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UNPC_VoiceComponent_C::PlayVoiceLine(const struct FGameplayTag& Gameplay_Tag, class UAudioComponent* AudioComponent, bool* Success)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NPC_VoiceComponent_C", "PlayVoiceLine");
-
-	Params::NPC_VoiceComponent_C_PlayVoiceLine Parms{};
-
-	Parms.Gameplay_Tag = std::move(Gameplay_Tag);
-	Parms.AudioComponent = AudioComponent;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Success != nullptr)
-		*Success = Parms.Success;
-}
-
-
-// Function NPC_VoiceComponent.NPC_VoiceComponent_C.SetSourceEffectChainToApply
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class USoundEffectSourcePresetChain*    SourceEffectChain                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UNPC_VoiceComponent_C::SetSourceEffectChainToApply(class USoundEffectSourcePresetChain* SourceEffectChain)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NPC_VoiceComponent_C", "SetSourceEffectChainToApply");
-
-	Params::NPC_VoiceComponent_C_SetSourceEffectChainToApply Parms{};
-
-	Parms.SourceEffectChain = SourceEffectChain;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

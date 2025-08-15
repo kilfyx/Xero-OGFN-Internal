@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -27,32 +26,12 @@ public:
 	struct FVector2D                              VolumeOutput;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundWave*                             Sound;                                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct FortSoundCueTemplates.PhysicsStateData
-// 0x0058 (0x0058 - 0x0000)
-struct FPhysicsStateData final
-{
-public:
-	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              VolumeOutput;                                      // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              PitchOutput;                                       // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDistanceDatum                         CrossfadeInputSlow;                                // 0x0018(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundWave*                             SlowLoop;                                          // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDistanceDatum                         CrossfadeInputFast;                                // 0x0038(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundWave*                             FastLoop;                                          // 0x0050(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct FortSoundCueTemplates.PhysicsImpactData
-// 0x0020 (0x0020 - 0x0000)
-struct FPhysicsImpactData final
-{
-public:
-	struct FVector2D                              VolumeOutput;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              PitchOutput;                                       // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class USoundWave*>                     Variations;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FGliderThrustData) == 0x000008, "Wrong alignment on FGliderThrustData");
+static_assert(sizeof(FGliderThrustData) == 0x000020, "Wrong size on FGliderThrustData");
+static_assert(offsetof(FGliderThrustData, ParameterName) == 0x000000, "Member 'FGliderThrustData::ParameterName' has a wrong offset!");
+static_assert(offsetof(FGliderThrustData, PitchOutput) == 0x000008, "Member 'FGliderThrustData::PitchOutput' has a wrong offset!");
+static_assert(offsetof(FGliderThrustData, VolumeOutput) == 0x000010, "Member 'FGliderThrustData::VolumeOutput' has a wrong offset!");
+static_assert(offsetof(FGliderThrustData, Sound) == 0x000018, "Member 'FGliderThrustData::Sound' has a wrong offset!");
 
 }
 

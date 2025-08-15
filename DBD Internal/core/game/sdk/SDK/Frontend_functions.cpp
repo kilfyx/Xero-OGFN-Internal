@@ -20,16 +20,16 @@ namespace SDK
 // Function Frontend.Frontend_C.PlaySpeech
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Filename                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    Filename                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // int32                                   SampleRate                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class USoundWave*                       AssetFile                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class USoundWave*                       AssetFile                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AFrontend_C::PlaySpeech(const class FString& Filename, int32 SampleRate, class USoundWave* AssetFile)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PlaySpeech");
+		Func = Class->GetFunction("Frontend_C", "PlaySpeech");
 
 	Params::Frontend_C_PlaySpeech Parms{};
 
@@ -47,9 +47,23 @@ void AFrontend_C::PlaySpeech(const class FString& Filename, int32 SampleRate, cl
 void AFrontend_C::OnMatchStarted()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnMatchStarted");
+		Func = Class->GetFunction("Frontend_C", "OnMatchStarted");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Frontend.Frontend_C.EnableTutorial
+// (BlueprintCallable, BlueprintEvent)
+
+void AFrontend_C::EnableTutorial()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Frontend_C", "EnableTutorial");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,29 +77,15 @@ void AFrontend_C::OnMatchStarted()
 void AFrontend_C::ExecuteUbergraph_Frontend(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_Frontend");
+		Func = Class->GetFunction("Frontend_C", "ExecuteUbergraph_Frontend");
 
 	Params::Frontend_C_ExecuteUbergraph_Frontend Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Frontend.Frontend_C.EnableTutorial
-// (BlueprintCallable, BlueprintEvent)
-
-void AFrontend_C::EnableTutorial()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EnableTutorial");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

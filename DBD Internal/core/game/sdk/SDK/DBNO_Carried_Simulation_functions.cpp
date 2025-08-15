@@ -17,27 +17,23 @@
 namespace SDK
 {
 
-// Function DBNO_Carried_Simulation.DBNO_Carried_Simulation_C.AnimGraph
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function DBNO_Carried_Simulation.DBNO_Carried_Simulation_C.ExecuteUbergraph_DBNO_Carried_Simulation
+// (Final, UbergraphFunction)
 // Parameters:
-// const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDBNO_Carried_Simulation_C::AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0)
+void UDBNO_Carried_Simulation_C::ExecuteUbergraph_DBNO_Carried_Simulation(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DBNO_Carried_Simulation_C", "AnimGraph");
+		Func = Class->GetFunction("DBNO_Carried_Simulation_C", "ExecuteUbergraph_DBNO_Carried_Simulation");
 
-	Params::DBNO_Carried_Simulation_C_AnimGraph Parms{};
+	Params::DBNO_Carried_Simulation_C_ExecuteUbergraph_DBNO_Carried_Simulation Parms{};
 
-	Parms.InPose = std::move(InPose);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (AnimGraph_0 != nullptr)
-		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
 
@@ -75,23 +71,27 @@ void UDBNO_Carried_Simulation_C::BlueprintUpdateAnimation(float DeltaTimeX)
 }
 
 
-// Function DBNO_Carried_Simulation.DBNO_Carried_Simulation_C.ExecuteUbergraph_DBNO_Carried_Simulation
-// (Final, UbergraphFunction)
+// Function DBNO_Carried_Simulation.DBNO_Carried_Simulation_C.AnimGraph
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
-void UDBNO_Carried_Simulation_C::ExecuteUbergraph_DBNO_Carried_Simulation(int32 EntryPoint)
+void UDBNO_Carried_Simulation_C::AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DBNO_Carried_Simulation_C", "ExecuteUbergraph_DBNO_Carried_Simulation");
+		Func = Class->GetFunction("DBNO_Carried_Simulation_C", "AnimGraph");
 
-	Params::DBNO_Carried_Simulation_C_ExecuteUbergraph_DBNO_Carried_Simulation Parms{};
+	Params::DBNO_Carried_Simulation_C_AnimGraph Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InPose = std::move(InPose);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
 }

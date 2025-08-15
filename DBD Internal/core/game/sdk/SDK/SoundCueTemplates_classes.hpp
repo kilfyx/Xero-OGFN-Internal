@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "DeveloperSettings_classes.hpp"
 #include "Engine_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
 
 
 namespace SDK
 {
 
 // Class SoundCueTemplates.SoundCueTemplate
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0570 - 0x0570)
 class USoundCueTemplate : public USoundCue
 {
 public:
@@ -31,9 +31,11 @@ public:
 		return GetDefaultObjImpl<USoundCueTemplate>();
 	}
 };
+static_assert(alignof(USoundCueTemplate) == 0x000008, "Wrong alignment on USoundCueTemplate");
+static_assert(sizeof(USoundCueTemplate) == 0x000570, "Wrong size on USoundCueTemplate");
 
 // Class SoundCueTemplates.SoundCueContainer
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0570 - 0x0570)
 class USoundCueContainer final : public USoundCueTemplate
 {
 public:
@@ -46,9 +48,11 @@ public:
 		return GetDefaultObjImpl<USoundCueContainer>();
 	}
 };
+static_assert(alignof(USoundCueContainer) == 0x000008, "Wrong alignment on USoundCueContainer");
+static_assert(sizeof(USoundCueContainer) == 0x000570, "Wrong size on USoundCueContainer");
 
 // Class SoundCueTemplates.SoundCueDistanceCrossfade
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0570 - 0x0570)
 class USoundCueDistanceCrossfade final : public USoundCueTemplate
 {
 public:
@@ -61,6 +65,8 @@ public:
 		return GetDefaultObjImpl<USoundCueDistanceCrossfade>();
 	}
 };
+static_assert(alignof(USoundCueDistanceCrossfade) == 0x000008, "Wrong alignment on USoundCueDistanceCrossfade");
+static_assert(sizeof(USoundCueDistanceCrossfade) == 0x000570, "Wrong size on USoundCueDistanceCrossfade");
 
 // Class SoundCueTemplates.SoundCueTemplateSettings
 // 0x0000 (0x0038 - 0x0038)
@@ -76,6 +82,8 @@ public:
 		return GetDefaultObjImpl<USoundCueTemplateSettings>();
 	}
 };
+static_assert(alignof(USoundCueTemplateSettings) == 0x000008, "Wrong alignment on USoundCueTemplateSettings");
+static_assert(sizeof(USoundCueTemplateSettings) == 0x000038, "Wrong size on USoundCueTemplateSettings");
 
 }
 

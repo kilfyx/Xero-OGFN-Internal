@@ -19,25 +19,24 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass Bucket_Old_Gadget_Skeleton_AnimBP.Bucket_Old_Gadget_Skeleton_AnimBP_C
-// 0x0A40 (0x0FC0 - 0x0580)
+// 0x0870 (0x0D20 - 0x04B0)
 class UBucket_Old_Gadget_Skeleton_AnimBP_C final : public UCustomCharacterPartAnimInstance
 {
 public:
-	uint8                                         Pad_578[0x8];                                      // 0x0578(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0580(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0588(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0590(0x0008)()
-	uint8                                         Pad_598[0x8];                                      // 0x0598(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x05A0(0x07F0)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0D90(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0DB0(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_SubInput;                            // 0x0DD0(0x00C8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0E98(0x0020)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0EB8(0x0108)()
+	uint8                                         Pad_4A8[0x8];                                      // 0x04A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x04B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x04C0(0x0660)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0B20(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0B40(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_SubInput;                            // 0x0B60(0x0088)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0BE8(0x0030)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0C18(0x0108)()
 
 public:
-	void AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0);
 	void ExecuteUbergraph_Bucket_Old_Gadget_Skeleton_AnimBP(int32 EntryPoint);
+	void AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -49,6 +48,16 @@ public:
 		return GetDefaultObjImpl<UBucket_Old_Gadget_Skeleton_AnimBP_C>();
 	}
 };
+static_assert(alignof(UBucket_Old_Gadget_Skeleton_AnimBP_C) == 0x000010, "Wrong alignment on UBucket_Old_Gadget_Skeleton_AnimBP_C");
+static_assert(sizeof(UBucket_Old_Gadget_Skeleton_AnimBP_C) == 0x000D20, "Wrong size on UBucket_Old_Gadget_Skeleton_AnimBP_C");
+static_assert(offsetof(UBucket_Old_Gadget_Skeleton_AnimBP_C, UberGraphFrame) == 0x0004B0, "Member 'UBucket_Old_Gadget_Skeleton_AnimBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBucket_Old_Gadget_Skeleton_AnimBP_C, AnimBlueprintClassSubsystem_PropertyAccess) == 0x0004B8, "Member 'UBucket_Old_Gadget_Skeleton_AnimBP_C::AnimBlueprintClassSubsystem_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UBucket_Old_Gadget_Skeleton_AnimBP_C, AnimGraphNode_RigidBody) == 0x0004C0, "Member 'UBucket_Old_Gadget_Skeleton_AnimBP_C::AnimGraphNode_RigidBody' has a wrong offset!");
+static_assert(offsetof(UBucket_Old_Gadget_Skeleton_AnimBP_C, AnimGraphNode_LocalToComponentSpace) == 0x000B20, "Member 'UBucket_Old_Gadget_Skeleton_AnimBP_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UBucket_Old_Gadget_Skeleton_AnimBP_C, AnimGraphNode_ComponentToLocalSpace) == 0x000B40, "Member 'UBucket_Old_Gadget_Skeleton_AnimBP_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UBucket_Old_Gadget_Skeleton_AnimBP_C, AnimGraphNode_SubInput) == 0x000B60, "Member 'UBucket_Old_Gadget_Skeleton_AnimBP_C::AnimGraphNode_SubInput' has a wrong offset!");
+static_assert(offsetof(UBucket_Old_Gadget_Skeleton_AnimBP_C, AnimGraphNode_Root) == 0x000BE8, "Member 'UBucket_Old_Gadget_Skeleton_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UBucket_Old_Gadget_Skeleton_AnimBP_C, AnimGraphNode_ModifyBone) == 0x000C18, "Member 'UBucket_Old_Gadget_Skeleton_AnimBP_C::AnimGraphNode_ModifyBone' has a wrong offset!");
 
 }
 

@@ -17,158 +17,6 @@
 namespace SDK
 {
 
-// Function ValetRuntime.DagwoodNetworkPhysicsComponent.SetPendingInputCmd
-// (Final, Native, Public, HasOutParams)
-// Parameters:
-// const struct FFortDagwoodCmd&           In                                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void UDagwoodNetworkPhysicsComponent::SetPendingInputCmd(const struct FFortDagwoodCmd& In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DagwoodNetworkPhysicsComponent", "SetPendingInputCmd");
-
-	Params::DagwoodNetworkPhysicsComponent_SetPendingInputCmd Parms{};
-
-	Parms.In = std::move(In);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ValetRuntime.DagwoodNetworkPhysicsComponent.SetState_GT
-// (Final, Native, Public, HasOutParams)
-// Parameters:
-// const struct FDagwoodInPersistent&      In                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UDagwoodNetworkPhysicsComponent::SetState_GT(const struct FDagwoodInPersistent& In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DagwoodNetworkPhysicsComponent", "SetState_GT");
-
-	Params::DagwoodNetworkPhysicsComponent_SetState_GT Parms{};
-
-	Parms.In = std::move(In);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ValetRuntime.DagwoodNetworkPhysicsComponent.GetPendingInputCmd
-// (Final, Native, Public, Const)
-// Parameters:
-// struct FFortDagwoodCmd                  ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FFortDagwoodCmd UDagwoodNetworkPhysicsComponent::GetPendingInputCmd() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DagwoodNetworkPhysicsComponent", "GetPendingInputCmd");
-
-	Params::DagwoodNetworkPhysicsComponent_GetPendingInputCmd Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ValetRuntime.DagwoodNetworkPhysicsComponent.GetState_GT
-// (Final, Native, Public, Const)
-// Parameters:
-// struct FDagwoodInPersistent             ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FDagwoodInPersistent UDagwoodNetworkPhysicsComponent::GetState_GT() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DagwoodNetworkPhysicsComponent", "GetState_GT");
-
-	Params::DagwoodNetworkPhysicsComponent_GetState_GT Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ValetRuntime.DagwoodNetworkPhysicsComponent.GetState_PT
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FDagwoodState_PT                 ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FDagwoodState_PT UDagwoodNetworkPhysicsComponent::GetState_PT() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DagwoodNetworkPhysicsComponent", "GetState_PT");
-
-	Params::DagwoodNetworkPhysicsComponent_GetState_PT Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ValetRuntime.FortAthenaMutator_OverrideValetVehicleParameters.OnPlaylistLoaded
-// (Final, Native, Public, HasOutParams)
-// Parameters:
-// class FName                             PlaylistName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTagContainer&     PlaylistContainerTags                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void AFortAthenaMutator_OverrideValetVehicleParameters::OnPlaylistLoaded(class FName PlaylistName, const struct FGameplayTagContainer& PlaylistContainerTags)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortAthenaMutator_OverrideValetVehicleParameters", "OnPlaylistLoaded");
-
-	Params::FortAthenaMutator_OverrideValetVehicleParameters_OnPlaylistLoaded Parms{};
-
-	Parms.PlaylistName = PlaylistName;
-	Parms.PlaylistContainerTags = std::move(PlaylistContainerTags);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ValetRuntime.FortContextualTutorial_VehicleValetLowFuel.HandleStartSkydivingForActivation
 // (Final, Native, Private)
 
@@ -217,20 +65,51 @@ void UFortContextualTutorial_VehicleValetLowFuel::HandleVehicleStateChanged(clas
 }
 
 
-// Function ValetRuntime.FortDagwoodVehicle.ApplyRuntimeModifiers
-// (Final, Native, Private)
+// Function ValetRuntime.FortDagwoodVehicle.ApplyTireMod
+// (Final, Native, Protected, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FGameplayTag&              NewTireModTag                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void AFortDagwoodVehicle::ApplyRuntimeModifiers()
+void AFortDagwoodVehicle::ApplyTireMod(const struct FGameplayTag& NewTireModTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "ApplyRuntimeModifiers");
+		Func = Class->GetFunction("FortDagwoodVehicle", "ApplyTireMod");
+
+	Params::FortDagwoodVehicle_ApplyTireMod Parms{};
+
+	Parms.NewTireModTag = std::move(NewTireModTag);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValetRuntime.FortDagwoodVehicle.ApplyVehicleModMountedGun
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UFortDagwoodModsConfigs*          ModConfigsRef                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AFortDagwoodVehicle::ApplyVehicleModMountedGun(class UFortDagwoodModsConfigs* ModConfigsRef)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortDagwoodVehicle", "ApplyVehicleModMountedGun");
+
+	Params::FortDagwoodVehicle_ApplyVehicleModMountedGun Parms{};
+
+	Parms.ModConfigsRef = ModConfigsRef;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -265,7 +144,7 @@ void AFortDagwoodVehicle::BP_OnBoostStarted()
 
 
 // Function ValetRuntime.FortDagwoodVehicle.CleanupLoopingPooledFX
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AFortDagwoodVehicle::CleanupLoopingPooledFX()
 {
@@ -274,28 +153,23 @@ void AFortDagwoodVehicle::CleanupLoopingPooledFX()
 	if (Func == nullptr)
 		Func = Class->GetFunction("FortDagwoodVehicle", "CleanupLoopingPooledFX");
 
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
 	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
 }
 
 
-// Function ValetRuntime.FortDagwoodVehicle.GetCurrentDagwoodRuntimeProperties
+// Function ValetRuntime.FortDagwoodVehicle.GetCurrentRuntimeProperties
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// const struct FDagwoodRuntimeModifiers   ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FVehicleRuntimeModifiers   ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 
-const struct FDagwoodRuntimeModifiers AFortDagwoodVehicle::GetCurrentDagwoodRuntimeProperties()
+const struct FVehicleRuntimeModifiers AFortDagwoodVehicle::GetCurrentRuntimeProperties()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "GetCurrentDagwoodRuntimeProperties");
+		Func = Class->GetFunction("FortDagwoodVehicle", "GetCurrentRuntimeProperties");
 
-	Params::FortDagwoodVehicle_GetCurrentDagwoodRuntimeProperties Parms{};
+	Params::FortDagwoodVehicle_GetCurrentRuntimeProperties Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -305,33 +179,6 @@ const struct FDagwoodRuntimeModifiers AFortDagwoodVehicle::GetCurrentDagwoodRunt
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function ValetRuntime.FortDagwoodVehicle.HandleCurrentPlaylistLoaded
-// (Final, Native, Protected, HasOutParams)
-// Parameters:
-// class FName                             PlaylistName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTagContainer&     PlaylistContextTags                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void AFortDagwoodVehicle::HandleCurrentPlaylistLoaded(class FName PlaylistName, const struct FGameplayTagContainer& PlaylistContextTags)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "HandleCurrentPlaylistLoaded");
-
-	Params::FortDagwoodVehicle_HandleCurrentPlaylistLoaded Parms{};
-
-	Parms.PlaylistName = PlaylistName;
-	Parms.PlaylistContextTags = std::move(PlaylistContextTags);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 }
 
 
@@ -582,6 +429,20 @@ void AFortDagwoodVehicle::OnExitRoad()
 }
 
 
+// Function ValetRuntime.FortDagwoodVehicle.OnExplode
+// (Event, Public, BlueprintEvent)
+
+void AFortDagwoodVehicle::OnExplode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortDagwoodVehicle", "OnExplode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ValetRuntime.FortDagwoodVehicle.OnFireStart
 // (Event, Protected, BlueprintEvent)
 
@@ -644,48 +505,6 @@ void AFortDagwoodVehicle::OnGainedFuel(float NewPercent)
 }
 
 
-// Function ValetRuntime.FortDagwoodVehicle.OnHoldSelfDestructStarted
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AFortPawn*                        DriverPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             ExitDuration                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AFortDagwoodVehicle::OnHoldSelfDestructStarted(class AFortPawn* DriverPawn, const float ExitDuration)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "OnHoldSelfDestructStarted");
-
-	Params::FortDagwoodVehicle_OnHoldSelfDestructStarted Parms{};
-
-	Parms.DriverPawn = DriverPawn;
-	Parms.ExitDuration = ExitDuration;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ValetRuntime.FortDagwoodVehicle.OnHoldSelfDestructStopped
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AFortPawn*                        DriverPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AFortDagwoodVehicle::OnHoldSelfDestructStopped(class AFortPawn* DriverPawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "OnHoldSelfDestructStopped");
-
-	Params::FortDagwoodVehicle_OnHoldSelfDestructStopped Parms{};
-
-	Parms.DriverPawn = DriverPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ValetRuntime.FortDagwoodVehicle.OnInoperableChanged
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -706,6 +525,34 @@ void AFortDagwoodVehicle::OnInoperableChanged(bool bInoperable)
 }
 
 
+// Function ValetRuntime.FortDagwoodVehicle.OnLeakingFuelStart
+// (Event, Protected, BlueprintEvent)
+
+void AFortDagwoodVehicle::OnLeakingFuelStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortDagwoodVehicle", "OnLeakingFuelStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ValetRuntime.FortDagwoodVehicle.OnLeakingFuelStop
+// (Event, Protected, BlueprintEvent)
+
+void AFortDagwoodVehicle::OnLeakingFuelStop()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortDagwoodVehicle", "OnLeakingFuelStop");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ValetRuntime.FortDagwoodVehicle.OnLowFuel
 // (Event, Public, BlueprintEvent)
 
@@ -723,10 +570,9 @@ void AFortDagwoodVehicle::OnLowFuel()
 // Function ValetRuntime.FortDagwoodVehicle.OnPoppedTire
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const int32                             TireIndex                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const bool                              bFakeTire                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   TireIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void AFortDagwoodVehicle::OnPoppedTire(const int32 TireIndex, const bool bFakeTire)
+void AFortDagwoodVehicle::OnPoppedTire(int32 TireIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -736,32 +582,6 @@ void AFortDagwoodVehicle::OnPoppedTire(const int32 TireIndex, const bool bFakeTi
 	Params::FortDagwoodVehicle_OnPoppedTire Parms{};
 
 	Parms.TireIndex = TireIndex;
-	Parms.bFakeTire = bFakeTire;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ValetRuntime.FortDagwoodVehicle.OnRep_DagwoodRuntimeModifiers
-// (Final, Native, Private, HasOutParams)
-// Parameters:
-// const struct FDagwoodRuntimeModifiers&  PrevMods                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void AFortDagwoodVehicle::OnRep_DagwoodRuntimeModifiers(const struct FDagwoodRuntimeModifiers& PrevMods)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "OnRep_DagwoodRuntimeModifiers");
-
-	Params::FortDagwoodVehicle_OnRep_DagwoodRuntimeModifiers Parms{};
-
-	Parms.PrevMods = std::move(PrevMods);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -791,31 +611,6 @@ void AFortDagwoodVehicle::OnRep_Exploded()
 }
 
 
-// Function ValetRuntime.FortDagwoodVehicle.OnRep_FakeTires
-// (Final, Native, Private, HasOutParams)
-// Parameters:
-// const TArray<ETireStates>&              PrevTireStates                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void AFortDagwoodVehicle::OnRep_FakeTires(const TArray<ETireStates>& PrevTireStates)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "OnRep_FakeTires");
-
-	Params::FortDagwoodVehicle_OnRep_FakeTires Parms{};
-
-	Parms.PrevTireStates = std::move(PrevTireStates);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ValetRuntime.FortDagwoodVehicle.OnRep_IsInoperable
 // (Final, Native, Private)
 
@@ -830,6 +625,31 @@ void AFortDagwoodVehicle::OnRep_IsInoperable()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValetRuntime.FortDagwoodVehicle.OnRep_MountedWeapon
+// (Final, Native, Private, HasOutParams)
+// Parameters:
+// const struct FMountedGun&               PrevMountedWeapon                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void AFortDagwoodVehicle::OnRep_MountedWeapon(const struct FMountedGun& PrevMountedWeapon)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortDagwoodVehicle", "OnRep_MountedWeapon");
+
+	Params::FortDagwoodVehicle_OnRep_MountedWeapon Parms{};
+
+	Parms.PrevMountedWeapon = std::move(PrevMountedWeapon);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -873,20 +693,26 @@ void AFortDagwoodVehicle::OnRep_RandSeed()
 }
 
 
-// Function ValetRuntime.FortDagwoodVehicle.OnRep_ServerRepWheelData
-// (Final, Native, Private)
+// Function ValetRuntime.FortDagwoodVehicle.OnRep_RuntimeModifiers
+// (Final, Native, Private, HasOutParams)
+// Parameters:
+// const struct FVehicleRuntimeModifiers&  PrevMods                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
-void AFortDagwoodVehicle::OnRep_ServerRepWheelData()
+void AFortDagwoodVehicle::OnRep_RuntimeModifiers(const struct FVehicleRuntimeModifiers& PrevMods)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "OnRep_ServerRepWheelData");
+		Func = Class->GetFunction("FortDagwoodVehicle", "OnRep_RuntimeModifiers");
+
+	Params::FortDagwoodVehicle_OnRep_RuntimeModifiers Parms{};
+
+	Parms.PrevMods = std::move(PrevMods);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -895,7 +721,7 @@ void AFortDagwoodVehicle::OnRep_ServerRepWheelData()
 // Function ValetRuntime.FortDagwoodVehicle.OnRep_Tires
 // (Final, Native, Private, HasOutParams)
 // Parameters:
-// const TArray<ETireStates>&              PrevTireStates                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<ETireStates>&              PrevTireStates                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void AFortDagwoodVehicle::OnRep_Tires(const TArray<ETireStates>& PrevTireStates)
 {
@@ -954,6 +780,40 @@ void AFortDagwoodVehicle::OnServerAltInteract(class AFortPawn* Pawn)
 	Parms.Pawn = Pawn;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ValetRuntime.FortDagwoodVehicle.OnSpawnLeakProjectile
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AFortProjectileBase*              SpawnProjectile                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AFortDagwoodVehicle::OnSpawnLeakProjectile(class AFortProjectileBase* SpawnProjectile)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortDagwoodVehicle", "OnSpawnLeakProjectile");
+
+	Params::FortDagwoodVehicle_OnSpawnLeakProjectile Parms{};
+
+	Parms.SpawnProjectile = SpawnProjectile;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ValetRuntime.FortDagwoodVehicle.OnStartCriticalHealth
+// (Event, Public, BlueprintEvent)
+
+void AFortDagwoodVehicle::OnStartCriticalHealth()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortDagwoodVehicle", "OnStartCriticalHealth");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -1025,29 +885,10 @@ void AFortDagwoodVehicle::OnTickAudioFade(float FadeParam)
 }
 
 
-// Function ValetRuntime.FortDagwoodVehicle.SelfDestructCleanup
-// (Final, Native, Public)
-
-void AFortDagwoodVehicle::SelfDestructCleanup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "SelfDestructCleanup");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ValetRuntime.FortDagwoodVehicle.ServerAddRuntimeGearsInfo
 // (Final, Native, Protected, HasOutParams, BlueprintCallable)
 // Parameters:
-// const struct FRuntimeGearInfo&          GearInfo                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FRuntimeGearInfo&          GearInfo                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void AFortDagwoodVehicle::ServerAddRuntimeGearsInfo(const struct FRuntimeGearInfo& GearInfo)
 {
@@ -1069,85 +910,10 @@ void AFortDagwoodVehicle::ServerAddRuntimeGearsInfo(const struct FRuntimeGearInf
 }
 
 
-// Function ValetRuntime.FortDagwoodVehicle.ServerSelfDestructActivated
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
-
-void AFortDagwoodVehicle::ServerSelfDestructActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "ServerSelfDestructActivated");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ValetRuntime.FortDagwoodVehicle.ServerSetDestructionInfo
-// (Final, Native, Protected, BlueprintCallable)
-// Parameters:
-// const float                             SelfDestructTime                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             MaxTimeZeroHealth                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             MaxTimeSelfDestructCleanup                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             MaxTimeExplosion                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AFortDagwoodVehicle::ServerSetDestructionInfo(const float SelfDestructTime, const float MaxTimeZeroHealth, const float MaxTimeSelfDestructCleanup, const float MaxTimeExplosion)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "ServerSetDestructionInfo");
-
-	Params::FortDagwoodVehicle_ServerSetDestructionInfo Parms{};
-
-	Parms.SelfDestructTime = SelfDestructTime;
-	Parms.MaxTimeZeroHealth = MaxTimeZeroHealth;
-	Parms.MaxTimeSelfDestructCleanup = MaxTimeSelfDestructCleanup;
-	Parms.MaxTimeExplosion = MaxTimeExplosion;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ValetRuntime.FortDagwoodVehicle.ServerSetFadeDuration
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
-// Parameters:
-// const float                             NewFadeDuration                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AFortDagwoodVehicle::ServerSetFadeDuration(const float NewFadeDuration)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "ServerSetFadeDuration");
-
-	Params::FortDagwoodVehicle_ServerSetFadeDuration Parms{};
-
-	Parms.NewFadeDuration = NewFadeDuration;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ValetRuntime.FortDagwoodVehicle.ServerSetRuntimeBoostInfo
 // (Final, Native, Protected, HasOutParams, BlueprintCallable)
 // Parameters:
-// const struct FRuntimeBoostInfo&         BoostInfo                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FRuntimeBoostInfo&         BoostInfo                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void AFortDagwoodVehicle::ServerSetRuntimeBoostInfo(const struct FRuntimeBoostInfo& BoostInfo)
 {
@@ -1199,7 +965,7 @@ void AFortDagwoodVehicle::ServerSetRuntimeDriveInfo(float MaxIncline, float MaxT
 // Function ValetRuntime.FortDagwoodVehicle.ServerSetRuntimeFuelInfo
 // (Final, Native, Protected, HasOutParams, BlueprintCallable)
 // Parameters:
-// const struct FRuntimeFuelInfo&          FuelInfo                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FRuntimeFuelInfo&          FuelInfo                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void AFortDagwoodVehicle::ServerSetRuntimeFuelInfo(const struct FRuntimeFuelInfo& FuelInfo)
 {
@@ -1249,7 +1015,7 @@ void AFortDagwoodVehicle::ServerSetRuntimeGravity(float GravMult)
 // Function ValetRuntime.FortDagwoodVehicle.ServerSetRuntimeSpringsInfo
 // (Final, Native, Protected, HasOutParams, BlueprintCallable)
 // Parameters:
-// const struct FRuntimeSpringsInfo&       SpringsInfo                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FRuntimeSpringsInfo&       SpringsInfo                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void AFortDagwoodVehicle::ServerSetRuntimeSpringsInfo(const struct FRuntimeSpringsInfo& SpringsInfo)
 {
@@ -1271,27 +1037,21 @@ void AFortDagwoodVehicle::ServerSetRuntimeSpringsInfo(const struct FRuntimeSprin
 }
 
 
-// Function ValetRuntime.FortDagwoodVehicle.SetDamageInfoOnServer
-// (Final, BlueprintAuthorityOnly, Native, Protected, BlueprintCallable)
+// Function ValetRuntime.FortDagwoodVehicle.ServerSetTireModTag
+// (Final, Native, Protected, HasOutParams, BlueprintCallable)
 // Parameters:
-// const bool                              bInDamageFriendlyVehicles                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const bool                              bInDamageOtherVehicles                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const bool                              bInDamageOwnVehicle                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const bool                              bInDamageAllowedFromOtherVehicle                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              TireModTag                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void AFortDagwoodVehicle::SetDamageInfoOnServer(const bool bInDamageFriendlyVehicles, const bool bInDamageOtherVehicles, const bool bInDamageOwnVehicle, const bool bInDamageAllowedFromOtherVehicle)
+void AFortDagwoodVehicle::ServerSetTireModTag(const struct FGameplayTag& TireModTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "SetDamageInfoOnServer");
+		Func = Class->GetFunction("FortDagwoodVehicle", "ServerSetTireModTag");
 
-	Params::FortDagwoodVehicle_SetDamageInfoOnServer Parms{};
+	Params::FortDagwoodVehicle_ServerSetTireModTag Parms{};
 
-	Parms.bInDamageFriendlyVehicles = bInDamageFriendlyVehicles;
-	Parms.bInDamageOtherVehicles = bInDamageOtherVehicles;
-	Parms.bInDamageOwnVehicle = bInDamageOwnVehicle;
-	Parms.bInDamageAllowedFromOtherVehicle = bInDamageAllowedFromOtherVehicle;
+	Parms.TireModTag = std::move(TireModTag);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1327,6 +1087,31 @@ void AFortDagwoodVehicle::SetFuel(float NewFuel)
 }
 
 
+// Function ValetRuntime.FortDagwoodVehicle.SetNormalizedAudioRPM
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InRPM                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AFortDagwoodVehicle::SetNormalizedAudioRPM(float InRPM)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortDagwoodVehicle", "SetNormalizedAudioRPM");
+
+	Params::FortDagwoodVehicle_SetNormalizedAudioRPM Parms{};
+
+	Parms.InRPM = InRPM;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ValetRuntime.FortDagwoodVehicle.SetOnFire
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1342,31 +1127,6 @@ void AFortDagwoodVehicle::SetOnFire(bool bNewFire)
 	Params::FortDagwoodVehicle_SetOnFire Parms{};
 
 	Parms.bNewFire = bNewFire;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ValetRuntime.FortDagwoodVehicle.SetValetAudioController
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// class AFortValetAudioController*        ValetAudio_0                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AFortDagwoodVehicle::SetValetAudioController(class AFortValetAudioController* ValetAudio_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "SetValetAudioController");
-
-	Params::FortDagwoodVehicle_SetValetAudioController Parms{};
-
-	Parms.ValetAudio_0 = ValetAudio_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1393,6 +1153,50 @@ void AFortDagwoodVehicle::StartFade()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValetRuntime.FortDagwoodVehicle.UpdateVehicleFuelLeak
+// (Final, Native, Public)
+
+void AFortDagwoodVehicle::UpdateVehicleFuelLeak()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortDagwoodVehicle", "UpdateVehicleFuelLeak");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValetRuntime.FortDagwoodVehicle.AreAnyTiresPopped
+// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AFortDagwoodVehicle::AreAnyTiresPopped() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortDagwoodVehicle", "AreAnyTiresPopped");
+
+	Params::FortDagwoodVehicle_AreAnyTiresPopped Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -1434,31 +1238,6 @@ float AFortDagwoodVehicle::GetBumpiness() const
 		Func = Class->GetFunction("FortDagwoodVehicle", "GetBumpiness");
 
 	Params::FortDagwoodVehicle_GetBumpiness Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ValetRuntime.FortDagwoodVehicle.GetExplosionDelay
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float AFortDagwoodVehicle::GetExplosionDelay() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "GetExplosionDelay");
-
-	Params::FortDagwoodVehicle_GetExplosionDelay Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1521,19 +1300,19 @@ float AFortDagwoodVehicle::GetFuelCapacity() const
 }
 
 
-// Function ValetRuntime.FortDagwoodVehicle.GetMaxZeroHealthTime
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Function ValetRuntime.FortDagwoodVehicle.GetHUDTopSpeed
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-float AFortDagwoodVehicle::GetMaxZeroHealthTime() const
+float AFortDagwoodVehicle::GetHUDTopSpeed() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "GetMaxZeroHealthTime");
+		Func = Class->GetFunction("FortDagwoodVehicle", "GetHUDTopSpeed");
 
-	Params::FortDagwoodVehicle_GetMaxZeroHealthTime Parms{};
+	Params::FortDagwoodVehicle_GetHUDTopSpeed Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1546,19 +1325,44 @@ float AFortDagwoodVehicle::GetMaxZeroHealthTime() const
 }
 
 
-// Function ValetRuntime.FortDagwoodVehicle.GetMiddleAxleForwardAdjust
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Function ValetRuntime.FortDagwoodVehicle.GetModSocketNames
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FName>               ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-float AFortDagwoodVehicle::GetMiddleAxleForwardAdjust() const
+const TArray<class FName> AFortDagwoodVehicle::GetModSocketNames() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "GetMiddleAxleForwardAdjust");
+		Func = Class->GetFunction("FortDagwoodVehicle", "GetModSocketNames");
 
-	Params::FortDagwoodVehicle_GetMiddleAxleForwardAdjust Parms{};
+	Params::FortDagwoodVehicle_GetModSocketNames Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ValetRuntime.FortDagwoodVehicle.GetNormalizedAudioRPM
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float AFortDagwoodVehicle::GetNormalizedAudioRPM() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortDagwoodVehicle", "GetNormalizedAudioRPM");
+
+	Params::FortDagwoodVehicle_GetNormalizedAudioRPM Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1596,44 +1400,19 @@ bool AFortDagwoodVehicle::GetOnFire() const
 }
 
 
-// Function ValetRuntime.FortDagwoodVehicle.GetSelfDestructCleanupDelay
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Function ValetRuntime.FortDagwoodVehicle.GetPlayerFacingName
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-float AFortDagwoodVehicle::GetSelfDestructCleanupDelay() const
+class FString AFortDagwoodVehicle::GetPlayerFacingName() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "GetSelfDestructCleanupDelay");
+		Func = Class->GetFunction("FortDagwoodVehicle", "GetPlayerFacingName");
 
-	Params::FortDagwoodVehicle_GetSelfDestructCleanupDelay Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ValetRuntime.FortDagwoodVehicle.GetSelfDestructDelay
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float AFortDagwoodVehicle::GetSelfDestructDelay() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortDagwoodVehicle", "GetSelfDestructDelay");
-
-	Params::FortDagwoodVehicle_GetSelfDestructDelay Parms{};
+	Params::FortDagwoodVehicle_GetPlayerFacingName Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1718,6 +1497,31 @@ ETireSurfaces AFortDagwoodVehicle::GetTireSurface(ETireLocations TireIndex) cons
 	Params::FortDagwoodVehicle_GetTireSurface Parms{};
 
 	Parms.TireIndex = TireIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ValetRuntime.FortDagwoodVehicle.IsInoperable
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AFortDagwoodVehicle::IsInoperable() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortDagwoodVehicle", "IsInoperable");
+
+	Params::FortDagwoodVehicle_IsInoperable Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1999,7 +1803,7 @@ void UFortDagwoodVehicleManager::OnVehicleSpawned(class AFortAthenaVehicle* Vehi
 // (Final, Native, Public, HasOutParams)
 // Parameters:
 // class UFortVehicleItemDefinition*       VehicleItemDef                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class AActor*>*                  SpawnedVehicles                                        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class AActor*>*                  SpawnedVehicles                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   NewVehicleCount                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UFortDagwoodVehicleManager::OnVehicleSpawnsUpdated(class UFortVehicleItemDefinition* VehicleItemDef, TArray<class AActor*>* SpawnedVehicles, int32 NewVehicleCount)
@@ -2097,26 +1901,6 @@ void AFortValetAudioController::OnSuspensionCollision_Native(bool* OutResult, fl
 
 	if (OutMagnitude != nullptr)
 		*OutMagnitude = Parms.OutMagnitude;
-}
-
-
-// Function ValetRuntime.FortValetAudioController.OnTireModApplied
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FTireInfo&                 AppliedTireMod                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void AFortValetAudioController::OnTireModApplied(const struct FTireInfo& AppliedTireMod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortValetAudioController", "OnTireModApplied");
-
-	Params::FortValetAudioController_OnTireModApplied Parms{};
-
-	Parms.AppliedTireMod = std::move(AppliedTireMod);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

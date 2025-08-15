@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_ZipLine_Athena_Harness_classes.hpp"
 
 
@@ -18,35 +17,9 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C
-// 0x0040 (0x0358 - 0x0318)
+// 0x0000 (0x02A8 - 0x02A8)
 class ABP_ZipLine_Athena_Harness_Yellow_C final : public ABP_ZipLine_Athena_Harness_C
 {
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ZipLine_Athena_Harness_Yellow_C; // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      NS_Zipline_Pulley_SpeedLines_Converted;            // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      NS_Zipline_Speedline;                              // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         Alpha_NewTrack_0_AF34CA1D47D28FE19CCA3C98688125DE; // 0x0330(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Alpha__Direction_AF34CA1D47D28FE19CCA3C98688125DE; // 0x0334(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_335[0x3];                                      // 0x0335(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Alpha;                                             // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Spark_NewTrack_0_A812B2F04CB78DDF352B84A578861501; // 0x0340(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Spark__Direction_A812B2F04CB78DDF352B84A578861501; // 0x0344(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_345[0x3];                                      // 0x0345(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     spark;                                             // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BeginLocation_z;                                   // 0x0350(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Location;                                          // 0x0354(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-public:
-	void Alpha__FinishedFunc();
-	void Alpha__UpdateFunc();
-	void ExecuteUbergraph_BP_ZipLine_Athena_Harness_Yellow(int32 EntryPoint);
-	void ReceiveBeginPlay();
-	void ResetBlue();
-	void Spark__FinishedFunc();
-	void Spark__UpdateFunc();
-	void Update_Begin_Z();
-	void UpdateZiplineFX();
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -57,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ABP_ZipLine_Athena_Harness_Yellow_C>();
 	}
 };
+static_assert(alignof(ABP_ZipLine_Athena_Harness_Yellow_C) == 0x000008, "Wrong alignment on ABP_ZipLine_Athena_Harness_Yellow_C");
+static_assert(sizeof(ABP_ZipLine_Athena_Harness_Yellow_C) == 0x0002A8, "Wrong size on ABP_ZipLine_Athena_Harness_Yellow_C");
 
 }
 

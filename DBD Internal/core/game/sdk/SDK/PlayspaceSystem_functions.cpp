@@ -42,31 +42,6 @@ void AGameplayVolume::UpdateSize(const struct FVector& NewScale)
 }
 
 
-// Function PlayspaceSystem.GameplayVolume.GetPlayspace
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class APlayspace*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class APlayspace* AGameplayVolume::GetPlayspace() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayVolume", "GetPlayspace");
-
-	Params::GameplayVolume_GetPlayspace Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function PlayspaceSystem.OverlapComponent.OnBeginActorOverlap
 // (Native, Protected, HasOutParams)
 // Parameters:
@@ -272,31 +247,6 @@ const struct FReplicatedSpawnInfo UPlayspaceControllerComponent_PlayerSpawning::
 }
 
 
-// Function PlayspaceSystem.PlayspaceLibrary.DestroyPlayspace
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class APlayspace*                       PlayspaceToDestroy                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UPlayspaceLibrary::DestroyPlayspace(class APlayspace* PlayspaceToDestroy)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("PlayspaceLibrary", "DestroyPlayspace");
-
-	Params::PlayspaceLibrary_DestroyPlayspace Parms{};
-
-	Parms.PlayspaceToDestroy = PlayspaceToDestroy;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function PlayspaceSystem.PlayspaceLogic.OnRep_bMatchHasEnded
 // (Final, Native, Private)
 
@@ -384,25 +334,6 @@ void UPlayspaceManagerComponent::OnPlayerEndOverlapGameplayVolume(class APlayerS
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PlayspaceSystem.PlayspaceManagerComponent.OnRep_RootPlayspace
-// (Final, Native, Private)
-
-void UPlayspaceManagerComponent::OnRep_RootPlayspace()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayspaceManagerComponent", "OnRep_RootPlayspace");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }

@@ -49,7 +49,7 @@ bool UAssetTagsSubsystem::CollectionExists(const class FName Name_0)
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FAssetData>               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TArray<struct FAssetData>               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<struct FAssetData> UAssetTagsSubsystem::GetAssetsInCollection(const class FName Name_0)
 {
@@ -76,7 +76,7 @@ TArray<struct FAssetData> UAssetTagsSubsystem::GetAssetsInCollection(const class
 // Function AssetTags.AssetTagsSubsystem.GetCollections
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<class FName> UAssetTagsSubsystem::GetCollections()
 {
@@ -102,7 +102,7 @@ TArray<class FName> UAssetTagsSubsystem::GetCollections()
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FName                       AssetPathName                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAsset(const class FName AssetPathName)
 {
@@ -130,7 +130,7 @@ TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAsset(const cla
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FAssetData&                AssetData                                              (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAssetData(const struct FAssetData& AssetData)
 {
@@ -158,7 +158,7 @@ TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAssetData(const
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    AssetPtr                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAssetPtr(const class UObject* AssetPtr)
 {

@@ -20,24 +20,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ShowdownEventTileViolator.ShowdownEventTileViolator_C
-// 0x0040 (0x0758 - 0x0718)
+// 0x0040 (0x06F8 - 0x06B8)
 class UShowdownEventTileViolator_C final : public UFortShowdownDetailView
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0718(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Focus;                                             // 0x0720(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_0;                                 // 0x0728(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_RoundNumber;                       // 0x0730(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            CommonWidgetSwitcher_EventState;                   // 0x0738(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            CommonWidgetSwitcher_Proximity;                    // 0x0740(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULiveViolator_C*                        LiveViolator;                                      // 0x0748(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          OverrideDoNotShowRound;                            // 0x0750(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Focus;                                             // 0x06C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_0;                                 // 0x06C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_RoundNumber;                       // 0x06D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_EventState;                   // 0x06D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_Proximity;                    // 0x06E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULiveViolator_C*                        LiveViolator;                                      // 0x06E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          OverrideDoNotShowRound;                            // 0x06F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void RefreshViolatorData();
-	void RefreshDataBP();
-	void ExecuteUbergraph_ShowdownEventTileViolator(int32 EntryPoint);
 	void Construct();
+	void RefreshDataBP();
+	void RefreshViolatorData();
+	void ExecuteUbergraph_ShowdownEventTileViolator(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -50,15 +50,15 @@ public:
 	}
 };
 static_assert(alignof(UShowdownEventTileViolator_C) == 0x000008, "Wrong alignment on UShowdownEventTileViolator_C");
-static_assert(sizeof(UShowdownEventTileViolator_C) == 0x000758, "Wrong size on UShowdownEventTileViolator_C");
-static_assert(offsetof(UShowdownEventTileViolator_C, UberGraphFrame) == 0x000718, "Member 'UShowdownEventTileViolator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTileViolator_C, Focus) == 0x000720, "Member 'UShowdownEventTileViolator_C::Focus' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTileViolator_C, CommonTextBlock_0) == 0x000728, "Member 'UShowdownEventTileViolator_C::CommonTextBlock_0' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTileViolator_C, CommonTextBlock_RoundNumber) == 0x000730, "Member 'UShowdownEventTileViolator_C::CommonTextBlock_RoundNumber' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTileViolator_C, CommonWidgetSwitcher_EventState) == 0x000738, "Member 'UShowdownEventTileViolator_C::CommonWidgetSwitcher_EventState' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTileViolator_C, CommonWidgetSwitcher_Proximity) == 0x000740, "Member 'UShowdownEventTileViolator_C::CommonWidgetSwitcher_Proximity' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTileViolator_C, LiveViolator) == 0x000748, "Member 'UShowdownEventTileViolator_C::LiveViolator' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTileViolator_C, OverrideDoNotShowRound) == 0x000750, "Member 'UShowdownEventTileViolator_C::OverrideDoNotShowRound' has a wrong offset!");
+static_assert(sizeof(UShowdownEventTileViolator_C) == 0x0006F8, "Wrong size on UShowdownEventTileViolator_C");
+static_assert(offsetof(UShowdownEventTileViolator_C, UberGraphFrame) == 0x0006B8, "Member 'UShowdownEventTileViolator_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UShowdownEventTileViolator_C, Focus) == 0x0006C0, "Member 'UShowdownEventTileViolator_C::Focus' has a wrong offset!");
+static_assert(offsetof(UShowdownEventTileViolator_C, CommonTextBlock_0) == 0x0006C8, "Member 'UShowdownEventTileViolator_C::CommonTextBlock_0' has a wrong offset!");
+static_assert(offsetof(UShowdownEventTileViolator_C, CommonTextBlock_RoundNumber) == 0x0006D0, "Member 'UShowdownEventTileViolator_C::CommonTextBlock_RoundNumber' has a wrong offset!");
+static_assert(offsetof(UShowdownEventTileViolator_C, CommonWidgetSwitcher_EventState) == 0x0006D8, "Member 'UShowdownEventTileViolator_C::CommonWidgetSwitcher_EventState' has a wrong offset!");
+static_assert(offsetof(UShowdownEventTileViolator_C, CommonWidgetSwitcher_Proximity) == 0x0006E0, "Member 'UShowdownEventTileViolator_C::CommonWidgetSwitcher_Proximity' has a wrong offset!");
+static_assert(offsetof(UShowdownEventTileViolator_C, LiveViolator) == 0x0006E8, "Member 'UShowdownEventTileViolator_C::LiveViolator' has a wrong offset!");
+static_assert(offsetof(UShowdownEventTileViolator_C, OverrideDoNotShowRound) == 0x0006F0, "Member 'UShowdownEventTileViolator_C::OverrideDoNotShowRound' has a wrong offset!");
 
 }
 

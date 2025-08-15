@@ -23,9 +23,9 @@ namespace SDK
 void AEntityFortniteStormSpawner::Pause()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Pause");
+		Func = Class->GetFunction("EntityFortniteStormSpawner", "Pause");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -34,16 +34,16 @@ void AEntityFortniteStormSpawner::Pause()
 // Function EntityFortnite.EntityFortniteStormSpawner.Start
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// float                                   StartRadius                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   BoundsRadius                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FEntityFortniteStormPhase>Phases                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const float                             StartRadius                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             BoundsRadius                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FEntityFortniteStormPhase>&Phases                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void AEntityFortniteStormSpawner::Start(const float StartRadius, const float BoundsRadius, const TArray<struct FEntityFortniteStormPhase>& Phases)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Start");
+		Func = Class->GetFunction("EntityFortniteStormSpawner", "Start");
 
 	Params::EntityFortniteStormSpawner_Start Parms{};
 
@@ -61,9 +61,9 @@ void AEntityFortniteStormSpawner::Start(const float StartRadius, const float Bou
 void AEntityFortniteStormSpawner::Stop()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Stop");
+		Func = Class->GetFunction("EntityFortniteStormSpawner", "Stop");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -77,9 +77,9 @@ void AEntityFortniteStormSpawner::Stop()
 bool AEntityFortniteStormSpawner::Exists() const
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Exists");
+		Func = Class->GetFunction("EntityFortniteStormSpawner", "Exists");
 
 	Params::EntityFortniteStormSpawner_Exists Parms{};
 

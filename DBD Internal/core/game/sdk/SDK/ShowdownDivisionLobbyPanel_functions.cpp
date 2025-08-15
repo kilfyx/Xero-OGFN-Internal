@@ -17,19 +17,73 @@
 namespace SDK
 {
 
-// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
+// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.ExecuteUbergraph_ShowdownDivisionLobbyPanel
+// (Final, UbergraphFunction)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UShowdownDivisionLobbyPanel_C::BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UShowdownDivisionLobbyPanel_C::ExecuteUbergraph_ShowdownDivisionLobbyPanel(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
 
-	Params::ShowdownDivisionLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownDivisionLobbyPanel_C", "ExecuteUbergraph_ShowdownDivisionLobbyPanel");
+
+	Params::ShowdownDivisionLobbyPanel_C_ExecuteUbergraph_ShowdownDivisionLobbyPanel Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.EventSwitchUI
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECommonInputType                        bNewInputType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UShowdownDivisionLobbyPanel_C::EventSwitchUI(ECommonInputType bNewInputType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownDivisionLobbyPanel_C", "EventSwitchUI");
+
+	Params::ShowdownDivisionLobbyPanel_C_EventSwitchUI Parms{};
+
+	Parms.bNewInputType = bNewInputType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.EventColorize
+// (BlueprintCallable, BlueprintEvent)
+
+void UShowdownDivisionLobbyPanel_C::EventColorize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownDivisionLobbyPanel_C", "EventColorize");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UShowdownDivisionLobbyPanel_C::BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownDivisionLobbyPanel_C", "BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature");
+
+	Params::ShowdownDivisionLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -40,14 +94,14 @@ void UShowdownDivisionLobbyPanel_C::BndEvt__EventDetailsButton_K2Node_ComponentB
 // Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UShowdownDivisionLobbyPanel_C::BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UShowdownDivisionLobbyPanel_C::BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("ShowdownDivisionLobbyPanel_C", "BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
 
 	Params::ShowdownDivisionLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
 
@@ -57,19 +111,19 @@ void UShowdownDivisionLobbyPanel_C::BndEvt__EventDetailsButton_K2Node_ComponentB
 }
 
 
-// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature
+// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UShowdownDivisionLobbyPanel_C::BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UShowdownDivisionLobbyPanel_C::BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature");
 
-	Params::ShowdownDivisionLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownDivisionLobbyPanel_C", "BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
+
+	Params::ShowdownDivisionLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -83,111 +137,9 @@ void UShowdownDivisionLobbyPanel_C::BndEvt__EventDetailsButton_K2Node_ComponentB
 void UShowdownDivisionLobbyPanel_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.EventColorize
-// (BlueprintCallable, BlueprintEvent)
-
-void UShowdownDivisionLobbyPanel_C::EventColorize()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventColorize");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.EventSwitchUI
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ECommonInputType                        bNewInputType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UShowdownDivisionLobbyPanel_C::EventSwitchUI(ECommonInputType bNewInputType)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventSwitchUI");
-
-	Params::ShowdownDivisionLobbyPanel_C_EventSwitchUI Parms{};
-
-	Parms.bNewInputType = bNewInputType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.ExecuteUbergraph_ShowdownDivisionLobbyPanel
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UShowdownDivisionLobbyPanel_C::ExecuteUbergraph_ShowdownDivisionLobbyPanel(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_ShowdownDivisionLobbyPanel");
-
-	Params::ShowdownDivisionLobbyPanel_C_ExecuteUbergraph_ShowdownDivisionLobbyPanel Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.HandleCrossplayChanged
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UShowdownDivisionLobbyPanel_C::HandleCrossplayChanged()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("HandleCrossplayChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.InputTypeChanged
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    isGamepad                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UShowdownDivisionLobbyPanel_C::InputTypeChanged(bool isGamepad)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("InputTypeChanged");
-
-	Params::ShowdownDivisionLobbyPanel_C_InputTypeChanged Parms{};
-
-	Parms.isGamepad = isGamepad;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.Refresh
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UShowdownDivisionLobbyPanel_C::Refresh()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Refresh");
+		Func = Class->GetFunction("ShowdownDivisionLobbyPanel_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -199,23 +151,23 @@ void UShowdownDivisionLobbyPanel_C::Refresh()
 void UShowdownDivisionLobbyPanel_C::RefreshDataBP()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshDataBP");
+		Func = Class->GetFunction("ShowdownDivisionLobbyPanel_C", "RefreshDataBP");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.RefreshDivisionData
+// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.Refresh
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UShowdownDivisionLobbyPanel_C::RefreshDivisionData()
+void UShowdownDivisionLobbyPanel_C::Refresh()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshDivisionData");
+		Func = Class->GetFunction("ShowdownDivisionLobbyPanel_C", "Refresh");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -227,9 +179,57 @@ void UShowdownDivisionLobbyPanel_C::RefreshDivisionData()
 void UShowdownDivisionLobbyPanel_C::UpdateColors()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateColors");
+		Func = Class->GetFunction("ShowdownDivisionLobbyPanel_C", "UpdateColors");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.HandleCrossplayChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UShowdownDivisionLobbyPanel_C::HandleCrossplayChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownDivisionLobbyPanel_C", "HandleCrossplayChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.InputTypeChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    isGamepad                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UShowdownDivisionLobbyPanel_C::InputTypeChanged(bool isGamepad)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownDivisionLobbyPanel_C", "InputTypeChanged");
+
+	Params::ShowdownDivisionLobbyPanel_C_InputTypeChanged Parms{};
+
+	Parms.isGamepad = isGamepad;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ShowdownDivisionLobbyPanel.ShowdownDivisionLobbyPanel_C.RefreshDivisionData
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UShowdownDivisionLobbyPanel_C::RefreshDivisionData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownDivisionLobbyPanel_C", "RefreshDivisionData");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

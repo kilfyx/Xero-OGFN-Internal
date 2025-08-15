@@ -12,51 +12,40 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "PlayspaceSystem_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "PlayspaceSystem_structs.hpp"
 #include "ModularGameplay_classes.hpp"
 
 
 namespace SDK
 {
 
-// Class PlayspaceSystem.GameplayVolume
-// 0x0080 (0x02A0 - 0x0220)
-class AGameplayVolume : public AActor
+// Class PlayspaceSystem.PlayspaceComponent
+// 0x0000 (0x00B0 - 0x00B0)
+class PlayspaceSystem::UPlayspaceComponent : public UGameFrameworkComponent
 {
-public:
-	TSoftClassPtr<class UClass>                   PlayspaceClassTemplate;                            // 0x0220(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class APlayspace>                 PlayspaceClass;                                    // 0x0248(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class APlayspace*                             Playspace;                                         // 0x0250(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FGameplayTagContainer                  VolumeTags;                                        // 0x0258(0x0020)(Edit, Protected, NativeAccessSpecifierProtected)
-	class UOverlapComponent*                      BoundsComponent;                                   // 0x0278(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_280[0x20];                                     // 0x0280(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void UpdateSize(const struct FVector& NewScale);
-
-	class APlayspace* GetPlayspace() const;
-
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayVolume">();
+		return StaticClassImpl<"Class PlayspaceSystem.PlayspaceComponent", true>();
 	}
-	static class AGameplayVolume* GetDefaultObj()
+	static class PlayspaceSystem::UPlayspaceComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AGameplayVolume>();
+		return GetDefaultObjImpl<PlayspaceSystem::UPlayspaceComponent>();
 	}
 };
+static_assert(alignof(PlayspaceSystem::UPlayspaceComponent) == 0x000008, "Wrong alignment on PlayspaceSystem::UPlayspaceComponent");
+static_assert(sizeof(PlayspaceSystem::UPlayspaceComponent) == 0x0000B0, "Wrong size on PlayspaceSystem::UPlayspaceComponent");
 
 // Class PlayspaceSystem.PlayspacePlayerController
-// 0x0028 (0x0700 - 0x06D8)
+// 0x0028 (0x0598 - 0x0570)
 class APlayspacePlayerController : public APlayerController
 {
 public:
-	uint8                                         Pad_6D8[0x18];                                     // 0x06D8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bUsePlayerSpawningComponent;                       // 0x06F0(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_6F1[0x7];                                      // 0x06F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UPlayspaceControllerComponent_PlayerSpawning> ControllerSpawningComponent;     // 0x06F8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_570[0x18];                                     // 0x0570(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUsePlayerSpawningComponent;                       // 0x0588(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_589[0x7];                                      // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UPlayspaceControllerComponent_PlayerSpawning> ControllerSpawningComponent;     // 0x0590(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -68,13 +57,70 @@ public:
 		return GetDefaultObjImpl<APlayspacePlayerController>();
 	}
 };
+static_assert(alignof(APlayspacePlayerController) == 0x000008, "Wrong alignment on APlayspacePlayerController");
+static_assert(sizeof(APlayspacePlayerController) == 0x000598, "Wrong size on APlayspacePlayerController");
+static_assert(offsetof(APlayspacePlayerController, bUsePlayerSpawningComponent) == 0x000588, "Member 'APlayspacePlayerController::bUsePlayerSpawningComponent' has a wrong offset!");
+static_assert(offsetof(APlayspacePlayerController, ControllerSpawningComponent) == 0x000590, "Member 'APlayspacePlayerController::ControllerSpawningComponent' has a wrong offset!");
+
+// Class PlayspaceSystem.PlayspaceGameMode
+// 0x0018 (0x0320 - 0x0308)
+class APlayspaceGameMode : public AGameMode
+{
+public:
+	uint8                                         Pad_308[0x18];                                     // 0x0308(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PlayspaceGameMode">();
+	}
+	static class APlayspaceGameMode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<APlayspaceGameMode>();
+	}
+};
+static_assert(alignof(APlayspaceGameMode) == 0x000008, "Wrong alignment on APlayspaceGameMode");
+static_assert(sizeof(APlayspaceGameMode) == 0x000320, "Wrong size on APlayspaceGameMode");
+
+// Class PlayspaceSystem.GameplayVolume
+// 0x0080 (0x02A0 - 0x0220)
+class AGameplayVolume : public AActor
+{
+public:
+	TSoftClassPtr<class UClass>                   PlayspaceClassTemplate;                            // 0x0220(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class APlayspace>                 PlayspaceClass;                                    // 0x0248(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class APlayspace*                             Playspace;                                         // 0x0250(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FGameplayTagContainer                  VolumeTags;                                        // 0x0258(0x0020)(Edit, Protected, NativeAccessSpecifierProtected)
+	class UOverlapComponent*                      BoundsComponent;                                   // 0x0278(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_280[0x20];                                     // 0x0280(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void UpdateSize(const struct FVector& NewScale);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GameplayVolume">();
+	}
+	static class AGameplayVolume* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AGameplayVolume>();
+	}
+};
+static_assert(alignof(AGameplayVolume) == 0x000008, "Wrong alignment on AGameplayVolume");
+static_assert(sizeof(AGameplayVolume) == 0x0002A0, "Wrong size on AGameplayVolume");
+static_assert(offsetof(AGameplayVolume, PlayspaceClassTemplate) == 0x000220, "Member 'AGameplayVolume::PlayspaceClassTemplate' has a wrong offset!");
+static_assert(offsetof(AGameplayVolume, PlayspaceClass) == 0x000248, "Member 'AGameplayVolume::PlayspaceClass' has a wrong offset!");
+static_assert(offsetof(AGameplayVolume, Playspace) == 0x000250, "Member 'AGameplayVolume::Playspace' has a wrong offset!");
+static_assert(offsetof(AGameplayVolume, VolumeTags) == 0x000258, "Member 'AGameplayVolume::VolumeTags' has a wrong offset!");
+static_assert(offsetof(AGameplayVolume, BoundsComponent) == 0x000278, "Member 'AGameplayVolume::BoundsComponent' has a wrong offset!");
 
 // Class PlayspaceSystem.OverlapComponent
 // 0x0020 (0x0500 - 0x04E0)
 class UOverlapComponent : public UStaticMeshComponent
 {
 public:
-	uint8                                         Pad_4E0[0x20];                                     // 0x04E0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D8[0x28];                                     // 0x04D8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnBeginActorOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
@@ -90,6 +136,8 @@ public:
 		return GetDefaultObjImpl<UOverlapComponent>();
 	}
 };
+static_assert(alignof(UOverlapComponent) == 0x000010, "Wrong alignment on UOverlapComponent");
+static_assert(sizeof(UOverlapComponent) == 0x000500, "Wrong size on UOverlapComponent");
 
 // Class PlayspaceSystem.Playspace
 // 0x0280 (0x04A0 - 0x0220)
@@ -108,14 +156,14 @@ public:
 	uint8                                         Pad_2D0[0x18];                                     // 0x02D0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTagContainer                  GameplayTags;                                      // 0x02E8(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	struct FGameplayTag                           RequestedPlayspaceParentTag;                       // 0x0308(0x0008)(Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<TSubclassOf<class APlayspace>>         ChildPlayspaceClasses;                             // 0x0310(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<TSubclassOf<class APlayspace>>         ChildPlayspaceClasses;                             // 0x0310(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FPlayspaceUserList                     PlayspaceUsers;                                    // 0x0320(0x0128)(Net, Transient, RepNotify, Protected, NativeAccessSpecifierProtected)
-	TArray<class APlayspace*>                     ChildPlayspaces;                                   // 0x0448(0x0010)(Net, ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FUniqueNetIdRepl>               PendingUsers;                                      // 0x0458(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	TArray<class APlayspace*>                     ChildPlayspaces;                                   // 0x0448(0x0010)(Net, ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FUniqueNetIdRepl>               PendingUsers;                                      // 0x0458(0x0010)(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bAutoStartMatchOnServerStart;                      // 0x0468(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_469[0x7];                                      // 0x0469(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPlayspaceManagerComponent*             PlayspaceManagerCached;                            // 0x0470(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class AGameplayVolume*                        BoundGameplayVolume;                               // 0x0478(0x0008)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class AGameplayVolume*                        BoundGameplayVolume;                               // 0x0478(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bIsInitialized;                                    // 0x0480(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_481[0x1];                                      // 0x0481(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bMatchHasEnded;                                    // 0x0482(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -139,25 +187,29 @@ public:
 		return GetDefaultObjImpl<APlayspace>();
 	}
 };
-
-// Class PlayspaceSystem.PlayspaceComponent
-// 0x0000 (0x00B0 - 0x00B0)
-class UPlayspaceComponent : public UGameFrameworkComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayspaceComponent">();
-	}
-	static class UPlayspaceComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayspaceComponent>();
-	}
-};
+static_assert(alignof(APlayspace) == 0x000008, "Wrong alignment on APlayspace");
+static_assert(sizeof(APlayspace) == 0x0004A0, "Wrong size on APlayspace");
+static_assert(offsetof(APlayspace, NotifyPlayspaceUserAdded) == 0x000220, "Member 'APlayspace::NotifyPlayspaceUserAdded' has a wrong offset!");
+static_assert(offsetof(APlayspace, NotifyPlayspaceUserRemoved) == 0x000248, "Member 'APlayspace::NotifyPlayspaceUserRemoved' has a wrong offset!");
+static_assert(offsetof(APlayspace, NotifyPlayspaceInitialized) == 0x000270, "Member 'APlayspace::NotifyPlayspaceInitialized' has a wrong offset!");
+static_assert(offsetof(APlayspace, NotifyStartMatch) == 0x000298, "Member 'APlayspace::NotifyStartMatch' has a wrong offset!");
+static_assert(offsetof(APlayspace, NotifyEndMatch) == 0x0002C0, "Member 'APlayspace::NotifyEndMatch' has a wrong offset!");
+static_assert(offsetof(APlayspace, GameplayTags) == 0x0002E8, "Member 'APlayspace::GameplayTags' has a wrong offset!");
+static_assert(offsetof(APlayspace, RequestedPlayspaceParentTag) == 0x000308, "Member 'APlayspace::RequestedPlayspaceParentTag' has a wrong offset!");
+static_assert(offsetof(APlayspace, ChildPlayspaceClasses) == 0x000310, "Member 'APlayspace::ChildPlayspaceClasses' has a wrong offset!");
+static_assert(offsetof(APlayspace, PlayspaceUsers) == 0x000320, "Member 'APlayspace::PlayspaceUsers' has a wrong offset!");
+static_assert(offsetof(APlayspace, ChildPlayspaces) == 0x000448, "Member 'APlayspace::ChildPlayspaces' has a wrong offset!");
+static_assert(offsetof(APlayspace, PendingUsers) == 0x000458, "Member 'APlayspace::PendingUsers' has a wrong offset!");
+static_assert(offsetof(APlayspace, bAutoStartMatchOnServerStart) == 0x000468, "Member 'APlayspace::bAutoStartMatchOnServerStart' has a wrong offset!");
+static_assert(offsetof(APlayspace, PlayspaceManagerCached) == 0x000470, "Member 'APlayspace::PlayspaceManagerCached' has a wrong offset!");
+static_assert(offsetof(APlayspace, BoundGameplayVolume) == 0x000478, "Member 'APlayspace::BoundGameplayVolume' has a wrong offset!");
+static_assert(offsetof(APlayspace, bIsInitialized) == 0x000480, "Member 'APlayspace::bIsInitialized' has a wrong offset!");
+static_assert(offsetof(APlayspace, bMatchHasEnded) == 0x000482, "Member 'APlayspace::bMatchHasEnded' has a wrong offset!");
+static_assert(offsetof(APlayspace, MatchStartTime) == 0x000484, "Member 'APlayspace::MatchStartTime' has a wrong offset!");
 
 // Class PlayspaceSystem.PlayspaceComponent_PlayerSpawning
 // 0x0010 (0x00C0 - 0x00B0)
-class UPlayspaceComponent_PlayerSpawning : public UPlayspaceComponent
+class UPlayspaceComponent_PlayerSpawning : public PlayspaceSystem::UPlayspaceComponent
 {
 public:
 	bool                                          bQueueUserForSpawnWhenAdded;                       // 0x00B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -176,21 +228,11 @@ public:
 		return GetDefaultObjImpl<UPlayspaceComponent_PlayerSpawning>();
 	}
 };
-
-// Class PlayspaceSystem.PlayspaceComponent_VoiceManager
-// 0x0000 (0x00B0 - 0x00B0)
-class UPlayspaceComponent_VoiceManager : public UPlayspaceComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayspaceComponent_VoiceManager">();
-	}
-	static class UPlayspaceComponent_VoiceManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayspaceComponent_VoiceManager>();
-	}
-};
+static_assert(alignof(UPlayspaceComponent_PlayerSpawning) == 0x000008, "Wrong alignment on UPlayspaceComponent_PlayerSpawning");
+static_assert(sizeof(UPlayspaceComponent_PlayerSpawning) == 0x0000C0, "Wrong size on UPlayspaceComponent_PlayerSpawning");
+static_assert(offsetof(UPlayspaceComponent_PlayerSpawning, bQueueUserForSpawnWhenAdded) == 0x0000B0, "Member 'UPlayspaceComponent_PlayerSpawning::bQueueUserForSpawnWhenAdded' has a wrong offset!");
+static_assert(offsetof(UPlayspaceComponent_PlayerSpawning, SpawnDelayMin) == 0x0000B4, "Member 'UPlayspaceComponent_PlayerSpawning::SpawnDelayMin' has a wrong offset!");
+static_assert(offsetof(UPlayspaceComponent_PlayerSpawning, SpawnDelayMax) == 0x0000B8, "Member 'UPlayspaceComponent_PlayerSpawning::SpawnDelayMax' has a wrong offset!");
 
 // Class PlayspaceSystem.PlayspaceControllerComponent_PlayerSpawning
 // 0x0048 (0x00F8 - 0x00B0)
@@ -219,24 +261,12 @@ public:
 		return GetDefaultObjImpl<UPlayspaceControllerComponent_PlayerSpawning>();
 	}
 };
-
-// Class PlayspaceSystem.PlayspaceGameMode
-// 0x0018 (0x0320 - 0x0308)
-class APlayspaceGameMode : public AGameMode
-{
-public:
-	uint8                                         Pad_308[0x18];                                     // 0x0308(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayspaceGameMode">();
-	}
-	static class APlayspaceGameMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<APlayspaceGameMode>();
-	}
-};
+static_assert(alignof(UPlayspaceControllerComponent_PlayerSpawning) == 0x000008, "Wrong alignment on UPlayspaceControllerComponent_PlayerSpawning");
+static_assert(sizeof(UPlayspaceControllerComponent_PlayerSpawning) == 0x0000F8, "Wrong size on UPlayspaceControllerComponent_PlayerSpawning");
+static_assert(offsetof(UPlayspaceControllerComponent_PlayerSpawning, OnPlayerQueuedToSpawn) == 0x0000B0, "Member 'UPlayspaceControllerComponent_PlayerSpawning::OnPlayerQueuedToSpawn' has a wrong offset!");
+static_assert(offsetof(UPlayspaceControllerComponent_PlayerSpawning, SpawnCameraActor) == 0x0000C0, "Member 'UPlayspaceControllerComponent_PlayerSpawning::SpawnCameraActor' has a wrong offset!");
+static_assert(offsetof(UPlayspaceControllerComponent_PlayerSpawning, bClientReadyForSpawning) == 0x0000C8, "Member 'UPlayspaceControllerComponent_PlayerSpawning::bClientReadyForSpawning' has a wrong offset!");
+static_assert(offsetof(UPlayspaceControllerComponent_PlayerSpawning, ReplicatedSpawnInfo) == 0x0000CC, "Member 'UPlayspaceControllerComponent_PlayerSpawning::ReplicatedSpawnInfo' has a wrong offset!");
 
 // Class PlayspaceSystem.PlayspaceGameState
 // 0x0020 (0x02B0 - 0x0290)
@@ -260,6 +290,13 @@ public:
 		return GetDefaultObjImpl<APlayspaceGameState>();
 	}
 };
+static_assert(alignof(APlayspaceGameState) == 0x000008, "Wrong alignment on APlayspaceGameState");
+static_assert(sizeof(APlayspaceGameState) == 0x0002B0, "Wrong size on APlayspaceGameState");
+static_assert(offsetof(APlayspaceGameState, RootPlayspaceClass) == 0x000290, "Member 'APlayspaceGameState::RootPlayspaceClass' has a wrong offset!");
+static_assert(offsetof(APlayspaceGameState, bUsePlayspaceSystem) == 0x000298, "Member 'APlayspaceGameState::bUsePlayspaceSystem' has a wrong offset!");
+static_assert(offsetof(APlayspaceGameState, bUsePlayerSpawningComponent) == 0x000299, "Member 'APlayspaceGameState::bUsePlayerSpawningComponent' has a wrong offset!");
+static_assert(offsetof(APlayspaceGameState, PlayspaceManagerComponentCached) == 0x0002A0, "Member 'APlayspaceGameState::PlayspaceManagerComponentCached' has a wrong offset!");
+static_assert(offsetof(APlayspaceGameState, PlayerSpawningManagerCached) == 0x0002A8, "Member 'APlayspaceGameState::PlayerSpawningManagerCached' has a wrong offset!");
 
 // Class PlayspaceSystem.PlayspaceGameStateComponent
 // 0x0000 (0x00B0 - 0x00B0)
@@ -275,14 +312,16 @@ public:
 		return GetDefaultObjImpl<UPlayspaceGameStateComponent>();
 	}
 };
+static_assert(alignof(UPlayspaceGameStateComponent) == 0x000008, "Wrong alignment on UPlayspaceGameStateComponent");
+static_assert(sizeof(UPlayspaceGameStateComponent) == 0x0000B0, "Wrong size on UPlayspaceGameStateComponent");
 
 // Class PlayspaceSystem.PlayspaceGameStateComponent_PlayerSpawningManager
-// 0x0058 (0x0108 - 0x00B0)
+// 0x0040 (0x00F0 - 0x00B0)
 class UPlayspaceGameStateComponent_PlayerSpawningManager final : public UPlayspaceGameStateComponent
 {
 public:
-	uint8                                         Pad_B0[0x48];                                      // 0x00B0(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPlayspaceSpawningInfo>         SpawningUsersArray;                                // 0x00F8(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_B0[0x30];                                      // 0x00B0(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPlayspaceSpawningInfo>         SpawningUsersArray;                                // 0x00E0(0x0010)(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -294,14 +333,14 @@ public:
 		return GetDefaultObjImpl<UPlayspaceGameStateComponent_PlayerSpawningManager>();
 	}
 };
+static_assert(alignof(UPlayspaceGameStateComponent_PlayerSpawningManager) == 0x000008, "Wrong alignment on UPlayspaceGameStateComponent_PlayerSpawningManager");
+static_assert(sizeof(UPlayspaceGameStateComponent_PlayerSpawningManager) == 0x0000F0, "Wrong size on UPlayspaceGameStateComponent_PlayerSpawningManager");
+static_assert(offsetof(UPlayspaceGameStateComponent_PlayerSpawningManager, SpawningUsersArray) == 0x0000E0, "Member 'UPlayspaceGameStateComponent_PlayerSpawningManager::SpawningUsersArray' has a wrong offset!");
 
 // Class PlayspaceSystem.PlayspaceLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UPlayspaceLibrary final : public UBlueprintFunctionLibrary
 {
-public:
-	static void DestroyPlayspace(class APlayspace* PlayspaceToDestroy);
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -312,6 +351,8 @@ public:
 		return GetDefaultObjImpl<UPlayspaceLibrary>();
 	}
 };
+static_assert(alignof(UPlayspaceLibrary) == 0x000008, "Wrong alignment on UPlayspaceLibrary");
+static_assert(sizeof(UPlayspaceLibrary) == 0x000028, "Wrong size on UPlayspaceLibrary");
 
 // Class PlayspaceSystem.PlayspaceLogic
 // 0x0010 (0x0230 - 0x0220)
@@ -339,6 +380,12 @@ public:
 		return GetDefaultObjImpl<APlayspaceLogic>();
 	}
 };
+static_assert(alignof(APlayspaceLogic) == 0x000008, "Wrong alignment on APlayspaceLogic");
+static_assert(sizeof(APlayspaceLogic) == 0x000230, "Wrong size on APlayspaceLogic");
+static_assert(offsetof(APlayspaceLogic, Playspace) == 0x000220, "Member 'APlayspaceLogic::Playspace' has a wrong offset!");
+static_assert(offsetof(APlayspaceLogic, bAutoStartMatchOnServerStart) == 0x000228, "Member 'APlayspaceLogic::bAutoStartMatchOnServerStart' has a wrong offset!");
+static_assert(offsetof(APlayspaceLogic, bMatchHasEnded) == 0x00022A, "Member 'APlayspaceLogic::bMatchHasEnded' has a wrong offset!");
+static_assert(offsetof(APlayspaceLogic, MatchStartTime) == 0x00022C, "Member 'APlayspaceLogic::MatchStartTime' has a wrong offset!");
 
 // Class PlayspaceSystem.PlayspaceLogicComponent
 // 0x0000 (0x00B0 - 0x00B0)
@@ -354,22 +401,22 @@ public:
 		return GetDefaultObjImpl<UPlayspaceLogicComponent>();
 	}
 };
+static_assert(alignof(UPlayspaceLogicComponent) == 0x000008, "Wrong alignment on UPlayspaceLogicComponent");
+static_assert(sizeof(UPlayspaceLogicComponent) == 0x0000B0, "Wrong size on UPlayspaceLogicComponent");
 
 // Class PlayspaceSystem.PlayspaceManagerComponent
-// 0x0120 (0x01D0 - 0x00B0)
-class alignas(0x10) UPlayspaceManagerComponent final : public UGameStateComponent
+// 0x0030 (0x00E0 - 0x00B0)
+class UPlayspaceManagerComponent final : public UGameStateComponent
 {
 public:
-	uint8                                         Pad_B0[0x18];                                      // 0x00B0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayspace*                             RootPlayspace;                                     // 0x00C8(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_D0[0xE0];                                      // 0x00D0(0x00E0)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FActorOverlapEvent>             UnhandledEnterEvents;                              // 0x01B0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FActorOverlapEvent>             UnhandledExitEvents;                               // 0x01C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	class APlayspace*                             RootPlayspace;                                     // 0x00B0(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FActorOverlapEvent>             UnhandledEnterEvents;                              // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FActorOverlapEvent>             UnhandledExitEvents;                               // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void OnPlayerBeginOverlapGameplayVolume(class APlayerState* PlayerState, class AGameplayVolume* Volume);
 	void OnPlayerEndOverlapGameplayVolume(class APlayerState* PlayerState, class AGameplayVolume* Volume);
-	void OnRep_RootPlayspace();
 	bool ProcessOverlapEvents(float DeltaTime);
 
 public:
@@ -382,14 +429,19 @@ public:
 		return GetDefaultObjImpl<UPlayspaceManagerComponent>();
 	}
 };
+static_assert(alignof(UPlayspaceManagerComponent) == 0x000008, "Wrong alignment on UPlayspaceManagerComponent");
+static_assert(sizeof(UPlayspaceManagerComponent) == 0x0000E0, "Wrong size on UPlayspaceManagerComponent");
+static_assert(offsetof(UPlayspaceManagerComponent, RootPlayspace) == 0x0000B0, "Member 'UPlayspaceManagerComponent::RootPlayspace' has a wrong offset!");
+static_assert(offsetof(UPlayspaceManagerComponent, UnhandledEnterEvents) == 0x0000C0, "Member 'UPlayspaceManagerComponent::UnhandledEnterEvents' has a wrong offset!");
+static_assert(offsetof(UPlayspaceManagerComponent, UnhandledExitEvents) == 0x0000D0, "Member 'UPlayspaceManagerComponent::UnhandledExitEvents' has a wrong offset!");
 
 // Class PlayspaceSystem.PlayspacePlayerManagerComponent
 // 0x00C0 (0x0170 - 0x00B0)
-class UPlayspacePlayerManagerComponent final : public UPlayspaceComponent
+class UPlayspacePlayerManagerComponent final : public PlayspaceSystem::UPlayspaceComponent
 {
 public:
-	TArray<TSubclassOf<class UControllerComponent>> ControllerComponents;                            // 0x00B0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TArray<TSubclassOf<class UPlayerStateComponent>> PlayerStateComponents;                          // 0x00C0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<TSubclassOf<class UControllerComponent>> ControllerComponents;                            // 0x00B0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<TSubclassOf<class UPlayerStateComponent>> PlayerStateComponents;                          // 0x00C0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_D0[0xA0];                                      // 0x00D0(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -402,24 +454,10 @@ public:
 		return GetDefaultObjImpl<UPlayspacePlayerManagerComponent>();
 	}
 };
-
-// Class PlayspaceSystem.PlayspaceSpawnActor
-// 0x0008 (0x0228 - 0x0220)
-class APlayspaceSpawnActor final : public AActor
-{
-public:
-	class USceneComponent*                        SceneComponent;                                    // 0x0220(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayspaceSpawnActor">();
-	}
-	static class APlayspaceSpawnActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<APlayspaceSpawnActor>();
-	}
-};
+static_assert(alignof(UPlayspacePlayerManagerComponent) == 0x000008, "Wrong alignment on UPlayspacePlayerManagerComponent");
+static_assert(sizeof(UPlayspacePlayerManagerComponent) == 0x000170, "Wrong size on UPlayspacePlayerManagerComponent");
+static_assert(offsetof(UPlayspacePlayerManagerComponent, ControllerComponents) == 0x0000B0, "Member 'UPlayspacePlayerManagerComponent::ControllerComponents' has a wrong offset!");
+static_assert(offsetof(UPlayspacePlayerManagerComponent, PlayerStateComponents) == 0x0000C0, "Member 'UPlayspacePlayerManagerComponent::PlayerStateComponents' has a wrong offset!");
 
 }
 

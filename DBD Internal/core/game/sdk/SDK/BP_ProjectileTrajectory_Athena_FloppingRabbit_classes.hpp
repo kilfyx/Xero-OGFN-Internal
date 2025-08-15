@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ABP_ProjectileTrajectory_Athena_FloppingRabbit_C>();
 	}
 };
+static_assert(alignof(ABP_ProjectileTrajectory_Athena_FloppingRabbit_C) == 0x000008, "Wrong alignment on ABP_ProjectileTrajectory_Athena_FloppingRabbit_C");
+static_assert(sizeof(ABP_ProjectileTrajectory_Athena_FloppingRabbit_C) == 0x000270, "Wrong size on ABP_ProjectileTrajectory_Athena_FloppingRabbit_C");
 
 }
 

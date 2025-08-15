@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass GuidedTutorial_FakeLoadingScreen.GuidedTutorial_FakeLoadingScreen_C
-// 0x0008 (0x0518 - 0x0510)
+// 0x0008 (0x0490 - 0x0488)
 class UGuidedTutorial_FakeLoadingScreen_C final : public UGuidedTutorialLoadingScreen
 {
 public:
-	class UImage*                                 BaseColor;                                         // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BaseColor;                                         // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UGuidedTutorial_FakeLoadingScreen_C) == 0x000008, "Wrong alignment on UGuidedTutorial_FakeLoadingScreen_C");
-static_assert(sizeof(UGuidedTutorial_FakeLoadingScreen_C) == 0x000518, "Wrong size on UGuidedTutorial_FakeLoadingScreen_C");
-static_assert(offsetof(UGuidedTutorial_FakeLoadingScreen_C, BaseColor) == 0x000510, "Member 'UGuidedTutorial_FakeLoadingScreen_C::BaseColor' has a wrong offset!");
+static_assert(sizeof(UGuidedTutorial_FakeLoadingScreen_C) == 0x000490, "Wrong size on UGuidedTutorial_FakeLoadingScreen_C");
+static_assert(offsetof(UGuidedTutorial_FakeLoadingScreen_C, BaseColor) == 0x000488, "Member 'UGuidedTutorial_FakeLoadingScreen_C::BaseColor' has a wrong offset!");
 
 }
 

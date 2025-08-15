@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Slurpshroom_ShieldHealth.GA_Slurpshroom_ShieldHealth_C
-// 0x0000 (0x0B00 - 0x0B00)
+// 0x0000 (0x0B10 - 0x0B10)
 class UGA_Slurpshroom_ShieldHealth_C final : public UGA_Coconut_ShieldHealth_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGA_Slurpshroom_ShieldHealth_C>();
 	}
 };
+static_assert(alignof(UGA_Slurpshroom_ShieldHealth_C) == 0x000008, "Wrong alignment on UGA_Slurpshroom_ShieldHealth_C");
+static_assert(sizeof(UGA_Slurpshroom_ShieldHealth_C) == 0x000B10, "Wrong size on UGA_Slurpshroom_ShieldHealth_C");
 
 }
 

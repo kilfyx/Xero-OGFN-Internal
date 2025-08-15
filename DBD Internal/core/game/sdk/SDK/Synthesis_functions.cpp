@@ -17,46 +17,21 @@
 namespace SDK
 {
 
-// Function Synthesis.SourceEffectEnvelopeFollowerPreset.RegisterEnvelopeFollowerListener
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UEnvelopeFollowerListener*        EnvelopeFollowerListener                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USourceEffectEnvelopeFollowerPreset::RegisterEnvelopeFollowerListener(class UEnvelopeFollowerListener* EnvelopeFollowerListener)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectEnvelopeFollowerPreset", "RegisterEnvelopeFollowerListener");
-
-	Params::SourceEffectEnvelopeFollowerPreset_RegisterEnvelopeFollowerListener Parms{};
-
-	Parms.EnvelopeFollowerListener = EnvelopeFollowerListener;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectEnvelopeFollowerPreset.SetSettings
+// Function Synthesis.SourceEffectBitCrusherPreset.SetBitModulator
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const struct FSourceEffectEnvelopeFollowerSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FSoundModulationDestinationSettings&InModulatorSettings                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void USourceEffectEnvelopeFollowerPreset::SetSettings(const struct FSourceEffectEnvelopeFollowerSettings& InSettings)
+void USourceEffectBitCrusherPreset::SetBitModulator(const struct FSoundModulationDestinationSettings& InModulatorSettings)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectEnvelopeFollowerPreset", "SetSettings");
+		Func = Class->GetFunction("SourceEffectBitCrusherPreset", "SetBitModulator");
 
-	Params::SourceEffectEnvelopeFollowerPreset_SetSettings Parms{};
+	Params::SourceEffectBitCrusherPreset_SetBitModulator Parms{};
 
-	Parms.InSettings = std::move(InSettings);
+	Parms.InModulatorSettings = std::move(InModulatorSettings);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -67,21 +42,46 @@ void USourceEffectEnvelopeFollowerPreset::SetSettings(const struct FSourceEffect
 }
 
 
-// Function Synthesis.SourceEffectEnvelopeFollowerPreset.UnregisterEnvelopeFollowerListener
-// (Final, Native, Public, BlueprintCallable)
+// Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRateModulator
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UEnvelopeFollowerListener*        EnvelopeFollowerListener                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FSoundModulationDestinationSettings&InModulatorSettings                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void USourceEffectEnvelopeFollowerPreset::UnregisterEnvelopeFollowerListener(class UEnvelopeFollowerListener* EnvelopeFollowerListener)
+void USourceEffectBitCrusherPreset::SetSampleRateModulator(const struct FSoundModulationDestinationSettings& InModulatorSettings)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectEnvelopeFollowerPreset", "UnregisterEnvelopeFollowerListener");
+		Func = Class->GetFunction("SourceEffectBitCrusherPreset", "SetSampleRateModulator");
 
-	Params::SourceEffectEnvelopeFollowerPreset_UnregisterEnvelopeFollowerListener Parms{};
+	Params::SourceEffectBitCrusherPreset_SetSampleRateModulator Parms{};
 
-	Parms.EnvelopeFollowerListener = EnvelopeFollowerListener;
+	Parms.InModulatorSettings = std::move(InModulatorSettings);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Synthesis.SourceEffectBitCrusherPreset.SetSettings
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSourceEffectBitCrusherSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void USourceEffectBitCrusherPreset::SetSettings(const struct FSourceEffectBitCrusherSettings& InSettings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SourceEffectBitCrusherPreset", "SetSettings");
+
+	Params::SourceEffectBitCrusherPreset_SetSettings Parms{};
+
+	Parms.InSettings = std::move(InSettings);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -125,7 +125,7 @@ void UModularSynthLibrary::AddModularSynthPresetToBankAsset(class UModularSynthP
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const ESynth1PatchSource                PatchSource                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FSynth1PatchCable>& PatchCables                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FSynth1PatchCable>& PatchCables                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool                              bEnableByDefault                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FPatchId                         ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -1646,187 +1646,12 @@ void UModularSynthComponent::SetSynthPreset(const struct FModularSynthPreset& Sy
 }
 
 
-// Function Synthesis.SourceEffectBitCrusherPreset.SetBitModulator
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USourceEffectBitCrusherPreset::SetBitModulator(const class USoundModulatorBase* Modulator)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectBitCrusherPreset", "SetBitModulator");
-
-	Params::SourceEffectBitCrusherPreset_SetBitModulator Parms{};
-
-	Parms.Modulator = Modulator;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectBitCrusherPreset.SetBits
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   Bits                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USourceEffectBitCrusherPreset::SetBits(float Bits)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectBitCrusherPreset", "SetBits");
-
-	Params::SourceEffectBitCrusherPreset_SetBits Parms{};
-
-	Parms.Bits = Bits;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectBitCrusherPreset.SetModulationSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSourceEffectBitCrusherSettings&ModulationSettings                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void USourceEffectBitCrusherPreset::SetModulationSettings(const struct FSourceEffectBitCrusherSettings& ModulationSettings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectBitCrusherPreset", "SetModulationSettings");
-
-	Params::SourceEffectBitCrusherPreset_SetModulationSettings Parms{};
-
-	Parms.ModulationSettings = std::move(ModulationSettings);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRate
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   SampleRate                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USourceEffectBitCrusherPreset::SetSampleRate(float SampleRate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectBitCrusherPreset", "SetSampleRate");
-
-	Params::SourceEffectBitCrusherPreset_SetSampleRate Parms{};
-
-	Parms.SampleRate = SampleRate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRateModulator
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USourceEffectBitCrusherPreset::SetSampleRateModulator(const class USoundModulatorBase* Modulator)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectBitCrusherPreset", "SetSampleRateModulator");
-
-	Params::SourceEffectBitCrusherPreset_SetSampleRateModulator Parms{};
-
-	Parms.Modulator = Modulator;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectBitCrusherPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSourceEffectBitCrusherBaseSettings&Settings_0                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void USourceEffectBitCrusherPreset::SetSettings(const struct FSourceEffectBitCrusherBaseSettings& Settings_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectBitCrusherPreset", "SetSettings");
-
-	Params::SourceEffectBitCrusherPreset_SetSettings Parms{};
-
-	Parms.Settings_0 = std::move(Settings_0);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectChorusPreset.SetDepth
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   Depth                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USourceEffectChorusPreset::SetDepth(float Depth)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectChorusPreset", "SetDepth");
-
-	Params::SourceEffectChorusPreset_SetDepth Parms{};
-
-	Parms.Depth = Depth;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function Synthesis.SourceEffectChorusPreset.SetDepthModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FSoundModulationDestinationSettings&InModulatorSettings                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void USourceEffectChorusPreset::SetDepthModulator(const class USoundModulatorBase* Modulator)
+void USourceEffectChorusPreset::SetDepthModulator(const struct FSoundModulationDestinationSettings& InModulatorSettings)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1835,32 +1660,7 @@ void USourceEffectChorusPreset::SetDepthModulator(const class USoundModulatorBas
 
 	Params::SourceEffectChorusPreset_SetDepthModulator Parms{};
 
-	Parms.Modulator = Modulator;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectChorusPreset.SetDry
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   DryAmount                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USourceEffectChorusPreset::SetDry(float DryAmount)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectChorusPreset", "SetDry");
-
-	Params::SourceEffectChorusPreset_SetDry Parms{};
-
-	Parms.DryAmount = DryAmount;
+	Parms.InModulatorSettings = std::move(InModulatorSettings);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1872,11 +1672,11 @@ void USourceEffectChorusPreset::SetDry(float DryAmount)
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetDryModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FSoundModulationDestinationSettings&InModulatorSettings                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void USourceEffectChorusPreset::SetDryModulator(const class USoundModulatorBase* Modulator)
+void USourceEffectChorusPreset::SetDryModulator(const struct FSoundModulationDestinationSettings& InModulatorSettings)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1885,32 +1685,7 @@ void USourceEffectChorusPreset::SetDryModulator(const class USoundModulatorBase*
 
 	Params::SourceEffectChorusPreset_SetDryModulator Parms{};
 
-	Parms.Modulator = Modulator;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectChorusPreset.SetFeedback
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   Feedback                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USourceEffectChorusPreset::SetFeedback(float Feedback)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectChorusPreset", "SetFeedback");
-
-	Params::SourceEffectChorusPreset_SetFeedback Parms{};
-
-	Parms.Feedback = Feedback;
+	Parms.InModulatorSettings = std::move(InModulatorSettings);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1922,11 +1697,11 @@ void USourceEffectChorusPreset::SetFeedback(float Feedback)
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetFeedbackModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FSoundModulationDestinationSettings&InModulatorSettings                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void USourceEffectChorusPreset::SetFeedbackModulator(const class USoundModulatorBase* Modulator)
+void USourceEffectChorusPreset::SetFeedbackModulator(const struct FSoundModulationDestinationSettings& InModulatorSettings)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1935,32 +1710,7 @@ void USourceEffectChorusPreset::SetFeedbackModulator(const class USoundModulator
 
 	Params::SourceEffectChorusPreset_SetFeedbackModulator Parms{};
 
-	Parms.Modulator = Modulator;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectChorusPreset.SetFrequency
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   Frequency                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USourceEffectChorusPreset::SetFrequency(float Frequency)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectChorusPreset", "SetFrequency");
-
-	Params::SourceEffectChorusPreset_SetFrequency Parms{};
-
-	Parms.Frequency = Frequency;
+	Parms.InModulatorSettings = std::move(InModulatorSettings);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1972,11 +1722,11 @@ void USourceEffectChorusPreset::SetFrequency(float Frequency)
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetFrequencyModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FSoundModulationDestinationSettings&InModulatorSettings                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void USourceEffectChorusPreset::SetFrequencyModulator(const class USoundModulatorBase* Modulator)
+void USourceEffectChorusPreset::SetFrequencyModulator(const struct FSoundModulationDestinationSettings& InModulatorSettings)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1985,32 +1735,7 @@ void USourceEffectChorusPreset::SetFrequencyModulator(const class USoundModulato
 
 	Params::SourceEffectChorusPreset_SetFrequencyModulator Parms{};
 
-	Parms.Modulator = Modulator;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectChorusPreset.SetModulationSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSourceEffectChorusSettings&ModulationSettings                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void USourceEffectChorusPreset::SetModulationSettings(const struct FSourceEffectChorusSettings& ModulationSettings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectChorusPreset", "SetModulationSettings");
-
-	Params::SourceEffectChorusPreset_SetModulationSettings Parms{};
-
-	Parms.ModulationSettings = std::move(ModulationSettings);
+	Parms.InModulatorSettings = std::move(InModulatorSettings);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2024,9 +1749,9 @@ void USourceEffectChorusPreset::SetModulationSettings(const struct FSourceEffect
 // Function Synthesis.SourceEffectChorusPreset.SetSettings
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const struct FSourceEffectChorusBaseSettings&Settings_0                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FSourceEffectChorusSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void USourceEffectChorusPreset::SetSettings(const struct FSourceEffectChorusBaseSettings& Settings_0)
+void USourceEffectChorusPreset::SetSettings(const struct FSourceEffectChorusSettings& InSettings)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2035,32 +1760,7 @@ void USourceEffectChorusPreset::SetSettings(const struct FSourceEffectChorusBase
 
 	Params::SourceEffectChorusPreset_SetSettings Parms{};
 
-	Parms.Settings_0 = std::move(Settings_0);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectChorusPreset.SetSpread
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   Spread                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USourceEffectChorusPreset::SetSpread(float Spread)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectChorusPreset", "SetSpread");
-
-	Params::SourceEffectChorusPreset_SetSpread Parms{};
-
-	Parms.Spread = Spread;
+	Parms.InSettings = std::move(InSettings);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2072,11 +1772,11 @@ void USourceEffectChorusPreset::SetSpread(float Spread)
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetSpreadModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FSoundModulationDestinationSettings&InModulatorSettings                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void USourceEffectChorusPreset::SetSpreadModulator(const class USoundModulatorBase* Modulator)
+void USourceEffectChorusPreset::SetSpreadModulator(const struct FSoundModulationDestinationSettings& InModulatorSettings)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2085,32 +1785,7 @@ void USourceEffectChorusPreset::SetSpreadModulator(const class USoundModulatorBa
 
 	Params::SourceEffectChorusPreset_SetSpreadModulator Parms{};
 
-	Parms.Modulator = Modulator;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectChorusPreset.SetWet
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   WetAmount                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USourceEffectChorusPreset::SetWet(float WetAmount)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectChorusPreset", "SetWet");
-
-	Params::SourceEffectChorusPreset_SetWet Parms{};
-
-	Parms.WetAmount = WetAmount;
+	Parms.InModulatorSettings = std::move(InModulatorSettings);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2122,11 +1797,11 @@ void USourceEffectChorusPreset::SetWet(float WetAmount)
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetWetModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FSoundModulationDestinationSettings&InModulatorSettings                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void USourceEffectChorusPreset::SetWetModulator(const class USoundModulatorBase* Modulator)
+void USourceEffectChorusPreset::SetWetModulator(const struct FSoundModulationDestinationSettings& InModulatorSettings)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2135,7 +1810,7 @@ void USourceEffectChorusPreset::SetWetModulator(const class USoundModulatorBase*
 
 	Params::SourceEffectChorusPreset_SetWetModulator Parms{};
 
-	Parms.Modulator = Modulator;
+	Parms.InModulatorSettings = std::move(InModulatorSettings);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2161,6 +1836,81 @@ void USourceEffectDynamicsProcessorPreset::SetSettings(const struct FSourceEffec
 	Params::SourceEffectDynamicsProcessorPreset_SetSettings Parms{};
 
 	Parms.InSettings = std::move(InSettings);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Synthesis.SourceEffectEnvelopeFollowerPreset.RegisterEnvelopeFollowerListener
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UEnvelopeFollowerListener*        EnvelopeFollowerListener                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USourceEffectEnvelopeFollowerPreset::RegisterEnvelopeFollowerListener(class UEnvelopeFollowerListener* EnvelopeFollowerListener)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SourceEffectEnvelopeFollowerPreset", "RegisterEnvelopeFollowerListener");
+
+	Params::SourceEffectEnvelopeFollowerPreset_RegisterEnvelopeFollowerListener Parms{};
+
+	Parms.EnvelopeFollowerListener = EnvelopeFollowerListener;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Synthesis.SourceEffectEnvelopeFollowerPreset.SetSettings
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSourceEffectEnvelopeFollowerSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void USourceEffectEnvelopeFollowerPreset::SetSettings(const struct FSourceEffectEnvelopeFollowerSettings& InSettings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SourceEffectEnvelopeFollowerPreset", "SetSettings");
+
+	Params::SourceEffectEnvelopeFollowerPreset_SetSettings Parms{};
+
+	Parms.InSettings = std::move(InSettings);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Synthesis.SourceEffectEnvelopeFollowerPreset.UnregisterEnvelopeFollowerListener
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UEnvelopeFollowerListener*        EnvelopeFollowerListener                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USourceEffectEnvelopeFollowerPreset::UnregisterEnvelopeFollowerListener(class UEnvelopeFollowerListener* EnvelopeFollowerListener)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SourceEffectEnvelopeFollowerPreset", "UnregisterEnvelopeFollowerListener");
+
+	Params::SourceEffectEnvelopeFollowerPreset_UnregisterEnvelopeFollowerListener Parms{};
+
+	Parms.EnvelopeFollowerListener = EnvelopeFollowerListener;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2259,31 +2009,6 @@ void USourceEffectMidSideSpreaderPreset::SetSettings(const struct FSourceEffectM
 		Func = Class->GetFunction("SourceEffectMidSideSpreaderPreset", "SetSettings");
 
 	Params::SourceEffectMidSideSpreaderPreset_SetSettings Parms{};
-
-	Parms.InSettings = std::move(InSettings);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SourceEffectMotionFilterPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSourceEffectMotionFilterSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void USourceEffectMotionFilterPreset::SetSettings(const struct FSourceEffectMotionFilterSettings& InSettings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectMotionFilterPreset", "SetSettings");
-
-	Params::SourceEffectMotionFilterPreset_SetSettings Parms{};
 
 	Parms.InSettings = std::move(InSettings);
 
@@ -2496,117 +2221,19 @@ void USubmixEffectConvolutionReverbPreset::SetSettings(const struct FSubmixEffec
 }
 
 
-// Function Synthesis.SubmixEffectDelayStatics.SetDelayLength
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Function Synthesis.SubmixEffectDelayPreset.GetMaxDelayInMilliseconds
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FSubmixEffectDelaySettings&      DelaySettings                                          (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// float                                   DelayLength                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FSubmixEffectDelaySettings       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FSubmixEffectDelaySettings USubmixEffectDelayStatics::SetDelayLength(struct FSubmixEffectDelaySettings& DelaySettings, float DelayLength)
+float USubmixEffectDelayPreset::GetMaxDelayInMilliseconds()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("SubmixEffectDelayStatics", "SetDelayLength");
+		Func = Class->GetFunction("SubmixEffectDelayPreset", "GetMaxDelayInMilliseconds");
 
-	Params::SubmixEffectDelayStatics_SetDelayLength Parms{};
-
-	Parms.DelaySettings = std::move(DelaySettings);
-	Parms.DelayLength = DelayLength;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	DelaySettings = std::move(Parms.DelaySettings);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Synthesis.SubmixEffectDelayStatics.SetInterpolationTime
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FSubmixEffectDelaySettings&      DelaySettings                                          (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// float                                   InterpolationTime                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FSubmixEffectDelaySettings       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FSubmixEffectDelaySettings USubmixEffectDelayStatics::SetInterpolationTime(struct FSubmixEffectDelaySettings& DelaySettings, float InterpolationTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("SubmixEffectDelayStatics", "SetInterpolationTime");
-
-	Params::SubmixEffectDelayStatics_SetInterpolationTime Parms{};
-
-	Parms.DelaySettings = std::move(DelaySettings);
-	Parms.InterpolationTime = InterpolationTime;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	DelaySettings = std::move(Parms.DelaySettings);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Synthesis.SubmixEffectDelayStatics.SetMaximumDelayLength
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FSubmixEffectDelaySettings&      DelaySettings                                          (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// float                                   MaximumDelayLength                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FSubmixEffectDelaySettings       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FSubmixEffectDelaySettings USubmixEffectDelayStatics::SetMaximumDelayLength(struct FSubmixEffectDelaySettings& DelaySettings, float MaximumDelayLength)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("SubmixEffectDelayStatics", "SetMaximumDelayLength");
-
-	Params::SubmixEffectDelayStatics_SetMaximumDelayLength Parms{};
-
-	Parms.DelaySettings = std::move(DelaySettings);
-	Parms.MaximumDelayLength = MaximumDelayLength;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	DelaySettings = std::move(Parms.DelaySettings);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Synthesis.SubmixEffectDelayPreset.SetDefaultSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSubmixEffectDelaySettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void USubmixEffectDelayPreset::SetDefaultSettings(const struct FSubmixEffectDelaySettings& InSettings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectDelayPreset", "SetDefaultSettings");
-
-	Params::SubmixEffectDelayPreset_SetDefaultSettings Parms{};
-
-	Parms.InSettings = std::move(InSettings);
+	Params::SubmixEffectDelayPreset_GetMaxDelayInMilliseconds Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2614,6 +2241,8 @@ void USubmixEffectDelayPreset::SetDefaultSettings(const struct FSubmixEffectDela
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -2689,31 +2318,6 @@ void USubmixEffectDelayPreset::SetSettings(const struct FSubmixEffectDelaySettin
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SubmixEffectDelayPreset.GetMaxDelayInMilliseconds
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float USubmixEffectDelayPreset::GetMaxDelayInMilliseconds() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectDelayPreset", "GetMaxDelayInMilliseconds");
-
-	Params::SubmixEffectDelayPreset_GetMaxDelayInMilliseconds Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -2917,75 +2521,6 @@ void USubmixEffectFlexiverbPreset::SetSettings(const struct FSubmixEffectFlexive
 }
 
 
-// Function Synthesis.SubmixEffectMultibandCompressorPreset.ResetKey
-// (Final, Native, Public, BlueprintCallable)
-
-void USubmixEffectMultibandCompressorPreset::ResetKey()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectMultibandCompressorPreset", "ResetKey");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SubmixEffectMultibandCompressorPreset.SetAudioBus
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAudioBus*                        AudioBus                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USubmixEffectMultibandCompressorPreset::SetAudioBus(class UAudioBus* AudioBus)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectMultibandCompressorPreset", "SetAudioBus");
-
-	Params::SubmixEffectMultibandCompressorPreset_SetAudioBus Parms{};
-
-	Parms.AudioBus = AudioBus;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SubmixEffectMultibandCompressorPreset.SetExternalSubmix
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class USoundSubmix*                     Submix                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USubmixEffectMultibandCompressorPreset::SetExternalSubmix(class USoundSubmix* Submix)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectMultibandCompressorPreset", "SetExternalSubmix");
-
-	Params::SubmixEffectMultibandCompressorPreset_SetExternalSubmix Parms{};
-
-	Parms.Submix = Submix;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function Synthesis.SubmixEffectMultibandCompressorPreset.SetSettings
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -3119,7 +2654,7 @@ void USubmixEffectTapDelayPreset::GetTap(int32 TapId, struct FTapDelayInfo* TapI
 // Function Synthesis.SubmixEffectTapDelayPreset.GetTapIds
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<int32>*                          TapIds                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<int32>*                          TapIds                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void USubmixEffectTapDelayPreset::GetTapIds(TArray<int32>* TapIds)
 {
@@ -4982,7 +4517,7 @@ void USynthComponentMonoWaveTable::SetWaveTablePosition(float InPosition)
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   TableIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<float>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TArray<float>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<float> USynthComponentMonoWaveTable::GetKeyFrameValuesForTable(float TableIndex) const
 {
@@ -5019,6 +4554,113 @@ int32 USynthComponentMonoWaveTable::GetMaxTableIndex() const
 		Func = Class->GetFunction("SynthComponentMonoWaveTable", "GetMaxTableIndex");
 
 	Params::SynthComponentMonoWaveTable_GetMaxTableIndex Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Synthesis.SynthComponentMoto.GetRPMRange
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// float*                                  OutMinRPM                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutMaxRPM                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponentMoto::GetRPMRange(float* OutMinRPM, float* OutMaxRPM)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponentMoto", "GetRPMRange");
+
+	Params::SynthComponentMoto_GetRPMRange Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutMinRPM != nullptr)
+		*OutMinRPM = Parms.OutMinRPM;
+
+	if (OutMaxRPM != nullptr)
+		*OutMaxRPM = Parms.OutMaxRPM;
+}
+
+
+// Function Synthesis.SynthComponentMoto.SetRPM
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InRPM                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   InTimeSec                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponentMoto::SetRPM(float InRPM, float InTimeSec)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponentMoto", "SetRPM");
+
+	Params::SynthComponentMoto_SetRPM Parms{};
+
+	Parms.InRPM = InRPM;
+	Parms.InTimeSec = InTimeSec;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Synthesis.SynthComponentMoto.SetSettings
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMotoSynthRuntimeSettings& InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void USynthComponentMoto::SetSettings(const struct FMotoSynthRuntimeSettings& InSettings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponentMoto", "SetSettings");
+
+	Params::SynthComponentMoto_SetSettings Parms{};
+
+	Parms.InSettings = std::move(InSettings);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Synthesis.SynthComponentMoto.IsEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USynthComponentMoto::IsEnabled() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponentMoto", "IsEnabled");
+
+	Params::SynthComponentMoto_IsEnabled Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

@@ -17,14 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass DisplayName.DisplayName_C
-// 0x0020 (0x0588 - 0x0568)
+// 0x0018 (0x04F8 - 0x04E0)
 class UDisplayName_C final : public UFortDisplayNameWidget
 {
 public:
-	class UCommonBorder*                          DisplayNameBorder;                                 // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableText*                          EditText_Number;                                   // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_0;                                        // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VBox_Number;                                       // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          DisplayNameBorder;                                 // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableText*                          EditText_Number;                                   // 0x04E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VBox_Number;                                       // 0x04F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,11 +36,10 @@ public:
 	}
 };
 static_assert(alignof(UDisplayName_C) == 0x000008, "Wrong alignment on UDisplayName_C");
-static_assert(sizeof(UDisplayName_C) == 0x000588, "Wrong size on UDisplayName_C");
-static_assert(offsetof(UDisplayName_C, DisplayNameBorder) == 0x000568, "Member 'UDisplayName_C::DisplayNameBorder' has a wrong offset!");
-static_assert(offsetof(UDisplayName_C, EditText_Number) == 0x000570, "Member 'UDisplayName_C::EditText_Number' has a wrong offset!");
-static_assert(offsetof(UDisplayName_C, SafeZone_0) == 0x000578, "Member 'UDisplayName_C::SafeZone_0' has a wrong offset!");
-static_assert(offsetof(UDisplayName_C, VBox_Number) == 0x000580, "Member 'UDisplayName_C::VBox_Number' has a wrong offset!");
+static_assert(sizeof(UDisplayName_C) == 0x0004F8, "Wrong size on UDisplayName_C");
+static_assert(offsetof(UDisplayName_C, DisplayNameBorder) == 0x0004E0, "Member 'UDisplayName_C::DisplayNameBorder' has a wrong offset!");
+static_assert(offsetof(UDisplayName_C, EditText_Number) == 0x0004E8, "Member 'UDisplayName_C::EditText_Number' has a wrong offset!");
+static_assert(offsetof(UDisplayName_C, VBox_Number) == 0x0004F0, "Member 'UDisplayName_C::VBox_Number' has a wrong offset!");
 
 }
 

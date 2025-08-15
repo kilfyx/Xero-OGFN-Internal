@@ -23,9 +23,9 @@ namespace SDK
 void UGAB_ApplyFullBodyHit_NonParticipant_C::PickFullBodyHitMontageSection()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PickFullBodyHitMontageSection");
+		Func = Class->GetFunction("GAB_ApplyFullBodyHit_NonParticipant_C", "PickFullBodyHitMontageSection");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ABP_Hook_Camera_LensEffect_C>();
 	}
 };
+static_assert(alignof(ABP_Hook_Camera_LensEffect_C) == 0x000010, "Wrong alignment on ABP_Hook_Camera_LensEffect_C");
+static_assert(sizeof(ABP_Hook_Camera_LensEffect_C) == 0x0002E0, "Wrong size on ABP_Hook_Camera_LensEffect_C");
 
 }
 

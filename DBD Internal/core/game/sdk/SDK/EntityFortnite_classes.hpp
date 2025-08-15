@@ -20,8 +20,8 @@ namespace SDK
 {
 
 // Class EntityFortnite.EntityFortniteInterface
-// 0x0000 (0x0028 - 0x0028)
-class IEntityFortniteInterface final : public IInterface
+// 0x0000 (0x0000 - 0x0000)
+class IEntityFortniteInterface final
 {
 public:
 	static class UClass* StaticClass()
@@ -32,12 +32,21 @@ public:
 	{
 		return GetDefaultObjImpl<IEntityFortniteInterface>();
 	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
 };
-static_assert(alignof(IEntityFortniteInterface) == 0x000008, "Wrong alignment on IEntityFortniteInterface");
-static_assert(sizeof(IEntityFortniteInterface) == 0x000028, "Wrong size on IEntityFortniteInterface");
+static_assert(alignof(IEntityFortniteInterface) == 0x000001, "Wrong alignment on IEntityFortniteInterface");
+static_assert(sizeof(IEntityFortniteInterface) == 0x000001, "Wrong size on IEntityFortniteInterface");
 
 // Class EntityFortnite.EntityFortnitePlayerComponent
-// 0x0000 (0x00E8 - 0x00E8)
+// 0x0000 (0x00E0 - 0x00E0)
 class UEntityFortnitePlayerComponent final : public UEntityActorPlayerComponent
 {
 public:
@@ -51,15 +60,15 @@ public:
 	}
 };
 static_assert(alignof(UEntityFortnitePlayerComponent) == 0x000008, "Wrong alignment on UEntityFortnitePlayerComponent");
-static_assert(sizeof(UEntityFortnitePlayerComponent) == 0x0000E8, "Wrong size on UEntityFortnitePlayerComponent");
+static_assert(sizeof(UEntityFortnitePlayerComponent) == 0x0000E0, "Wrong size on UEntityFortnitePlayerComponent");
 
 // Class EntityFortnite.EntityFortniteStormControllerComponent
 // 0x0010 (0x0070 - 0x0060)
 class UEntityFortniteStormControllerComponent : public UEntityComponent
 {
 public:
-	TSubclassOf<class AEntityFortniteStormSpawner> StormSpawnerClass;                                 // 0x0060(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class AEntityFortniteStormSpawner*            StormSpawner;                                      // 0x0068(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class AEntityFortniteStormSpawner> StormSpawnerClass;                                // 0x0060(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class AEntityFortniteStormSpawner*            StormSpawner;                                      // 0x0068(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -77,11 +86,11 @@ static_assert(offsetof(UEntityFortniteStormControllerComponent, StormSpawnerClas
 static_assert(offsetof(UEntityFortniteStormControllerComponent, StormSpawner) == 0x000068, "Member 'UEntityFortniteStormControllerComponent::StormSpawner' has a wrong offset!");
 
 // Class EntityFortnite.EntityFortniteStormSpawner
-// 0x0008 (0x0290 - 0x0288)
+// 0x0008 (0x0228 - 0x0220)
 class AEntityFortniteStormSpawner final : public AActor
 {
 public:
-	class USceneComponent*                        SceneComponent;                                    // 0x0288(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USceneComponent*                        SceneComponent;                                    // 0x0220(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	void Pause();
@@ -101,8 +110,8 @@ public:
 	}
 };
 static_assert(alignof(AEntityFortniteStormSpawner) == 0x000008, "Wrong alignment on AEntityFortniteStormSpawner");
-static_assert(sizeof(AEntityFortniteStormSpawner) == 0x000290, "Wrong size on AEntityFortniteStormSpawner");
-static_assert(offsetof(AEntityFortniteStormSpawner, SceneComponent) == 0x000288, "Member 'AEntityFortniteStormSpawner::SceneComponent' has a wrong offset!");
+static_assert(sizeof(AEntityFortniteStormSpawner) == 0x000228, "Wrong size on AEntityFortniteStormSpawner");
+static_assert(offsetof(AEntityFortniteStormSpawner, SceneComponent) == 0x000220, "Member 'AEntityFortniteStormSpawner::SceneComponent' has a wrong offset!");
 
 }
 

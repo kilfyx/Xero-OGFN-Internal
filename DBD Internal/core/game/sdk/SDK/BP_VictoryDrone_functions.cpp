@@ -17,47 +17,6 @@
 namespace SDK
 {
 
-// Function BP_VictoryDrone.BP_VictoryDrone_C.Added Death Audio
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class USoundBase*                       Sound_to_Spawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_VictoryDrone_C::Added_Death_Audio(class USoundBase* Sound_to_Spawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VictoryDrone_C", "Added Death Audio");
-
-	Params::BP_VictoryDrone_C_Added_Death_Audio Parms{};
-
-	Parms.Sound_to_Spawn = Sound_to_Spawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_VictoryDrone.BP_VictoryDrone_C.Decoy FX Parameters
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// TArray<struct FParticleSysParam>*       Instance_Parameters                                    (Parm, OutParm)
-
-void ABP_VictoryDrone_C::Decoy_FX_Parameters(TArray<struct FParticleSysParam>* Instance_Parameters)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VictoryDrone_C", "Decoy FX Parameters");
-
-	Params::BP_VictoryDrone_C_Decoy_FX_Parameters Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Instance_Parameters != nullptr)
-		*Instance_Parameters = std::move(Parms.Instance_Parameters);
-}
-
-
 // Function BP_VictoryDrone.BP_VictoryDrone_C.ExecuteUbergraph_BP_VictoryDrone
 // (Final, UbergraphFunction)
 // Parameters:
@@ -78,6 +37,62 @@ void ABP_VictoryDrone_C::ExecuteUbergraph_BP_VictoryDrone(int32 EntryPoint)
 }
 
 
+// Function BP_VictoryDrone.BP_VictoryDrone_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_VictoryDrone_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VictoryDrone_C", "ReceiveTick");
+
+	Params::BP_VictoryDrone_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_VictoryDrone.BP_VictoryDrone_C.OnSpawnOutAnimEnded
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAnimMontage*                     Montage                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInterrupted                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_VictoryDrone_C::OnSpawnOutAnimEnded(class UAnimMontage* Montage, bool bInterrupted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VictoryDrone_C", "OnSpawnOutAnimEnded");
+
+	Params::BP_VictoryDrone_C_OnSpawnOutAnimEnded Parms{};
+
+	Parms.Montage = Montage;
+	Parms.bInterrupted = bInterrupted;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_VictoryDrone.BP_VictoryDrone_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_VictoryDrone_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VictoryDrone_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_VictoryDrone.BP_VictoryDrone_C.InitDrone
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -87,6 +102,20 @@ void ABP_VictoryDrone_C::InitDrone()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_VictoryDrone_C", "InitDrone");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_VictoryDrone.BP_VictoryDrone_C.PlaySpawnAnim
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_VictoryDrone_C::PlaySpawnAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VictoryDrone_C", "PlaySpawnAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -109,7 +138,7 @@ void ABP_VictoryDrone_C::NotifyTeleportFinishedTriggered()
 // Function BP_VictoryDrone.BP_VictoryDrone_C.NPC FX Parameters
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// TArray<struct FParticleSysParam>*       Instance_Parameters                                    (Parm, OutParm)
+// TArray<struct FParticleSysParam>*       Instance_Parameters                                    (Parm, OutParm, HasGetValueTypeHash)
 
 void ABP_VictoryDrone_C::NPC_FX_Parameters(TArray<struct FParticleSysParam>* Instance_Parameters)
 {
@@ -127,71 +156,42 @@ void ABP_VictoryDrone_C::NPC_FX_Parameters(TArray<struct FParticleSysParam>* Ins
 }
 
 
-// Function BP_VictoryDrone.BP_VictoryDrone_C.OnSpawnOutAnimEnded
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_VictoryDrone.BP_VictoryDrone_C.Decoy FX Parameters
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UAnimMontage*                     Montage                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bInterrupted                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FParticleSysParam>*       Instance_Parameters                                    (Parm, OutParm, HasGetValueTypeHash)
 
-void ABP_VictoryDrone_C::OnSpawnOutAnimEnded(class UAnimMontage* Montage, bool bInterrupted)
+void ABP_VictoryDrone_C::Decoy_FX_Parameters(TArray<struct FParticleSysParam>* Instance_Parameters)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VictoryDrone_C", "OnSpawnOutAnimEnded");
+		Func = Class->GetFunction("BP_VictoryDrone_C", "Decoy FX Parameters");
 
-	Params::BP_VictoryDrone_C_OnSpawnOutAnimEnded Parms{};
-
-	Parms.Montage = Montage;
-	Parms.bInterrupted = bInterrupted;
+	Params::BP_VictoryDrone_C_Decoy_FX_Parameters Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Instance_Parameters != nullptr)
+		*Instance_Parameters = std::move(Parms.Instance_Parameters);
 }
 
 
-// Function BP_VictoryDrone.BP_VictoryDrone_C.PlaySpawnAnim
+// Function BP_VictoryDrone.BP_VictoryDrone_C.Added Death Audio
 // (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_VictoryDrone_C::PlaySpawnAnim()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VictoryDrone_C", "PlaySpawnAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_VictoryDrone.BP_VictoryDrone_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_VictoryDrone_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VictoryDrone_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_VictoryDrone.BP_VictoryDrone_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
 // Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USoundBase*                       Sound_to_Spawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_VictoryDrone_C::ReceiveTick(float DeltaSeconds)
+void ABP_VictoryDrone_C::Added_Death_Audio(class USoundBase* Sound_to_Spawn)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VictoryDrone_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_VictoryDrone_C", "Added Death Audio");
 
-	Params::BP_VictoryDrone_C_ReceiveTick Parms{};
+	Params::BP_VictoryDrone_C_Added_Death_Audio Parms{};
 
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.Sound_to_Spawn = Sound_to_Spawn;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

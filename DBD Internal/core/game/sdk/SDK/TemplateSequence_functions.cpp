@@ -21,9 +21,8 @@ namespace SDK
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bOverridesDefault                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void ATemplateSequenceActor::SetBinding(class AActor* Actor, bool bOverridesDefault)
+void ATemplateSequenceActor::SetBinding(class AActor* Actor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -33,7 +32,6 @@ void ATemplateSequenceActor::SetBinding(class AActor* Actor, bool bOverridesDefa
 	Params::TemplateSequenceActor_SetBinding Parms{};
 
 	Parms.Actor = Actor;
-	Parms.bOverridesDefault = bOverridesDefault;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -139,100 +137,6 @@ class UTemplateSequence* ATemplateSequenceActor::LoadSequence() const
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TemplateSequence.SequenceCameraShakeTestUtil.GetCameraCachePOV
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMinimalViewInfo                 ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMinimalViewInfo USequenceCameraShakeTestUtil::GetCameraCachePOV(class APlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("SequenceCameraShakeTestUtil", "GetCameraCachePOV");
-
-	Params::SequenceCameraShakeTestUtil_GetCameraCachePOV Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TemplateSequence.SequenceCameraShakeTestUtil.GetLastFrameCameraCachePOV
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMinimalViewInfo                 ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMinimalViewInfo USequenceCameraShakeTestUtil::GetLastFrameCameraCachePOV(class APlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("SequenceCameraShakeTestUtil", "GetLastFrameCameraCachePOV");
-
-	Params::SequenceCameraShakeTestUtil_GetLastFrameCameraCachePOV Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TemplateSequence.SequenceCameraShakeTestUtil.GetPostProcessBlendCache
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   PPIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPostProcessSettings*            OutPPSettings                                          (Parm, OutParm, NativeAccessSpecifierPublic)
-// float*                                  OutPPBlendWeight                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USequenceCameraShakeTestUtil::GetPostProcessBlendCache(class APlayerController* PlayerController, int32 PPIndex, struct FPostProcessSettings* OutPPSettings, float* OutPPBlendWeight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("SequenceCameraShakeTestUtil", "GetPostProcessBlendCache");
-
-	Params::SequenceCameraShakeTestUtil_GetPostProcessBlendCache Parms{};
-
-	Parms.PlayerController = PlayerController;
-	Parms.PPIndex = PPIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutPPSettings != nullptr)
-		*OutPPSettings = std::move(Parms.OutPPSettings);
-
-	if (OutPPBlendWeight != nullptr)
-		*OutPPBlendWeight = Parms.OutPPBlendWeight;
 
 	return Parms.ReturnValue;
 }

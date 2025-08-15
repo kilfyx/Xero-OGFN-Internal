@@ -19,7 +19,7 @@ namespace SDK::Params
 struct UI_Background_Strings_C_PreConstruct final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(UI_Background_Strings_C_PreConstruct) == 0x000001, "Wrong alignment on UI_Background_Strings_C_PreConstruct");
 static_assert(sizeof(UI_Background_Strings_C_PreConstruct) == 0x000001, "Wrong size on UI_Background_Strings_C_PreConstruct");
@@ -31,7 +31,7 @@ struct UI_Background_Strings_C_ExecuteUbergraph_UI_Background_Strings final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(UI_Background_Strings_C_ExecuteUbergraph_UI_Background_Strings) == 0x000004, "Wrong alignment on UI_Background_Strings_C_ExecuteUbergraph_UI_Background_Strings");
 static_assert(sizeof(UI_Background_Strings_C_ExecuteUbergraph_UI_Background_Strings) == 0x000008, "Wrong size on UI_Background_Strings_C_ExecuteUbergraph_UI_Background_Strings");

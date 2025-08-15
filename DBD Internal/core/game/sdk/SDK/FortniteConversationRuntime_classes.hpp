@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "CommonDialogueRuntime_classes.hpp"
 #include "GameplayTags_structs.hpp"
-#include "CommonConversationRuntime_classes.hpp"
 #include "Engine_classes.hpp"
 #include "UMG_structs.hpp"
 
@@ -38,6 +38,8 @@ public:
 		return GetDefaultObjImpl<UFortConversationContextCondition>();
 	}
 };
+static_assert(alignof(UFortConversationContextCondition) == 0x000008, "Wrong alignment on UFortConversationContextCondition");
+static_assert(sizeof(UFortConversationContextCondition) == 0x000028, "Wrong size on UFortConversationContextCondition");
 
 // Class FortniteConversationRuntime.FortConversationContextCondition_ParticipantHasMetaTag
 // 0x0010 (0x0038 - 0x0028)
@@ -57,6 +59,10 @@ public:
 		return GetDefaultObjImpl<UFortConversationContextCondition_ParticipantHasMetaTag>();
 	}
 };
+static_assert(alignof(UFortConversationContextCondition_ParticipantHasMetaTag) == 0x000008, "Wrong alignment on UFortConversationContextCondition_ParticipantHasMetaTag");
+static_assert(sizeof(UFortConversationContextCondition_ParticipantHasMetaTag) == 0x000038, "Wrong size on UFortConversationContextCondition_ParticipantHasMetaTag");
+static_assert(offsetof(UFortConversationContextCondition_ParticipantHasMetaTag, ParticipantID) == 0x000028, "Member 'UFortConversationContextCondition_ParticipantHasMetaTag::ParticipantID' has a wrong offset!");
+static_assert(offsetof(UFortConversationContextCondition_ParticipantHasMetaTag, MetaTag) == 0x000030, "Member 'UFortConversationContextCondition_ParticipantHasMetaTag::MetaTag' has a wrong offset!");
 
 // Class FortniteConversationRuntime.FortConversationMarkerInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -81,9 +87,11 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+static_assert(alignof(IFortConversationMarkerInterface) == 0x000001, "Wrong alignment on IFortConversationMarkerInterface");
+static_assert(sizeof(IFortConversationMarkerInterface) == 0x000001, "Wrong size on IFortConversationMarkerInterface");
 
 // Class FortniteConversationRuntime.FortConversationParticipantComponent
-// 0x0000 (0x01B0 - 0x01B0)
+// 0x0000 (0x0168 - 0x0168)
 class UFortConversationParticipantComponent : public UConversationParticipantComponent
 {
 public:
@@ -96,6 +104,8 @@ public:
 		return GetDefaultObjImpl<UFortConversationParticipantComponent>();
 	}
 };
+static_assert(alignof(UFortConversationParticipantComponent) == 0x000008, "Wrong alignment on UFortConversationParticipantComponent");
+static_assert(sizeof(UFortConversationParticipantComponent) == 0x000168, "Wrong size on UFortConversationParticipantComponent");
 
 // Class FortniteConversationRuntime.FortConversationContextCondition_ParticipantHasCID
 // 0x0018 (0x0040 - 0x0028)
@@ -103,7 +113,7 @@ class UFortConversationContextCondition_ParticipantHasCID final : public UFortCo
 {
 public:
 	struct FGameplayTag                           ParticipantID;                                     // 0x0028(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FSoftObjectPath>                AllowedCIDs;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FSoftObjectPath>                AllowedCIDs;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -115,6 +125,10 @@ public:
 		return GetDefaultObjImpl<UFortConversationContextCondition_ParticipantHasCID>();
 	}
 };
+static_assert(alignof(UFortConversationContextCondition_ParticipantHasCID) == 0x000008, "Wrong alignment on UFortConversationContextCondition_ParticipantHasCID");
+static_assert(sizeof(UFortConversationContextCondition_ParticipantHasCID) == 0x000040, "Wrong size on UFortConversationContextCondition_ParticipantHasCID");
+static_assert(offsetof(UFortConversationContextCondition_ParticipantHasCID, ParticipantID) == 0x000028, "Member 'UFortConversationContextCondition_ParticipantHasCID::ParticipantID' has a wrong offset!");
+static_assert(offsetof(UFortConversationContextCondition_ParticipantHasCID, AllowedCIDs) == 0x000030, "Member 'UFortConversationContextCondition_ParticipantHasCID::AllowedCIDs' has a wrong offset!");
 
 // Class FortniteConversationRuntime.FortConversationContextCondition_ParticipantHasOwnedTag
 // 0x0010 (0x0038 - 0x0028)
@@ -134,6 +148,10 @@ public:
 		return GetDefaultObjImpl<UFortConversationContextCondition_ParticipantHasOwnedTag>();
 	}
 };
+static_assert(alignof(UFortConversationContextCondition_ParticipantHasOwnedTag) == 0x000008, "Wrong alignment on UFortConversationContextCondition_ParticipantHasOwnedTag");
+static_assert(sizeof(UFortConversationContextCondition_ParticipantHasOwnedTag) == 0x000038, "Wrong size on UFortConversationContextCondition_ParticipantHasOwnedTag");
+static_assert(offsetof(UFortConversationContextCondition_ParticipantHasOwnedTag, ParticipantID) == 0x000028, "Member 'UFortConversationContextCondition_ParticipantHasOwnedTag::ParticipantID' has a wrong offset!");
+static_assert(offsetof(UFortConversationContextCondition_ParticipantHasOwnedTag, OwnedTag) == 0x000030, "Member 'UFortConversationContextCondition_ParticipantHasOwnedTag::OwnedTag' has a wrong offset!");
 
 // Class FortniteConversationRuntime.FortConversationContextCondition_ParticipantControllerMeetsRequirement
 // 0x0010 (0x0038 - 0x0028)
@@ -153,6 +171,10 @@ public:
 		return GetDefaultObjImpl<UFortConversationContextCondition_ParticipantControllerMeetsRequirement>();
 	}
 };
+static_assert(alignof(UFortConversationContextCondition_ParticipantControllerMeetsRequirement) == 0x000008, "Wrong alignment on UFortConversationContextCondition_ParticipantControllerMeetsRequirement");
+static_assert(sizeof(UFortConversationContextCondition_ParticipantControllerMeetsRequirement) == 0x000038, "Wrong size on UFortConversationContextCondition_ParticipantControllerMeetsRequirement");
+static_assert(offsetof(UFortConversationContextCondition_ParticipantControllerMeetsRequirement, ParticipantID) == 0x000028, "Member 'UFortConversationContextCondition_ParticipantControllerMeetsRequirement::ParticipantID' has a wrong offset!");
+static_assert(offsetof(UFortConversationContextCondition_ParticipantControllerMeetsRequirement, Requirement) == 0x000030, "Member 'UFortConversationContextCondition_ParticipantControllerMeetsRequirement::Requirement' has a wrong offset!");
 
 // Class FortniteConversationRuntime.FortConversationContextConditionHelpers
 // 0x0000 (0x0028 - 0x0028)
@@ -171,48 +193,29 @@ public:
 		return GetDefaultObjImpl<UFortConversationContextConditionHelpers>();
 	}
 };
-
-// Class FortniteConversationRuntime.FortConversationParamLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UFortConversationParamLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static bool ExtractConversationParameterValue(const TArray<struct FConversationNodeParameterPair>& ConversationParameters, const class FString& DesiredParameterName, class FString* ParameterValueOut);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortConversationParamLibrary">();
-	}
-	static class UFortConversationParamLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFortConversationParamLibrary>();
-	}
-};
+static_assert(alignof(UFortConversationContextConditionHelpers) == 0x000008, "Wrong alignment on UFortConversationContextConditionHelpers");
+static_assert(sizeof(UFortConversationContextConditionHelpers) == 0x000028, "Wrong size on UFortConversationContextConditionHelpers");
 
 // Class FortniteConversationRuntime.FortPlayerConversationComponent
-// 0x01F8 (0x03A8 - 0x01B0)
+// 0x01A8 (0x0310 - 0x0168)
 class UFortPlayerConversationComponent : public UFortConversationParticipantComponent
 {
 public:
-	uint8                                         Pad_1B0[0x8];                                      // 0x01B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UFortNonPlayerConversationParticipantComponent*> ConversationParticipantsInRange;   // 0x01B8(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	TSoftClassPtr<class UClass>                   DialogWidgetSoftClass;                             // 0x01C8(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftClassPtr<class UClass>                   DialogMarkerSoftClass;                             // 0x01F0(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftClassPtr<class UClass>                   MobileDialogWidgetSoftClass;                       // 0x0218(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSubclassOf<class UUserWidget>                DialogWidgetClass;                                 // 0x0240(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSubclassOf<class UUserWidget>                DialogMarkerClass;                                 // 0x0248(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         GreetSphereRadius;                                 // 0x0250(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         IconVisibilityRadius;                              // 0x0254(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         AbortConversationRange;                            // 0x0258(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_25C[0x2C];                                     // 0x025C(0x002C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserWidgetPool                        DialogWidgetPool;                                  // 0x0288(0x0088)(Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	TMap<class UFortNonPlayerConversationParticipantComponent*, class UUserWidget*> ComponentToIndicator; // 0x0310(0x0050)(ExportObject, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_360[0x48];                                     // 0x0360(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_168[0x8];                                      // 0x0168(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UFortNonPlayerConversationParticipantComponent*> ConversationParticipantsInRange;   // 0x0170(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftClassPtr<class UClass>                   DialogWidgetSoftClass;                             // 0x0180(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftClassPtr<class UClass>                   DialogMarkerSoftClass;                             // 0x01A8(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftClassPtr<class UClass>                   MobileDialogWidgetSoftClass;                       // 0x01D0(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UUserWidget>                DialogWidgetClass;                                 // 0x01F8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UUserWidget>                DialogMarkerClass;                                 // 0x0200(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         GreetSphereRadius;                                 // 0x0208(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         IconVisibilityRadius;                              // 0x020C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         AbortConversationRange;                            // 0x0210(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_214[0x2C];                                     // 0x0214(0x002C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserWidgetPool                        DialogWidgetPool;                                  // 0x0240(0x0080)(Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	TMap<class UFortNonPlayerConversationParticipantComponent*, class UUserWidget*> ComponentToIndicator; // 0x02C0(0x0050)(ExportObject, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 
 public:
-	void ClientReceiveConversationGiftUINotification(const struct FGiftUINotificationInfo& ConversationGiftUINotification);
-	void HandleDBNOChanged(class AFortPawn* Pawn, bool bIsDBNO);
 	void HandleWaponEquipped(class AFortWeapon* NewWeapon, class AFortWeapon* PrevWeapon);
 	void RequestServerAbortConversation();
 
@@ -226,6 +229,19 @@ public:
 		return GetDefaultObjImpl<UFortPlayerConversationComponent>();
 	}
 };
+static_assert(alignof(UFortPlayerConversationComponent) == 0x000008, "Wrong alignment on UFortPlayerConversationComponent");
+static_assert(sizeof(UFortPlayerConversationComponent) == 0x000310, "Wrong size on UFortPlayerConversationComponent");
+static_assert(offsetof(UFortPlayerConversationComponent, ConversationParticipantsInRange) == 0x000170, "Member 'UFortPlayerConversationComponent::ConversationParticipantsInRange' has a wrong offset!");
+static_assert(offsetof(UFortPlayerConversationComponent, DialogWidgetSoftClass) == 0x000180, "Member 'UFortPlayerConversationComponent::DialogWidgetSoftClass' has a wrong offset!");
+static_assert(offsetof(UFortPlayerConversationComponent, DialogMarkerSoftClass) == 0x0001A8, "Member 'UFortPlayerConversationComponent::DialogMarkerSoftClass' has a wrong offset!");
+static_assert(offsetof(UFortPlayerConversationComponent, MobileDialogWidgetSoftClass) == 0x0001D0, "Member 'UFortPlayerConversationComponent::MobileDialogWidgetSoftClass' has a wrong offset!");
+static_assert(offsetof(UFortPlayerConversationComponent, DialogWidgetClass) == 0x0001F8, "Member 'UFortPlayerConversationComponent::DialogWidgetClass' has a wrong offset!");
+static_assert(offsetof(UFortPlayerConversationComponent, DialogMarkerClass) == 0x000200, "Member 'UFortPlayerConversationComponent::DialogMarkerClass' has a wrong offset!");
+static_assert(offsetof(UFortPlayerConversationComponent, GreetSphereRadius) == 0x000208, "Member 'UFortPlayerConversationComponent::GreetSphereRadius' has a wrong offset!");
+static_assert(offsetof(UFortPlayerConversationComponent, IconVisibilityRadius) == 0x00020C, "Member 'UFortPlayerConversationComponent::IconVisibilityRadius' has a wrong offset!");
+static_assert(offsetof(UFortPlayerConversationComponent, AbortConversationRange) == 0x000210, "Member 'UFortPlayerConversationComponent::AbortConversationRange' has a wrong offset!");
+static_assert(offsetof(UFortPlayerConversationComponent, DialogWidgetPool) == 0x000240, "Member 'UFortPlayerConversationComponent::DialogWidgetPool' has a wrong offset!");
+static_assert(offsetof(UFortPlayerConversationComponent, ComponentToIndicator) == 0x0002C0, "Member 'UFortPlayerConversationComponent::ComponentToIndicator' has a wrong offset!");
 
 }
 

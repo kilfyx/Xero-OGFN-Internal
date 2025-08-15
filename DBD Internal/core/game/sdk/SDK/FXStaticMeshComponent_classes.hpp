@@ -21,9 +21,9 @@ namespace SDK
 class UFXStaticMeshComponent_C final : public UFortFXStaticMeshComponent
 {
 public:
-	void ApplyAwakenEffect();
 	void ApplyBuildingHitEffect();
 	void ApplyEffect(class UMaterialInterface* Source_Material, float FadeInTime, float Duration, float FadeOutTimer);
+	void ApplyAwakenEffect();
 
 public:
 	static class UClass* StaticClass()
@@ -35,6 +35,8 @@ public:
 		return GetDefaultObjImpl<UFXStaticMeshComponent_C>();
 	}
 };
+static_assert(alignof(UFXStaticMeshComponent_C) == 0x000010, "Wrong alignment on UFXStaticMeshComponent_C");
+static_assert(sizeof(UFXStaticMeshComponent_C) == 0x000500, "Wrong size on UFXStaticMeshComponent_C");
 
 }
 

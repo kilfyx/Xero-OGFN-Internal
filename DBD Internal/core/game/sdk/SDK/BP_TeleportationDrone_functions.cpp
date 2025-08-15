@@ -37,56 +37,6 @@ void ABP_TeleportationDrone_C::ExecuteUbergraph_BP_TeleportationDrone(int32 Entr
 }
 
 
-// Function BP_TeleportationDrone.BP_TeleportationDrone_C.OnSpawnOutAnimEnded
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAnimMontage*                     Montage                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bInterrupted                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_TeleportationDrone_C::OnSpawnOutAnimEnded(class UAnimMontage* Montage, bool bInterrupted)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TeleportationDrone_C", "OnSpawnOutAnimEnded");
-
-	Params::BP_TeleportationDrone_C_OnSpawnOutAnimEnded Parms{};
-
-	Parms.Montage = Montage;
-	Parms.bInterrupted = bInterrupted;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_TeleportationDrone.BP_TeleportationDrone_C.PlaySpawnAnim
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_TeleportationDrone_C::PlaySpawnAnim()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TeleportationDrone_C", "PlaySpawnAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TeleportationDrone.BP_TeleportationDrone_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_TeleportationDrone_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TeleportationDrone_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_TeleportationDrone.BP_TeleportationDrone_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -104,6 +54,56 @@ void ABP_TeleportationDrone_C::ReceiveTick(float DeltaSeconds)
 	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TeleportationDrone.BP_TeleportationDrone_C.OnSpawnOutAnimEnded
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAnimMontage*                     Montage                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInterrupted                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_TeleportationDrone_C::OnSpawnOutAnimEnded(class UAnimMontage* Montage, bool bInterrupted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TeleportationDrone_C", "OnSpawnOutAnimEnded");
+
+	Params::BP_TeleportationDrone_C_OnSpawnOutAnimEnded Parms{};
+
+	Parms.Montage = Montage;
+	Parms.bInterrupted = bInterrupted;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TeleportationDrone.BP_TeleportationDrone_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_TeleportationDrone_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TeleportationDrone_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TeleportationDrone.BP_TeleportationDrone_C.PlaySpawnAnim
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_TeleportationDrone_C::PlaySpawnAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TeleportationDrone_C", "PlaySpawnAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

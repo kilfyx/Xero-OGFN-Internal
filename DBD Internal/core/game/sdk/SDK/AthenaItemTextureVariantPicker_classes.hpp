@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -18,19 +17,9 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaItemTextureVariantPicker.AthenaItemTextureVariantPicker_C
-// 0x0020 (0x0490 - 0x0470)
+// 0x0000 (0x0328 - 0x0328)
 class UAthenaItemTextureVariantPicker_C final : public UFortVariantItemTexturePicker
 {
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0470(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonRichTextBlock*                   TextBlock_AllItemsArchived;                        // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_AvailableItems;                     // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void OnToggleAllItemsArchivedMessage(bool bDisplay);
-	void Construct();
-	void ExecuteUbergraph_AthenaItemTextureVariantPicker(int32 EntryPoint);
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -41,11 +30,8 @@ public:
 		return GetDefaultObjImpl<UAthenaItemTextureVariantPicker_C>();
 	}
 };
-static_assert(alignof(UAthenaItemTextureVariantPicker_C) == 0x000010, "Wrong alignment on UAthenaItemTextureVariantPicker_C");
-static_assert(sizeof(UAthenaItemTextureVariantPicker_C) == 0x000490, "Wrong size on UAthenaItemTextureVariantPicker_C");
-static_assert(offsetof(UAthenaItemTextureVariantPicker_C, UberGraphFrame) == 0x000470, "Member 'UAthenaItemTextureVariantPicker_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaItemTextureVariantPicker_C, TextBlock_AllItemsArchived) == 0x000478, "Member 'UAthenaItemTextureVariantPicker_C::TextBlock_AllItemsArchived' has a wrong offset!");
-static_assert(offsetof(UAthenaItemTextureVariantPicker_C, WidgetSwitcher_AvailableItems) == 0x000480, "Member 'UAthenaItemTextureVariantPicker_C::WidgetSwitcher_AvailableItems' has a wrong offset!");
+static_assert(alignof(UAthenaItemTextureVariantPicker_C) == 0x000008, "Wrong alignment on UAthenaItemTextureVariantPicker_C");
+static_assert(sizeof(UAthenaItemTextureVariantPicker_C) == 0x000328, "Wrong size on UAthenaItemTextureVariantPicker_C");
 
 }
 

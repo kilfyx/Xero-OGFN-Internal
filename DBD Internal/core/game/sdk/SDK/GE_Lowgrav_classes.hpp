@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Lowgrav_C>();
 	}
 };
+static_assert(alignof(UGE_Lowgrav_C) == 0x000008, "Wrong alignment on UGE_Lowgrav_C");
+static_assert(sizeof(UGE_Lowgrav_C) == 0x000800, "Wrong size on UGE_Lowgrav_C");
 
 }
 

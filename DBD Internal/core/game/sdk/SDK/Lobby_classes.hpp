@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "Lobby_structs.hpp"
 #include "OnlineSubsystemUtils_classes.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -55,6 +55,11 @@ public:
 		return GetDefaultObjImpl<ALobbyBeaconClient>();
 	}
 };
+static_assert(alignof(ALobbyBeaconClient) == 0x000008, "Wrong alignment on ALobbyBeaconClient");
+static_assert(sizeof(ALobbyBeaconClient) == 0x000338, "Wrong size on ALobbyBeaconClient");
+static_assert(offsetof(ALobbyBeaconClient, LobbyState) == 0x0002B0, "Member 'ALobbyBeaconClient::LobbyState' has a wrong offset!");
+static_assert(offsetof(ALobbyBeaconClient, PlayerState) == 0x0002B8, "Member 'ALobbyBeaconClient::PlayerState' has a wrong offset!");
+static_assert(offsetof(ALobbyBeaconClient, LobbyJoinServerState) == 0x0002C1, "Member 'ALobbyBeaconClient::LobbyJoinServerState' has a wrong offset!");
 
 // Class Lobby.LobbyBeaconHost
 // 0x0038 (0x0280 - 0x0248)
@@ -75,6 +80,10 @@ public:
 		return GetDefaultObjImpl<ALobbyBeaconHost>();
 	}
 };
+static_assert(alignof(ALobbyBeaconHost) == 0x000008, "Wrong alignment on ALobbyBeaconHost");
+static_assert(sizeof(ALobbyBeaconHost) == 0x000280, "Wrong size on ALobbyBeaconHost");
+static_assert(offsetof(ALobbyBeaconHost, LobbyStateClass) == 0x000250, "Member 'ALobbyBeaconHost::LobbyStateClass' has a wrong offset!");
+static_assert(offsetof(ALobbyBeaconHost, LobbyState) == 0x000278, "Member 'ALobbyBeaconHost::LobbyState' has a wrong offset!");
 
 // Class Lobby.LobbyBeaconPlayerState
 // 0x00C0 (0x02E0 - 0x0220)
@@ -104,6 +113,13 @@ public:
 		return GetDefaultObjImpl<ALobbyBeaconPlayerState>();
 	}
 };
+static_assert(alignof(ALobbyBeaconPlayerState) == 0x000008, "Wrong alignment on ALobbyBeaconPlayerState");
+static_assert(sizeof(ALobbyBeaconPlayerState) == 0x0002E0, "Wrong size on ALobbyBeaconPlayerState");
+static_assert(offsetof(ALobbyBeaconPlayerState, DisplayName) == 0x000220, "Member 'ALobbyBeaconPlayerState::DisplayName' has a wrong offset!");
+static_assert(offsetof(ALobbyBeaconPlayerState, UniqueId) == 0x000238, "Member 'ALobbyBeaconPlayerState::UniqueId' has a wrong offset!");
+static_assert(offsetof(ALobbyBeaconPlayerState, PartyOwnerUniqueId) == 0x000260, "Member 'ALobbyBeaconPlayerState::PartyOwnerUniqueId' has a wrong offset!");
+static_assert(offsetof(ALobbyBeaconPlayerState, bInLobby) == 0x000288, "Member 'ALobbyBeaconPlayerState::bInLobby' has a wrong offset!");
+static_assert(offsetof(ALobbyBeaconPlayerState, ClientActor) == 0x000290, "Member 'ALobbyBeaconPlayerState::ClientActor' has a wrong offset!");
 
 // Class Lobby.LobbyBeaconState
 // 0x01A8 (0x03C8 - 0x0220)
@@ -134,6 +150,13 @@ public:
 		return GetDefaultObjImpl<ALobbyBeaconState>();
 	}
 };
+static_assert(alignof(ALobbyBeaconState) == 0x000008, "Wrong alignment on ALobbyBeaconState");
+static_assert(sizeof(ALobbyBeaconState) == 0x0003C8, "Wrong size on ALobbyBeaconState");
+static_assert(offsetof(ALobbyBeaconState, MaxPlayers) == 0x000220, "Member 'ALobbyBeaconState::MaxPlayers' has a wrong offset!");
+static_assert(offsetof(ALobbyBeaconState, LobbyBeaconPlayerStateClass) == 0x000228, "Member 'ALobbyBeaconState::LobbyBeaconPlayerStateClass' has a wrong offset!");
+static_assert(offsetof(ALobbyBeaconState, bLobbyStarted) == 0x000238, "Member 'ALobbyBeaconState::bLobbyStarted' has a wrong offset!");
+static_assert(offsetof(ALobbyBeaconState, WaitForPlayersTimeRemaining) == 0x00023C, "Member 'ALobbyBeaconState::WaitForPlayersTimeRemaining' has a wrong offset!");
+static_assert(offsetof(ALobbyBeaconState, Players) == 0x000240, "Member 'ALobbyBeaconState::Players' has a wrong offset!");
 
 }
 

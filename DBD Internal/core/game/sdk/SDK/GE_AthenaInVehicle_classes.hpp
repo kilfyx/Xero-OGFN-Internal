@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_AthenaInVehicle_C>();
 	}
 };
+static_assert(alignof(UGE_AthenaInVehicle_C) == 0x000008, "Wrong alignment on UGE_AthenaInVehicle_C");
+static_assert(sizeof(UGE_AthenaInVehicle_C) == 0x000800, "Wrong size on UGE_AthenaInVehicle_C");
 
 }
 

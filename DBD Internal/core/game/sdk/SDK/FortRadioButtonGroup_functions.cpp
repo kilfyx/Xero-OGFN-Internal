@@ -31,6 +31,28 @@ void UFortRadioButtonGroup_C::CenterOnWidget()
 }
 
 
+// Function FortRadioButtonGroup.FortRadioButtonGroup_C.OnButtonClicked_Bind
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    AssociatedButton                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UFortRadioButtonGroup_C::OnButtonClicked_Bind(class UCommonButton* AssociatedButton, int32 ButtonIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortRadioButtonGroup_C", "OnButtonClicked_Bind");
+
+	Params::FortRadioButtonGroup_C_OnButtonClicked_Bind Parms{};
+
+	Parms.AssociatedButton = AssociatedButton;
+	Parms.ButtonIndex = ButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function FortRadioButtonGroup.FortRadioButtonGroup_C.Destruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -40,6 +62,20 @@ void UFortRadioButtonGroup_C::Destruct()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("FortRadioButtonGroup_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FortRadioButtonGroup.FortRadioButtonGroup_C.UpdateButtons
+// (BlueprintCallable, BlueprintEvent)
+
+void UFortRadioButtonGroup_C::UpdateButtons()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortRadioButtonGroup_C", "UpdateButtons");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -62,42 +98,6 @@ void UFortRadioButtonGroup_C::ExecuteUbergraph_FortRadioButtonGroup(int32 EntryP
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortRadioButtonGroup.FortRadioButtonGroup_C.OnButtonClicked_Bind
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              AssociatedButton                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UFortRadioButtonGroup_C::OnButtonClicked_Bind(class UCommonButtonLegacy* AssociatedButton, int32 ButtonIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortRadioButtonGroup_C", "OnButtonClicked_Bind");
-
-	Params::FortRadioButtonGroup_C_OnButtonClicked_Bind Parms{};
-
-	Parms.AssociatedButton = AssociatedButton;
-	Parms.ButtonIndex = ButtonIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortRadioButtonGroup.FortRadioButtonGroup_C.UpdateButtons
-// (BlueprintCallable, BlueprintEvent)
-
-void UFortRadioButtonGroup_C::UpdateButtons()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortRadioButtonGroup_C", "UpdateButtons");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

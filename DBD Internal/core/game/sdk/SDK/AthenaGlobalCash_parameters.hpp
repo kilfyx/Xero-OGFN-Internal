@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function AthenaGlobalCash.AthenaGlobalCash_C.OnQueryCompletedSuccessfully
+// 0x0004 (0x0004 - 0x0000)
+struct AthenaGlobalCash_C_OnQueryCompletedSuccessfully final
+{
+public:
+	int32                                         GlobalCashBalance;                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(AthenaGlobalCash_C_OnQueryCompletedSuccessfully) == 0x000004, "Wrong alignment on AthenaGlobalCash_C_OnQueryCompletedSuccessfully");
+static_assert(sizeof(AthenaGlobalCash_C_OnQueryCompletedSuccessfully) == 0x000004, "Wrong size on AthenaGlobalCash_C_OnQueryCompletedSuccessfully");
+static_assert(offsetof(AthenaGlobalCash_C_OnQueryCompletedSuccessfully, GlobalCashBalance) == 0x000000, "Member 'AthenaGlobalCash_C_OnQueryCompletedSuccessfully::GlobalCashBalance' has a wrong offset!");
+
 // Function AthenaGlobalCash.AthenaGlobalCash_C.ExecuteUbergraph_AthenaGlobalCash
 // 0x0008 (0x0008 - 0x0000)
 struct AthenaGlobalCash_C_ExecuteUbergraph_AthenaGlobalCash final
@@ -26,17 +37,6 @@ static_assert(alignof(AthenaGlobalCash_C_ExecuteUbergraph_AthenaGlobalCash) == 0
 static_assert(sizeof(AthenaGlobalCash_C_ExecuteUbergraph_AthenaGlobalCash) == 0x000008, "Wrong size on AthenaGlobalCash_C_ExecuteUbergraph_AthenaGlobalCash");
 static_assert(offsetof(AthenaGlobalCash_C_ExecuteUbergraph_AthenaGlobalCash, EntryPoint) == 0x000000, "Member 'AthenaGlobalCash_C_ExecuteUbergraph_AthenaGlobalCash::EntryPoint' has a wrong offset!");
 static_assert(offsetof(AthenaGlobalCash_C_ExecuteUbergraph_AthenaGlobalCash, K2Node_Event_GlobalCashBalance) == 0x000004, "Member 'AthenaGlobalCash_C_ExecuteUbergraph_AthenaGlobalCash::K2Node_Event_GlobalCashBalance' has a wrong offset!");
-
-// Function AthenaGlobalCash.AthenaGlobalCash_C.OnQueryCompletedSuccessfully
-// 0x0004 (0x0004 - 0x0000)
-struct AthenaGlobalCash_C_OnQueryCompletedSuccessfully final
-{
-public:
-	int32                                         GlobalCashBalance;                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(AthenaGlobalCash_C_OnQueryCompletedSuccessfully) == 0x000004, "Wrong alignment on AthenaGlobalCash_C_OnQueryCompletedSuccessfully");
-static_assert(sizeof(AthenaGlobalCash_C_OnQueryCompletedSuccessfully) == 0x000004, "Wrong size on AthenaGlobalCash_C_OnQueryCompletedSuccessfully");
-static_assert(offsetof(AthenaGlobalCash_C_OnQueryCompletedSuccessfully, GlobalCashBalance) == 0x000000, "Member 'AthenaGlobalCash_C_OnQueryCompletedSuccessfully::GlobalCashBalance' has a wrong offset!");
 
 }
 

@@ -17,56 +17,6 @@
 namespace SDK
 {
 
-// Function TeamMicStack.TeamMicStack_C.AppendTeamMember
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FFortTeamMemberInfo&             TeamMemberInfo                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-
-void UTeamMicStack_C::AppendTeamMember(struct FFortTeamMemberInfo& TeamMemberInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMicStack_C", "AppendTeamMember");
-
-	Params::TeamMicStack_C_AppendTeamMember Parms{};
-
-	Parms.TeamMemberInfo = std::move(TeamMemberInfo);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	TeamMemberInfo = std::move(Parms.TeamMemberInfo);
-}
-
-
-// Function TeamMicStack.TeamMicStack_C.ClearContents
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UTeamMicStack_C::ClearContents()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMicStack_C", "ClearContents");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMicStack.TeamMicStack_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UTeamMicStack_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMicStack_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function TeamMicStack.TeamMicStack_C.ExecuteUbergraph_TeamMicStack
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -101,23 +51,17 @@ void UTeamMicStack_C::HandlePartyLeft()
 }
 
 
-// Function TeamMicStack.TeamMicStack_C.HandleTeamMemberChanged
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FFortTeamMemberInfo&       Member_Info                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// Function TeamMicStack.TeamMicStack_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UTeamMicStack_C::HandleTeamMemberChanged(const struct FFortTeamMemberInfo& Member_Info)
+void UTeamMicStack_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMicStack_C", "HandleTeamMemberChanged");
+		Func = Class->GetFunction("TeamMicStack_C", "Construct");
 
-	Params::TeamMicStack_C_HandleTeamMemberChanged Parms{};
-
-	Parms.Member_Info = std::move(Member_Info);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -138,6 +82,62 @@ void UTeamMicStack_C::HandleTeamMemberRemoved(int32 Member_Index)
 	Parms.Member_Index = Member_Index;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TeamMicStack.TeamMicStack_C.HandleTeamMemberChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FFortTeamMemberInfo&       Member_Info                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void UTeamMicStack_C::HandleTeamMemberChanged(const struct FFortTeamMemberInfo& Member_Info)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMicStack_C", "HandleTeamMemberChanged");
+
+	Params::TeamMicStack_C_HandleTeamMemberChanged Parms{};
+
+	Parms.Member_Info = std::move(Member_Info);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TeamMicStack.TeamMicStack_C.AppendTeamMember
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FFortTeamMemberInfo&             TeamMemberInfo                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+
+void UTeamMicStack_C::AppendTeamMember(struct FFortTeamMemberInfo& TeamMemberInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMicStack_C", "AppendTeamMember");
+
+	Params::TeamMicStack_C_AppendTeamMember Parms{};
+
+	Parms.TeamMemberInfo = std::move(TeamMemberInfo);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	TeamMemberInfo = std::move(Parms.TeamMemberInfo);
+}
+
+
+// Function TeamMicStack.TeamMicStack_C.ClearContents
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UTeamMicStack_C::ClearContents()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMicStack_C", "ClearContents");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -11,35 +11,31 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "FortniteUI_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LoginScreen.LoginScreen_C
-// 0x0050 (0x0518 - 0x04C8)
+// 0x0038 (0x0450 - 0x0418)
 class ULoginScreen_C final : public UFortUIStateWidget_Login
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UConsoleProfileWidget_C*                ConsoleProfileWidget;                              // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 DarkBacking;                                       // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               KeyArt_Group;                                      // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 KeyArtBackground;                                  // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 KeyArtBackground_For_Blur;                         // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone;                                          // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_Version;                                      // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBuildWatermark_C*                      Widget_BuildWatermark;                             // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget*                                PlatformSpecificBackBorder;                        // 0x0510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UConsoleProfileWidget_C*                ConsoleProfileWidget;                              // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone;                                          // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_Version;                                      // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBuildWatermark_C*                      Widget_BuildWatermark;                             // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class AFort_Entry_Music_Controller_BP_C*      FrontEnd_Music_Controller;                         // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                PlatformSpecificBackBorder;                        // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
-	void SetKeyArtVisibility(int32 NewActiveWidgetIndex);
-	void BP_OnActivated();
+	void BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature(class UWidget* ActiveWidget, int32 ActiveWidgetIndex);
+	void OnEnterState_1(EFortUIState PreviousUIState);
 	void ExecuteUbergraph_LoginScreen(int32 EntryPoint);
-	void BndEvt__LoginScreen_Splash_Screen_K2Node_ComponentBoundEvent_0_OnWidgetActivationChanged__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()
@@ -52,17 +48,14 @@ public:
 	}
 };
 static_assert(alignof(ULoginScreen_C) == 0x000008, "Wrong alignment on ULoginScreen_C");
-static_assert(sizeof(ULoginScreen_C) == 0x000518, "Wrong size on ULoginScreen_C");
-static_assert(offsetof(ULoginScreen_C, UberGraphFrame) == 0x0004C8, "Member 'ULoginScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ULoginScreen_C, ConsoleProfileWidget) == 0x0004D0, "Member 'ULoginScreen_C::ConsoleProfileWidget' has a wrong offset!");
-static_assert(offsetof(ULoginScreen_C, DarkBacking) == 0x0004D8, "Member 'ULoginScreen_C::DarkBacking' has a wrong offset!");
-static_assert(offsetof(ULoginScreen_C, KeyArt_Group) == 0x0004E0, "Member 'ULoginScreen_C::KeyArt_Group' has a wrong offset!");
-static_assert(offsetof(ULoginScreen_C, KeyArtBackground) == 0x0004E8, "Member 'ULoginScreen_C::KeyArtBackground' has a wrong offset!");
-static_assert(offsetof(ULoginScreen_C, KeyArtBackground_For_Blur) == 0x0004F0, "Member 'ULoginScreen_C::KeyArtBackground_For_Blur' has a wrong offset!");
-static_assert(offsetof(ULoginScreen_C, SafeZone) == 0x0004F8, "Member 'ULoginScreen_C::SafeZone' has a wrong offset!");
-static_assert(offsetof(ULoginScreen_C, Text_Version) == 0x000500, "Member 'ULoginScreen_C::Text_Version' has a wrong offset!");
-static_assert(offsetof(ULoginScreen_C, Widget_BuildWatermark) == 0x000508, "Member 'ULoginScreen_C::Widget_BuildWatermark' has a wrong offset!");
-static_assert(offsetof(ULoginScreen_C, PlatformSpecificBackBorder) == 0x000510, "Member 'ULoginScreen_C::PlatformSpecificBackBorder' has a wrong offset!");
+static_assert(sizeof(ULoginScreen_C) == 0x000450, "Wrong size on ULoginScreen_C");
+static_assert(offsetof(ULoginScreen_C, UberGraphFrame) == 0x000418, "Member 'ULoginScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ULoginScreen_C, ConsoleProfileWidget) == 0x000420, "Member 'ULoginScreen_C::ConsoleProfileWidget' has a wrong offset!");
+static_assert(offsetof(ULoginScreen_C, SafeZone) == 0x000428, "Member 'ULoginScreen_C::SafeZone' has a wrong offset!");
+static_assert(offsetof(ULoginScreen_C, Text_Version) == 0x000430, "Member 'ULoginScreen_C::Text_Version' has a wrong offset!");
+static_assert(offsetof(ULoginScreen_C, Widget_BuildWatermark) == 0x000438, "Member 'ULoginScreen_C::Widget_BuildWatermark' has a wrong offset!");
+static_assert(offsetof(ULoginScreen_C, FrontEnd_Music_Controller) == 0x000440, "Member 'ULoginScreen_C::FrontEnd_Music_Controller' has a wrong offset!");
+static_assert(offsetof(ULoginScreen_C, PlatformSpecificBackBorder) == 0x000448, "Member 'ULoginScreen_C::PlatformSpecificBackBorder' has a wrong offset!");
 
 }
 

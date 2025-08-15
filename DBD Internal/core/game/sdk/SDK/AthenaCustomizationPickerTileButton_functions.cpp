@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UAthenaCustomizationPickerTileButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void UAthenaCustomizationPickerTileButton_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.ExecuteUbergraph_AthenaCustomizationPickerTileButton
 // (Final, UbergraphFunction)
 // Parameters:
@@ -53,9 +25,9 @@ void UAthenaCustomizationPickerTileButton_C::BP_OnUnhovered()
 void UAthenaCustomizationPickerTileButton_C::ExecuteUbergraph_AthenaCustomizationPickerTileButton(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaCustomizationPickerTileButton");
+		Func = Class->GetFunction("AthenaCustomizationPickerTileButton_C", "ExecuteUbergraph_AthenaCustomizationPickerTileButton");
 
 	Params::AthenaCustomizationPickerTileButton_C_ExecuteUbergraph_AthenaCustomizationPickerTileButton Parms{};
 
@@ -65,65 +37,21 @@ void UAthenaCustomizationPickerTileButton_C::ExecuteUbergraph_AthenaCustomizatio
 }
 
 
-// Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.HandleEquippedStateChanged
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bEquipped                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bOnDifferentSlot                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaCustomizationPickerTileButton_C::HandleEquippedStateChanged(bool bEquipped, bool bOnDifferentSlot)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("HandleEquippedStateChanged");
-
-	Params::AthenaCustomizationPickerTileButton_C_HandleEquippedStateChanged Parms{};
-
-	Parms.bEquipped = bEquipped;
-	Parms.bOnDifferentSlot = bOnDifferentSlot;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.OnArchivedStatusUpdated
+// Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.OnUpdateExclusiveWarning
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bShowAsArchived                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bUseAnimations                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bShouldWarn                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaCustomizationPickerTileButton_C::OnArchivedStatusUpdated(bool bShowAsArchived, bool bUseAnimations)
+void UAthenaCustomizationPickerTileButton_C::OnUpdateExclusiveWarning(bool bShouldWarn)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnArchivedStatusUpdated");
+		Func = Class->GetFunction("AthenaCustomizationPickerTileButton_C", "OnUpdateExclusiveWarning");
 
-	Params::AthenaCustomizationPickerTileButton_C_OnArchivedStatusUpdated Parms{};
+	Params::AthenaCustomizationPickerTileButton_C_OnUpdateExclusiveWarning Parms{};
 
-	Parms.bShowAsArchived = bShowAsArchived;
-	Parms.bUseAnimations = bUseAnimations;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.OnChangeOwnedState
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bOwned                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaCustomizationPickerTileButton_C::OnChangeOwnedState(bool bOwned)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnChangeOwnedState");
-
-	Params::AthenaCustomizationPickerTileButton_C_OnChangeOwnedState Parms{};
-
-	Parms.bOwned = bOwned;
+	Parms.bShouldWarn = bShouldWarn;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -132,15 +60,15 @@ void UAthenaCustomizationPickerTileButton_C::OnChangeOwnedState(bool bOwned)
 // Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.OnEquippedStateChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bEquipped                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bOnDifferentSlot                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEquipped                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bOnDifferentSlot                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaCustomizationPickerTileButton_C::OnEquippedStateChanged(bool bEquipped, bool bOnDifferentSlot)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnEquippedStateChanged");
+		Func = Class->GetFunction("AthenaCustomizationPickerTileButton_C", "OnEquippedStateChanged");
 
 	Params::AthenaCustomizationPickerTileButton_C_OnEquippedStateChanged Parms{};
 
@@ -151,17 +79,65 @@ void UAthenaCustomizationPickerTileButton_C::OnEquippedStateChanged(bool bEquipp
 }
 
 
+// Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.OnChangeOwnedState
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bOwned                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaCustomizationPickerTileButton_C::OnChangeOwnedState(bool bOwned)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaCustomizationPickerTileButton_C", "OnChangeOwnedState");
+
+	Params::AthenaCustomizationPickerTileButton_C_OnChangeOwnedState Parms{};
+
+	Parms.bOwned = bOwned;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UAthenaCustomizationPickerTileButton_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaCustomizationPickerTileButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UAthenaCustomizationPickerTileButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaCustomizationPickerTileButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.OnListItemObjectSet
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAthenaCustomizationPickerTileButton_C::OnListItemObjectSet(class UObject* ListItemObject)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnListItemObjectSet");
+		Func = Class->GetFunction("AthenaCustomizationPickerTileButton_C", "OnListItemObjectSet");
 
 	Params::AthenaCustomizationPickerTileButton_C_OnListItemObjectSet Parms{};
 
@@ -171,21 +147,23 @@ void UAthenaCustomizationPickerTileButton_C::OnListItemObjectSet(class UObject* 
 }
 
 
-// Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.OnUpdateExclusiveWarning
-// (Event, Protected, BlueprintEvent)
+// Function AthenaCustomizationPickerTileButton.AthenaCustomizationPickerTileButton_C.HandleEquippedStateChanged
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bShouldWarn                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEquipped                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bOnDifferentSlot                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaCustomizationPickerTileButton_C::OnUpdateExclusiveWarning(bool bShouldWarn)
+void UAthenaCustomizationPickerTileButton_C::HandleEquippedStateChanged(bool bEquipped, bool bOnDifferentSlot)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateExclusiveWarning");
+		Func = Class->GetFunction("AthenaCustomizationPickerTileButton_C", "HandleEquippedStateChanged");
 
-	Params::AthenaCustomizationPickerTileButton_C_OnUpdateExclusiveWarning Parms{};
+	Params::AthenaCustomizationPickerTileButton_C_HandleEquippedStateChanged Parms{};
 
-	Parms.bShouldWarn = bShouldWarn;
+	Parms.bEquipped = bEquipped;
+	Parms.bOnDifferentSlot = bOnDifferentSlot;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

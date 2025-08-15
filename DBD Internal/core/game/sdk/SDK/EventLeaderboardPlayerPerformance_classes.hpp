@@ -19,21 +19,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventLeaderboardPlayerPerformance.EventLeaderboardPlayerPerformance_C
-// 0x0038 (0x0750 - 0x0718)
+// 0x0038 (0x06F0 - 0x06B8)
 class UEventLeaderboardPlayerPerformance_C final : public UFortShowdownDetailView
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0718(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UEventsSimpleButton_C*                  Button_MyPosition;                                 // 0x0720(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_0;                                 // 0x0728(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_1;                                 // 0x0730(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_Container;                           // 0x0738(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_PlayerPerformance;                            // 0x0740(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_PlayerScore;                                  // 0x0748(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UEventsSimpleButton_C*                  Button_MyPosition;                                 // 0x06C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_0;                                 // 0x06C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_1;                                 // 0x06D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_Container;                           // 0x06D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_PlayerPerformance;                            // 0x06E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_PlayerScore;                                  // 0x06E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_EventLeaderboardPlayerPerformance(int32 EntryPoint);
 	void RefreshDataBP();
+	void ExecuteUbergraph_EventLeaderboardPlayerPerformance(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -46,14 +46,14 @@ public:
 	}
 };
 static_assert(alignof(UEventLeaderboardPlayerPerformance_C) == 0x000008, "Wrong alignment on UEventLeaderboardPlayerPerformance_C");
-static_assert(sizeof(UEventLeaderboardPlayerPerformance_C) == 0x000750, "Wrong size on UEventLeaderboardPlayerPerformance_C");
-static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, UberGraphFrame) == 0x000718, "Member 'UEventLeaderboardPlayerPerformance_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, Button_MyPosition) == 0x000720, "Member 'UEventLeaderboardPlayerPerformance_C::Button_MyPosition' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, CommonTextBlock_0) == 0x000728, "Member 'UEventLeaderboardPlayerPerformance_C::CommonTextBlock_0' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, CommonTextBlock_1) == 0x000730, "Member 'UEventLeaderboardPlayerPerformance_C::CommonTextBlock_1' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, HorizontalBox_Container) == 0x000738, "Member 'UEventLeaderboardPlayerPerformance_C::HorizontalBox_Container' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, Text_PlayerPerformance) == 0x000740, "Member 'UEventLeaderboardPlayerPerformance_C::Text_PlayerPerformance' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, Text_PlayerScore) == 0x000748, "Member 'UEventLeaderboardPlayerPerformance_C::Text_PlayerScore' has a wrong offset!");
+static_assert(sizeof(UEventLeaderboardPlayerPerformance_C) == 0x0006F0, "Wrong size on UEventLeaderboardPlayerPerformance_C");
+static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, UberGraphFrame) == 0x0006B8, "Member 'UEventLeaderboardPlayerPerformance_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, Button_MyPosition) == 0x0006C0, "Member 'UEventLeaderboardPlayerPerformance_C::Button_MyPosition' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, CommonTextBlock_0) == 0x0006C8, "Member 'UEventLeaderboardPlayerPerformance_C::CommonTextBlock_0' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, CommonTextBlock_1) == 0x0006D0, "Member 'UEventLeaderboardPlayerPerformance_C::CommonTextBlock_1' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, HorizontalBox_Container) == 0x0006D8, "Member 'UEventLeaderboardPlayerPerformance_C::HorizontalBox_Container' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, Text_PlayerPerformance) == 0x0006E0, "Member 'UEventLeaderboardPlayerPerformance_C::Text_PlayerPerformance' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardPlayerPerformance_C, Text_PlayerScore) == 0x0006E8, "Member 'UEventLeaderboardPlayerPerformance_C::Text_PlayerScore' has a wrong offset!");
 
 }
 

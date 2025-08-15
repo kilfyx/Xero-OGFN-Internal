@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBP_CameraShake_PortalWarp_C>();
 	}
 };
+static_assert(alignof(UBP_CameraShake_PortalWarp_C) == 0x000010, "Wrong alignment on UBP_CameraShake_PortalWarp_C");
+static_assert(sizeof(UBP_CameraShake_PortalWarp_C) == 0x0001B0, "Wrong size on UBP_CameraShake_PortalWarp_C");
 
 }
 

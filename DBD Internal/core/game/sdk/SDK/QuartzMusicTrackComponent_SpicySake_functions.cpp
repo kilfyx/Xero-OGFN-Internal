@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function QuartzMusicTrackComponent_SpicySake.QuartzMusicTrackComponent_SpicySake_C.HandleMixState
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UQuartzMusicTrackComponent_SpicySake_C::HandleMixState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzMusicTrackComponent_SpicySake_C", "HandleMixState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function QuartzMusicTrackComponent_SpicySake.QuartzMusicTrackComponent_SpicySake_C.OnDataTrackerUpdate
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -71,6 +57,20 @@ float UQuartzMusicTrackComponent_SpicySake_C::UpdateInterpValue(float InterpValu
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function QuartzMusicTrackComponent_SpicySake.QuartzMusicTrackComponent_SpicySake_C.HandleMixState
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UQuartzMusicTrackComponent_SpicySake_C::HandleMixState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzMusicTrackComponent_SpicySake_C", "HandleMixState");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

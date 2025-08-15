@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function PowerRatingWidget.PowerRatingWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UPowerRatingWidget_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PowerRatingWidget_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function PowerRatingWidget.PowerRatingWidget_C.ExecuteUbergraph_PowerRatingWidget
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -51,21 +37,35 @@ void UPowerRatingWidget_C::ExecuteUbergraph_PowerRatingWidget(int32 EntryPoint)
 }
 
 
-// Function PowerRatingWidget.PowerRatingWidget_C.OnBasePowerRatingUpdated
+// Function PowerRatingWidget.PowerRatingWidget_C.OnTeamMembershipChanged
 // (Event, Protected, BlueprintEvent)
-// Parameters:
-// int32                                   BasePowerRating                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPowerRatingWidget_C::OnBasePowerRatingUpdated(int32 BasePowerRating)
+void UPowerRatingWidget_C::OnTeamMembershipChanged()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PowerRatingWidget_C", "OnBasePowerRatingUpdated");
+		Func = Class->GetFunction("PowerRatingWidget_C", "OnTeamMembershipChanged");
 
-	Params::PowerRatingWidget_C_OnBasePowerRatingUpdated Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.BasePowerRating = BasePowerRating;
+
+// Function PowerRatingWidget.PowerRatingWidget_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UPowerRatingWidget_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PowerRatingWidget_C", "PreConstruct");
+
+	Params::PowerRatingWidget_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -93,20 +93,6 @@ void UPowerRatingWidget_C::OnPowerRatingProgressUpdated(float BaseRatingProgress
 }
 
 
-// Function PowerRatingWidget.PowerRatingWidget_C.OnTeamMembershipChanged
-// (Event, Protected, BlueprintEvent)
-
-void UPowerRatingWidget_C::OnTeamMembershipChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PowerRatingWidget_C", "OnTeamMembershipChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function PowerRatingWidget.PowerRatingWidget_C.OnTeamPowerRatingUpdated
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -127,23 +113,37 @@ void UPowerRatingWidget_C::OnTeamPowerRatingUpdated(int32 TeamPowerRating)
 }
 
 
-// Function PowerRatingWidget.PowerRatingWidget_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function PowerRatingWidget.PowerRatingWidget_C.OnBasePowerRatingUpdated
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   BasePowerRating                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPowerRatingWidget_C::PreConstruct(bool IsDesignTime)
+void UPowerRatingWidget_C::OnBasePowerRatingUpdated(int32 BasePowerRating)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PowerRatingWidget_C", "PreConstruct");
+		Func = Class->GetFunction("PowerRatingWidget_C", "OnBasePowerRatingUpdated");
 
-	Params::PowerRatingWidget_C_PreConstruct Parms{};
+	Params::PowerRatingWidget_C_OnBasePowerRatingUpdated Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.BasePowerRating = BasePowerRating;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PowerRatingWidget.PowerRatingWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UPowerRatingWidget_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PowerRatingWidget_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

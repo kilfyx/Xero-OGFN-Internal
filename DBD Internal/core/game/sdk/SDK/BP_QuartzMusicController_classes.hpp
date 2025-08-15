@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
@@ -17,18 +18,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_QuartzMusicController.BP_QuartzMusicController_C
-// 0x0020 (0x0240 - 0x0220)
-class ABP_QuartzMusicController_C final : public AFortTimeSynthController
+// 0x0018 (0x0238 - 0x0220)
+class ABP_QuartzMusicController_C : public AFortTimeSynthController
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0220(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UQuartzMusicTrackComponent_C*           CurrentTrack;                                      // 0x0228(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class FName Clock_Name, class UQuartzClockHandle* Clock_Handle)> OnClockCreated; // 0x0230(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UQuartzMusicTrackComponent_C*           CurrentTrack;                                      // 0x0230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void StopCurrentTrack();
 	void PlayTrack(class UQuartzMusicTrackComponent_C* Track_Component);
 	void RequestTrackPlayback(class UQuartzMusicTrackComponent_C* Requesting_Track, bool* Result);
-	void StopCurrentTrack();
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_QuartzMusicController(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -40,6 +43,11 @@ public:
 		return GetDefaultObjImpl<ABP_QuartzMusicController_C>();
 	}
 };
+static_assert(alignof(ABP_QuartzMusicController_C) == 0x000008, "Wrong alignment on ABP_QuartzMusicController_C");
+static_assert(sizeof(ABP_QuartzMusicController_C) == 0x000238, "Wrong size on ABP_QuartzMusicController_C");
+static_assert(offsetof(ABP_QuartzMusicController_C, UberGraphFrame) == 0x000220, "Member 'ABP_QuartzMusicController_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_QuartzMusicController_C, DefaultSceneRoot) == 0x000228, "Member 'ABP_QuartzMusicController_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_QuartzMusicController_C, CurrentTrack) == 0x000230, "Member 'ABP_QuartzMusicController_C::CurrentTrack' has a wrong offset!");
 
 }
 

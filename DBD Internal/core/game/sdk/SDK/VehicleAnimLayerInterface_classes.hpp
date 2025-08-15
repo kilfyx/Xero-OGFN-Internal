@@ -44,6 +44,8 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+static_assert(alignof(IVehicleAnimLayerInterface_C) == 0x000001, "Wrong alignment on IVehicleAnimLayerInterface_C");
+static_assert(sizeof(IVehicleAnimLayerInterface_C) == 0x000001, "Wrong size on IVehicleAnimLayerInterface_C");
 
 }
 

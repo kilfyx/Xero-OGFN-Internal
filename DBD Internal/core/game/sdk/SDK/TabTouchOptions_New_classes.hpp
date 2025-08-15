@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TabTouchOptions_New.TabTouchOptions_New_C
-// 0x0008 (0x0380 - 0x0378)
+// 0x0008 (0x0370 - 0x0368)
 class UTabTouchOptions_New_C final : public UFortTabTouchOptions_TempNew
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature(class UFortSetting* Setting, class FName Action);
-	void CenterOnTab();
 	void ExecuteUbergraph_TabTouchOptions_New(int32 EntryPoint);
-	void OnComplete_70DA8CBD478310A11CA48A9F568B15E0(class UUserWidget* UserWidget);
+	void BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature(class UFortSetting* Setting, class FName Action);
 	void SettingValueChanged(float Value);
+	void CenterOnTab();
+	void OnComplete_70DA8CBD478310A11CA48A9F568B15E0(class UUserWidget* UserWidget);
 
 public:
 	static class UClass* StaticClass()
@@ -41,6 +41,9 @@ public:
 		return GetDefaultObjImpl<UTabTouchOptions_New_C>();
 	}
 };
+static_assert(alignof(UTabTouchOptions_New_C) == 0x000008, "Wrong alignment on UTabTouchOptions_New_C");
+static_assert(sizeof(UTabTouchOptions_New_C) == 0x000370, "Wrong size on UTabTouchOptions_New_C");
+static_assert(offsetof(UTabTouchOptions_New_C, UberGraphFrame) == 0x000368, "Member 'UTabTouchOptions_New_C::UberGraphFrame' has a wrong offset!");
 
 }
 

@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function BP_PlayerPawn_Athena_Phoebe.BP_PlayerPawn_Athena_Phoebe_C.AssignCosmeticVariant
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_Athena_Phoebe_C::AssignCosmeticVariant()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("AssignCosmeticVariant");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerPawn_Athena_Phoebe.BP_PlayerPawn_Athena_Phoebe_C.ComputeCosmeticVariantID
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_PlayerPawn_Athena_Phoebe_C::ComputeCosmeticVariantID()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ComputeCosmeticVariantID");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_PlayerPawn_Athena_Phoebe.BP_PlayerPawn_Athena_Phoebe_C.ExecuteUbergraph_BP_PlayerPawn_Athena_Phoebe
 // (Final, UbergraphFunction)
 // Parameters:
@@ -53,9 +25,9 @@ void ABP_PlayerPawn_Athena_Phoebe_C::ComputeCosmeticVariantID()
 void ABP_PlayerPawn_Athena_Phoebe_C::ExecuteUbergraph_BP_PlayerPawn_Athena_Phoebe(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_BP_PlayerPawn_Athena_Phoebe");
+		Func = Class->GetFunction("BP_PlayerPawn_Athena_Phoebe_C", "ExecuteUbergraph_BP_PlayerPawn_Athena_Phoebe");
 
 	Params::BP_PlayerPawn_Athena_Phoebe_C_ExecuteUbergraph_BP_PlayerPawn_Athena_Phoebe Parms{};
 
@@ -65,39 +37,19 @@ void ABP_PlayerPawn_Athena_Phoebe_C::ExecuteUbergraph_BP_PlayerPawn_Athena_Phoeb
 }
 
 
-// Function BP_PlayerPawn_Athena_Phoebe.BP_PlayerPawn_Athena_Phoebe_C.OnCharacterCustomizationCompleted
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PlayerPawn_Athena_Phoebe_C::OnCharacterCustomizationCompleted(class AFortPlayerPawn* Pawn)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnCharacterCustomizationCompleted");
-
-	Params::BP_PlayerPawn_Athena_Phoebe_C_OnCharacterCustomizationCompleted Parms{};
-
-	Parms.Pawn = Pawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_PlayerPawn_Athena_Phoebe.BP_PlayerPawn_Athena_Phoebe_C.OnLaunched
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FVector                          LaunchVelocity                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bXYOverride                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bZOverride                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   LaunchVelocity                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bXYOverride                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bZOverride                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABP_PlayerPawn_Athena_Phoebe_C::OnLaunched(const struct FVector& LaunchVelocity, bool bXYOverride, bool bZOverride)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnLaunched");
+		Func = Class->GetFunction("BP_PlayerPawn_Athena_Phoebe_C", "OnLaunched");
 
 	Params::BP_PlayerPawn_Athena_Phoebe_C_OnLaunched Parms{};
 

@@ -42,6 +42,8 @@ public:
 		return GetDefaultObjImpl<UPurchaseFlowJSBridge>();
 	}
 };
+static_assert(alignof(UPurchaseFlowJSBridge) == 0x000008, "Wrong alignment on UPurchaseFlowJSBridge");
+static_assert(sizeof(UPurchaseFlowJSBridge) == 0x000038, "Wrong size on UPurchaseFlowJSBridge");
 
 }
 

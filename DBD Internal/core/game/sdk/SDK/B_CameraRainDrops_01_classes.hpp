@@ -29,10 +29,10 @@ public:
 	class UTimelineComponent*                     Alpha;                                             // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void Alpha__FinishedFunc();
+	void Alpha__UpdateFunc();
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_B_CameraRainDrops_01(int32 EntryPoint);
-	void Alpha__UpdateFunc();
-	void Alpha__FinishedFunc();
 
 public:
 	static class UClass* StaticClass()
@@ -44,6 +44,12 @@ public:
 		return GetDefaultObjImpl<AB_CameraRainDrops_01_C>();
 	}
 };
+static_assert(alignof(AB_CameraRainDrops_01_C) == 0x000010, "Wrong alignment on AB_CameraRainDrops_01_C");
+static_assert(sizeof(AB_CameraRainDrops_01_C) == 0x000300, "Wrong size on AB_CameraRainDrops_01_C");
+static_assert(offsetof(AB_CameraRainDrops_01_C, UberGraphFrame) == 0x0002E0, "Member 'AB_CameraRainDrops_01_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_CameraRainDrops_01_C, Alpha_Alpha_06897833405CC2B231B02C93C4E725A3) == 0x0002E8, "Member 'AB_CameraRainDrops_01_C::Alpha_Alpha_06897833405CC2B231B02C93C4E725A3' has a wrong offset!");
+static_assert(offsetof(AB_CameraRainDrops_01_C, Alpha__Direction_06897833405CC2B231B02C93C4E725A3) == 0x0002EC, "Member 'AB_CameraRainDrops_01_C::Alpha__Direction_06897833405CC2B231B02C93C4E725A3' has a wrong offset!");
+static_assert(offsetof(AB_CameraRainDrops_01_C, Alpha) == 0x0002F0, "Member 'AB_CameraRainDrops_01_C::Alpha' has a wrong offset!");
 
 }
 

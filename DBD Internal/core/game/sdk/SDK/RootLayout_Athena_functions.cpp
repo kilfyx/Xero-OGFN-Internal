@@ -17,38 +17,10 @@
 namespace SDK
 {
 
-// Function RootLayout_Athena.RootLayout_Athena_C.OnModalQueueEmptied_1
-// (BlueprintCallable, BlueprintEvent)
-
-void URootLayout_Athena_C::OnModalQueueEmptied_1()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RootLayout_Athena_C", "OnModalQueueEmptied_1");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function RootLayout_Athena.RootLayout_Athena_C.OnGameWindowCloseButtonClicked
-// (BlueprintCallable, BlueprintEvent)
-
-void URootLayout_Athena_C::OnGameWindowCloseButtonClicked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RootLayout_Athena_C", "OnGameWindowCloseButtonClicked");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function RootLayout_Athena.RootLayout_Athena_C.IsConsole
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool URootLayout_Athena_C::IsConsole()
 {
@@ -62,26 +34,6 @@ bool URootLayout_Athena_C::IsConsole()
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function RootLayout_Athena.RootLayout_Athena_C.ExecuteUbergraph_RootLayout_Athena
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void URootLayout_Athena_C::ExecuteUbergraph_RootLayout_Athena(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RootLayout_Athena_C", "ExecuteUbergraph_RootLayout_Athena");
-
-	Params::RootLayout_Athena_C_ExecuteUbergraph_RootLayout_Athena Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -118,6 +70,54 @@ void URootLayout_Athena_C::Construct()
 		Func = Class->GetFunction("RootLayout_Athena_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RootLayout_Athena.RootLayout_Athena_C.OnGameWindowCloseButtonClicked
+// (BlueprintCallable, BlueprintEvent)
+
+void URootLayout_Athena_C::OnGameWindowCloseButtonClicked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RootLayout_Athena_C", "OnGameWindowCloseButtonClicked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RootLayout_Athena.RootLayout_Athena_C.OnModalQueueEmptied_1
+// (BlueprintCallable, BlueprintEvent)
+
+void URootLayout_Athena_C::OnModalQueueEmptied_1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RootLayout_Athena_C", "OnModalQueueEmptied_1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RootLayout_Athena.RootLayout_Athena_C.ExecuteUbergraph_RootLayout_Athena
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void URootLayout_Athena_C::ExecuteUbergraph_RootLayout_Athena(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RootLayout_Athena_C", "ExecuteUbergraph_RootLayout_Athena");
+
+	Params::RootLayout_Athena_C_ExecuteUbergraph_RootLayout_Athena Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

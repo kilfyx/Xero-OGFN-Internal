@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ItemManagementTileButtonStyle-AthenaLocker_big.ItemManagementTileButtonStyle-AthenaLocker_big_C
-// 0x0000 (0x0730 - 0x0730)
+// 0x0000 (0x0570 - 0x0570)
 class UItemManagementTileButtonStyle_AthenaLocker_big_C final : public UButtonStyle_Base_C
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<UItemManagementTileButtonStyle_AthenaLocker_big_C>();
 	}
 };
-static_assert(alignof(UItemManagementTileButtonStyle_AthenaLocker_big_C) == 0x000010, "Wrong alignment on UItemManagementTileButtonStyle_AthenaLocker_big_C");
-static_assert(sizeof(UItemManagementTileButtonStyle_AthenaLocker_big_C) == 0x000730, "Wrong size on UItemManagementTileButtonStyle_AthenaLocker_big_C");
+static_assert(alignof(UItemManagementTileButtonStyle_AthenaLocker_big_C) == 0x000008, "Wrong alignment on UItemManagementTileButtonStyle_AthenaLocker_big_C");
+static_assert(sizeof(UItemManagementTileButtonStyle_AthenaLocker_big_C) == 0x000570, "Wrong size on UItemManagementTileButtonStyle_AthenaLocker_big_C");
 
 }
 

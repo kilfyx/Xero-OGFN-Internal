@@ -12,44 +12,43 @@
 
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "CommonUILegacy_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaLeaderboardTabButton.AthenaLeaderboardTabButton_C
-// 0x0140 (0x1570 - 0x1430)
-class UAthenaLeaderboardTabButton_C final : public UCommonButtonLegacy
+// 0x00F8 (0x0C98 - 0x0BA0)
+class UAthenaLeaderboardTabButton_C final : public UCommonButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1430(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x1438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         ContentHB;                                         // 0x1440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LeftSideImage;                                     // 0x1448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   ButtonText;                                        // 0x1450(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	uint8                                         Pad_1468[0x8];                                     // 0x1468(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            IconBrush;                                         // 0x1470(0x00C0)(Edit, BlueprintVisible, ExposeOnSpawn)
-	bool                                          UseText;                                           // 0x1530(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1531[0x3];                                     // 0x1531(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           SelectedIconTint;                                  // 0x1534(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           DeselectedIconTint;                                // 0x1544(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           HoveredIconTint;                                   // 0x1554(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x0BA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         ContentHB;                                         // 0x0BB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LeftSideImage;                                     // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   ButtonText;                                        // 0x0BC0(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	struct FSlateBrush                            IconBrush;                                         // 0x0BD8(0x0088)(Edit, BlueprintVisible, ExposeOnSpawn)
+	bool                                          UseText;                                           // 0x0C60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C61[0x3];                                      // 0x0C61(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           SelectedIconTint;                                  // 0x0C64(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           DeselectedIconTint;                                // 0x0C74(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           HoveredIconTint;                                   // 0x0C84(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_OnDeselected();
-	void BP_OnHovered();
-	void BP_OnSelected();
-	void BP_OnUnhovered();
-	void Construct();
-	void ExecuteUbergraph_AthenaLeaderboardTabButton(int32 EntryPoint);
-	void OnCurrentTextStyleChanged();
-	void PreConstruct(bool IsDesignTime);
+	void ShowText();
 	void Set_Icon(const struct FSlateBrush& IconBrush_0);
 	void Set_Text(const class FText& ButtonText_0);
+	void PreConstruct(bool IsDesignTime);
+	void OnCurrentTextStyleChanged();
 	void SetTabLabelInfo(const struct FFortTabButtonLabelInfo& TabLabelInfo);
-	void ShowText();
+	void BP_OnSelected();
+	void BP_OnDeselected();
+	void Construct();
+	void BP_OnHovered();
+	void BP_OnUnhovered();
+	void ExecuteUbergraph_AthenaLeaderboardTabButton(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -61,18 +60,18 @@ public:
 		return GetDefaultObjImpl<UAthenaLeaderboardTabButton_C>();
 	}
 };
-static_assert(alignof(UAthenaLeaderboardTabButton_C) == 0x000010, "Wrong alignment on UAthenaLeaderboardTabButton_C");
-static_assert(sizeof(UAthenaLeaderboardTabButton_C) == 0x001570, "Wrong size on UAthenaLeaderboardTabButton_C");
-static_assert(offsetof(UAthenaLeaderboardTabButton_C, UberGraphFrame) == 0x001430, "Member 'UAthenaLeaderboardTabButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaLeaderboardTabButton_C, CenterButtonTextWidget) == 0x001438, "Member 'UAthenaLeaderboardTabButton_C::CenterButtonTextWidget' has a wrong offset!");
-static_assert(offsetof(UAthenaLeaderboardTabButton_C, ContentHB) == 0x001440, "Member 'UAthenaLeaderboardTabButton_C::ContentHB' has a wrong offset!");
-static_assert(offsetof(UAthenaLeaderboardTabButton_C, LeftSideImage) == 0x001448, "Member 'UAthenaLeaderboardTabButton_C::LeftSideImage' has a wrong offset!");
-static_assert(offsetof(UAthenaLeaderboardTabButton_C, ButtonText) == 0x001450, "Member 'UAthenaLeaderboardTabButton_C::ButtonText' has a wrong offset!");
-static_assert(offsetof(UAthenaLeaderboardTabButton_C, IconBrush) == 0x001470, "Member 'UAthenaLeaderboardTabButton_C::IconBrush' has a wrong offset!");
-static_assert(offsetof(UAthenaLeaderboardTabButton_C, UseText) == 0x001530, "Member 'UAthenaLeaderboardTabButton_C::UseText' has a wrong offset!");
-static_assert(offsetof(UAthenaLeaderboardTabButton_C, SelectedIconTint) == 0x001534, "Member 'UAthenaLeaderboardTabButton_C::SelectedIconTint' has a wrong offset!");
-static_assert(offsetof(UAthenaLeaderboardTabButton_C, DeselectedIconTint) == 0x001544, "Member 'UAthenaLeaderboardTabButton_C::DeselectedIconTint' has a wrong offset!");
-static_assert(offsetof(UAthenaLeaderboardTabButton_C, HoveredIconTint) == 0x001554, "Member 'UAthenaLeaderboardTabButton_C::HoveredIconTint' has a wrong offset!");
+static_assert(alignof(UAthenaLeaderboardTabButton_C) == 0x000008, "Wrong alignment on UAthenaLeaderboardTabButton_C");
+static_assert(sizeof(UAthenaLeaderboardTabButton_C) == 0x000C98, "Wrong size on UAthenaLeaderboardTabButton_C");
+static_assert(offsetof(UAthenaLeaderboardTabButton_C, UberGraphFrame) == 0x000BA0, "Member 'UAthenaLeaderboardTabButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaLeaderboardTabButton_C, CenterButtonTextWidget) == 0x000BA8, "Member 'UAthenaLeaderboardTabButton_C::CenterButtonTextWidget' has a wrong offset!");
+static_assert(offsetof(UAthenaLeaderboardTabButton_C, ContentHB) == 0x000BB0, "Member 'UAthenaLeaderboardTabButton_C::ContentHB' has a wrong offset!");
+static_assert(offsetof(UAthenaLeaderboardTabButton_C, LeftSideImage) == 0x000BB8, "Member 'UAthenaLeaderboardTabButton_C::LeftSideImage' has a wrong offset!");
+static_assert(offsetof(UAthenaLeaderboardTabButton_C, ButtonText) == 0x000BC0, "Member 'UAthenaLeaderboardTabButton_C::ButtonText' has a wrong offset!");
+static_assert(offsetof(UAthenaLeaderboardTabButton_C, IconBrush) == 0x000BD8, "Member 'UAthenaLeaderboardTabButton_C::IconBrush' has a wrong offset!");
+static_assert(offsetof(UAthenaLeaderboardTabButton_C, UseText) == 0x000C60, "Member 'UAthenaLeaderboardTabButton_C::UseText' has a wrong offset!");
+static_assert(offsetof(UAthenaLeaderboardTabButton_C, SelectedIconTint) == 0x000C64, "Member 'UAthenaLeaderboardTabButton_C::SelectedIconTint' has a wrong offset!");
+static_assert(offsetof(UAthenaLeaderboardTabButton_C, DeselectedIconTint) == 0x000C74, "Member 'UAthenaLeaderboardTabButton_C::DeselectedIconTint' has a wrong offset!");
+static_assert(offsetof(UAthenaLeaderboardTabButton_C, HoveredIconTint) == 0x000C84, "Member 'UAthenaLeaderboardTabButton_C::HoveredIconTint' has a wrong offset!");
 
 }
 

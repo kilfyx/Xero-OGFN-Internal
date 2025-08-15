@@ -45,6 +45,40 @@ void UViolator_ActiveFriends_C::CallOut_Surface()
 }
 
 
+// Function Violator_ActiveFriends.Violator_ActiveFriends_C.UpdateData
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UViolator_ActiveFriends_C::UpdateData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Violator_ActiveFriends_C", "UpdateData");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Violator_ActiveFriends.Violator_ActiveFriends_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UViolator_ActiveFriends_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Violator_ActiveFriends_C", "PreConstruct");
+
+	Params::Violator_ActiveFriends_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Violator_ActiveFriends.Violator_ActiveFriends_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -76,40 +110,6 @@ void UViolator_ActiveFriends_C::ExecuteUbergraph_Violator_ActiveFriends(int32 En
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Violator_ActiveFriends.Violator_ActiveFriends_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UViolator_ActiveFriends_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Violator_ActiveFriends_C", "PreConstruct");
-
-	Params::Violator_ActiveFriends_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Violator_ActiveFriends.Violator_ActiveFriends_C.UpdateData
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UViolator_ActiveFriends_C::UpdateData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Violator_ActiveFriends_C", "UpdateData");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

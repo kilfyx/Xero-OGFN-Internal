@@ -21,13 +21,13 @@ namespace SDK
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FEventMessageTag&          Channel                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UScriptStruct*                    PayloadType                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              Channel                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EGameplayMessageMatchType               MatchType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bTriggerForSaved                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class AActor*                           ActorContext                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UAsyncAction_RegisterGameplayMessageReceiver*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UAsyncAction_RegisterGameplayMessageReceiver* UAsyncAction_RegisterGameplayMessageReceiver::RegisterGameplayMessageReceiver(class UObject* WorldContextObject, const struct FEventMessageTag& Channel, class UScriptStruct* PayloadType, EGameplayMessageMatchType MatchType, class AActor* ActorContext)
+class UAsyncAction_RegisterGameplayMessageReceiver* UAsyncAction_RegisterGameplayMessageReceiver::RegisterGameplayMessageReceiver(class UObject* WorldContextObject, const struct FGameplayTag& Channel, EGameplayMessageMatchType MatchType, bool bTriggerForSaved, class AActor* ActorContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -38,8 +38,8 @@ class UAsyncAction_RegisterGameplayMessageReceiver* UAsyncAction_RegisterGamepla
 
 	Parms.WorldContextObject = WorldContextObject;
 	Parms.Channel = std::move(Channel);
-	Parms.PayloadType = PayloadType;
 	Parms.MatchType = MatchType;
+	Parms.bTriggerForSaved = bTriggerForSaved;
 	Parms.ActorContext = ActorContext;
 
 	auto Flgs = Func->FunctionFlags;
@@ -105,10 +105,10 @@ void UAsyncAction_RegisterGameplayMessageReceiver::Unregister()
 // Function GameplayMessages.GameplayMessageReplicator.Multicast_ServerMessageTriggered
 // (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
 // Parameters:
-// const struct FEventMessageTag&          Channel                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              Channel                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FReplicatedMessage&        MessageData                                            (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 
-void AGameplayMessageReplicator::Multicast_ServerMessageTriggered(const struct FEventMessageTag& Channel, const struct FReplicatedMessage& MessageData)
+void AGameplayMessageReplicator::Multicast_ServerMessageTriggered(const struct FGameplayTag& Channel, const struct FReplicatedMessage& MessageData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -132,9 +132,9 @@ void AGameplayMessageReplicator::Multicast_ServerMessageTriggered(const struct F
 // Function GameplayMessages.GameplayMessageRouter.ClearSavedMessage
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const struct FEventMessageTag&          Channel                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              Channel                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameplayMessageRouter::ClearSavedMessage(const struct FEventMessageTag& Channel)
+void UGameplayMessageRouter::ClearSavedMessage(const struct FGameplayTag& Channel)
 {
 	static class UFunction* Func = nullptr;
 
@@ -157,12 +157,13 @@ void UGameplayMessageRouter::ClearSavedMessage(const struct FEventMessageTag& Ch
 // Function GameplayMessages.GameplayMessageRouter.K2_BroadcastMessage
 // (Final, Native, Protected, HasOutParams, BlueprintCallable)
 // Parameters:
-// const struct FEventMessageTag&          Channel                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              Channel                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const int32&                            Message                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bReplicate                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSaveToChannel                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class AActor*                           ActorContext                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameplayMessageRouter::K2_BroadcastMessage(const struct FEventMessageTag& Channel, const int32& Message, bool bSaveToChannel, class AActor* ActorContext)
+void UGameplayMessageRouter::K2_BroadcastMessage(const struct FGameplayTag& Channel, const int32& Message, bool bReplicate, bool bSaveToChannel, class AActor* ActorContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -173,6 +174,7 @@ void UGameplayMessageRouter::K2_BroadcastMessage(const struct FEventMessageTag& 
 
 	Parms.Channel = std::move(Channel);
 	Parms.Message = Message;
+	Parms.bReplicate = bReplicate;
 	Parms.bSaveToChannel = bSaveToChannel;
 	Parms.ActorContext = ActorContext;
 
@@ -182,62 +184,6 @@ void UGameplayMessageRouter::K2_BroadcastMessage(const struct FEventMessageTag& 
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameplayMessages.GameplayMessageRouter.HasValidSavedMessage
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FEventMessageTag&          Channel                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UGameplayMessageRouter::HasValidSavedMessage(const struct FEventMessageTag& Channel) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayMessageRouter", "HasValidSavedMessage");
-
-	Params::GameplayMessageRouter_HasValidSavedMessage Parms{};
-
-	Parms.Channel = std::move(Channel);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GameplayMessages.BlueprintEventMessageTagLibrary.GetEventMessageTagFromGameplayTag
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// const struct FGameplayTag&              InTag                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FEventMessageTag                 ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FEventMessageTag UBlueprintEventMessageTagLibrary::GetEventMessageTagFromGameplayTag(const struct FGameplayTag& InTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintEventMessageTagLibrary", "GetEventMessageTagFromGameplayTag");
-
-	Params::BlueprintEventMessageTagLibrary_GetEventMessageTagFromGameplayTag Parms{};
-
-	Parms.InTag = std::move(InTag);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 }

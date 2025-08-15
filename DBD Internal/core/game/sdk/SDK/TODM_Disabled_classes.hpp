@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TODM_Disabled.TODM_Disabled_C
-// 0x0010 (0x12F0 - 0x12E0)
+// 0x0010 (0x10A0 - 0x1090)
 class ATODM_Disabled_C final : public AMASTER_TODM_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_TODM_Disabled_C;                    // 0x12E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_TODM_Disabled_C;                    // 0x1090(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void UserConstructionScript();
+	void DisableLightAndFog(bool Enable);
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_TODM_Disabled(int32 EntryPoint);
-	void DisableLightAndFog(bool Enable);
 
 public:
 	static class UClass* StaticClass()
@@ -41,8 +41,8 @@ public:
 	}
 };
 static_assert(alignof(ATODM_Disabled_C) == 0x000010, "Wrong alignment on ATODM_Disabled_C");
-static_assert(sizeof(ATODM_Disabled_C) == 0x0012F0, "Wrong size on ATODM_Disabled_C");
-static_assert(offsetof(ATODM_Disabled_C, UberGraphFrame_TODM_Disabled_C) == 0x0012E0, "Member 'ATODM_Disabled_C::UberGraphFrame_TODM_Disabled_C' has a wrong offset!");
+static_assert(sizeof(ATODM_Disabled_C) == 0x0010A0, "Wrong size on ATODM_Disabled_C");
+static_assert(offsetof(ATODM_Disabled_C, UberGraphFrame_TODM_Disabled_C) == 0x001090, "Member 'ATODM_Disabled_C::UberGraphFrame_TODM_Disabled_C' has a wrong offset!");
 
 }
 

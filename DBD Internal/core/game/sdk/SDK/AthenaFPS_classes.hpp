@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaFPS.AthenaFPS_C
-// 0x0008 (0x02B8 - 0x02B0)
+// 0x0008 (0x02D0 - 0x02C8)
 class UAthenaFPS_C final : public UFortHUDElementWidget
 {
 public:
-	class UAthenaFPSTicker_C*                     AthenaFPSTicker;                                   // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaFPSTicker_C*                     AthenaFPSTicker;                                   // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -33,6 +33,9 @@ public:
 		return GetDefaultObjImpl<UAthenaFPS_C>();
 	}
 };
+static_assert(alignof(UAthenaFPS_C) == 0x000008, "Wrong alignment on UAthenaFPS_C");
+static_assert(sizeof(UAthenaFPS_C) == 0x0002D0, "Wrong size on UAthenaFPS_C");
+static_assert(offsetof(UAthenaFPS_C, AthenaFPSTicker) == 0x0002C8, "Member 'UAthenaFPS_C::AthenaFPSTicker' has a wrong offset!");
 
 }
 

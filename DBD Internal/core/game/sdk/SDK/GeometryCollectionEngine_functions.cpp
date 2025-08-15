@@ -217,56 +217,6 @@ void UChaosDestructionListener::SetCollisionEventRequestSettings(const struct FC
 }
 
 
-// Function GeometryCollectionEngine.ChaosDestructionListener.SetRemovalEventEnabled
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bIsEnabled                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UChaosDestructionListener::SetRemovalEventEnabled(bool bIsEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosDestructionListener", "SetRemovalEventEnabled");
-
-	Params::ChaosDestructionListener_SetRemovalEventEnabled Parms{};
-
-	Parms.bIsEnabled = bIsEnabled;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GeometryCollectionEngine.ChaosDestructionListener.SetRemovalEventRequestSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FChaosRemovalEventRequestSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void UChaosDestructionListener::SetRemovalEventRequestSettings(const struct FChaosRemovalEventRequestSettings& InSettings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosDestructionListener", "SetRemovalEventRequestSettings");
-
-	Params::ChaosDestructionListener_SetRemovalEventRequestSettings Parms{};
-
-	Parms.InSettings = std::move(InSettings);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function GeometryCollectionEngine.ChaosDestructionListener.SetTrailingEventEnabled
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -320,7 +270,7 @@ void UChaosDestructionListener::SetTrailingEventRequestSettings(const struct FCh
 // Function GeometryCollectionEngine.ChaosDestructionListener.SortBreakingEvents
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<struct FChaosBreakingEventData>& BreakingEvents                                         (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FChaosBreakingEventData>& BreakingEvents                                         (Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EChaosBreakingSortMethod                SortMethod                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UChaosDestructionListener::SortBreakingEvents(TArray<struct FChaosBreakingEventData>& BreakingEvents, EChaosBreakingSortMethod SortMethod)
@@ -349,7 +299,7 @@ void UChaosDestructionListener::SortBreakingEvents(TArray<struct FChaosBreakingE
 // Function GeometryCollectionEngine.ChaosDestructionListener.SortCollisionEvents
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<struct FChaosCollisionEventData>&CollisionEvents                                        (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FChaosCollisionEventData>&CollisionEvents                                        (Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EChaosCollisionSortMethod               SortMethod                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UChaosDestructionListener::SortCollisionEvents(TArray<struct FChaosCollisionEventData>& CollisionEvents, EChaosCollisionSortMethod SortMethod)
@@ -375,39 +325,10 @@ void UChaosDestructionListener::SortCollisionEvents(TArray<struct FChaosCollisio
 }
 
 
-// Function GeometryCollectionEngine.ChaosDestructionListener.SortRemovalEvents
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// TArray<struct FChaosRemovalEventData>&  RemovalEvents                                          (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// EChaosRemovalSortMethod                 SortMethod                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UChaosDestructionListener::SortRemovalEvents(TArray<struct FChaosRemovalEventData>& RemovalEvents, EChaosRemovalSortMethod SortMethod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosDestructionListener", "SortRemovalEvents");
-
-	Params::ChaosDestructionListener_SortRemovalEvents Parms{};
-
-	Parms.RemovalEvents = std::move(RemovalEvents);
-	Parms.SortMethod = SortMethod;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	RemovalEvents = std::move(Parms.RemovalEvents);
-}
-
-
 // Function GeometryCollectionEngine.ChaosDestructionListener.SortTrailingEvents
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<struct FChaosTrailingEventData>& TrailingEvents                                         (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FChaosTrailingEventData>& TrailingEvents                                         (Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EChaosTrailingSortMethod                SortMethod                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UChaosDestructionListener::SortTrailingEvents(TArray<struct FChaosTrailingEventData>& TrailingEvents, EChaosTrailingSortMethod SortMethod)
@@ -635,31 +556,6 @@ void UGeometryCollectionComponent::SetNotifyBreaks(bool bNewNotifyBreaks)
 	Params::GeometryCollectionComponent_SetNotifyBreaks Parms{};
 
 	Parms.bNewNotifyBreaks = bNewNotifyBreaks;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyRemovals
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bNewNotifyRemovals                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGeometryCollectionComponent::SetNotifyRemovals(bool bNewNotifyRemovals)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GeometryCollectionComponent", "SetNotifyRemovals");
-
-	Params::GeometryCollectionComponent_SetNotifyRemovals Parms{};
-
-	Parms.bNewNotifyRemovals = bNewNotifyRemovals;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

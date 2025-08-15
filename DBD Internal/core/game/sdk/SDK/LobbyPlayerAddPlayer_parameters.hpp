@@ -21,8 +21,8 @@ struct LobbyPlayerAddPlayer_C_ExecuteUbergraph_LobbyPlayerAddPlayer final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(LobbyPlayerAddPlayer_C_ExecuteUbergraph_LobbyPlayerAddPlayer) == 0x000008, "Wrong alignment on LobbyPlayerAddPlayer_C_ExecuteUbergraph_LobbyPlayerAddPlayer");
 static_assert(sizeof(LobbyPlayerAddPlayer_C_ExecuteUbergraph_LobbyPlayerAddPlayer) == 0x000018, "Wrong size on LobbyPlayerAddPlayer_C_ExecuteUbergraph_LobbyPlayerAddPlayer");

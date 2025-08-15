@@ -10,45 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "FortniteUI_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass NameLoadoutPopup.NameLoadoutPopup_C
-// 0x00A0 (0x0620 - 0x0580)
+// 0x0028 (0x0500 - 0x04D8)
 class UNameLoadoutPopup_C final : public UFortNameLoadoutPopup
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0580(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Anim_2Slots;                                       // 0x0588(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anim_1Slot;                                        // 0x0590(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class URetainerBox*                           ExistingPreset;                                    // 0x0598(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_BackgroundBottomBar;                         // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_BackLight;                                   // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_CardExistingPreset_OverlayColor;             // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_CardExistingPreset_Shadow;                   // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_CardNewPreset_Shadow;                        // 0x05C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Containment;                                 // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_DividerLine;                                 // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_HeaderIcon;                                  // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_LoadoutArrow;                                // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_LoadoutArrow_Shadow;                         // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULightbox_C*                            Lightbox;                                          // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           NewPreset;                                         // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_Header;                                   // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_HeaderTitle;                                  // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_ShortDescription;                             // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_SubHeaderTitle;                               // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void BndEvt__NameLoadoutPopup_Card_ExistingPreset_K2Node_ComponentBoundEvent_1_OnVisibilityChangedEvent__DelegateSignature(ESlateVisibility InVisibility);
-	void Construct();
-	void ExecuteUbergraph_NameLoadoutPopup(int32 EntryPoint);
+	class UImage*                                 Image_66;                                          // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Separator_Down;                              // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Separator_Up;                                // 0x04E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULightbox_C*                            Lightbox;                                          // 0x04F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ShortDescriptionText;                              // 0x04F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -61,27 +38,12 @@ public:
 	}
 };
 static_assert(alignof(UNameLoadoutPopup_C) == 0x000008, "Wrong alignment on UNameLoadoutPopup_C");
-static_assert(sizeof(UNameLoadoutPopup_C) == 0x000620, "Wrong size on UNameLoadoutPopup_C");
-static_assert(offsetof(UNameLoadoutPopup_C, UberGraphFrame) == 0x000580, "Member 'UNameLoadoutPopup_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Anim_2Slots) == 0x000588, "Member 'UNameLoadoutPopup_C::Anim_2Slots' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Anim_1Slot) == 0x000590, "Member 'UNameLoadoutPopup_C::Anim_1Slot' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, ExistingPreset) == 0x000598, "Member 'UNameLoadoutPopup_C::ExistingPreset' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Image_BackgroundBottomBar) == 0x0005A0, "Member 'UNameLoadoutPopup_C::Image_BackgroundBottomBar' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Image_BackLight) == 0x0005A8, "Member 'UNameLoadoutPopup_C::Image_BackLight' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Image_CardExistingPreset_OverlayColor) == 0x0005B0, "Member 'UNameLoadoutPopup_C::Image_CardExistingPreset_OverlayColor' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Image_CardExistingPreset_Shadow) == 0x0005B8, "Member 'UNameLoadoutPopup_C::Image_CardExistingPreset_Shadow' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Image_CardNewPreset_Shadow) == 0x0005C0, "Member 'UNameLoadoutPopup_C::Image_CardNewPreset_Shadow' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Image_Containment) == 0x0005C8, "Member 'UNameLoadoutPopup_C::Image_Containment' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Image_DividerLine) == 0x0005D0, "Member 'UNameLoadoutPopup_C::Image_DividerLine' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Image_HeaderIcon) == 0x0005D8, "Member 'UNameLoadoutPopup_C::Image_HeaderIcon' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Image_LoadoutArrow) == 0x0005E0, "Member 'UNameLoadoutPopup_C::Image_LoadoutArrow' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Image_LoadoutArrow_Shadow) == 0x0005E8, "Member 'UNameLoadoutPopup_C::Image_LoadoutArrow_Shadow' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Lightbox) == 0x0005F0, "Member 'UNameLoadoutPopup_C::Lightbox' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, NewPreset) == 0x0005F8, "Member 'UNameLoadoutPopup_C::NewPreset' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, SafeZone_Header) == 0x000600, "Member 'UNameLoadoutPopup_C::SafeZone_Header' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Text_HeaderTitle) == 0x000608, "Member 'UNameLoadoutPopup_C::Text_HeaderTitle' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Text_ShortDescription) == 0x000610, "Member 'UNameLoadoutPopup_C::Text_ShortDescription' has a wrong offset!");
-static_assert(offsetof(UNameLoadoutPopup_C, Text_SubHeaderTitle) == 0x000618, "Member 'UNameLoadoutPopup_C::Text_SubHeaderTitle' has a wrong offset!");
+static_assert(sizeof(UNameLoadoutPopup_C) == 0x000500, "Wrong size on UNameLoadoutPopup_C");
+static_assert(offsetof(UNameLoadoutPopup_C, Image_66) == 0x0004D8, "Member 'UNameLoadoutPopup_C::Image_66' has a wrong offset!");
+static_assert(offsetof(UNameLoadoutPopup_C, Image_Separator_Down) == 0x0004E0, "Member 'UNameLoadoutPopup_C::Image_Separator_Down' has a wrong offset!");
+static_assert(offsetof(UNameLoadoutPopup_C, Image_Separator_Up) == 0x0004E8, "Member 'UNameLoadoutPopup_C::Image_Separator_Up' has a wrong offset!");
+static_assert(offsetof(UNameLoadoutPopup_C, Lightbox) == 0x0004F0, "Member 'UNameLoadoutPopup_C::Lightbox' has a wrong offset!");
+static_assert(offsetof(UNameLoadoutPopup_C, ShortDescriptionText) == 0x0004F8, "Member 'UNameLoadoutPopup_C::ShortDescriptionText' has a wrong offset!");
 
 }
 

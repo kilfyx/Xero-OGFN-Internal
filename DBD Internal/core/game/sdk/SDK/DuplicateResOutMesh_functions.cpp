@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function DuplicateResOutMesh.DuplicateResOutMesh_C.CharacterSpawnInTimeline__FinishedFunc
-// (BlueprintEvent)
-
-void ADuplicateResOutMesh_C::CharacterSpawnInTimeline__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DuplicateResOutMesh_C", "CharacterSpawnInTimeline__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function DuplicateResOutMesh.DuplicateResOutMesh_C.CharacterSpawnInTimeline__UpdateFunc
-// (BlueprintEvent)
-
-void ADuplicateResOutMesh_C::CharacterSpawnInTimeline__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DuplicateResOutMesh_C", "CharacterSpawnInTimeline__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function DuplicateResOutMesh.DuplicateResOutMesh_C.ExecuteUbergraph_DuplicateResOutMesh
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -65,29 +37,101 @@ void ADuplicateResOutMesh_C::ExecuteUbergraph_DuplicateResOutMesh(int32 EntryPoi
 }
 
 
-// Function DuplicateResOutMesh.DuplicateResOutMesh_C.External Mesh Masked Setup
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function DuplicateResOutMesh.DuplicateResOutMesh_C.UpdateExternalParameters
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class USkeletalMeshComponent*>&  External_MEsh_Component_Array                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// TArray<class UMaterialInstanceDynamic*>*Corrected_Mid_Array                                    (Parm, OutParm)
+// const TArray<class UMaterialInstanceDynamic*>&MID_Array                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<class USkeletalMeshComponent*>&External_Mesh_Component_Array                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 
-void ADuplicateResOutMesh_C::External_Mesh_Masked_Setup(TArray<class USkeletalMeshComponent*>& External_MEsh_Component_Array, TArray<class UMaterialInstanceDynamic*>* Corrected_Mid_Array)
+void ADuplicateResOutMesh_C::UpdateExternalParameters(const TArray<class UMaterialInstanceDynamic*>& MID_Array, const TArray<class USkeletalMeshComponent*>& External_Mesh_Component_Array)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DuplicateResOutMesh_C", "External Mesh Masked Setup");
+		Func = Class->GetFunction("DuplicateResOutMesh_C", "UpdateExternalParameters");
 
-	Params::DuplicateResOutMesh_C_External_Mesh_Masked_Setup Parms{};
+	Params::DuplicateResOutMesh_C_UpdateExternalParameters Parms{};
 
-	Parms.External_MEsh_Component_Array = std::move(External_MEsh_Component_Array);
+	Parms.MID_Array = std::move(MID_Array);
+	Parms.External_Mesh_Component_Array = std::move(External_Mesh_Component_Array);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	External_MEsh_Component_Array = std::move(Parms.External_MEsh_Component_Array);
 
-	if (Corrected_Mid_Array != nullptr)
-		*Corrected_Mid_Array = std::move(Parms.Corrected_Mid_Array);
+// Function DuplicateResOutMesh.DuplicateResOutMesh_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ADuplicateResOutMesh_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DuplicateResOutMesh_C", "ReceiveTick");
+
+	Params::DuplicateResOutMesh_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DuplicateResOutMesh.DuplicateResOutMesh_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ADuplicateResOutMesh_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DuplicateResOutMesh_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function DuplicateResOutMesh.DuplicateResOutMesh_C.CharacterSpawnInTimeline__UpdateFunc
+// (BlueprintEvent)
+
+void ADuplicateResOutMesh_C::CharacterSpawnInTimeline__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DuplicateResOutMesh_C", "CharacterSpawnInTimeline__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function DuplicateResOutMesh.DuplicateResOutMesh_C.CharacterSpawnInTimeline__FinishedFunc
+// (BlueprintEvent)
+
+void ADuplicateResOutMesh_C::CharacterSpawnInTimeline__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DuplicateResOutMesh_C", "CharacterSpawnInTimeline__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function DuplicateResOutMesh.DuplicateResOutMesh_C.initializeExternalSkeletalMeshArray
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ADuplicateResOutMesh_C::initializeExternalSkeletalMeshArray()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DuplicateResOutMesh_C", "initializeExternalSkeletalMeshArray");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -105,15 +149,15 @@ void ADuplicateResOutMesh_C::Find_Bounds()
 }
 
 
-// Function DuplicateResOutMesh.DuplicateResOutMesh_C.initializeExternalSkeletalMeshArray
+// Function DuplicateResOutMesh.DuplicateResOutMesh_C.Spawn  Light
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ADuplicateResOutMesh_C::initializeExternalSkeletalMeshArray()
+void ADuplicateResOutMesh_C::Spawn__Light()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DuplicateResOutMesh_C", "initializeExternalSkeletalMeshArray");
+		Func = Class->GetFunction("DuplicateResOutMesh_C", "Spawn  Light");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -169,65 +213,29 @@ void ADuplicateResOutMesh_C::ProcessSpawnInTimeline(float ZHeight, float LightIn
 }
 
 
-// Function DuplicateResOutMesh.DuplicateResOutMesh_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ADuplicateResOutMesh_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DuplicateResOutMesh_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function DuplicateResOutMesh.DuplicateResOutMesh_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// Function DuplicateResOutMesh.DuplicateResOutMesh_C.External Mesh Masked Setup
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class USkeletalMeshComponent*>&  External_Mesh_Component_Array                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// TArray<class UMaterialInstanceDynamic*>*Corrected_Mid_Array                                    (Parm, OutParm, HasGetValueTypeHash)
 
-void ADuplicateResOutMesh_C::ReceiveTick(float DeltaSeconds)
+void ADuplicateResOutMesh_C::External_Mesh_Masked_Setup(TArray<class USkeletalMeshComponent*>& External_Mesh_Component_Array, TArray<class UMaterialInstanceDynamic*>* Corrected_Mid_Array)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DuplicateResOutMesh_C", "ReceiveTick");
+		Func = Class->GetFunction("DuplicateResOutMesh_C", "External Mesh Masked Setup");
 
-	Params::DuplicateResOutMesh_C_ReceiveTick Parms{};
+	Params::DuplicateResOutMesh_C_External_Mesh_Masked_Setup Parms{};
 
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.External_Mesh_Component_Array = std::move(External_Mesh_Component_Array);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
+	External_Mesh_Component_Array = std::move(Parms.External_Mesh_Component_Array);
 
-// Function DuplicateResOutMesh.DuplicateResOutMesh_C.RestoreInProgressRes
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ADuplicateResOutMesh_C::RestoreInProgressRes()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DuplicateResOutMesh_C", "RestoreInProgressRes");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function DuplicateResOutMesh.DuplicateResOutMesh_C.Spawn  Light
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ADuplicateResOutMesh_C::Spawn__Light()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DuplicateResOutMesh_C", "Spawn  Light");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (Corrected_Mid_Array != nullptr)
+		*Corrected_Mid_Array = std::move(Parms.Corrected_Mid_Array);
 }
 
 
@@ -245,25 +253,17 @@ void ADuplicateResOutMesh_C::Store_Original_Material_for_Teleport_In()
 }
 
 
-// Function DuplicateResOutMesh.DuplicateResOutMesh_C.UpdateExternalParameters
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<class UMaterialInstanceDynamic*>&MID_Array                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<class USkeletalMeshComponent*>&External_MEsh_Component_Array                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// Function DuplicateResOutMesh.DuplicateResOutMesh_C.RestoreInProgressRes
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ADuplicateResOutMesh_C::UpdateExternalParameters(const TArray<class UMaterialInstanceDynamic*>& MID_Array, const TArray<class USkeletalMeshComponent*>& External_MEsh_Component_Array)
+void ADuplicateResOutMesh_C::RestoreInProgressRes()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DuplicateResOutMesh_C", "UpdateExternalParameters");
+		Func = Class->GetFunction("DuplicateResOutMesh_C", "RestoreInProgressRes");
 
-	Params::DuplicateResOutMesh_C_UpdateExternalParameters Parms{};
-
-	Parms.MID_Array = std::move(MID_Array);
-	Parms.External_MEsh_Component_Array = std::move(External_MEsh_Component_Array);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

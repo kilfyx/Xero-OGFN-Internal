@@ -14,27 +14,6 @@
 namespace SDK
 {
 
-// Enum VectorVM.EVectorVMBaseTypes
-// NumValues: 0x0005
-enum class EVectorVMBaseTypes : uint8
-{
-	Float                                    = 0,
-	Int                                      = 1,
-	Bool                                     = 2,
-	Num                                      = 3,
-	EVectorVMBaseTypes_MAX                   = 4,
-};
-
-// Enum VectorVM.EVectorVMOperandLocation
-// NumValues: 0x0004
-enum class EVectorVMOperandLocation : uint8
-{
-	Register                                 = 0,
-	Constant                                 = 1,
-	Num                                      = 2,
-	EVectorVMOperandLocation_MAX             = 3,
-};
-
 // Enum VectorVM.EVectorVMOp
 // NumValues: 0x0060
 enum class EVectorVMOp : uint8
@@ -135,6 +114,27 @@ enum class EVectorVMOp : uint8
 	update_id                                = 93,
 	acquire_id                               = 94,
 	NumOpcodes                               = 95,
+};
+
+// Enum VectorVM.EVectorVMOperandLocation
+// NumValues: 0x0004
+enum class EVectorVMOperandLocation : uint8
+{
+	Register                                 = 0,
+	Constant                                 = 1,
+	Num                                      = 2,
+	EVectorVMOperandLocation_MAX             = 3,
+};
+
+// Enum VectorVM.EVectorVMBaseTypes
+// NumValues: 0x0005
+enum class EVectorVMBaseTypes : uint8
+{
+	Float                                    = 0,
+	Int                                      = 1,
+	Bool                                     = 2,
+	Num                                      = 3,
+	EVectorVMBaseTypes_MAX                   = 4,
 };
 
 }

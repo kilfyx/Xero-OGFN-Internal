@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBulletWhipTrackerComponent_C>();
 	}
 };
+static_assert(alignof(UBulletWhipTrackerComponent_C) == 0x000008, "Wrong alignment on UBulletWhipTrackerComponent_C");
+static_assert(sizeof(UBulletWhipTrackerComponent_C) == 0x0000F0, "Wrong size on UBulletWhipTrackerComponent_C");
 
 }
 

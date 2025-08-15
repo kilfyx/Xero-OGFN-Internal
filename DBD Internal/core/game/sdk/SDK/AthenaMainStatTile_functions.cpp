@@ -20,14 +20,14 @@ namespace SDK
 // Function AthenaMainStatTile.AthenaMainStatTile_C.SetStatValue
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             StatValueAsText                                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      StatValueAsText                                        (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UAthenaMainStatTile_C::SetStatValue(const class FText& StatValueAsText)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetStatValue");
+		Func = Class->GetFunction("AthenaMainStatTile_C", "SetStatValue");
 
 	Params::AthenaMainStatTile_C_SetStatValue Parms{};
 

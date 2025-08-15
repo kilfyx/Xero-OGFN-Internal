@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Grant_Slurpshroom_ShieldHealth_C>();
 	}
 };
+static_assert(alignof(UGE_Grant_Slurpshroom_ShieldHealth_C) == 0x000008, "Wrong alignment on UGE_Grant_Slurpshroom_ShieldHealth_C");
+static_assert(sizeof(UGE_Grant_Slurpshroom_ShieldHealth_C) == 0x000800, "Wrong size on UGE_Grant_Slurpshroom_ShieldHealth_C");
 
 }
 

@@ -17,6 +17,31 @@
 namespace SDK
 {
 
+// Function NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect.GetSpawnedEffect
+// (Final, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// class UFXSystemComponent*               ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UFXSystemComponent* UAnimNotify_PlayNiagaraEffect::GetSpawnedEffect() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AnimNotify_PlayNiagaraEffect", "GetSpawnedEffect");
+
+	Params::AnimNotify_PlayNiagaraEffect_GetSpawnedEffect Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function NiagaraAnimNotifies.AnimNotifyState_TimedNiagaraEffect.GetSpawnedEffect
 // (Final, Native, Public, BlueprintCallable, Const)
 // Parameters:
@@ -61,31 +86,6 @@ float UAnimNotifyState_TimedNiagaraEffectAdvanced::GetNotifyProgress(class UMesh
 	Params::AnimNotifyState_TimedNiagaraEffectAdvanced_GetNotifyProgress Parms{};
 
 	Parms.MeshComp = MeshComp;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect.GetSpawnedEffect
-// (Final, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// class UFXSystemComponent*               ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UFXSystemComponent* UAnimNotify_PlayNiagaraEffect::GetSpawnedEffect() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify_PlayNiagaraEffect", "GetSpawnedEffect");
-
-	Params::AnimNotify_PlayNiagaraEffect_GetSpawnedEffect Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

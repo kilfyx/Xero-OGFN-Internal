@@ -71,26 +71,6 @@ void UUI_ScannerScreen_C::EventScanning()
 }
 
 
-// Function UI_ScannerScreen.UI_ScannerScreen_C.EventFail
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      ScreenText                                             (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UUI_ScannerScreen_C::EventFail(const class FText& ScreenText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_ScannerScreen_C", "EventFail");
-
-	Params::UI_ScannerScreen_C_EventFail Parms{};
-
-	Parms.ScreenText = std::move(ScreenText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function UI_ScannerScreen.UI_ScannerScreen_C.EventSuccess
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -104,6 +84,26 @@ void UUI_ScannerScreen_C::EventSuccess(const class FText& ScreenText)
 		Func = Class->GetFunction("UI_ScannerScreen_C", "EventSuccess");
 
 	Params::UI_ScannerScreen_C_EventSuccess Parms{};
+
+	Parms.ScreenText = std::move(ScreenText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_ScannerScreen.UI_ScannerScreen_C.EventFail
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      ScreenText                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UUI_ScannerScreen_C::EventFail(const class FText& ScreenText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_ScannerScreen_C", "EventFail");
+
+	Params::UI_ScannerScreen_C_EventFail Parms{};
 
 	Parms.ScreenText = std::move(ScreenText);
 

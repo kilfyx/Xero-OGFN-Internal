@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_RiftPortal_Teleported_C>();
 	}
 };
+static_assert(alignof(UGE_RiftPortal_Teleported_C) == 0x000008, "Wrong alignment on UGE_RiftPortal_Teleported_C");
+static_assert(sizeof(UGE_RiftPortal_Teleported_C) == 0x000800, "Wrong size on UGE_RiftPortal_Teleported_C");
 
 }
 

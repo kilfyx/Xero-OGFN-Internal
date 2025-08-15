@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // Class FortSoundCueTemplates.FortSoundCueTemplateBase
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0570 - 0x0570)
 class UFortSoundCueTemplateBase : public USoundCueTemplate
 {
 public:
@@ -30,9 +30,11 @@ public:
 		return GetDefaultObjImpl<UFortSoundCueTemplateBase>();
 	}
 };
+static_assert(alignof(UFortSoundCueTemplateBase) == 0x000008, "Wrong alignment on UFortSoundCueTemplateBase");
+static_assert(sizeof(UFortSoundCueTemplateBase) == 0x000570, "Wrong size on UFortSoundCueTemplateBase");
 
 // Class FortSoundCueTemplates.EmoteBase
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0570 - 0x0570)
 class UEmoteBase : public UFortSoundCueTemplateBase
 {
 public:
@@ -45,9 +47,11 @@ public:
 		return GetDefaultObjImpl<UEmoteBase>();
 	}
 };
+static_assert(alignof(UEmoteBase) == 0x000008, "Wrong alignment on UEmoteBase");
+static_assert(sizeof(UEmoteBase) == 0x000570, "Wrong size on UEmoteBase");
 
 // Class FortSoundCueTemplates.EmoteFoley
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0570 - 0x0570)
 class UEmoteFoley final : public UEmoteBase
 {
 public:
@@ -60,9 +64,11 @@ public:
 		return GetDefaultObjImpl<UEmoteFoley>();
 	}
 };
+static_assert(alignof(UEmoteFoley) == 0x000008, "Wrong alignment on UEmoteFoley");
+static_assert(sizeof(UEmoteFoley) == 0x000570, "Wrong size on UEmoteFoley");
 
 // Class FortSoundCueTemplates.EmoteMusic
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0570 - 0x0570)
 class UEmoteMusic final : public UEmoteBase
 {
 public:
@@ -75,9 +81,11 @@ public:
 		return GetDefaultObjImpl<UEmoteMusic>();
 	}
 };
+static_assert(alignof(UEmoteMusic) == 0x000008, "Wrong alignment on UEmoteMusic");
+static_assert(sizeof(UEmoteMusic) == 0x000570, "Wrong size on UEmoteMusic");
 
 // Class FortSoundCueTemplates.EmoteMusic3P
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0570 - 0x0570)
 class UEmoteMusic3P final : public UEmoteBase
 {
 public:
@@ -90,25 +98,29 @@ public:
 		return GetDefaultObjImpl<UEmoteMusic3P>();
 	}
 };
+static_assert(alignof(UEmoteMusic3P) == 0x000008, "Wrong alignment on UEmoteMusic3P");
+static_assert(sizeof(UEmoteMusic3P) == 0x000570, "Wrong size on UEmoteMusic3P");
 
-// Class FortSoundCueTemplates.FortSoundCueTemplateSimple
-// 0x0000 (0x0550 - 0x0550)
-class UFortSoundCueTemplateSimple : public UFortSoundCueTemplateBase
+// Class FortSoundCueTemplates.GliderOpenClose
+// 0x0000 (0x0570 - 0x0570)
+class UGliderOpenClose : public UFortSoundCueTemplateBase
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FortSoundCueTemplateSimple">();
+		return StaticClassImpl<"GliderOpenClose">();
 	}
-	static class UFortSoundCueTemplateSimple* GetDefaultObj()
+	static class UGliderOpenClose* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UFortSoundCueTemplateSimple>();
+		return GetDefaultObjImpl<UGliderOpenClose>();
 	}
 };
+static_assert(alignof(UGliderOpenClose) == 0x000008, "Wrong alignment on UGliderOpenClose");
+static_assert(sizeof(UGliderOpenClose) == 0x000570, "Wrong size on UGliderOpenClose");
 
 // Class FortSoundCueTemplates.GliderOpen
-// 0x0000 (0x0550 - 0x0550)
-class UGliderOpen final : public UFortSoundCueTemplateSimple
+// 0x0000 (0x0570 - 0x0570)
+class UGliderOpen final : public UGliderOpenClose
 {
 public:
 	static class UClass* StaticClass()
@@ -120,10 +132,12 @@ public:
 		return GetDefaultObjImpl<UGliderOpen>();
 	}
 };
+static_assert(alignof(UGliderOpen) == 0x000008, "Wrong alignment on UGliderOpen");
+static_assert(sizeof(UGliderOpen) == 0x000570, "Wrong size on UGliderOpen");
 
 // Class FortSoundCueTemplates.GliderClose
-// 0x0000 (0x0550 - 0x0550)
-class UGliderClose final : public UFortSoundCueTemplateSimple
+// 0x0000 (0x0570 - 0x0570)
+class UGliderClose final : public UGliderOpenClose
 {
 public:
 	static class UClass* StaticClass()
@@ -135,9 +149,11 @@ public:
 		return GetDefaultObjImpl<UGliderClose>();
 	}
 };
+static_assert(alignof(UGliderClose) == 0x000008, "Wrong alignment on UGliderClose");
+static_assert(sizeof(UGliderClose) == 0x000570, "Wrong size on UGliderClose");
 
 // Class FortSoundCueTemplates.GliderThrustLoop
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0570 - 0x0570)
 class UGliderThrustLoop final : public UFortSoundCueTemplateBase
 {
 public:
@@ -150,9 +166,11 @@ public:
 		return GetDefaultObjImpl<UGliderThrustLoop>();
 	}
 };
+static_assert(alignof(UGliderThrustLoop) == 0x000008, "Wrong alignment on UGliderThrustLoop");
+static_assert(sizeof(UGliderThrustLoop) == 0x000570, "Wrong size on UGliderThrustLoop");
 
 // Class FortSoundCueTemplates.GliderThrustStart
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0570 - 0x0570)
 class UGliderThrustStart final : public UFortSoundCueTemplateBase
 {
 public:
@@ -165,54 +183,11 @@ public:
 		return GetDefaultObjImpl<UGliderThrustStart>();
 	}
 };
-
-// Class FortSoundCueTemplates.MusicPack
-// 0x0000 (0x0550 - 0x0550)
-class UMusicPack final : public UFortSoundCueTemplateBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MusicPack">();
-	}
-	static class UMusicPack* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMusicPack>();
-	}
-};
-
-// Class FortSoundCueTemplates.PhysicsStateLoop
-// 0x0000 (0x0550 - 0x0550)
-class UPhysicsStateLoop final : public UFortSoundCueTemplateBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PhysicsStateLoop">();
-	}
-	static class UPhysicsStateLoop* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPhysicsStateLoop>();
-	}
-};
-
-// Class FortSoundCueTemplates.PhysicsImpact
-// 0x0000 (0x0550 - 0x0550)
-class UPhysicsImpact final : public UFortSoundCueTemplateBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PhysicsImpact">();
-	}
-	static class UPhysicsImpact* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPhysicsImpact>();
-	}
-};
+static_assert(alignof(UGliderThrustStart) == 0x000008, "Wrong alignment on UGliderThrustStart");
+static_assert(sizeof(UGliderThrustStart) == 0x000570, "Wrong size on UGliderThrustStart");
 
 // Class FortSoundCueTemplates.PickaxeBase
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0570 - 0x0570)
 class UPickaxeBase : public UFortSoundCueTemplateBase
 {
 public:
@@ -225,10 +200,12 @@ public:
 		return GetDefaultObjImpl<UPickaxeBase>();
 	}
 };
+static_assert(alignof(UPickaxeBase) == 0x000008, "Wrong alignment on UPickaxeBase");
+static_assert(sizeof(UPickaxeBase) == 0x000570, "Wrong size on UPickaxeBase");
 
 // Class FortSoundCueTemplates.PickaxeImpactEnemy
-// 0x0000 (0x0550 - 0x0550)
-class UPickaxeImpactEnemy final : public UFortSoundCueTemplateSimple
+// 0x0000 (0x0570 - 0x0570)
+class UPickaxeImpactEnemy final : public UFortSoundCueTemplateBase
 {
 public:
 	static class UClass* StaticClass()
@@ -240,9 +217,11 @@ public:
 		return GetDefaultObjImpl<UPickaxeImpactEnemy>();
 	}
 };
+static_assert(alignof(UPickaxeImpactEnemy) == 0x000008, "Wrong alignment on UPickaxeImpactEnemy");
+static_assert(sizeof(UPickaxeImpactEnemy) == 0x000570, "Wrong size on UPickaxeImpactEnemy");
 
 // Class FortSoundCueTemplates.PickaxeReady
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0570 - 0x0570)
 class UPickaxeReady final : public UPickaxeBase
 {
 public:
@@ -255,9 +234,11 @@ public:
 		return GetDefaultObjImpl<UPickaxeReady>();
 	}
 };
+static_assert(alignof(UPickaxeReady) == 0x000008, "Wrong alignment on UPickaxeReady");
+static_assert(sizeof(UPickaxeReady) == 0x000570, "Wrong size on UPickaxeReady");
 
 // Class FortSoundCueTemplates.PickaxeSwing
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0570 - 0x0570)
 class UPickaxeSwing final : public UPickaxeBase
 {
 public:
@@ -270,111 +251,8 @@ public:
 		return GetDefaultObjImpl<UPickaxeSwing>();
 	}
 };
-
-// Class FortSoundCueTemplates.WeaponLowAmmo
-// 0x0000 (0x0550 - 0x0550)
-class UWeaponLowAmmo final : public UFortSoundCueTemplateSimple
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"WeaponLowAmmo">();
-	}
-	static class UWeaponLowAmmo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWeaponLowAmmo>();
-	}
-};
-
-// Class FortSoundCueTemplates.WeaponOutOfAmmo
-// 0x0000 (0x0550 - 0x0550)
-class UWeaponOutOfAmmo final : public UFortSoundCueTemplateSimple
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"WeaponOutOfAmmo">();
-	}
-	static class UWeaponOutOfAmmo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWeaponOutOfAmmo>();
-	}
-};
-
-// Class FortSoundCueTemplates.WeaponReloadStart
-// 0x0000 (0x0550 - 0x0550)
-class UWeaponReloadStart final : public UFortSoundCueTemplateSimple
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"WeaponReloadStart">();
-	}
-	static class UWeaponReloadStart* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWeaponReloadStart>();
-	}
-};
-
-// Class FortSoundCueTemplates.WeaponReloadInsert
-// 0x0000 (0x0550 - 0x0550)
-class UWeaponReloadInsert final : public UFortSoundCueTemplateSimple
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"WeaponReloadInsert">();
-	}
-	static class UWeaponReloadInsert* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWeaponReloadInsert>();
-	}
-};
-
-// Class FortSoundCueTemplates.WeaponReloadEnd
-// 0x0000 (0x0550 - 0x0550)
-class UWeaponReloadEnd final : public UFortSoundCueTemplateSimple
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"WeaponReloadEnd">();
-	}
-	static class UWeaponReloadEnd* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWeaponReloadEnd>();
-	}
-};
-
-// Class FortSoundCueTemplates.WeaponTargetingStart
-// 0x0000 (0x0550 - 0x0550)
-class UWeaponTargetingStart final : public UFortSoundCueTemplateSimple
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"WeaponTargetingStart">();
-	}
-	static class UWeaponTargetingStart* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWeaponTargetingStart>();
-	}
-};
-
-// Class FortSoundCueTemplates.WeaponTargetingEnd
-// 0x0000 (0x0550 - 0x0550)
-class UWeaponTargetingEnd final : public UFortSoundCueTemplateSimple
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"WeaponTargetingEnd">();
-	}
-	static class UWeaponTargetingEnd* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWeaponTargetingEnd>();
-	}
-};
+static_assert(alignof(UPickaxeSwing) == 0x000008, "Wrong alignment on UPickaxeSwing");
+static_assert(sizeof(UPickaxeSwing) == 0x000570, "Wrong size on UPickaxeSwing");
 
 }
 

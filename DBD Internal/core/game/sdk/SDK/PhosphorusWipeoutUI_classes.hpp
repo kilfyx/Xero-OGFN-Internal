@@ -18,15 +18,14 @@ namespace SDK
 {
 
 // Class PhosphorusWipeoutUI.PhosphorusKnockBackWidget
-// 0x0010 (0x0320 - 0x0310)
+// 0x0008 (0x0328 - 0x0320)
 class UPhosphorusKnockBackWidget final : public UPhosphorusWidgetBase
 {
 public:
-	class AFortAthenaMutator_PhosphorusWipeout*   CachedPhosphorusWipeoutMutator;                    // 0x0310(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class AFortAthenaMutator_Knockback*           CachedKnockbackMutator;                            // 0x0318(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class AFortAthenaMutator_PhosphorusWipeout*   CachedPhosphorusWipeoutMutator;                    // 0x0320(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
-	void KnockBackFromAllPlayersReceivedEvent(const struct FKnockbackMutatorData& KnockbackData);
+	void KnockBackFromAllPlayersReceivedEvent(const struct FPhosphorusWipeoutKnockBackData& KnockBackData);
 	void PhosphorusPhaseChangedEvent(class AFortAthenaMutator_Phosphorus* Mutator, EPhosphorusPhase Phase);
 
 public:
@@ -39,6 +38,9 @@ public:
 		return GetDefaultObjImpl<UPhosphorusKnockBackWidget>();
 	}
 };
+static_assert(alignof(UPhosphorusKnockBackWidget) == 0x000008, "Wrong alignment on UPhosphorusKnockBackWidget");
+static_assert(sizeof(UPhosphorusKnockBackWidget) == 0x000328, "Wrong size on UPhosphorusKnockBackWidget");
+static_assert(offsetof(UPhosphorusKnockBackWidget, CachedPhosphorusWipeoutMutator) == 0x000320, "Member 'UPhosphorusKnockBackWidget::CachedPhosphorusWipeoutMutator' has a wrong offset!");
 
 }
 

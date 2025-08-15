@@ -33,11 +33,12 @@ namespace jew
 		bool bNoReload = false;
 		bool bOnbro = false;
 		bool bFa = false;
-		bool bStorm = true;
+		bool bStorm = false;
 		bool bAimbot = false;
 		bool bPrediction = false;
 		bool bNoSpread = false;
-		int iAimbotKey = VK_SHIFT;
+		int iAimbotKey = VK_MENU;
+		int iMenukey = VK_SHIFT;
 
 		float DemoSpeedValue = 5.f;
 		float fAimFOV = 50.f;

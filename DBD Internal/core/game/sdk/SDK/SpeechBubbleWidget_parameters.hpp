@@ -23,10 +23,17 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_Event_InitObject;                           // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn;                    // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetCurrentSentenceSpeechText_ReturnValue; // 0x0020(0x0018)()
 };
+static_assert(alignof(SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget) == 0x000008, "Wrong alignment on SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget");
+static_assert(sizeof(SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget) == 0x000038, "Wrong size on SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget");
+static_assert(offsetof(SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget, EntryPoint) == 0x000000, "Member 'SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget::EntryPoint' has a wrong offset!");
+static_assert(offsetof(SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget, K2Node_Event_InitObject) == 0x000008, "Member 'SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget::K2Node_Event_InitObject' has a wrong offset!");
+static_assert(offsetof(SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget, K2Node_DynamicCast_AsFort_Pawn) == 0x000010, "Member 'SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget::K2Node_DynamicCast_AsFort_Pawn' has a wrong offset!");
+static_assert(offsetof(SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget, CallFunc_GetCurrentSentenceSpeechText_ReturnValue) == 0x000020, "Member 'SpeechBubbleWidget_C_ExecuteUbergraph_SpeechBubbleWidget::CallFunc_GetCurrentSentenceSpeechText_ReturnValue' has a wrong offset!");
 
 // Function SpeechBubbleWidget.SpeechBubbleWidget_C.InitFromObject
 // 0x0008 (0x0008 - 0x0000)
@@ -35,6 +42,9 @@ struct SpeechBubbleWidget_C_InitFromObject final
 public:
 	class UObject*                                InitObject;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(SpeechBubbleWidget_C_InitFromObject) == 0x000008, "Wrong alignment on SpeechBubbleWidget_C_InitFromObject");
+static_assert(sizeof(SpeechBubbleWidget_C_InitFromObject) == 0x000008, "Wrong size on SpeechBubbleWidget_C_InitFromObject");
+static_assert(offsetof(SpeechBubbleWidget_C_InitFromObject, InitObject) == 0x000000, "Member 'SpeechBubbleWidget_C_InitFromObject::InitObject' has a wrong offset!");
 
 }
 

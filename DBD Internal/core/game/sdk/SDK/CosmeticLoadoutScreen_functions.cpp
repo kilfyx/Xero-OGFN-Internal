@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function CosmeticLoadoutScreen.CosmeticLoadoutScreen_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UCosmeticLoadoutScreen_C::BP_OnActivated()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function CosmeticLoadoutScreen.CosmeticLoadoutScreen_C.ExecuteUbergraph_CosmeticLoadoutScreen
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -39,9 +25,9 @@ void UCosmeticLoadoutScreen_C::BP_OnActivated()
 void UCosmeticLoadoutScreen_C::ExecuteUbergraph_CosmeticLoadoutScreen(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_CosmeticLoadoutScreen");
+		Func = Class->GetFunction("CosmeticLoadoutScreen_C", "ExecuteUbergraph_CosmeticLoadoutScreen");
 
 	Params::CosmeticLoadoutScreen_C_ExecuteUbergraph_CosmeticLoadoutScreen Parms{};
 
@@ -59,15 +45,49 @@ void UCosmeticLoadoutScreen_C::ExecuteUbergraph_CosmeticLoadoutScreen(int32 Entr
 void UCosmeticLoadoutScreen_C::OnFlavorForScreenMode(EFortCosmeticLoadoutScreenMode NewMode)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnFlavorForScreenMode");
+		Func = Class->GetFunction("CosmeticLoadoutScreen_C", "OnFlavorForScreenMode");
 
 	Params::CosmeticLoadoutScreen_C_OnFlavorForScreenMode Parms{};
 
 	Parms.NewMode = NewMode;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function CosmeticLoadoutScreen.CosmeticLoadoutScreen_C.OnPreviewTile
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EFortLoadoutCardType                    CardType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCosmeticLoadoutScreen_C::OnPreviewTile(EFortLoadoutCardType CardType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CosmeticLoadoutScreen_C", "OnPreviewTile");
+
+	Params::CosmeticLoadoutScreen_C_OnPreviewTile Parms{};
+
+	Parms.CardType = CardType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function CosmeticLoadoutScreen.CosmeticLoadoutScreen_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UCosmeticLoadoutScreen_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CosmeticLoadoutScreen_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

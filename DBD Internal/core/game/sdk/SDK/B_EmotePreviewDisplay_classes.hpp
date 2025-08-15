@@ -19,30 +19,29 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_EmotePreviewDisplay.B_EmotePreviewDisplay_C
-// 0x0078 (0x0318 - 0x02A0)
+// 0x0078 (0x02B0 - 0x0238)
 class AB_EmotePreviewDisplay_C final : public AFortEmotePreviewActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        Scene;                                             // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAthenaEmojiItemDefinition*             EmojiItemDefinition;                               // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UAnimMontage>            Animation;                                         // 0x02B8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class UFortMontageItemDefinitionBase*         DanceOrEmojiItemDefinition;                        // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FName                                   StartSectionName;                                  // 0x02E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2EC[0x4];                                      // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnEmoteSetupFinished;                              // 0x02F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UAthenaShoutItemDefinition*             ShoutItemDefinition;                               // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class UAudioComponent*>                DynamicallySpawnedSounds;                          // 0x0308(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        Scene;                                             // 0x0240(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAthenaEmojiItemDefinition*             EmojiItemDefinition;                               // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UAnimMontage>            Animation;                                         // 0x0250(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UFortMontageItemDefinitionBase*         DanceOrEmojiItemDefinition;                        // 0x0278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   StartSectionName;                                  // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnEmoteSetupFinished;                              // 0x0288(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UAthenaShoutItemDefinition*             ShoutItemDefinition;                               // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UAudioComponent*>                DynamicallySpawnedSounds;                          // 0x02A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
 
 public:
-	void SpecialCaseShoutHandler();
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void PreviewEmote(const class UFortMontageItemDefinitionBase* Emote);
-	void PerformSpecialAction(class FName ActionName);
-	void OnLoaded_638F148342254A777E929B88915A8958(class UObject* Loaded);
-	void ExecuteUbergraph_B_EmotePreviewDisplay(int32 EntryPoint);
 	void CleanupDynamicSounds();
 	void ApplyEmoteToPet(bool IsRemoval);
+	void OnLoaded_638F148342254A777E929B88915A8958(class UObject* Loaded);
+	void PreviewEmote(const class UFortMontageItemDefinitionBase* Emote);
+	void PerformSpecialAction(class FName ActionName);
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void SpecialCaseShoutHandler();
+	void ExecuteUbergraph_B_EmotePreviewDisplay(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -55,16 +54,16 @@ public:
 	}
 };
 static_assert(alignof(AB_EmotePreviewDisplay_C) == 0x000008, "Wrong alignment on AB_EmotePreviewDisplay_C");
-static_assert(sizeof(AB_EmotePreviewDisplay_C) == 0x000318, "Wrong size on AB_EmotePreviewDisplay_C");
-static_assert(offsetof(AB_EmotePreviewDisplay_C, UberGraphFrame) == 0x0002A0, "Member 'AB_EmotePreviewDisplay_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_EmotePreviewDisplay_C, Scene) == 0x0002A8, "Member 'AB_EmotePreviewDisplay_C::Scene' has a wrong offset!");
-static_assert(offsetof(AB_EmotePreviewDisplay_C, EmojiItemDefinition) == 0x0002B0, "Member 'AB_EmotePreviewDisplay_C::EmojiItemDefinition' has a wrong offset!");
-static_assert(offsetof(AB_EmotePreviewDisplay_C, Animation) == 0x0002B8, "Member 'AB_EmotePreviewDisplay_C::Animation' has a wrong offset!");
-static_assert(offsetof(AB_EmotePreviewDisplay_C, DanceOrEmojiItemDefinition) == 0x0002E0, "Member 'AB_EmotePreviewDisplay_C::DanceOrEmojiItemDefinition' has a wrong offset!");
-static_assert(offsetof(AB_EmotePreviewDisplay_C, StartSectionName) == 0x0002E8, "Member 'AB_EmotePreviewDisplay_C::StartSectionName' has a wrong offset!");
-static_assert(offsetof(AB_EmotePreviewDisplay_C, OnEmoteSetupFinished) == 0x0002F0, "Member 'AB_EmotePreviewDisplay_C::OnEmoteSetupFinished' has a wrong offset!");
-static_assert(offsetof(AB_EmotePreviewDisplay_C, ShoutItemDefinition) == 0x000300, "Member 'AB_EmotePreviewDisplay_C::ShoutItemDefinition' has a wrong offset!");
-static_assert(offsetof(AB_EmotePreviewDisplay_C, DynamicallySpawnedSounds) == 0x000308, "Member 'AB_EmotePreviewDisplay_C::DynamicallySpawnedSounds' has a wrong offset!");
+static_assert(sizeof(AB_EmotePreviewDisplay_C) == 0x0002B0, "Wrong size on AB_EmotePreviewDisplay_C");
+static_assert(offsetof(AB_EmotePreviewDisplay_C, UberGraphFrame) == 0x000238, "Member 'AB_EmotePreviewDisplay_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_EmotePreviewDisplay_C, Scene) == 0x000240, "Member 'AB_EmotePreviewDisplay_C::Scene' has a wrong offset!");
+static_assert(offsetof(AB_EmotePreviewDisplay_C, EmojiItemDefinition) == 0x000248, "Member 'AB_EmotePreviewDisplay_C::EmojiItemDefinition' has a wrong offset!");
+static_assert(offsetof(AB_EmotePreviewDisplay_C, Animation) == 0x000250, "Member 'AB_EmotePreviewDisplay_C::Animation' has a wrong offset!");
+static_assert(offsetof(AB_EmotePreviewDisplay_C, DanceOrEmojiItemDefinition) == 0x000278, "Member 'AB_EmotePreviewDisplay_C::DanceOrEmojiItemDefinition' has a wrong offset!");
+static_assert(offsetof(AB_EmotePreviewDisplay_C, StartSectionName) == 0x000280, "Member 'AB_EmotePreviewDisplay_C::StartSectionName' has a wrong offset!");
+static_assert(offsetof(AB_EmotePreviewDisplay_C, OnEmoteSetupFinished) == 0x000288, "Member 'AB_EmotePreviewDisplay_C::OnEmoteSetupFinished' has a wrong offset!");
+static_assert(offsetof(AB_EmotePreviewDisplay_C, ShoutItemDefinition) == 0x000298, "Member 'AB_EmotePreviewDisplay_C::ShoutItemDefinition' has a wrong offset!");
+static_assert(offsetof(AB_EmotePreviewDisplay_C, DynamicallySpawnedSounds) == 0x0002A0, "Member 'AB_EmotePreviewDisplay_C::DynamicallySpawnedSounds' has a wrong offset!");
 
 }
 

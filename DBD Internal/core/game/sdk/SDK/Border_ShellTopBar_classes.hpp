@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Border-ShellTopBar.Border-ShellTopBar_C
-// 0x0000 (0x00E0 - 0x00E0)
+// 0x0000 (0x00B0 - 0x00B0)
 class UBorder_ShellTopBar_C : public UCommonBorderStyle
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBorder_ShellTopBar_C>();
 	}
 };
+static_assert(alignof(UBorder_ShellTopBar_C) == 0x000008, "Wrong alignment on UBorder_ShellTopBar_C");
+static_assert(sizeof(UBorder_ShellTopBar_C) == 0x0000B0, "Wrong size on UBorder_ShellTopBar_C");
 
 }
 

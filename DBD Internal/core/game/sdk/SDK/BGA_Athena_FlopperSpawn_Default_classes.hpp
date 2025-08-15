@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BGA_Athena_FlopperSpawn_Default.BGA_Athena_FlopperSpawn_Default_C
-// 0x0000 (0x0D40 - 0x0D40)
+// 0x0000 (0x0BF0 - 0x0BF0)
 class ABGA_Athena_FlopperSpawn_Default_C final : public ABGA_Athena_FlopperSpawn_Parent_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ABGA_Athena_FlopperSpawn_Default_C>();
 	}
 };
+static_assert(alignof(ABGA_Athena_FlopperSpawn_Default_C) == 0x000008, "Wrong alignment on ABGA_Athena_FlopperSpawn_Default_C");
+static_assert(sizeof(ABGA_Athena_FlopperSpawn_Default_C) == 0x000BF0, "Wrong size on ABGA_Athena_FlopperSpawn_Default_C");
 
 }
 

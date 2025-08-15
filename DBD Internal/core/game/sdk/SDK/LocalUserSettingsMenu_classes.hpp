@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LocalUserSettingsMenu.LocalUserSettingsMenu_C
-// 0x0000 (0x0368 - 0x0368)
+// 0x0000 (0x0360 - 0x0360)
 class ULocalUserSettingsMenu_C final : public UFortLocalUserSettingsMenu
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ULocalUserSettingsMenu_C>();
 	}
 };
+static_assert(alignof(ULocalUserSettingsMenu_C) == 0x000008, "Wrong alignment on ULocalUserSettingsMenu_C");
+static_assert(sizeof(ULocalUserSettingsMenu_C) == 0x000360, "Wrong size on ULocalUserSettingsMenu_C");
 
 }
 

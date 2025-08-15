@@ -21,6 +21,9 @@ struct FTimeSynth_VolumeGroupState final
 public:
 	class UTimeSynthVolumeGroup*                  VolumeGroup_2_2429D21F40CDF067A92E278220EC9800;    // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(FTimeSynth_VolumeGroupState) == 0x000008, "Wrong alignment on FTimeSynth_VolumeGroupState");
+static_assert(sizeof(FTimeSynth_VolumeGroupState) == 0x000008, "Wrong size on FTimeSynth_VolumeGroupState");
+static_assert(offsetof(FTimeSynth_VolumeGroupState, VolumeGroup_2_2429D21F40CDF067A92E278220EC9800) == 0x000000, "Member 'FTimeSynth_VolumeGroupState::VolumeGroup_2_2429D21F40CDF067A92E278220EC9800' has a wrong offset!");
 
 }
 

@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BuildingContainer_Physics_Parent.BuildingContainer_Physics_Parent_C
-// 0x0028 (0x0EE0 - 0x0EB8)
+// 0x0028 (0x0D28 - 0x0D00)
 class ABuildingContainer_Physics_Parent_C : public ABuildingContainer
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0EB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UFortLinkToActorComponent*              FortLinkToActor;                                   // 0x0EC0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UFortPhysicsObjectComponent*            FortPhysicsObject;                                 // 0x0EC8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 LinkedActor;                                       // 0x0ED0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Rep_WakeUp;                                        // 0x0ED8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UFortLinkToActorComponent*              FortLinkToActor;                                   // 0x0D08(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UFortPhysicsObjectComponent*            FortPhysicsObject;                                 // 0x0D10(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 LinkedActor;                                       // 0x0D18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Rep_WakeUp;                                        // 0x0D20(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
 
 public:
-	void BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_1_OnLinkedActorDestroyed__DelegateSignature(class AActor* DamageCauser);
-	void BndEvt__FortPhysicsObject_K2Node_ComponentBoundEvent_0_OnPhysicsObjectAwakeChanged__DelegateSignature(class UPrimitiveComponent* SimulatingComponent, bool bIsAwake);
-	void ExecuteUbergraph_BuildingContainer_Physics_Parent(int32 EntryPoint);
 	void OnRep_Rep_WakeUp();
+	void BndEvt__FortLinkToActor_K2Node_ComponentBoundEvent_1_OnLinkedActorDestroyed__DelegateSignature();
+	void BndEvt__FortPhysicsObject_K2Node_ComponentBoundEvent_0_OnPhysicsObjectAwakeChanged__DelegateSignature(class UPrimitiveComponent* SimulatingComponent, bool bIsAwake);
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BuildingContainer_Physics_Parent(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -45,6 +45,13 @@ public:
 		return GetDefaultObjImpl<ABuildingContainer_Physics_Parent_C>();
 	}
 };
+static_assert(alignof(ABuildingContainer_Physics_Parent_C) == 0x000008, "Wrong alignment on ABuildingContainer_Physics_Parent_C");
+static_assert(sizeof(ABuildingContainer_Physics_Parent_C) == 0x000D28, "Wrong size on ABuildingContainer_Physics_Parent_C");
+static_assert(offsetof(ABuildingContainer_Physics_Parent_C, UberGraphFrame) == 0x000D00, "Member 'ABuildingContainer_Physics_Parent_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABuildingContainer_Physics_Parent_C, FortLinkToActor) == 0x000D08, "Member 'ABuildingContainer_Physics_Parent_C::FortLinkToActor' has a wrong offset!");
+static_assert(offsetof(ABuildingContainer_Physics_Parent_C, FortPhysicsObject) == 0x000D10, "Member 'ABuildingContainer_Physics_Parent_C::FortPhysicsObject' has a wrong offset!");
+static_assert(offsetof(ABuildingContainer_Physics_Parent_C, LinkedActor) == 0x000D18, "Member 'ABuildingContainer_Physics_Parent_C::LinkedActor' has a wrong offset!");
+static_assert(offsetof(ABuildingContainer_Physics_Parent_C, Rep_WakeUp) == 0x000D20, "Member 'ABuildingContainer_Physics_Parent_C::Rep_WakeUp' has a wrong offset!");
 
 }
 

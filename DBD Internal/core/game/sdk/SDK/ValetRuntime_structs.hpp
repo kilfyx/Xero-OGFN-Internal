@@ -10,35 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "FortniteGame_structs.hpp"
+#include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
-
-// Enum ValetRuntime.ETireStates
-// NumValues: 0x0003
-enum class ETireStates : uint8
-{
-	Default                                  = 0,
-	Popped                                   = 1,
-	ETireStates_MAX                          = 2,
-};
-
-// Enum ValetRuntime.ETireSurfaces
-// NumValues: 0x0006
-enum class ETireSurfaces : uint8
-{
-	Road                                     = 0,
-	Dirt                                     = 1,
-	Grass                                    = 2,
-	Air                                      = 3,
-	Water                                    = 4,
-	ETireSurfaces_MAX                        = 5,
-};
 
 // Enum ValetRuntime.EFortDagwoodSimEvent
 // NumValues: 0x0009
@@ -55,15 +34,38 @@ enum class EFortDagwoodSimEvent : uint8
 	EFortDagwoodSimEvent_MAX                 = 8,
 };
 
-// Enum ValetRuntime.EControlsPrototypes
+// Enum ValetRuntime.EVehicleClass
 // NumValues: 0x0005
-enum class EControlsPrototypes : uint8
+enum class EVehicleClass : uint8
 {
-	CameraSteering                           = 0,
-	NonCameraSteering                        = 1,
-	HybridCameraSteering                     = 2,
-	MaxCount                                 = 3,
-	EControlsPrototypes_MAX                  = 4,
+	Sedan                                    = 0,
+	Sport                                    = 1,
+	PickupTruck                              = 2,
+	SemiTruck                                = 3,
+	EVehicleClass_MAX                        = 4,
+};
+
+// Enum ValetRuntime.ETireSurfaces
+// NumValues: 0x0006
+enum class ETireSurfaces : uint8
+{
+	Road                                     = 0,
+	Dirt                                     = 1,
+	Grass                                    = 2,
+	Air                                      = 3,
+	Water                                    = 4,
+	ETireSurfaces_MAX                        = 5,
+};
+
+// Enum ValetRuntime.ETireLocations
+// NumValues: 0x0005
+enum class ETireLocations : uint8
+{
+	FrontRight                               = 0,
+	FrontLeft                                = 1,
+	BackRight                                = 2,
+	BackLeft                                 = 3,
+	ETireLocations_MAX                       = 4,
 };
 
 // Enum ValetRuntime.EPoppedTireReactionStates
@@ -80,27 +82,57 @@ enum class EPoppedTireReactionStates : uint8
 	EPoppedTireReactionStates_MAX            = 7,
 };
 
-// Enum ValetRuntime.ETireLocations
-// NumValues: 0x0005
-enum class ETireLocations : uint8
+// Enum ValetRuntime.EFuelLeakType
+// NumValues: 0x0003
+enum class EFuelLeakType : uint8
 {
-	FrontRight                               = 0,
-	FrontLeft                                = 1,
-	BackRight                                = 2,
-	BackLeft                                 = 3,
-	ETireLocations_MAX                       = 4,
+	None                                     = 0,
+	GenericFromBetweenRearTires              = 1,
+	EFuelLeakType_MAX                        = 2,
 };
 
-// Enum ValetRuntime.EVehicleClass
-// NumValues: 0x0005
-enum class EVehicleClass : uint8
+// Enum ValetRuntime.ETireStates
+// NumValues: 0x0003
+enum class ETireStates : uint8
 {
-	Sedan                                    = 0,
-	Sport                                    = 1,
-	PickupTruck                              = 2,
-	SemiTruck                                = 3,
-	EVehicleClass_MAX                        = 4,
+	Default                                  = 0,
+	Popped                                   = 1,
+	ETireStates_MAX                          = 2,
 };
+
+// Enum ValetRuntime.EControlsPrototypes
+// NumValues: 0x0005
+enum class EControlsPrototypes : uint8
+{
+	CameraSteering                           = 0,
+	NonCameraSteering                        = 1,
+	HybridCameraSteering                     = 2,
+	MaxCount                                 = 3,
+	EControlsPrototypes_MAX                  = 4,
+};
+
+// ScriptStruct ValetRuntime.FortDagwoodDerived
+// 0x0000 (0x0048 - 0x0048)
+struct FFortDagwoodDerived final : public FFortVehicleDerived
+{
+};
+static_assert(alignof(FFortDagwoodDerived) == 0x000008, "Wrong alignment on FFortDagwoodDerived");
+static_assert(sizeof(FFortDagwoodDerived) == 0x000048, "Wrong size on FFortDagwoodDerived");
+
+// ScriptStruct ValetRuntime.VehicleAttachment
+// 0x0018 (0x0018 - 0x0000)
+struct FVehicleAttachment final
+{
+public:
+	class FName                                   ModName;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SocketName;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FVehicleAttachment) == 0x000008, "Wrong alignment on FVehicleAttachment");
+static_assert(sizeof(FVehicleAttachment) == 0x000018, "Wrong size on FVehicleAttachment");
+static_assert(offsetof(FVehicleAttachment, ModName) == 0x000000, "Member 'FVehicleAttachment::ModName' has a wrong offset!");
+static_assert(offsetof(FVehicleAttachment, SocketName) == 0x000008, "Member 'FVehicleAttachment::SocketName' has a wrong offset!");
+static_assert(offsetof(FVehicleAttachment, SkeletalMesh) == 0x000010, "Member 'FVehicleAttachment::SkeletalMesh' has a wrong offset!");
 
 // ScriptStruct ValetRuntime.FortDagwoodCmd
 // 0x001C (0x001C - 0x0000)
@@ -115,63 +147,150 @@ public:
 	uint8                                         bHandbrake : 1;                                    // 0x0018(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FFortDagwoodCmd) == 0x000004, "Wrong alignment on FFortDagwoodCmd");
+static_assert(sizeof(FFortDagwoodCmd) == 0x00001C, "Wrong size on FFortDagwoodCmd");
+static_assert(offsetof(FFortDagwoodCmd, ForwardAlpha) == 0x000000, "Member 'FFortDagwoodCmd::ForwardAlpha' has a wrong offset!");
+static_assert(offsetof(FFortDagwoodCmd, RightAlpha) == 0x000004, "Member 'FFortDagwoodCmd::RightAlpha' has a wrong offset!");
+static_assert(offsetof(FFortDagwoodCmd, AccelerationAlpha) == 0x000008, "Member 'FFortDagwoodCmd::AccelerationAlpha' has a wrong offset!");
+static_assert(offsetof(FFortDagwoodCmd, MovementDir) == 0x00000C, "Member 'FFortDagwoodCmd::MovementDir' has a wrong offset!");
 
-// ScriptStruct ValetRuntime.DagwoodInternal
-// 0x0098 (0x00F0 - 0x0058)
-struct FDagwoodInternal final : public FFortVehicleInternalPersistent
+// ScriptStruct ValetRuntime.MountedGun
+// 0x0068 (0x0068 - 0x0000)
+struct FMountedGun final
 {
 public:
-	uint8                                         Pad_58[0x98];                                      // 0x0058(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   SocketNameMuzzle;                                  // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FWeaponSeatDefinition                  SeatDefinition;                                    // 0x0008(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UAnimInstance>              AnimInstanceWeapon;                                // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SocketNameVehicle_PawnAttach;                      // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SocketNameVehicle;                                 // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AttachmentAngleOffset;                             // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UAnimInstance>              AnimInstancePawn;                                  // 0x0060(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FMountedGun) == 0x000008, "Wrong alignment on FMountedGun");
+static_assert(sizeof(FMountedGun) == 0x000068, "Wrong size on FMountedGun");
+static_assert(offsetof(FMountedGun, SocketNameMuzzle) == 0x000000, "Member 'FMountedGun::SocketNameMuzzle' has a wrong offset!");
+static_assert(offsetof(FMountedGun, SeatDefinition) == 0x000008, "Member 'FMountedGun::SeatDefinition' has a wrong offset!");
+static_assert(offsetof(FMountedGun, SkeletalMesh) == 0x000038, "Member 'FMountedGun::SkeletalMesh' has a wrong offset!");
+static_assert(offsetof(FMountedGun, AnimInstanceWeapon) == 0x000040, "Member 'FMountedGun::AnimInstanceWeapon' has a wrong offset!");
+static_assert(offsetof(FMountedGun, SocketNameVehicle_PawnAttach) == 0x000048, "Member 'FMountedGun::SocketNameVehicle_PawnAttach' has a wrong offset!");
+static_assert(offsetof(FMountedGun, SocketNameVehicle) == 0x000050, "Member 'FMountedGun::SocketNameVehicle' has a wrong offset!");
+static_assert(offsetof(FMountedGun, AttachmentAngleOffset) == 0x000058, "Member 'FMountedGun::AttachmentAngleOffset' has a wrong offset!");
+static_assert(offsetof(FMountedGun, AnimInstancePawn) == 0x000060, "Member 'FMountedGun::AnimInstancePawn' has a wrong offset!");
 
-// ScriptStruct ValetRuntime.DagwoodOutPersistent
-// 0x0018 (0x0028 - 0x0010)
-struct FDagwoodOutPersistent final : public FFortVehicleOutPersistent
+// ScriptStruct ValetRuntime.FortDagwoodAux
+// 0x0118 (0x0198 - 0x0080)
+struct alignas(0x08) FFortDagwoodAux final : public FVehicleSimAux
 {
 public:
-	bool                                          bOnRoad;                                           // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnLandscape;                                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnDirt;                                           // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnVehicle;                                        // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBoosting;                                         // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<ETireSurfaces>                         TireSurfaces;                                      // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_80[0x118];                                     // 0x0080(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FFortDagwoodAux) == 0x000008, "Wrong alignment on FFortDagwoodAux");
+static_assert(sizeof(FFortDagwoodAux) == 0x000198, "Wrong size on FFortDagwoodAux");
 
-// ScriptStruct ValetRuntime.DagwoodOutContinuous
-// 0x0010 (0x0038 - 0x0028)
-struct FDagwoodOutContinuous final : public FFortVehicleOutContinuous
+// ScriptStruct ValetRuntime.CachedWaterData
+// 0x0038 (0x0038 - 0x0000)
+struct FCachedWaterData final
 {
 public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                PlaneLocation;                                     // 0x0000(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PlaneNormal;                                       // 0x000C(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SurfacePosition;                                   // 0x0018(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                WaterVelocity;                                     // 0x0024(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Depth;                                             // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         WaterBodyIndex;                                    // 0x0034(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FCachedWaterData) == 0x000004, "Wrong alignment on FCachedWaterData");
+static_assert(sizeof(FCachedWaterData) == 0x000038, "Wrong size on FCachedWaterData");
+static_assert(offsetof(FCachedWaterData, PlaneLocation) == 0x000000, "Member 'FCachedWaterData::PlaneLocation' has a wrong offset!");
+static_assert(offsetof(FCachedWaterData, PlaneNormal) == 0x00000C, "Member 'FCachedWaterData::PlaneNormal' has a wrong offset!");
+static_assert(offsetof(FCachedWaterData, SurfacePosition) == 0x000018, "Member 'FCachedWaterData::SurfacePosition' has a wrong offset!");
+static_assert(offsetof(FCachedWaterData, WaterVelocity) == 0x000024, "Member 'FCachedWaterData::WaterVelocity' has a wrong offset!");
+static_assert(offsetof(FCachedWaterData, Depth) == 0x000030, "Member 'FCachedWaterData::Depth' has a wrong offset!");
+static_assert(offsetof(FCachedWaterData, WaterBodyIndex) == 0x000034, "Member 'FCachedWaterData::WaterBodyIndex' has a wrong offset!");
 
-// ScriptStruct ValetRuntime.DagwoodState_PT
-// 0x0158 (0x0158 - 0x0000)
-struct FDagwoodState_PT final
+// ScriptStruct ValetRuntime.RuntimeTerrainHandlingInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FRuntimeTerrainHandlingInfo final
 {
 public:
-	struct FDagwoodInternal                       internal;                                          // 0x0000(0x00F0)(NativeAccessSpecifierPublic)
-	struct FDagwoodOutPersistent                  OutPersistent;                                     // 0x00F0(0x0028)(NativeAccessSpecifierPublic)
-	struct FDagwoodOutContinuous                  OutContinuous;                                     // 0x0118(0x0038)(NativeAccessSpecifierPublic)
-	bool                                          bOutValid;                                         // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         PushForceMultiplier;                               // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TopSpeedMultiplier;                                // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FrontTireFriction;                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RearTireFriction;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FRuntimeTerrainHandlingInfo) == 0x000004, "Wrong alignment on FRuntimeTerrainHandlingInfo");
+static_assert(sizeof(FRuntimeTerrainHandlingInfo) == 0x000010, "Wrong size on FRuntimeTerrainHandlingInfo");
+static_assert(offsetof(FRuntimeTerrainHandlingInfo, PushForceMultiplier) == 0x000000, "Member 'FRuntimeTerrainHandlingInfo::PushForceMultiplier' has a wrong offset!");
+static_assert(offsetof(FRuntimeTerrainHandlingInfo, TopSpeedMultiplier) == 0x000004, "Member 'FRuntimeTerrainHandlingInfo::TopSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(FRuntimeTerrainHandlingInfo, FrontTireFriction) == 0x000008, "Member 'FRuntimeTerrainHandlingInfo::FrontTireFriction' has a wrong offset!");
+static_assert(offsetof(FRuntimeTerrainHandlingInfo, RearTireFriction) == 0x00000C, "Member 'FRuntimeTerrainHandlingInfo::RearTireFriction' has a wrong offset!");
+
+// ScriptStruct ValetRuntime.RuntimeSpringsInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FRuntimeSpringsInfo final
+{
+public:
+	float                                         SpringStiffMultiplier;                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpringDampMultiplier;                              // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpringLengthMultiplier;                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TireZOffset;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRuntimeSpringsInfo) == 0x000004, "Wrong alignment on FRuntimeSpringsInfo");
+static_assert(sizeof(FRuntimeSpringsInfo) == 0x000010, "Wrong size on FRuntimeSpringsInfo");
+static_assert(offsetof(FRuntimeSpringsInfo, SpringStiffMultiplier) == 0x000000, "Member 'FRuntimeSpringsInfo::SpringStiffMultiplier' has a wrong offset!");
+static_assert(offsetof(FRuntimeSpringsInfo, SpringDampMultiplier) == 0x000004, "Member 'FRuntimeSpringsInfo::SpringDampMultiplier' has a wrong offset!");
+static_assert(offsetof(FRuntimeSpringsInfo, SpringLengthMultiplier) == 0x000008, "Member 'FRuntimeSpringsInfo::SpringLengthMultiplier' has a wrong offset!");
+static_assert(offsetof(FRuntimeSpringsInfo, TireZOffset) == 0x00000C, "Member 'FRuntimeSpringsInfo::TireZOffset' has a wrong offset!");
+
+// ScriptStruct ValetRuntime.TireInfo
+// 0x00B0 (0x00B0 - 0x0000)
+struct FTireInfo final
+{
+public:
+	TSoftClassPtr<class UClass>                   TireMesh;                                          // 0x0000(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             AttachTransform;                                   // 0x0030(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRuntimeSpringsInfo                    SpringTuning;                                      // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRuntimeTerrainHandlingInfo            RoadBehavior;                                      // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRuntimeTerrainHandlingInfo            DirtBehavior;                                      // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRuntimeTerrainHandlingInfo            GrassBehavior;                                     // 0x0090(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         PoppedTireSpringLength;                            // 0x00A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PoppedTireSpringStiff;                             // 0x00A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PoppedTireSpringDamp;                              // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FTireInfo) == 0x000010, "Wrong alignment on FTireInfo");
+static_assert(sizeof(FTireInfo) == 0x0000B0, "Wrong size on FTireInfo");
+static_assert(offsetof(FTireInfo, TireMesh) == 0x000000, "Member 'FTireInfo::TireMesh' has a wrong offset!");
+static_assert(offsetof(FTireInfo, AttachTransform) == 0x000030, "Member 'FTireInfo::AttachTransform' has a wrong offset!");
+static_assert(offsetof(FTireInfo, SpringTuning) == 0x000060, "Member 'FTireInfo::SpringTuning' has a wrong offset!");
+static_assert(offsetof(FTireInfo, RoadBehavior) == 0x000070, "Member 'FTireInfo::RoadBehavior' has a wrong offset!");
+static_assert(offsetof(FTireInfo, DirtBehavior) == 0x000080, "Member 'FTireInfo::DirtBehavior' has a wrong offset!");
+static_assert(offsetof(FTireInfo, GrassBehavior) == 0x000090, "Member 'FTireInfo::GrassBehavior' has a wrong offset!");
+static_assert(offsetof(FTireInfo, PoppedTireSpringLength) == 0x0000A0, "Member 'FTireInfo::PoppedTireSpringLength' has a wrong offset!");
+static_assert(offsetof(FTireInfo, PoppedTireSpringStiff) == 0x0000A4, "Member 'FTireInfo::PoppedTireSpringStiff' has a wrong offset!");
+static_assert(offsetof(FTireInfo, PoppedTireSpringDamp) == 0x0000A8, "Member 'FTireInfo::PoppedTireSpringDamp' has a wrong offset!");
 
 // ScriptStruct ValetRuntime.RuntimeBoostInfo
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct FRuntimeBoostInfo final
 {
 public:
-	uint8                                         bCanBoost : 1;                                     // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUsesRechargeableBoost : 1;                        // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	bool                                          bCanBoost;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         BoostPushForce;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BoostTopSpeedForceMultiplier;                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BoostTopSpeedMultiplier;                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RechargeableBoostRateOfRegen;                      // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RechargeableBoostRateOfUse;                        // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FRuntimeBoostInfo) == 0x000004, "Wrong alignment on FRuntimeBoostInfo");
+static_assert(sizeof(FRuntimeBoostInfo) == 0x000010, "Wrong size on FRuntimeBoostInfo");
+static_assert(offsetof(FRuntimeBoostInfo, bCanBoost) == 0x000000, "Member 'FRuntimeBoostInfo::bCanBoost' has a wrong offset!");
+static_assert(offsetof(FRuntimeBoostInfo, BoostPushForce) == 0x000004, "Member 'FRuntimeBoostInfo::BoostPushForce' has a wrong offset!");
+static_assert(offsetof(FRuntimeBoostInfo, BoostTopSpeedForceMultiplier) == 0x000008, "Member 'FRuntimeBoostInfo::BoostTopSpeedForceMultiplier' has a wrong offset!");
+static_assert(offsetof(FRuntimeBoostInfo, BoostTopSpeedMultiplier) == 0x00000C, "Member 'FRuntimeBoostInfo::BoostTopSpeedMultiplier' has a wrong offset!");
 
 // ScriptStruct ValetRuntime.RuntimeFuelInfo
 // 0x000C (0x000C - 0x0000)
@@ -182,6 +301,11 @@ public:
 	float                                         FuelPerSecondDriving;                              // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FuelPerSecondBoosting;                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FRuntimeFuelInfo) == 0x000004, "Wrong alignment on FRuntimeFuelInfo");
+static_assert(sizeof(FRuntimeFuelInfo) == 0x00000C, "Wrong size on FRuntimeFuelInfo");
+static_assert(offsetof(FRuntimeFuelInfo, MaxFuel) == 0x000000, "Member 'FRuntimeFuelInfo::MaxFuel' has a wrong offset!");
+static_assert(offsetof(FRuntimeFuelInfo, FuelPerSecondDriving) == 0x000004, "Member 'FRuntimeFuelInfo::FuelPerSecondDriving' has a wrong offset!");
+static_assert(offsetof(FRuntimeFuelInfo, FuelPerSecondBoosting) == 0x000008, "Member 'FRuntimeFuelInfo::FuelPerSecondBoosting' has a wrong offset!");
 
 // ScriptStruct ValetRuntime.RuntimeGearInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -193,46 +317,54 @@ public:
 	float                                         MinSpeed;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PushForce;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FRuntimeGearInfo) == 0x000004, "Wrong alignment on FRuntimeGearInfo");
+static_assert(sizeof(FRuntimeGearInfo) == 0x000010, "Wrong size on FRuntimeGearInfo");
+static_assert(offsetof(FRuntimeGearInfo, GearIndex) == 0x000000, "Member 'FRuntimeGearInfo::GearIndex' has a wrong offset!");
+static_assert(offsetof(FRuntimeGearInfo, TopSpeed) == 0x000004, "Member 'FRuntimeGearInfo::TopSpeed' has a wrong offset!");
+static_assert(offsetof(FRuntimeGearInfo, MinSpeed) == 0x000008, "Member 'FRuntimeGearInfo::MinSpeed' has a wrong offset!");
+static_assert(offsetof(FRuntimeGearInfo, PushForce) == 0x00000C, "Member 'FRuntimeGearInfo::PushForce' has a wrong offset!");
 
-// ScriptStruct ValetRuntime.DagwoodRuntimeModifiers
-// 0x0088 (0x0088 - 0x0000)
-struct FDagwoodRuntimeModifiers final
+// ScriptStruct ValetRuntime.VehicleRuntimeModifiers
+// 0x0050 (0x0050 - 0x0000)
+struct FVehicleRuntimeModifiers final
 {
 public:
-	struct FRuntimeBoostInfo                      BoostInfo;                                         // 0x0000(0x0018)(BlueprintVisible, Transient, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRuntimeFuelInfo                       FuelInfo;                                          // 0x0018(0x000C)(BlueprintVisible, Transient, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRuntimeSpringsInfo                    SpringsInfo;                                       // 0x0024(0x0020)(BlueprintVisible, Transient, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bDamageFriendlyVehicles;                           // 0x0044(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDamageOtherVehicles;                              // 0x0045(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDamageOwnVehicle;                                 // 0x0046(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDamageAllowedFromOtherVehicle;                    // 0x0047(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GravityMultiplier;                                 // 0x0048(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxInclineAngle;                                   // 0x004C(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTiltAngle;                                      // 0x0050(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRuntimeGearInfo>               GearInfos;                                         // 0x0058(0x0010)(BlueprintVisible, ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           TireModTag;                                        // 0x0068(0x0008)(BlueprintVisible, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         TireModVersion;                                    // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTireModAdjustsPosition;                           // 0x0071(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_72[0x2];                                       // 0x0072(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SelfDestructTime;                                  // 0x0074(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTimeExplosion;                                  // 0x0078(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTimeZeroHealth;                                 // 0x007C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTimeSelfDestructCleanup;                        // 0x0080(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         DataVersion;                                       // 0x0084(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FRuntimeBoostInfo                      BoostInfo;                                         // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRuntimeFuelInfo                       FuelInfo;                                          // 0x0010(0x000C)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRuntimeSpringsInfo                    SpringsInfo;                                       // 0x001C(0x0010)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         GravityMultiplier;                                 // 0x002C(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxInclineAngle;                                   // 0x0030(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTiltAngle;                                      // 0x0034(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FRuntimeGearInfo>               GearInfos;                                         // 0x0038(0x0010)(BlueprintVisible, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           TireModTag;                                        // 0x0048(0x0008)(BlueprintVisible, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FVehicleRuntimeModifiers) == 0x000008, "Wrong alignment on FVehicleRuntimeModifiers");
+static_assert(sizeof(FVehicleRuntimeModifiers) == 0x000050, "Wrong size on FVehicleRuntimeModifiers");
+static_assert(offsetof(FVehicleRuntimeModifiers, BoostInfo) == 0x000000, "Member 'FVehicleRuntimeModifiers::BoostInfo' has a wrong offset!");
+static_assert(offsetof(FVehicleRuntimeModifiers, FuelInfo) == 0x000010, "Member 'FVehicleRuntimeModifiers::FuelInfo' has a wrong offset!");
+static_assert(offsetof(FVehicleRuntimeModifiers, SpringsInfo) == 0x00001C, "Member 'FVehicleRuntimeModifiers::SpringsInfo' has a wrong offset!");
+static_assert(offsetof(FVehicleRuntimeModifiers, GravityMultiplier) == 0x00002C, "Member 'FVehicleRuntimeModifiers::GravityMultiplier' has a wrong offset!");
+static_assert(offsetof(FVehicleRuntimeModifiers, MaxInclineAngle) == 0x000030, "Member 'FVehicleRuntimeModifiers::MaxInclineAngle' has a wrong offset!");
+static_assert(offsetof(FVehicleRuntimeModifiers, MaxTiltAngle) == 0x000034, "Member 'FVehicleRuntimeModifiers::MaxTiltAngle' has a wrong offset!");
+static_assert(offsetof(FVehicleRuntimeModifiers, GearInfos) == 0x000038, "Member 'FVehicleRuntimeModifiers::GearInfos' has a wrong offset!");
+static_assert(offsetof(FVehicleRuntimeModifiers, TireModTag) == 0x000048, "Member 'FVehicleRuntimeModifiers::TireModTag' has a wrong offset!");
 
-// ScriptStruct ValetRuntime.DagwoodInPersistent
-// 0x00E8 (0x0230 - 0x0148)
-struct FDagwoodInPersistent final : public FFortVehicleInPersistent
+// ScriptStruct ValetRuntime.TireSimulationRuntimeData
+// 0x001C (0x001C - 0x0000)
+struct FTireSimulationRuntimeData final
 {
 public:
-	class UFortDagwoodVehicleConfigs*             FortDagwoodVehicleConfigs;                         // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDagwoodRuntimeModifiers               DagwoodRuntimeModifiedProperties;                  // 0x0150(0x0088)(NativeAccessSpecifierPublic)
-	TArray<ETireStates>                           TireStates;                                        // 0x01D8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E8[0x48];                                     // 0x01E8(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FRuntimeTerrainHandlingInfo            HandlingInfo;                                      // 0x0000(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         PoppedTireSpringLength;                            // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PoppedTireSpringStiff;                             // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PoppedTireSpringDamp;                              // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FTireSimulationRuntimeData) == 0x000004, "Wrong alignment on FTireSimulationRuntimeData");
+static_assert(sizeof(FTireSimulationRuntimeData) == 0x00001C, "Wrong size on FTireSimulationRuntimeData");
+static_assert(offsetof(FTireSimulationRuntimeData, HandlingInfo) == 0x000000, "Member 'FTireSimulationRuntimeData::HandlingInfo' has a wrong offset!");
+static_assert(offsetof(FTireSimulationRuntimeData, PoppedTireSpringLength) == 0x000010, "Member 'FTireSimulationRuntimeData::PoppedTireSpringLength' has a wrong offset!");
+static_assert(offsetof(FTireSimulationRuntimeData, PoppedTireSpringStiff) == 0x000014, "Member 'FTireSimulationRuntimeData::PoppedTireSpringStiff' has a wrong offset!");
+static_assert(offsetof(FTireSimulationRuntimeData, PoppedTireSpringDamp) == 0x000018, "Member 'FTireSimulationRuntimeData::PoppedTireSpringDamp' has a wrong offset!");
 
 // ScriptStruct ValetRuntime.ValetUpdateContext
 // 0x0014 (0x0014 - 0x0000)
@@ -241,58 +373,8 @@ struct alignas(0x04) FValetUpdateContext final
 public:
 	uint8                                         Pad_0[0x14];                                       // 0x0000(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// ScriptStruct ValetRuntime.DagwoodFutureClientInput
-// 0x0020 (0x0020 - 0x0000)
-struct FDagwoodFutureClientInput final
-{
-public:
-	int32                                         Frame;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortDagwoodCmd                        InputCmd;                                          // 0x0004(0x001C)(NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct ValetRuntime.DagwoodManagedState
-// 0x03C8 (0x03C8 - 0x0000)
-struct FDagwoodManagedState final
-{
-public:
-	int32                                         Frame;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortDagwoodCmd                        InputCmd;                                          // 0x0004(0x001C)(NoDestructor, NativeAccessSpecifierPublic)
-	struct FDagwoodInPersistent                   GT_State;                                          // 0x0020(0x0230)(NativeAccessSpecifierPublic)
-	struct FDagwoodState_PT                       PT_State;                                          // 0x0250(0x0158)(NativeAccessSpecifierPublic)
-	class APlayerController*                      PC;                                                // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3B0[0x8];                                      // 0x03B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FDagwoodFutureClientInput>      FutureInputs;                                      // 0x03B8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct ValetRuntime.VehicleAttachment
-// 0x0018 (0x0018 - 0x0000)
-struct FVehicleAttachment final
-{
-public:
-	class FName                                   ModName;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SocketName;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct ValetRuntime.DagwoodActionDefForUI
-// 0x0010 (0x0010 - 0x0000)
-struct FDagwoodActionDefForUI final
-{
-public:
-	TArray<struct FActionDefForUI>                ActionDefForUI;                                    // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct ValetRuntime.TireSimulationRuntimeData
-// 0x001C (0x001C - 0x0000)
-struct FTireSimulationRuntimeData final
-{
-public:
-	struct FRuntimeTerrainHandlingInfo            HandlingInfo;                                      // 0x0000(0x0010)(Transient, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         PoppedTireSpringLength;                            // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PoppedTireSpringStiff;                             // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PoppedTireSpringDamp;                              // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FValetUpdateContext) == 0x000004, "Wrong alignment on FValetUpdateContext");
+static_assert(sizeof(FValetUpdateContext) == 0x000014, "Wrong size on FValetUpdateContext");
 
 // ScriptStruct ValetRuntime.VehiclePropReplacementData
 // 0x0040 (0x0040 - 0x0000)
@@ -303,6 +385,11 @@ public:
 	struct FVector                                TransOffset;                                       // 0x0028(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               RotOffset;                                         // 0x0034(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FVehiclePropReplacementData) == 0x000008, "Wrong alignment on FVehiclePropReplacementData");
+static_assert(sizeof(FVehiclePropReplacementData) == 0x000040, "Wrong size on FVehiclePropReplacementData");
+static_assert(offsetof(FVehiclePropReplacementData, FortVehicleItemDefinition) == 0x000000, "Member 'FVehiclePropReplacementData::FortVehicleItemDefinition' has a wrong offset!");
+static_assert(offsetof(FVehiclePropReplacementData, TransOffset) == 0x000028, "Member 'FVehiclePropReplacementData::TransOffset' has a wrong offset!");
+static_assert(offsetof(FVehiclePropReplacementData, RotOffset) == 0x000034, "Member 'FVehiclePropReplacementData::RotOffset' has a wrong offset!");
 
 }
 

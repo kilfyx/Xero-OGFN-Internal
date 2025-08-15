@@ -19,31 +19,31 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass CampaignPurchaseScreen.CampaignPurchaseScreen_C
-// 0x0038 (0x0478 - 0x0440)
+// 0x0038 (0x03E0 - 0x03A8)
 class UCampaignPurchaseScreen_C final : public UFortCampaignPurchaseScreen
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       SwitchTextures;                                    // 0x0448(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               MID_Keyart;                                        // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CycleTimer;                                        // 0x0458(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class UTexture*>                       TextureCycle;                                      // 0x0460(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         TextureCycleIndex;                                 // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       SwitchTextures;                                    // 0x03B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               MID_Keyart;                                        // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CycleTimer;                                        // 0x03C0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class UTexture*>                       TextureCycle;                                      // 0x03C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         TextureCycleIndex;                                 // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ToggleTimer(bool Enabled);
-	void Update();
-	void OnImageCycleTimeElapsed();
-	void OnStoreScreenCreated(class UFortMtxStoreRootBase_Legacy* StoreScreen);
-	bool IsBusyMatchmaking();
-	void IsMinorShutdownWarningEnabled(bool* Enabled);
-	void InitializeRedeemButton();
-	void InitializeTextureCycle();
-	void Construct();
 	void ExecuteUbergraph_CampaignPurchaseScreen(int32 EntryPoint);
-	void BndEvt__ButtonBack_K2Node_ComponentBoundEvent_128_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button);
+	void OnImageCycleTimeElapsed();
 	void BP_OnActivated();
+	void BndEvt__ButtonPurchase_K2Node_ComponentBoundEvent_39_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void BndEvt__ButtonBack_K2Node_ComponentBoundEvent_128_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void Construct();
+	void ToggleTimer(bool Enabled);
+	void InitializeTextureCycle();
 	void AdvanceTextureCycle();
+	void Update();
+	bool IsBusyMatchmaking();
+	void InitializeRedeemButton();
+	void IsMinorShutdownWarningEnabled(bool* Enabled);
 
 public:
 	static class UClass* StaticClass()
@@ -56,13 +56,13 @@ public:
 	}
 };
 static_assert(alignof(UCampaignPurchaseScreen_C) == 0x000008, "Wrong alignment on UCampaignPurchaseScreen_C");
-static_assert(sizeof(UCampaignPurchaseScreen_C) == 0x000478, "Wrong size on UCampaignPurchaseScreen_C");
-static_assert(offsetof(UCampaignPurchaseScreen_C, UberGraphFrame) == 0x000440, "Member 'UCampaignPurchaseScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UCampaignPurchaseScreen_C, SwitchTextures) == 0x000448, "Member 'UCampaignPurchaseScreen_C::SwitchTextures' has a wrong offset!");
-static_assert(offsetof(UCampaignPurchaseScreen_C, MID_Keyart) == 0x000450, "Member 'UCampaignPurchaseScreen_C::MID_Keyart' has a wrong offset!");
-static_assert(offsetof(UCampaignPurchaseScreen_C, CycleTimer) == 0x000458, "Member 'UCampaignPurchaseScreen_C::CycleTimer' has a wrong offset!");
-static_assert(offsetof(UCampaignPurchaseScreen_C, TextureCycle) == 0x000460, "Member 'UCampaignPurchaseScreen_C::TextureCycle' has a wrong offset!");
-static_assert(offsetof(UCampaignPurchaseScreen_C, TextureCycleIndex) == 0x000470, "Member 'UCampaignPurchaseScreen_C::TextureCycleIndex' has a wrong offset!");
+static_assert(sizeof(UCampaignPurchaseScreen_C) == 0x0003E0, "Wrong size on UCampaignPurchaseScreen_C");
+static_assert(offsetof(UCampaignPurchaseScreen_C, UberGraphFrame) == 0x0003A8, "Member 'UCampaignPurchaseScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UCampaignPurchaseScreen_C, SwitchTextures) == 0x0003B0, "Member 'UCampaignPurchaseScreen_C::SwitchTextures' has a wrong offset!");
+static_assert(offsetof(UCampaignPurchaseScreen_C, MID_Keyart) == 0x0003B8, "Member 'UCampaignPurchaseScreen_C::MID_Keyart' has a wrong offset!");
+static_assert(offsetof(UCampaignPurchaseScreen_C, CycleTimer) == 0x0003C0, "Member 'UCampaignPurchaseScreen_C::CycleTimer' has a wrong offset!");
+static_assert(offsetof(UCampaignPurchaseScreen_C, TextureCycle) == 0x0003C8, "Member 'UCampaignPurchaseScreen_C::TextureCycle' has a wrong offset!");
+static_assert(offsetof(UCampaignPurchaseScreen_C, TextureCycleIndex) == 0x0003D8, "Member 'UCampaignPurchaseScreen_C::TextureCycleIndex' has a wrong offset!");
 
 }
 

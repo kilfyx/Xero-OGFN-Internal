@@ -13,34 +13,31 @@
 #include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "ApplyMedkit_Athena_AnimBP_structs.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ApplyMedkit_Athena_AnimBP.ApplyMedkit_Athena_AnimBP_C
-// 0x02F0 (0x06B0 - 0x03C0)
+// 0x0310 (0x0610 - 0x0300)
 class UApplyMedkit_Athena_AnimBP_C final : public UFortItemAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct ApplyMedkit_Athena_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;    // 0x03C8(0x0002)(HasGetValueTypeHash)
-	uint8                                         Pad_3CA[0x6];                                      // 0x03CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03D0(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03D8(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03E0(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0400(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0448(0x0040)()
-	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum;                     // 0x0488(0x0088)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x0510(0x0108)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0618(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x0660(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x0688(0x0028)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0310(0x0030)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0340(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0388(0x0078)()
+	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum;                     // 0x0400(0x00B0)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x04B0(0x00C8)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0578(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x05C0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x05E8(0x0028)()
 
 public:
-	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void ExecuteUbergraph_ApplyMedkit_Athena_AnimBP(int32 EntryPoint);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -52,6 +49,18 @@ public:
 		return GetDefaultObjImpl<UApplyMedkit_Athena_AnimBP_C>();
 	}
 };
+static_assert(alignof(UApplyMedkit_Athena_AnimBP_C) == 0x000010, "Wrong alignment on UApplyMedkit_Athena_AnimBP_C");
+static_assert(sizeof(UApplyMedkit_Athena_AnimBP_C) == 0x000610, "Wrong size on UApplyMedkit_Athena_AnimBP_C");
+static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, UberGraphFrame) == 0x000300, "Member 'UApplyMedkit_Athena_AnimBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimBlueprintClassSubsystem_PropertyAccess) == 0x000308, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimBlueprintClassSubsystem_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_Root) == 0x000310, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_Slot_1) == 0x000340, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_Slot_1' has a wrong offset!");
+static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_SequencePlayer) == 0x000388, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_BlendListByEnum) == 0x000400, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_BlendListByEnum' has a wrong offset!");
+static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_SaveCachedPose) == 0x0004B0, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
+static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_Slot) == 0x000578, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_Slot' has a wrong offset!");
+static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_UseCachedPose_1) == 0x0005C0, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_UseCachedPose) == 0x0005E8, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
 
 }
 

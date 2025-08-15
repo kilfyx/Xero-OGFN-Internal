@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function FXSkeletonMeshComponent.FXSkeletonMeshComponent_C.ApplyAwakenEffect
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UFXSkeletonMeshComponent_C::ApplyAwakenEffect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FXSkeletonMeshComponent_C", "ApplyAwakenEffect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function FXSkeletonMeshComponent.FXSkeletonMeshComponent_C.ApplyBuildingHitEffect
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -68,6 +54,20 @@ void UFXSkeletonMeshComponent_C::ApplyEffect(class UMaterialInterface* SourceMat
 	Parms.FadeOutTime = FadeOutTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FXSkeletonMeshComponent.FXSkeletonMeshComponent_C.ApplyAwakenEffect
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UFXSkeletonMeshComponent_C::ApplyAwakenEffect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FXSkeletonMeshComponent_C", "ApplyAwakenEffect");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

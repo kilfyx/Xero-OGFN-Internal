@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function AthenaEliminationIndicator.AthenaEliminationIndicator_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAthenaEliminationIndicator_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaEliminationIndicator_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function AthenaEliminationIndicator.AthenaEliminationIndicator_C.ExecuteUbergraph_AthenaEliminationIndicator
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UAthenaEliminationIndicator_C::ExecuteUbergraph_AthenaEliminationIndicator(
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaEliminationIndicator.AthenaEliminationIndicator_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UAthenaEliminationIndicator_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaEliminationIndicator_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

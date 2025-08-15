@@ -42,35 +42,10 @@ class UCineCameraComponent* ACineCameraActor::GetCineCameraComponent() const
 }
 
 
-// Function CinematicCamera.CineCameraComponent.GetFilmbackPresetsCopy
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// TArray<struct FNamedFilmbackPreset>     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FNamedFilmbackPreset> UCineCameraComponent::GetFilmbackPresetsCopy()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("CineCameraComponent", "GetFilmbackPresetsCopy");
-
-	Params::CineCameraComponent_GetFilmbackPresetsCopy Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function CinematicCamera.CineCameraComponent.GetLensPresetsCopy
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FNamedLensPreset>         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TArray<struct FNamedLensPreset>         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<struct FNamedLensPreset> UCineCameraComponent::GetLensPresetsCopy()
 {

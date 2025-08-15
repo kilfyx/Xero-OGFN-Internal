@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_HidePlayerPawn_Default_C>();
 	}
 };
+static_assert(alignof(UGE_HidePlayerPawn_Default_C) == 0x000008, "Wrong alignment on UGE_HidePlayerPawn_Default_C");
+static_assert(sizeof(UGE_HidePlayerPawn_Default_C) == 0x000800, "Wrong size on UGE_HidePlayerPawn_Default_C");
 
 }
 

@@ -33,6 +33,8 @@ public:
 		return GetDefaultObjImpl<ATracerGeneric_C>();
 	}
 };
+static_assert(alignof(ATracerGeneric_C) == 0x000008, "Wrong alignment on ATracerGeneric_C");
+static_assert(sizeof(ATracerGeneric_C) == 0x0002B8, "Wrong size on ATracerGeneric_C");
 
 }
 

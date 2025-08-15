@@ -18,14 +18,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass StatusWidget.StatusWidget_C
-// 0x0008 (0x0588 - 0x0580)
+// 0x0008 (0x0500 - 0x04F8)
 class UStatusWidget_C final : public UFortLoginStatus
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0580(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void SetQuitButtonText(const class FText& QuitText);
 	void SetContinueButtonText(const class FText& ContinueText);
 	void ExecuteUbergraph_StatusWidget(int32 EntryPoint);
 
@@ -40,8 +39,8 @@ public:
 	}
 };
 static_assert(alignof(UStatusWidget_C) == 0x000008, "Wrong alignment on UStatusWidget_C");
-static_assert(sizeof(UStatusWidget_C) == 0x000588, "Wrong size on UStatusWidget_C");
-static_assert(offsetof(UStatusWidget_C, UberGraphFrame) == 0x000580, "Member 'UStatusWidget_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(UStatusWidget_C) == 0x000500, "Wrong size on UStatusWidget_C");
+static_assert(offsetof(UStatusWidget_C, UberGraphFrame) == 0x0004F8, "Member 'UStatusWidget_C::UberGraphFrame' has a wrong offset!");
 
 }
 

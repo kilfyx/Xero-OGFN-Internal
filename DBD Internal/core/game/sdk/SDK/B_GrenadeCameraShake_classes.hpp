@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UB_GrenadeCameraShake_C>();
 	}
 };
+static_assert(alignof(UB_GrenadeCameraShake_C) == 0x000010, "Wrong alignment on UB_GrenadeCameraShake_C");
+static_assert(sizeof(UB_GrenadeCameraShake_C) == 0x0001B0, "Wrong size on UB_GrenadeCameraShake_C");
 
 }
 

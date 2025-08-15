@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ChatChannelTab.ChatChannelTab_C
-// 0x0000 (0x1440 - 0x1440)
+// 0x0000 (0x0BB0 - 0x0BB0)
 class UChatChannelTab_C final : public USocialChatChannelTab
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<UChatChannelTab_C>();
 	}
 };
-static_assert(alignof(UChatChannelTab_C) == 0x000010, "Wrong alignment on UChatChannelTab_C");
-static_assert(sizeof(UChatChannelTab_C) == 0x001440, "Wrong size on UChatChannelTab_C");
+static_assert(alignof(UChatChannelTab_C) == 0x000008, "Wrong alignment on UChatChannelTab_C");
+static_assert(sizeof(UChatChannelTab_C) == 0x000BB0, "Wrong size on UChatChannelTab_C");
 
 }
 

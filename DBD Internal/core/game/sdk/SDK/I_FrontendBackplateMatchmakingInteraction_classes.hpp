@@ -17,8 +17,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass I_FrontendBackplateMatchmakingInteraction.I_FrontendBackplateMatchmakingInteraction_C
-// 0x0000 (0x0028 - 0x0028)
-class II_FrontendBackplateMatchmakingInteraction_C final : public IInterface
+// 0x0000 (0x0000 - 0x0000)
+class II_FrontendBackplateMatchmakingInteraction_C final
 {
 public:
 	void MatchmakingEnded(bool bWasSuccess);
@@ -34,9 +34,18 @@ public:
 	{
 		return GetDefaultObjImpl<II_FrontendBackplateMatchmakingInteraction_C>();
 	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
 };
-static_assert(alignof(II_FrontendBackplateMatchmakingInteraction_C) == 0x000008, "Wrong alignment on II_FrontendBackplateMatchmakingInteraction_C");
-static_assert(sizeof(II_FrontendBackplateMatchmakingInteraction_C) == 0x000028, "Wrong size on II_FrontendBackplateMatchmakingInteraction_C");
+static_assert(alignof(II_FrontendBackplateMatchmakingInteraction_C) == 0x000001, "Wrong alignment on II_FrontendBackplateMatchmakingInteraction_C");
+static_assert(sizeof(II_FrontendBackplateMatchmakingInteraction_C) == 0x000001, "Wrong size on II_FrontendBackplateMatchmakingInteraction_C");
 
 }
 

@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function ProgressModalWidget.ProgressModalWidget_C.OnBeginOutro
-// (Event, Protected, BlueprintEvent)
-
-void UProgressModalWidget_C::OnBeginOutro()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProgressModalWidget_C", "OnBeginOutro");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ProgressModalWidget.ProgressModalWidget_C.OnBeginIntro
-// (Event, Protected, BlueprintEvent)
-
-void UProgressModalWidget_C::OnBeginIntro()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProgressModalWidget_C", "OnBeginIntro");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ProgressModalWidget.ProgressModalWidget_C.OnAnalogValueChanged
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -70,15 +42,15 @@ struct FEventReply UProgressModalWidget_C::OnAnalogValueChanged(const struct FGe
 }
 
 
-// Function ProgressModalWidget.ProgressModalWidget_C.HandleOutroEnded
-// (BlueprintCallable, BlueprintEvent)
+// Function ProgressModalWidget.ProgressModalWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UProgressModalWidget_C::HandleOutroEnded()
+void UProgressModalWidget_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ProgressModalWidget_C", "HandleOutroEnded");
+		Func = Class->GetFunction("ProgressModalWidget_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93,6 +65,62 @@ void UProgressModalWidget_C::HandleIntroEnded()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ProgressModalWidget_C", "HandleIntroEnded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ProgressModalWidget.ProgressModalWidget_C.HandleOutroEnded
+// (BlueprintCallable, BlueprintEvent)
+
+void UProgressModalWidget_C::HandleOutroEnded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProgressModalWidget_C", "HandleOutroEnded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ProgressModalWidget.ProgressModalWidget_C.OnBeginIntro
+// (Event, Protected, BlueprintEvent)
+
+void UProgressModalWidget_C::OnBeginIntro()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProgressModalWidget_C", "OnBeginIntro");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ProgressModalWidget.ProgressModalWidget_C.OnBeginOutro
+// (Event, Protected, BlueprintEvent)
+
+void UProgressModalWidget_C::OnBeginOutro()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProgressModalWidget_C", "OnBeginOutro");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ProgressModalWidget.ProgressModalWidget_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UProgressModalWidget_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProgressModalWidget_C", "Destruct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -115,34 +143,6 @@ void UProgressModalWidget_C::ExecuteUbergraph_ProgressModalWidget(int32 EntryPoi
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ProgressModalWidget.ProgressModalWidget_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UProgressModalWidget_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProgressModalWidget_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ProgressModalWidget.ProgressModalWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UProgressModalWidget_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProgressModalWidget_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ConsoleProfileWidget.ConsoleProfileWidget_C
-// 0x0000 (0x0280 - 0x0280)
+// 0x0000 (0x0270 - 0x0270)
 class UConsoleProfileWidget_C final : public UFortConsoleProfileWidget
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UConsoleProfileWidget_C) == 0x000008, "Wrong alignment on UConsoleProfileWidget_C");
-static_assert(sizeof(UConsoleProfileWidget_C) == 0x000280, "Wrong size on UConsoleProfileWidget_C");
+static_assert(sizeof(UConsoleProfileWidget_C) == 0x000270, "Wrong size on UConsoleProfileWidget_C");
 
 }
 

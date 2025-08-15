@@ -19,49 +19,50 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Frontend_ShopBG.BP_Frontend_ShopBG_C
-// 0x0120 (0x03A8 - 0x0288)
+// 0x00D8 (0x02F8 - 0x0220)
 class ABP_Frontend_ShopBG_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   StandardBackgroundPlane1;                          // 0x0290(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StandardBackgroundPlane;                           // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Cone;                                              // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Plane;                                             // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene;                                             // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   BackgroundTexturePlane;                            // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   VeryLargeBackgroundPlane;                          // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene_Signal;                                      // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Rot_Intro;                                         // 0x02D8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FRotator                               NextRot;                                           // 0x02F0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FRotator                               Rot_0;                                             // 0x0308(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FRotator                               Rot_2;                                             // 0x0320(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	double                                        PlayRate;                                          // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Rot_IntroStart;                                    // 0x0340(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bHasEvent;                                         // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_359[0x7];                                      // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        YInitial;                                          // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        YEnd;                                              // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               Mid;                                               // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ACMSLobbyDirector_C*                    CMSDirector;                                       // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FString                                 BPEnvName;                                         // 0x0380(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          ShopEntered;                                       // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           DonutSeqTimerHandle;                               // 0x0398(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 DomeObstruction;                                   // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   StandardBackgroundPlane1;                          // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StandardBackgroundPlane;                           // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Cone;                                              // 0x0238(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Plane;                                             // 0x0240(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x0248(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   BackgroundTexturePlane;                            // 0x0250(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   VeryLargeBackgroundPlane;                          // 0x0258(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene_Signal;                                      // 0x0260(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0268(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Rot_Intro;                                         // 0x0270(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               NextRot;                                           // 0x027C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               Rot_0;                                             // 0x0288(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               Rot_2;                                             // 0x0294(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	float                                         PlayRate;                                          // 0x02A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Rot_IntroStart;                                    // 0x02A4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bHasEvent;                                         // 0x02B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2B1[0x3];                                      // 0x02B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         YInitial;                                          // 0x02B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         YEnd;                                              // 0x02B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2BC[0x4];                                      // 0x02BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               Mid;                                               // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ACMSLobbyDirector_C*                    CMSDirector;                                       // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 BPEnvName;                                         // 0x02D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          ShopEntered;                                       // 0x02E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2E1[0x7];                                      // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           DonutSeqTimerHandle;                               // 0x02E8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 DomeObstruction;                                   // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetDynamicEnvironmentEvent(const class FString& InPresetEnvName);
-	void ResetDonut();
 	void SetDynamicBG(class UTexture* InTexture);
-	void ReceiveBeginPlay();
-	void HandleStoreEntered();
-	void HandleRequestHide();
-	void ExecuteUbergraph_BP_Frontend_ShopBG(int32 EntryPoint);
-	void HandleItemShopEntered();
-	void DebugShopBG();
 	void EnableDynamicShopBG();
+	void ReceiveBeginPlay();
+	void SetDynamicEnvironmentEvent(const class FString& InPresetEnvName);
+	void DebugShopBG();
+	void HandleRequestHide();
+	void HandleItemShopEntered();
+	void HandleStoreEntered();
+	void ResetDonut();
+	void ExecuteUbergraph_BP_Frontend_ShopBG(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -74,32 +75,32 @@ public:
 	}
 };
 static_assert(alignof(ABP_Frontend_ShopBG_C) == 0x000008, "Wrong alignment on ABP_Frontend_ShopBG_C");
-static_assert(sizeof(ABP_Frontend_ShopBG_C) == 0x0003A8, "Wrong size on ABP_Frontend_ShopBG_C");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, UberGraphFrame) == 0x000288, "Member 'ABP_Frontend_ShopBG_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, StandardBackgroundPlane1) == 0x000290, "Member 'ABP_Frontend_ShopBG_C::StandardBackgroundPlane1' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, StandardBackgroundPlane) == 0x000298, "Member 'ABP_Frontend_ShopBG_C::StandardBackgroundPlane' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, Cone) == 0x0002A0, "Member 'ABP_Frontend_ShopBG_C::Cone' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, Plane) == 0x0002A8, "Member 'ABP_Frontend_ShopBG_C::Plane' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, Scene) == 0x0002B0, "Member 'ABP_Frontend_ShopBG_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, BackgroundTexturePlane) == 0x0002B8, "Member 'ABP_Frontend_ShopBG_C::BackgroundTexturePlane' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, VeryLargeBackgroundPlane) == 0x0002C0, "Member 'ABP_Frontend_ShopBG_C::VeryLargeBackgroundPlane' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, Scene_Signal) == 0x0002C8, "Member 'ABP_Frontend_ShopBG_C::Scene_Signal' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, DefaultSceneRoot) == 0x0002D0, "Member 'ABP_Frontend_ShopBG_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, Rot_Intro) == 0x0002D8, "Member 'ABP_Frontend_ShopBG_C::Rot_Intro' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, NextRot) == 0x0002F0, "Member 'ABP_Frontend_ShopBG_C::NextRot' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, Rot_0) == 0x000308, "Member 'ABP_Frontend_ShopBG_C::Rot_0' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, Rot_2) == 0x000320, "Member 'ABP_Frontend_ShopBG_C::Rot_2' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, PlayRate) == 0x000338, "Member 'ABP_Frontend_ShopBG_C::PlayRate' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, Rot_IntroStart) == 0x000340, "Member 'ABP_Frontend_ShopBG_C::Rot_IntroStart' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, bHasEvent) == 0x000358, "Member 'ABP_Frontend_ShopBG_C::bHasEvent' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, YInitial) == 0x000360, "Member 'ABP_Frontend_ShopBG_C::YInitial' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, YEnd) == 0x000368, "Member 'ABP_Frontend_ShopBG_C::YEnd' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, Mid) == 0x000370, "Member 'ABP_Frontend_ShopBG_C::Mid' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, CMSDirector) == 0x000378, "Member 'ABP_Frontend_ShopBG_C::CMSDirector' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, BPEnvName) == 0x000380, "Member 'ABP_Frontend_ShopBG_C::BPEnvName' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, ShopEntered) == 0x000390, "Member 'ABP_Frontend_ShopBG_C::ShopEntered' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, DonutSeqTimerHandle) == 0x000398, "Member 'ABP_Frontend_ShopBG_C::DonutSeqTimerHandle' has a wrong offset!");
-static_assert(offsetof(ABP_Frontend_ShopBG_C, DomeObstruction) == 0x0003A0, "Member 'ABP_Frontend_ShopBG_C::DomeObstruction' has a wrong offset!");
+static_assert(sizeof(ABP_Frontend_ShopBG_C) == 0x0002F8, "Wrong size on ABP_Frontend_ShopBG_C");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, UberGraphFrame) == 0x000220, "Member 'ABP_Frontend_ShopBG_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, StandardBackgroundPlane1) == 0x000228, "Member 'ABP_Frontend_ShopBG_C::StandardBackgroundPlane1' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, StandardBackgroundPlane) == 0x000230, "Member 'ABP_Frontend_ShopBG_C::StandardBackgroundPlane' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, Cone) == 0x000238, "Member 'ABP_Frontend_ShopBG_C::Cone' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, Plane) == 0x000240, "Member 'ABP_Frontend_ShopBG_C::Plane' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, Scene) == 0x000248, "Member 'ABP_Frontend_ShopBG_C::Scene' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, BackgroundTexturePlane) == 0x000250, "Member 'ABP_Frontend_ShopBG_C::BackgroundTexturePlane' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, VeryLargeBackgroundPlane) == 0x000258, "Member 'ABP_Frontend_ShopBG_C::VeryLargeBackgroundPlane' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, Scene_Signal) == 0x000260, "Member 'ABP_Frontend_ShopBG_C::Scene_Signal' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, DefaultSceneRoot) == 0x000268, "Member 'ABP_Frontend_ShopBG_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, Rot_Intro) == 0x000270, "Member 'ABP_Frontend_ShopBG_C::Rot_Intro' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, NextRot) == 0x00027C, "Member 'ABP_Frontend_ShopBG_C::NextRot' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, Rot_0) == 0x000288, "Member 'ABP_Frontend_ShopBG_C::Rot_0' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, Rot_2) == 0x000294, "Member 'ABP_Frontend_ShopBG_C::Rot_2' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, PlayRate) == 0x0002A0, "Member 'ABP_Frontend_ShopBG_C::PlayRate' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, Rot_IntroStart) == 0x0002A4, "Member 'ABP_Frontend_ShopBG_C::Rot_IntroStart' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, bHasEvent) == 0x0002B0, "Member 'ABP_Frontend_ShopBG_C::bHasEvent' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, YInitial) == 0x0002B4, "Member 'ABP_Frontend_ShopBG_C::YInitial' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, YEnd) == 0x0002B8, "Member 'ABP_Frontend_ShopBG_C::YEnd' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, Mid) == 0x0002C0, "Member 'ABP_Frontend_ShopBG_C::Mid' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, CMSDirector) == 0x0002C8, "Member 'ABP_Frontend_ShopBG_C::CMSDirector' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, BPEnvName) == 0x0002D0, "Member 'ABP_Frontend_ShopBG_C::BPEnvName' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, ShopEntered) == 0x0002E0, "Member 'ABP_Frontend_ShopBG_C::ShopEntered' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, DonutSeqTimerHandle) == 0x0002E8, "Member 'ABP_Frontend_ShopBG_C::DonutSeqTimerHandle' has a wrong offset!");
+static_assert(offsetof(ABP_Frontend_ShopBG_C, DomeObstruction) == 0x0002F0, "Member 'ABP_Frontend_ShopBG_C::DomeObstruction' has a wrong offset!");
 
 }
 

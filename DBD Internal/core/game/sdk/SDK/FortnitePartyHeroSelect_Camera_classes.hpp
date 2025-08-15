@@ -18,27 +18,28 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C
-// 0x0020 (0x0A10 - 0x09F0)
+// 0x0020 (0x0800 - 0x07E0)
 class AFortnitePartyHeroSelect_Camera_C final : public AFortCameraBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x09F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCameraComponent*                       CameraActor_0;                                     // 0x09F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          MouseDown;                                         // 0x0A00(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A01[0x7];                                      // 0x0A01(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        CachedPawn;                                        // 0x0A08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7D8[0x8];                                      // 0x07D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCameraComponent*                       CameraActor_0;                                     // 0x07E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          MouseDown;                                         // 0x07F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7F1[0x7];                                      // 0x07F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        CachedPawn;                                        // 0x07F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds);
-	void InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1(const struct FKey& Key);
-	void InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0(const struct FKey& Key);
+	void HandleMousePress();
+	void HandleMouseRelease();
 	void InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3(const struct FKey& Key);
 	void InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2(const struct FKey& Key);
-	void HandleMouseRelease();
-	void HandleMousePress();
+	void InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1(const struct FKey& Key);
+	void InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0(const struct FKey& Key);
+	void OnActivated(class AFortPlayerController* PlayerController);
+	void OnDeactivated(class AFortPlayerController* PlayerController);
+	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_FortnitePartyHeroSelect_Camera(int32 EntryPoint);
-	void BP_OnDeactivated(class AFortPlayerController* PlayerController);
-	void BP_OnActivated(class AFortPlayerController* PlayerController);
 
 public:
 	static class UClass* StaticClass()
@@ -51,11 +52,11 @@ public:
 	}
 };
 static_assert(alignof(AFortnitePartyHeroSelect_Camera_C) == 0x000010, "Wrong alignment on AFortnitePartyHeroSelect_Camera_C");
-static_assert(sizeof(AFortnitePartyHeroSelect_Camera_C) == 0x000A10, "Wrong size on AFortnitePartyHeroSelect_Camera_C");
-static_assert(offsetof(AFortnitePartyHeroSelect_Camera_C, UberGraphFrame) == 0x0009F0, "Member 'AFortnitePartyHeroSelect_Camera_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AFortnitePartyHeroSelect_Camera_C, CameraActor_0) == 0x0009F8, "Member 'AFortnitePartyHeroSelect_Camera_C::CameraActor_0' has a wrong offset!");
-static_assert(offsetof(AFortnitePartyHeroSelect_Camera_C, MouseDown) == 0x000A00, "Member 'AFortnitePartyHeroSelect_Camera_C::MouseDown' has a wrong offset!");
-static_assert(offsetof(AFortnitePartyHeroSelect_Camera_C, CachedPawn) == 0x000A08, "Member 'AFortnitePartyHeroSelect_Camera_C::CachedPawn' has a wrong offset!");
+static_assert(sizeof(AFortnitePartyHeroSelect_Camera_C) == 0x000800, "Wrong size on AFortnitePartyHeroSelect_Camera_C");
+static_assert(offsetof(AFortnitePartyHeroSelect_Camera_C, UberGraphFrame) == 0x0007E0, "Member 'AFortnitePartyHeroSelect_Camera_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AFortnitePartyHeroSelect_Camera_C, CameraActor_0) == 0x0007E8, "Member 'AFortnitePartyHeroSelect_Camera_C::CameraActor_0' has a wrong offset!");
+static_assert(offsetof(AFortnitePartyHeroSelect_Camera_C, MouseDown) == 0x0007F0, "Member 'AFortnitePartyHeroSelect_Camera_C::MouseDown' has a wrong offset!");
+static_assert(offsetof(AFortnitePartyHeroSelect_Camera_C, CachedPawn) == 0x0007F8, "Member 'AFortnitePartyHeroSelect_Camera_C::CachedPawn' has a wrong offset!");
 
 }
 

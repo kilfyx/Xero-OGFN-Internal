@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "GA_Athena_Consumable_Throw_Secondary_Parent_classes.hpp"
+#include "GA_Athena_Grenade_ThrowWithTrajectory_Secondary_Parent_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_MolotovCocktail_SecondaryAimed.GA_Athena_MolotovCocktail_SecondaryAimed_C
-// 0x0000 (0x0E90 - 0x0E90)
-class UGA_Athena_MolotovCocktail_SecondaryAimed_C final : public UGA_Athena_Consumable_Throw_Secondary_Parent_C
+// 0x0000 (0x0EA0 - 0x0EA0)
+class UGA_Athena_MolotovCocktail_SecondaryAimed_C final : public UGA_Athena_Grenade_ThrowWithTrajectory_Secondary_Parent_C
 {
 public:
 	static class UClass* StaticClass()
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_MolotovCocktail_SecondaryAimed_C>();
 	}
 };
+static_assert(alignof(UGA_Athena_MolotovCocktail_SecondaryAimed_C) == 0x000008, "Wrong alignment on UGA_Athena_MolotovCocktail_SecondaryAimed_C");
+static_assert(sizeof(UGA_Athena_MolotovCocktail_SecondaryAimed_C) == 0x000EA0, "Wrong size on UGA_Athena_MolotovCocktail_SecondaryAimed_C");
 
 }
 

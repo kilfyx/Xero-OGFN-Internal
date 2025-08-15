@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass CosmeticLoadoutSelector.CosmeticLoadoutSelector_C
-// 0x0020 (0x02D8 - 0x02B8)
+// 0x0020 (0x02D0 - 0x02B0)
 class UCosmeticLoadoutSelector_C final : public UFortCosmeticLoadoutSelector
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBorder*                                Background;                                        // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    Left_InputActionDisplay;                           // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    Right_InputActionDisplay;                          // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBorder*                                Background;                                        // 0x02B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    Left_InputActionDisplay;                           // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    Right_InputActionDisplay;                          // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_CosmeticLoadoutSelector(int32 EntryPoint);
-	void OnLoadoutSet(int32 Selection);
 	void OnNumLoadoutsFound(int32 NumLoadouts);
+	void OnLoadoutSet(int32 Selection);
 
 public:
 	static class UClass* StaticClass()
@@ -43,11 +43,11 @@ public:
 	}
 };
 static_assert(alignof(UCosmeticLoadoutSelector_C) == 0x000008, "Wrong alignment on UCosmeticLoadoutSelector_C");
-static_assert(sizeof(UCosmeticLoadoutSelector_C) == 0x0002D8, "Wrong size on UCosmeticLoadoutSelector_C");
-static_assert(offsetof(UCosmeticLoadoutSelector_C, UberGraphFrame) == 0x0002B8, "Member 'UCosmeticLoadoutSelector_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutSelector_C, Background) == 0x0002C0, "Member 'UCosmeticLoadoutSelector_C::Background' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutSelector_C, Left_InputActionDisplay) == 0x0002C8, "Member 'UCosmeticLoadoutSelector_C::Left_InputActionDisplay' has a wrong offset!");
-static_assert(offsetof(UCosmeticLoadoutSelector_C, Right_InputActionDisplay) == 0x0002D0, "Member 'UCosmeticLoadoutSelector_C::Right_InputActionDisplay' has a wrong offset!");
+static_assert(sizeof(UCosmeticLoadoutSelector_C) == 0x0002D0, "Wrong size on UCosmeticLoadoutSelector_C");
+static_assert(offsetof(UCosmeticLoadoutSelector_C, UberGraphFrame) == 0x0002B0, "Member 'UCosmeticLoadoutSelector_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutSelector_C, Background) == 0x0002B8, "Member 'UCosmeticLoadoutSelector_C::Background' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutSelector_C, Left_InputActionDisplay) == 0x0002C0, "Member 'UCosmeticLoadoutSelector_C::Left_InputActionDisplay' has a wrong offset!");
+static_assert(offsetof(UCosmeticLoadoutSelector_C, Right_InputActionDisplay) == 0x0002C8, "Member 'UCosmeticLoadoutSelector_C::Right_InputActionDisplay' has a wrong offset!");
 
 }
 

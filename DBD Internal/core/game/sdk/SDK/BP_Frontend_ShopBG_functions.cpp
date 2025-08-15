@@ -17,51 +17,17 @@
 namespace SDK
 {
 
-// Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.SetDynamicEnvironmentEvent
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           InPresetEnvName                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void ABP_Frontend_ShopBG_C::SetDynamicEnvironmentEvent(const class FString& InPresetEnvName)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetDynamicEnvironmentEvent");
-
-	Params::BP_Frontend_ShopBG_C_SetDynamicEnvironmentEvent Parms{};
-
-	Parms.InPresetEnvName = std::move(InPresetEnvName);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.ResetDonut
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Frontend_ShopBG_C::ResetDonut()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ResetDonut");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.SetDynamicBG
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UTexture*                         InTexture                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UTexture*                         InTexture                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_Frontend_ShopBG_C::SetDynamicBG(class UTexture* InTexture)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetDynamicBG");
+		Func = Class->GetFunction("BP_Frontend_ShopBG_C", "SetDynamicBG");
 
 	Params::BP_Frontend_ShopBG_C_SetDynamicBG Parms{};
 
@@ -71,29 +37,63 @@ void ABP_Frontend_ShopBG_C::SetDynamicBG(class UTexture* InTexture)
 }
 
 
+// Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.EnableDynamicShopBG
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Frontend_ShopBG_C::EnableDynamicShopBG()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Frontend_ShopBG_C", "EnableDynamicShopBG");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
 void ABP_Frontend_ShopBG_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_Frontend_ShopBG_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.HandleStoreEntered
+// Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.SetDynamicEnvironmentEvent
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    InPresetEnvName                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_Frontend_ShopBG_C::HandleStoreEntered()
+void ABP_Frontend_ShopBG_C::SetDynamicEnvironmentEvent(const class FString& InPresetEnvName)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HandleStoreEntered");
+		Func = Class->GetFunction("BP_Frontend_ShopBG_C", "SetDynamicEnvironmentEvent");
+
+	Params::BP_Frontend_ShopBG_C_SetDynamicEnvironmentEvent Parms{};
+
+	Parms.InPresetEnvName = std::move(InPresetEnvName);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.DebugShopBG
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Frontend_ShopBG_C::DebugShopBG()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Frontend_ShopBG_C", "DebugShopBG");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,9 +105,51 @@ void ABP_Frontend_ShopBG_C::HandleStoreEntered()
 void ABP_Frontend_ShopBG_C::HandleRequestHide()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HandleRequestHide");
+		Func = Class->GetFunction("BP_Frontend_ShopBG_C", "HandleRequestHide");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.HandleItemShopEntered
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Frontend_ShopBG_C::HandleItemShopEntered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Frontend_ShopBG_C", "HandleItemShopEntered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.HandleStoreEntered
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Frontend_ShopBG_C::HandleStoreEntered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Frontend_ShopBG_C", "HandleStoreEntered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.ResetDonut
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Frontend_ShopBG_C::ResetDonut()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Frontend_ShopBG_C", "ResetDonut");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -121,57 +163,15 @@ void ABP_Frontend_ShopBG_C::HandleRequestHide()
 void ABP_Frontend_ShopBG_C::ExecuteUbergraph_BP_Frontend_ShopBG(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_BP_Frontend_ShopBG");
+		Func = Class->GetFunction("BP_Frontend_ShopBG_C", "ExecuteUbergraph_BP_Frontend_ShopBG");
 
 	Params::BP_Frontend_ShopBG_C_ExecuteUbergraph_BP_Frontend_ShopBG Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.HandleItemShopEntered
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Frontend_ShopBG_C::HandleItemShopEntered()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("HandleItemShopEntered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.DebugShopBG
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Frontend_ShopBG_C::DebugShopBG()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("DebugShopBG");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.EnableDynamicShopBG
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Frontend_ShopBG_C::EnableDynamicShopBG()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EnableDynamicShopBG");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

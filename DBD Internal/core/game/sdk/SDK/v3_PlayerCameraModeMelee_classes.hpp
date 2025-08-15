@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass v3_PlayerCameraModeMelee.v3_PlayerCameraModeMelee_C
-// 0x0000 (0x0EA0 - 0x0EA0)
+// 0x0000 (0x0DD0 - 0x0DD0)
 class Uv3_PlayerCameraModeMelee_C final : public Uv3_PlayerCameraModeBase_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<Uv3_PlayerCameraModeMelee_C>();
 	}
 };
+static_assert(alignof(Uv3_PlayerCameraModeMelee_C) == 0x000010, "Wrong alignment on Uv3_PlayerCameraModeMelee_C");
+static_assert(sizeof(Uv3_PlayerCameraModeMelee_C) == 0x000DD0, "Wrong size on Uv3_PlayerCameraModeMelee_C");
 
 }
 

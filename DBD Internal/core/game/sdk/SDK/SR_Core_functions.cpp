@@ -37,64 +37,49 @@ void USR_Core_C::ExecuteUbergraph_SR_Core(int32 EntryPoint)
 }
 
 
-// Function SR_Core.SR_Core_C.GetIsMixAllowed
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function SR_Core.SR_Core_C.OnPawnExitSeat
+// (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// bool*                                   MixAllowed                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper)
+// class AFortPawn*                        PlayerPawn                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   SeatIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USR_Core_C::GetIsMixAllowed(bool* MixAllowed)
+void USR_Core_C::OnPawnExitSeat(const TScriptInterface<class IFortVehicleInterface>& Vehicle, class AFortPawn* PlayerPawn, int32 SeatIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SR_Core_C", "GetIsMixAllowed");
+		Func = Class->GetFunction("SR_Core_C", "OnPawnExitSeat");
 
-	Params::SR_Core_C_GetIsMixAllowed Parms{};
+	Params::SR_Core_C_OnPawnExitSeat Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (MixAllowed != nullptr)
-		*MixAllowed = Parms.MixAllowed;
-}
-
-
-// Function SR_Core.SR_Core_C.HandleADSStateUpdated
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Is_Targeting                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USR_Core_C::HandleADSStateUpdated(bool Is_Targeting)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SR_Core_C", "HandleADSStateUpdated");
-
-	Params::SR_Core_C_HandleADSStateUpdated Parms{};
-
-	Parms.Is_Targeting = Is_Targeting;
+	Parms.Vehicle = Vehicle;
+	Parms.PlayerPawn = PlayerPawn;
+	Parms.SeatIndex = SeatIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function SR_Core.SR_Core_C.HandleOnSourcePlayed
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function SR_Core.SR_Core_C.OnPawnEnterSeat
+// (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// class UStreamingRadioPlayerComponent*   Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FAthenaRadioStation&       AffectedSource                                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper)
+// class AFortPawn*                        PlayerPawn                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   SeatIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USR_Core_C::HandleOnSourcePlayed(class UStreamingRadioPlayerComponent* Component, const struct FAthenaRadioStation& AffectedSource)
+void USR_Core_C::OnPawnEnterSeat(const TScriptInterface<class IFortVehicleInterface>& Vehicle, class AFortPawn* PlayerPawn, int32 SeatIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SR_Core_C", "HandleOnSourcePlayed");
+		Func = Class->GetFunction("SR_Core_C", "OnPawnEnterSeat");
 
-	Params::SR_Core_C_HandleOnSourcePlayed Parms{};
+	Params::SR_Core_C_OnPawnEnterSeat Parms{};
 
-	Parms.Component = Component;
-	Parms.AffectedSource = std::move(AffectedSource);
+	Parms.Vehicle = Vehicle;
+	Parms.PlayerPawn = PlayerPawn;
+	Parms.SeatIndex = SeatIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -104,7 +89,7 @@ void USR_Core_C::HandleOnSourcePlayed(class UStreamingRadioPlayerComponent* Comp
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AFortPawn*                        Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Entering                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Entering                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // int32                                   SeatIdx                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void USR_Core_C::HandleSeatStateUpdated(class AFortPawn* Pawn, bool Entering, int32 SeatIdx)
@@ -146,49 +131,43 @@ void USR_Core_C::HandleWeaponStateUpdated(class AFortWeapon* NewWeapon, class AF
 }
 
 
-// Function SR_Core.SR_Core_C.OnPawnEnterSeat
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// Function SR_Core.SR_Core_C.HandleADSStateUpdated
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-// class AFortPawn*                        PlayerPawn                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   SeatIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Is_Targeting                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void USR_Core_C::OnPawnEnterSeat(const TScriptInterface<class IFortVehicleInterface>& Vehicle, class AFortPawn* PlayerPawn, int32 SeatIndex)
+void USR_Core_C::HandleADSStateUpdated(bool Is_Targeting)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SR_Core_C", "OnPawnEnterSeat");
+		Func = Class->GetFunction("SR_Core_C", "HandleADSStateUpdated");
 
-	Params::SR_Core_C_OnPawnEnterSeat Parms{};
+	Params::SR_Core_C_HandleADSStateUpdated Parms{};
 
-	Parms.Vehicle = Vehicle;
-	Parms.PlayerPawn = PlayerPawn;
-	Parms.SeatIndex = SeatIndex;
+	Parms.Is_Targeting = Is_Targeting;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function SR_Core.SR_Core_C.OnPawnExitSeat
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// Function SR_Core.SR_Core_C.HandleOnSourcePlayed
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const TScriptInterface<class IFortVehicleInterface>&Vehicle                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-// class AFortPawn*                        PlayerPawn                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   SeatIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UStreamingRadioPlayerComponent*   Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FAthenaRadioStation&       AffectedSource                                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void USR_Core_C::OnPawnExitSeat(const TScriptInterface<class IFortVehicleInterface>& Vehicle, class AFortPawn* PlayerPawn, int32 SeatIndex)
+void USR_Core_C::HandleOnSourcePlayed(class UStreamingRadioPlayerComponent* Component, const struct FAthenaRadioStation& AffectedSource)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SR_Core_C", "OnPawnExitSeat");
+		Func = Class->GetFunction("SR_Core_C", "HandleOnSourcePlayed");
 
-	Params::SR_Core_C_OnPawnExitSeat Parms{};
+	Params::SR_Core_C_HandleOnSourcePlayed Parms{};
 
-	Parms.Vehicle = Vehicle;
-	Parms.PlayerPawn = PlayerPawn;
-	Parms.SeatIndex = SeatIndex;
+	Parms.Component = Component;
+	Parms.AffectedSource = std::move(AffectedSource);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -205,6 +184,27 @@ void USR_Core_C::UpdateMixState()
 		Func = Class->GetFunction("SR_Core_C", "UpdateMixState");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SR_Core.SR_Core_C.GetIsMixAllowed
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   MixAllowed                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void USR_Core_C::GetIsMixAllowed(bool* MixAllowed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SR_Core_C", "GetIsMixAllowed");
+
+	Params::SR_Core_C_GetIsMixAllowed Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (MixAllowed != nullptr)
+		*MixAllowed = Parms.MixAllowed;
 }
 
 }

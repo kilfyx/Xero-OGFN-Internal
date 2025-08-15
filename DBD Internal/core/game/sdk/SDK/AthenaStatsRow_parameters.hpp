@@ -30,7 +30,7 @@ static_assert(offsetof(AthenaStatsRow_C_SetStatValueAsText, StatValue) == 0x0000
 struct AthenaStatsRow_C_PreConstruct final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(AthenaStatsRow_C_PreConstruct) == 0x000001, "Wrong alignment on AthenaStatsRow_C_PreConstruct");
 static_assert(sizeof(AthenaStatsRow_C_PreConstruct) == 0x000001, "Wrong size on AthenaStatsRow_C_PreConstruct");
@@ -42,7 +42,7 @@ struct AthenaStatsRow_C_ExecuteUbergraph_AthenaStatsRow final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(AthenaStatsRow_C_ExecuteUbergraph_AthenaStatsRow) == 0x000004, "Wrong alignment on AthenaStatsRow_C_ExecuteUbergraph_AthenaStatsRow");
 static_assert(sizeof(AthenaStatsRow_C_ExecuteUbergraph_AthenaStatsRow) == 0x000008, "Wrong size on AthenaStatsRow_C_ExecuteUbergraph_AthenaStatsRow");

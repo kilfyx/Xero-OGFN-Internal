@@ -11,67 +11,57 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "FortniteGame_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass ItemOnPawnPreview.ItemOnPawnPreview_C
-// 0x00F0 (0x0760 - 0x0670)
+// 0x00C0 (0x05A0 - 0x04E0)
 class AItemOnPawnPreview_C final : public AFortItemPreviewOnPawnActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0670(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UArrowComponent*                        Arrow1;                                            // 0x0678(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDirectionalLightComponent*             Directional_Light_For_Atmosphere_PC;               // 0x0680(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkyLightComponent*                     SkyLightPC;                                        // 0x0688(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UArrowComponent*                        Arrow;                                             // 0x0690(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkyLightComponent*                     SkyLightLowMobile;                                 // 0x0698(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDirectionalLightComponent*             DirectionalLightMobile;                            // 0x06A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    KeyLight_StandaloneForSwitch;                      // 0x06A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    KeyLight5;                                         // 0x06B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    KeyLight6;                                         // 0x06B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    KeyLigh3;                                          // 0x06C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    KeyLight2;                                         // 0x06C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    BounceRear1;                                       // 0x06D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    RimLowerRight1;                                    // 0x06D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    RimLeft1;                                          // 0x06E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    RimTopRight1;                                      // 0x06E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    RimBottomLeft1;                                    // 0x06F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    Bounce1;                                           // 0x06F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        LightTransform;                                    // 0x0700(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Plane;                                             // 0x0708(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Sample_Mesh;                                       // 0x0710(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          AlwaysOn;                                          // 0x0718(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsActive;                                          // 0x0719(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          debugConstructionLighting;                         // 0x071A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71B[0x5];                                      // 0x071B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               ObscuringLoopEmitter;                              // 0x0720(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               ToonLightRotatio;                                  // 0x0728(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bIsBattlePassReward;                               // 0x0740(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_741[0x7];                                      // 0x0741(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           LOD_StreamingSafetyTimer;                          // 0x0748(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     DefaultFloorMaterial;                              // 0x0750(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CustomFloorMaterial;                               // 0x0758(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USkyLightComponent*                     SkyLightPC;                                        // 0x04E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UArrowComponent*                        Arrow;                                             // 0x04F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkyLightComponent*                     SkyLightLowMobile;                                 // 0x04F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDirectionalLightComponent*             DirectionalLightMobile;                            // 0x0500(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    KeyLight_StandaloneForSwitch;                      // 0x0508(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    KeyLight5;                                         // 0x0510(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    KeyLight6;                                         // 0x0518(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    KeyLigh3;                                          // 0x0520(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    KeyLight2;                                         // 0x0528(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    BounceRear1;                                       // 0x0530(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    RimLowerRight1;                                    // 0x0538(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    RimLeft1;                                          // 0x0540(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    RimTopRight1;                                      // 0x0548(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    RimBottomLeft1;                                    // 0x0550(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    Bounce1;                                           // 0x0558(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        LightTransform;                                    // 0x0560(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Plane;                                             // 0x0568(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Sample_Mesh;                                       // 0x0570(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          AlwaysOn;                                          // 0x0578(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          IsActive;                                          // 0x0579(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          debugConstructionLighting;                         // 0x057A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_57B[0x5];                                      // 0x057B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               ObscuringLoopEmitter;                              // 0x0580(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               ToonLightRotatio;                                  // 0x0588(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void UpdateSettings();
-	void SwitchPCLighting(bool Visibility);
-	void SwitchMobileLighting(bool NewParam);
 	void SwitchErebusLighting(bool Visibility);
 	void SetFloorEnabled(bool Show_Floor);
-	void ReceiveBeginPlay();
-	void OnUpdateFloorMaterial(bool bEnableAutotestBackground);
-	void OnSetFloorMaterial(class UMaterialInterface* InMaterialInstance);
-	void OnPreviewVisualsSpawned(const bool bUseSecondaryTransitionEffects, const bool bShowFloor);
-	void OnCurrentVisualsCleanedUp();
-	void OnAllLODStreamingComplete();
 	void LightControl(bool Active);
-	void Get_LOD_Streaming_Safety_Duration();
+	void SwitchPCLighting(bool Visibility);
+	void SwitchMobileLighting(bool NewParam);
+	void OnPreviewVisualsSpawned();
+	void UpdateSettings();
+	void OnSetFloorMaterial(class UMaterialInterface* InMaterialInstance);
+	void OnAllLODStreamingComplete();
+	void OnCurrentVisualsCleanedUp();
+	void OnUpdateFloorMaterial(bool bEnableAutotestBackground);
 	void ExecuteUbergraph_ItemOnPawnPreview(int32 EntryPoint);
-	void Backup_LODStreamingFailed();
 
 public:
 	static class UClass* StaticClass()
@@ -84,37 +74,31 @@ public:
 	}
 };
 static_assert(alignof(AItemOnPawnPreview_C) == 0x000010, "Wrong alignment on AItemOnPawnPreview_C");
-static_assert(sizeof(AItemOnPawnPreview_C) == 0x000760, "Wrong size on AItemOnPawnPreview_C");
-static_assert(offsetof(AItemOnPawnPreview_C, UberGraphFrame) == 0x000670, "Member 'AItemOnPawnPreview_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, Arrow1) == 0x000678, "Member 'AItemOnPawnPreview_C::Arrow1' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, Directional_Light_For_Atmosphere_PC) == 0x000680, "Member 'AItemOnPawnPreview_C::Directional_Light_For_Atmosphere_PC' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, SkyLightPC) == 0x000688, "Member 'AItemOnPawnPreview_C::SkyLightPC' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, Arrow) == 0x000690, "Member 'AItemOnPawnPreview_C::Arrow' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, SkyLightLowMobile) == 0x000698, "Member 'AItemOnPawnPreview_C::SkyLightLowMobile' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, DirectionalLightMobile) == 0x0006A0, "Member 'AItemOnPawnPreview_C::DirectionalLightMobile' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, KeyLight_StandaloneForSwitch) == 0x0006A8, "Member 'AItemOnPawnPreview_C::KeyLight_StandaloneForSwitch' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, KeyLight5) == 0x0006B0, "Member 'AItemOnPawnPreview_C::KeyLight5' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, KeyLight6) == 0x0006B8, "Member 'AItemOnPawnPreview_C::KeyLight6' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, KeyLigh3) == 0x0006C0, "Member 'AItemOnPawnPreview_C::KeyLigh3' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, KeyLight2) == 0x0006C8, "Member 'AItemOnPawnPreview_C::KeyLight2' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, BounceRear1) == 0x0006D0, "Member 'AItemOnPawnPreview_C::BounceRear1' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, RimLowerRight1) == 0x0006D8, "Member 'AItemOnPawnPreview_C::RimLowerRight1' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, RimLeft1) == 0x0006E0, "Member 'AItemOnPawnPreview_C::RimLeft1' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, RimTopRight1) == 0x0006E8, "Member 'AItemOnPawnPreview_C::RimTopRight1' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, RimBottomLeft1) == 0x0006F0, "Member 'AItemOnPawnPreview_C::RimBottomLeft1' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, Bounce1) == 0x0006F8, "Member 'AItemOnPawnPreview_C::Bounce1' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, LightTransform) == 0x000700, "Member 'AItemOnPawnPreview_C::LightTransform' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, Plane) == 0x000708, "Member 'AItemOnPawnPreview_C::Plane' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, Sample_Mesh) == 0x000710, "Member 'AItemOnPawnPreview_C::Sample_Mesh' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, AlwaysOn) == 0x000718, "Member 'AItemOnPawnPreview_C::AlwaysOn' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, IsActive) == 0x000719, "Member 'AItemOnPawnPreview_C::IsActive' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, debugConstructionLighting) == 0x00071A, "Member 'AItemOnPawnPreview_C::debugConstructionLighting' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, ObscuringLoopEmitter) == 0x000720, "Member 'AItemOnPawnPreview_C::ObscuringLoopEmitter' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, ToonLightRotatio) == 0x000728, "Member 'AItemOnPawnPreview_C::ToonLightRotatio' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, bIsBattlePassReward) == 0x000740, "Member 'AItemOnPawnPreview_C::bIsBattlePassReward' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, LOD_StreamingSafetyTimer) == 0x000748, "Member 'AItemOnPawnPreview_C::LOD_StreamingSafetyTimer' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, DefaultFloorMaterial) == 0x000750, "Member 'AItemOnPawnPreview_C::DefaultFloorMaterial' has a wrong offset!");
-static_assert(offsetof(AItemOnPawnPreview_C, CustomFloorMaterial) == 0x000758, "Member 'AItemOnPawnPreview_C::CustomFloorMaterial' has a wrong offset!");
+static_assert(sizeof(AItemOnPawnPreview_C) == 0x0005A0, "Wrong size on AItemOnPawnPreview_C");
+static_assert(offsetof(AItemOnPawnPreview_C, UberGraphFrame) == 0x0004E0, "Member 'AItemOnPawnPreview_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, SkyLightPC) == 0x0004E8, "Member 'AItemOnPawnPreview_C::SkyLightPC' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, Arrow) == 0x0004F0, "Member 'AItemOnPawnPreview_C::Arrow' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, SkyLightLowMobile) == 0x0004F8, "Member 'AItemOnPawnPreview_C::SkyLightLowMobile' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, DirectionalLightMobile) == 0x000500, "Member 'AItemOnPawnPreview_C::DirectionalLightMobile' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, KeyLight_StandaloneForSwitch) == 0x000508, "Member 'AItemOnPawnPreview_C::KeyLight_StandaloneForSwitch' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, KeyLight5) == 0x000510, "Member 'AItemOnPawnPreview_C::KeyLight5' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, KeyLight6) == 0x000518, "Member 'AItemOnPawnPreview_C::KeyLight6' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, KeyLigh3) == 0x000520, "Member 'AItemOnPawnPreview_C::KeyLigh3' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, KeyLight2) == 0x000528, "Member 'AItemOnPawnPreview_C::KeyLight2' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, BounceRear1) == 0x000530, "Member 'AItemOnPawnPreview_C::BounceRear1' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, RimLowerRight1) == 0x000538, "Member 'AItemOnPawnPreview_C::RimLowerRight1' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, RimLeft1) == 0x000540, "Member 'AItemOnPawnPreview_C::RimLeft1' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, RimTopRight1) == 0x000548, "Member 'AItemOnPawnPreview_C::RimTopRight1' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, RimBottomLeft1) == 0x000550, "Member 'AItemOnPawnPreview_C::RimBottomLeft1' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, Bounce1) == 0x000558, "Member 'AItemOnPawnPreview_C::Bounce1' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, LightTransform) == 0x000560, "Member 'AItemOnPawnPreview_C::LightTransform' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, Plane) == 0x000568, "Member 'AItemOnPawnPreview_C::Plane' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, Sample_Mesh) == 0x000570, "Member 'AItemOnPawnPreview_C::Sample_Mesh' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, AlwaysOn) == 0x000578, "Member 'AItemOnPawnPreview_C::AlwaysOn' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, IsActive) == 0x000579, "Member 'AItemOnPawnPreview_C::IsActive' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, debugConstructionLighting) == 0x00057A, "Member 'AItemOnPawnPreview_C::debugConstructionLighting' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, ObscuringLoopEmitter) == 0x000580, "Member 'AItemOnPawnPreview_C::ObscuringLoopEmitter' has a wrong offset!");
+static_assert(offsetof(AItemOnPawnPreview_C, ToonLightRotatio) == 0x000588, "Member 'AItemOnPawnPreview_C::ToonLightRotatio' has a wrong offset!");
 
 }
 

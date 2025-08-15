@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass GameSettingsDetailView.GameSettingsDetailView_C
-// 0x0000 (0x0320 - 0x0320)
+// 0x0000 (0x0330 - 0x0330)
 class UGameSettingsDetailView_C final : public UFortSettingDetailView
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGameSettingsDetailView_C>();
 	}
 };
+static_assert(alignof(UGameSettingsDetailView_C) == 0x000008, "Wrong alignment on UGameSettingsDetailView_C");
+static_assert(sizeof(UGameSettingsDetailView_C) == 0x000330, "Wrong size on UGameSettingsDetailView_C");
 
 }
 

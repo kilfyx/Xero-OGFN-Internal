@@ -37,15 +37,15 @@ void AB_Decal_ChillBronco_C::ExecuteUbergraph_B_Decal_ChillBronco(int32 EntryPoi
 }
 
 
-// Function B_Decal_ChillBronco.B_Decal_ChillBronco_C.FadeIn__FinishedFunc
-// (BlueprintEvent)
+// Function B_Decal_ChillBronco.B_Decal_ChillBronco_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AB_Decal_ChillBronco_C::FadeIn__FinishedFunc()
+void AB_Decal_ChillBronco_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Decal_ChillBronco_C", "FadeIn__FinishedFunc");
+		Func = Class->GetFunction("B_Decal_ChillBronco_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,15 +65,15 @@ void AB_Decal_ChillBronco_C::FadeIn__UpdateFunc()
 }
 
 
-// Function B_Decal_ChillBronco.B_Decal_ChillBronco_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function B_Decal_ChillBronco.B_Decal_ChillBronco_C.FadeIn__FinishedFunc
+// (BlueprintEvent)
 
-void AB_Decal_ChillBronco_C::ReceiveBeginPlay()
+void AB_Decal_ChillBronco_C::FadeIn__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Decal_ChillBronco_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("B_Decal_ChillBronco_C", "FadeIn__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

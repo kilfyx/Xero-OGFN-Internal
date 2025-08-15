@@ -37,6 +37,26 @@ void Uwindowchromebuttons_C::ExecuteUbergraph_windowchromebuttons(int32 EntryPoi
 }
 
 
+// Function windowchromebuttons.windowchromebuttons_C.OnMouseLeave
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void Uwindowchromebuttons_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("windowchromebuttons_C", "OnMouseLeave");
+
+	Params::windowchromebuttons_C_OnMouseLeave Parms{};
+
+	Parms.MouseEvent = std::move(MouseEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function windowchromebuttons.windowchromebuttons_C.OnMouseEnter
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -53,26 +73,6 @@ void Uwindowchromebuttons_C::OnMouseEnter(const struct FGeometry& MyGeometry, co
 	Params::windowchromebuttons_C_OnMouseEnter Parms{};
 
 	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function windowchromebuttons.windowchromebuttons_C.OnMouseLeave
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void Uwindowchromebuttons_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("windowchromebuttons_C", "OnMouseLeave");
-
-	Params::windowchromebuttons_C_OnMouseLeave Parms{};
-
 	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);

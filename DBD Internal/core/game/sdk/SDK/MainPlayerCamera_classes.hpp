@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MainPlayerCamera.MainPlayerCamera_C
-// 0x0000 (0x3160 - 0x3160)
+// 0x0000 (0x2EC0 - 0x2EC0)
 class AMainPlayerCamera_C final : public AFortPlayerCameraZone
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AMainPlayerCamera_C>();
 	}
 };
+static_assert(alignof(AMainPlayerCamera_C) == 0x000010, "Wrong alignment on AMainPlayerCamera_C");
+static_assert(sizeof(AMainPlayerCamera_C) == 0x002EC0, "Wrong size on AMainPlayerCamera_C");
 
 }
 

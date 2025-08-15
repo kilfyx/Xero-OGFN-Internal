@@ -20,7 +20,7 @@ namespace SDK
 // Function IslandPortalInteractionInterface.IslandPortalInteractionInterface_C.BroadcastIsBeingInteractedWith
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsInteracting                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsInteracting                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void IIslandPortalInteractionInterface_C::BroadcastIsBeingInteractedWith(bool IsInteracting)
 {

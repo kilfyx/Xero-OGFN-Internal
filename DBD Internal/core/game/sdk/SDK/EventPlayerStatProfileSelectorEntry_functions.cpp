@@ -23,9 +23,9 @@ namespace SDK
 void UEventPlayerStatProfileSelectorEntry_C::BP_OnHovered()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnHovered");
+		Func = Class->GetFunction("EventPlayerStatProfileSelectorEntry_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,9 +37,9 @@ void UEventPlayerStatProfileSelectorEntry_C::BP_OnHovered()
 void UEventPlayerStatProfileSelectorEntry_C::BP_OnUnhovered()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnUnhovered");
+		Func = Class->GetFunction("EventPlayerStatProfileSelectorEntry_C", "BP_OnUnhovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -53,9 +53,9 @@ void UEventPlayerStatProfileSelectorEntry_C::BP_OnUnhovered()
 void UEventPlayerStatProfileSelectorEntry_C::ExecuteUbergraph_EventPlayerStatProfileSelectorEntry(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_EventPlayerStatProfileSelectorEntry");
+		Func = Class->GetFunction("EventPlayerStatProfileSelectorEntry_C", "ExecuteUbergraph_EventPlayerStatProfileSelectorEntry");
 
 	Params::EventPlayerStatProfileSelectorEntry_C_ExecuteUbergraph_EventPlayerStatProfileSelectorEntry Parms{};
 

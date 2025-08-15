@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function Legacy_MovieWidget.Legacy_MovieWidget_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void ULegacy_MovieWidget_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Legacy_MovieWidget_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Legacy_MovieWidget.Legacy_MovieWidget_C.ExecuteUbergraph_Legacy_MovieWidget
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -48,6 +34,56 @@ void ULegacy_MovieWidget_C::ExecuteUbergraph_Legacy_MovieWidget(int32 EntryPoint
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Legacy_MovieWidget.Legacy_MovieWidget_C.OnMediaLoaded
+// (BlueprintCallable, BlueprintEvent)
+
+void ULegacy_MovieWidget_C::OnMediaLoaded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Legacy_MovieWidget_C", "OnMediaLoaded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Legacy_MovieWidget.Legacy_MovieWidget_C.MediaDimensionsUpdated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   NewWidth                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   NewHeight                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULegacy_MovieWidget_C::MediaDimensionsUpdated(float NewWidth, float NewHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Legacy_MovieWidget_C", "MediaDimensionsUpdated");
+
+	Params::Legacy_MovieWidget_C_MediaDimensionsUpdated Parms{};
+
+	Parms.NewWidth = NewWidth;
+	Parms.NewHeight = NewHeight;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Legacy_MovieWidget.Legacy_MovieWidget_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void ULegacy_MovieWidget_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Legacy_MovieWidget_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -77,37 +113,15 @@ void ULegacy_MovieWidget_C::Init(class UMediaPlayer* InMediaPlayer, class UMedia
 }
 
 
-// Function Legacy_MovieWidget.Legacy_MovieWidget_C.MediaDimensionsUpdated
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   NewWidth                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   NewHeight                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Legacy_MovieWidget.Legacy_MovieWidget_C.StopPlaying
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ULegacy_MovieWidget_C::MediaDimensionsUpdated(float NewWidth, float NewHeight)
+void ULegacy_MovieWidget_C::StopPlaying()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Legacy_MovieWidget_C", "MediaDimensionsUpdated");
-
-	Params::Legacy_MovieWidget_C_MediaDimensionsUpdated Parms{};
-
-	Parms.NewWidth = NewWidth;
-	Parms.NewHeight = NewHeight;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Legacy_MovieWidget.Legacy_MovieWidget_C.OnMediaLoaded
-// (BlueprintCallable, BlueprintEvent)
-
-void ULegacy_MovieWidget_C::OnMediaLoaded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Legacy_MovieWidget_C", "OnMediaLoaded");
+		Func = Class->GetFunction("Legacy_MovieWidget_C", "StopPlaying");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -116,7 +130,7 @@ void ULegacy_MovieWidget_C::OnMediaLoaded()
 // Function Legacy_MovieWidget.Legacy_MovieWidget_C.Play
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    ShouldRewind                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ShouldRewind                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ULegacy_MovieWidget_C::Play(bool ShouldRewind)
 {
@@ -142,20 +156,6 @@ void ULegacy_MovieWidget_C::SetDelayedContentValues()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("Legacy_MovieWidget_C", "SetDelayedContentValues");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Legacy_MovieWidget.Legacy_MovieWidget_C.StopPlaying
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ULegacy_MovieWidget_C::StopPlaying()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Legacy_MovieWidget_C", "StopPlaying");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

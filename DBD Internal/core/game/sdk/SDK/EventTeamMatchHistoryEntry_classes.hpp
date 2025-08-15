@@ -18,24 +18,26 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventTeamMatchHistoryEntry.EventTeamMatchHistoryEntry_C
-// 0x0050 (0x14F0 - 0x14A0)
+// 0x0060 (0x0C40 - 0x0BE0)
 class UEventTeamMatchHistoryEntry_C final : public UFortEventTeamMatchHistoryEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x14A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Selected;                                          // 0x14A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonBorder*                          Border_Zebra;                                      // 0x14B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_OnlineStatus;                                // 0x14B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_SelectedBG;                                  // 0x14C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_ReplayInteraction;                            // 0x14C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              Hovered;                                           // 0x14D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              Unhovered;                                         // 0x14E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Selected;                                          // 0x0BE8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonBorder*                          Border_Zebra;                                      // 0x0BF0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_eliminations;                                // 0x0BF8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_OnlineStatus;                                // 0x0C00(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Placement;                                   // 0x0C08(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_SelectedBG;                                  // 0x0C10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_ReplayInteraction;                            // 0x0C18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              Hovered;                                           // 0x0C20(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              Unhovered;                                         // 0x0C30(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void BP_OnHovered();
 	void BP_OnUnhovered();
-	void ExecuteUbergraph_EventTeamMatchHistoryEntry(int32 EntryPoint);
 	void OnListItemObjectSet(class UObject* ListItemObject);
+	void ExecuteUbergraph_EventTeamMatchHistoryEntry(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -47,16 +49,18 @@ public:
 		return GetDefaultObjImpl<UEventTeamMatchHistoryEntry_C>();
 	}
 };
-static_assert(alignof(UEventTeamMatchHistoryEntry_C) == 0x000010, "Wrong alignment on UEventTeamMatchHistoryEntry_C");
-static_assert(sizeof(UEventTeamMatchHistoryEntry_C) == 0x0014F0, "Wrong size on UEventTeamMatchHistoryEntry_C");
-static_assert(offsetof(UEventTeamMatchHistoryEntry_C, UberGraphFrame) == 0x0014A0, "Member 'UEventTeamMatchHistoryEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Selected) == 0x0014A8, "Member 'UEventTeamMatchHistoryEntry_C::Selected' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Border_Zebra) == 0x0014B0, "Member 'UEventTeamMatchHistoryEntry_C::Border_Zebra' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Image_OnlineStatus) == 0x0014B8, "Member 'UEventTeamMatchHistoryEntry_C::Image_OnlineStatus' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Image_SelectedBG) == 0x0014C0, "Member 'UEventTeamMatchHistoryEntry_C::Image_SelectedBG' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Text_ReplayInteraction) == 0x0014C8, "Member 'UEventTeamMatchHistoryEntry_C::Text_ReplayInteraction' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Hovered) == 0x0014D0, "Member 'UEventTeamMatchHistoryEntry_C::Hovered' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Unhovered) == 0x0014E0, "Member 'UEventTeamMatchHistoryEntry_C::Unhovered' has a wrong offset!");
+static_assert(alignof(UEventTeamMatchHistoryEntry_C) == 0x000008, "Wrong alignment on UEventTeamMatchHistoryEntry_C");
+static_assert(sizeof(UEventTeamMatchHistoryEntry_C) == 0x000C40, "Wrong size on UEventTeamMatchHistoryEntry_C");
+static_assert(offsetof(UEventTeamMatchHistoryEntry_C, UberGraphFrame) == 0x000BE0, "Member 'UEventTeamMatchHistoryEntry_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Selected) == 0x000BE8, "Member 'UEventTeamMatchHistoryEntry_C::Selected' has a wrong offset!");
+static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Border_Zebra) == 0x000BF0, "Member 'UEventTeamMatchHistoryEntry_C::Border_Zebra' has a wrong offset!");
+static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Image_eliminations) == 0x000BF8, "Member 'UEventTeamMatchHistoryEntry_C::Image_eliminations' has a wrong offset!");
+static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Image_OnlineStatus) == 0x000C00, "Member 'UEventTeamMatchHistoryEntry_C::Image_OnlineStatus' has a wrong offset!");
+static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Image_Placement) == 0x000C08, "Member 'UEventTeamMatchHistoryEntry_C::Image_Placement' has a wrong offset!");
+static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Image_SelectedBG) == 0x000C10, "Member 'UEventTeamMatchHistoryEntry_C::Image_SelectedBG' has a wrong offset!");
+static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Text_ReplayInteraction) == 0x000C18, "Member 'UEventTeamMatchHistoryEntry_C::Text_ReplayInteraction' has a wrong offset!");
+static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Hovered) == 0x000C20, "Member 'UEventTeamMatchHistoryEntry_C::Hovered' has a wrong offset!");
+static_assert(offsetof(UEventTeamMatchHistoryEntry_C, Unhovered) == 0x000C30, "Member 'UEventTeamMatchHistoryEntry_C::Unhovered' has a wrong offset!");
 
 }
 

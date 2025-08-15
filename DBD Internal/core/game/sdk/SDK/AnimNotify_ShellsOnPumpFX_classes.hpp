@@ -21,7 +21,7 @@ namespace SDK
 class UAnimNotify_ShellsOnPumpFX_C final : public UAnimNotify
 {
 public:
-	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
+	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation) const;
 
 public:
 	static class UClass* StaticClass()
@@ -33,6 +33,8 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_ShellsOnPumpFX_C>();
 	}
 };
+static_assert(alignof(UAnimNotify_ShellsOnPumpFX_C) == 0x000008, "Wrong alignment on UAnimNotify_ShellsOnPumpFX_C");
+static_assert(sizeof(UAnimNotify_ShellsOnPumpFX_C) == 0x000038, "Wrong size on UAnimNotify_ShellsOnPumpFX_C");
 
 }
 

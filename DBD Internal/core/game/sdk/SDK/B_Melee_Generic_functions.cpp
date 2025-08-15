@@ -17,48 +17,6 @@
 namespace SDK
 {
 
-// Function B_Melee_Generic.B_Melee_Generic_C.ActivateSwingFX
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::ActivateSwingFX()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "ActivateSwingFX");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.Bind Swing and Anim Trail Events
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::Bind_Swing_and_Anim_Trail_Events()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "Bind Swing and Anim Trail Events");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.DeactivateSwingFX
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::DeactivateSwingFX()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "DeactivateSwingFX");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_Melee_Generic.B_Melee_Generic_C.ExecuteUbergraph_B_Melee_Generic
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -79,182 +37,39 @@ void AB_Melee_Generic_C::ExecuteUbergraph_B_Melee_Generic(int32 EntryPoint)
 }
 
 
-// Function B_Melee_Generic.B_Melee_Generic_C.FootStepLeft
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::FootStepLeft()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "FootStepLeft");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.FootStepRight
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::FootStepRight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "FootStepRight");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.K2_OnUnEquip
+// Function B_Melee_Generic.B_Melee_Generic_C.OnWeaponDetached
 // (Event, Public, BlueprintEvent)
 
-void AB_Melee_Generic_C::K2_OnUnEquip()
+void AB_Melee_Generic_C::OnWeaponDetached()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "K2_OnUnEquip");
+		Func = Class->GetFunction("B_Melee_Generic_C", "OnWeaponDetached");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_Melee_Generic.B_Melee_Generic_C.Melee_Effect_Color
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function B_Melee_Generic.B_Melee_Generic_C.OnWeaponVisibilityChanged
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// struct FVector*                         Melee_Color_Set                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bVisible                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bSetForLocalControllerOnly                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_Melee_Generic_C::Melee_Effect_Color(struct FVector* Melee_Color_Set)
+void AB_Melee_Generic_C::OnWeaponVisibilityChanged(bool bVisible, bool bSetForLocalControllerOnly)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "Melee_Effect_Color");
+		Func = Class->GetFunction("B_Melee_Generic_C", "OnWeaponVisibilityChanged");
 
-	Params::B_Melee_Generic_C_Melee_Effect_Color Parms{};
+	Params::B_Melee_Generic_C_OnWeaponVisibilityChanged Parms{};
+
+	Parms.bVisible = bVisible;
+	Parms.bSetForLocalControllerOnly = bSetForLocalControllerOnly;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Melee_Color_Set != nullptr)
-		*Melee_Color_Set = std::move(Parms.Melee_Color_Set);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingLeft
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    First_Left                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Melee_Generic_C::MeleeSwingLeft(bool First_Left)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingLeft");
-
-	Params::B_Melee_Generic_C_MeleeSwingLeft Parms{};
-
-	Parms.First_Left = First_Left;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingLeft_End
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::MeleeSwingLeft_End()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingLeft_End");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingRight
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    First_Right                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Melee_Generic_C::MeleeSwingRight(bool First_Right)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingRight");
-
-	Params::B_Melee_Generic_C_MeleeSwingRight Parms{};
-
-	Parms.First_Right = First_Right;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingRight_End
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::MeleeSwingRight_End()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingRight_End");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.On Anim Trails Notify
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bActive                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Melee_Generic_C::On_Anim_Trails_Notify(bool bActive)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "On Anim Trails Notify");
-
-	Params::B_Melee_Generic_C_On_Anim_Trails_Notify Parms{};
-
-	Parms.bActive = bActive;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.On Anim Trails Notify (Deactivate)
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::On_Anim_Trails_Notify__Deactivate_()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "On Anim Trails Notify (Deactivate)");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.OnEquippedWeaponDestory
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
-
-void AB_Melee_Generic_C::OnEquippedWeaponDestory()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "OnEquippedWeaponDestory");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -278,37 +93,31 @@ void AB_Melee_Generic_C::OnInitCosmeticAlterations(const struct FFortCosmeticMod
 }
 
 
-// Function B_Melee_Generic.B_Melee_Generic_C.OnInitWeaponCosmetics
-// (Event, Protected, BlueprintEvent)
+// Function B_Melee_Generic.B_Melee_Generic_C.OnWeaponAttached
+// (Event, Public, BlueprintEvent)
 
-void AB_Melee_Generic_C::OnInitWeaponCosmetics()
+void AB_Melee_Generic_C::OnWeaponAttached()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "OnInitWeaponCosmetics");
+		Func = Class->GetFunction("B_Melee_Generic_C", "OnWeaponAttached");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_Melee_Generic.B_Melee_Generic_C.OnLoaded_CB594210420542B302428F8181D85E48
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function B_Melee_Generic.B_Melee_Generic_C.OnEquippedWeaponDestory
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 
-void AB_Melee_Generic_C::OnLoaded_CB594210420542B302428F8181D85E48(class UObject* Loaded)
+void AB_Melee_Generic_C::OnEquippedWeaponDestory()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "OnLoaded_CB594210420542B302428F8181D85E48");
+		Func = Class->GetFunction("B_Melee_Generic_C", "OnEquippedWeaponDestory");
 
-	Params::B_Melee_Generic_C_OnLoaded_CB594210420542B302428F8181D85E48 Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -336,11 +145,25 @@ void AB_Melee_Generic_C::OnPlayImpactFX(const struct FHitResult& HitResult, EPhy
 }
 
 
+// Function B_Melee_Generic.B_Melee_Generic_C.PlayRClickImpacts
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Melee_Generic_C::PlayRClickImpacts()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Melee_Generic_C", "PlayRClickImpacts");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_Melee_Generic.B_Melee_Generic_C.OnPlayWeaponFireFX
 // (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bPersistentFire                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bSecondaryFire                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bPersistentFire                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bSecondaryFire                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AB_Melee_Generic_C::OnPlayWeaponFireFX(bool bPersistentFire, bool bSecondaryFire)
 {
@@ -358,107 +181,181 @@ void AB_Melee_Generic_C::OnPlayWeaponFireFX(bool bPersistentFire, bool bSecondar
 }
 
 
-// Function B_Melee_Generic.B_Melee_Generic_C.OnSwingLeft
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::OnSwingLeft()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "OnSwingLeft");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.OnSwingLeftEnded
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::OnSwingLeftEnded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "OnSwingLeftEnded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.OnSwingRight
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::OnSwingRight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "OnSwingRight");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.OnSwingRightEnded
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::OnSwingRightEnded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "OnSwingRightEnded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.OnWeaponAttached
-// (Event, Public, BlueprintEvent)
-
-void AB_Melee_Generic_C::OnWeaponAttached()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "OnWeaponAttached");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.OnWeaponDetached
-// (Event, Public, BlueprintEvent)
-
-void AB_Melee_Generic_C::OnWeaponDetached()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "OnWeaponDetached");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.OnWeaponVisibilityChanged
+// Function B_Melee_Generic.B_Melee_Generic_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bVisible                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bSetForLocalControllerOnly                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Melee_Generic_C::OnWeaponVisibilityChanged(bool bVisible, bool bSetForLocalControllerOnly)
+void AB_Melee_Generic_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "OnWeaponVisibilityChanged");
+		Func = Class->GetFunction("B_Melee_Generic_C", "ReceiveBeginPlay");
 
-	Params::B_Melee_Generic_C_OnWeaponVisibilityChanged Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.bVisible = bVisible;
-	Parms.bSetForLocalControllerOnly = bSetForLocalControllerOnly;
+
+// Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingLeft_End
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Melee_Generic_C::MeleeSwingLeft_End()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingLeft_End");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingRight_End
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Melee_Generic_C::MeleeSwingRight_End()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingRight_End");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Melee_Generic.B_Melee_Generic_C.FootStepRight
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Melee_Generic_C::FootStepRight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Melee_Generic_C", "FootStepRight");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Melee_Generic.B_Melee_Generic_C.FootStepLeft
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Melee_Generic_C::FootStepLeft()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Melee_Generic_C", "FootStepLeft");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingLeft
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    First_Left                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_Melee_Generic_C::MeleeSwingLeft(bool First_Left)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingLeft");
+
+	Params::B_Melee_Generic_C_MeleeSwingLeft Parms{};
+
+	Parms.First_Left = First_Left;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingRight
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    First_Right                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_Melee_Generic_C::MeleeSwingRight(bool First_Right)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingRight");
+
+	Params::B_Melee_Generic_C_MeleeSwingRight Parms{};
+
+	Parms.First_Right = First_Right;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Melee_Generic.B_Melee_Generic_C.OnLoaded_CB594210420542B302428F8181D85E48
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Melee_Generic_C::OnLoaded_CB594210420542B302428F8181D85E48(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Melee_Generic_C", "OnLoaded_CB594210420542B302428F8181D85E48");
+
+	Params::B_Melee_Generic_C_OnLoaded_CB594210420542B302428F8181D85E48 Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Melee_Generic.B_Melee_Generic_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Melee_Generic_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Melee_Generic_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Melee_Generic.B_Melee_Generic_C.SetWpnRarity
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Melee_Generic_C::SetWpnRarity()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Melee_Generic_C", "SetWpnRarity");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Melee_Generic.B_Melee_Generic_C.SetActiveAlterationIdleParticles
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    Reset                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_Melee_Generic_C::SetActiveAlterationIdleParticles(bool Active, bool Reset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Melee_Generic_C", "SetActiveAlterationIdleParticles");
+
+	Params::B_Melee_Generic_C_SetActiveAlterationIdleParticles Parms{};
+
+	Parms.Active = Active;
+	Parms.Reset = Reset;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -484,95 +381,24 @@ void AB_Melee_Generic_C::PlayCQCPickaxeEnemyAudio(const struct FHitResult& Hit_R
 }
 
 
-// Function B_Melee_Generic.B_Melee_Generic_C.PlayRClickImpacts
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::PlayRClickImpacts()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "PlayRClickImpacts");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AB_Melee_Generic_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.SetActiveAlterationIdleParticles
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function B_Melee_Generic.B_Melee_Generic_C.Melee_Effect_Color
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Reset                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         Melee_Color_Set                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Melee_Generic_C::SetActiveAlterationIdleParticles(bool Active, bool Reset)
+void AB_Melee_Generic_C::Melee_Effect_Color(struct FVector* Melee_Color_Set)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "SetActiveAlterationIdleParticles");
+		Func = Class->GetFunction("B_Melee_Generic_C", "Melee_Effect_Color");
 
-	Params::B_Melee_Generic_C_SetActiveAlterationIdleParticles Parms{};
-
-	Parms.Active = Active;
-	Parms.Reset = Reset;
+	Params::B_Melee_Generic_C_Melee_Effect_Color Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function B_Melee_Generic.B_Melee_Generic_C.SetWpnRarity
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::SetWpnRarity()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "SetWpnRarity");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.UnbindSwingAndAnimTrailEvents
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::UnbindSwingAndAnimTrailEvents()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "UnbindSwingAndAnimTrailEvents");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (Melee_Color_Set != nullptr)
+		*Melee_Color_Set = std::move(Parms.Melee_Color_Set);
 }
 
 }

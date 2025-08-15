@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function Cinematic-TeamMics.Cinematic-TeamMics_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UCinematic_TeamMics_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Cinematic-TeamMics_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Cinematic-TeamMics.Cinematic-TeamMics_C.ExecuteUbergraph_Cinematic-TeamMics
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UCinematic_TeamMics_C::ExecuteUbergraph_Cinematic_TeamMics(int32 EntryPoint
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Cinematic-TeamMics.Cinematic-TeamMics_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UCinematic_TeamMics_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Cinematic-TeamMics_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

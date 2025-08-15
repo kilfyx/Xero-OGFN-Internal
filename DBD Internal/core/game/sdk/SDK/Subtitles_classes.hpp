@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Subtitles.Subtitles_C
-// 0x0008 (0x02B8 - 0x02B0)
+// 0x0008 (0x02D0 - 0x02C8)
 class USubtitles_C final : public UFortHUDElementWidget
 {
 public:
-	class USubtitleDisplay*                       SubtitleDisplay;                                   // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USubtitleDisplay*                       SubtitleDisplay;                                   // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -33,6 +33,9 @@ public:
 		return GetDefaultObjImpl<USubtitles_C>();
 	}
 };
+static_assert(alignof(USubtitles_C) == 0x000008, "Wrong alignment on USubtitles_C");
+static_assert(sizeof(USubtitles_C) == 0x0002D0, "Wrong size on USubtitles_C");
+static_assert(offsetof(USubtitles_C, SubtitleDisplay) == 0x0002C8, "Member 'USubtitles_C::SubtitleDisplay' has a wrong offset!");
 
 }
 

@@ -11,52 +11,46 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "FortniteUI_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TournamentPayoutModal.TournamentPayoutModal_C
-// 0x0280 (0x06F8 - 0x0478)
+// 0x00A8 (0x03F8 - 0x0350)
 class UTournamentPayoutModal_C final : public UFortTournamentPayoutModal
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0478(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x0480(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UEventsSimpleButton_C*                  BackButton;                                        // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCloseButton_C*                         CloseButton;                                       // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_ContainerBG;                          // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_OptionsBarBG;                         // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonHierarchicalScrollBox*           CommonHierarchicalScrollBox_0;                     // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_1;                                 // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            CommonWidgetSwitcher_476;                          // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           Content_LeaderboardEntries;                        // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          Content_NoLeaderboardEntries;                      // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEventLeaderboardEventDetails_C*        EventLeaderboardEventDetails;                      // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEventLeaderboardHeader_C*              EventLeaderboardHeaderDetails;                     // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_0;                                   // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_0;                                        // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_TopContainer;                              // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            Switcher_LeaderboardEntries;                       // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_NoLeaderboardEntries;                         // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              CallEventBack;                                     // 0x0508(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              NoPayout;                                          // 0x0518(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FFortTournamentDisplayInfo             CurrentDisplayInfo;                                // 0x0528(0x01D0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro;                                             // 0x0358(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UEventsSimpleButton_C*                  BackButton;                                        // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCloseButton_C*                         CloseButton;                                       // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_ContainerBG;                          // 0x0370(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_OptionsBarBG;                         // 0x0378(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonHierarchicalScrollBox*           CommonHierarchicalScrollBox_0;                     // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_1;                                 // 0x0388(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_476;                          // 0x0390(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           Content_LeaderboardEntries;                        // 0x0398(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          Content_NoLeaderboardEntries;                      // 0x03A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEventLeaderboardEventDetails_C*        EventLeaderboardEventDetails;                      // 0x03A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEventLeaderboardHeader_C*              EventLeaderboardHeaderDetails;                     // 0x03B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_1;                                        // 0x03B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_TopContainer;                              // 0x03C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  Switcher_LeaderboardEntries;                       // 0x03C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_NoLeaderboardEntries;                         // 0x03D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              CallEventBack;                                     // 0x03D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              NoPayout;                                          // 0x03E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button);
-	void BndEvt__CloseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button);
 	void EmptyFunction(bool* Handled);
-	void EventColorize(const struct FFortTournamentDisplayInfo& TournamentDisplayInfo);
-	void EventIntro();
-	void ExecuteUbergraph_TournamentPayoutModal(int32 EntryPoint);
-	void Init(const class FString& EventWindowId, const class FString& TournamentId);
-	void InitializeTabButton(class UCommonButtonLegacy* TabButton, const class FText& TabText);
 	void NotifyNoPayouts();
-	void OnTabVisibilityChange(bool bIsVisible);
+	void BndEvt__BackButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void Init(const class FString& EventWindowId, const class FString& TournamentId);
+	void EventIntro();
+	void EventColorize(const struct FFortTournamentDisplayInfo& TournamentDisplayInfo);
+	void BndEvt__CloseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void ExecuteUbergraph_TournamentPayoutModal(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -69,28 +63,26 @@ public:
 	}
 };
 static_assert(alignof(UTournamentPayoutModal_C) == 0x000008, "Wrong alignment on UTournamentPayoutModal_C");
-static_assert(sizeof(UTournamentPayoutModal_C) == 0x0006F8, "Wrong size on UTournamentPayoutModal_C");
-static_assert(offsetof(UTournamentPayoutModal_C, UberGraphFrame) == 0x000478, "Member 'UTournamentPayoutModal_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, Intro) == 0x000480, "Member 'UTournamentPayoutModal_C::Intro' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, BackButton) == 0x000488, "Member 'UTournamentPayoutModal_C::BackButton' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, CloseButton) == 0x000490, "Member 'UTournamentPayoutModal_C::CloseButton' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, CommonBorder_ContainerBG) == 0x000498, "Member 'UTournamentPayoutModal_C::CommonBorder_ContainerBG' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, CommonBorder_OptionsBarBG) == 0x0004A0, "Member 'UTournamentPayoutModal_C::CommonBorder_OptionsBarBG' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, CommonHierarchicalScrollBox_0) == 0x0004A8, "Member 'UTournamentPayoutModal_C::CommonHierarchicalScrollBox_0' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, CommonTextBlock_1) == 0x0004B0, "Member 'UTournamentPayoutModal_C::CommonTextBlock_1' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, CommonWidgetSwitcher_476) == 0x0004B8, "Member 'UTournamentPayoutModal_C::CommonWidgetSwitcher_476' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, Content_LeaderboardEntries) == 0x0004C0, "Member 'UTournamentPayoutModal_C::Content_LeaderboardEntries' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, Content_NoLeaderboardEntries) == 0x0004C8, "Member 'UTournamentPayoutModal_C::Content_NoLeaderboardEntries' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, EventLeaderboardEventDetails) == 0x0004D0, "Member 'UTournamentPayoutModal_C::EventLeaderboardEventDetails' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, EventLeaderboardHeaderDetails) == 0x0004D8, "Member 'UTournamentPayoutModal_C::EventLeaderboardHeaderDetails' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, HorizontalBox_0) == 0x0004E0, "Member 'UTournamentPayoutModal_C::HorizontalBox_0' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, SafeZone_0) == 0x0004E8, "Member 'UTournamentPayoutModal_C::SafeZone_0' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, SizeBox_TopContainer) == 0x0004F0, "Member 'UTournamentPayoutModal_C::SizeBox_TopContainer' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, Switcher_LeaderboardEntries) == 0x0004F8, "Member 'UTournamentPayoutModal_C::Switcher_LeaderboardEntries' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, Text_NoLeaderboardEntries) == 0x000500, "Member 'UTournamentPayoutModal_C::Text_NoLeaderboardEntries' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, CallEventBack) == 0x000508, "Member 'UTournamentPayoutModal_C::CallEventBack' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, NoPayout) == 0x000518, "Member 'UTournamentPayoutModal_C::NoPayout' has a wrong offset!");
-static_assert(offsetof(UTournamentPayoutModal_C, CurrentDisplayInfo) == 0x000528, "Member 'UTournamentPayoutModal_C::CurrentDisplayInfo' has a wrong offset!");
+static_assert(sizeof(UTournamentPayoutModal_C) == 0x0003F8, "Wrong size on UTournamentPayoutModal_C");
+static_assert(offsetof(UTournamentPayoutModal_C, UberGraphFrame) == 0x000350, "Member 'UTournamentPayoutModal_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, Intro) == 0x000358, "Member 'UTournamentPayoutModal_C::Intro' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, BackButton) == 0x000360, "Member 'UTournamentPayoutModal_C::BackButton' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, CloseButton) == 0x000368, "Member 'UTournamentPayoutModal_C::CloseButton' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, CommonBorder_ContainerBG) == 0x000370, "Member 'UTournamentPayoutModal_C::CommonBorder_ContainerBG' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, CommonBorder_OptionsBarBG) == 0x000378, "Member 'UTournamentPayoutModal_C::CommonBorder_OptionsBarBG' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, CommonHierarchicalScrollBox_0) == 0x000380, "Member 'UTournamentPayoutModal_C::CommonHierarchicalScrollBox_0' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, CommonTextBlock_1) == 0x000388, "Member 'UTournamentPayoutModal_C::CommonTextBlock_1' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, CommonWidgetSwitcher_476) == 0x000390, "Member 'UTournamentPayoutModal_C::CommonWidgetSwitcher_476' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, Content_LeaderboardEntries) == 0x000398, "Member 'UTournamentPayoutModal_C::Content_LeaderboardEntries' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, Content_NoLeaderboardEntries) == 0x0003A0, "Member 'UTournamentPayoutModal_C::Content_NoLeaderboardEntries' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, EventLeaderboardEventDetails) == 0x0003A8, "Member 'UTournamentPayoutModal_C::EventLeaderboardEventDetails' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, EventLeaderboardHeaderDetails) == 0x0003B0, "Member 'UTournamentPayoutModal_C::EventLeaderboardHeaderDetails' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, SafeZone_1) == 0x0003B8, "Member 'UTournamentPayoutModal_C::SafeZone_1' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, SizeBox_TopContainer) == 0x0003C0, "Member 'UTournamentPayoutModal_C::SizeBox_TopContainer' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, Switcher_LeaderboardEntries) == 0x0003C8, "Member 'UTournamentPayoutModal_C::Switcher_LeaderboardEntries' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, Text_NoLeaderboardEntries) == 0x0003D0, "Member 'UTournamentPayoutModal_C::Text_NoLeaderboardEntries' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, CallEventBack) == 0x0003D8, "Member 'UTournamentPayoutModal_C::CallEventBack' has a wrong offset!");
+static_assert(offsetof(UTournamentPayoutModal_C, NoPayout) == 0x0003E8, "Member 'UTournamentPayoutModal_C::NoPayout' has a wrong offset!");
 
 }
 

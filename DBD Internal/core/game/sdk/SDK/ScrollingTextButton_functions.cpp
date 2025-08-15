@@ -17,40 +17,6 @@
 namespace SDK
 {
 
-// Function ScrollingTextButton.ScrollingTextButton_C.BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UScrollingTextButton_C::BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature");
-
-	Params::ScrollingTextButton_C_BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature Parms{};
-
-	Parms.bUsingGamepad = bUsingGamepad;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ScrollingTextButton.ScrollingTextButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UScrollingTextButton_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ScrollingTextButton.ScrollingTextButton_C.ExecuteUbergraph_ScrollingTextButton
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -71,15 +37,15 @@ void UScrollingTextButton_C::ExecuteUbergraph_ScrollingTextButton(int32 EntryPoi
 }
 
 
-// Function ScrollingTextButton.ScrollingTextButton_C.InitializeButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function ScrollingTextButton.ScrollingTextButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UScrollingTextButton_C::InitializeButton()
+void UScrollingTextButton_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "InitializeButton");
+		Func = Class->GetFunction("ScrollingTextButton_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -119,20 +85,6 @@ void UScrollingTextButton_C::OnActionProgress(float HeldPercent)
 }
 
 
-// Function ScrollingTextButton.ScrollingTextButton_C.OnCurrentTextStyleChanged
-// (Event, Protected, BlueprintEvent)
-
-void UScrollingTextButton_C::OnCurrentTextStyleChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "OnCurrentTextStyleChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ScrollingTextButton.ScrollingTextButton_C.OnTriggeredInputActionChanged
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -153,135 +105,21 @@ void UScrollingTextButton_C::OnTriggeredInputActionChanged(const struct FDataTab
 }
 
 
-// Function ScrollingTextButton.ScrollingTextButton_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function ScrollingTextButton.ScrollingTextButton_C.BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UScrollingTextButton_C::PreConstruct(bool IsDesignTime)
+void UScrollingTextButton_C::BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "PreConstruct");
+		Func = Class->GetFunction("ScrollingTextButton_C", "BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature");
 
-	Params::ScrollingTextButton_C_PreConstruct Parms{};
+	Params::ScrollingTextButton_C_BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ScrollingTextButton.ScrollingTextButton_C.Set Icon
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FSlateBrush&               IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UScrollingTextButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "Set Icon");
-
-	Params::ScrollingTextButton_C_Set_Icon Parms{};
-
-	Parms.IconBrush_0 = std::move(IconBrush_0);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ScrollingTextButton.ScrollingTextButton_C.Set Text
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UScrollingTextButton_C::Set_Text(const class FText& ButtonText_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "Set Text");
-
-	Params::ScrollingTextButton_C_Set_Text Parms{};
-
-	Parms.ButtonText_0 = std::move(ButtonText_0);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ScrollingTextButton.ScrollingTextButton_C.SetContentAlignment
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EHorizontalAlignment                    ContentAlignment_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UScrollingTextButton_C::SetContentAlignment(EHorizontalAlignment ContentAlignment_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "SetContentAlignment");
-
-	Params::ScrollingTextButton_C_SetContentAlignment Parms{};
-
-	Parms.ContentAlignment_0 = ContentAlignment_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ScrollingTextButton.ScrollingTextButton_C.SetControllerStyle
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UClass*                           ControllerInputStyle_0                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UScrollingTextButton_C::SetControllerStyle(class UClass* ControllerInputStyle_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "SetControllerStyle");
-
-	Params::ScrollingTextButton_C_SetControllerStyle Parms{};
-
-	Parms.ControllerInputStyle_0 = ControllerInputStyle_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ScrollingTextButton.ScrollingTextButton_C.SetInitialMouseKeyboardStyle
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UScrollingTextButton_C::SetInitialMouseKeyboardStyle()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "SetInitialMouseKeyboardStyle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ScrollingTextButton.ScrollingTextButton_C.SetMouseKeyboardStyle
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UClass*                           ControllerInputStyle_0                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UScrollingTextButton_C::SetMouseKeyboardStyle(class UClass* ControllerInputStyle_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "SetMouseKeyboardStyle");
-
-	Params::ScrollingTextButton_C_SetMouseKeyboardStyle Parms{};
-
-	Parms.ControllerInputStyle_0 = ControllerInputStyle_0;
+	Parms.bUsingGamepad = bUsingGamepad;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -307,35 +145,129 @@ void UScrollingTextButton_C::SetTabLabelInfo(const struct FFortTabButtonLabelInf
 }
 
 
-// Function ScrollingTextButton.ScrollingTextButton_C.UpdateContentAlignment
-// (Private, BlueprintCallable, BlueprintEvent)
+// Function ScrollingTextButton.ScrollingTextButton_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UScrollingTextButton_C::UpdateContentAlignment()
+void UScrollingTextButton_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "UpdateContentAlignment");
+		Func = Class->GetFunction("ScrollingTextButton_C", "PreConstruct");
+
+	Params::ScrollingTextButton_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ScrollingTextButton.ScrollingTextButton_C.OnCurrentTextStyleChanged
+// (Event, Protected, BlueprintEvent)
+
+void UScrollingTextButton_C::OnCurrentTextStyleChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrollingTextButton_C", "OnCurrentTextStyleChanged");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ScrollingTextButton.ScrollingTextButton_C.UpdateStyle
+// Function ScrollingTextButton.ScrollingTextButton_C.Set Text
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    UsingGamepad                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UScrollingTextButton_C::UpdateStyle(bool UsingGamepad)
+void UScrollingTextButton_C::Set_Text(const class FText& ButtonText_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "UpdateStyle");
+		Func = Class->GetFunction("ScrollingTextButton_C", "Set Text");
 
-	Params::ScrollingTextButton_C_UpdateStyle Parms{};
+	Params::ScrollingTextButton_C_Set_Text Parms{};
 
-	Parms.UsingGamepad = UsingGamepad;
+	Parms.ButtonText_0 = std::move(ButtonText_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ScrollingTextButton.ScrollingTextButton_C.Set Icon
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FSlateBrush&               IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UScrollingTextButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrollingTextButton_C", "Set Icon");
+
+	Params::ScrollingTextButton_C_Set_Icon Parms{};
+
+	Parms.IconBrush_0 = std::move(IconBrush_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ScrollingTextButton.ScrollingTextButton_C.InitializeButton
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UScrollingTextButton_C::InitializeButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrollingTextButton_C", "InitializeButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ScrollingTextButton.ScrollingTextButton_C.UpdateTextAndStyle
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UScrollingTextButton_C::UpdateTextAndStyle(bool bUsingGamepad)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrollingTextButton_C", "UpdateTextAndStyle");
+
+	Params::ScrollingTextButton_C_UpdateTextAndStyle Parms{};
+
+	Parms.bUsingGamepad = bUsingGamepad;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ScrollingTextButton.ScrollingTextButton_C.SetControllerStyle
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass*                           ControllerInputStyle_0                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UScrollingTextButton_C::SetControllerStyle(class UClass* ControllerInputStyle_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrollingTextButton_C", "SetControllerStyle");
+
+	Params::ScrollingTextButton_C_SetControllerStyle Parms{};
+
+	Parms.ControllerInputStyle_0 = ControllerInputStyle_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -355,21 +287,75 @@ void UScrollingTextButton_C::UpdateText()
 }
 
 
-// Function ScrollingTextButton.ScrollingTextButton_C.UpdateTextAndStyle
+// Function ScrollingTextButton.ScrollingTextButton_C.UpdateStyle
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UsingGamepad                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UScrollingTextButton_C::UpdateTextAndStyle(bool bUsingGamepad)
+void UScrollingTextButton_C::UpdateStyle(bool UsingGamepad)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollingTextButton_C", "UpdateTextAndStyle");
+		Func = Class->GetFunction("ScrollingTextButton_C", "UpdateStyle");
 
-	Params::ScrollingTextButton_C_UpdateTextAndStyle Parms{};
+	Params::ScrollingTextButton_C_UpdateStyle Parms{};
 
-	Parms.bUsingGamepad = bUsingGamepad;
+	Parms.UsingGamepad = UsingGamepad;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ScrollingTextButton.ScrollingTextButton_C.SetMouseKeyboardStyle
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass*                           ControllerInputStyle_0                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UScrollingTextButton_C::SetMouseKeyboardStyle(class UClass* ControllerInputStyle_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrollingTextButton_C", "SetMouseKeyboardStyle");
+
+	Params::ScrollingTextButton_C_SetMouseKeyboardStyle Parms{};
+
+	Parms.ControllerInputStyle_0 = ControllerInputStyle_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ScrollingTextButton.ScrollingTextButton_C.UpdateContentAlignment
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UScrollingTextButton_C::UpdateContentAlignment()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrollingTextButton_C", "UpdateContentAlignment");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ScrollingTextButton.ScrollingTextButton_C.SetContentAlignment
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EHorizontalAlignment                    ContentAlignment_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UScrollingTextButton_C::SetContentAlignment(EHorizontalAlignment ContentAlignment_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrollingTextButton_C", "SetContentAlignment");
+
+	Params::ScrollingTextButton_C_SetContentAlignment Parms{};
+
+	Parms.ContentAlignment_0 = ContentAlignment_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -384,6 +370,20 @@ void UScrollingTextButton_C::UpdateTextStyle()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ScrollingTextButton_C", "UpdateTextStyle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ScrollingTextButton.ScrollingTextButton_C.SetInitialMouseKeyboardStyle
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UScrollingTextButton_C::SetInitialMouseKeyboardStyle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrollingTextButton_C", "SetInitialMouseKeyboardStyle");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

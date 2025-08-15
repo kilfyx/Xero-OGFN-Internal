@@ -37,33 +37,6 @@ void UGAB_Spray_Generic_C::ExecuteUbergraph_GAB_Spray_Generic(int32 EntryPoint)
 }
 
 
-// Function GAB_Spray_Generic.GAB_Spray_Generic_C.GetMontageToPlay
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFortMontageItemDefinitionBase*   EmoteAsset                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EFortCustomBodyType                     BodyType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EFortCustomGender                       Gender                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TSoftObjectPtr<class UAnimMontage>      ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash)
-
-TSoftObjectPtr<class UAnimMontage> UGAB_Spray_Generic_C::GetMontageToPlay(class UFortMontageItemDefinitionBase* EmoteAsset, EFortCustomBodyType BodyType, EFortCustomGender Gender)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_Spray_Generic_C", "GetMontageToPlay");
-
-	Params::GAB_Spray_Generic_C_GetMontageToPlay Parms{};
-
-	Parms.EmoteAsset = EmoteAsset;
-	Parms.BodyType = BodyType;
-	Parms.Gender = Gender;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function GAB_Spray_Generic.GAB_Spray_Generic_C.OnMontageStartedPlaying
 // (BlueprintCallable, BlueprintEvent)
 
@@ -82,7 +55,7 @@ void UGAB_Spray_Generic_C::OnMontageStartedPlaying()
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AFortPawn*                        ActivatingPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   HitSomething                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   HitSomething                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // struct FVector*                         Location                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FVector*                         Normal                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -107,6 +80,33 @@ void UGAB_Spray_Generic_C::TargetLineTrace(class AFortPawn* ActivatingPawn, bool
 
 	if (Normal != nullptr)
 		*Normal = std::move(Parms.Normal);
+}
+
+
+// Function GAB_Spray_Generic.GAB_Spray_Generic_C.GetMontageToPlay
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortMontageItemDefinitionBase*   EmoteAsset                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFortCustomBodyType                     BodyType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFortCustomGender                       Gender                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class UAnimMontage>      ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash)
+
+TSoftObjectPtr<class UAnimMontage> UGAB_Spray_Generic_C::GetMontageToPlay(class UFortMontageItemDefinitionBase* EmoteAsset, EFortCustomBodyType BodyType, EFortCustomGender Gender)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_Spray_Generic_C", "GetMontageToPlay");
+
+	Params::GAB_Spray_Generic_C_GetMontageToPlay Parms{};
+
+	Parms.EmoteAsset = EmoteAsset;
+	Parms.BodyType = BodyType;
+	Parms.Gender = Gender;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

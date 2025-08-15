@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "CommonUI_classes.hpp"
 #include "CommonInput_structs.hpp"
-#include "CommonUILegacy_classes.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -21,51 +21,48 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass InputReflectorButton.InputReflectorButton_C
-// 0x0130 (0x1040 - 0x0F10)
-class UInputReflectorButton_C final : public UCommonPopupButtonLegacy
+// 0x00F8 (0x0CA8 - 0x0BB0)
+class UInputReflectorButton_C final : public UCommonPopupButton
 {
 public:
-	uint8                                         Pad_F08[0x8];                                      // 0x0F08(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x0F18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                ContentBorder;                                     // 0x0F20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LeftSideImage;                                     // 0x0F28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNamedSlot*                             RightExtraContentSlot;                             // 0x0F30(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   ButtonText;                                        // 0x0F38(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	struct FSlateBrush                            IconBrush;                                         // 0x0F50(0x00B0)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class UClass*                                 ControllerInputStyle;                              // 0x1000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UClass*                                 MouseKeyboardStyle;                                // 0x1008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 MobileInputStyle;                                  // 0x1010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	EHorizontalAlignment                          ContentAlignment;                                  // 0x1018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bMouseKeyboardStyleSet;                            // 0x1019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_101A[0x6];                                     // 0x101A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   OverrideButtonText;                                // 0x1020(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BB0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                ContentBorder;                                     // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LeftSideImage;                                     // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNamedSlot*                             RightExtraContentSlot;                             // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   ButtonText;                                        // 0x0BD8(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	struct FSlateBrush                            IconBrush;                                         // 0x0BF0(0x0088)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class UClass*                                 ControllerInputStyle;                              // 0x0C78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UClass*                                 MouseKeyboardStyle;                                // 0x0C80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHorizontalAlignment                          ContentAlignment;                                  // 0x0C88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bMouseKeyboardStyleSet;                            // 0x0C89(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C8A[0x6];                                      // 0x0C8A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   OverrideButtonText;                                // 0x0C90(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void UpdateTextStyle();
-	void UpdateTextAndStyle(ECommonInputType CommonInputType);
-	void UpdateText();
-	void UpdateStyle(ECommonInputType UsingGamepad);
-	void UpdateContentAlignment();
 	void ShowIcon(bool bShouldShow);
 	void SetTextInternal(const class FText& InButtonText);
-	void SetMouseKeyboardStyle(class UClass* ControllerInputStyle_0);
-	void SetMobileStyle(class UClass* MobileInputStyle_0);
 	void SetInitialMouseKeyboardStyle();
-	void SetControllerStyle(class UClass* ControllerInputStyle_0);
+	void UpdateTextStyle();
 	void SetContentAlignment(EHorizontalAlignment ContentAlignment_0);
-	void Set_Text(const class FText& ButtonText_0);
+	void UpdateContentAlignment();
+	void SetMouseKeyboardStyle(class UClass* ControllerInputStyle_0);
+	void UpdateStyle(bool UsingGamepad);
+	void UpdateText();
+	void SetControllerStyle(class UClass* ControllerInputStyle_0);
+	void UpdateTextAndStyle(bool bUsingGamepad);
+	void InitializeButton();
 	void Set_Icon(const struct FSlateBrush& IconBrush_0);
-	void PreConstruct(bool IsDesignTime);
-	void OnTriggeredInputActionChanged(const struct FDataTableRowHandle& NewTriggeredAction);
+	void Set_Text(const class FText& ButtonText_0);
 	void OnCurrentTextStyleChanged();
+	void PreConstruct(bool IsDesignTime);
+	void BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad);
+	void OnTriggeredInputActionChanged(const struct FDataTableRowHandle& NewTriggeredAction);
 	void OnActionProgress(float HeldPercent);
 	void OnActionComplete();
-	void InitializeButton();
-	void ExecuteUbergraph_InputReflectorButton(int32 EntryPoint);
-	void Destruct();
 	void Construct();
-	void BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad);
+	void Destruct();
+	void ExecuteUbergraph_InputReflectorButton(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -77,6 +74,20 @@ public:
 		return GetDefaultObjImpl<UInputReflectorButton_C>();
 	}
 };
+static_assert(alignof(UInputReflectorButton_C) == 0x000008, "Wrong alignment on UInputReflectorButton_C");
+static_assert(sizeof(UInputReflectorButton_C) == 0x000CA8, "Wrong size on UInputReflectorButton_C");
+static_assert(offsetof(UInputReflectorButton_C, UberGraphFrame) == 0x000BB0, "Member 'UInputReflectorButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UInputReflectorButton_C, CenterButtonTextWidget) == 0x000BB8, "Member 'UInputReflectorButton_C::CenterButtonTextWidget' has a wrong offset!");
+static_assert(offsetof(UInputReflectorButton_C, ContentBorder) == 0x000BC0, "Member 'UInputReflectorButton_C::ContentBorder' has a wrong offset!");
+static_assert(offsetof(UInputReflectorButton_C, LeftSideImage) == 0x000BC8, "Member 'UInputReflectorButton_C::LeftSideImage' has a wrong offset!");
+static_assert(offsetof(UInputReflectorButton_C, RightExtraContentSlot) == 0x000BD0, "Member 'UInputReflectorButton_C::RightExtraContentSlot' has a wrong offset!");
+static_assert(offsetof(UInputReflectorButton_C, ButtonText) == 0x000BD8, "Member 'UInputReflectorButton_C::ButtonText' has a wrong offset!");
+static_assert(offsetof(UInputReflectorButton_C, IconBrush) == 0x000BF0, "Member 'UInputReflectorButton_C::IconBrush' has a wrong offset!");
+static_assert(offsetof(UInputReflectorButton_C, ControllerInputStyle) == 0x000C78, "Member 'UInputReflectorButton_C::ControllerInputStyle' has a wrong offset!");
+static_assert(offsetof(UInputReflectorButton_C, MouseKeyboardStyle) == 0x000C80, "Member 'UInputReflectorButton_C::MouseKeyboardStyle' has a wrong offset!");
+static_assert(offsetof(UInputReflectorButton_C, ContentAlignment) == 0x000C88, "Member 'UInputReflectorButton_C::ContentAlignment' has a wrong offset!");
+static_assert(offsetof(UInputReflectorButton_C, bMouseKeyboardStyleSet) == 0x000C89, "Member 'UInputReflectorButton_C::bMouseKeyboardStyleSet' has a wrong offset!");
+static_assert(offsetof(UInputReflectorButton_C, OverrideButtonText) == 0x000C90, "Member 'UInputReflectorButton_C::OverrideButtonText' has a wrong offset!");
 
 }
 

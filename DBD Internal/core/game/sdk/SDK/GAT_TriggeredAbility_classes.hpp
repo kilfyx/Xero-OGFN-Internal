@@ -19,20 +19,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GAT_TriggeredAbility.GAT_TriggeredAbility_C
-// 0x0018 (0x0AC0 - 0x0AA8)
+// 0x0018 (0x0AD0 - 0x0AB8)
 class UGAT_TriggeredAbility_C : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTag                           TC_AbilitiesGenericTriggeredAbilityActivate;       // 0x0AB0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bPlayerHolsterState;                               // 0x0AB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTag                           TC_AbilitiesGenericTriggeredAbilityActivate;       // 0x0AC0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPlayerHolsterState;                               // 0x0AC8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void EndAbilityWithReason(const class FString& Reason);
 	void ExecuteUbergraph_GAT_TriggeredAbility(int32 EntryPoint);
 	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData);
-	void SetHolsterWeaponWithName(class AFortPawn* Target_Fort_Pawn, bool ShouldHolster, bool PlayEquipAnim, bool ShowDebugPrintName, bool* IsWeaponHolstered, bool* OperationSuccessful);
 	void TriggeredAbilitySetup(class UAbilitySystemComponent* AbilitySystemIn, class UAbilitySystemComponent** AbilitySystemOut);
+	void SetHolsterWeaponWithName(class AFortPawn* Target_Fort_Pawn, bool ShouldHolster, bool PlayEquipAnim, bool ShowDebugPrintName, bool* IsWeaponHolstered, bool* OperationSuccessful);
+	void EndAbilityWithReason(const class FString& Reason);
 
 public:
 	static class UClass* StaticClass()
@@ -44,6 +44,11 @@ public:
 		return GetDefaultObjImpl<UGAT_TriggeredAbility_C>();
 	}
 };
+static_assert(alignof(UGAT_TriggeredAbility_C) == 0x000008, "Wrong alignment on UGAT_TriggeredAbility_C");
+static_assert(sizeof(UGAT_TriggeredAbility_C) == 0x000AD0, "Wrong size on UGAT_TriggeredAbility_C");
+static_assert(offsetof(UGAT_TriggeredAbility_C, UberGraphFrame) == 0x000AB8, "Member 'UGAT_TriggeredAbility_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UGAT_TriggeredAbility_C, TC_AbilitiesGenericTriggeredAbilityActivate) == 0x000AC0, "Member 'UGAT_TriggeredAbility_C::TC_AbilitiesGenericTriggeredAbilityActivate' has a wrong offset!");
+static_assert(offsetof(UGAT_TriggeredAbility_C, bPlayerHolsterState) == 0x000AC8, "Member 'UGAT_TriggeredAbility_C::bPlayerHolsterState' has a wrong offset!");
 
 }
 

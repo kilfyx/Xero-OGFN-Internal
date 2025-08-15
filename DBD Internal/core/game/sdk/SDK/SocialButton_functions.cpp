@@ -17,15 +17,29 @@
 namespace SDK
 {
 
+// Function SocialButton.SocialButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USocialButton_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialButton_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function SocialButton.SocialButton_C.BP_OnHovered
 // (Event, Protected, BlueprintEvent)
 
 void USocialButton_C::BP_OnHovered()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnHovered");
+		Func = Class->GetFunction("SocialButton_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,23 +51,9 @@ void USocialButton_C::BP_OnHovered()
 void USocialButton_C::BP_OnUnhovered()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialButton.SocialButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void USocialButton_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
+		Func = Class->GetFunction("SocialButton_C", "BP_OnUnhovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -67,9 +67,9 @@ void USocialButton_C::Construct()
 void USocialButton_C::ExecuteUbergraph_SocialButton(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_SocialButton");
+		Func = Class->GetFunction("SocialButton_C", "ExecuteUbergraph_SocialButton");
 
 	Params::SocialButton_C_ExecuteUbergraph_SocialButton Parms{};
 

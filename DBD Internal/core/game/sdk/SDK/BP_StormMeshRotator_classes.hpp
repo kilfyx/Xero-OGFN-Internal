@@ -32,20 +32,15 @@ public:
 	float                                         RotationSpeed;                                     // 0x0258(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BoundsScale;                                       // 0x025C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         StormProgression;                                  // 0x0260(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TestStorm;                                         // 0x0264(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isMobileStormEnabled;                              // 0x0265(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          areStormEffectsEnabled;                            // 0x0266(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TestStorm;                                         // 0x0264(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void UserConstructionScript();
-	void SetStormProgression(float Progression);
-	void setStormMeshVisibility(bool bEnabled);
-	void ReceiveBeginPlay();
-	void OnStormEffectsEnabled(bool bEnabled);
-	void initializeMobileStormSphere();
-	void handleCvarChanged(const class FString& CVarName);
-	void getSphereEnabled(bool* Enabled);
 	void ExecuteUbergraph_BP_StormMeshRotator(int32 EntryPoint);
+	void SetStormProgression(float Progression);
+	void ToggleStormMeshesVisibility(bool bEnabled);
+	void OnStormEffectsEnabled(bool bEnabled);
+	void ReceiveBeginPlay();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()
@@ -57,6 +52,19 @@ public:
 		return GetDefaultObjImpl<ABP_StormMeshRotator_C>();
 	}
 };
+static_assert(alignof(ABP_StormMeshRotator_C) == 0x000008, "Wrong alignment on ABP_StormMeshRotator_C");
+static_assert(sizeof(ABP_StormMeshRotator_C) == 0x000268, "Wrong size on ABP_StormMeshRotator_C");
+static_assert(offsetof(ABP_StormMeshRotator_C, UberGraphFrame) == 0x000220, "Member 'ABP_StormMeshRotator_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_StormMeshRotator_C, Sphere) == 0x000228, "Member 'ABP_StormMeshRotator_C::Sphere' has a wrong offset!");
+static_assert(offsetof(ABP_StormMeshRotator_C, stormCircleLowerSheet) == 0x000230, "Member 'ABP_StormMeshRotator_C::stormCircleLowerSheet' has a wrong offset!");
+static_assert(offsetof(ABP_StormMeshRotator_C, SM_stormCircleTopRim) == 0x000238, "Member 'ABP_StormMeshRotator_C::SM_stormCircleTopRim' has a wrong offset!");
+static_assert(offsetof(ABP_StormMeshRotator_C, RotatingMovement) == 0x000240, "Member 'ABP_StormMeshRotator_C::RotatingMovement' has a wrong offset!");
+static_assert(offsetof(ABP_StormMeshRotator_C, SM_stormCircleNew) == 0x000248, "Member 'ABP_StormMeshRotator_C::SM_stormCircleNew' has a wrong offset!");
+static_assert(offsetof(ABP_StormMeshRotator_C, DefaultSceneRoot) == 0x000250, "Member 'ABP_StormMeshRotator_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_StormMeshRotator_C, RotationSpeed) == 0x000258, "Member 'ABP_StormMeshRotator_C::RotationSpeed' has a wrong offset!");
+static_assert(offsetof(ABP_StormMeshRotator_C, BoundsScale) == 0x00025C, "Member 'ABP_StormMeshRotator_C::BoundsScale' has a wrong offset!");
+static_assert(offsetof(ABP_StormMeshRotator_C, StormProgression) == 0x000260, "Member 'ABP_StormMeshRotator_C::StormProgression' has a wrong offset!");
+static_assert(offsetof(ABP_StormMeshRotator_C, TestStorm) == 0x000264, "Member 'ABP_StormMeshRotator_C::TestStorm' has a wrong offset!");
 
 }
 

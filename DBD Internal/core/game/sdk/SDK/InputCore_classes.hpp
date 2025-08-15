@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UInputCoreTypes>();
 	}
 };
+static_assert(alignof(UInputCoreTypes) == 0x000008, "Wrong alignment on UInputCoreTypes");
+static_assert(sizeof(UInputCoreTypes) == 0x000028, "Wrong size on UInputCoreTypes");
 
 }
 

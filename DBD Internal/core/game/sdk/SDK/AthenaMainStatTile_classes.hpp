@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaMainStatTile.AthenaMainStatTile_C
-// 0x0008 (0x02B0 - 0x02A8)
+// 0x0008 (0x02A8 - 0x02A0)
 class UAthenaMainStatTile_C final : public UFortProfileStatsMainTile
 {
 public:
-	class UImage*                                 Glow;                                              // 0x02A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Glow;                                              // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void SetStatValue(const class FText& StatValueAsText);
@@ -37,8 +37,8 @@ public:
 	}
 };
 static_assert(alignof(UAthenaMainStatTile_C) == 0x000008, "Wrong alignment on UAthenaMainStatTile_C");
-static_assert(sizeof(UAthenaMainStatTile_C) == 0x0002B0, "Wrong size on UAthenaMainStatTile_C");
-static_assert(offsetof(UAthenaMainStatTile_C, Glow) == 0x0002A8, "Member 'UAthenaMainStatTile_C::Glow' has a wrong offset!");
+static_assert(sizeof(UAthenaMainStatTile_C) == 0x0002A8, "Wrong size on UAthenaMainStatTile_C");
+static_assert(offsetof(UAthenaMainStatTile_C, Glow) == 0x0002A0, "Member 'UAthenaMainStatTile_C::Glow' has a wrong offset!");
 
 }
 

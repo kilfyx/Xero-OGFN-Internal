@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ControllerActionsMenu.ControllerActionsMenu_C
-// 0x0008 (0x0498 - 0x0490)
+// 0x0008 (0x0488 - 0x0480)
 class UControllerActionsMenu_C final : public UFortControllerActionsMenu
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0490(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0480(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void BP_OnActivated();
 	void ExecuteUbergraph_ControllerActionsMenu(int32 EntryPoint);
+	void BP_OnActivated();
 
 public:
 	static class UClass* StaticClass()
@@ -38,6 +38,9 @@ public:
 		return GetDefaultObjImpl<UControllerActionsMenu_C>();
 	}
 };
+static_assert(alignof(UControllerActionsMenu_C) == 0x000008, "Wrong alignment on UControllerActionsMenu_C");
+static_assert(sizeof(UControllerActionsMenu_C) == 0x000488, "Wrong size on UControllerActionsMenu_C");
+static_assert(offsetof(UControllerActionsMenu_C, UberGraphFrame) == 0x000480, "Member 'UControllerActionsMenu_C::UberGraphFrame' has a wrong offset!");
 
 }
 

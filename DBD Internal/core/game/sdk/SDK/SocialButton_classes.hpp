@@ -18,29 +18,29 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SocialButton.SocialButton_C
-// 0x0070 (0x14C0 - 0x1450)
+// 0x0070 (0x0C30 - 0x0BC0)
 class USocialButton_C final : public UFortSocialButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1450(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Indentifier_Outro;                                 // 0x1458(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Indentifier_Intro;                                 // 0x1460(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hover_Grow;                                        // 0x1468(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hover_Bounce;                                      // 0x1470(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hover;                                             // 0x1478(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UFortPlayerBanner*                      Banner_MemberBanner;                               // 0x1480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ButtonBacking;                                     // 0x1488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                IconColor;                                         // 0x1490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortMobileImage*                       Image_FriendIcon;                                  // 0x1498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_LeaderIcon;                                  // 0x14A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                NumFriendsColor;                                   // 0x14A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PlayerIdentifier_Bkg;                              // 0x14B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               VariableSize;                                      // 0x14B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Indentifier_Outro;                                 // 0x0BC8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Indentifier_Intro;                                 // 0x0BD0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover_Grow;                                        // 0x0BD8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover_Bounce;                                      // 0x0BE0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover;                                             // 0x0BE8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UFortPlayerBanner*                      Banner_MemberBanner;                               // 0x0BF0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ButtonBacking;                                     // 0x0BF8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                IconColor;                                         // 0x0C00(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortMobileImage*                       Image_FriendIcon;                                  // 0x0C08(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_LeaderIcon;                                  // 0x0C10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                NumFriendsColor;                                   // 0x0C18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PlayerIdentifier_Bkg;                              // 0x0C20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               VariableSize;                                      // 0x0C28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
+	void Construct();
 	void BP_OnHovered();
 	void BP_OnUnhovered();
-	void Construct();
 	void ExecuteUbergraph_SocialButton(int32 EntryPoint);
 
 public:
@@ -53,22 +53,22 @@ public:
 		return GetDefaultObjImpl<USocialButton_C>();
 	}
 };
-static_assert(alignof(USocialButton_C) == 0x000010, "Wrong alignment on USocialButton_C");
-static_assert(sizeof(USocialButton_C) == 0x0014C0, "Wrong size on USocialButton_C");
-static_assert(offsetof(USocialButton_C, UberGraphFrame) == 0x001450, "Member 'USocialButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USocialButton_C, Indentifier_Outro) == 0x001458, "Member 'USocialButton_C::Indentifier_Outro' has a wrong offset!");
-static_assert(offsetof(USocialButton_C, Indentifier_Intro) == 0x001460, "Member 'USocialButton_C::Indentifier_Intro' has a wrong offset!");
-static_assert(offsetof(USocialButton_C, Hover_Grow) == 0x001468, "Member 'USocialButton_C::Hover_Grow' has a wrong offset!");
-static_assert(offsetof(USocialButton_C, Hover_Bounce) == 0x001470, "Member 'USocialButton_C::Hover_Bounce' has a wrong offset!");
-static_assert(offsetof(USocialButton_C, Hover) == 0x001478, "Member 'USocialButton_C::Hover' has a wrong offset!");
-static_assert(offsetof(USocialButton_C, Banner_MemberBanner) == 0x001480, "Member 'USocialButton_C::Banner_MemberBanner' has a wrong offset!");
-static_assert(offsetof(USocialButton_C, ButtonBacking) == 0x001488, "Member 'USocialButton_C::ButtonBacking' has a wrong offset!");
-static_assert(offsetof(USocialButton_C, IconColor) == 0x001490, "Member 'USocialButton_C::IconColor' has a wrong offset!");
-static_assert(offsetof(USocialButton_C, Image_FriendIcon) == 0x001498, "Member 'USocialButton_C::Image_FriendIcon' has a wrong offset!");
-static_assert(offsetof(USocialButton_C, Image_LeaderIcon) == 0x0014A0, "Member 'USocialButton_C::Image_LeaderIcon' has a wrong offset!");
-static_assert(offsetof(USocialButton_C, NumFriendsColor) == 0x0014A8, "Member 'USocialButton_C::NumFriendsColor' has a wrong offset!");
-static_assert(offsetof(USocialButton_C, PlayerIdentifier_Bkg) == 0x0014B0, "Member 'USocialButton_C::PlayerIdentifier_Bkg' has a wrong offset!");
-static_assert(offsetof(USocialButton_C, VariableSize) == 0x0014B8, "Member 'USocialButton_C::VariableSize' has a wrong offset!");
+static_assert(alignof(USocialButton_C) == 0x000008, "Wrong alignment on USocialButton_C");
+static_assert(sizeof(USocialButton_C) == 0x000C30, "Wrong size on USocialButton_C");
+static_assert(offsetof(USocialButton_C, UberGraphFrame) == 0x000BC0, "Member 'USocialButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USocialButton_C, Indentifier_Outro) == 0x000BC8, "Member 'USocialButton_C::Indentifier_Outro' has a wrong offset!");
+static_assert(offsetof(USocialButton_C, Indentifier_Intro) == 0x000BD0, "Member 'USocialButton_C::Indentifier_Intro' has a wrong offset!");
+static_assert(offsetof(USocialButton_C, Hover_Grow) == 0x000BD8, "Member 'USocialButton_C::Hover_Grow' has a wrong offset!");
+static_assert(offsetof(USocialButton_C, Hover_Bounce) == 0x000BE0, "Member 'USocialButton_C::Hover_Bounce' has a wrong offset!");
+static_assert(offsetof(USocialButton_C, Hover) == 0x000BE8, "Member 'USocialButton_C::Hover' has a wrong offset!");
+static_assert(offsetof(USocialButton_C, Banner_MemberBanner) == 0x000BF0, "Member 'USocialButton_C::Banner_MemberBanner' has a wrong offset!");
+static_assert(offsetof(USocialButton_C, ButtonBacking) == 0x000BF8, "Member 'USocialButton_C::ButtonBacking' has a wrong offset!");
+static_assert(offsetof(USocialButton_C, IconColor) == 0x000C00, "Member 'USocialButton_C::IconColor' has a wrong offset!");
+static_assert(offsetof(USocialButton_C, Image_FriendIcon) == 0x000C08, "Member 'USocialButton_C::Image_FriendIcon' has a wrong offset!");
+static_assert(offsetof(USocialButton_C, Image_LeaderIcon) == 0x000C10, "Member 'USocialButton_C::Image_LeaderIcon' has a wrong offset!");
+static_assert(offsetof(USocialButton_C, NumFriendsColor) == 0x000C18, "Member 'USocialButton_C::NumFriendsColor' has a wrong offset!");
+static_assert(offsetof(USocialButton_C, PlayerIdentifier_Bkg) == 0x000C20, "Member 'USocialButton_C::PlayerIdentifier_Bkg' has a wrong offset!");
+static_assert(offsetof(USocialButton_C, VariableSize) == 0x000C28, "Member 'USocialButton_C::VariableSize' has a wrong offset!");
 
 }
 

@@ -20,14 +20,14 @@ namespace SDK
 // Function AthenaStatsRow.AthenaStatsRow_C.SetStatValueAsText
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             StatValue                                              (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      StatValue                                              (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UAthenaStatsRow_C::SetStatValueAsText(const class FText& StatValue)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetStatValueAsText");
+		Func = Class->GetFunction("AthenaStatsRow_C", "SetStatValueAsText");
 
 	Params::AthenaStatsRow_C_SetStatValueAsText Parms{};
 
@@ -40,14 +40,14 @@ void UAthenaStatsRow_C::SetStatValueAsText(const class FText& StatValue)
 // Function AthenaStatsRow.AthenaStatsRow_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaStatsRow_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PreConstruct");
+		Func = Class->GetFunction("AthenaStatsRow_C", "PreConstruct");
 
 	Params::AthenaStatsRow_C_PreConstruct Parms{};
 
@@ -65,9 +65,9 @@ void UAthenaStatsRow_C::PreConstruct(bool IsDesignTime)
 void UAthenaStatsRow_C::ExecuteUbergraph_AthenaStatsRow(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaStatsRow");
+		Func = Class->GetFunction("AthenaStatsRow_C", "ExecuteUbergraph_AthenaStatsRow");
 
 	Params::AthenaStatsRow_C_ExecuteUbergraph_AthenaStatsRow Parms{};
 

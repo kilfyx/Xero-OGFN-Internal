@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MultiFactorAuthWidget.MultiFactorAuthWidget_C
-// 0x0000 (0x0528 - 0x0528)
+// 0x0000 (0x04A0 - 0x04A0)
 class UMultiFactorAuthWidget_C final : public UFortMultiFactorAuthWidget
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UMultiFactorAuthWidget_C) == 0x000008, "Wrong alignment on UMultiFactorAuthWidget_C");
-static_assert(sizeof(UMultiFactorAuthWidget_C) == 0x000528, "Wrong size on UMultiFactorAuthWidget_C");
+static_assert(sizeof(UMultiFactorAuthWidget_C) == 0x0004A0, "Wrong size on UMultiFactorAuthWidget_C");
 
 }
 

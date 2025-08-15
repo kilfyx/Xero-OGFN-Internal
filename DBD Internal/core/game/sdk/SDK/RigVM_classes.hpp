@@ -18,34 +18,25 @@ namespace SDK
 {
 
 // Class RigVM.RigVM
-// 0x0298 (0x02C0 - 0x0028)
+// 0x0220 (0x0248 - 0x0028)
 class URigVM final : public UObject
 {
 public:
-	class URigVMMemoryStorage*                    WorkMemoryStorageObject;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URigVMMemoryStorage*                    LiteralMemoryStorageObject;                        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URigVMMemoryStorage*                    DebugMemoryStorageObject;                          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0x20];                                      // 0x0040(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigVMByteCode                         ByteCodeStorage;                                   // 0x0060(0x0030)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0x8];                                       // 0x0090(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigVMInstructionArray                 Instructions;                                      // 0x0098(0x0010)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigVMExecuteContext                   Context;                                           // 0x00B0(0x00C0)(Transient, NativeAccessSpecifierPrivate)
-	uint32                                        NumExecutions;                                     // 0x0170(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_174[0x4];                                      // 0x0174(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           FunctionNamesStorage;                              // 0x0178(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_188[0x20];                                     // 0x0188(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigVMParameter>                Parameters;                                        // 0x01A8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	struct FRigVMMemoryContainer                  WorkMemory;                                        // 0x0028(0x00A0)(NativeAccessSpecifierPublic)
+	struct FRigVMMemoryContainer                  LiteralMemory;                                     // 0x00C8(0x00A0)(NativeAccessSpecifierPublic)
+	struct FRigVMByteCode                         ByteCode;                                          // 0x0168(0x0010)(NativeAccessSpecifierPublic)
+	struct FRigVMInstructionArray                 Instructions;                                      // 0x0178(0x0010)(Transient, NativeAccessSpecifierPrivate)
+	TArray<class FName>                           FunctionNames;                                     // 0x0188(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_198[0x10];                                     // 0x0198(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigVMParameter>                Parameters;                                        // 0x01A8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<class FName, int32>                      ParametersNameMap;                                 // 0x01B8(0x0050)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_208[0x98];                                     // 0x0208(0x0098)(Fixing Size After Last Property [ Dumper-7 ])
-	class URigVM*                                 DeferredVMToCopy;                                  // 0x02A0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2A8[0x18];                                     // 0x02A8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_208[0x38];                                     // 0x0208(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	class URigVM*                                 DeferredVMToCopy;                                  // 0x0240(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	int32 AddRigVMFunction(class UScriptStruct* InRigVMStruct, const class FName& InMethodName);
-	bool Execute(const class FName& InEntryName);
+	bool Execute();
 	bool GetParameterValueBool(const class FName& InParameterName, int32 InArrayIndex);
-	double GetParameterValueDouble(const class FName& InParameterName, int32 InArrayIndex);
 	float GetParameterValueFloat(const class FName& InParameterName, int32 InArrayIndex);
 	int32 GetParameterValueInt(const class FName& InParameterName, int32 InArrayIndex);
 	class FName GetParameterValueName(const class FName& InParameterName, int32 InArrayIndex);
@@ -55,7 +46,6 @@ public:
 	struct FVector GetParameterValueVector(const class FName& InParameterName, int32 InArrayIndex);
 	struct FVector2D GetParameterValueVector2D(const class FName& InParameterName, int32 InArrayIndex);
 	void SetParameterValueBool(const class FName& InParameterName, bool InValue, int32 InArrayIndex);
-	void SetParameterValueDouble(const class FName& InParameterName, double InValue, int32 InArrayIndex);
 	void SetParameterValueFloat(const class FName& InParameterName, float InValue, int32 InArrayIndex);
 	void SetParameterValueInt(const class FName& InParameterName, int32 InValue, int32 InArrayIndex);
 	void SetParameterValueName(const class FName& InParameterName, const class FName& InValue, int32 InArrayIndex);
@@ -65,8 +55,8 @@ public:
 	void SetParameterValueVector(const class FName& InParameterName, const struct FVector& InValue, int32 InArrayIndex);
 	void SetParameterValueVector2D(const class FName& InParameterName, const struct FVector2D& InValue, int32 InArrayIndex);
 
+	int32 GetParameterArraySize(const class FName& InParameterName) const;
 	class FString GetRigVMFunctionName(int32 InFunctionIndex) const;
-	struct FRigVMStatistics GetStatistics() const;
 
 public:
 	static class UClass* StaticClass()
@@ -78,39 +68,16 @@ public:
 		return GetDefaultObjImpl<URigVM>();
 	}
 };
-
-// Class RigVM.RigVMMemoryStorageGeneratorClass
-// 0x0038 (0x0270 - 0x0238)
-class URigVMMemoryStorageGeneratorClass final : public UClass
-{
-public:
-	uint8                                         Pad_238[0x38];                                     // 0x0238(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"RigVMMemoryStorageGeneratorClass">();
-	}
-	static class URigVMMemoryStorageGeneratorClass* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URigVMMemoryStorageGeneratorClass>();
-	}
-};
-
-// Class RigVM.RigVMMemoryStorage
-// 0x0000 (0x0028 - 0x0028)
-class URigVMMemoryStorage : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"RigVMMemoryStorage">();
-	}
-	static class URigVMMemoryStorage* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URigVMMemoryStorage>();
-	}
-};
+static_assert(alignof(URigVM) == 0x000008, "Wrong alignment on URigVM");
+static_assert(sizeof(URigVM) == 0x000248, "Wrong size on URigVM");
+static_assert(offsetof(URigVM, WorkMemory) == 0x000028, "Member 'URigVM::WorkMemory' has a wrong offset!");
+static_assert(offsetof(URigVM, LiteralMemory) == 0x0000C8, "Member 'URigVM::LiteralMemory' has a wrong offset!");
+static_assert(offsetof(URigVM, ByteCode) == 0x000168, "Member 'URigVM::ByteCode' has a wrong offset!");
+static_assert(offsetof(URigVM, Instructions) == 0x000178, "Member 'URigVM::Instructions' has a wrong offset!");
+static_assert(offsetof(URigVM, FunctionNames) == 0x000188, "Member 'URigVM::FunctionNames' has a wrong offset!");
+static_assert(offsetof(URigVM, Parameters) == 0x0001A8, "Member 'URigVM::Parameters' has a wrong offset!");
+static_assert(offsetof(URigVM, ParametersNameMap) == 0x0001B8, "Member 'URigVM::ParametersNameMap' has a wrong offset!");
+static_assert(offsetof(URigVM, DeferredVMToCopy) == 0x000240, "Member 'URigVM::DeferredVMToCopy' has a wrong offset!");
 
 }
 

@@ -18,21 +18,21 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCL_BoostJumpPack_FuelRegen.GCL_BoostJumpPack_FuelRegen_C
-// 0x0018 (0x0440 - 0x0428)
+// 0x0018 (0x0450 - 0x0438)
 class AGCL_BoostJumpPack_FuelRegen_C final : public AGameplayCueNotify_Jetpack_FuelRegen
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0428(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         FullBlinkTimeline_Blink_108772B949790E60DC9BE1BAC70C2EA1; // 0x0430(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            FullBlinkTimeline__Direction_108772B949790E60DC9BE1BAC70C2EA1; // 0x0434(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_435[0x3];                                      // 0x0435(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     FullBlinkTimeline;                                 // 0x0438(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         FullBlinkTimeline_Blink_108772B949790E60DC9BE1BAC70C2EA1; // 0x0440(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            FullBlinkTimeline__Direction_108772B949790E60DC9BE1BAC70C2EA1; // 0x0444(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_445[0x3];                                      // 0x0445(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     FullBlinkTimeline;                                 // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GCL_BoostJumpPack_FuelRegen(int32 EntryPoint);
-	void FullBlinkTimeline__FinishedFunc();
-	void FullBlinkTimeline__UpdateFunc();
 	void ResetBlink(class AFortPlayerPawn* PlayerPawn);
+	void FullBlinkTimeline__UpdateFunc();
+	void FullBlinkTimeline__FinishedFunc();
 
 public:
 	static class UClass* StaticClass()
@@ -44,6 +44,12 @@ public:
 		return GetDefaultObjImpl<AGCL_BoostJumpPack_FuelRegen_C>();
 	}
 };
+static_assert(alignof(AGCL_BoostJumpPack_FuelRegen_C) == 0x000008, "Wrong alignment on AGCL_BoostJumpPack_FuelRegen_C");
+static_assert(sizeof(AGCL_BoostJumpPack_FuelRegen_C) == 0x000450, "Wrong size on AGCL_BoostJumpPack_FuelRegen_C");
+static_assert(offsetof(AGCL_BoostJumpPack_FuelRegen_C, UberGraphFrame) == 0x000438, "Member 'AGCL_BoostJumpPack_FuelRegen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AGCL_BoostJumpPack_FuelRegen_C, FullBlinkTimeline_Blink_108772B949790E60DC9BE1BAC70C2EA1) == 0x000440, "Member 'AGCL_BoostJumpPack_FuelRegen_C::FullBlinkTimeline_Blink_108772B949790E60DC9BE1BAC70C2EA1' has a wrong offset!");
+static_assert(offsetof(AGCL_BoostJumpPack_FuelRegen_C, FullBlinkTimeline__Direction_108772B949790E60DC9BE1BAC70C2EA1) == 0x000444, "Member 'AGCL_BoostJumpPack_FuelRegen_C::FullBlinkTimeline__Direction_108772B949790E60DC9BE1BAC70C2EA1' has a wrong offset!");
+static_assert(offsetof(AGCL_BoostJumpPack_FuelRegen_C, FullBlinkTimeline) == 0x000448, "Member 'AGCL_BoostJumpPack_FuelRegen_C::FullBlinkTimeline' has a wrong offset!");
 
 }
 

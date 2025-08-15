@@ -19,30 +19,29 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Prj_Athena_Bucket_Old.Prj_Athena_Bucket_Old_C
-// 0x0040 (0x09A8 - 0x0968)
-class APrj_Athena_Bucket_Old_C final : public AB_Prj_ThrownConsumable_C
+// 0x0038 (0x0950 - 0x0918)
+class APrj_Athena_Bucket_Old_C : public AB_Prj_ThrownConsumable_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Prj_Athena_Bucket_Old_C;            // 0x0968(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UFortWorldItemDefinition*               ItemToSpawn;                                       // 0x0970(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TurnOffFX;                                         // 0x0978(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_979[0x7];                                      // 0x0979(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             HitMarkerSound;                                    // 0x0980(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             ThrowIndicator_SoundRef;                           // 0x0988(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldSpawnItem;                                   // 0x0990(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_991[0x7];                                      // 0x0991(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             Splash_Sound_0;                                    // 0x0998(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ImpactSpawnOffset;                                 // 0x09A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Prj_Athena_Bucket_Old_C;            // 0x0918(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UFortWorldItemDefinition*               ItemToSpawn;                                       // 0x0920(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TurnOffFX;                                         // 0x0928(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
+	uint8                                         Pad_929[0x7];                                      // 0x0929(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             HitMarkerSound;                                    // 0x0930(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             ThrowIndicator_SoundRef;                           // 0x0938(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldSpawnItem;                                   // 0x0940(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_941[0x7];                                      // 0x0941(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             Splash_Sound_0;                                    // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody);
 	void ExecuteUbergraph_Prj_Athena_Bucket_Old(int32 EntryPoint);
 	void Held_Water_Impact();
-	void OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults);
-	void OnRep_TurnOffFX();
-	void PlayHitSound();
 	void ReceiveBeginPlay();
+	void PlayHitSound();
+	void BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody);
+	void OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults);
 	void ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const struct FVector& HitLocation, const struct FVector& HitNormal, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	void OnRep_TurnOffFX();
 
 public:
 	static class UClass* StaticClass()
@@ -54,6 +53,15 @@ public:
 		return GetDefaultObjImpl<APrj_Athena_Bucket_Old_C>();
 	}
 };
+static_assert(alignof(APrj_Athena_Bucket_Old_C) == 0x000008, "Wrong alignment on APrj_Athena_Bucket_Old_C");
+static_assert(sizeof(APrj_Athena_Bucket_Old_C) == 0x000950, "Wrong size on APrj_Athena_Bucket_Old_C");
+static_assert(offsetof(APrj_Athena_Bucket_Old_C, UberGraphFrame_Prj_Athena_Bucket_Old_C) == 0x000918, "Member 'APrj_Athena_Bucket_Old_C::UberGraphFrame_Prj_Athena_Bucket_Old_C' has a wrong offset!");
+static_assert(offsetof(APrj_Athena_Bucket_Old_C, ItemToSpawn) == 0x000920, "Member 'APrj_Athena_Bucket_Old_C::ItemToSpawn' has a wrong offset!");
+static_assert(offsetof(APrj_Athena_Bucket_Old_C, TurnOffFX) == 0x000928, "Member 'APrj_Athena_Bucket_Old_C::TurnOffFX' has a wrong offset!");
+static_assert(offsetof(APrj_Athena_Bucket_Old_C, HitMarkerSound) == 0x000930, "Member 'APrj_Athena_Bucket_Old_C::HitMarkerSound' has a wrong offset!");
+static_assert(offsetof(APrj_Athena_Bucket_Old_C, ThrowIndicator_SoundRef) == 0x000938, "Member 'APrj_Athena_Bucket_Old_C::ThrowIndicator_SoundRef' has a wrong offset!");
+static_assert(offsetof(APrj_Athena_Bucket_Old_C, ShouldSpawnItem) == 0x000940, "Member 'APrj_Athena_Bucket_Old_C::ShouldSpawnItem' has a wrong offset!");
+static_assert(offsetof(APrj_Athena_Bucket_Old_C, Splash_Sound_0) == 0x000948, "Member 'APrj_Athena_Bucket_Old_C::Splash_Sound_0' has a wrong offset!");
 
 }
 

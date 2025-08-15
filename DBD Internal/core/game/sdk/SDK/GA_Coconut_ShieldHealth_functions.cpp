@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Coconut_ShieldHealth.GA_Coconut_ShieldHealth_C.ApplyEffect
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Coconut_ShieldHealth_C::ApplyEffect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Coconut_ShieldHealth_C", "ApplyEffect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_Coconut_ShieldHealth.GA_Coconut_ShieldHealth_C.ExecuteUbergraph_GA_Coconut_ShieldHealth
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -51,15 +37,15 @@ void UGA_Coconut_ShieldHealth_C::ExecuteUbergraph_GA_Coconut_ShieldHealth(int32 
 }
 
 
-// Function GA_Coconut_ShieldHealth.GA_Coconut_ShieldHealth_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
+// Function GA_Coconut_ShieldHealth.GA_Coconut_ShieldHealth_C.ApplyEffect
+// (BlueprintCallable, BlueprintEvent)
 
-void UGA_Coconut_ShieldHealth_C::K2_ActivateAbility()
+void UGA_Coconut_ShieldHealth_C::ApplyEffect()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Coconut_ShieldHealth_C", "K2_ActivateAbility");
+		Func = Class->GetFunction("GA_Coconut_ShieldHealth_C", "ApplyEffect");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -68,7 +54,7 @@ void UGA_Coconut_ShieldHealth_C::K2_ActivateAbility()
 // Function GA_Coconut_ShieldHealth.GA_Coconut_ShieldHealth_C.K2_OnEndAbility
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UGA_Coconut_ShieldHealth_C::K2_OnEndAbility(bool bWasCancelled)
 {
@@ -82,6 +68,20 @@ void UGA_Coconut_ShieldHealth_C::K2_OnEndAbility(bool bWasCancelled)
 	Parms.bWasCancelled = bWasCancelled;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Coconut_ShieldHealth.GA_Coconut_ShieldHealth_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Coconut_ShieldHealth_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Coconut_ShieldHealth_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

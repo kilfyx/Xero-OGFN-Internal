@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // Class MeltRuntime.FortAthenaMutator_Melt
-// 0x0000 (0x03E0 - 0x03E0)
+// 0x0000 (0x03D0 - 0x03D0)
 class AFortAthenaMutator_Melt final : public AFortAthenaMutator_GameModeBase
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AFortAthenaMutator_Melt>();
 	}
 };
+static_assert(alignof(AFortAthenaMutator_Melt) == 0x000008, "Wrong alignment on AFortAthenaMutator_Melt");
+static_assert(sizeof(AFortAthenaMutator_Melt) == 0x0003D0, "Wrong size on AFortAthenaMutator_Melt");
 
 }
 

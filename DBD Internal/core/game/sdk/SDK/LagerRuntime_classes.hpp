@@ -10,33 +10,189 @@
 
 #include "Basic.hpp"
 
-#include "GameplayAbilities_structs.hpp"
-#include "Engine_classes.hpp"
-#include "SlateCore_structs.hpp"
-#include "LagerRuntime_structs.hpp"
 #include "FortniteGame_classes.hpp"
+#include "ModularGameplay_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "GameplayAbilities_structs.hpp"
+#include "Engine_classes.hpp"
+#include "LagerRuntime_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "AIModule_structs.hpp"
-#include "ModularGameplay_classes.hpp"
-#include "GameFeatures_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
+
+// Class LagerRuntime.FortAthenaLivingWorldConfigData
+// 0x00F0 (0x0120 - 0x0030)
+class UFortAthenaLivingWorldConfigData final : public UDataAsset
+{
+public:
+	TSoftObjectPtr<class UDataTable>              CategoryTable;                                     // 0x0030(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FScalableFloat                         MaxActorCount;                                     // 0x0058(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FScalableFloat                         MaxEventSpawnPerTick;                              // 0x0080(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FScalableFloat                         MinimumEventGenerationInterval;                    // 0x00A8(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FScalableFloat                         MaxActorDensity;                                   // 0x00D0(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FScalableFloat                         DensityComputationDistance;                        // 0x00F8(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"FortAthenaLivingWorldConfigData">();
+	}
+	static class UFortAthenaLivingWorldConfigData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFortAthenaLivingWorldConfigData>();
+	}
+};
+static_assert(alignof(UFortAthenaLivingWorldConfigData) == 0x000008, "Wrong alignment on UFortAthenaLivingWorldConfigData");
+static_assert(sizeof(UFortAthenaLivingWorldConfigData) == 0x000120, "Wrong size on UFortAthenaLivingWorldConfigData");
+static_assert(offsetof(UFortAthenaLivingWorldConfigData, CategoryTable) == 0x000030, "Member 'UFortAthenaLivingWorldConfigData::CategoryTable' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldConfigData, MaxActorCount) == 0x000058, "Member 'UFortAthenaLivingWorldConfigData::MaxActorCount' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldConfigData, MaxEventSpawnPerTick) == 0x000080, "Member 'UFortAthenaLivingWorldConfigData::MaxEventSpawnPerTick' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldConfigData, MinimumEventGenerationInterval) == 0x0000A8, "Member 'UFortAthenaLivingWorldConfigData::MinimumEventGenerationInterval' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldConfigData, MaxActorDensity) == 0x0000D0, "Member 'UFortAthenaLivingWorldConfigData::MaxActorDensity' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldConfigData, DensityComputationDistance) == 0x0000F8, "Member 'UFortAthenaLivingWorldConfigData::DensityComputationDistance' has a wrong offset!");
+
+// Class LagerRuntime.FortCheatManager_LivingWorldManager
+// 0x0018 (0x0040 - 0x0028)
+class UFortCheatManager_LivingWorldManager final : public UChildCheatManager
+{
+public:
+	int32                                         CheatTeleportToCount;                              // 0x0028(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CheatLastEventDataName;                            // 0x0030(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	void LivingWorldManagerSpawn(const class FString& EventDataName);
+	void LivingWorldManagerTeleportTo(const class FString& EventDataName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"FortCheatManager_LivingWorldManager">();
+	}
+	static class UFortCheatManager_LivingWorldManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFortCheatManager_LivingWorldManager>();
+	}
+};
+static_assert(alignof(UFortCheatManager_LivingWorldManager) == 0x000008, "Wrong alignment on UFortCheatManager_LivingWorldManager");
+static_assert(sizeof(UFortCheatManager_LivingWorldManager) == 0x000040, "Wrong size on UFortCheatManager_LivingWorldManager");
+static_assert(offsetof(UFortCheatManager_LivingWorldManager, CheatTeleportToCount) == 0x000028, "Member 'UFortCheatManager_LivingWorldManager::CheatTeleportToCount' has a wrong offset!");
+static_assert(offsetof(UFortCheatManager_LivingWorldManager, CheatLastEventDataName) == 0x000030, "Member 'UFortCheatManager_LivingWorldManager::CheatLastEventDataName' has a wrong offset!");
+
+// Class LagerRuntime.FortAthenaLivingWorldEventData
+// 0x0078 (0x00A8 - 0x0030)
+class UFortAthenaLivingWorldEventData final : public UDataAsset
+{
+public:
+	int32                                         TimeOfDayFilters;                                  // 0x0030(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         WaterLevelIndexMin;                                // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         WaterLevelIndexMax;                                // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagQuery                      ProviderFiltersTagQuery;                           // 0x0040(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	TArray<struct FPointProviderFilterEntry>      ProviderFiltersEntries;                            // 0x0088(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FFortAthenaLivingWorldEventDataActorSpawnDescription> ActorDescriptions;           // 0x0098(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"FortAthenaLivingWorldEventData">();
+	}
+	static class UFortAthenaLivingWorldEventData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFortAthenaLivingWorldEventData>();
+	}
+};
+static_assert(alignof(UFortAthenaLivingWorldEventData) == 0x000008, "Wrong alignment on UFortAthenaLivingWorldEventData");
+static_assert(sizeof(UFortAthenaLivingWorldEventData) == 0x0000A8, "Wrong size on UFortAthenaLivingWorldEventData");
+static_assert(offsetof(UFortAthenaLivingWorldEventData, TimeOfDayFilters) == 0x000030, "Member 'UFortAthenaLivingWorldEventData::TimeOfDayFilters' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldEventData, WaterLevelIndexMin) == 0x000034, "Member 'UFortAthenaLivingWorldEventData::WaterLevelIndexMin' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldEventData, WaterLevelIndexMax) == 0x000038, "Member 'UFortAthenaLivingWorldEventData::WaterLevelIndexMax' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldEventData, ProviderFiltersTagQuery) == 0x000040, "Member 'UFortAthenaLivingWorldEventData::ProviderFiltersTagQuery' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldEventData, ProviderFiltersEntries) == 0x000088, "Member 'UFortAthenaLivingWorldEventData::ProviderFiltersEntries' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldEventData, ActorDescriptions) == 0x000098, "Member 'UFortAthenaLivingWorldEventData::ActorDescriptions' has a wrong offset!");
+
+// Class LagerRuntime.FortAthenaLivingWorldManager
+// 0x0360 (0x0410 - 0x00B0)
+class UFortAthenaLivingWorldManager : public UGameStateComponent
+{
+public:
+	TSoftObjectPtr<class UFortAthenaLivingWorldConfigData> DefaultLagerConfig;                       // 0x00B0(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FFortLivingWorldConfigOverride> LagerConfigOverrides;                              // 0x00D8(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FScalableFloat                         LagerEnabled;                                      // 0x00E8(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	TArray<class AActor*>                         PointProviders;                                    // 0x0110(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FSlateBrush                            SpecialActorMinimapIconBrush;                      // 0x0120(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FVector2D                              SpecialActorMinimapIconScale;                      // 0x01A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FSlateBrush                            SpecialActorCompassIconBrush;                      // 0x01B0(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FVector2D                              SpecialActorCompassIconScale;                      // 0x0238(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<TSubclassOf<class UFortAthenaAISpawnerData>> LoadedSpawnerDataClass;                      // 0x0240(0x0010)(ZeroConstructor, Transient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<TSubclassOf<class AActor>>             LoadedActorDataClass;                              // 0x0250(0x0010)(ZeroConstructor, Transient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class AFortGameStateAthena*                   CachedGameState;                                   // 0x0260(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UWorld*                                 CachedWorld;                                       // 0x0268(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UFortAthenaLivingWorldConfigData*       CachedConfig;                                      // 0x0270(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_278[0x108];                                    // 0x0278(0x0108)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         RuntimePointProviderList;                          // 0x0380(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSet<class AActor*>                           RuntimePointProviderOwners;                        // 0x0390(0x0050)(Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3E0[0x18];                                     // 0x03E0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         SpawnedPawns;                                      // 0x03F8(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_408[0x8];                                      // 0x0408(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static void LivingWorldManagerRegisterPointProvider(class AActor* PointProvider);
+	static void LivingWorldManagerUnregisterPointProvider(class AActor* PointProvider);
+
+	void LivingWorldManagerFlush();
+	void LivingWorldManagerGenerateEvents();
+	void LivingWorldManagerProviderDebugActor(int32 ProviderIndex);
+	void LivingWorldManagerToggleActorMinimap();
+	void LivingWorldManagerToggleGenerateEvents();
+	void LivingWorldManagerToggleVerboseLogging();
+	void OnCurrentPlaylistLoaded(class FName PlaylistName, const struct FGameplayTagContainer& PlaylistContextTags);
+	void OnPatrolPathAdded(class AFortAthenaPatrolPath* PatrolPath);
+	void OnSpawnedActorDestroy(class AActor* DestroyedActor);
+	void RequestEventGeneration();
+
+	int32 QueryEventBudget(const struct FDataTableRowHandle& EventEntry, const class AActor* SpawnLocation) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"FortAthenaLivingWorldManager">();
+	}
+	static class UFortAthenaLivingWorldManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFortAthenaLivingWorldManager>();
+	}
+};
+static_assert(alignof(UFortAthenaLivingWorldManager) == 0x000008, "Wrong alignment on UFortAthenaLivingWorldManager");
+static_assert(sizeof(UFortAthenaLivingWorldManager) == 0x000410, "Wrong size on UFortAthenaLivingWorldManager");
+static_assert(offsetof(UFortAthenaLivingWorldManager, DefaultLagerConfig) == 0x0000B0, "Member 'UFortAthenaLivingWorldManager::DefaultLagerConfig' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, LagerConfigOverrides) == 0x0000D8, "Member 'UFortAthenaLivingWorldManager::LagerConfigOverrides' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, LagerEnabled) == 0x0000E8, "Member 'UFortAthenaLivingWorldManager::LagerEnabled' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, PointProviders) == 0x000110, "Member 'UFortAthenaLivingWorldManager::PointProviders' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, SpecialActorMinimapIconBrush) == 0x000120, "Member 'UFortAthenaLivingWorldManager::SpecialActorMinimapIconBrush' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, SpecialActorMinimapIconScale) == 0x0001A8, "Member 'UFortAthenaLivingWorldManager::SpecialActorMinimapIconScale' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, SpecialActorCompassIconBrush) == 0x0001B0, "Member 'UFortAthenaLivingWorldManager::SpecialActorCompassIconBrush' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, SpecialActorCompassIconScale) == 0x000238, "Member 'UFortAthenaLivingWorldManager::SpecialActorCompassIconScale' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, LoadedSpawnerDataClass) == 0x000240, "Member 'UFortAthenaLivingWorldManager::LoadedSpawnerDataClass' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, LoadedActorDataClass) == 0x000250, "Member 'UFortAthenaLivingWorldManager::LoadedActorDataClass' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, CachedGameState) == 0x000260, "Member 'UFortAthenaLivingWorldManager::CachedGameState' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, CachedWorld) == 0x000268, "Member 'UFortAthenaLivingWorldManager::CachedWorld' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, CachedConfig) == 0x000270, "Member 'UFortAthenaLivingWorldManager::CachedConfig' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, RuntimePointProviderList) == 0x000380, "Member 'UFortAthenaLivingWorldManager::RuntimePointProviderList' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, RuntimePointProviderOwners) == 0x000390, "Member 'UFortAthenaLivingWorldManager::RuntimePointProviderOwners' has a wrong offset!");
+static_assert(offsetof(UFortAthenaLivingWorldManager, SpawnedPawns) == 0x0003F8, "Member 'UFortAthenaLivingWorldManager::SpawnedPawns' has a wrong offset!");
 
 // Class LagerRuntime.FortAthenaLivingWorldPointProviderInterface
 // 0x0000 (0x0000 - 0x0000)
 class IFortAthenaLivingWorldPointProviderInterface final
 {
 public:
-	void DisablePointProvider();
-	void EnablePointProvider();
-	struct FVector GetPointProviderLocation();
 	void OnEventRequested();
-	void OnSpawnedActor(class AActor* SpawnedActor, const struct FVector& PositionFromProvider);
-	void OnSpawnedActorDestroyed(class AActor* DestroyedActor);
+	void OnSpawnedActor(class AActor* SpawnedActor);
 	void OnSpawnedActorFailed();
 
 	void GetFiltersTags(struct FGameplayTagContainer* FilterTags) const;
@@ -62,347 +218,28 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-
-// Class LagerRuntime.FortAthenaLivingWorldConfigData
-// 0x01A8 (0x01D8 - 0x0030)
-class UFortAthenaLivingWorldConfigData final : public UDataAsset
-{
-public:
-	TSoftObjectPtr<class UDataTable>              CategoryTable;                                     // 0x0030(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         MaxActorCount;                                     // 0x0058(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         MaxEventSpawnPerTick;                              // 0x0080(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         MaxActorDespawnPerTick;                            // 0x00A8(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         MinimumEventGenerationInterval;                    // 0x00D0(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         MaxActorDensity;                                   // 0x00F8(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         MaxActorUpdatesPerTick;                            // 0x0120(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         ActorDensityGridCellSize;                          // 0x0148(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         PointClusterSize;                                  // 0x0170(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         MinNumberOfPlayerForAggressiveSpawning;            // 0x0198(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<struct FFortAthenaLivingWorldTagDensityGridData> TagDensityGridData;                      // 0x01C0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TSubclassOf<class AActor>                     EQSActorHelperClass;                               // 0x01D0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortAthenaLivingWorldConfigData">();
-	}
-	static class UFortAthenaLivingWorldConfigData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFortAthenaLivingWorldConfigData>();
-	}
-};
-
-// Class LagerRuntime.FortAthenaLivingWorldDebugDensityMiniMapIndicator
-// 0x0040 (0x0158 - 0x0118)
-class UFortAthenaLivingWorldDebugDensityMiniMapIndicator final : public UFortMiniMapIndicator
-{
-public:
-	TArray<struct FFortAthenaActorDensityDebugInfo> ActorDebugInfos;                                 // 0x0118(0x0010)(Net, ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<float>                                 DensityGridValues;                                 // 0x0128(0x0010)(Net, ZeroConstructor, NativeAccessSpecifierPrivate)
-	struct FVector                                GridOrigin;                                        // 0x0138(0x000C)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FIntVector                             MaxGridSize;                                       // 0x0144(0x000C)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         CellSize;                                          // 0x0150(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         MaxDensity;                                        // 0x0154(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortAthenaLivingWorldDebugDensityMiniMapIndicator">();
-	}
-	static class UFortAthenaLivingWorldDebugDensityMiniMapIndicator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFortAthenaLivingWorldDebugDensityMiniMapIndicator>();
-	}
-};
-
-// Class LagerRuntime.FortAthenaLivingWorldEncounter
-// 0x0038 (0x0068 - 0x0030)
-class UFortAthenaLivingWorldEncounter final : public UDataAsset
-{
-public:
-	struct FScalableFloat                         IntervalBetweenEventGeneration;                    // 0x0030(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<struct FFortAthenaLivingWorldEncounterStage> Stages;                                      // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortAthenaLivingWorldEncounter">();
-	}
-	static class UFortAthenaLivingWorldEncounter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFortAthenaLivingWorldEncounter>();
-	}
-};
-
-// Class LagerRuntime.FortAthenaLivingWorldEncounterInstance
-// 0x00D8 (0x0100 - 0x0028)
-class UFortAthenaLivingWorldEncounterInstance final : public UObject
-{
-public:
-	TMulticastInlineDelegate<void(class AActor* SpawnedActor)> OnActorSpawned;                       // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AActor* DestroyedActor)> OnActorDestroyed;                   // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x50];                                      // 0x0048(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>> OriginalPointProviders; // 0x0098(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>> RegisteredPointProviders; // 0x00A8(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TSoftObjectPtr<class UFortAthenaLivingWorldEncounter> EncounterDefinition;                       // 0x00B8(0x0028)(Transient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class AActor*                                 ActorDensityReservoir;                             // 0x00E0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_E8[0x8];                                       // 0x00E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CurrentStageIndex;                                 // 0x00F0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bIsPaused;                                         // 0x00F8(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AdvanceEncounterStage();
-	void PauseEncounter();
-	void RequestEventGeneration();
-	void ResumeEncounter();
-
-	int32 GetTotalActorCount() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortAthenaLivingWorldEncounterInstance">();
-	}
-	static class UFortAthenaLivingWorldEncounterInstance* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFortAthenaLivingWorldEncounterInstance>();
-	}
-};
-
-// Class LagerRuntime.FortAthenaLivingWorldEventData
-// 0x00D8 (0x0108 - 0x0030)
-class UFortAthenaLivingWorldEventData final : public UDataAsset
-{
-public:
-	int32                                         TimeOfDayFilters;                                  // 0x0030(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         WaterLevelIndexMin;                                // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         WaterLevelIndexMax;                                // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagQuery                      ProviderFiltersTagQuery;                           // 0x0040(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<struct FPointProviderFilterEntry>      ProviderFiltersEntries;                            // 0x0088(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<struct FFortAthenaLivingWorldTaggedSpawnActionClass> SpawnActions;                        // 0x0098(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         MinActorCountToSpawn;                              // 0x00A8(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         MaxActorCountToSpawn;                              // 0x00D0(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<struct FFortAthenaLivingWorldEventDataActorSpawnDescription> ActorDescriptions;           // 0x00F8(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortAthenaLivingWorldEventData">();
-	}
-	static class UFortAthenaLivingWorldEventData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFortAthenaLivingWorldEventData>();
-	}
-};
-
-// Class LagerRuntime.FortAthenaLivingWorldManager
-// 0x0790 (0x0840 - 0x00B0)
-class UFortAthenaLivingWorldManager : public UGameStateComponent
-{
-public:
-	TSoftObjectPtr<class UFortAthenaLivingWorldConfigData> DefaultLagerConfig;                       // 0x00B0(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FFortLivingWorldConfigOverride> LagerConfigOverrides;                              // 0x00D8(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         LagerEnabled;                                      // 0x00E8(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TMap<struct FGameplayTag, TSubclassOf<class UFortAthenaLivingWorldSpawnAction>> TaggedSpawnActionClassMap; // 0x0110(0x0050)(Edit, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>> PointProviders;     // 0x0160(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	struct FSlateBrush                            SpecialActorMinimapIconBrush;                      // 0x0170(0x00B0)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FVector2D                              SpecialActorMinimapIconScale;                      // 0x0220(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_228[0x8];                                      // 0x0228(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            SpecialActorCompassIconBrush;                      // 0x0230(0x00B0)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FVector2D                              SpecialActorCompassIconScale;                      // 0x02E0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<TSubclassOf<class UFortAthenaSpawnerDataBase>> LoadedSpawnerDataClass;                    // 0x02E8(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<TSubclassOf<class AActor>>             LoadedActorDataClass;                              // 0x02F8(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class UWorld*                                 CachedWorld;                                       // 0x0308(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UFortAthenaLivingWorldConfigData*       CachedConfig;                                      // 0x0310(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UFortAthenaLivingWorldEncounterInstance*> RunningEncounterInstances;                // 0x0318(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	class UFortSeasonalEventManager*              CachedSeasonalEventManager;                        // 0x0328(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<TSoftClassPtr<class UClass>>           ActorClassToPreloadOnClient;                       // 0x0330(0x0010)(Net, ZeroConstructor, RepNotify, UObjectWrapper, NativeAccessSpecifierPrivate)
-	struct FFortAthenaLivingWorldPlayerTracker    PlayerTracker;                                     // 0x0340(0x00B0)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3F0[0x1E8];                                    // 0x03F0(0x01E8)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         RuntimePointProviderList;                          // 0x05D8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	TSet<class AActor*>                           RuntimePointProviderOwners;                        // 0x05E8(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_638[0x1A0];                                    // 0x0638(0x01A0)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<TSubclassOf<class UFortAthenaLivingWorldSpawnAction>, class UFortAthenaLivingWorldSpawnAction*> SpawnActionCache; // 0x07D8(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	class AActor*                                 EQSHelper;                                         // 0x0828(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UFortAthenaLivingWorldDebugDensityMiniMapIndicator* DebugDensityMinimapIndicator;          // 0x0830(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_838[0x8];                                      // 0x0838(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static void LivingWorldManagerRegisterPointProvider(class AActor* PointProvider);
-	static void LivingWorldManagerUnregisterPointProvider(class AActor* PointProvider);
-
-	void EndEncounter(class UFortAthenaLivingWorldEncounterInstance* EncounterInstance);
-	void LivingWorldManagerFlush();
-	void LivingWorldManagerGenerateEvents();
-	void LivingWorldManagerProviderDebugActor(int32 ProviderIndex);
-	void LivingWorldManagerToggleActorMinimap();
-	void LivingWorldManagerToggleDensityDisplay();
-	void LivingWorldManagerToggleGenerateEvents();
-	void LivingWorldManagerToggleVerboseLogging();
-	void OnActorSpawned(class AActor* Actor, int32 RequestID);
-	void OnCurrentPlaylistLoaded(class FName PlaylistName, const struct FGameplayTagContainer& PlaylistContextTags);
-	void OnPatrolPathAdded(class AFortAthenaPatrolPath* PatrolPath);
-	void OnRep_ActorClassToPreloadOnClient();
-	void OnRep_DebugDensityMinimapIndicator(class UFortAthenaLivingWorldDebugDensityMiniMapIndicator* OldMapIndicator);
-	void OnSpawnedActorDestroy(class AActor* DestroyedActor);
-	void OnUnmanagedDensityReservoirActorDestroy(class AActor* DestroyedActor);
-	void OnWorldFinishedInitialization(const struct FGameplayTagContainer& ContextTags);
-	int32 QueryEventBudget(const struct FDataTableRowHandle& EventEntry, const class AActor* SpawnLocation);
-	void RequestEventGeneration();
-	class UFortAthenaLivingWorldEncounterInstance* StartEncounter(const TSoftObjectPtr<class UFortAthenaLivingWorldEncounter> EncounterType, const TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>>& EncounterPointProviders, class AActor* ActorDensityReservoir);
-	bool TrySpawnEvent(const struct FDataTableRowHandle& EventEntry, const struct FTransform& SpawnLocation, const TDelegate<void(const TArray<class AActor*>& SpawnedActors, bool bSuccess)>& OnRequestFinished);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortAthenaLivingWorldManager">();
-	}
-	static class UFortAthenaLivingWorldManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFortAthenaLivingWorldManager>();
-	}
-};
-
-// Class LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler
-// 0x00B8 (0x02D8 - 0x0220)
-class AFortAthenaLivingWorldPointProvidersEnabler : public AActor
-{
-public:
-	TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>> EnabledLinkedPointProviders; // 0x0220(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>> AvailableLinkedPointProviders; // 0x0230(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	struct FGameplayTagContainer                  EnablerTags;                                       // 0x0240(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPrivate)
-	TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>> LinkedPointProviders; // 0x0260(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         PointProvidersToEnable;                            // 0x0270(0x0028)(Edit, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         EvaluateAutomatically;                             // 0x0298(0x0028)(Edit, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2C0[0x8];                                      // 0x02C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>>& EnabledPointProviders)> OnCompletedEvaluationDelegate; // 0x02C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-
-public:
-	void EvaluateAndEnablePointProviders();
-	void OnCurrentPlaylistLoaded(class FName PlaylistName, const struct FGameplayTagContainer& PlaylistContextTags);
-	void RemoveClosestPointProvidersToPoint(const struct FVector& Point, const float MaximumDistance, const int32 PointsToDisable);
-
-	bool DoesStartEnabled() const;
-	const TArray<TScriptInterface<class IFortAthenaLivingWorldPointProviderInterface>> GetEnabledLinkedPointProviders() const;
-	const struct FGameplayTagContainer GetEnablerTags() const;
-	bool HasCompletedEvaluation() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortAthenaLivingWorldPointProvidersEnabler">();
-	}
-	static class AFortAthenaLivingWorldPointProvidersEnabler* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AFortAthenaLivingWorldPointProvidersEnabler>();
-	}
-};
-
-// Class LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler_MiniMapDataOverride
-// 0x0000 (0x02D8 - 0x02D8)
-class AFortAthenaLivingWorldPointProvidersEnabler_MiniMapDataOverride final : public AFortAthenaLivingWorldPointProvidersEnabler
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortAthenaLivingWorldPointProvidersEnabler_MiniMapDataOverride">();
-	}
-	static class AFortAthenaLivingWorldPointProvidersEnabler_MiniMapDataOverride* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AFortAthenaLivingWorldPointProvidersEnabler_MiniMapDataOverride>();
-	}
-};
-
-// Class LagerRuntime.FortAthenaLivingWorldSpawnAction
-// 0x0000 (0x0028 - 0x0028)
-class UFortAthenaLivingWorldSpawnAction : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortAthenaLivingWorldSpawnAction">();
-	}
-	static class UFortAthenaLivingWorldSpawnAction* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFortAthenaLivingWorldSpawnAction>();
-	}
-};
-
-// Class LagerRuntime.FortAthenaLivingWorldSpawnActionBlueprint
-// 0x0000 (0x0028 - 0x0028)
-class UFortAthenaLivingWorldSpawnActionBlueprint final : public UFortAthenaLivingWorldSpawnAction
-{
-public:
-	void K2_OnAllActorSpawned(const TArray<class AActor*>& SpawnedActor) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortAthenaLivingWorldSpawnActionBlueprint">();
-	}
-	static class UFortAthenaLivingWorldSpawnActionBlueprint* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFortAthenaLivingWorldSpawnActionBlueprint>();
-	}
-};
-
-// Class LagerRuntime.FortAthenaLivingWorldSpawnAction_SeatPawnInVehicle
-// 0x0010 (0x0038 - 0x0028)
-class UFortAthenaLivingWorldSpawnAction_SeatPawnInVehicle final : public UFortAthenaLivingWorldSpawnAction
-{
-public:
-	TArray<struct FFortAthenaLivingWorldTagQueryToSeatMapping> SeatMappings;                         // 0x0028(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortAthenaLivingWorldSpawnAction_SeatPawnInVehicle">();
-	}
-	static class UFortAthenaLivingWorldSpawnAction_SeatPawnInVehicle* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFortAthenaLivingWorldSpawnAction_SeatPawnInVehicle>();
-	}
-};
+static_assert(alignof(IFortAthenaLivingWorldPointProviderInterface) == 0x000001, "Wrong alignment on IFortAthenaLivingWorldPointProviderInterface");
+static_assert(sizeof(IFortAthenaLivingWorldPointProviderInterface) == 0x000001, "Wrong size on IFortAthenaLivingWorldPointProviderInterface");
 
 // Class LagerRuntime.FortAthenaLivingWorldVolume
-// 0x0248 (0x04A0 - 0x0258)
+// 0x0118 (0x0370 - 0x0258)
 class AFortAthenaLivingWorldVolume final : public AVolume
 {
 public:
 	uint8                                         Pad_258[0x8];                                      // 0x0258(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bStartEnabled;                                     // 0x0260(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  FiltersTags;                                       // 0x0268(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPrivate)
-	class UEnvQuery*                              EnvironmentQuery;                                  // 0x0288(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FAIDynamicParam>                QueryConfig;                                       // 0x0290(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
-	bool                                          bRemoveUsedPoint;                                  // 0x02A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bRemoveUsedPointPermenantly;                       // 0x02A1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2A2[0x6];                                      // 0x02A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortAthenaLivingWorldPointProviderSpawnLimiter SpawnLimiter;                             // 0x02A8(0x0038)(Edit, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         EQSRefreshInterval;                                // 0x02E0(0x0028)(Edit, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         WaterLevelIndexMin;                                // 0x0308(0x0028)(Edit, NativeAccessSpecifierPrivate)
-	struct FScalableFloat                         WaterLevelIndexMax;                                // 0x0330(0x0028)(Edit, NativeAccessSpecifierPrivate)
-	class AFortGameStateAthena*                   CachedGameState;                                   // 0x0358(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(class AActor* SpawnedActor, bool bResult)> OnActorSpawnedResult;   // 0x0360(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(class AFortAthenaLivingWorldVolume* PointProviderVolume)> OnPointProviderRegistered; // 0x0370(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-	class UFortAthenaLivingWorldManager*          CachedLivingWorldManager;                          // 0x0380(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_388[0x118];                                    // 0x0388(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  FiltersTags;                                       // 0x0260(0x0020)(Edit, NativeAccessSpecifierPrivate)
+	struct FGameplayTagQuery                      DeactivationTagsQuery;                             // 0x0280(0x0048)(Edit, NativeAccessSpecifierPrivate)
+	float                                         DeactivationTagsRange;                             // 0x02C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEnvQuery*                              EnvironmentQuery;                                  // 0x02D0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FScalableFloat                         WaterLevelIndexMin;                                // 0x02D8(0x0028)(Edit, NativeAccessSpecifierPrivate)
+	struct FScalableFloat                         WaterLevelIndexMax;                                // 0x0300(0x0028)(Edit, NativeAccessSpecifierPrivate)
+	class AFortGameStateAthena*                   CachedGameState;                                   // 0x0328(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_330[0x40];                                     // 0x0330(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void DisablePointProvider();
-	void EnablePointProvider();
 	void OnCurrentPlaylistLoaded(class FName PlaylistName, const struct FGameplayTagContainer& PlaylistContextTags);
-	void OnWorldFinishedInitialization(const struct FGameplayTagContainer& ContextTags);
-	void RunEQS();
-	void SetEQSQuery(class UEnvQuery* Query);
-	void SetEQSQueryConfigParam(const class FName ParameterName, float Value);
-	void SetFiltersTags(const struct FGameplayTagContainer& TagContainer);
-
-	bool DoesStartEnabled() const;
-	bool IsPointProviderEnabled() const;
+	void OnPointProviderRegistered(class AActor* PointProvider);
 
 public:
 	static class UClass* StaticClass()
@@ -414,9 +251,18 @@ public:
 		return GetDefaultObjImpl<AFortAthenaLivingWorldVolume>();
 	}
 };
+static_assert(alignof(AFortAthenaLivingWorldVolume) == 0x000008, "Wrong alignment on AFortAthenaLivingWorldVolume");
+static_assert(sizeof(AFortAthenaLivingWorldVolume) == 0x000370, "Wrong size on AFortAthenaLivingWorldVolume");
+static_assert(offsetof(AFortAthenaLivingWorldVolume, FiltersTags) == 0x000260, "Member 'AFortAthenaLivingWorldVolume::FiltersTags' has a wrong offset!");
+static_assert(offsetof(AFortAthenaLivingWorldVolume, DeactivationTagsQuery) == 0x000280, "Member 'AFortAthenaLivingWorldVolume::DeactivationTagsQuery' has a wrong offset!");
+static_assert(offsetof(AFortAthenaLivingWorldVolume, DeactivationTagsRange) == 0x0002C8, "Member 'AFortAthenaLivingWorldVolume::DeactivationTagsRange' has a wrong offset!");
+static_assert(offsetof(AFortAthenaLivingWorldVolume, EnvironmentQuery) == 0x0002D0, "Member 'AFortAthenaLivingWorldVolume::EnvironmentQuery' has a wrong offset!");
+static_assert(offsetof(AFortAthenaLivingWorldVolume, WaterLevelIndexMin) == 0x0002D8, "Member 'AFortAthenaLivingWorldVolume::WaterLevelIndexMin' has a wrong offset!");
+static_assert(offsetof(AFortAthenaLivingWorldVolume, WaterLevelIndexMax) == 0x000300, "Member 'AFortAthenaLivingWorldVolume::WaterLevelIndexMax' has a wrong offset!");
+static_assert(offsetof(AFortAthenaLivingWorldVolume, CachedGameState) == 0x000328, "Member 'AFortAthenaLivingWorldVolume::CachedGameState' has a wrong offset!");
 
 // Class LagerRuntime.FortAthenaPatrolPathPointProvider
-// 0x00A0 (0x02C0 - 0x0220)
+// 0x0060 (0x0280 - 0x0220)
 class AFortAthenaPatrolPathPointProvider final : public AActor
 {
 public:
@@ -425,19 +271,18 @@ public:
 	class AFortAthenaPatrolPath*                  AssociatedPatrolPath;                              // 0x0248(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         bStartEnabled : 1;                                 // 0x0250(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
 	uint8                                         bSpawnOnPatrolPath : 1;                            // 0x0250(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         bAlignOrientationToPath : 1;                       // 0x0250(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         bDisableOnSuccessfulSpawn : 1;                     // 0x0250(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
 	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortAthenaLivingWorldPointProviderSpawnLimiter SpawnLimiter;                             // 0x0258(0x0038)(Edit, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(class AActor* SpawnedActor, bool bResult)> OnActorSpawnedResult;   // 0x0290(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-	TWeakObjectPtr<class AFortAthenaPatrolPath>   RuntimePatrolPathWeakPtr;                          // 0x02A0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class AFortGameStateAthena*                   CachedGameState;                                   // 0x02A8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UFortAthenaLivingWorldManager*          CachedLivingWorldManager;                          // 0x02B0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class AActor* SpawnedActor, bool bResult)> OnActorSpawnedResult;   // 0x0258(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+	TWeakObjectPtr<class AFortAthenaPatrolPath>   RuntimePatrolPathWeakPtr;                          // 0x0268(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class AFortGameStateAthena*                   CachedGameState;                                   // 0x0270(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_278[0x8];                                      // 0x0278(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void DisablePointProvider();
 	void EnablePointProvider();
 	void OnCurrentPlaylistLoaded(class FName PlaylistName, const struct FGameplayTagContainer& PlaylistContextTags);
+	void OnSpawnedActorDestroyed(class AActor* DestroyedActor);
 
 public:
 	static class UClass* StaticClass()
@@ -449,84 +294,13 @@ public:
 		return GetDefaultObjImpl<AFortAthenaPatrolPathPointProvider>();
 	}
 };
-
-// Class LagerRuntime.FortAthenaPointAroundPlayerProvider
-// 0x0090 (0x02B0 - 0x0220)
-class AFortAthenaPointAroundPlayerProvider final : public AActor
-{
-public:
-	uint8                                         Pad_220[0x8];                                      // 0x0220(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  FiltersTags;                                       // 0x0228(0x0020)(Edit, NativeAccessSpecifierPrivate)
-	class UEnvQuery*                              QueryTemplate;                                     // 0x0248(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EEnvQueryRunMode                              RunMode;                                           // 0x0250(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         bStartEnabled : 1;                                 // 0x0251(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         bGenerateAroundPlayerBots : 1;                     // 0x0251(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         Pad_252[0x2];                                      // 0x0252(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           IgnorePlayerWithTag;                               // 0x0254(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortAthenaLivingWorldPointProviderSpawnLimiter SpawnLimiter;                             // 0x0260(0x0038)(Edit, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(class AActor* SpawnedActor, bool bResult)> OnActorSpawnedResult;   // 0x0298(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-	class AFortGameStateAthena*                   CachedGameState;                                   // 0x02A8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	void DisablePointProvider();
-	void EnablePointProvider();
-	void OnCurrentPlaylistLoaded(class FName PlaylistName, const struct FGameplayTagContainer& PlaylistContextTags);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortAthenaPointAroundPlayerProvider">();
-	}
-	static class AFortAthenaPointAroundPlayerProvider* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AFortAthenaPointAroundPlayerProvider>();
-	}
-};
-
-// Class LagerRuntime.FortCheatManager_LivingWorldManager
-// 0x0018 (0x0040 - 0x0028)
-class UFortCheatManager_LivingWorldManager final : public UChildCheatManager
-{
-public:
-	int32                                         CheatTeleportToCount;                              // 0x0028(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CheatLastEventDataName;                            // 0x0030(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	void LivingWorldManagerSpawn(const class FString& EventDataName);
-	void LivingWorldManagerSpawnAtLocation(const class FString& EventDataName, const struct FVector& Location, const struct FRotator& Rotation);
-	void LivingWorldManagerTeleportTo(const class FString& EventDataName);
-	void LivingWorldManagerTeleportToSpawnPosition(const class FString& EventDataName);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortCheatManager_LivingWorldManager">();
-	}
-	static class UFortCheatManager_LivingWorldManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFortCheatManager_LivingWorldManager>();
-	}
-};
-
-// Class LagerRuntime.FortGameFeatureAction_AddLagerConfig
-// 0x0010 (0x0038 - 0x0028)
-class UFortGameFeatureAction_AddLagerConfig final : public UGameFeatureAction
-{
-public:
-	TArray<struct FFortLivingWorldConfigOverride> LagerConfigOverrides;                              // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FortGameFeatureAction_AddLagerConfig">();
-	}
-	static class UFortGameFeatureAction_AddLagerConfig* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFortGameFeatureAction_AddLagerConfig>();
-	}
-};
+static_assert(alignof(AFortAthenaPatrolPathPointProvider) == 0x000008, "Wrong alignment on AFortAthenaPatrolPathPointProvider");
+static_assert(sizeof(AFortAthenaPatrolPathPointProvider) == 0x000280, "Wrong size on AFortAthenaPatrolPathPointProvider");
+static_assert(offsetof(AFortAthenaPatrolPathPointProvider, FiltersTags) == 0x000228, "Member 'AFortAthenaPatrolPathPointProvider::FiltersTags' has a wrong offset!");
+static_assert(offsetof(AFortAthenaPatrolPathPointProvider, AssociatedPatrolPath) == 0x000248, "Member 'AFortAthenaPatrolPathPointProvider::AssociatedPatrolPath' has a wrong offset!");
+static_assert(offsetof(AFortAthenaPatrolPathPointProvider, OnActorSpawnedResult) == 0x000258, "Member 'AFortAthenaPatrolPathPointProvider::OnActorSpawnedResult' has a wrong offset!");
+static_assert(offsetof(AFortAthenaPatrolPathPointProvider, RuntimePatrolPathWeakPtr) == 0x000268, "Member 'AFortAthenaPatrolPathPointProvider::RuntimePatrolPathWeakPtr' has a wrong offset!");
+static_assert(offsetof(AFortAthenaPatrolPathPointProvider, CachedGameState) == 0x000270, "Member 'AFortAthenaPatrolPathPointProvider::CachedGameState' has a wrong offset!");
 
 }
 

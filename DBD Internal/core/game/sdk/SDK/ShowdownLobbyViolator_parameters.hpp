@@ -19,7 +19,7 @@ namespace SDK::Params
 {
 
 // Function ShowdownLobbyViolator.ShowdownLobbyViolator_C.ExecuteUbergraph_ShowdownLobbyViolator
-// 0x0280 (0x0280 - 0x0000)
+// 0x0270 (0x0270 - 0x0000)
 struct ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator final
 {
 public:
@@ -50,23 +50,22 @@ public:
 	int32                                         K2Node_Select_Default;                             // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Temp_text_Variable_8;                              // 0x0100(0x0018)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0118(0x0014)()
-	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0130(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0180(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01D0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01E0(0x0018)()
-	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x01F8(0x0018)()
-	class FText                                   Temp_text_Variable_9;                              // 0x0210(0x0018)()
-	class FText                                   Temp_text_Variable_10;                             // 0x0228(0x0018)()
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EFortShowdownEventState                       Temp_byte_Variable_1;                              // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_1;                           // 0x0250(0x0018)()
-	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x0268(0x0018)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0118(0x0028)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0140(0x0040)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0180(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01C0(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01D0(0x0018)()
+	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x01E8(0x0018)()
+	class FText                                   Temp_text_Variable_9;                              // 0x0200(0x0018)()
+	class FText                                   Temp_text_Variable_10;                             // 0x0218(0x0018)()
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortShowdownEventState                       Temp_byte_Variable_1;                              // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default_1;                           // 0x0240(0x0018)()
+	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x0258(0x0018)()
 };
 static_assert(alignof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator) == 0x000008, "Wrong alignment on ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator");
-static_assert(sizeof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator) == 0x000280, "Wrong size on ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator");
+static_assert(sizeof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator) == 0x000270, "Wrong size on ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator");
 static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, EntryPoint) == 0x000000, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::EntryPoint' has a wrong offset!");
 static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, CallFunc_GetEventTimeState_ReturnValue) == 0x000004, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::CallFunc_GetEventTimeState_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, Temp_text_Variable) == 0x000008, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::Temp_text_Variable' has a wrong offset!");
@@ -92,17 +91,17 @@ static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyVio
 static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, K2Node_Select_Default) == 0x0000F8, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::K2Node_Select_Default' has a wrong offset!");
 static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, Temp_text_Variable_8) == 0x000100, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::Temp_text_Variable_8' has a wrong offset!");
 static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, K2Node_MakeStruct_SlateColor) == 0x000118, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, K2Node_MakeStruct_FormatArgumentData) == 0x000130, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, K2Node_MakeStruct_FormatArgumentData) == 0x000140, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
 static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, K2Node_MakeStruct_FormatArgumentData_1) == 0x000180, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, K2Node_MakeArray_Array) == 0x0001D0, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, CallFunc_Format_ReturnValue) == 0x0001E0, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, CallFunc_TextToUpper_ReturnValue) == 0x0001F8, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::CallFunc_TextToUpper_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, Temp_text_Variable_9) == 0x000210, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::Temp_text_Variable_9' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, Temp_text_Variable_10) == 0x000228, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::Temp_text_Variable_10' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, CallFunc_PlayAnimation_ReturnValue) == 0x000240, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, Temp_byte_Variable_1) == 0x000248, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, K2Node_Select_Default_1) == 0x000250, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, CallFunc_TextToUpper_ReturnValue_1) == 0x000268, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::CallFunc_TextToUpper_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, K2Node_MakeArray_Array) == 0x0001C0, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, CallFunc_Format_ReturnValue) == 0x0001D0, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, CallFunc_TextToUpper_ReturnValue) == 0x0001E8, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::CallFunc_TextToUpper_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, Temp_text_Variable_9) == 0x000200, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::Temp_text_Variable_9' has a wrong offset!");
+static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, Temp_text_Variable_10) == 0x000218, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::Temp_text_Variable_10' has a wrong offset!");
+static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, CallFunc_PlayAnimation_ReturnValue) == 0x000230, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, Temp_byte_Variable_1) == 0x000238, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, K2Node_Select_Default_1) == 0x000240, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator, CallFunc_TextToUpper_ReturnValue_1) == 0x000258, "Member 'ShowdownLobbyViolator_C_ExecuteUbergraph_ShowdownLobbyViolator::CallFunc_TextToUpper_ReturnValue_1' has a wrong offset!");
 
 }
 

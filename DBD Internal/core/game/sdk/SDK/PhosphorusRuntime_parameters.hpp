@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "PhosphorusRuntime_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -26,6 +26,10 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FadeTime;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_AudioFadeChangeEvent) == 0x000004, "Wrong alignment on FortAthenaMutator_Phosphorus_AudioFadeChangeEvent");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_AudioFadeChangeEvent) == 0x000008, "Wrong size on FortAthenaMutator_Phosphorus_AudioFadeChangeEvent");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_AudioFadeChangeEvent, bFadeOut) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_AudioFadeChangeEvent::bFadeOut' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_AudioFadeChangeEvent, FadeTime) == 0x000004, "Member 'FortAthenaMutator_Phosphorus_AudioFadeChangeEvent::FadeTime' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.GetCachedStormMutator
 // 0x0008 (0x0008 - 0x0000)
@@ -34,6 +38,9 @@ struct FortAthenaMutator_Phosphorus_GetCachedStormMutator final
 public:
 	class AFortAthenaMutator_CustomStormMovement* ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_GetCachedStormMutator) == 0x000008, "Wrong alignment on FortAthenaMutator_Phosphorus_GetCachedStormMutator");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_GetCachedStormMutator) == 0x000008, "Wrong size on FortAthenaMutator_Phosphorus_GetCachedStormMutator");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetCachedStormMutator, ReturnValue) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_GetCachedStormMutator::ReturnValue' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.GetTeamMVP
 // 0x0010 (0x0010 - 0x0000)
@@ -44,6 +51,10 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AFortPlayerStateAthena*                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_GetTeamMVP) == 0x000008, "Wrong alignment on FortAthenaMutator_Phosphorus_GetTeamMVP");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_GetTeamMVP) == 0x000010, "Wrong size on FortAthenaMutator_Phosphorus_GetTeamMVP");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetTeamMVP, TeamNum) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_GetTeamMVP::TeamNum' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetTeamMVP, ReturnValue) == 0x000008, "Member 'FortAthenaMutator_Phosphorus_GetTeamMVP::ReturnValue' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.HandlePawnStormStatusChanged
 // 0x0010 (0x0010 - 0x0000)
@@ -54,6 +65,10 @@ public:
 	bool                                          bIsInSafeZone;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_HandlePawnStormStatusChanged) == 0x000008, "Wrong alignment on FortAthenaMutator_Phosphorus_HandlePawnStormStatusChanged");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_HandlePawnStormStatusChanged) == 0x000010, "Wrong size on FortAthenaMutator_Phosphorus_HandlePawnStormStatusChanged");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_HandlePawnStormStatusChanged, PlayerPawn) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_HandlePawnStormStatusChanged::PlayerPawn' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_HandlePawnStormStatusChanged, bIsInSafeZone) == 0x000008, "Member 'FortAthenaMutator_Phosphorus_HandlePawnStormStatusChanged::bIsInSafeZone' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.OnPawnEjectedFromPod
 // 0x0008 (0x0008 - 0x0000)
@@ -62,14 +77,20 @@ struct FortAthenaMutator_Phosphorus_OnPawnEjectedFromPod final
 public:
 	class AFortPlayerPawnAthena*                  Pawn;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_OnPawnEjectedFromPod) == 0x000008, "Wrong alignment on FortAthenaMutator_Phosphorus_OnPawnEjectedFromPod");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_OnPawnEjectedFromPod) == 0x000008, "Wrong size on FortAthenaMutator_Phosphorus_OnPawnEjectedFromPod");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_OnPawnEjectedFromPod, Pawn) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_OnPawnEjectedFromPod::Pawn' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.GetLeadingTeamNums
 // 0x0010 (0x0010 - 0x0000)
 struct FortAthenaMutator_Phosphorus_GetLeadingTeamNums final
 {
 public:
-	TArray<uint8>                                 LeadingTeamNums;                                   // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 LeadingTeamNums;                                   // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_GetLeadingTeamNums) == 0x000008, "Wrong alignment on FortAthenaMutator_Phosphorus_GetLeadingTeamNums");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_GetLeadingTeamNums) == 0x000010, "Wrong size on FortAthenaMutator_Phosphorus_GetLeadingTeamNums");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetLeadingTeamNums, LeadingTeamNums) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_GetLeadingTeamNums::LeadingTeamNums' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.GetNumAliveTeams
 // 0x0004 (0x0004 - 0x0000)
@@ -78,6 +99,9 @@ struct FortAthenaMutator_Phosphorus_GetNumAliveTeams final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_GetNumAliveTeams) == 0x000004, "Wrong alignment on FortAthenaMutator_Phosphorus_GetNumAliveTeams");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_GetNumAliveTeams) == 0x000004, "Wrong size on FortAthenaMutator_Phosphorus_GetNumAliveTeams");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetNumAliveTeams, ReturnValue) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_GetNumAliveTeams::ReturnValue' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.GetNumValidTeams
 // 0x0004 (0x0004 - 0x0000)
@@ -86,6 +110,9 @@ struct FortAthenaMutator_Phosphorus_GetNumValidTeams final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_GetNumValidTeams) == 0x000004, "Wrong alignment on FortAthenaMutator_Phosphorus_GetNumValidTeams");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_GetNumValidTeams) == 0x000004, "Wrong size on FortAthenaMutator_Phosphorus_GetNumValidTeams");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetNumValidTeams, ReturnValue) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_GetNumValidTeams::ReturnValue' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.GetRoundWinningTeamNum
 // 0x0001 (0x0001 - 0x0000)
@@ -94,18 +121,27 @@ struct FortAthenaMutator_Phosphorus_GetRoundWinningTeamNum final
 public:
 	uint8                                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_GetRoundWinningTeamNum) == 0x000001, "Wrong alignment on FortAthenaMutator_Phosphorus_GetRoundWinningTeamNum");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_GetRoundWinningTeamNum) == 0x000001, "Wrong size on FortAthenaMutator_Phosphorus_GetRoundWinningTeamNum");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetRoundWinningTeamNum, ReturnValue) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_GetRoundWinningTeamNum::ReturnValue' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.GetTeamDataArray
 // 0x0018 (0x0018 - 0x0000)
 struct FortAthenaMutator_Phosphorus_GetTeamDataArray final
 {
 public:
-	TArray<struct FPhosphorusTeamData>            OutTeamDataArray;                                  // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FPhosphorusTeamData>            OutTeamDataArray;                                  // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bMustBeValid;                                      // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bMustBeAlive;                                      // 0x0011(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSortByScore;                                      // 0x0012(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_GetTeamDataArray) == 0x000008, "Wrong alignment on FortAthenaMutator_Phosphorus_GetTeamDataArray");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_GetTeamDataArray) == 0x000018, "Wrong size on FortAthenaMutator_Phosphorus_GetTeamDataArray");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetTeamDataArray, OutTeamDataArray) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_GetTeamDataArray::OutTeamDataArray' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetTeamDataArray, bMustBeValid) == 0x000010, "Member 'FortAthenaMutator_Phosphorus_GetTeamDataArray::bMustBeValid' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetTeamDataArray, bMustBeAlive) == 0x000011, "Member 'FortAthenaMutator_Phosphorus_GetTeamDataArray::bMustBeAlive' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetTeamDataArray, bSortByScore) == 0x000012, "Member 'FortAthenaMutator_Phosphorus_GetTeamDataArray::bSortByScore' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.GetTeamDataCopy
 // 0x0018 (0x0018 - 0x0000)
@@ -116,6 +152,10 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPhosphorusTeamData                    ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_GetTeamDataCopy) == 0x000008, "Wrong alignment on FortAthenaMutator_Phosphorus_GetTeamDataCopy");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_GetTeamDataCopy) == 0x000018, "Wrong size on FortAthenaMutator_Phosphorus_GetTeamDataCopy");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetTeamDataCopy, TeamNum) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_GetTeamDataCopy::TeamNum' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetTeamDataCopy, ReturnValue) == 0x000008, "Member 'FortAthenaMutator_Phosphorus_GetTeamDataCopy::ReturnValue' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.GetTeamSize
 // 0x0008 (0x0008 - 0x0000)
@@ -126,6 +166,10 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_GetTeamSize) == 0x000004, "Wrong alignment on FortAthenaMutator_Phosphorus_GetTeamSize");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_GetTeamSize) == 0x000008, "Wrong size on FortAthenaMutator_Phosphorus_GetTeamSize");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetTeamSize, TeamNum) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_GetTeamSize::TeamNum' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_GetTeamSize, ReturnValue) == 0x000004, "Member 'FortAthenaMutator_Phosphorus_GetTeamSize::ReturnValue' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.IsOnWinningTeam
 // 0x0010 (0x0010 - 0x0000)
@@ -136,6 +180,10 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_IsOnWinningTeam) == 0x000008, "Wrong alignment on FortAthenaMutator_Phosphorus_IsOnWinningTeam");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_IsOnWinningTeam) == 0x000010, "Wrong size on FortAthenaMutator_Phosphorus_IsOnWinningTeam");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_IsOnWinningTeam, Pawn) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_IsOnWinningTeam::Pawn' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_IsOnWinningTeam, ReturnValue) == 0x000008, "Member 'FortAthenaMutator_Phosphorus_IsOnWinningTeam::ReturnValue' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.IsTeamAlive
 // 0x0002 (0x0002 - 0x0000)
@@ -145,6 +193,10 @@ public:
 	uint8                                         TeamNum;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_IsTeamAlive) == 0x000001, "Wrong alignment on FortAthenaMutator_Phosphorus_IsTeamAlive");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_IsTeamAlive) == 0x000002, "Wrong size on FortAthenaMutator_Phosphorus_IsTeamAlive");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_IsTeamAlive, TeamNum) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_IsTeamAlive::TeamNum' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_IsTeamAlive, ReturnValue) == 0x000001, "Member 'FortAthenaMutator_Phosphorus_IsTeamAlive::ReturnValue' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_Phosphorus.IsTeamValid
 // 0x0002 (0x0002 - 0x0000)
@@ -154,6 +206,43 @@ public:
 	uint8                                         TeamNum;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_Phosphorus_IsTeamValid) == 0x000001, "Wrong alignment on FortAthenaMutator_Phosphorus_IsTeamValid");
+static_assert(sizeof(FortAthenaMutator_Phosphorus_IsTeamValid) == 0x000002, "Wrong size on FortAthenaMutator_Phosphorus_IsTeamValid");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_IsTeamValid, TeamNum) == 0x000000, "Member 'FortAthenaMutator_Phosphorus_IsTeamValid::TeamNum' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_Phosphorus_IsTeamValid, ReturnValue) == 0x000001, "Member 'FortAthenaMutator_Phosphorus_IsTeamValid::ReturnValue' has a wrong offset!");
+
+// Function PhosphorusRuntime.FortCheatManager_Phosphorus.PhosphorusDebug
+// 0x0004 (0x0004 - 0x0000)
+struct FortCheatManager_Phosphorus_PhosphorusDebug final
+{
+public:
+	float                                         TextScale;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FortCheatManager_Phosphorus_PhosphorusDebug) == 0x000004, "Wrong alignment on FortCheatManager_Phosphorus_PhosphorusDebug");
+static_assert(sizeof(FortCheatManager_Phosphorus_PhosphorusDebug) == 0x000004, "Wrong size on FortCheatManager_Phosphorus_PhosphorusDebug");
+static_assert(offsetof(FortCheatManager_Phosphorus_PhosphorusDebug, TextScale) == 0x000000, "Member 'FortCheatManager_Phosphorus_PhosphorusDebug::TextScale' has a wrong offset!");
+
+// Function PhosphorusRuntime.FortCheatManager_Phosphorus.PhosphorusSetNumRoundsToWin
+// 0x0004 (0x0004 - 0x0000)
+struct FortCheatManager_Phosphorus_PhosphorusSetNumRoundsToWin final
+{
+public:
+	int32                                         NumRounds;                                         // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FortCheatManager_Phosphorus_PhosphorusSetNumRoundsToWin) == 0x000004, "Wrong alignment on FortCheatManager_Phosphorus_PhosphorusSetNumRoundsToWin");
+static_assert(sizeof(FortCheatManager_Phosphorus_PhosphorusSetNumRoundsToWin) == 0x000004, "Wrong size on FortCheatManager_Phosphorus_PhosphorusSetNumRoundsToWin");
+static_assert(offsetof(FortCheatManager_Phosphorus_PhosphorusSetNumRoundsToWin, NumRounds) == 0x000000, "Member 'FortCheatManager_Phosphorus_PhosphorusSetNumRoundsToWin::NumRounds' has a wrong offset!");
+
+// Function PhosphorusRuntime.FortCheatManager_PlayerSpawnPod.PlayerSpawnPodDebug
+// 0x0004 (0x0004 - 0x0000)
+struct FortCheatManager_PlayerSpawnPod_PlayerSpawnPodDebug final
+{
+public:
+	float                                         TextScale;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FortCheatManager_PlayerSpawnPod_PlayerSpawnPodDebug) == 0x000004, "Wrong alignment on FortCheatManager_PlayerSpawnPod_PlayerSpawnPodDebug");
+static_assert(sizeof(FortCheatManager_PlayerSpawnPod_PlayerSpawnPodDebug) == 0x000004, "Wrong size on FortCheatManager_PlayerSpawnPod_PlayerSpawnPodDebug");
+static_assert(offsetof(FortCheatManager_PlayerSpawnPod_PlayerSpawnPodDebug, TextScale) == 0x000000, "Member 'FortCheatManager_PlayerSpawnPod_PlayerSpawnPodDebug::TextScale' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_PlayerSpawnPod.GetPodDataForActor
 // 0x00D8 (0x00D8 - 0x0000)
@@ -166,6 +255,12 @@ public:
 	bool                                          ReturnValue;                                       // 0x00D0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortAthenaMutator_PlayerSpawnPod_GetPodDataForActor) == 0x000008, "Wrong alignment on FortAthenaMutator_PlayerSpawnPod_GetPodDataForActor");
+static_assert(sizeof(FortAthenaMutator_PlayerSpawnPod_GetPodDataForActor) == 0x0000D8, "Wrong size on FortAthenaMutator_PlayerSpawnPod_GetPodDataForActor");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_GetPodDataForActor, Actor) == 0x000000, "Member 'FortAthenaMutator_PlayerSpawnPod_GetPodDataForActor::Actor' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_GetPodDataForActor, OutPodData) == 0x000008, "Member 'FortAthenaMutator_PlayerSpawnPod_GetPodDataForActor::OutPodData' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_GetPodDataForActor, ContextString) == 0x0000C0, "Member 'FortAthenaMutator_PlayerSpawnPod_GetPodDataForActor::ContextString' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_GetPodDataForActor, ReturnValue) == 0x0000D0, "Member 'FortAthenaMutator_PlayerSpawnPod_GetPodDataForActor::ReturnValue' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_PlayerSpawnPod.GetPodDataForID
 // 0x00D8 (0x00D8 - 0x0000)
@@ -179,6 +274,12 @@ public:
 	bool                                          ReturnValue;                                       // 0x00D0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortAthenaMutator_PlayerSpawnPod_GetPodDataForID) == 0x000008, "Wrong alignment on FortAthenaMutator_PlayerSpawnPod_GetPodDataForID");
+static_assert(sizeof(FortAthenaMutator_PlayerSpawnPod_GetPodDataForID) == 0x0000D8, "Wrong size on FortAthenaMutator_PlayerSpawnPod_GetPodDataForID");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_GetPodDataForID, ID) == 0x000000, "Member 'FortAthenaMutator_PlayerSpawnPod_GetPodDataForID::ID' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_GetPodDataForID, OutPodData) == 0x000008, "Member 'FortAthenaMutator_PlayerSpawnPod_GetPodDataForID::OutPodData' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_GetPodDataForID, ContextString) == 0x0000C0, "Member 'FortAthenaMutator_PlayerSpawnPod_GetPodDataForID::ContextString' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_GetPodDataForID, ReturnValue) == 0x0000D0, "Member 'FortAthenaMutator_PlayerSpawnPod_GetPodDataForID::ReturnValue' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_PlayerSpawnPod.HandlePodLanded
 // 0x0008 (0x0008 - 0x0000)
@@ -187,6 +288,9 @@ struct FortAthenaMutator_PlayerSpawnPod_HandlePodLanded final
 public:
 	class UActorComponent*                        InComponent;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_PlayerSpawnPod_HandlePodLanded) == 0x000008, "Wrong alignment on FortAthenaMutator_PlayerSpawnPod_HandlePodLanded");
+static_assert(sizeof(FortAthenaMutator_PlayerSpawnPod_HandlePodLanded) == 0x000008, "Wrong size on FortAthenaMutator_PlayerSpawnPod_HandlePodLanded");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_HandlePodLanded, InComponent) == 0x000000, "Member 'FortAthenaMutator_PlayerSpawnPod_HandlePodLanded::InComponent' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_PlayerSpawnPod.OnPodDestroyed
 // 0x0008 (0x0008 - 0x0000)
@@ -195,14 +299,9 @@ struct FortAthenaMutator_PlayerSpawnPod_OnPodDestroyed final
 public:
 	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function PhosphorusRuntime.FortAthenaMutator_PlayerSpawnPod.OnRep_PodDataArray
-// 0x0010 (0x0010 - 0x0000)
-struct FortAthenaMutator_PlayerSpawnPod_OnRep_PodDataArray final
-{
-public:
-	TArray<struct FPlayerSpawnPodData>            OldPodDataArray;                                   // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FortAthenaMutator_PlayerSpawnPod_OnPodDestroyed) == 0x000008, "Wrong alignment on FortAthenaMutator_PlayerSpawnPod_OnPodDestroyed");
+static_assert(sizeof(FortAthenaMutator_PlayerSpawnPod_OnPodDestroyed) == 0x000008, "Wrong size on FortAthenaMutator_PlayerSpawnPod_OnPodDestroyed");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_OnPodDestroyed, DestroyedActor) == 0x000000, "Member 'FortAthenaMutator_PlayerSpawnPod_OnPodDestroyed::DestroyedActor' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_PlayerSpawnPod.OnSingleTeleportComplete
 // 0x0008 (0x0008 - 0x0000)
@@ -211,6 +310,9 @@ struct FortAthenaMutator_PlayerSpawnPod_OnSingleTeleportComplete final
 public:
 	class AFortPlayerStateAthena*                 PlayerState;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FortAthenaMutator_PlayerSpawnPod_OnSingleTeleportComplete) == 0x000008, "Wrong alignment on FortAthenaMutator_PlayerSpawnPod_OnSingleTeleportComplete");
+static_assert(sizeof(FortAthenaMutator_PlayerSpawnPod_OnSingleTeleportComplete) == 0x000008, "Wrong size on FortAthenaMutator_PlayerSpawnPod_OnSingleTeleportComplete");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_OnSingleTeleportComplete, PlayerState) == 0x000000, "Member 'FortAthenaMutator_PlayerSpawnPod_OnSingleTeleportComplete::PlayerState' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_PlayerSpawnPod.SetViewTarget
 // 0x0028 (0x0028 - 0x0000)
@@ -223,6 +325,12 @@ public:
 	bool                                          bDestroyOldViewTarget;                             // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FortAthenaMutator_PlayerSpawnPod_SetViewTarget) == 0x000008, "Wrong alignment on FortAthenaMutator_PlayerSpawnPod_SetViewTarget");
+static_assert(sizeof(FortAthenaMutator_PlayerSpawnPod_SetViewTarget) == 0x000028, "Wrong size on FortAthenaMutator_PlayerSpawnPod_SetViewTarget");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_SetViewTarget, Controller) == 0x000000, "Member 'FortAthenaMutator_PlayerSpawnPod_SetViewTarget::Controller' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_SetViewTarget, ViewTarget) == 0x000008, "Member 'FortAthenaMutator_PlayerSpawnPod_SetViewTarget::ViewTarget' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_SetViewTarget, ViewTargetTransitionParams) == 0x000010, "Member 'FortAthenaMutator_PlayerSpawnPod_SetViewTarget::ViewTargetTransitionParams' has a wrong offset!");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_SetViewTarget, bDestroyOldViewTarget) == 0x000020, "Member 'FortAthenaMutator_PlayerSpawnPod_SetViewTarget::bDestroyOldViewTarget' has a wrong offset!");
 
 // Function PhosphorusRuntime.FortAthenaMutator_PlayerSpawnPod.GetFallDuration
 // 0x0004 (0x0004 - 0x0000)
@@ -231,38 +339,9 @@ struct FortAthenaMutator_PlayerSpawnPod_GetFallDuration final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function PhosphorusRuntime.FortCheatManager_Phosphorus.PhosphorusDebug
-// 0x0004 (0x0004 - 0x0000)
-struct FortCheatManager_Phosphorus_PhosphorusDebug final
-{
-public:
-	float                                         TextScale;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function PhosphorusRuntime.FortCheatManager_Phosphorus.PhosphorusSetNumRoundsToWin
-// 0x0004 (0x0004 - 0x0000)
-struct FortCheatManager_Phosphorus_PhosphorusSetNumRoundsToWin final
-{
-public:
-	int32                                         NumRounds;                                         // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function PhosphorusRuntime.FortCheatManager_PlayerSpawnPod.PlayerSpawnPodDebug
-// 0x0004 (0x0004 - 0x0000)
-struct FortCheatManager_PlayerSpawnPod_PlayerSpawnPodDebug final
-{
-public:
-	float                                         TextScale;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function PhosphorusRuntime.FortCheatManager_PlayerSpawnPod.PlayerSpawnPodTestAllPlayers
-// 0x0001 (0x0001 - 0x0000)
-struct FortCheatManager_PlayerSpawnPod_PlayerSpawnPodTestAllPlayers final
-{
-public:
-	bool                                          bIndividualPods;                                   // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FortAthenaMutator_PlayerSpawnPod_GetFallDuration) == 0x000004, "Wrong alignment on FortAthenaMutator_PlayerSpawnPod_GetFallDuration");
+static_assert(sizeof(FortAthenaMutator_PlayerSpawnPod_GetFallDuration) == 0x000004, "Wrong size on FortAthenaMutator_PlayerSpawnPod_GetFallDuration");
+static_assert(offsetof(FortAthenaMutator_PlayerSpawnPod_GetFallDuration, ReturnValue) == 0x000000, "Member 'FortAthenaMutator_PlayerSpawnPod_GetFallDuration::ReturnValue' has a wrong offset!");
 
 }
 

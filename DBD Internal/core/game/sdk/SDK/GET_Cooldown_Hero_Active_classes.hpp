@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGET_Cooldown_Hero_Active_C>();
 	}
 };
+static_assert(alignof(UGET_Cooldown_Hero_Active_C) == 0x000008, "Wrong alignment on UGET_Cooldown_Hero_Active_C");
+static_assert(sizeof(UGET_Cooldown_Hero_Active_C) == 0x000800, "Wrong size on UGET_Cooldown_Hero_Active_C");
 
 }
 

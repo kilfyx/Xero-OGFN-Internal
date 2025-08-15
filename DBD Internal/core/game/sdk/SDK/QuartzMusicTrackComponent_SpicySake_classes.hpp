@@ -10,27 +10,28 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "QuartzMusicTrackComponent_DataTracker_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass QuartzMusicTrackComponent_SpicySake.QuartzMusicTrackComponent_SpicySake_C
-// 0x0018 (0x0200 - 0x01E8)
+// 0x0018 (0x01D0 - 0x01B8)
 class UQuartzMusicTrackComponent_SpicySake_C final : public UQuartzMusicTrackComponent_DataTracker_C
 {
 public:
-	float                                         InterpFloat_Circling;                              // 0x01E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         InterpFloat_Attacking;                             // 0x01EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           EventTag_Circling;                                 // 0x01F0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           EventTag_Attacking;                                // 0x01F8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B1[0x3];                                      // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InterpFloat_Circling;                              // 0x01B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         InterpFloat_Attacking;                             // 0x01B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           EventTag_Circling;                                 // 0x01BC(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           EventTag_Attacking;                                // 0x01C4(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void HandleMixState();
 	void OnDataTrackerUpdate();
 	float UpdateInterpValue(float InterpValue, const struct FGameplayTag& EventTag, float Attack_Speed, float Release_Speed);
+	void HandleMixState();
 
 public:
 	static class UClass* StaticClass()
@@ -42,6 +43,12 @@ public:
 		return GetDefaultObjImpl<UQuartzMusicTrackComponent_SpicySake_C>();
 	}
 };
+static_assert(alignof(UQuartzMusicTrackComponent_SpicySake_C) == 0x000008, "Wrong alignment on UQuartzMusicTrackComponent_SpicySake_C");
+static_assert(sizeof(UQuartzMusicTrackComponent_SpicySake_C) == 0x0001D0, "Wrong size on UQuartzMusicTrackComponent_SpicySake_C");
+static_assert(offsetof(UQuartzMusicTrackComponent_SpicySake_C, InterpFloat_Circling) == 0x0001B4, "Member 'UQuartzMusicTrackComponent_SpicySake_C::InterpFloat_Circling' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_SpicySake_C, InterpFloat_Attacking) == 0x0001B8, "Member 'UQuartzMusicTrackComponent_SpicySake_C::InterpFloat_Attacking' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_SpicySake_C, EventTag_Circling) == 0x0001BC, "Member 'UQuartzMusicTrackComponent_SpicySake_C::EventTag_Circling' has a wrong offset!");
+static_assert(offsetof(UQuartzMusicTrackComponent_SpicySake_C, EventTag_Attacking) == 0x0001C4, "Member 'UQuartzMusicTrackComponent_SpicySake_C::EventTag_Attacking' has a wrong offset!");
 
 }
 

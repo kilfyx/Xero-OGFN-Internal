@@ -17,6 +17,46 @@
 namespace SDK
 {
 
+// Function FrontendCamera_Inspect.FrontendCamera_Inspect_C.OnActivated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AFrontendCamera_Inspect_C::OnActivated(class AFortPlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FrontendCamera_Inspect_C", "OnActivated");
+
+	Params::FrontendCamera_Inspect_C_OnActivated Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FrontendCamera_Inspect.FrontendCamera_Inspect_C.OnDeactivated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AFrontendCamera_Inspect_C::OnDeactivated(class AFortPlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FrontendCamera_Inspect_C", "OnDeactivated");
+
+	Params::FrontendCamera_Inspect_C_OnDeactivated Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function FrontendCamera_Inspect.FrontendCamera_Inspect_C.ExecuteUbergraph_FrontendCamera_Inspect
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -25,53 +65,13 @@ namespace SDK
 void AFrontendCamera_Inspect_C::ExecuteUbergraph_FrontendCamera_Inspect(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_FrontendCamera_Inspect");
+		Func = Class->GetFunction("FrontendCamera_Inspect_C", "ExecuteUbergraph_FrontendCamera_Inspect");
 
 	Params::FrontendCamera_Inspect_C_ExecuteUbergraph_FrontendCamera_Inspect Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FrontendCamera_Inspect.FrontendCamera_Inspect_C.BP_OnDeactivated
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AFrontendCamera_Inspect_C::BP_OnDeactivated(class AFortPlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnDeactivated");
-
-	Params::FrontendCamera_Inspect_C_BP_OnDeactivated Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FrontendCamera_Inspect.FrontendCamera_Inspect_C.BP_OnActivated
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AFrontendCamera_Inspect_C::BP_OnActivated(class AFortPlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
-
-	Params::FrontendCamera_Inspect_C_BP_OnActivated Parms{};
-
-	Parms.PlayerController = PlayerController;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

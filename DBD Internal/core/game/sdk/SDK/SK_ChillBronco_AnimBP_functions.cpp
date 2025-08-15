@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function SK_ChillBronco_AnimBP.SK_ChillBronco_AnimBP_C.ExecuteUbergraph_SK_ChillBronco_AnimBP
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USK_ChillBronco_AnimBP_C::ExecuteUbergraph_SK_ChillBronco_AnimBP(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SK_ChillBronco_AnimBP_C", "ExecuteUbergraph_SK_ChillBronco_AnimBP");
+
+	Params::SK_ChillBronco_AnimBP_C_ExecuteUbergraph_SK_ChillBronco_AnimBP Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function SK_ChillBronco_AnimBP.SK_ChillBronco_AnimBP_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -38,26 +58,6 @@ void USK_ChillBronco_AnimBP_C::AnimGraph(const struct FPoseLink& InPose, struct 
 
 	if (AnimGraph_0 != nullptr)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
-}
-
-
-// Function SK_ChillBronco_AnimBP.SK_ChillBronco_AnimBP_C.ExecuteUbergraph_SK_ChillBronco_AnimBP
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USK_ChillBronco_AnimBP_C::ExecuteUbergraph_SK_ChillBronco_AnimBP(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SK_ChillBronco_AnimBP_C", "ExecuteUbergraph_SK_ChillBronco_AnimBP");
-
-	Params::SK_ChillBronco_AnimBP_C_ExecuteUbergraph_SK_ChillBronco_AnimBP Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

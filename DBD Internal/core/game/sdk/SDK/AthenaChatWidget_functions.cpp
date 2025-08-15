@@ -25,9 +25,9 @@ namespace SDK
 void UAthenaChatWidget_C::ExecuteUbergraph_AthenaChatWidget(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaChatWidget");
+		Func = Class->GetFunction("AthenaChatWidget_C", "ExecuteUbergraph_AthenaChatWidget");
 
 	Params::AthenaChatWidget_C_ExecuteUbergraph_AthenaChatWidget Parms{};
 
@@ -40,14 +40,14 @@ void UAthenaChatWidget_C::ExecuteUbergraph_AthenaChatWidget(int32 EntryPoint)
 // Function AthenaChatWidget.AthenaChatWidget_C.FocusChat
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    bFocus                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bFocus                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaChatWidget_C::FocusChat(bool bFocus)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("FocusChat");
+		Func = Class->GetFunction("AthenaChatWidget_C", "FocusChat");
 
 	Params::AthenaChatWidget_C_FocusChat Parms{};
 

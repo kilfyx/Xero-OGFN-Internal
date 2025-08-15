@@ -17,122 +17,6 @@
 namespace SDK
 {
 
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Cancelled_23F3C2DB411862D627ACFCA8233F7B33
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_InterrogatePlayer_Reveal_C::Cancelled_23F3C2DB411862D627ACFCA8233F7B33(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "Cancelled_23F3C2DB411862D627ACFCA8233F7B33");
-
-	Params::GAB_InterrogatePlayer_Reveal_C_Cancelled_23F3C2DB411862D627ACFCA8233F7B33 Parms{};
-
-	Parms.TargetData = std::move(TargetData);
-	Parms.ApplicationTag = std::move(ApplicationTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_InterrogatePlayer_Reveal_C::Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1");
-
-	Params::GAB_InterrogatePlayer_Reveal_C_Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1 Parms{};
-
-	Parms.TargetData = std::move(TargetData);
-	Parms.ApplicationTag = std::move(ApplicationTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Completed_23F3C2DB411862D627ACFCA8233F7B33
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_InterrogatePlayer_Reveal_C::Completed_23F3C2DB411862D627ACFCA8233F7B33(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "Completed_23F3C2DB411862D627ACFCA8233F7B33");
-
-	Params::GAB_InterrogatePlayer_Reveal_C_Completed_23F3C2DB411862D627ACFCA8233F7B33 Parms{};
-
-	Parms.TargetData = std::move(TargetData);
-	Parms.ApplicationTag = std::move(ApplicationTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Completed_3C2C8C224B62B00BDEEAF5AF38A401C1
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_InterrogatePlayer_Reveal_C::Completed_3C2C8C224B62B00BDEEAF5AF38A401C1(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "Completed_3C2C8C224B62B00BDEEAF5AF38A401C1");
-
-	Params::GAB_InterrogatePlayer_Reveal_C_Completed_3C2C8C224B62B00BDEEAF5AF38A401C1 Parms{};
-
-	Parms.TargetData = std::move(TargetData);
-	Parms.ApplicationTag = std::move(ApplicationTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.EndAbilityCleanup
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UGAB_InterrogatePlayer_Reveal_C::EndAbilityCleanup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "EndAbilityCleanup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.EndInterrogation
-// (BlueprintCallable, BlueprintEvent)
-
-void UGAB_InterrogatePlayer_Reveal_C::EndInterrogation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "EndInterrogation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.ExecuteUbergraph_GAB_InterrogatePlayer_Reveal
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -150,65 +34,6 @@ void UGAB_InterrogatePlayer_Reveal_C::ExecuteUbergraph_GAB_InterrogatePlayer_Rev
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.GAB_InterrogatePlayer_Reveal_AutoGenFunc
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           IndicatedActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_InterrogatePlayer_Reveal_C::GAB_InterrogatePlayer_Reveal_AutoGenFunc(class AActor* IndicatedActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "GAB_InterrogatePlayer_Reveal_AutoGenFunc");
-
-	Params::GAB_InterrogatePlayer_Reveal_C_GAB_InterrogatePlayer_Reveal_AutoGenFunc Parms{};
-
-	Parms.IndicatedActor = IndicatedActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.GetTeamMembers
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class APawn*                            Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIncludeSelf                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class AFortPlayerStateAthena*>   ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-TArray<class AFortPlayerStateAthena*> UGAB_InterrogatePlayer_Reveal_C::GetTeamMembers(class APawn* Target, bool bIncludeSelf)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "GetTeamMembers");
-
-	Params::GAB_InterrogatePlayer_Reveal_C_GetTeamMembers Parms{};
-
-	Parms.Target = Target;
-	Parms.bIncludeSelf = bIncludeSelf;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.InitAbility
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UGAB_InterrogatePlayer_Reveal_C::InitAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "InitAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -232,23 +57,17 @@ void UGAB_InterrogatePlayer_Reveal_C::K2_ActivateAbilityFromEvent(const struct F
 }
 
 
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.EndInterrogation
+// (BlueprintCallable, BlueprintEvent)
 
-void UGAB_InterrogatePlayer_Reveal_C::K2_OnEndAbility(bool bWasCancelled)
+void UGAB_InterrogatePlayer_Reveal_C::EndInterrogation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "K2_OnEndAbility");
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "EndInterrogation");
 
-	Params::GAB_InterrogatePlayer_Reveal_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -286,6 +105,26 @@ void UGAB_InterrogatePlayer_Reveal_C::OnDied_Event_1(class AActor* DamagedActor,
 }
 
 
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGAB_InterrogatePlayer_Reveal_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "K2_OnEndAbility");
+
+	Params::GAB_InterrogatePlayer_Reveal_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.OnFinish_68B3C6D14B44CCD3170ABDA038C1203E
 // (BlueprintCallable, BlueprintEvent)
 
@@ -300,35 +139,67 @@ void UGAB_InterrogatePlayer_Reveal_C::OnFinish_68B3C6D14B44CCD3170ABDA038C1203E(
 }
 
 
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Reveal
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
-void UGAB_InterrogatePlayer_Reveal_C::Reveal()
+void UGAB_InterrogatePlayer_Reveal_C::Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "Reveal");
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::GAB_InterrogatePlayer_Reveal_C_Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1 Parms{};
+
+	Parms.TargetData = std::move(TargetData);
+	Parms.ApplicationTag = std::move(ApplicationTag);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.ToggleReticleVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Hide                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
-void UGAB_InterrogatePlayer_Reveal_C::ToggleReticleVisibility(bool Hide)
+void UGAB_InterrogatePlayer_Reveal_C::Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "ToggleReticleVisibility");
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1");
 
-	Params::GAB_InterrogatePlayer_Reveal_C_ToggleReticleVisibility Parms{};
+	Params::GAB_InterrogatePlayer_Reveal_C_Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1 Parms{};
 
-	Parms.Hide = Hide;
+	Parms.TargetData = std::move(TargetData);
+	Parms.ApplicationTag = std::move(ApplicationTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Completed_3C2C8C224B62B00BDEEAF5AF38A401C1
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+
+void UGAB_InterrogatePlayer_Reveal_C::Completed_3C2C8C224B62B00BDEEAF5AF38A401C1(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "Completed_3C2C8C224B62B00BDEEAF5AF38A401C1");
+
+	Params::GAB_InterrogatePlayer_Reveal_C_Completed_3C2C8C224B62B00BDEEAF5AF38A401C1 Parms{};
+
+	Parms.TargetData = std::move(TargetData);
+	Parms.ApplicationTag = std::move(ApplicationTag);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -356,23 +227,107 @@ void UGAB_InterrogatePlayer_Reveal_C::Triggered_23F3C2DB411862D627ACFCA8233F7B33
 }
 
 
-// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Cancelled_23F3C2DB411862D627ACFCA8233F7B33
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
-void UGAB_InterrogatePlayer_Reveal_C::Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
+void UGAB_InterrogatePlayer_Reveal_C::Cancelled_23F3C2DB411862D627ACFCA8233F7B33(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1");
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "Cancelled_23F3C2DB411862D627ACFCA8233F7B33");
 
-	Params::GAB_InterrogatePlayer_Reveal_C_Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1 Parms{};
+	Params::GAB_InterrogatePlayer_Reveal_C_Cancelled_23F3C2DB411862D627ACFCA8233F7B33 Parms{};
 
 	Parms.TargetData = std::move(TargetData);
 	Parms.ApplicationTag = std::move(ApplicationTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Completed_23F3C2DB411862D627ACFCA8233F7B33
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+
+void UGAB_InterrogatePlayer_Reveal_C::Completed_23F3C2DB411862D627ACFCA8233F7B33(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "Completed_23F3C2DB411862D627ACFCA8233F7B33");
+
+	Params::GAB_InterrogatePlayer_Reveal_C_Completed_23F3C2DB411862D627ACFCA8233F7B33 Parms{};
+
+	Parms.TargetData = std::move(TargetData);
+	Parms.ApplicationTag = std::move(ApplicationTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.InitAbility
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UGAB_InterrogatePlayer_Reveal_C::InitAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "InitAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.EndAbilityCleanup
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UGAB_InterrogatePlayer_Reveal_C::EndAbilityCleanup()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "EndAbilityCleanup");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Reveal
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UGAB_InterrogatePlayer_Reveal_C::Reveal()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "Reveal");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.ToggleReticleVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Hide                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGAB_InterrogatePlayer_Reveal_C::ToggleReticleVisibility(bool Hide)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_InterrogatePlayer_Reveal_C", "ToggleReticleVisibility");
+
+	Params::GAB_InterrogatePlayer_Reveal_C_ToggleReticleVisibility Parms{};
+
+	Parms.Hide = Hide;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

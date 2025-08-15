@@ -23,6 +23,9 @@ struct BPI_NonParticipant_C_PlayVoiceSoundByTag final
 public:
 	struct FGameplayTag                           SoundBankTag;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(BPI_NonParticipant_C_PlayVoiceSoundByTag) == 0x000004, "Wrong alignment on BPI_NonParticipant_C_PlayVoiceSoundByTag");
+static_assert(sizeof(BPI_NonParticipant_C_PlayVoiceSoundByTag) == 0x000008, "Wrong size on BPI_NonParticipant_C_PlayVoiceSoundByTag");
+static_assert(offsetof(BPI_NonParticipant_C_PlayVoiceSoundByTag, SoundBankTag) == 0x000000, "Member 'BPI_NonParticipant_C_PlayVoiceSoundByTag::SoundBankTag' has a wrong offset!");
 
 }
 

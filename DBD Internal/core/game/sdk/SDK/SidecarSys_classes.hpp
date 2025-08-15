@@ -39,16 +39,25 @@ public:
 		return GetDefaultObjImpl<USidecarDss>();
 	}
 };
+static_assert(alignof(USidecarDss) == 0x000008, "Wrong alignment on USidecarDss");
+static_assert(sizeof(USidecarDss) == 0x0000C8, "Wrong size on USidecarDss");
+static_assert(offsetof(USidecarDss, FileInfoMap) == 0x000028, "Member 'USidecarDss::FileInfoMap' has a wrong offset!");
+static_assert(offsetof(USidecarDss, DssDownloadUrl) == 0x000078, "Member 'USidecarDss::DssDownloadUrl' has a wrong offset!");
+static_assert(offsetof(USidecarDss, DssCheckoutUrl) == 0x000088, "Member 'USidecarDss::DssCheckoutUrl' has a wrong offset!");
+static_assert(offsetof(USidecarDss, DssUploadUrl) == 0x000098, "Member 'USidecarDss::DssUploadUrl' has a wrong offset!");
+static_assert(offsetof(USidecarDss, DssRestoreUrl) == 0x0000A8, "Member 'USidecarDss::DssRestoreUrl' has a wrong offset!");
+static_assert(offsetof(USidecarDss, DssCheckinUrl) == 0x0000B8, "Member 'USidecarDss::DssCheckinUrl' has a wrong offset!");
 
 // Class SidecarSys.SidecarInventorySys
-// 0x00A8 (0x00D0 - 0x0028)
+// 0x00B8 (0x00E0 - 0x0028)
 class alignas(0x10) USidecarInventorySys final : public UObject
 {
 public:
 	class FString                                 InventoryDownloadUrl;                              // 0x0028(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 InventoryLockUrl;                                  // 0x0038(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 ItemUpdateUrl;                                     // 0x0048(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_58[0x78];                                      // 0x0058(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 ReleaseAllUrl;                                     // 0x0058(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_68[0x78];                                      // 0x0068(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -60,6 +69,12 @@ public:
 		return GetDefaultObjImpl<USidecarInventorySys>();
 	}
 };
+static_assert(alignof(USidecarInventorySys) == 0x000010, "Wrong alignment on USidecarInventorySys");
+static_assert(sizeof(USidecarInventorySys) == 0x0000E0, "Wrong size on USidecarInventorySys");
+static_assert(offsetof(USidecarInventorySys, InventoryDownloadUrl) == 0x000028, "Member 'USidecarInventorySys::InventoryDownloadUrl' has a wrong offset!");
+static_assert(offsetof(USidecarInventorySys, InventoryLockUrl) == 0x000038, "Member 'USidecarInventorySys::InventoryLockUrl' has a wrong offset!");
+static_assert(offsetof(USidecarInventorySys, ItemUpdateUrl) == 0x000048, "Member 'USidecarInventorySys::ItemUpdateUrl' has a wrong offset!");
+static_assert(offsetof(USidecarInventorySys, ReleaseAllUrl) == 0x000058, "Member 'USidecarInventorySys::ReleaseAllUrl' has a wrong offset!");
 
 // Class SidecarSys.SidecarSys
 // 0x0030 (0x0058 - 0x0028)
@@ -81,6 +96,10 @@ public:
 		return GetDefaultObjImpl<USidecarSys>();
 	}
 };
+static_assert(alignof(USidecarSys) == 0x000008, "Wrong alignment on USidecarSys");
+static_assert(sizeof(USidecarSys) == 0x000058, "Wrong size on USidecarSys");
+static_assert(offsetof(USidecarSys, SidecarDss) == 0x000038, "Member 'USidecarSys::SidecarDss' has a wrong offset!");
+static_assert(offsetof(USidecarSys, SidecarInventory) == 0x000040, "Member 'USidecarSys::SidecarInventory' has a wrong offset!");
 
 }
 

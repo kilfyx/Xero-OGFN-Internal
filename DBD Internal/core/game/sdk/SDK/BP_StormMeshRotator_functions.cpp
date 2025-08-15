@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function BP_StormMeshRotator.BP_StormMeshRotator_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_StormMeshRotator.BP_StormMeshRotator_C.ExecuteUbergraph_BP_StormMeshRotator
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_StormMeshRotator_C::UserConstructionScript()
+void ABP_StormMeshRotator_C::ExecuteUbergraph_BP_StormMeshRotator(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StormMeshRotator_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_StormMeshRotator_C", "ExecuteUbergraph_BP_StormMeshRotator");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_StormMeshRotator_C_ExecuteUbergraph_BP_StormMeshRotator Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -51,19 +57,39 @@ void ABP_StormMeshRotator_C::SetStormProgression(float Progression)
 }
 
 
-// Function BP_StormMeshRotator.BP_StormMeshRotator_C.setStormMeshVisibility
+// Function BP_StormMeshRotator.BP_StormMeshRotator_C.ToggleStormMeshesVisibility
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_StormMeshRotator_C::setStormMeshVisibility(bool bEnabled)
+void ABP_StormMeshRotator_C::ToggleStormMeshesVisibility(bool bEnabled)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StormMeshRotator_C", "setStormMeshVisibility");
+		Func = Class->GetFunction("BP_StormMeshRotator_C", "ToggleStormMeshesVisibility");
 
-	Params::BP_StormMeshRotator_C_setStormMeshVisibility Parms{};
+	Params::BP_StormMeshRotator_C_ToggleStormMeshesVisibility Parms{};
+
+	Parms.bEnabled = bEnabled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_StormMeshRotator.BP_StormMeshRotator_C.OnStormEffectsEnabled
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_StormMeshRotator_C::OnStormEffectsEnabled(bool bEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_StormMeshRotator_C", "OnStormEffectsEnabled");
+
+	Params::BP_StormMeshRotator_C_OnStormEffectsEnabled Parms{};
 
 	Parms.bEnabled = bEnabled;
 
@@ -85,98 +111,17 @@ void ABP_StormMeshRotator_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_StormMeshRotator.BP_StormMeshRotator_C.OnStormEffectsEnabled
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_StormMeshRotator.BP_StormMeshRotator_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_StormMeshRotator_C::OnStormEffectsEnabled(bool bEnabled)
+void ABP_StormMeshRotator_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StormMeshRotator_C", "OnStormEffectsEnabled");
-
-	Params::BP_StormMeshRotator_C_OnStormEffectsEnabled Parms{};
-
-	Parms.bEnabled = bEnabled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_StormMeshRotator.BP_StormMeshRotator_C.initializeMobileStormSphere
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_StormMeshRotator_C::initializeMobileStormSphere()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StormMeshRotator_C", "initializeMobileStormSphere");
+		Func = Class->GetFunction("BP_StormMeshRotator_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_StormMeshRotator.BP_StormMeshRotator_C.handleCvarChanged
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    CVarName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void ABP_StormMeshRotator_C::handleCvarChanged(const class FString& CVarName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StormMeshRotator_C", "handleCvarChanged");
-
-	Params::BP_StormMeshRotator_C_handleCvarChanged Parms{};
-
-	Parms.CVarName = std::move(CVarName);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_StormMeshRotator.BP_StormMeshRotator_C.getSphereEnabled
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   Enabled                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_StormMeshRotator_C::getSphereEnabled(bool* Enabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StormMeshRotator_C", "getSphereEnabled");
-
-	Params::BP_StormMeshRotator_C_getSphereEnabled Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Enabled != nullptr)
-		*Enabled = Parms.Enabled;
-}
-
-
-// Function BP_StormMeshRotator.BP_StormMeshRotator_C.ExecuteUbergraph_BP_StormMeshRotator
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_StormMeshRotator_C::ExecuteUbergraph_BP_StormMeshRotator(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StormMeshRotator_C", "ExecuteUbergraph_BP_StormMeshRotator");
-
-	Params::BP_StormMeshRotator_C_ExecuteUbergraph_BP_StormMeshRotator Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

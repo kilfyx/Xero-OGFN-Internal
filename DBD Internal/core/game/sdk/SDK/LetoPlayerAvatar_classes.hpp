@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LetoPlayerAvatar.LetoPlayerAvatar_C
-// 0x0000 (0x0278 - 0x0278)
+// 0x0000 (0x0290 - 0x0290)
 class ULetoPlayerAvatar_C final : public ULetoPlayerAvatar
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ULetoPlayerAvatar_C>();
 	}
 };
+static_assert(alignof(ULetoPlayerAvatar_C) == 0x000008, "Wrong alignment on ULetoPlayerAvatar_C");
+static_assert(sizeof(ULetoPlayerAvatar_C) == 0x000290, "Wrong size on ULetoPlayerAvatar_C");
 
 }
 

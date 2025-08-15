@@ -19,17 +19,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ItemPreviewPedestal.ItemPreviewPedestal_C
-// 0x0010 (0x0500 - 0x04F0)
+// 0x0010 (0x03F0 - 0x03E0)
 class AItemPreviewPedestal_C final : public AFortCameraTargetPedestal
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          Floor_Enabled;                                     // 0x04F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          Floor_Enabled;                                     // 0x03E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void Remove_Floor(class AFortItemPreviewActor* Preview);
-	void ExecuteUbergraph_ItemPreviewPedestal(int32 EntryPoint);
 	void OnItemDisplayed(EFortItemType ItemType);
+	void ExecuteUbergraph_ItemPreviewPedestal(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -42,9 +42,9 @@ public:
 	}
 };
 static_assert(alignof(AItemPreviewPedestal_C) == 0x000008, "Wrong alignment on AItemPreviewPedestal_C");
-static_assert(sizeof(AItemPreviewPedestal_C) == 0x000500, "Wrong size on AItemPreviewPedestal_C");
-static_assert(offsetof(AItemPreviewPedestal_C, UberGraphFrame) == 0x0004F0, "Member 'AItemPreviewPedestal_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AItemPreviewPedestal_C, Floor_Enabled) == 0x0004F8, "Member 'AItemPreviewPedestal_C::Floor_Enabled' has a wrong offset!");
+static_assert(sizeof(AItemPreviewPedestal_C) == 0x0003F0, "Wrong size on AItemPreviewPedestal_C");
+static_assert(offsetof(AItemPreviewPedestal_C, UberGraphFrame) == 0x0003E0, "Member 'AItemPreviewPedestal_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AItemPreviewPedestal_C, Floor_Enabled) == 0x0003E8, "Member 'AItemPreviewPedestal_C::Floor_Enabled' has a wrong offset!");
 
 }
 

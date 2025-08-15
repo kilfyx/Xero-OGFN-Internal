@@ -18,30 +18,30 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Loop_Ice_Feet_Creative.GCN_Loop_Ice_Feet_Creative_C
-// 0x0050 (0x0858 - 0x0808)
+// 0x0050 (0x0810 - 0x07C0)
 class AGCN_Loop_Ice_Feet_Creative_C final : public AFortGameplayCueNotify_Loop
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0808(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        TargetPlayer;                                      // 0x0810(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SC_Footstep_Local;                                 // 0x0818(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SC_Footstep_Remote;                                // 0x0820(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SC_Collision;                                      // 0x0828(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortCollisionAudioComponent*           CollisionAudioComp;                                // 0x0830(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UAudioComponent*>                SpawnedAudioComps;                                 // 0x0838(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class USoundBase*                             SC_OnJumpOrBeginFalling;                           // 0x0848(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SC_OnLand;                                         // 0x0850(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        TargetPlayer;                                      // 0x07C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SC_Footstep_Local;                                 // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SC_Footstep_Remote;                                // 0x07D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SC_Collision;                                      // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortCollisionAudioComponent*           CollisionAudioComp;                                // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UAudioComponent*>                SpawnedAudioComps;                                 // 0x07F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	class USoundBase*                             SC_OnJumpOrBeginFalling;                           // 0x0800(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SC_OnLand;                                         // 0x0808(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GCN_Loop_Ice_Feet_Creative(int32 EntryPoint);
-	void On_Player_Step();
-	void On_Target_Pawn_Hit_Event(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void On_Target_Pawn_Landed(const struct FHitResult& Hit);
+	void ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const struct FVector& HitLocation, const struct FVector& HitNormal, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
 	void On_Target_Pawn_Movement_Mode_Changed(class ACharacter* Character, EMovementMode PrevMovementMode, uint8 PreviousCustomMode);
 	void OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents);
-	void OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UMatineeCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
-	void ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const struct FVector& HitLocation, const struct FVector& HitNormal, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	void On_Target_Pawn_Landed(const struct FHitResult& Hit);
 	void ReceiveTick(float DeltaSeconds);
+	void On_Target_Pawn_Hit_Event(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	void OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UMatineeCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
+	void On_Player_Step();
 
 public:
 	static class UClass* StaticClass()
@@ -53,6 +53,17 @@ public:
 		return GetDefaultObjImpl<AGCN_Loop_Ice_Feet_Creative_C>();
 	}
 };
+static_assert(alignof(AGCN_Loop_Ice_Feet_Creative_C) == 0x000008, "Wrong alignment on AGCN_Loop_Ice_Feet_Creative_C");
+static_assert(sizeof(AGCN_Loop_Ice_Feet_Creative_C) == 0x000810, "Wrong size on AGCN_Loop_Ice_Feet_Creative_C");
+static_assert(offsetof(AGCN_Loop_Ice_Feet_Creative_C, UberGraphFrame) == 0x0007C0, "Member 'AGCN_Loop_Ice_Feet_Creative_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AGCN_Loop_Ice_Feet_Creative_C, TargetPlayer) == 0x0007C8, "Member 'AGCN_Loop_Ice_Feet_Creative_C::TargetPlayer' has a wrong offset!");
+static_assert(offsetof(AGCN_Loop_Ice_Feet_Creative_C, SC_Footstep_Local) == 0x0007D0, "Member 'AGCN_Loop_Ice_Feet_Creative_C::SC_Footstep_Local' has a wrong offset!");
+static_assert(offsetof(AGCN_Loop_Ice_Feet_Creative_C, SC_Footstep_Remote) == 0x0007D8, "Member 'AGCN_Loop_Ice_Feet_Creative_C::SC_Footstep_Remote' has a wrong offset!");
+static_assert(offsetof(AGCN_Loop_Ice_Feet_Creative_C, SC_Collision) == 0x0007E0, "Member 'AGCN_Loop_Ice_Feet_Creative_C::SC_Collision' has a wrong offset!");
+static_assert(offsetof(AGCN_Loop_Ice_Feet_Creative_C, CollisionAudioComp) == 0x0007E8, "Member 'AGCN_Loop_Ice_Feet_Creative_C::CollisionAudioComp' has a wrong offset!");
+static_assert(offsetof(AGCN_Loop_Ice_Feet_Creative_C, SpawnedAudioComps) == 0x0007F0, "Member 'AGCN_Loop_Ice_Feet_Creative_C::SpawnedAudioComps' has a wrong offset!");
+static_assert(offsetof(AGCN_Loop_Ice_Feet_Creative_C, SC_OnJumpOrBeginFalling) == 0x000800, "Member 'AGCN_Loop_Ice_Feet_Creative_C::SC_OnJumpOrBeginFalling' has a wrong offset!");
+static_assert(offsetof(AGCN_Loop_Ice_Feet_Creative_C, SC_OnLand) == 0x000808, "Member 'AGCN_Loop_Ice_Feet_Creative_C::SC_OnLand' has a wrong offset!");
 
 }
 

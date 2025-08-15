@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function TabControllerSettings_New.TabControllerSettings_New_C.CenterOnTab
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UTabControllerSettings_New_C::CenterOnTab()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabControllerSettings_New_C", "CenterOnTab");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function TabControllerSettings_New.TabControllerSettings_New_C.ExecuteUbergraph_TabControllerSettings_New
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UTabControllerSettings_New_C::ExecuteUbergraph_TabControllerSettings_New(in
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TabControllerSettings_New.TabControllerSettings_New_C.CenterOnTab
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+
+void UTabControllerSettings_New_C::CenterOnTab()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabControllerSettings_New_C", "CenterOnTab");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "Procedural_structs.hpp"
 
 
@@ -48,13 +48,11 @@ public:
 	uint8                                         Pad_1A2[0x2];                                      // 0x01A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bRenderCustomDepth : 1;                            // 0x01A4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_1A5[0x3];                                      // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	ERendererStencilMask                          CustomDepthStencilWriteMask;                       // 0x01A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A9[0x3];                                      // 0x01A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CustomDepthStencilValue;                           // 0x01AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TranslucencySortPriority;                          // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bEnableDensityScaling : 1;                         // 0x01B4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1B5[0x3];                                      // 0x01B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class URuntimeVirtualTexture*>         RuntimeVirtualTextures;                            // 0x01B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         CustomDepthStencilValue;                           // 0x01A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TranslucencySortPriority;                          // 0x01AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bEnableDensityScaling : 1;                         // 0x01B0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class URuntimeVirtualTexture*>         RuntimeVirtualTextures;                            // 0x01B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         VirtualTextureCullMips;                            // 0x01C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERuntimeVirtualTextureMainPassType            VirtualTextureRenderPassType;                      // 0x01CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1CD[0x3];                                      // 0x01CD(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -74,6 +72,20 @@ public:
 		return GetDefaultObjImpl<UHISMBuilderSettings>();
 	}
 };
+static_assert(alignof(UHISMBuilderSettings) == 0x000008, "Wrong alignment on UHISMBuilderSettings");
+static_assert(sizeof(UHISMBuilderSettings) == 0x0001D0, "Wrong size on UHISMBuilderSettings");
+static_assert(offsetof(UHISMBuilderSettings, Mobility) == 0x000028, "Member 'UHISMBuilderSettings::Mobility' has a wrong offset!");
+static_assert(offsetof(UHISMBuilderSettings, CullDistance) == 0x00002C, "Member 'UHISMBuilderSettings::CullDistance' has a wrong offset!");
+static_assert(offsetof(UHISMBuilderSettings, OverriddenLightMapRes) == 0x000038, "Member 'UHISMBuilderSettings::OverriddenLightMapRes' has a wrong offset!");
+static_assert(offsetof(UHISMBuilderSettings, LightmapType) == 0x00003C, "Member 'UHISMBuilderSettings::LightmapType' has a wrong offset!");
+static_assert(offsetof(UHISMBuilderSettings, BodyInstance) == 0x000048, "Member 'UHISMBuilderSettings::BodyInstance' has a wrong offset!");
+static_assert(offsetof(UHISMBuilderSettings, CustomNavigableGeometry) == 0x0001A0, "Member 'UHISMBuilderSettings::CustomNavigableGeometry' has a wrong offset!");
+static_assert(offsetof(UHISMBuilderSettings, LightingChannels) == 0x0001A1, "Member 'UHISMBuilderSettings::LightingChannels' has a wrong offset!");
+static_assert(offsetof(UHISMBuilderSettings, CustomDepthStencilValue) == 0x0001A8, "Member 'UHISMBuilderSettings::CustomDepthStencilValue' has a wrong offset!");
+static_assert(offsetof(UHISMBuilderSettings, TranslucencySortPriority) == 0x0001AC, "Member 'UHISMBuilderSettings::TranslucencySortPriority' has a wrong offset!");
+static_assert(offsetof(UHISMBuilderSettings, RuntimeVirtualTextures) == 0x0001B8, "Member 'UHISMBuilderSettings::RuntimeVirtualTextures' has a wrong offset!");
+static_assert(offsetof(UHISMBuilderSettings, VirtualTextureCullMips) == 0x0001C8, "Member 'UHISMBuilderSettings::VirtualTextureCullMips' has a wrong offset!");
+static_assert(offsetof(UHISMBuilderSettings, VirtualTextureRenderPassType) == 0x0001CC, "Member 'UHISMBuilderSettings::VirtualTextureRenderPassType' has a wrong offset!");
 
 // Class Procedural.ProceduralParameterModifier
 // 0x0010 (0x0038 - 0x0028)
@@ -99,6 +111,11 @@ public:
 		return GetDefaultObjImpl<UProceduralParameterModifier>();
 	}
 };
+static_assert(alignof(UProceduralParameterModifier) == 0x000008, "Wrong alignment on UProceduralParameterModifier");
+static_assert(sizeof(UProceduralParameterModifier) == 0x000038, "Wrong size on UProceduralParameterModifier");
+static_assert(offsetof(UProceduralParameterModifier, bEnabled) == 0x000028, "Member 'UProceduralParameterModifier::bEnabled' has a wrong offset!");
+static_assert(offsetof(UProceduralParameterModifier, Contribution) == 0x00002C, "Member 'UProceduralParameterModifier::Contribution' has a wrong offset!");
+static_assert(offsetof(UProceduralParameterModifier, BlendMode) == 0x000030, "Member 'UProceduralParameterModifier::BlendMode' has a wrong offset!");
 
 // Class Procedural.ProceduralContentVariationsWeightsModifier
 // 0x0000 (0x0038 - 0x0038)
@@ -114,13 +131,15 @@ public:
 		return GetDefaultObjImpl<UProceduralContentVariationsWeightsModifier>();
 	}
 };
+static_assert(alignof(UProceduralContentVariationsWeightsModifier) == 0x000008, "Wrong alignment on UProceduralContentVariationsWeightsModifier");
+static_assert(sizeof(UProceduralContentVariationsWeightsModifier) == 0x000038, "Wrong size on UProceduralContentVariationsWeightsModifier");
 
 // Class Procedural.ProceduralContentVariationsWeightsMapModifier
 // 0x0010 (0x0048 - 0x0038)
 class UProceduralContentVariationsWeightsMapModifier final : public UProceduralContentVariationsWeightsModifier
 {
 public:
-	TArray<struct FProceduralContentVariationMap> VariationsMaps;                                    // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<struct FProceduralContentVariationMap> VariationsMaps;                                    // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -132,6 +151,9 @@ public:
 		return GetDefaultObjImpl<UProceduralContentVariationsWeightsMapModifier>();
 	}
 };
+static_assert(alignof(UProceduralContentVariationsWeightsMapModifier) == 0x000008, "Wrong alignment on UProceduralContentVariationsWeightsMapModifier");
+static_assert(sizeof(UProceduralContentVariationsWeightsMapModifier) == 0x000048, "Wrong size on UProceduralContentVariationsWeightsMapModifier");
+static_assert(offsetof(UProceduralContentVariationsWeightsMapModifier, VariationsMaps) == 0x000038, "Member 'UProceduralContentVariationsWeightsMapModifier::VariationsMaps' has a wrong offset!");
 
 // Class Procedural.ProceduralGenerator
 // 0x0010 (0x0038 - 0x0028)
@@ -151,6 +173,9 @@ public:
 		return GetDefaultObjImpl<UProceduralGenerator>();
 	}
 };
+static_assert(alignof(UProceduralGenerator) == 0x000008, "Wrong alignment on UProceduralGenerator");
+static_assert(sizeof(UProceduralGenerator) == 0x000038, "Wrong size on UProceduralGenerator");
+static_assert(offsetof(UProceduralGenerator, DebugSettings) == 0x000028, "Member 'UProceduralGenerator::DebugSettings' has a wrong offset!");
 
 // Class Procedural.ProceduralCustomGenerator
 // 0x0010 (0x0048 - 0x0038)
@@ -170,6 +195,10 @@ public:
 		return GetDefaultObjImpl<UProceduralCustomGenerator>();
 	}
 };
+static_assert(alignof(UProceduralCustomGenerator) == 0x000008, "Wrong alignment on UProceduralCustomGenerator");
+static_assert(sizeof(UProceduralCustomGenerator) == 0x000048, "Wrong size on UProceduralCustomGenerator");
+static_assert(offsetof(UProceduralCustomGenerator, GeneratorContextClass) == 0x000038, "Member 'UProceduralCustomGenerator::GeneratorContextClass' has a wrong offset!");
+static_assert(offsetof(UProceduralCustomGenerator, GeneratorContext) == 0x000040, "Member 'UProceduralCustomGenerator::GeneratorContext' has a wrong offset!");
 
 // Class Procedural.ProceduralDataMap
 // 0x0008 (0x0030 - 0x0028)
@@ -189,6 +218,9 @@ public:
 		return GetDefaultObjImpl<UProceduralDataMap>();
 	}
 };
+static_assert(alignof(UProceduralDataMap) == 0x000008, "Wrong alignment on UProceduralDataMap");
+static_assert(sizeof(UProceduralDataMap) == 0x000030, "Wrong size on UProceduralDataMap");
+static_assert(offsetof(UProceduralDataMap, bUseRemapCurve) == 0x000028, "Member 'UProceduralDataMap::bUseRemapCurve' has a wrong offset!");
 
 // Class Procedural.ProceduralFloatDataMap
 // 0x0088 (0x00B8 - 0x0030)
@@ -207,6 +239,9 @@ public:
 		return GetDefaultObjImpl<UProceduralFloatDataMap>();
 	}
 };
+static_assert(alignof(UProceduralFloatDataMap) == 0x000008, "Wrong alignment on UProceduralFloatDataMap");
+static_assert(sizeof(UProceduralFloatDataMap) == 0x0000B8, "Wrong size on UProceduralFloatDataMap");
+static_assert(offsetof(UProceduralFloatDataMap, RemapCurve) == 0x000030, "Member 'UProceduralFloatDataMap::RemapCurve' has a wrong offset!");
 
 // Class Procedural.ProceduralVectorDataMap
 // 0x0208 (0x0238 - 0x0030)
@@ -225,6 +260,9 @@ public:
 		return GetDefaultObjImpl<UProceduralVectorDataMap>();
 	}
 };
+static_assert(alignof(UProceduralVectorDataMap) == 0x000008, "Wrong alignment on UProceduralVectorDataMap");
+static_assert(sizeof(UProceduralVectorDataMap) == 0x000238, "Wrong size on UProceduralVectorDataMap");
+static_assert(offsetof(UProceduralVectorDataMap, RemapCurve) == 0x000030, "Member 'UProceduralVectorDataMap::RemapCurve' has a wrong offset!");
 
 // Class Procedural.ProceduralDensityModifier
 // 0x0000 (0x0038 - 0x0038)
@@ -240,6 +278,8 @@ public:
 		return GetDefaultObjImpl<UProceduralDensityModifier>();
 	}
 };
+static_assert(alignof(UProceduralDensityModifier) == 0x000008, "Wrong alignment on UProceduralDensityModifier");
+static_assert(sizeof(UProceduralDensityModifier) == 0x000038, "Wrong size on UProceduralDensityModifier");
 
 // Class Procedural.ProceduralDensityMapModifier
 // 0x0008 (0x0040 - 0x0038)
@@ -258,13 +298,16 @@ public:
 		return GetDefaultObjImpl<UProceduralDensityMapModifier>();
 	}
 };
+static_assert(alignof(UProceduralDensityMapModifier) == 0x000008, "Wrong alignment on UProceduralDensityMapModifier");
+static_assert(sizeof(UProceduralDensityMapModifier) == 0x000040, "Wrong size on UProceduralDensityMapModifier");
+static_assert(offsetof(UProceduralDensityMapModifier, Map) == 0x000038, "Member 'UProceduralDensityMapModifier::Map' has a wrong offset!");
 
 // Class Procedural.ProceduralGenerationBlockingVolume
 // 0x0010 (0x0268 - 0x0258)
 class AProceduralGenerationBlockingVolume final : public AVolume
 {
 public:
-	TArray<class AProceduralGenerationVolume*>    BlockedVolumes;                                    // 0x0258(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class AProceduralGenerationVolume*>    BlockedVolumes;                                    // 0x0258(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -276,6 +319,9 @@ public:
 		return GetDefaultObjImpl<AProceduralGenerationBlockingVolume>();
 	}
 };
+static_assert(alignof(AProceduralGenerationBlockingVolume) == 0x000008, "Wrong alignment on AProceduralGenerationBlockingVolume");
+static_assert(sizeof(AProceduralGenerationBlockingVolume) == 0x000268, "Wrong size on AProceduralGenerationBlockingVolume");
+static_assert(offsetof(AProceduralGenerationBlockingVolume, BlockedVolumes) == 0x000258, "Member 'AProceduralGenerationBlockingVolume::BlockedVolumes' has a wrong offset!");
 
 // Class Procedural.ProceduralGenerationComponent
 // 0x0030 (0x00E0 - 0x00B0)
@@ -300,6 +346,13 @@ public:
 		return GetDefaultObjImpl<UProceduralGenerationComponent>();
 	}
 };
+static_assert(alignof(UProceduralGenerationComponent) == 0x000008, "Wrong alignment on UProceduralGenerationComponent");
+static_assert(sizeof(UProceduralGenerationComponent) == 0x0000E0, "Wrong size on UProceduralGenerationComponent");
+static_assert(offsetof(UProceduralGenerationComponent, Generator) == 0x0000B0, "Member 'UProceduralGenerationComponent::Generator' has a wrong offset!");
+static_assert(offsetof(UProceduralGenerationComponent, bShowDebugVisualization) == 0x0000B8, "Member 'UProceduralGenerationComponent::bShowDebugVisualization' has a wrong offset!");
+static_assert(offsetof(UProceduralGenerationComponent, ProceduralGenerationGuid) == 0x0000BC, "Member 'UProceduralGenerationComponent::ProceduralGenerationGuid' has a wrong offset!");
+static_assert(offsetof(UProceduralGenerationComponent, GenerationVolume) == 0x0000D0, "Member 'UProceduralGenerationComponent::GenerationVolume' has a wrong offset!");
+static_assert(offsetof(UProceduralGenerationComponent, GenerationContext) == 0x0000D8, "Member 'UProceduralGenerationComponent::GenerationContext' has a wrong offset!");
 
 // Class Procedural.ProceduralGenerationContext
 // 0x00C8 (0x00F0 - 0x0028)
@@ -307,8 +360,8 @@ class UProceduralGenerationContext final : public UObject
 {
 public:
 	class UProceduralGeneratorContext*            GeneratorContext;                                  // 0x0028(0x0008)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UProceduralGeneratorContext*>    GeneratedContexts;                                 // 0x0030(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	TArray<class UProceduralGeneratorContext*>    RegisteredContexts;                                // 0x0040(0x0010)(ZeroConstructor, DuplicateTransient, NativeAccessSpecifierPrivate)
+	TArray<class UProceduralGeneratorContext*>    GeneratedContexts;                                 // 0x0030(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UProceduralGeneratorContext*>    RegisteredContexts;                                // 0x0040(0x0010)(ZeroConstructor, DuplicateTransient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<struct FGuid, class UProceduralGeneratorContext*> GeneratorContexts;                        // 0x0050(0x0050)(DuplicateTransient, Deprecated, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_A0[0x50];                                      // 0x00A0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -326,6 +379,12 @@ public:
 		return GetDefaultObjImpl<UProceduralGenerationContext>();
 	}
 };
+static_assert(alignof(UProceduralGenerationContext) == 0x000008, "Wrong alignment on UProceduralGenerationContext");
+static_assert(sizeof(UProceduralGenerationContext) == 0x0000F0, "Wrong size on UProceduralGenerationContext");
+static_assert(offsetof(UProceduralGenerationContext, GeneratorContext) == 0x000028, "Member 'UProceduralGenerationContext::GeneratorContext' has a wrong offset!");
+static_assert(offsetof(UProceduralGenerationContext, GeneratedContexts) == 0x000030, "Member 'UProceduralGenerationContext::GeneratedContexts' has a wrong offset!");
+static_assert(offsetof(UProceduralGenerationContext, RegisteredContexts) == 0x000040, "Member 'UProceduralGenerationContext::RegisteredContexts' has a wrong offset!");
+static_assert(offsetof(UProceduralGenerationContext, GeneratorContexts) == 0x000050, "Member 'UProceduralGenerationContext::GeneratorContexts' has a wrong offset!");
 
 // Class Procedural.ProceduralGenerationVolume
 // 0x0008 (0x0260 - 0x0258)
@@ -348,6 +407,9 @@ public:
 		return GetDefaultObjImpl<AProceduralGenerationVolume>();
 	}
 };
+static_assert(alignof(AProceduralGenerationVolume) == 0x000008, "Wrong alignment on AProceduralGenerationVolume");
+static_assert(sizeof(AProceduralGenerationVolume) == 0x000260, "Wrong size on AProceduralGenerationVolume");
+static_assert(offsetof(AProceduralGenerationVolume, ProceduralComponent) == 0x000258, "Member 'AProceduralGenerationVolume::ProceduralComponent' has a wrong offset!");
 
 // Class Procedural.ProceduralGeneratorContext
 // 0x0030 (0x0058 - 0x0028)
@@ -357,7 +419,7 @@ public:
 	class UProceduralGenerator*                   Generator;                                         // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UProceduralGenerationContext*           GenerationContext;                                 // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UProceduralGeneratorContext*            OwnerContext;                                      // 0x0038(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class UObject*>                        GeneratedObjects;                                  // 0x0040(0x0010)(BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<class UObject*>                        GeneratedObjects;                                  // 0x0040(0x0010)(BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UProceduralPointCloud*                  ExportedPointCloud;                                // 0x0050(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
@@ -380,13 +442,20 @@ public:
 		return GetDefaultObjImpl<UProceduralGeneratorContext>();
 	}
 };
+static_assert(alignof(UProceduralGeneratorContext) == 0x000008, "Wrong alignment on UProceduralGeneratorContext");
+static_assert(sizeof(UProceduralGeneratorContext) == 0x000058, "Wrong size on UProceduralGeneratorContext");
+static_assert(offsetof(UProceduralGeneratorContext, Generator) == 0x000028, "Member 'UProceduralGeneratorContext::Generator' has a wrong offset!");
+static_assert(offsetof(UProceduralGeneratorContext, GenerationContext) == 0x000030, "Member 'UProceduralGeneratorContext::GenerationContext' has a wrong offset!");
+static_assert(offsetof(UProceduralGeneratorContext, OwnerContext) == 0x000038, "Member 'UProceduralGeneratorContext::OwnerContext' has a wrong offset!");
+static_assert(offsetof(UProceduralGeneratorContext, GeneratedObjects) == 0x000040, "Member 'UProceduralGeneratorContext::GeneratedObjects' has a wrong offset!");
+static_assert(offsetof(UProceduralGeneratorContext, ExportedPointCloud) == 0x000050, "Member 'UProceduralGeneratorContext::ExportedPointCloud' has a wrong offset!");
 
 // Class Procedural.ProceduralGeneratorStack
 // 0x0010 (0x0048 - 0x0038)
 class UProceduralGeneratorStack final : public UProceduralGenerator
 {
 public:
-	TArray<struct FProceduralGenerationStackElement> Generators;                                     // 0x0038(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FProceduralGenerationStackElement> Generators;                                     // 0x0038(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -398,6 +467,9 @@ public:
 		return GetDefaultObjImpl<UProceduralGeneratorStack>();
 	}
 };
+static_assert(alignof(UProceduralGeneratorStack) == 0x000008, "Wrong alignment on UProceduralGeneratorStack");
+static_assert(sizeof(UProceduralGeneratorStack) == 0x000048, "Wrong size on UProceduralGeneratorStack");
+static_assert(offsetof(UProceduralGeneratorStack, Generators) == 0x000038, "Member 'UProceduralGeneratorStack::Generators' has a wrong offset!");
 
 // Class Procedural.ProceduralGeneratorStackContext
 // 0x0000 (0x0058 - 0x0058)
@@ -413,6 +485,8 @@ public:
 		return GetDefaultObjImpl<UProceduralGeneratorStackContext>();
 	}
 };
+static_assert(alignof(UProceduralGeneratorStackContext) == 0x000008, "Wrong alignment on UProceduralGeneratorStackContext");
+static_assert(sizeof(UProceduralGeneratorStackContext) == 0x000058, "Wrong size on UProceduralGeneratorStackContext");
 
 // Class Procedural.ProceduralLandscapeLayerMap
 // 0x0010 (0x00C8 - 0x00B8)
@@ -432,13 +506,17 @@ public:
 		return GetDefaultObjImpl<UProceduralLandscapeLayerMap>();
 	}
 };
+static_assert(alignof(UProceduralLandscapeLayerMap) == 0x000008, "Wrong alignment on UProceduralLandscapeLayerMap");
+static_assert(sizeof(UProceduralLandscapeLayerMap) == 0x0000C8, "Wrong size on UProceduralLandscapeLayerMap");
+static_assert(offsetof(UProceduralLandscapeLayerMap, LandscapeLayerName) == 0x0000B8, "Member 'UProceduralLandscapeLayerMap::LandscapeLayerName' has a wrong offset!");
+static_assert(offsetof(UProceduralLandscapeLayerMap, LandscapeEditLayerName) == 0x0000C0, "Member 'UProceduralLandscapeLayerMap::LandscapeEditLayerName' has a wrong offset!");
 
 // Class Procedural.ProceduralPointCloud
 // 0x0010 (0x0038 - 0x0028)
 class UProceduralPointCloud final : public UObject
 {
 public:
-	TArray<struct FProceduralPointCloudPoint>     Points;                                            // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FProceduralPointCloudPoint>     Points;                                            // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	void Empty();
@@ -454,6 +532,9 @@ public:
 		return GetDefaultObjImpl<UProceduralPointCloud>();
 	}
 };
+static_assert(alignof(UProceduralPointCloud) == 0x000008, "Wrong alignment on UProceduralPointCloud");
+static_assert(sizeof(UProceduralPointCloud) == 0x000038, "Wrong size on UProceduralPointCloud");
+static_assert(offsetof(UProceduralPointCloud, Points) == 0x000028, "Member 'UProceduralPointCloud::Points' has a wrong offset!");
 
 // Class Procedural.ProceduralRotationModifier
 // 0x0000 (0x0038 - 0x0038)
@@ -469,6 +550,8 @@ public:
 		return GetDefaultObjImpl<UProceduralRotationModifier>();
 	}
 };
+static_assert(alignof(UProceduralRotationModifier) == 0x000008, "Wrong alignment on UProceduralRotationModifier");
+static_assert(sizeof(UProceduralRotationModifier) == 0x000038, "Wrong size on UProceduralRotationModifier");
 
 // Class Procedural.ProceduralRotationMapModifier
 // 0x0028 (0x0060 - 0x0038)
@@ -508,6 +591,13 @@ public:
 		return GetDefaultObjImpl<UProceduralRotationMapModifier>();
 	}
 };
+static_assert(alignof(UProceduralRotationMapModifier) == 0x000008, "Wrong alignment on UProceduralRotationMapModifier");
+static_assert(sizeof(UProceduralRotationMapModifier) == 0x000060, "Wrong size on UProceduralRotationMapModifier");
+static_assert(offsetof(UProceduralRotationMapModifier, Map) == 0x000038, "Member 'UProceduralRotationMapModifier::Map' has a wrong offset!");
+static_assert(offsetof(UProceduralRotationMapModifier, RotationFormat) == 0x000040, "Member 'UProceduralRotationMapModifier::RotationFormat' has a wrong offset!");
+static_assert(offsetof(UProceduralRotationMapModifier, Roll) == 0x000044, "Member 'UProceduralRotationMapModifier::Roll' has a wrong offset!");
+static_assert(offsetof(UProceduralRotationMapModifier, Pitch) == 0x00004C, "Member 'UProceduralRotationMapModifier::Pitch' has a wrong offset!");
+static_assert(offsetof(UProceduralRotationMapModifier, Yaw) == 0x000054, "Member 'UProceduralRotationMapModifier::Yaw' has a wrong offset!");
 
 // Class Procedural.ProceduralRotationNoiseModifier
 // 0x0028 (0x0060 - 0x0038)
@@ -550,6 +640,11 @@ public:
 		return GetDefaultObjImpl<UProceduralRotationNoiseModifier>();
 	}
 };
+static_assert(alignof(UProceduralRotationNoiseModifier) == 0x000008, "Wrong alignment on UProceduralRotationNoiseModifier");
+static_assert(sizeof(UProceduralRotationNoiseModifier) == 0x000060, "Wrong size on UProceduralRotationNoiseModifier");
+static_assert(offsetof(UProceduralRotationNoiseModifier, RandomRoll) == 0x00003C, "Member 'UProceduralRotationNoiseModifier::RandomRoll' has a wrong offset!");
+static_assert(offsetof(UProceduralRotationNoiseModifier, RandomPitch) == 0x000048, "Member 'UProceduralRotationNoiseModifier::RandomPitch' has a wrong offset!");
+static_assert(offsetof(UProceduralRotationNoiseModifier, RandomYaw) == 0x000054, "Member 'UProceduralRotationNoiseModifier::RandomYaw' has a wrong offset!");
 
 // Class Procedural.ProceduralScaleModifier
 // 0x0000 (0x0038 - 0x0038)
@@ -565,6 +660,8 @@ public:
 		return GetDefaultObjImpl<UProceduralScaleModifier>();
 	}
 };
+static_assert(alignof(UProceduralScaleModifier) == 0x000008, "Wrong alignment on UProceduralScaleModifier");
+static_assert(sizeof(UProceduralScaleModifier) == 0x000038, "Wrong size on UProceduralScaleModifier");
 
 // Class Procedural.ProceduralScaleMapModifier
 // 0x0018 (0x0050 - 0x0038)
@@ -594,6 +691,11 @@ public:
 		return GetDefaultObjImpl<UProceduralScaleMapModifier>();
 	}
 };
+static_assert(alignof(UProceduralScaleMapModifier) == 0x000008, "Wrong alignment on UProceduralScaleMapModifier");
+static_assert(sizeof(UProceduralScaleMapModifier) == 0x000050, "Wrong size on UProceduralScaleMapModifier");
+static_assert(offsetof(UProceduralScaleMapModifier, bRemapScale) == 0x000038, "Member 'UProceduralScaleMapModifier::bRemapScale' has a wrong offset!");
+static_assert(offsetof(UProceduralScaleMapModifier, RemapScale) == 0x00003C, "Member 'UProceduralScaleMapModifier::RemapScale' has a wrong offset!");
+static_assert(offsetof(UProceduralScaleMapModifier, Map) == 0x000048, "Member 'UProceduralScaleMapModifier::Map' has a wrong offset!");
 
 // Class Procedural.ProceduralScaleNoiseModifier
 // 0x0008 (0x0040 - 0x0038)
@@ -619,6 +721,9 @@ public:
 		return GetDefaultObjImpl<UProceduralScaleNoiseModifier>();
 	}
 };
+static_assert(alignof(UProceduralScaleNoiseModifier) == 0x000008, "Wrong alignment on UProceduralScaleNoiseModifier");
+static_assert(sizeof(UProceduralScaleNoiseModifier) == 0x000040, "Wrong size on UProceduralScaleNoiseModifier");
+static_assert(offsetof(UProceduralScaleNoiseModifier, Scale) == 0x000038, "Member 'UProceduralScaleNoiseModifier::Scale' has a wrong offset!");
 
 // Class Procedural.ProceduralScatterContentVariation
 // 0x0070 (0x0098 - 0x0028)
@@ -630,7 +735,7 @@ public:
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                AdditionalPivotOffset;                             // 0x0030(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FootprintBoundingBoxRatio;                         // 0x003C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FName>                           SetActorTags;                                      // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           SetActorTags;                                      // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_50[0x48];                                      // 0x0050(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -643,6 +748,13 @@ public:
 		return GetDefaultObjImpl<UProceduralScatterContentVariation>();
 	}
 };
+static_assert(alignof(UProceduralScatterContentVariation) == 0x000008, "Wrong alignment on UProceduralScatterContentVariation");
+static_assert(sizeof(UProceduralScatterContentVariation) == 0x000098, "Wrong size on UProceduralScatterContentVariation");
+static_assert(offsetof(UProceduralScatterContentVariation, Weight) == 0x000028, "Member 'UProceduralScatterContentVariation::Weight' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterContentVariation, PivotMode) == 0x00002C, "Member 'UProceduralScatterContentVariation::PivotMode' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterContentVariation, AdditionalPivotOffset) == 0x000030, "Member 'UProceduralScatterContentVariation::AdditionalPivotOffset' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterContentVariation, FootprintBoundingBoxRatio) == 0x00003C, "Member 'UProceduralScatterContentVariation::FootprintBoundingBoxRatio' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterContentVariation, SetActorTags) == 0x000040, "Member 'UProceduralScatterContentVariation::SetActorTags' has a wrong offset!");
 
 // Class Procedural.ProceduralScatterActorContentVariation
 // 0x0008 (0x00A0 - 0x0098)
@@ -661,14 +773,17 @@ public:
 		return GetDefaultObjImpl<UProceduralScatterActorContentVariation>();
 	}
 };
+static_assert(alignof(UProceduralScatterActorContentVariation) == 0x000008, "Wrong alignment on UProceduralScatterActorContentVariation");
+static_assert(sizeof(UProceduralScatterActorContentVariation) == 0x0000A0, "Wrong size on UProceduralScatterActorContentVariation");
+static_assert(offsetof(UProceduralScatterActorContentVariation, ActorClass) == 0x000098, "Member 'UProceduralScatterActorContentVariation::ActorClass' has a wrong offset!");
 
 // Class Procedural.ProceduralScatterContentSettings
 // 0x0040 (0x0068 - 0x0028)
 class UProceduralScatterContentSettings : public UObject
 {
 public:
-	TArray<class FName>                           SetActorTags;                                      // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UProceduralScatterContentVariation*> Variations;                                    // 0x0038(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class FName>                           SetActorTags;                                      // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UProceduralScatterContentVariation*> Variations;                                    // 0x0038(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_48[0x20];                                      // 0x0048(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -681,6 +796,10 @@ public:
 		return GetDefaultObjImpl<UProceduralScatterContentSettings>();
 	}
 };
+static_assert(alignof(UProceduralScatterContentSettings) == 0x000008, "Wrong alignment on UProceduralScatterContentSettings");
+static_assert(sizeof(UProceduralScatterContentSettings) == 0x000068, "Wrong size on UProceduralScatterContentSettings");
+static_assert(offsetof(UProceduralScatterContentSettings, SetActorTags) == 0x000028, "Member 'UProceduralScatterContentSettings::SetActorTags' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterContentSettings, Variations) == 0x000038, "Member 'UProceduralScatterContentSettings::Variations' has a wrong offset!");
 
 // Class Procedural.ProceduralScatterActorContentSettings
 // 0x0008 (0x0070 - 0x0068)
@@ -700,6 +819,9 @@ public:
 		return GetDefaultObjImpl<UProceduralScatterActorContentSettings>();
 	}
 };
+static_assert(alignof(UProceduralScatterActorContentSettings) == 0x000008, "Wrong alignment on UProceduralScatterActorContentSettings");
+static_assert(sizeof(UProceduralScatterActorContentSettings) == 0x000070, "Wrong size on UProceduralScatterActorContentSettings");
+static_assert(offsetof(UProceduralScatterActorContentSettings, bHideFromWorldOutliner) == 0x000068, "Member 'UProceduralScatterActorContentSettings::bHideFromWorldOutliner' has a wrong offset!");
 
 // Class Procedural.ProceduralScatterGenerator
 // 0x0088 (0x00C0 - 0x0038)
@@ -716,12 +838,12 @@ public:
 	float                                         GridRotation;                                      // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              GridOffset;                                        // 0x006C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FProceduralScatterSettingsElement> ScatterSettingsElements;                        // 0x0078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FName>                           BlockingActorTags;                                 // 0x0088(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FProceduralScatterSettingsElement> ScatterSettingsElements;                        // 0x0078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           BlockingActorTags;                                 // 0x0088(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllScatterPointsBlocking;                         // 0x0098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bLocalDistribution;                                // 0x0099(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           BlockingScatterPointTags;                          // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           BlockingScatterPointTags;                          // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FProceduralScatterDebugSettings        ScatterDebugSettings;                              // 0x00B0(0x000C)(Edit, BlueprintVisible, Transient, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -735,6 +857,22 @@ public:
 		return GetDefaultObjImpl<UProceduralScatterGenerator>();
 	}
 };
+static_assert(alignof(UProceduralScatterGenerator) == 0x000008, "Wrong alignment on UProceduralScatterGenerator");
+static_assert(sizeof(UProceduralScatterGenerator) == 0x0000C0, "Wrong size on UProceduralScatterGenerator");
+static_assert(offsetof(UProceduralScatterGenerator, ScatterMethod) == 0x000038, "Member 'UProceduralScatterGenerator::ScatterMethod' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGenerator, TileSettings) == 0x00003C, "Member 'UProceduralScatterGenerator::TileSettings' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGenerator, RandomSeed) == 0x000050, "Member 'UProceduralScatterGenerator::RandomSeed' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGenerator, NumUniqueSourcePointPatterns) == 0x000054, "Member 'UProceduralScatterGenerator::NumUniqueSourcePointPatterns' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGenerator, GridSize) == 0x000058, "Member 'UProceduralScatterGenerator::GridSize' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGenerator, GridJitter) == 0x000060, "Member 'UProceduralScatterGenerator::GridJitter' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGenerator, GridRotation) == 0x000068, "Member 'UProceduralScatterGenerator::GridRotation' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGenerator, GridOffset) == 0x00006C, "Member 'UProceduralScatterGenerator::GridOffset' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGenerator, ScatterSettingsElements) == 0x000078, "Member 'UProceduralScatterGenerator::ScatterSettingsElements' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGenerator, BlockingActorTags) == 0x000088, "Member 'UProceduralScatterGenerator::BlockingActorTags' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGenerator, bAllScatterPointsBlocking) == 0x000098, "Member 'UProceduralScatterGenerator::bAllScatterPointsBlocking' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGenerator, bLocalDistribution) == 0x000099, "Member 'UProceduralScatterGenerator::bLocalDistribution' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGenerator, BlockingScatterPointTags) == 0x0000A0, "Member 'UProceduralScatterGenerator::BlockingScatterPointTags' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGenerator, ScatterDebugSettings) == 0x0000B0, "Member 'UProceduralScatterGenerator::ScatterDebugSettings' has a wrong offset!");
 
 // Class Procedural.ProceduralScatterGeneratorContext
 // 0x0238 (0x0290 - 0x0058)
@@ -742,9 +880,9 @@ class alignas(0x10) UProceduralScatterGeneratorContext final : public UProcedura
 {
 public:
 	struct FScatteredPointCloud                   ScatteredPointCloud;                               // 0x0058(0x0010)(BlueprintVisible, BlueprintReadOnly, Transient, NonTransactional, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<class UProceduralScatterGeneratorTile*> UniqueTiles;                                      // 0x0068(0x0010)(ZeroConstructor, Transient, NonTransactional, NativeAccessSpecifierPrivate)
-	TArray<struct FSourcePointGenerator>          SourcePointGenerators;                             // 0x0078(0x0010)(ZeroConstructor, Transient, NonTransactional, NativeAccessSpecifierPrivate)
-	TArray<struct FProceduralScatterProjectionPoint> ProjectionPointCloud;                           // 0x0088(0x0010)(ZeroConstructor, Transient, NonTransactional, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	TArray<class UProceduralScatterGeneratorTile*> UniqueTiles;                                      // 0x0068(0x0010)(ZeroConstructor, Transient, NonTransactional, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FSourcePointGenerator>          SourcePointGenerators;                             // 0x0078(0x0010)(ZeroConstructor, Transient, NonTransactional, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FProceduralScatterProjectionPoint> ProjectionPointCloud;                           // 0x0088(0x0010)(ZeroConstructor, Transient, NonTransactional, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UProceduralPointCloud*                  SourcePointCloud;                                  // 0x0098(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UProceduralPointCloud*                  BlockerPointCloud;                                 // 0x00A0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UMaterialInstanceDynamic*               ProjectionVectorMaterial;                          // 0x00A8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -760,6 +898,15 @@ public:
 		return GetDefaultObjImpl<UProceduralScatterGeneratorContext>();
 	}
 };
+static_assert(alignof(UProceduralScatterGeneratorContext) == 0x000010, "Wrong alignment on UProceduralScatterGeneratorContext");
+static_assert(sizeof(UProceduralScatterGeneratorContext) == 0x000290, "Wrong size on UProceduralScatterGeneratorContext");
+static_assert(offsetof(UProceduralScatterGeneratorContext, ScatteredPointCloud) == 0x000058, "Member 'UProceduralScatterGeneratorContext::ScatteredPointCloud' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGeneratorContext, UniqueTiles) == 0x000068, "Member 'UProceduralScatterGeneratorContext::UniqueTiles' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGeneratorContext, SourcePointGenerators) == 0x000078, "Member 'UProceduralScatterGeneratorContext::SourcePointGenerators' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGeneratorContext, ProjectionPointCloud) == 0x000088, "Member 'UProceduralScatterGeneratorContext::ProjectionPointCloud' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGeneratorContext, SourcePointCloud) == 0x000098, "Member 'UProceduralScatterGeneratorContext::SourcePointCloud' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGeneratorContext, BlockerPointCloud) == 0x0000A0, "Member 'UProceduralScatterGeneratorContext::BlockerPointCloud' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGeneratorContext, ProjectionVectorMaterial) == 0x0000A8, "Member 'UProceduralScatterGeneratorContext::ProjectionVectorMaterial' has a wrong offset!");
 
 // Class Procedural.ProceduralScatterGeneratorTile
 // 0x0128 (0x0150 - 0x0028)
@@ -767,7 +914,7 @@ class UProceduralScatterGeneratorTile final : public UObject
 {
 public:
 	class UProceduralScatterGenerator*            Generator;                                         // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FProceduralScatter2DPoint>      GeneratedPoints;                                   // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FProceduralScatter2DPoint>      GeneratedPoints;                                   // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_40[0x110];                                     // 0x0040(0x0110)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -780,6 +927,10 @@ public:
 		return GetDefaultObjImpl<UProceduralScatterGeneratorTile>();
 	}
 };
+static_assert(alignof(UProceduralScatterGeneratorTile) == 0x000008, "Wrong alignment on UProceduralScatterGeneratorTile");
+static_assert(sizeof(UProceduralScatterGeneratorTile) == 0x000150, "Wrong size on UProceduralScatterGeneratorTile");
+static_assert(offsetof(UProceduralScatterGeneratorTile, Generator) == 0x000028, "Member 'UProceduralScatterGeneratorTile::Generator' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterGeneratorTile, GeneratedPoints) == 0x000030, "Member 'UProceduralScatterGeneratorTile::GeneratedPoints' has a wrong offset!");
 
 // Class Procedural.ProceduralScatterSettings
 // 0x01A8 (0x01D0 - 0x0028)
@@ -790,7 +941,7 @@ public:
 	uint8                                         bContentVariationsModifiersEnabled : 1;            // 0x0030(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FProceduralContentVariationsModifiers  ContentVariationsModifiers;                        // 0x0038(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<class FName>                           SetPointTags;                                      // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           SetPointTags;                                      // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CollisionRadius;                                   // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bAutomaticCollisionRadius : 1;                     // 0x005C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bUseSphericalBoundsForAutomaticCollisionRadius : 1; // 0x005C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
@@ -802,12 +953,12 @@ public:
 	struct FProceduralDensityModifiers            DensityModifiers;                                  // 0x0070(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	float                                         Density;                                           // 0x0080(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           SourcePointTagIncludes;                            // 0x0088(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FName>                           SourcePointTagExcludes;                            // 0x0098(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FName>                           SourceActorTagIncludes;                            // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FName>                           SourceActorTagExcludes;                            // 0x00B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FName>                           SourceComponentTagIncludes;                        // 0x00C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FName>                           SourceComponentTagExcludes;                        // 0x00D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           SourcePointTagIncludes;                            // 0x0088(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           SourcePointTagExcludes;                            // 0x0098(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           SourceActorTagIncludes;                            // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           SourceActorTagExcludes;                            // 0x00B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           SourceComponentTagIncludes;                        // 0x00C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           SourceComponentTagExcludes;                        // 0x00D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FFloatInterval                         SourcePointDistance;                               // 0x00E8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bUseSourcePointExactNumber : 1;                    // 0x00F0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -853,6 +1004,36 @@ public:
 		return GetDefaultObjImpl<UProceduralScatterSettings>();
 	}
 };
+static_assert(alignof(UProceduralScatterSettings) == 0x000008, "Wrong alignment on UProceduralScatterSettings");
+static_assert(sizeof(UProceduralScatterSettings) == 0x0001D0, "Wrong size on UProceduralScatterSettings");
+static_assert(offsetof(UProceduralScatterSettings, Content) == 0x000028, "Member 'UProceduralScatterSettings::Content' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, ContentVariationsModifiers) == 0x000038, "Member 'UProceduralScatterSettings::ContentVariationsModifiers' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, SetPointTags) == 0x000048, "Member 'UProceduralScatterSettings::SetPointTags' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, CollisionRadius) == 0x000058, "Member 'UProceduralScatterSettings::CollisionRadius' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, AutomaticCollisionRadiusScaleFactor) == 0x000060, "Member 'UProceduralScatterSettings::AutomaticCollisionRadiusScaleFactor' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, DistributionSeed) == 0x000064, "Member 'UProceduralScatterSettings::DistributionSeed' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, DensityModifiers) == 0x000070, "Member 'UProceduralScatterSettings::DensityModifiers' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, Density) == 0x000080, "Member 'UProceduralScatterSettings::Density' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, SourcePointTagIncludes) == 0x000088, "Member 'UProceduralScatterSettings::SourcePointTagIncludes' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, SourcePointTagExcludes) == 0x000098, "Member 'UProceduralScatterSettings::SourcePointTagExcludes' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, SourceActorTagIncludes) == 0x0000A8, "Member 'UProceduralScatterSettings::SourceActorTagIncludes' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, SourceActorTagExcludes) == 0x0000B8, "Member 'UProceduralScatterSettings::SourceActorTagExcludes' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, SourceComponentTagIncludes) == 0x0000C8, "Member 'UProceduralScatterSettings::SourceComponentTagIncludes' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, SourceComponentTagExcludes) == 0x0000D8, "Member 'UProceduralScatterSettings::SourceComponentTagExcludes' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, SourcePointDistance) == 0x0000E8, "Member 'UProceduralScatterSettings::SourcePointDistance' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, SourcePointExactNumber) == 0x0000F4, "Member 'UProceduralScatterSettings::SourcePointExactNumber' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, ScaleModifiers) == 0x000100, "Member 'UProceduralScatterSettings::ScaleModifiers' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, RotationModifiers) == 0x000128, "Member 'UProceduralScatterSettings::RotationModifiers' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, AlignMaxAngle) == 0x00013C, "Member 'UProceduralScatterSettings::AlignMaxAngle' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, TargetSurface) == 0x000140, "Member 'UProceduralScatterSettings::TargetSurface' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, OverhangingLedgeDetectionRayCount) == 0x00018C, "Member 'UProceduralScatterSettings::OverhangingLedgeDetectionRayCount' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, OverhangingLedgeDetectionLength) == 0x000190, "Member 'UProceduralScatterSettings::OverhangingLedgeDetectionLength' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, OverhangingLedgeDetectionVerticalThreshold) == 0x000194, "Member 'UProceduralScatterSettings::OverhangingLedgeDetectionVerticalThreshold' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, OverhangingLedgeDetectionRadiusScale) == 0x000198, "Member 'UProceduralScatterSettings::OverhangingLedgeDetectionRadiusScale' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, FilterMinimumScale) == 0x00019C, "Member 'UProceduralScatterSettings::FilterMinimumScale' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, OverlapPriority) == 0x0001A0, "Member 'UProceduralScatterSettings::OverlapPriority' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, CollisionScale) == 0x0001A8, "Member 'UProceduralScatterSettings::CollisionScale' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterSettings, DebugColor) == 0x0001B4, "Member 'UProceduralScatterSettings::DebugColor' has a wrong offset!");
 
 // Class Procedural.ProceduralScatterStaticMeshContentVariation
 // 0x0080 (0x0118 - 0x0098)
@@ -863,7 +1044,7 @@ public:
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMesh*                            Mesh;                                              // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class AActor>                     ActorClass;                                        // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             OverrideMaterials;                                 // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             OverrideMaterials;                                 // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UHISMBuilderSettings*                   OverrideInstancingSettings;                        // 0x00C0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C8[0x50];                                      // 0x00C8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -877,6 +1058,13 @@ public:
 		return GetDefaultObjImpl<UProceduralScatterStaticMeshContentVariation>();
 	}
 };
+static_assert(alignof(UProceduralScatterStaticMeshContentVariation) == 0x000008, "Wrong alignment on UProceduralScatterStaticMeshContentVariation");
+static_assert(sizeof(UProceduralScatterStaticMeshContentVariation) == 0x000118, "Wrong size on UProceduralScatterStaticMeshContentVariation");
+static_assert(offsetof(UProceduralScatterStaticMeshContentVariation, StaticMeshMode) == 0x000098, "Member 'UProceduralScatterStaticMeshContentVariation::StaticMeshMode' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterStaticMeshContentVariation, Mesh) == 0x0000A0, "Member 'UProceduralScatterStaticMeshContentVariation::Mesh' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterStaticMeshContentVariation, ActorClass) == 0x0000A8, "Member 'UProceduralScatterStaticMeshContentVariation::ActorClass' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterStaticMeshContentVariation, OverrideMaterials) == 0x0000B0, "Member 'UProceduralScatterStaticMeshContentVariation::OverrideMaterials' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterStaticMeshContentVariation, OverrideInstancingSettings) == 0x0000C0, "Member 'UProceduralScatterStaticMeshContentVariation::OverrideInstancingSettings' has a wrong offset!");
 
 // Class Procedural.ProceduralScatterStaticMeshContentSettings
 // 0x0018 (0x0080 - 0x0068)
@@ -897,6 +1085,11 @@ public:
 		return GetDefaultObjImpl<UProceduralScatterStaticMeshContentSettings>();
 	}
 };
+static_assert(alignof(UProceduralScatterStaticMeshContentSettings) == 0x000008, "Wrong alignment on UProceduralScatterStaticMeshContentSettings");
+static_assert(sizeof(UProceduralScatterStaticMeshContentSettings) == 0x000080, "Wrong size on UProceduralScatterStaticMeshContentSettings");
+static_assert(offsetof(UProceduralScatterStaticMeshContentSettings, ComponentClass) == 0x000068, "Member 'UProceduralScatterStaticMeshContentSettings::ComponentClass' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterStaticMeshContentSettings, ComponentTag) == 0x000070, "Member 'UProceduralScatterStaticMeshContentSettings::ComponentTag' has a wrong offset!");
+static_assert(offsetof(UProceduralScatterStaticMeshContentSettings, VariationsInstancingSettings) == 0x000078, "Member 'UProceduralScatterStaticMeshContentSettings::VariationsInstancingSettings' has a wrong offset!");
 
 // Class Procedural.ProceduralSurfaceHeightMap
 // 0x0010 (0x00C8 - 0x00B8)
@@ -926,6 +1119,10 @@ public:
 		return GetDefaultObjImpl<UProceduralSurfaceHeightMap>();
 	}
 };
+static_assert(alignof(UProceduralSurfaceHeightMap) == 0x000008, "Wrong alignment on UProceduralSurfaceHeightMap");
+static_assert(sizeof(UProceduralSurfaceHeightMap) == 0x0000C8, "Wrong size on UProceduralSurfaceHeightMap");
+static_assert(offsetof(UProceduralSurfaceHeightMap, bNormalizedHeight) == 0x0000B8, "Member 'UProceduralSurfaceHeightMap::bNormalizedHeight' has a wrong offset!");
+static_assert(offsetof(UProceduralSurfaceHeightMap, HeightRange) == 0x0000BC, "Member 'UProceduralSurfaceHeightMap::HeightRange' has a wrong offset!");
 
 // Class Procedural.ProceduralSurfaceSlopeAngleMap
 // 0x0010 (0x00C8 - 0x00B8)
@@ -955,6 +1152,10 @@ public:
 		return GetDefaultObjImpl<UProceduralSurfaceSlopeAngleMap>();
 	}
 };
+static_assert(alignof(UProceduralSurfaceSlopeAngleMap) == 0x000008, "Wrong alignment on UProceduralSurfaceSlopeAngleMap");
+static_assert(sizeof(UProceduralSurfaceSlopeAngleMap) == 0x0000C8, "Wrong size on UProceduralSurfaceSlopeAngleMap");
+static_assert(offsetof(UProceduralSurfaceSlopeAngleMap, bNormalizedSlopeAngle) == 0x0000B8, "Member 'UProceduralSurfaceSlopeAngleMap::bNormalizedSlopeAngle' has a wrong offset!");
+static_assert(offsetof(UProceduralSurfaceSlopeAngleMap, SlopeAngleRange) == 0x0000BC, "Member 'UProceduralSurfaceSlopeAngleMap::SlopeAngleRange' has a wrong offset!");
 
 // Class Procedural.ProceduralTextureFloatMap
 // 0x0040 (0x00F8 - 0x00B8)
@@ -975,6 +1176,10 @@ public:
 		return GetDefaultObjImpl<UProceduralTextureFloatMap>();
 	}
 };
+static_assert(alignof(UProceduralTextureFloatMap) == 0x000008, "Wrong alignment on UProceduralTextureFloatMap");
+static_assert(sizeof(UProceduralTextureFloatMap) == 0x0000F8, "Wrong size on UProceduralTextureFloatMap");
+static_assert(offsetof(UProceduralTextureFloatMap, Channel) == 0x0000B8, "Member 'UProceduralTextureFloatMap::Channel' has a wrong offset!");
+static_assert(offsetof(UProceduralTextureFloatMap, Source) == 0x0000C0, "Member 'UProceduralTextureFloatMap::Source' has a wrong offset!");
 
 // Class Procedural.ProceduralTextureVectorMap
 // 0x0038 (0x0270 - 0x0238)
@@ -993,6 +1198,9 @@ public:
 		return GetDefaultObjImpl<UProceduralTextureVectorMap>();
 	}
 };
+static_assert(alignof(UProceduralTextureVectorMap) == 0x000008, "Wrong alignment on UProceduralTextureVectorMap");
+static_assert(sizeof(UProceduralTextureVectorMap) == 0x000270, "Wrong size on UProceduralTextureVectorMap");
+static_assert(offsetof(UProceduralTextureVectorMap, Source) == 0x000238, "Member 'UProceduralTextureVectorMap::Source' has a wrong offset!");
 
 // Class Procedural.ProceduralVertexColorMap
 // 0x0008 (0x00C0 - 0x00B8)
@@ -1012,6 +1220,9 @@ public:
 		return GetDefaultObjImpl<UProceduralVertexColorMap>();
 	}
 };
+static_assert(alignof(UProceduralVertexColorMap) == 0x000008, "Wrong alignment on UProceduralVertexColorMap");
+static_assert(sizeof(UProceduralVertexColorMap) == 0x0000C0, "Wrong size on UProceduralVertexColorMap");
+static_assert(offsetof(UProceduralVertexColorMap, Channel) == 0x0000B8, "Member 'UProceduralVertexColorMap::Channel' has a wrong offset!");
 
 }
 

@@ -20,14 +20,14 @@ namespace SDK
 // Function ItemSeriesOrRarity.ItemSeriesOrRarity_C.UpdateItemDefinition
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFortItemDefinition*              ItemDefinition                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UFortItemDefinition*              ItemDefinition                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UItemSeriesOrRarity_C::UpdateItemDefinition(class UFortItemDefinition* ItemDefinition)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UpdateItemDefinition");
+		Func = Class->GetFunction("ItemSeriesOrRarity_C", "UpdateItemDefinition");
 
 	Params::ItemSeriesOrRarity_C_UpdateItemDefinition Parms{};
 

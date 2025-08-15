@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MainMenuButton.MainMenuButton_C
-// 0x0000 (0x0FE0 - 0x0FE0)
+// 0x0000 (0x0C60 - 0x0C60)
 class UMainMenuButton_C final : public UFortMainMenuButton
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UMainMenuButton_C>();
 	}
 };
+static_assert(alignof(UMainMenuButton_C) == 0x000008, "Wrong alignment on UMainMenuButton_C");
+static_assert(sizeof(UMainMenuButton_C) == 0x000C60, "Wrong size on UMainMenuButton_C");
 
 }
 

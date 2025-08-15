@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass windowchromebuttons.windowchromebuttons_C
-// 0x0020 (0x0290 - 0x0270)
+// 0x0020 (0x02A8 - 0x0288)
 class Uwindowchromebuttons_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FadeOut;                                           // 0x0278(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       FadeIn;                                            // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWindowTitleBarArea*                    WindowTitleBarArea_107;                            // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FadeOut;                                           // 0x0290(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeIn;                                            // 0x0298(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWindowTitleBarArea*                    WindowTitleBarArea_107;                            // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_windowchromebuttons(int32 EntryPoint);
-	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
+	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 
 public:
 	static class UClass* StaticClass()
@@ -42,6 +42,12 @@ public:
 		return GetDefaultObjImpl<Uwindowchromebuttons_C>();
 	}
 };
+static_assert(alignof(Uwindowchromebuttons_C) == 0x000008, "Wrong alignment on Uwindowchromebuttons_C");
+static_assert(sizeof(Uwindowchromebuttons_C) == 0x0002A8, "Wrong size on Uwindowchromebuttons_C");
+static_assert(offsetof(Uwindowchromebuttons_C, UberGraphFrame) == 0x000288, "Member 'Uwindowchromebuttons_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(Uwindowchromebuttons_C, FadeOut) == 0x000290, "Member 'Uwindowchromebuttons_C::FadeOut' has a wrong offset!");
+static_assert(offsetof(Uwindowchromebuttons_C, FadeIn) == 0x000298, "Member 'Uwindowchromebuttons_C::FadeIn' has a wrong offset!");
+static_assert(offsetof(Uwindowchromebuttons_C, WindowTitleBarArea_107) == 0x0002A0, "Member 'Uwindowchromebuttons_C::WindowTitleBarArea_107' has a wrong offset!");
 
 }
 

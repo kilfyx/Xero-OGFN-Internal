@@ -21,7 +21,7 @@ struct PlayedBeforeSelect_C_ExecuteUbergraph_PlayedBeforeSelect final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(PlayedBeforeSelect_C_ExecuteUbergraph_PlayedBeforeSelect) == 0x000008, "Wrong alignment on PlayedBeforeSelect_C_ExecuteUbergraph_PlayedBeforeSelect");
 static_assert(sizeof(PlayedBeforeSelect_C_ExecuteUbergraph_PlayedBeforeSelect) == 0x000010, "Wrong size on PlayedBeforeSelect_C_ExecuteUbergraph_PlayedBeforeSelect");

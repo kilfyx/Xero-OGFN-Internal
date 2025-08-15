@@ -35,6 +35,10 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundWave*                             Sound;                                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FSoundCueCrossfadeInfo) == 0x000008, "Wrong alignment on FSoundCueCrossfadeInfo");
+static_assert(sizeof(FSoundCueCrossfadeInfo) == 0x000020, "Wrong size on FSoundCueCrossfadeInfo");
+static_assert(offsetof(FSoundCueCrossfadeInfo, DistanceInfo) == 0x000000, "Member 'FSoundCueCrossfadeInfo::DistanceInfo' has a wrong offset!");
+static_assert(offsetof(FSoundCueCrossfadeInfo, Sound) == 0x000018, "Member 'FSoundCueCrossfadeInfo::Sound' has a wrong offset!");
 
 // ScriptStruct SoundCueTemplates.SoundCueTemplateQualitySettings
 // 0x0028 (0x0028 - 0x0000)
@@ -47,6 +51,12 @@ public:
 	int32                                         MaxMixVariations;                                  // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FSoundCueTemplateQualitySettings) == 0x000008, "Wrong alignment on FSoundCueTemplateQualitySettings");
+static_assert(sizeof(FSoundCueTemplateQualitySettings) == 0x000028, "Wrong size on FSoundCueTemplateQualitySettings");
+static_assert(offsetof(FSoundCueTemplateQualitySettings, DisplayName) == 0x000000, "Member 'FSoundCueTemplateQualitySettings::DisplayName' has a wrong offset!");
+static_assert(offsetof(FSoundCueTemplateQualitySettings, MaxConcatenatedVariations) == 0x000018, "Member 'FSoundCueTemplateQualitySettings::MaxConcatenatedVariations' has a wrong offset!");
+static_assert(offsetof(FSoundCueTemplateQualitySettings, MaxRandomizedVariations) == 0x00001C, "Member 'FSoundCueTemplateQualitySettings::MaxRandomizedVariations' has a wrong offset!");
+static_assert(offsetof(FSoundCueTemplateQualitySettings, MaxMixVariations) == 0x000020, "Member 'FSoundCueTemplateQualitySettings::MaxMixVariations' has a wrong offset!");
 
 }
 

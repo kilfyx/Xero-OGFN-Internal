@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass DivisionIconButton.DivisionIconButton_C
-// 0x0020 (0x1460 - 0x1440)
+// 0x0018 (0x0BC0 - 0x0BA8)
 class UDivisionIconButton_C final : public UFortShowdownDivisionRankButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1440(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Selected;                                          // 0x1448(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_Hover;                                       // 0x1450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Selected;                                          // 0x0BB0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_Hover;                                       // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
+	void OnRankButtonSelected(bool bIsSelected);
 	void BP_OnHovered();
 	void BP_OnUnhovered();
 	void ExecuteUbergraph_DivisionIconButton(int32 EntryPoint);
-	void OnRankButtonSelected(bool bIsSelected);
 
 public:
 	static class UClass* StaticClass()
@@ -42,11 +42,11 @@ public:
 		return GetDefaultObjImpl<UDivisionIconButton_C>();
 	}
 };
-static_assert(alignof(UDivisionIconButton_C) == 0x000010, "Wrong alignment on UDivisionIconButton_C");
-static_assert(sizeof(UDivisionIconButton_C) == 0x001460, "Wrong size on UDivisionIconButton_C");
-static_assert(offsetof(UDivisionIconButton_C, UberGraphFrame) == 0x001440, "Member 'UDivisionIconButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UDivisionIconButton_C, Selected) == 0x001448, "Member 'UDivisionIconButton_C::Selected' has a wrong offset!");
-static_assert(offsetof(UDivisionIconButton_C, Image_Hover) == 0x001450, "Member 'UDivisionIconButton_C::Image_Hover' has a wrong offset!");
+static_assert(alignof(UDivisionIconButton_C) == 0x000008, "Wrong alignment on UDivisionIconButton_C");
+static_assert(sizeof(UDivisionIconButton_C) == 0x000BC0, "Wrong size on UDivisionIconButton_C");
+static_assert(offsetof(UDivisionIconButton_C, UberGraphFrame) == 0x000BA8, "Member 'UDivisionIconButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UDivisionIconButton_C, Selected) == 0x000BB0, "Member 'UDivisionIconButton_C::Selected' has a wrong offset!");
+static_assert(offsetof(UDivisionIconButton_C, Image_Hover) == 0x000BB8, "Member 'UDivisionIconButton_C::Image_Hover' has a wrong offset!");
 
 }
 

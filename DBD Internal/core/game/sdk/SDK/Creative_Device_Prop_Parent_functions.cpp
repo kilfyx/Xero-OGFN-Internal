@@ -17,93 +17,35 @@
 namespace SDK
 {
 
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Update Visibility In Game
-// (Protected, BlueprintCallable, BlueprintEvent)
-
-void ACreative_Device_Prop_Parent_C::Update_Visibility_In_Game()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Update Visibility In Game");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Update Preview Only Visibility
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ACreative_Device_Prop_Parent_C::Update_Preview_Only_Visibility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Update Preview Only Visibility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.ResetHealthIfSet
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ACreative_Device_Prop_Parent_C::ResetHealthIfSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "ResetHealthIfSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ACreative_Device_Prop_Parent_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Play Mode Changed
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.ExecuteUbergraph_Creative_Device_Prop_Parent
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class AFortMinigame*                    Minigame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsInPlayMode                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ACreative_Device_Prop_Parent_C::Play_Mode_Changed(class AFortMinigame* Minigame, bool bIsInPlayMode)
+void ACreative_Device_Prop_Parent_C::ExecuteUbergraph_Creative_Device_Prop_Parent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Play Mode Changed");
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "ExecuteUbergraph_Creative_Device_Prop_Parent");
 
-	Params::Creative_Device_Prop_Parent_C_Play_Mode_Changed Parms{};
+	Params::Creative_Device_Prop_Parent_C_ExecuteUbergraph_Creative_Device_Prop_Parent Parms{};
 
-	Parms.Minigame = Minigame;
-	Parms.bIsInPlayMode = bIsInPlayMode;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.OnWorldReady
-// (Event, Public, BlueprintEvent)
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.OnMinigameEnded
+// (BlueprintCallable, BlueprintEvent)
 
-void ACreative_Device_Prop_Parent_C::OnWorldReady()
+void ACreative_Device_Prop_Parent_C::OnMinigameEnded()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "OnWorldReady");
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "OnMinigameEnded");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -123,15 +65,57 @@ void ACreative_Device_Prop_Parent_C::OnMinigameStarted()
 }
 
 
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.OnMinigameEnded
-// (BlueprintCallable, BlueprintEvent)
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_5_SimpleDynamicMulticastDelegate__DelegateSignature
+// (BlueprintEvent)
 
-void ACreative_Device_Prop_Parent_C::OnMinigameEnded()
+void ACreative_Device_Prop_Parent_C::BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_5_SimpleDynamicMulticastDelegate__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "OnMinigameEnded");
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_5_SimpleDynamicMulticastDelegate__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_0_SimpleDynamicMulticastDelegate__DelegateSignature
+// (BlueprintEvent)
+
+void ACreative_Device_Prop_Parent_C::BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_0_SimpleDynamicMulticastDelegate__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_0_SimpleDynamicMulticastDelegate__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.OnWorldReady
+// (Event, Public, BlueprintEvent)
+
+void ACreative_Device_Prop_Parent_C::OnWorldReady()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "OnWorldReady");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ACreative_Device_Prop_Parent_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -156,145 +140,6 @@ void ACreative_Device_Prop_Parent_C::On_Mingame_State_Changed(class AFortMinigam
 	Parms.MinigameState = MinigameState;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Is Visible In Game
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   Visible                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ACreative_Device_Prop_Parent_C::Is_Visible_In_Game(bool* Visible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Is Visible In Game");
-
-	Params::Creative_Device_Prop_Parent_C_Is_Visible_In_Game Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Visible != nullptr)
-		*Visible = Parms.Visible;
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Initialize Device
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ACreative_Device_Prop_Parent_C::Initialize_Device()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Initialize Device");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.GetVisibilityComponentsWithCollisionOverrides
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TMap<class USceneComponent*, ECollisionEnabled>*VisibilityComponents                                   (Parm, OutParm, ContainsInstancedReference)
-
-void ACreative_Device_Prop_Parent_C::GetVisibilityComponentsWithCollisionOverrides(TMap<class USceneComponent*, ECollisionEnabled>* VisibilityComponents)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "GetVisibilityComponentsWithCollisionOverrides");
-
-	Params::Creative_Device_Prop_Parent_C_GetVisibilityComponentsWithCollisionOverrides Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (VisibilityComponents != nullptr)
-		*VisibilityComponents = std::move(Parms.VisibilityComponents);
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.GetVisibilityComponents
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class USceneComponent*>*         VisibilityComponents                                   (Parm, OutParm, ContainsInstancedReference)
-
-void ACreative_Device_Prop_Parent_C::GetVisibilityComponents(TArray<class USceneComponent*>* VisibilityComponents)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "GetVisibilityComponents");
-
-	Params::Creative_Device_Prop_Parent_C_GetVisibilityComponents Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (VisibilityComponents != nullptr)
-		*VisibilityComponents = std::move(Parms.VisibilityComponents);
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.ExecuteUbergraph_Creative_Device_Prop_Parent
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ACreative_Device_Prop_Parent_C::ExecuteUbergraph_Creative_Device_Prop_Parent(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "ExecuteUbergraph_Creative_Device_Prop_Parent");
-
-	Params::Creative_Device_Prop_Parent_C_ExecuteUbergraph_Creative_Device_Prop_Parent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_3_AnyPropertyChangedDelegate__DelegateSignature
-// (BlueprintEvent)
-
-void ACreative_Device_Prop_Parent_C::BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_3_AnyPropertyChangedDelegate__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_3_AnyPropertyChangedDelegate__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_2_AnyPropertyChangedDelegate__DelegateSignature
-// (BlueprintEvent)
-
-void ACreative_Device_Prop_Parent_C::BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_2_AnyPropertyChangedDelegate__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_2_AnyPropertyChangedDelegate__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_5_SimpleDynamicMulticastDelegate__DelegateSignature
-// (BlueprintEvent)
-
-void ACreative_Device_Prop_Parent_C::BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_5_SimpleDynamicMulticastDelegate__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_5_SimpleDynamicMulticastDelegate__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -338,15 +183,85 @@ void ACreative_Device_Prop_Parent_C::BndEvt__FortMinigameProgress_K2Node_Compone
 }
 
 
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_0_SimpleDynamicMulticastDelegate__DelegateSignature
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_3_AnyPropertyChangedDelegate__DelegateSignature
 // (BlueprintEvent)
 
-void ACreative_Device_Prop_Parent_C::BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_0_SimpleDynamicMulticastDelegate__DelegateSignature()
+void ACreative_Device_Prop_Parent_C::BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_3_AnyPropertyChangedDelegate__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_0_SimpleDynamicMulticastDelegate__DelegateSignature");
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_3_AnyPropertyChangedDelegate__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_2_AnyPropertyChangedDelegate__DelegateSignature
+// (BlueprintEvent)
+
+void ACreative_Device_Prop_Parent_C::BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_2_AnyPropertyChangedDelegate__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_2_AnyPropertyChangedDelegate__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.PlayModeChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFortMinigame*                    Minigame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsInPlayMode                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ACreative_Device_Prop_Parent_C::PlayModeChanged(class AFortMinigame* Minigame, bool bIsInPlayMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "PlayModeChanged");
+
+	Params::Creative_Device_Prop_Parent_C_PlayModeChanged Parms{};
+
+	Parms.Minigame = Minigame;
+	Parms.bIsInPlayMode = bIsInPlayMode;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Activate on Phase
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFortMinigameState                      State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ACreative_Device_Prop_Parent_C::Activate_on_Phase(EFortMinigameState State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Activate on Phase");
+
+	Params::Creative_Device_Prop_Parent_C_Activate_on_Phase Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Activate Device
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ACreative_Device_Prop_Parent_C::Activate_Device()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Activate Device");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -356,10 +271,9 @@ void ACreative_Device_Prop_Parent_C::BndEvt__FortMinigameProgress_K2Node_Compone
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AFortPlayerPawn*                  InteractingPawn                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool ACreative_Device_Prop_Parent_C::BlueprintOnLocalInteract(class AFortPlayerPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted)
+bool ACreative_Device_Prop_Parent_C::BlueprintOnLocalInteract(class AFortPlayerPawn* InteractingPawn)
 {
 	static class UFunction* Func = nullptr;
 
@@ -369,11 +283,60 @@ bool ACreative_Device_Prop_Parent_C::BlueprintOnLocalInteract(class AFortPlayerP
 	Params::Creative_Device_Prop_Parent_C_BlueprintOnLocalInteract Parms{};
 
 	Parms.InteractingPawn = InteractingPawn;
-	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Initialize Device
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ACreative_Device_Prop_Parent_C::Initialize_Device()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Initialize Device");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Attempt Activate Device
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AController*                      Instigating_Controller_0                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Additional_Requirements                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ACreative_Device_Prop_Parent_C::Attempt_Activate_Device(class AController* Instigating_Controller_0, bool Additional_Requirements)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Attempt Activate Device");
+
+	Params::Creative_Device_Prop_Parent_C_Attempt_Activate_Device Parms{};
+
+	Parms.Instigating_Controller_0 = Instigating_Controller_0;
+	Parms.Additional_Requirements = Additional_Requirements;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Activate Device Failed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ACreative_Device_Prop_Parent_C::Activate_Device_Failed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Activate Device Failed");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -408,119 +371,80 @@ float ACreative_Device_Prop_Parent_C::BlueprintModifyIncomingDamage(float Damage
 }
 
 
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Attempt Activate Device
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Is Visible In Game
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AController*                      Instigating_Controller_0                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Additional_Requirements                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Visible                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ACreative_Device_Prop_Parent_C::Attempt_Activate_Device(class AController* Instigating_Controller_0, bool Additional_Requirements)
+void ACreative_Device_Prop_Parent_C::Is_Visible_In_Game(bool* Visible)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Attempt Activate Device");
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Is Visible In Game");
 
-	Params::Creative_Device_Prop_Parent_C_Attempt_Activate_Device Parms{};
-
-	Parms.Instigating_Controller_0 = Instigating_Controller_0;
-	Parms.Additional_Requirements = Additional_Requirements;
+	Params::Creative_Device_Prop_Parent_C_Is_Visible_In_Game Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Visible != nullptr)
+		*Visible = Parms.Visible;
 }
 
 
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Activate on Phase
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EFortMinigameState                      State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Update Visibility In Game
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void ACreative_Device_Prop_Parent_C::Activate_on_Phase(EFortMinigameState State)
+void ACreative_Device_Prop_Parent_C::Update_Visibility_In_Game()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Activate on Phase");
-
-	Params::Creative_Device_Prop_Parent_C_Activate_on_Phase Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Activate Device Failed
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ACreative_Device_Prop_Parent_C::Activate_Device_Failed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Activate Device Failed");
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Update Visibility In Game");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.Activate Device
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ACreative_Device_Prop_Parent_C::Activate_Device()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "Activate Device");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.IsInPlayMode
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.GetVisibilityComponents
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   bIsInPlayMode                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class USceneComponent*>*         VisibilityComponents                                   (Parm, OutParm, ContainsInstancedReference, HasGetValueTypeHash)
 
-void ACreative_Device_Prop_Parent_C::IsInPlayMode(bool* bIsInPlayMode) const
+void ACreative_Device_Prop_Parent_C::GetVisibilityComponents(TArray<class USceneComponent*>* VisibilityComponents)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "IsInPlayMode");
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "GetVisibilityComponents");
 
-	Params::Creative_Device_Prop_Parent_C_IsInPlayMode Parms{};
+	Params::Creative_Device_Prop_Parent_C_GetVisibilityComponents Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (bIsInPlayMode != nullptr)
-		*bIsInPlayMode = Parms.bIsInPlayMode;
+	if (VisibilityComponents != nullptr)
+		*VisibilityComponents = std::move(Parms.VisibilityComponents);
 }
 
 
-// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.GetMoveToolPreviewComponents
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.GetVisibilityComponentsWithCollisionOverrides
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class USceneComponent*>*         ForceHideInPreview                                     (Parm, OutParm, ContainsInstancedReference)
-// TArray<class USceneComponent*>*         ForceShowInPreview                                     (Parm, OutParm, ContainsInstancedReference)
+// TMap<class USceneComponent*, ECollisionEnabled>*VisibilityComponents                                   (Parm, OutParm, ContainsInstancedReference)
 
-void ACreative_Device_Prop_Parent_C::GetMoveToolPreviewComponents(TArray<class USceneComponent*>* ForceHideInPreview, TArray<class USceneComponent*>* ForceShowInPreview) const
+void ACreative_Device_Prop_Parent_C::GetVisibilityComponentsWithCollisionOverrides(TMap<class USceneComponent*, ECollisionEnabled>* VisibilityComponents)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "GetMoveToolPreviewComponents");
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "GetVisibilityComponentsWithCollisionOverrides");
 
-	Params::Creative_Device_Prop_Parent_C_GetMoveToolPreviewComponents Parms{};
+	Params::Creative_Device_Prop_Parent_C_GetVisibilityComponentsWithCollisionOverrides Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (ForceHideInPreview != nullptr)
-		*ForceHideInPreview = std::move(Parms.ForceHideInPreview);
-
-	if (ForceShowInPreview != nullptr)
-		*ForceShowInPreview = std::move(Parms.ForceShowInPreview);
+	if (VisibilityComponents != nullptr)
+		*VisibilityComponents = std::move(Parms.VisibilityComponents);
 }
 
 
@@ -530,7 +454,7 @@ void ACreative_Device_Prop_Parent_C::GetMoveToolPreviewComponents(TArray<class U
 // const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool ACreative_Device_Prop_Parent_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
 {
@@ -548,6 +472,27 @@ bool ACreative_Device_Prop_Parent_C::BlueprintCanInteract(const class AFortPawn*
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function Creative_Device_Prop_Parent.Creative_Device_Prop_Parent_C.IsInPlayMode
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool*                                   bIsInPlayMode                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ACreative_Device_Prop_Parent_C::IsInPlayMode(bool* bIsInPlayMode) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_Device_Prop_Parent_C", "IsInPlayMode");
+
+	Params::Creative_Device_Prop_Parent_C_IsInPlayMode Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bIsInPlayMode != nullptr)
+		*bIsInPlayMode = Parms.bIsInPlayMode;
 }
 
 }

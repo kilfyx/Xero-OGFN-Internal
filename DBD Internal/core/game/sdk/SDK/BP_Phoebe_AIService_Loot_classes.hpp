@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Phoebe_AIService_Loot.BP_Phoebe_AIService_Loot_C
-// 0x0000 (0x0410 - 0x0410)
+// 0x0000 (0x0380 - 0x0380)
 class UBP_Phoebe_AIService_Loot_C final : public UAthenaAIServiceLoot
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UBP_Phoebe_AIService_Loot_C>();
 	}
 };
+static_assert(alignof(UBP_Phoebe_AIService_Loot_C) == 0x000010, "Wrong alignment on UBP_Phoebe_AIService_Loot_C");
+static_assert(sizeof(UBP_Phoebe_AIService_Loot_C) == 0x000380, "Wrong size on UBP_Phoebe_AIService_Loot_C");
 
 }
 

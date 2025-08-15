@@ -20,9 +20,9 @@ namespace SDK
 // Function PhosphorusWipeoutUI.PhosphorusKnockBackWidget.KnockBackFromAllPlayersReceivedEvent
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FKnockbackMutatorData&     KnockbackData                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPhosphorusWipeoutKnockBackData&KnockBackData                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void UPhosphorusKnockBackWidget::KnockBackFromAllPlayersReceivedEvent(const struct FKnockbackMutatorData& KnockbackData)
+void UPhosphorusKnockBackWidget::KnockBackFromAllPlayersReceivedEvent(const struct FPhosphorusWipeoutKnockBackData& KnockBackData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,7 +31,7 @@ void UPhosphorusKnockBackWidget::KnockBackFromAllPlayersReceivedEvent(const stru
 
 	Params::PhosphorusKnockBackWidget_KnockBackFromAllPlayersReceivedEvent Parms{};
 
-	Parms.KnockbackData = std::move(KnockbackData);
+	Parms.KnockBackData = std::move(KnockBackData);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

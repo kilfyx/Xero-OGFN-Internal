@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventLeaderboardHeader.EventLeaderboardHeader_C
-// 0x0018 (0x0730 - 0x0718)
+// 0x0018 (0x06D0 - 0x06B8)
 class UEventLeaderboardHeader_C final : public UFortShowdownDetailView
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0718(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonBorder*                          CommonBorder_ScoringTitleBG;                       // 0x0720(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_RoundTitle;                                   // 0x0728(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonBorder*                          CommonBorder_ScoringTitleBG;                       // 0x06C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_RoundTitle;                                   // 0x06C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void RefreshDataBP();
@@ -41,10 +41,10 @@ public:
 	}
 };
 static_assert(alignof(UEventLeaderboardHeader_C) == 0x000008, "Wrong alignment on UEventLeaderboardHeader_C");
-static_assert(sizeof(UEventLeaderboardHeader_C) == 0x000730, "Wrong size on UEventLeaderboardHeader_C");
-static_assert(offsetof(UEventLeaderboardHeader_C, UberGraphFrame) == 0x000718, "Member 'UEventLeaderboardHeader_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardHeader_C, CommonBorder_ScoringTitleBG) == 0x000720, "Member 'UEventLeaderboardHeader_C::CommonBorder_ScoringTitleBG' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardHeader_C, Text_RoundTitle) == 0x000728, "Member 'UEventLeaderboardHeader_C::Text_RoundTitle' has a wrong offset!");
+static_assert(sizeof(UEventLeaderboardHeader_C) == 0x0006D0, "Wrong size on UEventLeaderboardHeader_C");
+static_assert(offsetof(UEventLeaderboardHeader_C, UberGraphFrame) == 0x0006B8, "Member 'UEventLeaderboardHeader_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardHeader_C, CommonBorder_ScoringTitleBG) == 0x0006C0, "Member 'UEventLeaderboardHeader_C::CommonBorder_ScoringTitleBG' has a wrong offset!");
+static_assert(offsetof(UEventLeaderboardHeader_C, Text_RoundTitle) == 0x0006C8, "Member 'UEventLeaderboardHeader_C::Text_RoundTitle' has a wrong offset!");
 
 }
 

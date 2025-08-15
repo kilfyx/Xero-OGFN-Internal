@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_DudebroDamageWallsLOTS_C>();
 	}
 };
+static_assert(alignof(UGE_DudebroDamageWallsLOTS_C) == 0x000008, "Wrong alignment on UGE_DudebroDamageWallsLOTS_C");
+static_assert(sizeof(UGE_DudebroDamageWallsLOTS_C) == 0x000800, "Wrong size on UGE_DudebroDamageWallsLOTS_C");
 
 }
 

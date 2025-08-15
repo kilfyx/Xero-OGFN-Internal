@@ -19,19 +19,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaBoundActionButton.AthenaBoundActionButton_C
-// 0x0020 (0x0F10 - 0x0EF0)
+// 0x0018 (0x0BE8 - 0x0BD0)
 class UAthenaBoundActionButton_C final : public UFortBoundActionButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0EF0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBorder*                                ContentBorder;                                     // 0x0EF8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScaleBox*                              InputActionIconScale;                              // 0x0F00(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BD0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBorder*                                ContentBorder;                                     // 0x0BD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                              InputActionIconScale;                              // 0x0BE0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void UpdateInputActionIconSize();
-	void OnUpdateInputAction();
-	void ExecuteUbergraph_AthenaBoundActionButton(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_AthenaBoundActionButton(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -43,6 +42,11 @@ public:
 		return GetDefaultObjImpl<UAthenaBoundActionButton_C>();
 	}
 };
+static_assert(alignof(UAthenaBoundActionButton_C) == 0x000008, "Wrong alignment on UAthenaBoundActionButton_C");
+static_assert(sizeof(UAthenaBoundActionButton_C) == 0x000BE8, "Wrong size on UAthenaBoundActionButton_C");
+static_assert(offsetof(UAthenaBoundActionButton_C, UberGraphFrame) == 0x000BD0, "Member 'UAthenaBoundActionButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaBoundActionButton_C, ContentBorder) == 0x000BD8, "Member 'UAthenaBoundActionButton_C::ContentBorder' has a wrong offset!");
+static_assert(offsetof(UAthenaBoundActionButton_C, InputActionIconScale) == 0x000BE0, "Member 'UAthenaBoundActionButton_C::InputActionIconScale' has a wrong offset!");
 
 }
 

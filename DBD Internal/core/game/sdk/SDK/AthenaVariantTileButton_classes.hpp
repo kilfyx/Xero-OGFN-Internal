@@ -18,19 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaVariantTileButton.AthenaVariantTileButton_C
-// 0x0020 (0x1500 - 0x14E0)
+// 0x0018 (0x0C30 - 0x0C18)
 class UAthenaVariantTileButton_C final : public UFortVariantTileButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x14E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       WarningPulse;                                      // 0x14E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_Conflict;                                    // 0x14F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       WarningPulse;                                      // 0x0C20(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_Conflict;                                    // 0x0C28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void OnListItemObjectSet(class UObject* ListItemObject);
-	void Construct();
 	void ExecuteUbergraph_AthenaVariantTileButton(int32 EntryPoint);
-	void BP_OnClicked();
 
 public:
 	static class UClass* StaticClass()
@@ -42,11 +40,11 @@ public:
 		return GetDefaultObjImpl<UAthenaVariantTileButton_C>();
 	}
 };
-static_assert(alignof(UAthenaVariantTileButton_C) == 0x000010, "Wrong alignment on UAthenaVariantTileButton_C");
-static_assert(sizeof(UAthenaVariantTileButton_C) == 0x001500, "Wrong size on UAthenaVariantTileButton_C");
-static_assert(offsetof(UAthenaVariantTileButton_C, UberGraphFrame) == 0x0014E0, "Member 'UAthenaVariantTileButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaVariantTileButton_C, WarningPulse) == 0x0014E8, "Member 'UAthenaVariantTileButton_C::WarningPulse' has a wrong offset!");
-static_assert(offsetof(UAthenaVariantTileButton_C, Image_Conflict) == 0x0014F0, "Member 'UAthenaVariantTileButton_C::Image_Conflict' has a wrong offset!");
+static_assert(alignof(UAthenaVariantTileButton_C) == 0x000008, "Wrong alignment on UAthenaVariantTileButton_C");
+static_assert(sizeof(UAthenaVariantTileButton_C) == 0x000C30, "Wrong size on UAthenaVariantTileButton_C");
+static_assert(offsetof(UAthenaVariantTileButton_C, UberGraphFrame) == 0x000C18, "Member 'UAthenaVariantTileButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaVariantTileButton_C, WarningPulse) == 0x000C20, "Member 'UAthenaVariantTileButton_C::WarningPulse' has a wrong offset!");
+static_assert(offsetof(UAthenaVariantTileButton_C, Image_Conflict) == 0x000C28, "Member 'UAthenaVariantTileButton_C::Image_Conflict' has a wrong offset!");
 
 }
 

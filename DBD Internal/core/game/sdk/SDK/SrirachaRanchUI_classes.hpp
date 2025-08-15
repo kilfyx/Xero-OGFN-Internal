@@ -39,21 +39,23 @@ public:
 		return GetDefaultObjImpl<UFortMobileActionButtonBehavior_ToggleRadio>();
 	}
 };
+static_assert(alignof(UFortMobileActionButtonBehavior_ToggleRadio) == 0x000008, "Wrong alignment on UFortMobileActionButtonBehavior_ToggleRadio");
+static_assert(sizeof(UFortMobileActionButtonBehavior_ToggleRadio) == 0x000108, "Wrong size on UFortMobileActionButtonBehavior_ToggleRadio");
+static_assert(offsetof(UFortMobileActionButtonBehavior_ToggleRadio, ToggleRadioOffSprite) == 0x0000F8, "Member 'UFortMobileActionButtonBehavior_ToggleRadio::ToggleRadioOffSprite' has a wrong offset!");
 
 // Class SrirachaRanchUI.RadioPlayerWidgetBase
-// 0x0050 (0x0300 - 0x02B0)
-class URadioPlayerWidgetBase : public UFortHUDElementWidget
+// 0x0050 (0x0318 - 0x02C8)
+class URadioPlayerWidgetBase final : public UFortHUDElementWidget
 {
 public:
-	uint8                                         Pad_2B0[0x40];                                     // 0x02B0(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortPrioritizedWidgetData             PriorityData;                                      // 0x02F0(0x0002)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2F2[0x6];                                      // 0x02F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStreamingRadioPlayerComponent*         LastValidComp;                                     // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C8[0x40];                                     // 0x02C8(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortPrioritizedWidgetData             PriorityData;                                      // 0x0308(0x0002)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_30A[0x6];                                      // 0x030A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStreamingRadioPlayerComponent*         LastValidComp;                                     // 0x0310(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void NativeEnteredVehicle();
 	void NativeExitedVehicle();
-	void OnControllerGainedNewFortPawn(class AFortPawn* FortPawn);
 	void OnDisconnectFromComp();
 	void OnFailedToOpenSource(class UStreamingRadioPlayerComponent* Radio, const struct FAthenaRadioStation& Source);
 	void OnLoadingNewSource(class UStreamingRadioPlayerComponent* Radio, const struct FAthenaRadioStation& Source);
@@ -73,6 +75,10 @@ public:
 		return GetDefaultObjImpl<URadioPlayerWidgetBase>();
 	}
 };
+static_assert(alignof(URadioPlayerWidgetBase) == 0x000008, "Wrong alignment on URadioPlayerWidgetBase");
+static_assert(sizeof(URadioPlayerWidgetBase) == 0x000318, "Wrong size on URadioPlayerWidgetBase");
+static_assert(offsetof(URadioPlayerWidgetBase, PriorityData) == 0x000308, "Member 'URadioPlayerWidgetBase::PriorityData' has a wrong offset!");
+static_assert(offsetof(URadioPlayerWidgetBase, LastValidComp) == 0x000310, "Member 'URadioPlayerWidgetBase::LastValidComp' has a wrong offset!");
 
 }
 

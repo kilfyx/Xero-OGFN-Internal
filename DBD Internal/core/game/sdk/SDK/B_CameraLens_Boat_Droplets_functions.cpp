@@ -37,20 +37,6 @@ void AB_CameraLens_Boat_Droplets_C::ExecuteUbergraph_B_CameraLens_Boat_Droplets(
 }
 
 
-// Function B_CameraLens_Boat_Droplets.B_CameraLens_Boat_Droplets_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AB_CameraLens_Boat_Droplets_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_CameraLens_Boat_Droplets_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_CameraLens_Boat_Droplets.B_CameraLens_Boat_Droplets_C.ReceiveDestroyed
 // (Event, Public, BlueprintEvent)
 
@@ -65,15 +51,15 @@ void AB_CameraLens_Boat_Droplets_C::ReceiveDestroyed()
 }
 
 
-// Function B_CameraLens_Boat_Droplets.B_CameraLens_Boat_Droplets_C.Timeline_0__FinishedFunc
-// (BlueprintEvent)
+// Function B_CameraLens_Boat_Droplets.B_CameraLens_Boat_Droplets_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AB_CameraLens_Boat_Droplets_C::Timeline_0__FinishedFunc()
+void AB_CameraLens_Boat_Droplets_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_CameraLens_Boat_Droplets_C", "Timeline_0__FinishedFunc");
+		Func = Class->GetFunction("B_CameraLens_Boat_Droplets_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -88,6 +74,20 @@ void AB_CameraLens_Boat_Droplets_C::Timeline_0__UpdateFunc()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_CameraLens_Boat_Droplets_C", "Timeline_0__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_CameraLens_Boat_Droplets.B_CameraLens_Boat_Droplets_C.Timeline_0__FinishedFunc
+// (BlueprintEvent)
+
+void AB_CameraLens_Boat_Droplets_C::Timeline_0__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_CameraLens_Boat_Droplets_C", "Timeline_0__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

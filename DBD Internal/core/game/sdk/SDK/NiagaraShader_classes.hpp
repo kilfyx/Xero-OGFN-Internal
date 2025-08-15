@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UNiagaraScriptBase>();
 	}
 };
+static_assert(alignof(UNiagaraScriptBase) == 0x000008, "Wrong alignment on UNiagaraScriptBase");
+static_assert(sizeof(UNiagaraScriptBase) == 0x000028, "Wrong size on UNiagaraScriptBase");
 
 }
 

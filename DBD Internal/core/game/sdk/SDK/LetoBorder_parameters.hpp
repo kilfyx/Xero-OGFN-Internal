@@ -23,6 +23,9 @@ struct LetoBorder_C_UpdateBorderWidth final
 public:
 	float                                         HalfBorderWidth;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(LetoBorder_C_UpdateBorderWidth) == 0x000004, "Wrong alignment on LetoBorder_C_UpdateBorderWidth");
+static_assert(sizeof(LetoBorder_C_UpdateBorderWidth) == 0x000004, "Wrong size on LetoBorder_C_UpdateBorderWidth");
+static_assert(offsetof(LetoBorder_C_UpdateBorderWidth, HalfBorderWidth) == 0x000000, "Member 'LetoBorder_C_UpdateBorderWidth::HalfBorderWidth' has a wrong offset!");
 
 // Function LetoBorder.LetoBorder_C.ExecuteUbergraph_LetoBorder
 // 0x0018 (0x0018 - 0x0000)
@@ -33,6 +36,11 @@ public:
 	float                                         K2Node_Event_HalfBorderWidth;                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+static_assert(alignof(LetoBorder_C_ExecuteUbergraph_LetoBorder) == 0x000004, "Wrong alignment on LetoBorder_C_ExecuteUbergraph_LetoBorder");
+static_assert(sizeof(LetoBorder_C_ExecuteUbergraph_LetoBorder) == 0x000018, "Wrong size on LetoBorder_C_ExecuteUbergraph_LetoBorder");
+static_assert(offsetof(LetoBorder_C_ExecuteUbergraph_LetoBorder, EntryPoint) == 0x000000, "Member 'LetoBorder_C_ExecuteUbergraph_LetoBorder::EntryPoint' has a wrong offset!");
+static_assert(offsetof(LetoBorder_C_ExecuteUbergraph_LetoBorder, K2Node_Event_HalfBorderWidth) == 0x000004, "Member 'LetoBorder_C_ExecuteUbergraph_LetoBorder::K2Node_Event_HalfBorderWidth' has a wrong offset!");
+static_assert(offsetof(LetoBorder_C_ExecuteUbergraph_LetoBorder, K2Node_MakeStruct_Margin) == 0x000008, "Member 'LetoBorder_C_ExecuteUbergraph_LetoBorder::K2Node_MakeStruct_Margin' has a wrong offset!");
 
 }
 

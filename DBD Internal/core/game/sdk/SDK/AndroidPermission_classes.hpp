@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // Class AndroidPermission.AndroidPermissionCallbackProxy
-// 0x0028 (0x0050 - 0x0028)
+// 0x0020 (0x0048 - 0x0028)
 class UAndroidPermissionCallbackProxy final : public UObject
 {
 public:
 	TMulticastInlineDelegate<void(const TArray<class FString>& Permissions, const TArray<bool>& GrantResults)> OnPermissionsGrantedDynamicDelegate; // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x18];                                      // 0x0038(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -35,6 +35,9 @@ public:
 		return GetDefaultObjImpl<UAndroidPermissionCallbackProxy>();
 	}
 };
+static_assert(alignof(UAndroidPermissionCallbackProxy) == 0x000008, "Wrong alignment on UAndroidPermissionCallbackProxy");
+static_assert(sizeof(UAndroidPermissionCallbackProxy) == 0x000048, "Wrong size on UAndroidPermissionCallbackProxy");
+static_assert(offsetof(UAndroidPermissionCallbackProxy, OnPermissionsGrantedDynamicDelegate) == 0x000028, "Member 'UAndroidPermissionCallbackProxy::OnPermissionsGrantedDynamicDelegate' has a wrong offset!");
 
 // Class AndroidPermission.AndroidPermissionFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -54,6 +57,8 @@ public:
 		return GetDefaultObjImpl<UAndroidPermissionFunctionLibrary>();
 	}
 };
+static_assert(alignof(UAndroidPermissionFunctionLibrary) == 0x000008, "Wrong alignment on UAndroidPermissionFunctionLibrary");
+static_assert(sizeof(UAndroidPermissionFunctionLibrary) == 0x000028, "Wrong size on UAndroidPermissionFunctionLibrary");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ChallengeCategoryTab.ChallengeCategoryTab_C
-// 0x0000 (0x1450 - 0x1450)
+// 0x0000 (0x0BB0 - 0x0BB0)
 class UChallengeCategoryTab_C final : public UChallengeScreenCategoryTab
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<UChallengeCategoryTab_C>();
 	}
 };
-static_assert(alignof(UChallengeCategoryTab_C) == 0x000010, "Wrong alignment on UChallengeCategoryTab_C");
-static_assert(sizeof(UChallengeCategoryTab_C) == 0x001450, "Wrong size on UChallengeCategoryTab_C");
+static_assert(alignof(UChallengeCategoryTab_C) == 0x000008, "Wrong alignment on UChallengeCategoryTab_C");
+static_assert(sizeof(UChallengeCategoryTab_C) == 0x000BB0, "Wrong size on UChallengeCategoryTab_C");
 
 }
 

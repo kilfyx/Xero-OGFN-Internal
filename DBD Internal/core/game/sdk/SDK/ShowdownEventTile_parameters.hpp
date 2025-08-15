@@ -17,49 +17,345 @@
 namespace SDK::Params
 {
 
-// Function ShowdownEventTile.ShowdownEventTile_C.EventColorize
-// 0x01D0 (0x01D0 - 0x0000)
-struct ShowdownEventTile_C_EventColorize final
+// Function ShowdownEventTile.ShowdownEventTile_C.ExecuteUbergraph_ShowdownEventTile
+// 0x0600 (0x0600 - 0x0000)
+struct ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile final
 {
 public:
-	struct FFortTournamentDisplayInfo             DisplayInfo;                                       // 0x0000(0x01D0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_float_Variable;                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Temp_float_Variable_1;                             // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_float_Variable_2;                             // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_2;                              // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void(const struct FFortTournamentDisplayInfo& DisplayInfo)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0028(0x0010)(ZeroConstructor, NoDestructor)
+	float                                         Temp_float_Variable_3;                             // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_CustomEvent_Index;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_IntFloat_ReturnValue;            // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_Out;                            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetEndTime_ReturnValue;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue;               // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetStartTime_ReturnValue;                 // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_1;             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetEndTime_ReturnValue_1;                 // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_2;              // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetStartTime_ReturnValue_1;               // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_2;             // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_3;             // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_4;             // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_5;             // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_1;       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_3;              // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetEndTime_ReturnValue_2;                 // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetStartTime_ReturnValue_2;               // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_2;       // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Select_Default;                             // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_4;              // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_2;             // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetEndTime_ReturnValue_3;                 // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_5;              // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_2;        // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default_1;                           // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_6;              // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFocusEvent                            K2Node_Event_InFocusEvent_1;                       // 0x00F0(0x0008)(NoDestructor)
+	float                                         CallFunc_PauseAnimation_ReturnValue_6;             // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetStartTime_ReturnValue_3;               // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_7;             // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_3;       // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_105[0x3];                                      // 0x0105(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_3;             // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetEndTime_ReturnValue_4;                 // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_7;              // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_3;        // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_8;             // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetStartTime_ReturnValue_4;               // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_9;             // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_4;       // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_129[0x3];                                      // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_4;             // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetEndTime_ReturnValue_5;                 // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_8;              // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_4;        // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFocusEvent                            K2Node_Event_InFocusEvent;                         // 0x0144(0x0008)(NoDestructor)
+	EFortShowdownEventState                       K2Node_CustomEvent_EventState;                     // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x014D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x014E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x014F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_3;        // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_4;        // 0x0152(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0153(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_5;        // 0x0155(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x0156(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_157[0x1];                                      // 0x0157(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Temp_float_Variable_4;                             // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_float_Variable_5;                             // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_10;            // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetStartTime_ReturnValue_5;               // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_11;            // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_5;       // 0x016C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_16D[0x3];                                      // 0x016D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_5;             // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_174[0x4];                                      // 0x0174(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_9;              // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetEndTime_ReturnValue_6;                 // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x0184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_185[0x3];                                      // 0x0185(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_5;        // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default_2;                           // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default_3;                           // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_194[0x4];                                      // 0x0194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_10;             // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EFortShowdownEventState EventState)> K2Node_CreateDelegate_OutputDelegate_2;      // 0x01A0(0x0010)(ZeroConstructor, NoDestructor)
+	float                                         Temp_float_Variable_6;                             // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_12;            // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetStartTime_ReturnValue_6;               // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_13;            // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_6;       // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1C1[0x3];                                      // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_6;             // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetEndTime_ReturnValue_7;                 // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_11;             // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_6;        // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_14;            // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetStartTime_ReturnValue_7;               // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_15;            // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_7;       // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1E9[0x3];                                      // 0x01E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_7;             // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetEndTime_ReturnValue_8;                 // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F4[0x4];                                      // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_12;             // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_7;        // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_5;                              // 0x0204(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_205[0x3];                                      // 0x0205(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Select_Default_4;                           // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortTournamentDisplayInfo             K2Node_CustomEvent_DisplayInfo_1;                  // 0x0210(0x01A8)()
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_13;             // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_float_Variable_7;                             // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C4[0x4];                                      // 0x03C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortTournamentDisplayInfo             K2Node_CustomEvent_DisplayInfo;                    // 0x03C8(0x01A8)()
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0570(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_6;                              // 0x0578(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_579[0x3];                                      // 0x0579(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Temp_float_Variable_8;                             // 0x057C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default_5;                           // 0x0580(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_7;                              // 0x0584(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_585[0x3];                                      // 0x0585(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_14;             // 0x0588(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_float_Variable_9;                             // 0x0590(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default_6;                           // 0x0594(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_15;             // 0x0598(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_8;                              // 0x05A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5A1[0x3];                                      // 0x05A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Select_Default_7;                           // 0x05A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_16;             // 0x05A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_16;            // 0x05B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetStartTime_ReturnValue_8;               // 0x05B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue_17;            // 0x05B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_8;       // 0x05BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5BD[0x3];                                      // 0x05BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_8;             // 0x05C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C4[0x4];                                      // 0x05C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_17;             // 0x05C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetEndTime_ReturnValue_9;                 // 0x05D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_float_Variable_10;                            // 0x05D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_8;        // 0x05D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default_8;                           // 0x05DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_9;                              // 0x05E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5E1[0x7];                                      // 0x05E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_18;             // 0x05E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default_9;                           // 0x05F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5F4[0x4];                                      // 0x05F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_19;             // 0x05F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ShowdownEventTile_C_EventColorize) == 0x000008, "Wrong alignment on ShowdownEventTile_C_EventColorize");
-static_assert(sizeof(ShowdownEventTile_C_EventColorize) == 0x0001D0, "Wrong size on ShowdownEventTile_C_EventColorize");
-static_assert(offsetof(ShowdownEventTile_C_EventColorize, DisplayInfo) == 0x000000, "Member 'ShowdownEventTile_C_EventColorize::DisplayInfo' has a wrong offset!");
+static_assert(alignof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile) == 0x000008, "Wrong alignment on ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile");
+static_assert(sizeof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile) == 0x000600, "Wrong size on ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, EntryPoint) == 0x000000, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::EntryPoint' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_float_Variable) == 0x000004, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_float_Variable' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable) == 0x000008, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_float_Variable_1) == 0x00000C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_float_Variable_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_float_Variable_2) == 0x000010, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_float_Variable_2' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_1) == 0x000014, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_2) == 0x000015, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CreateDelegate_OutputDelegate) == 0x000018, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CreateDelegate_OutputDelegate_1) == 0x000028, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_float_Variable_3) == 0x000038, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_float_Variable_3' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_3) == 0x00003C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CustomEvent_Index) == 0x000040, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CustomEvent_Index' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Multiply_IntFloat_ReturnValue) == 0x000044, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Multiply_IntFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue) == 0x000048, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CustomEvent_Out) == 0x000050, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CustomEvent_Out' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue) == 0x000054, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Not_PreBool_ReturnValue) == 0x000058, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_1) == 0x000060, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue) == 0x000068, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue) == 0x00006C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_1) == 0x000070, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x000074, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_FloatFloat_ReturnValue) == 0x000078, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_1) == 0x00007C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_2) == 0x000080, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000088, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_1) == 0x00008C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_2) == 0x000090, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_3) == 0x000094, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_4) == 0x000098, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_5) == 0x00009C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_FloatFloat_ReturnValue_1) == 0x0000A0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x0000A4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_3) == 0x0000A8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_2) == 0x0000B0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_2) == 0x0000B4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x0000B8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_FloatFloat_ReturnValue_2) == 0x0000BC, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default) == 0x0000C0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_4) == 0x0000C8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_FloatFloat_ReturnValue_2) == 0x0000D0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_3) == 0x0000D4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_5) == 0x0000D8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_FloatFloat_ReturnValue_2) == 0x0000E0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_1) == 0x0000E4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_6) == 0x0000E8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Event_InFocusEvent_1) == 0x0000F0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Event_InFocusEvent_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_6) == 0x0000F8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_3) == 0x0000FC, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_7) == 0x000100, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_FloatFloat_ReturnValue_3) == 0x000104, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_FloatFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_FloatFloat_ReturnValue_3) == 0x000108, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_FloatFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_4) == 0x00010C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_7) == 0x000110, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_FloatFloat_ReturnValue_3) == 0x000118, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_FloatFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_8) == 0x00011C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_4) == 0x000120, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_9) == 0x000124, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_FloatFloat_ReturnValue_4) == 0x000128, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_FloatFloat_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_FloatFloat_ReturnValue_4) == 0x00012C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_FloatFloat_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_5) == 0x000130, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_8) == 0x000138, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_FloatFloat_ReturnValue_4) == 0x000140, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_FloatFloat_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Event_InFocusEvent) == 0x000144, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Event_InFocusEvent' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CustomEvent_EventState) == 0x00014C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CustomEvent_EventState' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00014D, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x00014E, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x00014F, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_BooleanOR_ReturnValue) == 0x000150, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_EqualEqual_ByteByte_ReturnValue_3) == 0x000151, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_EqualEqual_ByteByte_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_EqualEqual_ByteByte_ReturnValue_4) == 0x000152, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_EqualEqual_ByteByte_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_BooleanOR_ReturnValue_1) == 0x000153, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_BooleanOR_ReturnValue_2) == 0x000154, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_EqualEqual_ByteByte_ReturnValue_5) == 0x000155, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_EqualEqual_ByteByte_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_BooleanOR_ReturnValue_3) == 0x000156, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_BooleanOR_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_float_Variable_4) == 0x000158, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_float_Variable_4' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_float_Variable_5) == 0x00015C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_float_Variable_5' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_10) == 0x000160, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_5) == 0x000164, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_11) == 0x000168, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_FloatFloat_ReturnValue_5) == 0x00016C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_FloatFloat_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_FloatFloat_ReturnValue_5) == 0x000170, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_FloatFloat_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_9) == 0x000178, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_6) == 0x000180, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_4) == 0x000184, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_4' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_FloatFloat_ReturnValue_5) == 0x000188, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_FloatFloat_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_2) == 0x00018C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_3) == 0x000190, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_3' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_10) == 0x000198, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CreateDelegate_OutputDelegate_2) == 0x0001A0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_float_Variable_6) == 0x0001B0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_float_Variable_6' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_12) == 0x0001B4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_6) == 0x0001B8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_13) == 0x0001BC, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_FloatFloat_ReturnValue_6) == 0x0001C0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_FloatFloat_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_FloatFloat_ReturnValue_6) == 0x0001C4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_FloatFloat_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_7) == 0x0001C8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_11) == 0x0001D0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_FloatFloat_ReturnValue_6) == 0x0001D8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_FloatFloat_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_14) == 0x0001DC, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_14' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_7) == 0x0001E0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_15) == 0x0001E4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_15' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_FloatFloat_ReturnValue_7) == 0x0001E8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_FloatFloat_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_FloatFloat_ReturnValue_7) == 0x0001EC, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_FloatFloat_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_8) == 0x0001F0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_12) == 0x0001F8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_FloatFloat_ReturnValue_7) == 0x000200, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_FloatFloat_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_5) == 0x000204, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_5' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_4) == 0x000208, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_4' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CustomEvent_DisplayInfo_1) == 0x000210, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CustomEvent_DisplayInfo_1' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_13) == 0x0003B8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_float_Variable_7) == 0x0003C0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_float_Variable_7' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CustomEvent_DisplayInfo) == 0x0003C8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CustomEvent_DisplayInfo' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000570, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_6) == 0x000578, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_6' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_float_Variable_8) == 0x00057C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_float_Variable_8' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_5) == 0x000580, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_5' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_7) == 0x000584, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_7' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_14) == 0x000588, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_14' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_float_Variable_9) == 0x000590, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_float_Variable_9' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_6) == 0x000594, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_6' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_15) == 0x000598, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_15' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_8) == 0x0005A0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_8' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_7) == 0x0005A4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_7' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_16) == 0x0005A8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_16' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_16) == 0x0005B0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_16' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_8) == 0x0005B4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_17) == 0x0005B8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_17' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_FloatFloat_ReturnValue_8) == 0x0005BC, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_FloatFloat_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_FloatFloat_ReturnValue_8) == 0x0005C0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_FloatFloat_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_17) == 0x0005C8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_17' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_9) == 0x0005D0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_float_Variable_10) == 0x0005D4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_float_Variable_10' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_FloatFloat_ReturnValue_8) == 0x0005D8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_FloatFloat_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_8) == 0x0005DC, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_8' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_9) == 0x0005E0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_9' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_18) == 0x0005E8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_18' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_9) == 0x0005F0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_9' has a wrong offset!");
+static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_19) == 0x0005F8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_19' has a wrong offset!");
 
 // Function ShowdownEventTile.ShowdownEventTile_C.EventColorizeDispatch
-// 0x01D0 (0x01D0 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct ShowdownEventTile_C_EventColorizeDispatch final
 {
 public:
-	struct FFortTournamentDisplayInfo             DisplayInfo;                                       // 0x0000(0x01D0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FFortTournamentDisplayInfo             DisplayInfo;                                       // 0x0000(0x01A8)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(ShowdownEventTile_C_EventColorizeDispatch) == 0x000008, "Wrong alignment on ShowdownEventTile_C_EventColorizeDispatch");
-static_assert(sizeof(ShowdownEventTile_C_EventColorizeDispatch) == 0x0001D0, "Wrong size on ShowdownEventTile_C_EventColorizeDispatch");
+static_assert(sizeof(ShowdownEventTile_C_EventColorizeDispatch) == 0x0001A8, "Wrong size on ShowdownEventTile_C_EventColorizeDispatch");
 static_assert(offsetof(ShowdownEventTile_C_EventColorizeDispatch, DisplayInfo) == 0x000000, "Member 'ShowdownEventTile_C_EventColorizeDispatch::DisplayInfo' has a wrong offset!");
 
-// Function ShowdownEventTile.ShowdownEventTile_C.EventIntro
-// 0x0004 (0x0004 - 0x0000)
-struct ShowdownEventTile_C_EventIntro final
+// Function ShowdownEventTile.ShowdownEventTile_C.EventColorize
+// 0x01A8 (0x01A8 - 0x0000)
+struct ShowdownEventTile_C_EventColorize final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFortTournamentDisplayInfo             DisplayInfo;                                       // 0x0000(0x01A8)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(ShowdownEventTile_C_EventIntro) == 0x000004, "Wrong alignment on ShowdownEventTile_C_EventIntro");
-static_assert(sizeof(ShowdownEventTile_C_EventIntro) == 0x000004, "Wrong size on ShowdownEventTile_C_EventIntro");
-static_assert(offsetof(ShowdownEventTile_C_EventIntro, Index_0) == 0x000000, "Member 'ShowdownEventTile_C_EventIntro::Index_0' has a wrong offset!");
-
-// Function ShowdownEventTile.ShowdownEventTile_C.EventResize
-// 0x0001 (0x0001 - 0x0000)
-struct ShowdownEventTile_C_EventResize final
-{
-public:
-	bool                                          Out;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ShowdownEventTile_C_EventResize) == 0x000001, "Wrong alignment on ShowdownEventTile_C_EventResize");
-static_assert(sizeof(ShowdownEventTile_C_EventResize) == 0x000001, "Wrong size on ShowdownEventTile_C_EventResize");
-static_assert(offsetof(ShowdownEventTile_C_EventResize, Out) == 0x000000, "Member 'ShowdownEventTile_C_EventResize::Out' has a wrong offset!");
+static_assert(alignof(ShowdownEventTile_C_EventColorize) == 0x000008, "Wrong alignment on ShowdownEventTile_C_EventColorize");
+static_assert(sizeof(ShowdownEventTile_C_EventColorize) == 0x0001A8, "Wrong size on ShowdownEventTile_C_EventColorize");
+static_assert(offsetof(ShowdownEventTile_C_EventColorize, DisplayInfo) == 0x000000, "Member 'ShowdownEventTile_C_EventColorize::DisplayInfo' has a wrong offset!");
 
 // Function ShowdownEventTile.ShowdownEventTile_C.EventSetState
 // 0x0001 (0x0001 - 0x0000)
@@ -72,481 +368,16 @@ static_assert(alignof(ShowdownEventTile_C_EventSetState) == 0x000001, "Wrong ali
 static_assert(sizeof(ShowdownEventTile_C_EventSetState) == 0x000001, "Wrong size on ShowdownEventTile_C_EventSetState");
 static_assert(offsetof(ShowdownEventTile_C_EventSetState, EventState) == 0x000000, "Member 'ShowdownEventTile_C_EventSetState::EventState' has a wrong offset!");
 
-// Function ShowdownEventTile.ShowdownEventTile_C.ExecuteUbergraph_ShowdownEventTile
-// 0x0928 (0x0928 - 0x0000)
-struct ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile final
+// Function ShowdownEventTile.ShowdownEventTile_C.OnRemovedFromFocusPath
+// 0x0008 (0x0008 - 0x0000)
+struct ShowdownEventTile_C_OnRemovedFromFocusPath final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable;                                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_1;                              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_2;                              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x002C(0x000C)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FFortTournamentDisplayInfo& DisplayInfo)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0038(0x000C)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_3;                              // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_Index;                          // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_IntFloat_ReturnValue;            // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_Out;                            // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetEndTime_ReturnValue;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue;               // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetStartTime_ReturnValue;                 // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_1;             // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetEndTime_ReturnValue_1;                 // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_2;              // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetStartTime_ReturnValue_1;               // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_2;             // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_3;             // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_4;             // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_5;             // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_3;              // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetEndTime_ReturnValue_2;                 // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetStartTime_ReturnValue_2;               // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_2;     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default;                             // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_4;              // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetEndTime_ReturnValue_3;                 // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_5;              // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_1;                           // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_6;              // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFocusEvent                            K2Node_Event_InFocusEvent_1;                       // 0x0130(0x0008)(NoDestructor)
-	float                                         CallFunc_PauseAnimation_ReturnValue_6;             // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetStartTime_ReturnValue_3;               // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_7;             // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_3;     // 0x0144(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_145[0x3];                                      // 0x0145(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_3;           // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetEndTime_ReturnValue_4;                 // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_7;              // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_3;      // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_8;             // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetStartTime_ReturnValue_4;               // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_9;             // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_4;     // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_175[0x3];                                      // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_4;           // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetEndTime_ReturnValue_5;                 // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_8;              // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_4;      // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFocusEvent                            K2Node_Event_InFocusEvent;                         // 0x0198(0x0008)(NoDestructor)
-	EFortShowdownEventState                       K2Node_CustomEvent_EventState;                     // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x01A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x01A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_3;        // 0x01A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_4;        // 0x01A6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x01A7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_5;        // 0x01A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x01AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1AB[0x5];                                      // 0x01AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_4;                              // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_5;                              // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_10;            // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetStartTime_ReturnValue_5;               // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_11;            // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_5;     // 0x01CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1CD[0x3];                                      // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_5;           // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_9;              // 0x01D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetEndTime_ReturnValue_6;                 // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x01E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E5[0x3];                                      // 0x01E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_5;      // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_2;                           // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_3;                           // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_10;             // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EFortShowdownEventState EventState)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0208(0x000C)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_214[0x4];                                      // 0x0214(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_6;                              // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_12;            // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetStartTime_ReturnValue_6;               // 0x0224(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_13;            // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_6;     // 0x022C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22D[0x3];                                      // 0x022D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_6;           // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetEndTime_ReturnValue_7;                 // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23C[0x4];                                      // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_11;             // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_6;      // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_14;            // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetStartTime_ReturnValue_7;               // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_15;            // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_7;     // 0x025C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25D[0x3];                                      // 0x025D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_7;           // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetEndTime_ReturnValue_8;                 // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26C[0x4];                                      // 0x026C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_12;             // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_7;      // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_5;                              // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default_4;                           // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFortTournamentDisplayInfo             K2Node_CustomEvent_DisplayInfo_1;                  // 0x0290(0x01D0)()
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_13;             // 0x0460(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_7;                              // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFortTournamentDisplayInfo             K2Node_CustomEvent_DisplayInfo;                    // 0x0470(0x01D0)()
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0640(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_6;                              // 0x0648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_649[0x7];                                      // 0x0649(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_8;                              // 0x0650(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_5;                           // 0x0658(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_7;                              // 0x0660(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_661[0x7];                                      // 0x0661(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_14;             // 0x0668(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_9;                              // 0x0670(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_6;                           // 0x0678(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_15;             // 0x0680(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_8;                              // 0x0688(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_689[0x7];                                      // 0x0689(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default_7;                           // 0x0690(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_16;             // 0x0698(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_16;            // 0x06A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetStartTime_ReturnValue_8;               // 0x06A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue_17;            // 0x06A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_8;     // 0x06AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6AD[0x3];                                      // 0x06AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_8;           // 0x06B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_17;             // 0x06B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetEndTime_ReturnValue_9;                 // 0x06C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C4[0x4];                                      // 0x06C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_10;                             // 0x06C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_8;      // 0x06D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_8;                           // 0x06D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_9;                              // 0x06E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6E1[0x7];                                      // 0x06E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_18;             // 0x06E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_9;                           // 0x06F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_19;             // 0x06F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x0700(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_704[0x4];                                      // 0x0704(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x0708(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x0710(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x0718(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_B_ImplicitCast;    // 0x0720(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0728(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast;   // 0x0730(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_734[0x4];                                      // 0x0734(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0738(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_1;        // 0x0740(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_1;  // 0x0748(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast_1;   // 0x0750(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_1;  // 0x0758(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast_1;        // 0x0760(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast_2;   // 0x0768(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_2;  // 0x0770(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast_2;        // 0x0778(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_1; // 0x0780(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_784[0x4];                                      // 0x0784(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_1;   // 0x0788(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_2;        // 0x0790(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_2;  // 0x0798(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_2; // 0x07A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_3; // 0x07A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_2;   // 0x07A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_4; // 0x07B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7B4[0x4];                                      // 0x07B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast_3;   // 0x07B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_3;  // 0x07C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_3;        // 0x07C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_3;  // 0x07D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast_3;        // 0x07D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_5; // 0x07E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7E4[0x4];                                      // 0x07E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_3;   // 0x07E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast_4;   // 0x07F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_4;  // 0x07F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_4;        // 0x0800(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_4;  // 0x0808(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast_4;        // 0x0810(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_6; // 0x0818(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81C[0x4];                                      // 0x081C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_4;   // 0x0820(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast_5;   // 0x0828(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_5;  // 0x0830(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_5;        // 0x0838(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_5;  // 0x0840(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast_5;        // 0x0848(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_7; // 0x0850(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_854[0x4];                                      // 0x0854(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_5;   // 0x0858(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_8; // 0x0860(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetRenderOpacity_InOpacity_ImplicitCast;  // 0x0864(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast_6;   // 0x0868(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_6;  // 0x0870(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_6;        // 0x0878(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_6;  // 0x0880(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast_6;        // 0x0888(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_9; // 0x0890(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_894[0x4];                                      // 0x0894(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_6;   // 0x0898(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast_7;   // 0x08A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_7;  // 0x08A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_7;        // 0x08B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_7;  // 0x08B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast_7;        // 0x08C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_10; // 0x08C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8CC[0x4];                                      // 0x08CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_7;   // 0x08D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_11; // 0x08D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_12; // 0x08DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_13; // 0x08E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_14; // 0x08E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast_8;   // 0x08E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_8;  // 0x08F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast_8;        // 0x08F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_8;  // 0x0900(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast_8;        // 0x0908(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_15; // 0x0910(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_914[0x4];                                      // 0x0914(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_8;   // 0x0918(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_16; // 0x0920(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_StartAtTime_ImplicitCast_17; // 0x0924(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-static_assert(alignof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile) == 0x000008, "Wrong alignment on ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile");
-static_assert(sizeof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile) == 0x000928, "Wrong size on ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, EntryPoint) == 0x000000, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_real_Variable) == 0x000008, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_real_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable) == 0x000010, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_real_Variable_1) == 0x000018, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_real_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_real_Variable_2) == 0x000020, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_real_Variable_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_1) == 0x000028, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_2) == 0x000029, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CreateDelegate_OutputDelegate) == 0x00002C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CreateDelegate_OutputDelegate_1) == 0x000038, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_real_Variable_3) == 0x000048, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_real_Variable_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_3) == 0x000050, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CustomEvent_Index) == 0x000054, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CustomEvent_Index' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Multiply_IntFloat_ReturnValue) == 0x000058, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Multiply_IntFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue) == 0x000060, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CustomEvent_Out) == 0x000068, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CustomEvent_Out' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue) == 0x00006C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Not_PreBool_ReturnValue) == 0x000070, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_1) == 0x000078, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue) == 0x000080, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue) == 0x000084, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_1) == 0x000088, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x00008C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000090, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_1) == 0x000098, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_2) == 0x0000A0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0000A8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_1) == 0x0000B0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_2) == 0x0000B4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_3) == 0x0000B8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_4) == 0x0000BC, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_5) == 0x0000C0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x0000C4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0000C8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_3) == 0x0000D0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_2) == 0x0000D8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_2) == 0x0000DC, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0000E0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_ReturnValue_2) == 0x0000E8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default) == 0x0000F0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_4) == 0x0000F8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000100, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_3) == 0x000108, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_5) == 0x000110, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x000118, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_1) == 0x000120, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_6) == 0x000128, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Event_InFocusEvent_1) == 0x000130, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Event_InFocusEvent_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_6) == 0x000138, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_3) == 0x00013C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_7) == 0x000140, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_ReturnValue_3) == 0x000144, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_ReturnValue_3) == 0x000148, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_4) == 0x000150, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_7) == 0x000158, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_ReturnValue_3) == 0x000160, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_8) == 0x000168, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_4) == 0x00016C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_9) == 0x000170, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_ReturnValue_4) == 0x000174, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_ReturnValue_4) == 0x000178, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_5) == 0x000180, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_8) == 0x000188, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_ReturnValue_4) == 0x000190, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Event_InFocusEvent) == 0x000198, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Event_InFocusEvent' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CustomEvent_EventState) == 0x0001A0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CustomEvent_EventState' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0001A1, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x0001A2, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x0001A3, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_BooleanOR_ReturnValue) == 0x0001A4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_EqualEqual_ByteByte_ReturnValue_3) == 0x0001A5, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_EqualEqual_ByteByte_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_EqualEqual_ByteByte_ReturnValue_4) == 0x0001A6, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_EqualEqual_ByteByte_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_BooleanOR_ReturnValue_1) == 0x0001A7, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_BooleanOR_ReturnValue_2) == 0x0001A8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_EqualEqual_ByteByte_ReturnValue_5) == 0x0001A9, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_EqualEqual_ByteByte_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_BooleanOR_ReturnValue_3) == 0x0001AA, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_BooleanOR_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_real_Variable_4) == 0x0001B0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_real_Variable_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_real_Variable_5) == 0x0001B8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_real_Variable_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_10) == 0x0001C0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_5) == 0x0001C4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_11) == 0x0001C8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_ReturnValue_5) == 0x0001CC, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_ReturnValue_5) == 0x0001D0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_9) == 0x0001D8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_6) == 0x0001E0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_4) == 0x0001E4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_ReturnValue_5) == 0x0001E8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_2) == 0x0001F0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_3) == 0x0001F8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_10) == 0x000200, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CreateDelegate_OutputDelegate_2) == 0x000208, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_real_Variable_6) == 0x000218, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_real_Variable_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_12) == 0x000220, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_6) == 0x000224, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_13) == 0x000228, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_ReturnValue_6) == 0x00022C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_ReturnValue_6) == 0x000230, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_7) == 0x000238, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_11) == 0x000240, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_ReturnValue_6) == 0x000248, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_14) == 0x000250, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_7) == 0x000254, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_15) == 0x000258, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_ReturnValue_7) == 0x00025C, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_ReturnValue_7) == 0x000260, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_8) == 0x000268, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_12) == 0x000270, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_ReturnValue_7) == 0x000278, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_5) == 0x000280, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_4) == 0x000288, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CustomEvent_DisplayInfo_1) == 0x000290, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CustomEvent_DisplayInfo_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_13) == 0x000460, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_real_Variable_7) == 0x000468, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_real_Variable_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_CustomEvent_DisplayInfo) == 0x000470, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_CustomEvent_DisplayInfo' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000640, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_6) == 0x000648, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_real_Variable_8) == 0x000650, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_real_Variable_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_5) == 0x000658, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_7) == 0x000660, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_14) == 0x000668, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_real_Variable_9) == 0x000670, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_real_Variable_9' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_6) == 0x000678, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_15) == 0x000680, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_8) == 0x000688, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_7) == 0x000690, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_16) == 0x000698, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_16) == 0x0006A0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetStartTime_ReturnValue_8) == 0x0006A4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetStartTime_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PauseAnimation_ReturnValue_17) == 0x0006A8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PauseAnimation_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_ReturnValue_8) == 0x0006AC, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_ReturnValue_8) == 0x0006B0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_17) == 0x0006B8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_GetEndTime_ReturnValue_9) == 0x0006C0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_GetEndTime_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_real_Variable_10) == 0x0006C8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_real_Variable_10' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_ReturnValue_8) == 0x0006D0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_8) == 0x0006D8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, Temp_bool_Variable_9) == 0x0006E0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::Temp_bool_Variable_9' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_18) == 0x0006E8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_18' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, K2Node_Select_Default_9) == 0x0006F0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::K2Node_Select_Default_9' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_ReturnValue_19) == 0x0006F8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_ReturnValue_19' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Delay_Duration_ImplicitCast) == 0x000700, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x000708, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast) == 0x000710, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x000718, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_B_ImplicitCast) == 0x000720, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000728, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast) == 0x000730, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x000738, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_B_ImplicitCast_1) == 0x000740, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_1) == 0x000748, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_B_ImplicitCast_1) == 0x000750, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_1) == 0x000758, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_A_ImplicitCast_1) == 0x000760, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_B_ImplicitCast_2) == 0x000768, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_B_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_2) == 0x000770, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_A_ImplicitCast_2) == 0x000778, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_1) == 0x000780, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_A_ImplicitCast_1) == 0x000788, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_B_ImplicitCast_2) == 0x000790, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_B_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_2) == 0x000798, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_2) == 0x0007A0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_3) == 0x0007A4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_A_ImplicitCast_2) == 0x0007A8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_4) == 0x0007B0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_B_ImplicitCast_3) == 0x0007B8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_B_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_3) == 0x0007C0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_B_ImplicitCast_3) == 0x0007C8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_B_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_3) == 0x0007D0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_A_ImplicitCast_3) == 0x0007D8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_5) == 0x0007E0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_A_ImplicitCast_3) == 0x0007E8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_B_ImplicitCast_4) == 0x0007F0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_B_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_4) == 0x0007F8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_B_ImplicitCast_4) == 0x000800, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_B_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_4) == 0x000808, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_A_ImplicitCast_4) == 0x000810, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_A_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_6) == 0x000818, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_A_ImplicitCast_4) == 0x000820, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_A_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_B_ImplicitCast_5) == 0x000828, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_B_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_5) == 0x000830, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_B_ImplicitCast_5) == 0x000838, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_B_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_5) == 0x000840, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_A_ImplicitCast_5) == 0x000848, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_A_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_7) == 0x000850, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_A_ImplicitCast_5) == 0x000858, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_A_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_8) == 0x000860, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_SetRenderOpacity_InOpacity_ImplicitCast) == 0x000864, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_SetRenderOpacity_InOpacity_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_B_ImplicitCast_6) == 0x000868, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_B_ImplicitCast_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_6) == 0x000870, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_B_ImplicitCast_6) == 0x000878, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_B_ImplicitCast_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_6) == 0x000880, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_A_ImplicitCast_6) == 0x000888, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_A_ImplicitCast_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_9) == 0x000890, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_9' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_A_ImplicitCast_6) == 0x000898, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_A_ImplicitCast_6' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_B_ImplicitCast_7) == 0x0008A0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_B_ImplicitCast_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_7) == 0x0008A8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_B_ImplicitCast_7) == 0x0008B0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_B_ImplicitCast_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_7) == 0x0008B8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_A_ImplicitCast_7) == 0x0008C0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_A_ImplicitCast_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_10) == 0x0008C8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_10' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_A_ImplicitCast_7) == 0x0008D0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_A_ImplicitCast_7' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_11) == 0x0008D8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_11' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_12) == 0x0008DC, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_12' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_13) == 0x0008E0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_13' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_14) == 0x0008E4, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_14' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_B_ImplicitCast_8) == 0x0008E8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_B_ImplicitCast_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_8) == 0x0008F0, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_B_ImplicitCast_8) == 0x0008F8, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_B_ImplicitCast_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_8) == 0x000900, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_LessEqual_DoubleDouble_B_ImplicitCast_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Add_DoubleDouble_A_ImplicitCast_8) == 0x000908, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Add_DoubleDouble_A_ImplicitCast_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_15) == 0x000910, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_15' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_Subtract_DoubleDouble_A_ImplicitCast_8) == 0x000918, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_Subtract_DoubleDouble_A_ImplicitCast_8' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_16) == 0x000920, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_16' has a wrong offset!");
-static_assert(offsetof(ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile, CallFunc_PlayAnimation_StartAtTime_ImplicitCast_17) == 0x000924, "Member 'ShowdownEventTile_C_ExecuteUbergraph_ShowdownEventTile::CallFunc_PlayAnimation_StartAtTime_ImplicitCast_17' has a wrong offset!");
+static_assert(alignof(ShowdownEventTile_C_OnRemovedFromFocusPath) == 0x000004, "Wrong alignment on ShowdownEventTile_C_OnRemovedFromFocusPath");
+static_assert(sizeof(ShowdownEventTile_C_OnRemovedFromFocusPath) == 0x000008, "Wrong size on ShowdownEventTile_C_OnRemovedFromFocusPath");
+static_assert(offsetof(ShowdownEventTile_C_OnRemovedFromFocusPath, InFocusEvent) == 0x000000, "Member 'ShowdownEventTile_C_OnRemovedFromFocusPath::InFocusEvent' has a wrong offset!");
 
 // Function ShowdownEventTile.ShowdownEventTile_C.OnAddedToFocusPath
 // 0x0008 (0x0008 - 0x0000)
@@ -559,16 +390,27 @@ static_assert(alignof(ShowdownEventTile_C_OnAddedToFocusPath) == 0x000004, "Wron
 static_assert(sizeof(ShowdownEventTile_C_OnAddedToFocusPath) == 0x000008, "Wrong size on ShowdownEventTile_C_OnAddedToFocusPath");
 static_assert(offsetof(ShowdownEventTile_C_OnAddedToFocusPath, InFocusEvent) == 0x000000, "Member 'ShowdownEventTile_C_OnAddedToFocusPath::InFocusEvent' has a wrong offset!");
 
-// Function ShowdownEventTile.ShowdownEventTile_C.OnRemovedFromFocusPath
-// 0x0008 (0x0008 - 0x0000)
-struct ShowdownEventTile_C_OnRemovedFromFocusPath final
+// Function ShowdownEventTile.ShowdownEventTile_C.EventResize
+// 0x0001 (0x0001 - 0x0000)
+struct ShowdownEventTile_C_EventResize final
 {
 public:
-	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	bool                                          Out;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ShowdownEventTile_C_OnRemovedFromFocusPath) == 0x000004, "Wrong alignment on ShowdownEventTile_C_OnRemovedFromFocusPath");
-static_assert(sizeof(ShowdownEventTile_C_OnRemovedFromFocusPath) == 0x000008, "Wrong size on ShowdownEventTile_C_OnRemovedFromFocusPath");
-static_assert(offsetof(ShowdownEventTile_C_OnRemovedFromFocusPath, InFocusEvent) == 0x000000, "Member 'ShowdownEventTile_C_OnRemovedFromFocusPath::InFocusEvent' has a wrong offset!");
+static_assert(alignof(ShowdownEventTile_C_EventResize) == 0x000001, "Wrong alignment on ShowdownEventTile_C_EventResize");
+static_assert(sizeof(ShowdownEventTile_C_EventResize) == 0x000001, "Wrong size on ShowdownEventTile_C_EventResize");
+static_assert(offsetof(ShowdownEventTile_C_EventResize, Out) == 0x000000, "Member 'ShowdownEventTile_C_EventResize::Out' has a wrong offset!");
+
+// Function ShowdownEventTile.ShowdownEventTile_C.EventIntro
+// 0x0004 (0x0004 - 0x0000)
+struct ShowdownEventTile_C_EventIntro final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ShowdownEventTile_C_EventIntro) == 0x000004, "Wrong alignment on ShowdownEventTile_C_EventIntro");
+static_assert(sizeof(ShowdownEventTile_C_EventIntro) == 0x000004, "Wrong size on ShowdownEventTile_C_EventIntro");
+static_assert(offsetof(ShowdownEventTile_C_EventIntro, Index_0) == 0x000000, "Member 'ShowdownEventTile_C_EventIntro::Index_0' has a wrong offset!");
 
 // Function ShowdownEventTile.ShowdownEventTile_C.SetData
 // 0x0020 (0x0020 - 0x0000)

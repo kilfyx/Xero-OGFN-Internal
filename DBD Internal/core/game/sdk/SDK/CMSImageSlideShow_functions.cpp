@@ -17,18 +17,38 @@
 namespace SDK
 {
 
+// Function CMSImageSlideShow.CMSImageSlideShow_C.SetMediaURLs
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<class FString>&            MediaURLs                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+
+void UCMSImageSlideShow_C::SetMediaURLs(const TArray<class FString>& MediaURLs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CMSImageSlideShow_C", "SetMediaURLs");
+
+	Params::CMSImageSlideShow_C_SetMediaURLs Parms{};
+
+	Parms.MediaURLs = std::move(MediaURLs);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function CMSImageSlideShow.CMSImageSlideShow_C.BndEvt__Images_K2Node_ComponentBoundEvent_0_OnCurrentPageIndexChanged__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class UCommonWidgetCarousel*            CarouselWidget                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UCommonWidgetCarousel*            CarouselWidget                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   CurrentPageIndex                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UCMSImageSlideShow_C::BndEvt__Images_K2Node_ComponentBoundEvent_0_OnCurrentPageIndexChanged__DelegateSignature(class UCommonWidgetCarousel* CarouselWidget, int32 CurrentPageIndex)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__Images_K2Node_ComponentBoundEvent_0_OnCurrentPageIndexChanged__DelegateSignature");
+		Func = Class->GetFunction("CMSImageSlideShow_C", "BndEvt__Images_K2Node_ComponentBoundEvent_0_OnCurrentPageIndexChanged__DelegateSignature");
 
 	Params::CMSImageSlideShow_C_BndEvt__Images_K2Node_ComponentBoundEvent_0_OnCurrentPageIndexChanged__DelegateSignature Parms{};
 
@@ -47,33 +67,13 @@ void UCMSImageSlideShow_C::BndEvt__Images_K2Node_ComponentBoundEvent_0_OnCurrent
 void UCMSImageSlideShow_C::ExecuteUbergraph_CMSImageSlideShow(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_CMSImageSlideShow");
+		Func = Class->GetFunction("CMSImageSlideShow_C", "ExecuteUbergraph_CMSImageSlideShow");
 
 	Params::CMSImageSlideShow_C_ExecuteUbergraph_CMSImageSlideShow Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function CMSImageSlideShow.CMSImageSlideShow_C.SetMediaURLs
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class FString>                   MediaURLs                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UCMSImageSlideShow_C::SetMediaURLs(const TArray<class FString>& MediaURLs)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetMediaURLs");
-
-	Params::CMSImageSlideShow_C_SetMediaURLs Parms{};
-
-	Parms.MediaURLs = std::move(MediaURLs);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

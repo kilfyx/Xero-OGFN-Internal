@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // Class SrirachaRanchHoagie.StreamingRadioPlayerComponent_Hoagie
-// 0x0000 (0x0448 - 0x0448)
+// 0x0000 (0x0428 - 0x0428)
 class UStreamingRadioPlayerComponent_Hoagie : public UStreamingRadioPlayerComponent
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UStreamingRadioPlayerComponent_Hoagie>();
 	}
 };
+static_assert(alignof(UStreamingRadioPlayerComponent_Hoagie) == 0x000008, "Wrong alignment on UStreamingRadioPlayerComponent_Hoagie");
+static_assert(sizeof(UStreamingRadioPlayerComponent_Hoagie) == 0x000428, "Wrong size on UStreamingRadioPlayerComponent_Hoagie");
 
 }
 

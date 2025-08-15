@@ -17,19 +17,156 @@
 namespace SDK
 {
 
-// Function Curie.CurieInterface.OnCurieContainerAcquired_BP
-// (Event, Public, BlueprintEvent)
+// Function Curie.CurieComponent.HandleOwningActorDestroyed
+// (Native, Protected)
 // Parameters:
-// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           Owner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void ICurieInterface::OnCurieContainerAcquired_BP(const struct FCurieContainerHandle& CurieContainerHandle)
+void UCurieComponent::HandleOwningActorDestroyed(class AActor* Owner)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("CurieInterface", "OnCurieContainerAcquired_BP");
+		Func = Class->GetFunction("CurieComponent", "HandleOwningActorDestroyed");
 
-	Params::CurieInterface_OnCurieContainerAcquired_BP Parms{};
+	Params::CurieComponent_HandleOwningActorDestroyed Parms{};
+
+	Parms.Owner = Owner;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Curie.CurieComponent.HasAnyElementAttached
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FGameplayTagContainer&     ElementIdentifiers                                     (Parm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCurieComponent::HasAnyElementAttached(const struct FGameplayTagContainer& ElementIdentifiers) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CurieComponent", "HasAnyElementAttached");
+
+	Params::CurieComponent_HasAnyElementAttached Parms{};
+
+	Parms.ElementIdentifiers = std::move(ElementIdentifiers);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Curie.CurieComponent.HasElementAttached
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FGameplayTag&              ElementIdentifier                                      (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCurieComponent::HasElementAttached(const struct FGameplayTag& ElementIdentifier) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CurieComponent", "HasElementAttached");
+
+	Params::CurieComponent_HasElementAttached Parms{};
+
+	Parms.ElementIdentifier = std::move(ElementIdentifier);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Curie.CurieComponent.HasStateAttached
+// (BlueprintAuthorityOnly, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FGameplayTag&              StateIdentifier                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCurieComponent::HasStateAttached(const struct FGameplayTag& StateIdentifier) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CurieComponent", "HasStateAttached");
+
+	Params::CurieComponent_HasStateAttached Parms{};
+
+	Parms.StateIdentifier = std::move(StateIdentifier);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Curie.CurieComponent.IsInteractingWithElement
+// (Final, BlueprintAuthorityOnly, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FGameplayTag&              Element                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCurieComponent::IsInteractingWithElement(const struct FGameplayTag& Element) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CurieComponent", "IsInteractingWithElement");
+
+	Params::CurieComponent_IsInteractingWithElement Parms{};
+
+	Parms.Element = std::move(Element);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Curie.CurieInterface.OnCurieContainerInitialized_BP
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ICurieInterface::OnCurieContainerInitialized_BP(const struct FCurieContainerHandle& CurieContainerHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("CurieInterface", "OnCurieContainerInitialized_BP");
+
+	Params::CurieInterface_OnCurieContainerInitialized_BP Parms{};
 
 	Parms.CurieContainerHandle = std::move(CurieContainerHandle);
 
@@ -37,39 +174,19 @@ void ICurieInterface::OnCurieContainerAcquired_BP(const struct FCurieContainerHa
 }
 
 
-// Function Curie.CurieInterface.OnCurieContainerReleased_BP
-// (Event, Public, BlueprintEvent)
+// Function Curie.CurieInterface.OnCurieContainerShutdown_BP
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void ICurieInterface::OnCurieContainerReleased_BP(const struct FCurieContainerHandle& CurieContainerHandle)
+void ICurieInterface::OnCurieContainerShutdown_BP(const struct FCurieContainerHandle& CurieContainerHandle)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("CurieInterface", "OnCurieContainerReleased_BP");
+		Func = AsUObject()->Class->GetFunction("CurieInterface", "OnCurieContainerShutdown_BP");
 
-	Params::CurieInterface_OnCurieContainerReleased_BP Parms{};
-
-	Parms.CurieContainerHandle = std::move(CurieContainerHandle);
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Curie.CurieInterface.OnCurieContainerReparented_BP
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ICurieInterface::OnCurieContainerReparented_BP(const struct FCurieContainerHandle& CurieContainerHandle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("CurieInterface", "OnCurieContainerReparented_BP");
-
-	Params::CurieInterface_OnCurieContainerReparented_BP Parms{};
+	Params::CurieInterface_OnCurieContainerShutdown_BP Parms{};
 
 	Parms.CurieContainerHandle = std::move(CurieContainerHandle);
 
@@ -78,10 +195,10 @@ void ICurieInterface::OnCurieContainerReparented_BP(const struct FCurieContainer
 
 
 // Function Curie.CurieInterface.OnCurieElementAttached_BP
-// (Event, Public, BlueprintEvent)
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTag&              ElementTag                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              ElementTag                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void ICurieInterface::OnCurieElementAttached_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& ElementTag)
 {
@@ -100,10 +217,10 @@ void ICurieInterface::OnCurieElementAttached_BP(const struct FCurieContainerHand
 
 
 // Function Curie.CurieInterface.OnCurieElementDetached_BP
-// (Event, Public, BlueprintEvent)
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTag&              ElementTag                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              ElementTag                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void ICurieInterface::OnCurieElementDetached_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& ElementTag)
 {
@@ -124,8 +241,8 @@ void ICurieInterface::OnCurieElementDetached_BP(const struct FCurieContainerHand
 // Function Curie.CurieInterface.OnCurieElementInteract_BP
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTag&              ElementTag                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              ElementTag                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FCurieInteractParamsHandle&InteractParamsHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void ICurieInterface::OnCurieElementInteract_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& ElementTag, const struct FCurieInteractParamsHandle& InteractParamsHandle)
@@ -148,8 +265,8 @@ void ICurieInterface::OnCurieElementInteract_BP(const struct FCurieContainerHand
 // Function Curie.CurieInterface.OnCurieElementInteractBegun_BP
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTag&              ElementTag                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              ElementTag                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FCurieInteractParamsHandle&InteractParamsHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void ICurieInterface::OnCurieElementInteractBegun_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& ElementTag, const struct FCurieInteractParamsHandle& InteractParamsHandle)
@@ -172,8 +289,8 @@ void ICurieInterface::OnCurieElementInteractBegun_BP(const struct FCurieContaine
 // Function Curie.CurieInterface.OnCurieElementInteractEnded_BP
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTag&              ElementTag                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              ElementTag                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FCurieInteractParamsHandle&InteractParamsHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void ICurieInterface::OnCurieElementInteractEnded_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& ElementTag, const struct FCurieInteractParamsHandle& InteractParamsHandle)
@@ -194,10 +311,10 @@ void ICurieInterface::OnCurieElementInteractEnded_BP(const struct FCurieContaine
 
 
 // Function Curie.CurieInterface.OnCurieStateAttached_BP
-// (Event, Public, BlueprintEvent)
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTag&              StateTag                                               (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              StateTag                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void ICurieInterface::OnCurieStateAttached_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& StateTag)
 {
@@ -215,11 +332,33 @@ void ICurieInterface::OnCurieStateAttached_BP(const struct FCurieContainerHandle
 }
 
 
-// Function Curie.CurieInterface.OnCurieStateDetached_BP
-// (Event, Public, BlueprintEvent)
+// Function Curie.CurieInterface.OnCurieStateConsumed_BP
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTag&              StateTag                                               (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              StateTag                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ICurieInterface::OnCurieStateConsumed_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& StateTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("CurieInterface", "OnCurieStateConsumed_BP");
+
+	Params::CurieInterface_OnCurieStateConsumed_BP Parms{};
+
+	Parms.CurieContainerHandle = std::move(CurieContainerHandle);
+	Parms.StateTag = std::move(StateTag);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function Curie.CurieInterface.OnCurieStateDetached_BP
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              StateTag                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void ICurieInterface::OnCurieStateDetached_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& StateTag)
 {
@@ -416,31 +555,6 @@ void UCurieManager::BindDelegateForCurieStateDetached(class UObject* CurieOwner,
 
 	Parms.CurieOwner = CurieOwner;
 	Parms.Delegate = Delegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Curie.CurieManager.HandleContainerOwnerDestroyed
-// (Final, Native, Private)
-// Parameters:
-// class AActor*                           OwnerActor                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCurieManager::HandleContainerOwnerDestroyed(class AActor* OwnerActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CurieManager", "HandleContainerOwnerDestroyed");
-
-	Params::CurieManager_HandleContainerOwnerDestroyed Parms{};
-
-	Parms.OwnerActor = OwnerActor;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

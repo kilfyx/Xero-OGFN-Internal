@@ -17,54 +17,6 @@
 namespace SDK
 {
 
-// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.AnimateViolator
-// (BlueprintCallable, BlueprintEvent)
-
-void UAthenaLobbyMatchmakingPlay_C::AnimateViolator()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("AnimateViolator");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.BndEvt__PlayButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaLobbyMatchmakingPlay_C::BndEvt__PlayButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__PlayButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
-
-	Params::AthenaLobbyMatchmakingPlay_C_BndEvt__PlayButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAthenaLobbyMatchmakingPlay_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.ExecuteUbergraph_AthenaLobbyMatchmakingPlay
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -73,9 +25,9 @@ void UAthenaLobbyMatchmakingPlay_C::Construct()
 void UAthenaLobbyMatchmakingPlay_C::ExecuteUbergraph_AthenaLobbyMatchmakingPlay(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaLobbyMatchmakingPlay");
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "ExecuteUbergraph_AthenaLobbyMatchmakingPlay");
 
 	Params::AthenaLobbyMatchmakingPlay_C_ExecuteUbergraph_AthenaLobbyMatchmakingPlay Parms{};
 
@@ -85,45 +37,37 @@ void UAthenaLobbyMatchmakingPlay_C::ExecuteUbergraph_AthenaLobbyMatchmakingPlay(
 }
 
 
-// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.InitFonts
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UAthenaLobbyMatchmakingPlay_C::InitFonts()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("InitFonts");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.OnAvailablePlaylistsUpdated
+// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.ShouldShowMatchmakingDetails
 // (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bShow                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaLobbyMatchmakingPlay_C::OnAvailablePlaylistsUpdated()
+void UAthenaLobbyMatchmakingPlay_C::ShouldShowMatchmakingDetails(bool bShow)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnAvailablePlaylistsUpdated");
 
-	UObject::ProcessEvent(Func, nullptr);
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "ShouldShowMatchmakingDetails");
+
+	Params::AthenaLobbyMatchmakingPlay_C_ShouldShowMatchmakingDetails Parms{};
+
+	Parms.bShow = bShow;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.OnCrossplayPreferencesChanged
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsCrossplayEnabled                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsCrossplayEnabled                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaLobbyMatchmakingPlay_C::OnCrossplayPreferencesChanged(bool IsCrossplayEnabled)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnCrossplayPreferencesChanged");
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "OnCrossplayPreferencesChanged");
 
 	Params::AthenaLobbyMatchmakingPlay_C_OnCrossplayPreferencesChanged Parms{};
 
@@ -139,26 +83,68 @@ void UAthenaLobbyMatchmakingPlay_C::OnCrossplayPreferencesChanged(bool IsCrosspl
 void UAthenaLobbyMatchmakingPlay_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnInitialized");
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaLobbyMatchmakingPlay_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "Tick");
+
+	Params::AthenaLobbyMatchmakingPlay_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.BndEvt__PlayButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaLobbyMatchmakingPlay_C::BndEvt__PlayButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "BndEvt__PlayButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+
+	Params::AthenaLobbyMatchmakingPlay_C_BndEvt__PlayButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.OnMatchmakingFinishedBlueprint
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFortPlaylistAthena*              Playlist                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UFortPlaylistAthena*              Playlist                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaLobbyMatchmakingPlay_C::OnMatchmakingFinishedBlueprint(bool bSuccess, const class UFortPlaylistAthena* Playlist)
+void UAthenaLobbyMatchmakingPlay_C::OnMatchmakingFinishedBlueprint(bool bSuccess, class UFortPlaylistAthena* Playlist)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnMatchmakingFinishedBlueprint");
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "OnMatchmakingFinishedBlueprint");
 
 	Params::AthenaLobbyMatchmakingPlay_C_OnMatchmakingFinishedBlueprint Parms{};
 
@@ -169,17 +155,117 @@ void UAthenaLobbyMatchmakingPlay_C::OnMatchmakingFinishedBlueprint(bool bSuccess
 }
 
 
+// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.Animate
+// (BlueprintCallable, BlueprintEvent)
+
+void UAthenaLobbyMatchmakingPlay_C::Animate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "Animate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.UpdateCustomViolatorText
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      ModeName                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      SubText                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UAthenaLobbyMatchmakingPlay_C::UpdateCustomViolatorText(const class FText& ModeName, const class FText& SubText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "UpdateCustomViolatorText");
+
+	Params::AthenaLobbyMatchmakingPlay_C_UpdateCustomViolatorText Parms{};
+
+	Parms.ModeName = std::move(ModeName);
+	Parms.SubText = std::move(SubText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.OnNewModeViolatorUpdated
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bShouldShow                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaLobbyMatchmakingPlay_C::OnNewModeViolatorUpdated(bool bShouldShow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "OnNewModeViolatorUpdated");
+
+	Params::AthenaLobbyMatchmakingPlay_C_OnNewModeViolatorUpdated Parms{};
+
+	Parms.bShouldShow = bShouldShow;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.SetSquadFillText
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    InCurrentSquadFill                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaLobbyMatchmakingPlay_C::SetSquadFillText(bool InCurrentSquadFill)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "SetSquadFillText");
+
+	Params::AthenaLobbyMatchmakingPlay_C_SetSquadFillText Parms{};
+
+	Parms.InCurrentSquadFill = InCurrentSquadFill;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.PlaylistChanged
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FPlaylistFrontEndData&     NewPlaylist                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      PlaylistCMSOverrideName                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// EFortLobbyType                          LobbyType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaLobbyMatchmakingPlay_C::PlaylistChanged(const struct FPlaylistFrontEndData& NewPlaylist, const class FText& PlaylistCMSOverrideName, EFortLobbyType LobbyType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "PlaylistChanged");
+
+	Params::AthenaLobbyMatchmakingPlay_C_PlaylistChanged Parms{};
+
+	Parms.NewPlaylist = std::move(NewPlaylist);
+	Parms.PlaylistCMSOverrideName = std::move(PlaylistCMSOverrideName);
+	Parms.LobbyType = LobbyType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.OnSetCancelButtonText
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// class FText                             CancelButtonText                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      CancelButtonText                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UAthenaLobbyMatchmakingPlay_C::OnSetCancelButtonText(const class FText& CancelButtonText)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnSetCancelButtonText");
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "OnSetCancelButtonText");
 
 	Params::AthenaLobbyMatchmakingPlay_C_OnSetCancelButtonText Parms{};
 
@@ -192,14 +278,14 @@ void UAthenaLobbyMatchmakingPlay_C::OnSetCancelButtonText(const class FText& Can
 // Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.OnSetPlayButtonText
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// class FText                             PlayButtonText                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      PlayButtonText                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UAthenaLobbyMatchmakingPlay_C::OnSetPlayButtonText(const class FText& PlayButtonText)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnSetPlayButtonText");
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "OnSetPlayButtonText");
 
 	Params::AthenaLobbyMatchmakingPlay_C_OnSetPlayButtonText Parms{};
 
@@ -209,160 +295,85 @@ void UAthenaLobbyMatchmakingPlay_C::OnSetPlayButtonText(const class FText& PlayB
 }
 
 
-// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.OnViolatorStyleRefreshed
+// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.OnAvailablePlaylistsUpdated
 // (Event, Protected, BlueprintEvent)
-// Parameters:
-// EFortMatchmakingViolatorStyle           NewViolatorStyle                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaLobbyMatchmakingPlay_C::OnViolatorStyleRefreshed(const EFortMatchmakingViolatorStyle NewViolatorStyle)
+void UAthenaLobbyMatchmakingPlay_C::OnAvailablePlaylistsUpdated()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnViolatorStyleRefreshed");
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "OnAvailablePlaylistsUpdated");
 
-	Params::AthenaLobbyMatchmakingPlay_C_OnViolatorStyleRefreshed Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.NewViolatorStyle = NewViolatorStyle;
+
+// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UAthenaLobbyMatchmakingPlay_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.OnLoaded_7F9C59BE40E65C1C31B0EB98786CDA43
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass*                           Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaLobbyMatchmakingPlay_C::OnLoaded_7F9C59BE40E65C1C31B0EB98786CDA43(class UClass* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "OnLoaded_7F9C59BE40E65C1C31B0EB98786CDA43");
+
+	Params::AthenaLobbyMatchmakingPlay_C_OnLoaded_7F9C59BE40E65C1C31B0EB98786CDA43 Parms{};
+
+	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.PickMatchmakingSucceededSound
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class USoundBase*                       SelectedMatchmakingSucceededSound                      (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.RefreshFillText
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UAthenaLobbyMatchmakingPlay_C::PickMatchmakingSucceededSound(class USoundBase** SelectedMatchmakingSucceededSound)
+void UAthenaLobbyMatchmakingPlay_C::RefreshFillText()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PickMatchmakingSucceededSound");
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "RefreshFillText");
 
-	Params::AthenaLobbyMatchmakingPlay_C_PickMatchmakingSucceededSound Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (SelectedMatchmakingSucceededSound != nullptr)
-		*SelectedMatchmakingSucceededSound = Parms.SelectedMatchmakingSucceededSound;
-}
-
-
-// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.PlaylistActivityChanged
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// struct FPlaylistFrontEndData            NewPlaylist                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class FText                             ActivityName                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// EFortLobbyType                          LobbyType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaLobbyMatchmakingPlay_C::PlaylistActivityChanged(const struct FPlaylistFrontEndData& NewPlaylist, const class FText& ActivityName, EFortLobbyType LobbyType)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PlaylistActivityChanged");
-
-	Params::AthenaLobbyMatchmakingPlay_C_PlaylistActivityChanged Parms{};
-
-	Parms.NewPlaylist = std::move(NewPlaylist);
-	Parms.ActivityName = std::move(ActivityName);
-	Parms.LobbyType = LobbyType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.PlaylistChanged
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// struct FPlaylistFrontEndData            NewPlaylist                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class FText                             PlaylistCMSOverrideName                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// EFortLobbyType                          LobbyType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaLobbyMatchmakingPlay_C::PlaylistChanged(const struct FPlaylistFrontEndData& NewPlaylist, const class FText& PlaylistCMSOverrideName, EFortLobbyType LobbyType)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PlaylistChanged");
-
-	Params::AthenaLobbyMatchmakingPlay_C_PlaylistChanged Parms{};
-
-	Parms.NewPlaylist = std::move(NewPlaylist);
-	Parms.PlaylistCMSOverrideName = std::move(PlaylistCMSOverrideName);
-	Parms.LobbyType = LobbyType;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.SetBasePanelColor
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor                     NewColor                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              NewColor                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAthenaLobbyMatchmakingPlay_C::SetBasePanelColor(const struct FLinearColor& NewColor)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetBasePanelColor");
+		Func = Class->GetFunction("AthenaLobbyMatchmakingPlay_C", "SetBasePanelColor");
 
 	Params::AthenaLobbyMatchmakingPlay_C_SetBasePanelColor Parms{};
 
 	Parms.NewColor = std::move(NewColor);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.ShouldShowMatchmakingDetails
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bShow                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaLobbyMatchmakingPlay_C::ShouldShowMatchmakingDetails(bool bShow)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ShouldShowMatchmakingDetails");
-
-	Params::AthenaLobbyMatchmakingPlay_C_ShouldShowMatchmakingDetails Parms{};
-
-	Parms.bShow = bShow;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaLobbyMatchmakingPlay.AthenaLobbyMatchmakingPlay_C.Update Playlist Info
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FPlaylistFrontEndData            NewPlaylist                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class FText                             PlaylistTitleOverride                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// EFortLobbyType                          LobbyType                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaLobbyMatchmakingPlay_C::Update_Playlist_Info(struct FPlaylistFrontEndData& NewPlaylist, class FText& PlaylistTitleOverride, EFortLobbyType& LobbyType)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Update Playlist Info");
-
-	Params::AthenaLobbyMatchmakingPlay_C_Update_Playlist_Info Parms{};
-
-	Parms.NewPlaylist = std::move(NewPlaylist);
-	Parms.PlaylistTitleOverride = std::move(PlaylistTitleOverride);
-	Parms.LobbyType = LobbyType;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	NewPlaylist = std::move(Parms.NewPlaylist);
-	PlaylistTitleOverride = std::move(Parms.PlaylistTitleOverride);
-	LobbyType = Parms.LobbyType;
 }
 
 }

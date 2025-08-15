@@ -33,24 +33,8 @@ public:
 		return GetDefaultObjImpl<UDeveloperSettings>();
 	}
 };
-
-// Class DeveloperSettings.PlatformSettings
-// 0x0010 (0x0038 - 0x0028)
-class UPlatformSettings : public UObject
-{
-public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlatformSettings">();
-	}
-	static class UPlatformSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlatformSettings>();
-	}
-};
+static_assert(alignof(UDeveloperSettings) == 0x000008, "Wrong alignment on UDeveloperSettings");
+static_assert(sizeof(UDeveloperSettings) == 0x000038, "Wrong size on UDeveloperSettings");
 
 }
 

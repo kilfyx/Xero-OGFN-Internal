@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass SR_Hoagie.SR_Hoagie_C
-// 0x0000 (0x0448 - 0x0448)
+// 0x0000 (0x0428 - 0x0428)
 class USR_Hoagie_C final : public UStreamingRadioPlayerComponent_Hoagie
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<USR_Hoagie_C>();
 	}
 };
+static_assert(alignof(USR_Hoagie_C) == 0x000008, "Wrong alignment on USR_Hoagie_C");
+static_assert(sizeof(USR_Hoagie_C) == 0x000428, "Wrong size on USR_Hoagie_C");
 
 }
 

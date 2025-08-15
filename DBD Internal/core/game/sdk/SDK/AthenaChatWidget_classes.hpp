@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaChatWidget.AthenaChatWidget_C
-// 0x0050 (0x0418 - 0x03C8)
-class UAthenaChatWidget_C final : public UFortActivatableChatWidget
+// 0x0050 (0x0390 - 0x0340)
+class UAthenaChatWidget_C final : public UAthenaActivatableChatWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FDataTableRowHandle                    CloseUserListAction;                               // 0x03D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    OpenUserListAction;                                // 0x03E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    CurrentUserListAction;                             // 0x03F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	bool                                          bEnteringChat;                                     // 0x0400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_401[0x7];                                      // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(bool EnteredChat)> OnEnteredChat;                                     // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FDataTableRowHandle                    CloseUserListAction;                               // 0x0348(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FDataTableRowHandle                    OpenUserListAction;                                // 0x0358(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FDataTableRowHandle                    CurrentUserListAction;                             // 0x0368(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	bool                                          bEnteringChat;                                     // 0x0378(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_379[0x7];                                      // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool EnteredChat)> OnEnteredChat;                                  // 0x0380(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_AthenaChatWidget(int32 EntryPoint);
@@ -45,13 +45,13 @@ public:
 	}
 };
 static_assert(alignof(UAthenaChatWidget_C) == 0x000008, "Wrong alignment on UAthenaChatWidget_C");
-static_assert(sizeof(UAthenaChatWidget_C) == 0x000418, "Wrong size on UAthenaChatWidget_C");
-static_assert(offsetof(UAthenaChatWidget_C, UberGraphFrame) == 0x0003C8, "Member 'UAthenaChatWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaChatWidget_C, CloseUserListAction) == 0x0003D0, "Member 'UAthenaChatWidget_C::CloseUserListAction' has a wrong offset!");
-static_assert(offsetof(UAthenaChatWidget_C, OpenUserListAction) == 0x0003E0, "Member 'UAthenaChatWidget_C::OpenUserListAction' has a wrong offset!");
-static_assert(offsetof(UAthenaChatWidget_C, CurrentUserListAction) == 0x0003F0, "Member 'UAthenaChatWidget_C::CurrentUserListAction' has a wrong offset!");
-static_assert(offsetof(UAthenaChatWidget_C, bEnteringChat) == 0x000400, "Member 'UAthenaChatWidget_C::bEnteringChat' has a wrong offset!");
-static_assert(offsetof(UAthenaChatWidget_C, OnEnteredChat) == 0x000408, "Member 'UAthenaChatWidget_C::OnEnteredChat' has a wrong offset!");
+static_assert(sizeof(UAthenaChatWidget_C) == 0x000390, "Wrong size on UAthenaChatWidget_C");
+static_assert(offsetof(UAthenaChatWidget_C, UberGraphFrame) == 0x000340, "Member 'UAthenaChatWidget_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaChatWidget_C, CloseUserListAction) == 0x000348, "Member 'UAthenaChatWidget_C::CloseUserListAction' has a wrong offset!");
+static_assert(offsetof(UAthenaChatWidget_C, OpenUserListAction) == 0x000358, "Member 'UAthenaChatWidget_C::OpenUserListAction' has a wrong offset!");
+static_assert(offsetof(UAthenaChatWidget_C, CurrentUserListAction) == 0x000368, "Member 'UAthenaChatWidget_C::CurrentUserListAction' has a wrong offset!");
+static_assert(offsetof(UAthenaChatWidget_C, bEnteringChat) == 0x000378, "Member 'UAthenaChatWidget_C::bEnteringChat' has a wrong offset!");
+static_assert(offsetof(UAthenaChatWidget_C, OnEnteredChat) == 0x000380, "Member 'UAthenaChatWidget_C::OnEnteredChat' has a wrong offset!");
 
 }
 

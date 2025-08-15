@@ -34,6 +34,8 @@ public:
 		return GetDefaultObjImpl<UItemCostComponent_C>();
 	}
 };
+static_assert(alignof(UItemCostComponent_C) == 0x000008, "Wrong alignment on UItemCostComponent_C");
+static_assert(sizeof(UItemCostComponent_C) == 0x0000B0, "Wrong size on UItemCostComponent_C");
 
 }
 

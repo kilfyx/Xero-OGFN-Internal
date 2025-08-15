@@ -18,34 +18,34 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_HoverDronePawn.BP_HoverDronePawn_C
-// 0x0050 (0x03F0 - 0x03A0)
+// 0x0050 (0x03B8 - 0x0368)
 class ABP_HoverDronePawn_C final : public AHoverDronePawn
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          WindAudioEnabled;                                  // 0x03A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        AltitudeWindAudioComp;                             // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         WindAudioAltMin;                                   // 0x03B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         WindAudioAltMax;                                   // 0x03BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         WindAudioVolMin;                                   // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         WindAudioVolMax;                                   // 0x03C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SoundWindMovementLoop;                             // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SoundWindAltitudeLoop;                             // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CurrentAltitudeWindVolume;                         // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Speed;                                             // 0x03DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        MovementWindAudioComp;                             // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CurrentMovementWindVolume;                         // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          WindAudioEnabled;                                  // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_371[0x7];                                      // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        AltitudeWindAudioComp;                             // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         WindAudioAltMin;                                   // 0x0380(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         WindAudioAltMax;                                   // 0x0384(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         WindAudioVolMin;                                   // 0x0388(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         WindAudioVolMax;                                   // 0x038C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SoundWindMovementLoop;                             // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SoundWindAltitudeLoop;                             // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CurrentAltitudeWindVolume;                         // 0x03A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Speed;                                             // 0x03A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        MovementWindAudioComp;                             // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CurrentMovementWindVolume;                         // 0x03B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Update_Wind_Audio();
-	void SetWindAudioEnabled(bool Enabled);
+	void ExecuteUbergraph_BP_HoverDronePawn(int32 EntryPoint);
 	void ReceiveUnpossessed(class AController* OldController);
-	void ReceiveTick(float DeltaSeconds);
 	void ReceivePossessed(class AController* NewController);
 	void ReceiveBeginPlay();
+	void Update_Wind_Audio();
+	void ReceiveTick(float DeltaSeconds);
+	void SetWindAudioEnabled(bool Enabled);
 	void GetWindVolumeFromAltitude(float Altitude, float* Volume);
-	void ExecuteUbergraph_BP_HoverDronePawn(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -57,6 +57,21 @@ public:
 		return GetDefaultObjImpl<ABP_HoverDronePawn_C>();
 	}
 };
+static_assert(alignof(ABP_HoverDronePawn_C) == 0x000008, "Wrong alignment on ABP_HoverDronePawn_C");
+static_assert(sizeof(ABP_HoverDronePawn_C) == 0x0003B8, "Wrong size on ABP_HoverDronePawn_C");
+static_assert(offsetof(ABP_HoverDronePawn_C, UberGraphFrame) == 0x000368, "Member 'ABP_HoverDronePawn_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_HoverDronePawn_C, WindAudioEnabled) == 0x000370, "Member 'ABP_HoverDronePawn_C::WindAudioEnabled' has a wrong offset!");
+static_assert(offsetof(ABP_HoverDronePawn_C, AltitudeWindAudioComp) == 0x000378, "Member 'ABP_HoverDronePawn_C::AltitudeWindAudioComp' has a wrong offset!");
+static_assert(offsetof(ABP_HoverDronePawn_C, WindAudioAltMin) == 0x000380, "Member 'ABP_HoverDronePawn_C::WindAudioAltMin' has a wrong offset!");
+static_assert(offsetof(ABP_HoverDronePawn_C, WindAudioAltMax) == 0x000384, "Member 'ABP_HoverDronePawn_C::WindAudioAltMax' has a wrong offset!");
+static_assert(offsetof(ABP_HoverDronePawn_C, WindAudioVolMin) == 0x000388, "Member 'ABP_HoverDronePawn_C::WindAudioVolMin' has a wrong offset!");
+static_assert(offsetof(ABP_HoverDronePawn_C, WindAudioVolMax) == 0x00038C, "Member 'ABP_HoverDronePawn_C::WindAudioVolMax' has a wrong offset!");
+static_assert(offsetof(ABP_HoverDronePawn_C, SoundWindMovementLoop) == 0x000390, "Member 'ABP_HoverDronePawn_C::SoundWindMovementLoop' has a wrong offset!");
+static_assert(offsetof(ABP_HoverDronePawn_C, SoundWindAltitudeLoop) == 0x000398, "Member 'ABP_HoverDronePawn_C::SoundWindAltitudeLoop' has a wrong offset!");
+static_assert(offsetof(ABP_HoverDronePawn_C, CurrentAltitudeWindVolume) == 0x0003A0, "Member 'ABP_HoverDronePawn_C::CurrentAltitudeWindVolume' has a wrong offset!");
+static_assert(offsetof(ABP_HoverDronePawn_C, Speed) == 0x0003A4, "Member 'ABP_HoverDronePawn_C::Speed' has a wrong offset!");
+static_assert(offsetof(ABP_HoverDronePawn_C, MovementWindAudioComp) == 0x0003A8, "Member 'ABP_HoverDronePawn_C::MovementWindAudioComp' has a wrong offset!");
+static_assert(offsetof(ABP_HoverDronePawn_C, CurrentMovementWindVolume) == 0x0003B0, "Member 'ABP_HoverDronePawn_C::CurrentMovementWindVolume' has a wrong offset!");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ButtonStyle-Skew_LessDesirable_AddFriend.ButtonStyle-Skew_LessDesirable_AddFriend_C
-// 0x0000 (0x0730 - 0x0730)
+// 0x0000 (0x0570 - 0x0570)
 class UButtonStyle_Skew_LessDesirable_AddFriend_C final : public UCommonButtonStyle
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_Skew_LessDesirable_AddFriend_C>();
 	}
 };
-static_assert(alignof(UButtonStyle_Skew_LessDesirable_AddFriend_C) == 0x000010, "Wrong alignment on UButtonStyle_Skew_LessDesirable_AddFriend_C");
-static_assert(sizeof(UButtonStyle_Skew_LessDesirable_AddFriend_C) == 0x000730, "Wrong size on UButtonStyle_Skew_LessDesirable_AddFriend_C");
+static_assert(alignof(UButtonStyle_Skew_LessDesirable_AddFriend_C) == 0x000008, "Wrong alignment on UButtonStyle_Skew_LessDesirable_AddFriend_C");
+static_assert(sizeof(UButtonStyle_Skew_LessDesirable_AddFriend_C) == 0x000570, "Wrong size on UButtonStyle_Skew_LessDesirable_AddFriend_C");
 
 }
 

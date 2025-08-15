@@ -10,22 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "MovieScene_structs.hpp"
-
 
 namespace SDK
 {
-
-// Enum TemplateSequence.ETemplateSectionPropertyScaleType
-// NumValues: 0x0004
-enum class ETemplateSectionPropertyScaleType : uint32
-{
-	FloatProperty                            = 0,
-	TransformPropertyLocationOnly            = 1,
-	TransformPropertyRotationOnly            = 2,
-	ETemplateSectionPropertyScaleType_MAX    = 3,
-};
 
 // ScriptStruct TemplateSequence.TemplateSequenceBindingOverrideData
 // 0x000C (0x000C - 0x0000)
@@ -36,17 +23,10 @@ public:
 	bool                                          bOverridesDefault;                                 // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// ScriptStruct TemplateSequence.TemplateSectionPropertyScale
-// 0x00C8 (0x00C8 - 0x0000)
-struct FTemplateSectionPropertyScale final
-{
-public:
-	struct FGuid                                  ObjectBinding;                                     // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMovieScenePropertyBinding             PropertyBinding;                                   // 0x0010(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
-	ETemplateSectionPropertyScaleType             PropertyScaleType;                                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMovieSceneFloatChannel                FloatChannel;                                      // 0x0028(0x00A0)(NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FTemplateSequenceBindingOverrideData) == 0x000004, "Wrong alignment on FTemplateSequenceBindingOverrideData");
+static_assert(sizeof(FTemplateSequenceBindingOverrideData) == 0x00000C, "Wrong size on FTemplateSequenceBindingOverrideData");
+static_assert(offsetof(FTemplateSequenceBindingOverrideData, Object) == 0x000000, "Member 'FTemplateSequenceBindingOverrideData::Object' has a wrong offset!");
+static_assert(offsetof(FTemplateSequenceBindingOverrideData, bOverridesDefault) == 0x000008, "Member 'FTemplateSequenceBindingOverrideData::bOverridesDefault' has a wrong offset!");
 
 }
 

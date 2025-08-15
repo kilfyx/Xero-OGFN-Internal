@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FortPlayerConversationComponent.FortPlayerConversationComponent_C
-// 0x0000 (0x03A8 - 0x03A8)
+// 0x0000 (0x0310 - 0x0310)
 class UFortPlayerConversationComponent_C final : public UFortPlayerConversationComponent
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UFortPlayerConversationComponent_C>();
 	}
 };
+static_assert(alignof(UFortPlayerConversationComponent_C) == 0x000008, "Wrong alignment on UFortPlayerConversationComponent_C");
+static_assert(sizeof(UFortPlayerConversationComponent_C) == 0x000310, "Wrong size on UFortPlayerConversationComponent_C");
 
 }
 

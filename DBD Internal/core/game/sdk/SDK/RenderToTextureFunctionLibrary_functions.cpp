@@ -22,14 +22,14 @@ namespace SDK
 // Parameters:
 // EIntTypes                               Type                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FString&                          Variable_Name                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
-// TArray<int32>&                          Int                                                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<struct FVector2D>&               int2                                                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<struct FVector>&                 int3                                                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<struct FLinearColor>&            int4                                                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<int32>&                          int_0                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// TArray<struct FVector2D>&               int2                                                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// TArray<struct FVector>&                 int3                                                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// TArray<struct FLinearColor>&            int4                                                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FString*                          String                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void URenderToTextureFunctionLibrary_C::Array_to_HLSL_Int_Array(EIntTypes Type, class FString& Variable_Name, TArray<int32>& Int, TArray<struct FVector2D>& int2, TArray<struct FVector>& int3, TArray<struct FLinearColor>& int4, class UObject* __WorldContext, class FString* String)
+void URenderToTextureFunctionLibrary_C::Array_to_HLSL_Int_Array(EIntTypes Type, class FString& Variable_Name, TArray<int32>& int_0, TArray<struct FVector2D>& int2, TArray<struct FVector>& int3, TArray<struct FLinearColor>& int4, class UObject* __WorldContext, class FString* String)
 {
 	static class UFunction* Func = nullptr;
 
@@ -40,7 +40,7 @@ void URenderToTextureFunctionLibrary_C::Array_to_HLSL_Int_Array(EIntTypes Type, 
 
 	Parms.Type = Type;
 	Parms.Variable_Name = std::move(Variable_Name);
-	Parms.Int = std::move(Int);
+	Parms.int_0 = std::move(int_0);
 	Parms.int2 = std::move(int2);
 	Parms.int3 = std::move(int3);
 	Parms.int4 = std::move(int4);
@@ -49,7 +49,7 @@ void URenderToTextureFunctionLibrary_C::Array_to_HLSL_Int_Array(EIntTypes Type, 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Variable_Name = std::move(Parms.Variable_Name);
-	Int = std::move(Parms.Int);
+	int_0 = std::move(Parms.int_0);
 	int2 = std::move(Parms.int2);
 	int3 = std::move(Parms.int3);
 	int4 = std::move(Parms.int4);

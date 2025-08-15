@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function ContextTutorialIndicator.ContextTutorialIndicator_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UContextTutorialIndicator_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ContextTutorialIndicator_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ContextTutorialIndicator.ContextTutorialIndicator_C.ExecuteUbergraph_ContextTutorialIndicator
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -51,76 +37,6 @@ void UContextTutorialIndicator_C::ExecuteUbergraph_ContextTutorialIndicator(int3
 }
 
 
-// Function ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_191D6D204EA6EF5125923CB749C84A4A
-// (BlueprintCallable, BlueprintEvent)
-
-void UContextTutorialIndicator_C::Finished_191D6D204EA6EF5125923CB749C84A4A()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ContextTutorialIndicator_C", "Finished_191D6D204EA6EF5125923CB749C84A4A");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_5FDAD1724A4ABC34EC3B7F9D90839344
-// (BlueprintCallable, BlueprintEvent)
-
-void UContextTutorialIndicator_C::Finished_5FDAD1724A4ABC34EC3B7F9D90839344()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ContextTutorialIndicator_C", "Finished_5FDAD1724A4ABC34EC3B7F9D90839344");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_6F1BBAF94537A4D7945ED5A452FC1188
-// (BlueprintCallable, BlueprintEvent)
-
-void UContextTutorialIndicator_C::Finished_6F1BBAF94537A4D7945ED5A452FC1188()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ContextTutorialIndicator_C", "Finished_6F1BBAF94537A4D7945ED5A452FC1188");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_FBBD6B5248E73C61005758B21F90D160
-// (BlueprintCallable, BlueprintEvent)
-
-void UContextTutorialIndicator_C::Finished_FBBD6B5248E73C61005758B21F90D160()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ContextTutorialIndicator_C", "Finished_FBBD6B5248E73C61005758B21F90D160");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ContextTutorialIndicator.ContextTutorialIndicator_C.PlayBounceAnimation
-// (Event, Public, BlueprintEvent)
-
-void UContextTutorialIndicator_C::PlayBounceAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ContextTutorialIndicator_C", "PlayBounceAnimation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ContextTutorialIndicator.ContextTutorialIndicator_C.PlayInAnimation
 // (Event, Public, BlueprintEvent)
 
@@ -135,15 +51,15 @@ void UContextTutorialIndicator_C::PlayInAnimation()
 }
 
 
-// Function ContextTutorialIndicator.ContextTutorialIndicator_C.PlayOutAnimation
+// Function ContextTutorialIndicator.ContextTutorialIndicator_C.PlayBounceAnimation
 // (Event, Public, BlueprintEvent)
 
-void UContextTutorialIndicator_C::PlayOutAnimation()
+void UContextTutorialIndicator_C::PlayBounceAnimation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ContextTutorialIndicator_C", "PlayOutAnimation");
+		Func = Class->GetFunction("ContextTutorialIndicator_C", "PlayBounceAnimation");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -166,6 +82,90 @@ void UContextTutorialIndicator_C::SetIndicatorText(const class FText& Text)
 	Parms.Text = std::move(Text);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ContextTutorialIndicator.ContextTutorialIndicator_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UContextTutorialIndicator_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ContextTutorialIndicator_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ContextTutorialIndicator.ContextTutorialIndicator_C.PlayOutAnimation
+// (Event, Public, BlueprintEvent)
+
+void UContextTutorialIndicator_C::PlayOutAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ContextTutorialIndicator_C", "PlayOutAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_6F1BBAF94537A4D7945ED5A452FC1188
+// (BlueprintCallable, BlueprintEvent)
+
+void UContextTutorialIndicator_C::Finished_6F1BBAF94537A4D7945ED5A452FC1188()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ContextTutorialIndicator_C", "Finished_6F1BBAF94537A4D7945ED5A452FC1188");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_5FDAD1724A4ABC34EC3B7F9D90839344
+// (BlueprintCallable, BlueprintEvent)
+
+void UContextTutorialIndicator_C::Finished_5FDAD1724A4ABC34EC3B7F9D90839344()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ContextTutorialIndicator_C", "Finished_5FDAD1724A4ABC34EC3B7F9D90839344");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_191D6D204EA6EF5125923CB749C84A4A
+// (BlueprintCallable, BlueprintEvent)
+
+void UContextTutorialIndicator_C::Finished_191D6D204EA6EF5125923CB749C84A4A()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ContextTutorialIndicator_C", "Finished_191D6D204EA6EF5125923CB749C84A4A");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_FBBD6B5248E73C61005758B21F90D160
+// (BlueprintCallable, BlueprintEvent)
+
+void UContextTutorialIndicator_C::Finished_FBBD6B5248E73C61005758B21F90D160()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ContextTutorialIndicator_C", "Finished_FBBD6B5248E73C61005758B21F90D160");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

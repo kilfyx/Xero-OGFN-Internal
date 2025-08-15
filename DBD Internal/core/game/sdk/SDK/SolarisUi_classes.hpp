@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // Class SolarisUi.SolUserWidget
-// 0x0020 (0x0288 - 0x0268)
+// 0x0020 (0x0280 - 0x0260)
 class USolUserWidget final : public UUserWidget
 {
 public:
-	uint8                                         Pad_268[0x20];                                     // 0x0268(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_260[0x20];                                     // 0x0260(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(USolUserWidget) == 0x000008, "Wrong alignment on USolUserWidget");
-static_assert(sizeof(USolUserWidget) == 0x000288, "Wrong size on USolUserWidget");
+static_assert(sizeof(USolUserWidget) == 0x000280, "Wrong size on USolUserWidget");
 
 }
 

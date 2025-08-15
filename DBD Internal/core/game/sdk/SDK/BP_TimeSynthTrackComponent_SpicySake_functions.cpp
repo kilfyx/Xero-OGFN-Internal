@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function BP_TimeSynthTrackComponent_SpicySake.BP_TimeSynthTrackComponent_SpicySake_C.OnDataTrackerUpdate
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_TimeSynthTrackComponent_SpicySake_C::OnDataTrackerUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthTrackComponent_SpicySake_C", "OnDataTrackerUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_TimeSynthTrackComponent_SpicySake.BP_TimeSynthTrackComponent_SpicySake_C.GetRemainingEventCooldown
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -61,20 +75,6 @@ void UBP_TimeSynthTrackComponent_SpicySake_C::OnDataTrackerStart()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_TimeSynthTrackComponent_SpicySake_C", "OnDataTrackerStart");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TimeSynthTrackComponent_SpicySake.BP_TimeSynthTrackComponent_SpicySake_C.OnDataTrackerUpdate
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_TimeSynthTrackComponent_SpicySake_C::OnDataTrackerUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthTrackComponent_SpicySake_C", "OnDataTrackerUpdate");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

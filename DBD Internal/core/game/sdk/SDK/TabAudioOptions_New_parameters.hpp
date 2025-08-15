@@ -22,6 +22,10 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_Value;                          // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(TabAudioOptions_New_C_ExecuteUbergraph_TabAudioOptions_New) == 0x000004, "Wrong alignment on TabAudioOptions_New_C_ExecuteUbergraph_TabAudioOptions_New");
+static_assert(sizeof(TabAudioOptions_New_C_ExecuteUbergraph_TabAudioOptions_New) == 0x000008, "Wrong size on TabAudioOptions_New_C_ExecuteUbergraph_TabAudioOptions_New");
+static_assert(offsetof(TabAudioOptions_New_C_ExecuteUbergraph_TabAudioOptions_New, EntryPoint) == 0x000000, "Member 'TabAudioOptions_New_C_ExecuteUbergraph_TabAudioOptions_New::EntryPoint' has a wrong offset!");
+static_assert(offsetof(TabAudioOptions_New_C_ExecuteUbergraph_TabAudioOptions_New, K2Node_CustomEvent_Value) == 0x000004, "Member 'TabAudioOptions_New_C_ExecuteUbergraph_TabAudioOptions_New::K2Node_CustomEvent_Value' has a wrong offset!");
 
 // Function TabAudioOptions_New.TabAudioOptions_New_C.SettingValueChanged
 // 0x0004 (0x0004 - 0x0000)
@@ -30,6 +34,9 @@ struct TabAudioOptions_New_C_SettingValueChanged final
 public:
 	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(TabAudioOptions_New_C_SettingValueChanged) == 0x000004, "Wrong alignment on TabAudioOptions_New_C_SettingValueChanged");
+static_assert(sizeof(TabAudioOptions_New_C_SettingValueChanged) == 0x000004, "Wrong size on TabAudioOptions_New_C_SettingValueChanged");
+static_assert(offsetof(TabAudioOptions_New_C_SettingValueChanged, Value) == 0x000000, "Member 'TabAudioOptions_New_C_SettingValueChanged::Value' has a wrong offset!");
 
 }
 

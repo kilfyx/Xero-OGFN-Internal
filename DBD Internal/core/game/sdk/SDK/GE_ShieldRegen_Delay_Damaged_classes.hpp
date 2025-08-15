@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_ShieldRegen_Delay_Damaged_C>();
 	}
 };
+static_assert(alignof(UGE_ShieldRegen_Delay_Damaged_C) == 0x000008, "Wrong alignment on UGE_ShieldRegen_Delay_Damaged_C");
+static_assert(sizeof(UGE_ShieldRegen_Delay_Damaged_C) == 0x000800, "Wrong size on UGE_ShieldRegen_Delay_Damaged_C");
 
 }
 

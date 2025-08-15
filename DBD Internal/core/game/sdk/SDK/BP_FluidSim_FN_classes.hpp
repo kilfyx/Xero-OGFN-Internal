@@ -10,34 +10,30 @@
 
 #include "Basic.hpp"
 
-#include "BP_FluidSim_01_classes.hpp"
 #include "Engine_structs.hpp"
 #include "FluidForceDynamic_structs.hpp"
-#include "GameplayTags_structs.hpp"
+#include "BP_FluidSim_01_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_FluidSim_FN.BP_FluidSim_FN_C
-// 0x01C0 (0x0628 - 0x0468)
+// 0x0100 (0x0550 - 0x0450)
 class ABP_FluidSim_FN_C final : public ABP_FluidSim_01_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FluidSim_FN_C;                   // 0x0468(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FFluidForceDynamic                     BoatForceSettings;                                 // 0x0470(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FFluidForceDynamic                     PlayerForceSettings;                               // 0x04E0(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FFluidForceDynamic                     MechForceSettings;                                 // 0x0550(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<class AFortPawn*>                      RelevantFortPawns;                                 // 0x05C0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	bool                                          Use_FN_Pawn_Forces;                                // 0x05D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D1[0x7];                                      // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FGameplayTag, struct FFluidForceDynamic> VehicleTypeMap;                             // 0x05D8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FluidSim_FN_C;                   // 0x0450(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FFluidForceDynamic                     BoatForceSettings;                                 // 0x0458(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FFluidForceDynamic                     PlayerForceSettings;                               // 0x04C8(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<class AFortPawn*>                      RelevantFortPawns;                                 // 0x0538(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          Use_FN_Pawn_Forces;                                // 0x0548(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_FluidSim_FN(int32 EntryPoint);
-	void GetFortnitePawnForces();
-	void GetLocalPawn(class APawn** Pawn);
 	void GetPlayerPawnForces();
+	void GetLocalPawn(class APawn** Pawn);
+	void GetFortnitePawnForces();
 
 public:
 	static class UClass* StaticClass()
@@ -49,6 +45,13 @@ public:
 		return GetDefaultObjImpl<ABP_FluidSim_FN_C>();
 	}
 };
+static_assert(alignof(ABP_FluidSim_FN_C) == 0x000008, "Wrong alignment on ABP_FluidSim_FN_C");
+static_assert(sizeof(ABP_FluidSim_FN_C) == 0x000550, "Wrong size on ABP_FluidSim_FN_C");
+static_assert(offsetof(ABP_FluidSim_FN_C, UberGraphFrame_BP_FluidSim_FN_C) == 0x000450, "Member 'ABP_FluidSim_FN_C::UberGraphFrame_BP_FluidSim_FN_C' has a wrong offset!");
+static_assert(offsetof(ABP_FluidSim_FN_C, BoatForceSettings) == 0x000458, "Member 'ABP_FluidSim_FN_C::BoatForceSettings' has a wrong offset!");
+static_assert(offsetof(ABP_FluidSim_FN_C, PlayerForceSettings) == 0x0004C8, "Member 'ABP_FluidSim_FN_C::PlayerForceSettings' has a wrong offset!");
+static_assert(offsetof(ABP_FluidSim_FN_C, RelevantFortPawns) == 0x000538, "Member 'ABP_FluidSim_FN_C::RelevantFortPawns' has a wrong offset!");
+static_assert(offsetof(ABP_FluidSim_FN_C, Use_FN_Pawn_Forces) == 0x000548, "Member 'ABP_FluidSim_FN_C::Use_FN_Pawn_Forces' has a wrong offset!");
 
 }
 

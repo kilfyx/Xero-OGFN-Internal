@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Athena_ButtonStyle_AngledBlueMenuCreativeButton.Athena_ButtonStyle_AngledBlueMenuCreativeButton_C
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0000 (0x0570 - 0x0570)
 class UAthena_ButtonStyle_AngledBlueMenuCreativeButton_C final : public UCommonButtonStyle
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UAthena_ButtonStyle_AngledBlueMenuCreativeButton_C>();
 	}
 };
+static_assert(alignof(UAthena_ButtonStyle_AngledBlueMenuCreativeButton_C) == 0x000008, "Wrong alignment on UAthena_ButtonStyle_AngledBlueMenuCreativeButton_C");
+static_assert(sizeof(UAthena_ButtonStyle_AngledBlueMenuCreativeButton_C) == 0x000570, "Wrong size on UAthena_ButtonStyle_AngledBlueMenuCreativeButton_C");
 
 }
 

@@ -20,21 +20,21 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BotController_NPC_Base.BP_BotController_NPC_Base_C
-// 0x0050 (0x1420 - 0x13D0)
+// 0x0038 (0x0E30 - 0x0DF8)
 class ABP_BotController_NPC_Base_C final : public ABP_PhoebeController_NonParticipant_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x13C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UFortAthenaNpcPatrollingComponent*      FortAthenaNpcPatrolling;                           // 0x13D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GE_Patrolling;                                     // 0x13D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FActiveGameplayEffectHandle            GE_PatrollingSpeedHandle;                          // 0x13E0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               SavedRotationRate;                                 // 0x13E8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FRotator                               PatrollingRotationRate;                            // 0x1400(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0DF8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UFortAthenaNpcPatrollingComponent*      FortAthenaNpcPatrolling;                           // 0x0E00(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_Patrolling;                                     // 0x0E08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FActiveGameplayEffectHandle            GE_PatrollingSpeedHandle;                          // 0x0E10(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               SavedRotationRate;                                 // 0x0E18(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               PatrollingRotationRate;                            // 0x0E24(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void BndEvt__FortAthenaNpcPatrolling_K2Node_ComponentBoundEvent_0_PatrollingComponentOnStartPatrolling__DelegateSignature();
-	void BndEvt__FortAthenaNpcPatrolling_K2Node_ComponentBoundEvent_1_PatrollingComponentOnStopPatrolling__DelegateSignature();
 	void ExecuteUbergraph_BP_BotController_NPC_Base(int32 EntryPoint);
+	void BndEvt__FortAthenaNpcPatrolling_K2Node_ComponentBoundEvent_1_PatrollingComponentOnStopPatrolling__DelegateSignature();
+	void BndEvt__FortAthenaNpcPatrolling_K2Node_ComponentBoundEvent_0_PatrollingComponentOnStartPatrolling__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()
@@ -46,14 +46,14 @@ public:
 		return GetDefaultObjImpl<ABP_BotController_NPC_Base_C>();
 	}
 };
-static_assert(alignof(ABP_BotController_NPC_Base_C) == 0x000010, "Wrong alignment on ABP_BotController_NPC_Base_C");
-static_assert(sizeof(ABP_BotController_NPC_Base_C) == 0x001420, "Wrong size on ABP_BotController_NPC_Base_C");
-static_assert(offsetof(ABP_BotController_NPC_Base_C, UberGraphFrame) == 0x0013C8, "Member 'ABP_BotController_NPC_Base_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_BotController_NPC_Base_C, FortAthenaNpcPatrolling) == 0x0013D0, "Member 'ABP_BotController_NPC_Base_C::FortAthenaNpcPatrolling' has a wrong offset!");
-static_assert(offsetof(ABP_BotController_NPC_Base_C, GE_Patrolling) == 0x0013D8, "Member 'ABP_BotController_NPC_Base_C::GE_Patrolling' has a wrong offset!");
-static_assert(offsetof(ABP_BotController_NPC_Base_C, GE_PatrollingSpeedHandle) == 0x0013E0, "Member 'ABP_BotController_NPC_Base_C::GE_PatrollingSpeedHandle' has a wrong offset!");
-static_assert(offsetof(ABP_BotController_NPC_Base_C, SavedRotationRate) == 0x0013E8, "Member 'ABP_BotController_NPC_Base_C::SavedRotationRate' has a wrong offset!");
-static_assert(offsetof(ABP_BotController_NPC_Base_C, PatrollingRotationRate) == 0x001400, "Member 'ABP_BotController_NPC_Base_C::PatrollingRotationRate' has a wrong offset!");
+static_assert(alignof(ABP_BotController_NPC_Base_C) == 0x000008, "Wrong alignment on ABP_BotController_NPC_Base_C");
+static_assert(sizeof(ABP_BotController_NPC_Base_C) == 0x000E30, "Wrong size on ABP_BotController_NPC_Base_C");
+static_assert(offsetof(ABP_BotController_NPC_Base_C, UberGraphFrame) == 0x000DF8, "Member 'ABP_BotController_NPC_Base_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_BotController_NPC_Base_C, FortAthenaNpcPatrolling) == 0x000E00, "Member 'ABP_BotController_NPC_Base_C::FortAthenaNpcPatrolling' has a wrong offset!");
+static_assert(offsetof(ABP_BotController_NPC_Base_C, GE_Patrolling) == 0x000E08, "Member 'ABP_BotController_NPC_Base_C::GE_Patrolling' has a wrong offset!");
+static_assert(offsetof(ABP_BotController_NPC_Base_C, GE_PatrollingSpeedHandle) == 0x000E10, "Member 'ABP_BotController_NPC_Base_C::GE_PatrollingSpeedHandle' has a wrong offset!");
+static_assert(offsetof(ABP_BotController_NPC_Base_C, SavedRotationRate) == 0x000E18, "Member 'ABP_BotController_NPC_Base_C::SavedRotationRate' has a wrong offset!");
+static_assert(offsetof(ABP_BotController_NPC_Base_C, PatrollingRotationRate) == 0x000E24, "Member 'ABP_BotController_NPC_Base_C::PatrollingRotationRate' has a wrong offset!");
 
 }
 

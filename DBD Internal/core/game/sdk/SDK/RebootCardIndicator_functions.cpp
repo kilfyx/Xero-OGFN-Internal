@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function RebootCardIndicator.RebootCardIndicator_C.bp_UpdateCountdownText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void URebootCardIndicator_C::bp_UpdateCountdownText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RebootCardIndicator_C", "bp_UpdateCountdownText");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function RebootCardIndicator.RebootCardIndicator_C.ExecuteUbergraph_RebootCardIndicator
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -54,7 +40,7 @@ void URebootCardIndicator_C::ExecuteUbergraph_RebootCardIndicator(int32 EntryPoi
 // Function RebootCardIndicator.RebootCardIndicator_C.HandleDisplayForSelf
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bSelf                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSelf                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void URebootCardIndicator_C::HandleDisplayForSelf(bool bSelf)
 {
@@ -68,6 +54,20 @@ void URebootCardIndicator_C::HandleDisplayForSelf(bool bSelf)
 	Parms.bSelf = bSelf;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function RebootCardIndicator.RebootCardIndicator_C.UpdateCountdownText
+// (BlueprintCallable, BlueprintEvent)
+
+void URebootCardIndicator_C::UpdateCountdownText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RebootCardIndicator_C", "UpdateCountdownText");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -93,15 +93,15 @@ void URebootCardIndicator_C::SetupCountdown(float StartTimeLocalWorld, float End
 }
 
 
-// Function RebootCardIndicator.RebootCardIndicator_C.UpdateCountdownText
-// (BlueprintCallable, BlueprintEvent)
+// Function RebootCardIndicator.RebootCardIndicator_C.bp_UpdateCountdownText
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void URebootCardIndicator_C::UpdateCountdownText()
+void URebootCardIndicator_C::bp_UpdateCountdownText()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("RebootCardIndicator_C", "UpdateCountdownText");
+		Func = Class->GetFunction("RebootCardIndicator_C", "bp_UpdateCountdownText");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

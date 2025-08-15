@@ -17,37 +17,17 @@
 namespace SDK
 {
 
-// Function WebLogin.WebLogin_C.ExecuteUbergraph_WebLogin
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWebLogin_C::ExecuteUbergraph_WebLogin(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_WebLogin");
-
-	Params::WebLogin_C_ExecuteUbergraph_WebLogin Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WebLogin.WebLogin_C.DisplayWidget
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget*                          WebWidget                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          WebWidget                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UWebLogin_C::DisplayWidget(class UWidget* WebWidget)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("DisplayWidget");
+		Func = Class->GetFunction("WebLogin_C", "DisplayWidget");
 
 	Params::WebLogin_C_DisplayWidget Parms{};
 
@@ -63,11 +43,31 @@ void UWebLogin_C::DisplayWidget(class UWidget* WebWidget)
 void UWebLogin_C::DismissWidget()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("DismissWidget");
+		Func = Class->GetFunction("WebLogin_C", "DismissWidget");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WebLogin.WebLogin_C.ExecuteUbergraph_WebLogin
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWebLogin_C::ExecuteUbergraph_WebLogin(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WebLogin_C", "ExecuteUbergraph_WebLogin");
+
+	Params::WebLogin_C_ExecuteUbergraph_WebLogin Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

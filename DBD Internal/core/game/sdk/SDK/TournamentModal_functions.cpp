@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function TournamentModal.TournamentModal_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UTournamentModal_C::BP_OnActivated()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function TournamentModal.TournamentModal_C.ExecuteUbergraph_TournamentModal
 // (Final, UbergraphFunction)
 // Parameters:
@@ -39,9 +25,9 @@ void UTournamentModal_C::BP_OnActivated()
 void UTournamentModal_C::ExecuteUbergraph_TournamentModal(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_TournamentModal");
+		Func = Class->GetFunction("TournamentModal_C", "ExecuteUbergraph_TournamentModal");
 
 	Params::TournamentModal_C_ExecuteUbergraph_TournamentModal Parms{};
 
@@ -54,15 +40,15 @@ void UTournamentModal_C::ExecuteUbergraph_TournamentModal(int32 EntryPoint)
 // Function TournamentModal.TournamentModal_C.OnTournamentSet
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// struct FLinearColor                     LeftColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FLinearColor                     RightColor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              LeftColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              RightColor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UTournamentModal_C::OnTournamentSet(const struct FLinearColor& LeftColor, const struct FLinearColor& RightColor)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnTournamentSet");
+		Func = Class->GetFunction("TournamentModal_C", "OnTournamentSet");
 
 	Params::TournamentModal_C_OnTournamentSet Parms{};
 
@@ -70,6 +56,20 @@ void UTournamentModal_C::OnTournamentSet(const struct FLinearColor& LeftColor, c
 	Parms.RightColor = std::move(RightColor);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TournamentModal.TournamentModal_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UTournamentModal_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentModal_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

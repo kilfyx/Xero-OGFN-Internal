@@ -22,7 +22,7 @@ struct LoadoutSaveConfirmation_C_ExecuteUbergraph_LoadoutSaveConfirmation final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bCanSaveAsNew;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bCanSaveAsNew;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(LoadoutSaveConfirmation_C_ExecuteUbergraph_LoadoutSaveConfirmation) == 0x000004, "Wrong alignment on LoadoutSaveConfirmation_C_ExecuteUbergraph_LoadoutSaveConfirmation");
 static_assert(sizeof(LoadoutSaveConfirmation_C_ExecuteUbergraph_LoadoutSaveConfirmation) == 0x000008, "Wrong size on LoadoutSaveConfirmation_C_ExecuteUbergraph_LoadoutSaveConfirmation");
@@ -34,7 +34,7 @@ static_assert(offsetof(LoadoutSaveConfirmation_C_ExecuteUbergraph_LoadoutSaveCon
 struct LoadoutSaveConfirmation_C_OnCanSaveAsNew final
 {
 public:
-	bool                                          bCanSaveAsNew;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bCanSaveAsNew;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(LoadoutSaveConfirmation_C_OnCanSaveAsNew) == 0x000001, "Wrong alignment on LoadoutSaveConfirmation_C_OnCanSaveAsNew");
 static_assert(sizeof(LoadoutSaveConfirmation_C_OnCanSaveAsNew) == 0x000001, "Wrong size on LoadoutSaveConfirmation_C_OnCanSaveAsNew");
@@ -45,16 +45,16 @@ static_assert(offsetof(LoadoutSaveConfirmation_C_OnCanSaveAsNew, bCanSaveAsNew) 
 struct LoadoutSaveConfirmation_C_Toggle_Save_as_New_Visibility final
 {
 public:
-	bool                                          CanSaveAsNew;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanSaveAsNew;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_2;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                K2Node_Select_Default_1;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                K2Node_Select_Default_2;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                K2Node_Select_Default_1;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                K2Node_Select_Default_2;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(LoadoutSaveConfirmation_C_Toggle_Save_as_New_Visibility) == 0x000008, "Wrong alignment on LoadoutSaveConfirmation_C_Toggle_Save_as_New_Visibility");
 static_assert(sizeof(LoadoutSaveConfirmation_C_Toggle_Save_as_New_Visibility) == 0x000018, "Wrong size on LoadoutSaveConfirmation_C_Toggle_Save_as_New_Visibility");

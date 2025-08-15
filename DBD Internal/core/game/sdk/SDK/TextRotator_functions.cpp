@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function TextRotator.TextRotator_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UTextRotator_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextRotator_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function TextRotator.TextRotator_C.ExecuteUbergraph_TextRotator
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UTextRotator_C::ExecuteUbergraph_TextRotator(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TextRotator.TextRotator_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UTextRotator_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextRotator_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

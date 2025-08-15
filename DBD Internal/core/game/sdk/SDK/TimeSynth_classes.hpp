@@ -37,13 +37,16 @@ public:
 		return GetDefaultObjImpl<UTimeSynthVolumeGroup>();
 	}
 };
+static_assert(alignof(UTimeSynthVolumeGroup) == 0x000008, "Wrong alignment on UTimeSynthVolumeGroup");
+static_assert(sizeof(UTimeSynthVolumeGroup) == 0x000030, "Wrong size on UTimeSynthVolumeGroup");
+static_assert(offsetof(UTimeSynthVolumeGroup, DefaultVolume) == 0x000028, "Member 'UTimeSynthVolumeGroup::DefaultVolume' has a wrong offset!");
 
 // Class TimeSynth.TimeSynthClip
 // 0x0040 (0x0068 - 0x0028)
 class UTimeSynthClip final : public UObject
 {
 public:
-	TArray<struct FTimeSynthClipSound>            Sounds;                                            // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FTimeSynthClipSound>            Sounds;                                            // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              VolumeScaleDb;                                     // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              PitchScaleSemitones;                               // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTimeSynthTimeDef                      FadeInTime;                                        // 0x0048(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
@@ -64,29 +67,39 @@ public:
 		return GetDefaultObjImpl<UTimeSynthClip>();
 	}
 };
+static_assert(alignof(UTimeSynthClip) == 0x000008, "Wrong alignment on UTimeSynthClip");
+static_assert(sizeof(UTimeSynthClip) == 0x000068, "Wrong size on UTimeSynthClip");
+static_assert(offsetof(UTimeSynthClip, Sounds) == 0x000028, "Member 'UTimeSynthClip::Sounds' has a wrong offset!");
+static_assert(offsetof(UTimeSynthClip, VolumeScaleDb) == 0x000038, "Member 'UTimeSynthClip::VolumeScaleDb' has a wrong offset!");
+static_assert(offsetof(UTimeSynthClip, PitchScaleSemitones) == 0x000040, "Member 'UTimeSynthClip::PitchScaleSemitones' has a wrong offset!");
+static_assert(offsetof(UTimeSynthClip, FadeInTime) == 0x000048, "Member 'UTimeSynthClip::FadeInTime' has a wrong offset!");
+static_assert(offsetof(UTimeSynthClip, bApplyFadeOut) == 0x000050, "Member 'UTimeSynthClip::bApplyFadeOut' has a wrong offset!");
+static_assert(offsetof(UTimeSynthClip, FadeOutTime) == 0x000054, "Member 'UTimeSynthClip::FadeOutTime' has a wrong offset!");
+static_assert(offsetof(UTimeSynthClip, ClipDuration) == 0x00005C, "Member 'UTimeSynthClip::ClipDuration' has a wrong offset!");
+static_assert(offsetof(UTimeSynthClip, ClipQuantization) == 0x000064, "Member 'UTimeSynthClip::ClipQuantization' has a wrong offset!");
 
 // Class TimeSynth.TimeSynthComponent
-// 0x0A90 (0x1150 - 0x06C0)
+// 0x0A50 (0x1120 - 0x06D0)
 class UTimeSynthComponent final : public USynthComponent
 {
 public:
-	struct FTimeSynthQuantizationSettings         QuantizationSettings;                              // 0x06C0(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         bEnableSpectralAnalysis : 1;                       // 0x06D4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_6D5[0x3];                                      // 0x06D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 FrequenciesToAnalyze;                              // 0x06D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	ETimeSynthFFTSize                             FFTSize;                                           // 0x06E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6E9[0x7];                                      // 0x06E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(float SynthPlaybackTimeSeconds)> OnPlaybackTime;                   // 0x06F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         bIsFilterAEnabled : 1;                             // 0x0700(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bIsFilterBEnabled : 1;                             // 0x0700(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_701[0x3];                                      // 0x0701(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimeSynthFilterSettings               FilterASettings;                                   // 0x0704(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTimeSynthFilterSettings               FilterBSettings;                                   // 0x0710(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         bIsEnvelopeFollowerEnabled : 1;                    // 0x071C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_71D[0x3];                                      // 0x071D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimeSynthEnvelopeFollowerSettings     EnvelopeFollowerSettings;                          // 0x0720(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         MaxPoolSize;                                       // 0x072C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_730[0xA20];                                    // 0x0730(0x0A20)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FTimeSynthQuantizationSettings         QuantizationSettings;                              // 0x06D0(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         bEnableSpectralAnalysis : 1;                       // 0x06E4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_6E5[0x3];                                      // 0x06E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 FrequenciesToAnalyze;                              // 0x06E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETimeSynthFFTSize                             FFTSize;                                           // 0x06F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6F9[0x7];                                      // 0x06F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(float SynthPlaybackTimeSeconds)> OnPlaybackTime;                   // 0x0700(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         bIsFilterAEnabled : 1;                             // 0x0710(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bIsFilterBEnabled : 1;                             // 0x0710(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_711[0x3];                                      // 0x0711(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimeSynthFilterSettings               FilterASettings;                                   // 0x0714(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTimeSynthFilterSettings               FilterBSettings;                                   // 0x0720(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         bIsEnvelopeFollowerEnabled : 1;                    // 0x072C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_72D[0x3];                                      // 0x072D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimeSynthEnvelopeFollowerSettings     EnvelopeFollowerSettings;                          // 0x0730(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         MaxPoolSize;                                       // 0x073C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_740[0x9E0];                                    // 0x0740(0x09E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddQuantizationEventDelegate(ETimeSynthEventQuantization QuantizationType, const TDelegate<void(ETimeSynthEventQuantization QuantizationType, int32 NumBars, float Beat)>& OnQuantizationEvent);
@@ -122,6 +135,16 @@ public:
 		return GetDefaultObjImpl<UTimeSynthComponent>();
 	}
 };
+static_assert(alignof(UTimeSynthComponent) == 0x000010, "Wrong alignment on UTimeSynthComponent");
+static_assert(sizeof(UTimeSynthComponent) == 0x001120, "Wrong size on UTimeSynthComponent");
+static_assert(offsetof(UTimeSynthComponent, QuantizationSettings) == 0x0006D0, "Member 'UTimeSynthComponent::QuantizationSettings' has a wrong offset!");
+static_assert(offsetof(UTimeSynthComponent, FrequenciesToAnalyze) == 0x0006E8, "Member 'UTimeSynthComponent::FrequenciesToAnalyze' has a wrong offset!");
+static_assert(offsetof(UTimeSynthComponent, FFTSize) == 0x0006F8, "Member 'UTimeSynthComponent::FFTSize' has a wrong offset!");
+static_assert(offsetof(UTimeSynthComponent, OnPlaybackTime) == 0x000700, "Member 'UTimeSynthComponent::OnPlaybackTime' has a wrong offset!");
+static_assert(offsetof(UTimeSynthComponent, FilterASettings) == 0x000714, "Member 'UTimeSynthComponent::FilterASettings' has a wrong offset!");
+static_assert(offsetof(UTimeSynthComponent, FilterBSettings) == 0x000720, "Member 'UTimeSynthComponent::FilterBSettings' has a wrong offset!");
+static_assert(offsetof(UTimeSynthComponent, EnvelopeFollowerSettings) == 0x000730, "Member 'UTimeSynthComponent::EnvelopeFollowerSettings' has a wrong offset!");
+static_assert(offsetof(UTimeSynthComponent, MaxPoolSize) == 0x00073C, "Member 'UTimeSynthComponent::MaxPoolSize' has a wrong offset!");
 
 }
 

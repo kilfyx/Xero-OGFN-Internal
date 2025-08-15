@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ACreativeVolumeNavInvoker_C>();
 	}
 };
+static_assert(alignof(ACreativeVolumeNavInvoker_C) == 0x000008, "Wrong alignment on ACreativeVolumeNavInvoker_C");
+static_assert(sizeof(ACreativeVolumeNavInvoker_C) == 0x000230, "Wrong size on ACreativeVolumeNavInvoker_C");
 
 }
 

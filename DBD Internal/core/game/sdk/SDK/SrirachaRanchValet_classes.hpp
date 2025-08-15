@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // Class SrirachaRanchValet.StreamingRadioPlayerComponent_Valet
-// 0x0000 (0x0448 - 0x0448)
+// 0x0000 (0x0428 - 0x0428)
 class UStreamingRadioPlayerComponent_Valet : public UStreamingRadioPlayerComponent
 {
 public:
@@ -33,6 +33,8 @@ public:
 		return GetDefaultObjImpl<UStreamingRadioPlayerComponent_Valet>();
 	}
 };
+static_assert(alignof(UStreamingRadioPlayerComponent_Valet) == 0x000008, "Wrong alignment on UStreamingRadioPlayerComponent_Valet");
+static_assert(sizeof(UStreamingRadioPlayerComponent_Valet) == 0x000428, "Wrong size on UStreamingRadioPlayerComponent_Valet");
 
 }
 

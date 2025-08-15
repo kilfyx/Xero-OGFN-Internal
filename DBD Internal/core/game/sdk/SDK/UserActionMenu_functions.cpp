@@ -54,7 +54,7 @@ void UUserActionMenu_C::OnOpened()
 // Function UserActionMenu.UserActionMenu_C.OnToggleConfirmation
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsVisible                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsVisible                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UUserActionMenu_C::OnToggleConfirmation(bool bIsVisible)
 {

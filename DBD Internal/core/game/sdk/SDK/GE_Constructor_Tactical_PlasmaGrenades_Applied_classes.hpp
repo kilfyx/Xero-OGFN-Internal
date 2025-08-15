@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Constructor_Tactical_PlasmaGrenades_Applied_C>();
 	}
 };
+static_assert(alignof(UGE_Constructor_Tactical_PlasmaGrenades_Applied_C) == 0x000008, "Wrong alignment on UGE_Constructor_Tactical_PlasmaGrenades_Applied_C");
+static_assert(sizeof(UGE_Constructor_Tactical_PlasmaGrenades_Applied_C) == 0x000800, "Wrong size on UGE_Constructor_Tactical_PlasmaGrenades_Applied_C");
 
 }
 

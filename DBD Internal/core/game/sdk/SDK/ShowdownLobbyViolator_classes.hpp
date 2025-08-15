@@ -19,26 +19,26 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ShowdownLobbyViolator.ShowdownLobbyViolator_C
-// 0x0060 (0x0778 - 0x0718)
+// 0x0060 (0x0718 - 0x06B8)
 class UShowdownLobbyViolator_C final : public UFortShowdownDetailView
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0718(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x0720(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_DetailsBG;                            // 0x0728(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_HighlightBorder;                      // 0x0730(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_TopContainer;                         // 0x0738(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_TimeRemainingDesc;                 // 0x0740(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            CommonWidgetSwitcher_Status;                       // 0x0748(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_BGFillColor;                                 // 0x0750(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_InnerTriangle;                               // 0x0758(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_OuterTriangle;                               // 0x0760(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_ShowdownTitle;                                // 0x0768(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          runOnce;                                           // 0x0770(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro;                                             // 0x06C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_DetailsBG;                            // 0x06C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_HighlightBorder;                      // 0x06D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_TopContainer;                         // 0x06D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_TimeRemainingDesc;                 // 0x06E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_Status;                       // 0x06E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_BGFillColor;                                 // 0x06F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_InnerTriangle;                               // 0x06F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_OuterTriangle;                               // 0x0700(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_ShowdownTitle;                                // 0x0708(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          runOnce;                                           // 0x0710(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void ExecuteUbergraph_ShowdownLobbyViolator(int32 EntryPoint);
 	void RefreshDataBP();
+	void ExecuteUbergraph_ShowdownLobbyViolator(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -51,19 +51,19 @@ public:
 	}
 };
 static_assert(alignof(UShowdownLobbyViolator_C) == 0x000008, "Wrong alignment on UShowdownLobbyViolator_C");
-static_assert(sizeof(UShowdownLobbyViolator_C) == 0x000778, "Wrong size on UShowdownLobbyViolator_C");
-static_assert(offsetof(UShowdownLobbyViolator_C, UberGraphFrame) == 0x000718, "Member 'UShowdownLobbyViolator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UShowdownLobbyViolator_C, Intro) == 0x000720, "Member 'UShowdownLobbyViolator_C::Intro' has a wrong offset!");
-static_assert(offsetof(UShowdownLobbyViolator_C, CommonBorder_DetailsBG) == 0x000728, "Member 'UShowdownLobbyViolator_C::CommonBorder_DetailsBG' has a wrong offset!");
-static_assert(offsetof(UShowdownLobbyViolator_C, CommonBorder_HighlightBorder) == 0x000730, "Member 'UShowdownLobbyViolator_C::CommonBorder_HighlightBorder' has a wrong offset!");
-static_assert(offsetof(UShowdownLobbyViolator_C, CommonBorder_TopContainer) == 0x000738, "Member 'UShowdownLobbyViolator_C::CommonBorder_TopContainer' has a wrong offset!");
-static_assert(offsetof(UShowdownLobbyViolator_C, CommonTextBlock_TimeRemainingDesc) == 0x000740, "Member 'UShowdownLobbyViolator_C::CommonTextBlock_TimeRemainingDesc' has a wrong offset!");
-static_assert(offsetof(UShowdownLobbyViolator_C, CommonWidgetSwitcher_Status) == 0x000748, "Member 'UShowdownLobbyViolator_C::CommonWidgetSwitcher_Status' has a wrong offset!");
-static_assert(offsetof(UShowdownLobbyViolator_C, Image_BGFillColor) == 0x000750, "Member 'UShowdownLobbyViolator_C::Image_BGFillColor' has a wrong offset!");
-static_assert(offsetof(UShowdownLobbyViolator_C, Image_InnerTriangle) == 0x000758, "Member 'UShowdownLobbyViolator_C::Image_InnerTriangle' has a wrong offset!");
-static_assert(offsetof(UShowdownLobbyViolator_C, Image_OuterTriangle) == 0x000760, "Member 'UShowdownLobbyViolator_C::Image_OuterTriangle' has a wrong offset!");
-static_assert(offsetof(UShowdownLobbyViolator_C, Text_ShowdownTitle) == 0x000768, "Member 'UShowdownLobbyViolator_C::Text_ShowdownTitle' has a wrong offset!");
-static_assert(offsetof(UShowdownLobbyViolator_C, runOnce) == 0x000770, "Member 'UShowdownLobbyViolator_C::runOnce' has a wrong offset!");
+static_assert(sizeof(UShowdownLobbyViolator_C) == 0x000718, "Wrong size on UShowdownLobbyViolator_C");
+static_assert(offsetof(UShowdownLobbyViolator_C, UberGraphFrame) == 0x0006B8, "Member 'UShowdownLobbyViolator_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UShowdownLobbyViolator_C, Intro) == 0x0006C0, "Member 'UShowdownLobbyViolator_C::Intro' has a wrong offset!");
+static_assert(offsetof(UShowdownLobbyViolator_C, CommonBorder_DetailsBG) == 0x0006C8, "Member 'UShowdownLobbyViolator_C::CommonBorder_DetailsBG' has a wrong offset!");
+static_assert(offsetof(UShowdownLobbyViolator_C, CommonBorder_HighlightBorder) == 0x0006D0, "Member 'UShowdownLobbyViolator_C::CommonBorder_HighlightBorder' has a wrong offset!");
+static_assert(offsetof(UShowdownLobbyViolator_C, CommonBorder_TopContainer) == 0x0006D8, "Member 'UShowdownLobbyViolator_C::CommonBorder_TopContainer' has a wrong offset!");
+static_assert(offsetof(UShowdownLobbyViolator_C, CommonTextBlock_TimeRemainingDesc) == 0x0006E0, "Member 'UShowdownLobbyViolator_C::CommonTextBlock_TimeRemainingDesc' has a wrong offset!");
+static_assert(offsetof(UShowdownLobbyViolator_C, CommonWidgetSwitcher_Status) == 0x0006E8, "Member 'UShowdownLobbyViolator_C::CommonWidgetSwitcher_Status' has a wrong offset!");
+static_assert(offsetof(UShowdownLobbyViolator_C, Image_BGFillColor) == 0x0006F0, "Member 'UShowdownLobbyViolator_C::Image_BGFillColor' has a wrong offset!");
+static_assert(offsetof(UShowdownLobbyViolator_C, Image_InnerTriangle) == 0x0006F8, "Member 'UShowdownLobbyViolator_C::Image_InnerTriangle' has a wrong offset!");
+static_assert(offsetof(UShowdownLobbyViolator_C, Image_OuterTriangle) == 0x000700, "Member 'UShowdownLobbyViolator_C::Image_OuterTriangle' has a wrong offset!");
+static_assert(offsetof(UShowdownLobbyViolator_C, Text_ShowdownTitle) == 0x000708, "Member 'UShowdownLobbyViolator_C::Text_ShowdownTitle' has a wrong offset!");
+static_assert(offsetof(UShowdownLobbyViolator_C, runOnce) == 0x000710, "Member 'UShowdownLobbyViolator_C::runOnce' has a wrong offset!");
 
 }
 

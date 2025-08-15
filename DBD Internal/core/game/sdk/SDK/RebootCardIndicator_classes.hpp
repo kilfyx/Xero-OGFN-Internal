@@ -19,28 +19,28 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass RebootCardIndicator.RebootCardIndicator_C
-// 0x0050 (0x0570 - 0x0520)
+// 0x0050 (0x0518 - 0x04C8)
 class URebootCardIndicator_C final : public UAthenaRebootCardIndicator
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0520(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       UpdateTime;                                        // 0x0528(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                Border_Nameplate;                                  // 0x0530(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 burst;                                             // 0x0538(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_RebootIcon;                                  // 0x0540(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USpacer*                                IndicatorSpacer;                                   // 0x0548(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         RebootCountdownContainer;                          // 0x0550(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TimeText;                                          // 0x0558(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	float                                         CurTime;                                           // 0x0560(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         EndTime;                                           // 0x0564(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           TimerHandle;                                       // 0x0568(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       UpdateTime;                                        // 0x04D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                Border_Nameplate;                                  // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 burst;                                             // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_RebootIcon;                                  // 0x04E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USpacer*                                IndicatorSpacer;                                   // 0x04F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         RebootCountdownContainer;                          // 0x04F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TimeText;                                          // 0x0500(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	float                                         CurTime;                                           // 0x0508(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         EndTime;                                           // 0x050C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           TimerHandle;                                       // 0x0510(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void bp_UpdateCountdownText();
 	void ExecuteUbergraph_RebootCardIndicator(int32 EntryPoint);
 	void HandleDisplayForSelf(bool bSelf);
-	void SetupCountdown(float StartTimeLocalWorld, float EndTimeLocalWorld);
 	void UpdateCountdownText();
+	void SetupCountdown(float StartTimeLocalWorld, float EndTimeLocalWorld);
+	void bp_UpdateCountdownText();
 
 public:
 	static class UClass* StaticClass()
@@ -52,6 +52,19 @@ public:
 		return GetDefaultObjImpl<URebootCardIndicator_C>();
 	}
 };
+static_assert(alignof(URebootCardIndicator_C) == 0x000008, "Wrong alignment on URebootCardIndicator_C");
+static_assert(sizeof(URebootCardIndicator_C) == 0x000518, "Wrong size on URebootCardIndicator_C");
+static_assert(offsetof(URebootCardIndicator_C, UberGraphFrame) == 0x0004C8, "Member 'URebootCardIndicator_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(URebootCardIndicator_C, UpdateTime) == 0x0004D0, "Member 'URebootCardIndicator_C::UpdateTime' has a wrong offset!");
+static_assert(offsetof(URebootCardIndicator_C, Border_Nameplate) == 0x0004D8, "Member 'URebootCardIndicator_C::Border_Nameplate' has a wrong offset!");
+static_assert(offsetof(URebootCardIndicator_C, burst) == 0x0004E0, "Member 'URebootCardIndicator_C::burst' has a wrong offset!");
+static_assert(offsetof(URebootCardIndicator_C, Image_RebootIcon) == 0x0004E8, "Member 'URebootCardIndicator_C::Image_RebootIcon' has a wrong offset!");
+static_assert(offsetof(URebootCardIndicator_C, IndicatorSpacer) == 0x0004F0, "Member 'URebootCardIndicator_C::IndicatorSpacer' has a wrong offset!");
+static_assert(offsetof(URebootCardIndicator_C, RebootCountdownContainer) == 0x0004F8, "Member 'URebootCardIndicator_C::RebootCountdownContainer' has a wrong offset!");
+static_assert(offsetof(URebootCardIndicator_C, TimeText) == 0x000500, "Member 'URebootCardIndicator_C::TimeText' has a wrong offset!");
+static_assert(offsetof(URebootCardIndicator_C, CurTime) == 0x000508, "Member 'URebootCardIndicator_C::CurTime' has a wrong offset!");
+static_assert(offsetof(URebootCardIndicator_C, EndTime) == 0x00050C, "Member 'URebootCardIndicator_C::EndTime' has a wrong offset!");
+static_assert(offsetof(URebootCardIndicator_C, TimerHandle) == 0x000510, "Member 'URebootCardIndicator_C::TimerHandle' has a wrong offset!");
 
 }
 

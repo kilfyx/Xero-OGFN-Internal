@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C
-// 0x0018 (0x0AD8 - 0x0AC0)
+// 0x0018 (0x0AE8 - 0x0AD0)
 class UGAT_Creative_TriggeredAbility_C : public UGAT_TriggeredAbility_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_Creative_TriggeredAbility_C;    // 0x0AC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class FName>                           OverriddenPropertyNames;                           // 0x0AC8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_Creative_TriggeredAbility_C;    // 0x0AD0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class FName>                           OverriddenPropertyNames;                           // 0x0AD8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
-	void AbilityTimeout();
 	void ExecuteUbergraph_GAT_Creative_TriggeredAbility(int32 EntryPoint);
-	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData);
+	void AbilityTimeout();
 	void SetupAbilityFailsafeTimer(float Duration);
+	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData);
 
 	void IsPropertyOverridden(class FName PropertyName, bool* bResult) const;
 
@@ -43,6 +43,10 @@ public:
 		return GetDefaultObjImpl<UGAT_Creative_TriggeredAbility_C>();
 	}
 };
+static_assert(alignof(UGAT_Creative_TriggeredAbility_C) == 0x000008, "Wrong alignment on UGAT_Creative_TriggeredAbility_C");
+static_assert(sizeof(UGAT_Creative_TriggeredAbility_C) == 0x000AE8, "Wrong size on UGAT_Creative_TriggeredAbility_C");
+static_assert(offsetof(UGAT_Creative_TriggeredAbility_C, UberGraphFrame_GAT_Creative_TriggeredAbility_C) == 0x000AD0, "Member 'UGAT_Creative_TriggeredAbility_C::UberGraphFrame_GAT_Creative_TriggeredAbility_C' has a wrong offset!");
+static_assert(offsetof(UGAT_Creative_TriggeredAbility_C, OverriddenPropertyNames) == 0x000AD8, "Member 'UGAT_Creative_TriggeredAbility_C::OverriddenPropertyNames' has a wrong offset!");
 
 }
 

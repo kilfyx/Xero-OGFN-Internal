@@ -17,37 +17,17 @@
 namespace SDK
 {
 
-// Function StatusWidget.StatusWidget_C.SetQuitButtonText
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// class FText                             QuitText                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UStatusWidget_C::SetQuitButtonText(const class FText& QuitText)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetQuitButtonText");
-
-	Params::StatusWidget_C_SetQuitButtonText Parms{};
-
-	Parms.QuitText = std::move(QuitText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function StatusWidget.StatusWidget_C.SetContinueButtonText
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// class FText                             ContinueText                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      ContinueText                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UStatusWidget_C::SetContinueButtonText(const class FText& ContinueText)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetContinueButtonText");
+		Func = Class->GetFunction("StatusWidget_C", "SetContinueButtonText");
 
 	Params::StatusWidget_C_SetContinueButtonText Parms{};
 
@@ -65,9 +45,9 @@ void UStatusWidget_C::SetContinueButtonText(const class FText& ContinueText)
 void UStatusWidget_C::ExecuteUbergraph_StatusWidget(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_StatusWidget");
+		Func = Class->GetFunction("StatusWidget_C", "ExecuteUbergraph_StatusWidget");
 
 	Params::StatusWidget_C_ExecuteUbergraph_StatusWidget Parms{};
 

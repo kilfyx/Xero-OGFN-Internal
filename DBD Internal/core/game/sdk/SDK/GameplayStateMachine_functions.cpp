@@ -162,94 +162,6 @@ void UGameplayState::EndStateEventServer(const struct FGameplayTag& NextStateId)
 }
 
 
-// Function GameplayStateMachine.GameplayState.HasStateRuntimeTag
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FGameplayTag&              QueryTag                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UGameplayState::HasStateRuntimeTag(const struct FGameplayTag& QueryTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayState", "HasStateRuntimeTag");
-
-	Params::GameplayState_HasStateRuntimeTag Parms{};
-
-	Parms.QueryTag = std::move(QueryTag);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GameplayStateMachine.GameplayState.InitializeStateEvent
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              PrevStateId                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGameplayState::InitializeStateEvent(const struct FGameplayTag& PrevStateId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayState", "InitializeStateEvent");
-
-	Params::GameplayState_InitializeStateEvent Parms{};
-
-	Parms.PrevStateId = std::move(PrevStateId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GameplayStateMachine.GameplayState.InitializeStateEventClient
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              PrevStateId                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGameplayState::InitializeStateEventClient(const struct FGameplayTag& PrevStateId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayState", "InitializeStateEventClient");
-
-	Params::GameplayState_InitializeStateEventClient Parms{};
-
-	Parms.PrevStateId = std::move(PrevStateId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GameplayStateMachine.GameplayState.InitializeStateEventServer
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              PrevStateId                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGameplayState::InitializeStateEventServer(const struct FGameplayTag& PrevStateId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayState", "InitializeStateEventServer");
-
-	Params::GameplayState_InitializeStateEventServer Parms{};
-
-	Parms.PrevStateId = std::move(PrevStateId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GameplayStateMachine.GameplayState.MarkStateToEvaluateTransitions
 // (Final, Native, Public, BlueprintCallable)
 
@@ -521,9 +433,8 @@ void UGameplayStateMachine::OnRep_ActiveGameplayStateData()
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FGameplayTag&              InStateId                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   InBeginStateDelay                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameplayStateMachine::SetState(const struct FGameplayTag& InStateId, float InBeginStateDelay)
+void UGameplayStateMachine::SetState(const struct FGameplayTag& InStateId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -533,7 +444,6 @@ void UGameplayStateMachine::SetState(const struct FGameplayTag& InStateId, float
 	Params::GameplayStateMachine_SetState Parms{};
 
 	Parms.InStateId = std::move(InStateId);
-	Parms.InBeginStateDelay = InBeginStateDelay;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

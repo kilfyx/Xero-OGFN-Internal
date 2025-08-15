@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AB_CameraLens_Victory_Ally_C>();
 	}
 };
+static_assert(alignof(AB_CameraLens_Victory_Ally_C) == 0x000010, "Wrong alignment on AB_CameraLens_Victory_Ally_C");
+static_assert(sizeof(AB_CameraLens_Victory_Ally_C) == 0x0002E0, "Wrong size on AB_CameraLens_Victory_Ally_C");
 
 }
 

@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
+// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.ExecuteUbergraph_EventLeaderboardEntryDetails
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventLeaderboardEntryDetails_C::BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UEventLeaderboardEntryDetails_C::ExecuteUbergraph_EventLeaderboardEntryDetails(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("EventLeaderboardEntryDetails_C", "ExecuteUbergraph_EventLeaderboardEntryDetails");
 
-	Params::EventLeaderboardEntryDetails_C_BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature Parms{};
+	Params::EventLeaderboardEntryDetails_C_ExecuteUbergraph_EventLeaderboardEntryDetails Parms{};
 
-	Parms.Button = Button;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -40,16 +40,36 @@ void UEventLeaderboardEntryDetails_C::BndEvt__Button_MatchHistory_K2Node_Compone
 // Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_5_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventLeaderboardEntryDetails_C::BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_5_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UEventLeaderboardEntryDetails_C::BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_5_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_5_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("EventLeaderboardEntryDetails_C", "BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_5_CommonButtonClicked__DelegateSignature");
 
 	Params::EventLeaderboardEntryDetails_C_BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_5_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UEventLeaderboardEntryDetails_C::BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardEntryDetails_C", "BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature");
+
+	Params::EventLeaderboardEntryDetails_C_BndEvt__Button_MatchHistory_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -60,56 +80,16 @@ void UEventLeaderboardEntryDetails_C::BndEvt__Button_MatchHistory_K2Node_Compone
 // Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.BndEvt__Button_WatchLive_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventLeaderboardEntryDetails_C::BndEvt__Button_WatchLive_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UEventLeaderboardEntryDetails_C::BndEvt__Button_WatchLive_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__Button_WatchLive_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("EventLeaderboardEntryDetails_C", "BndEvt__Button_WatchLive_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature");
 
 	Params::EventLeaderboardEntryDetails_C_BndEvt__Button_WatchLive_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.BndEvt__IconTextButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UEventLeaderboardEntryDetails_C::BndEvt__IconTextButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__IconTextButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
-
-	Params::EventLeaderboardEntryDetails_C_BndEvt__IconTextButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.BndEvt__IconTextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UEventLeaderboardEntryDetails_C::BndEvt__IconTextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__IconTextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
-
-	Params::EventLeaderboardEntryDetails_C_BndEvt__IconTextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -120,14 +100,14 @@ void UEventLeaderboardEntryDetails_C::BndEvt__IconTextButton_K2Node_ComponentBou
 // Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.BndEvt__IconTextButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventLeaderboardEntryDetails_C::BndEvt__IconTextButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButtonLegacy* Button)
+void UEventLeaderboardEntryDetails_C::BndEvt__IconTextButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BndEvt__IconTextButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("EventLeaderboardEntryDetails_C", "BndEvt__IconTextButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
 
 	Params::EventLeaderboardEntryDetails_C_BndEvt__IconTextButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
 
@@ -137,69 +117,21 @@ void UEventLeaderboardEntryDetails_C::BndEvt__IconTextButton_K2Node_ComponentBou
 }
 
 
-// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UEventLeaderboardEntryDetails_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.EventColorize
-// (BlueprintCallable, BlueprintEvent)
+// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.BndEvt__IconTextButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// struct FFortTournamentDisplayInfo       TournamentDisplayInfo                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventLeaderboardEntryDetails_C::EventColorize(const struct FFortTournamentDisplayInfo& TournamentDisplayInfo)
+void UEventLeaderboardEntryDetails_C::BndEvt__IconTextButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("EventColorize");
+		Func = Class->GetFunction("EventLeaderboardEntryDetails_C", "BndEvt__IconTextButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
 
-	Params::EventLeaderboardEntryDetails_C_EventColorize Parms{};
+	Params::EventLeaderboardEntryDetails_C_BndEvt__IconTextButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
 
-	Parms.TournamentDisplayInfo = std::move(TournamentDisplayInfo);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.EventIntro
-// (BlueprintCallable, BlueprintEvent)
-
-void UEventLeaderboardEntryDetails_C::EventIntro()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventIntro");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.ExecuteUbergraph_EventLeaderboardEntryDetails
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UEventLeaderboardEntryDetails_C::ExecuteUbergraph_EventLeaderboardEntryDetails(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_EventLeaderboardEntryDetails");
-
-	Params::EventLeaderboardEntryDetails_C_ExecuteUbergraph_EventLeaderboardEntryDetails Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -211,110 +143,94 @@ void UEventLeaderboardEntryDetails_C::ExecuteUbergraph_EventLeaderboardEntryDeta
 void UEventLeaderboardEntryDetails_C::LeaderboardEntryDoubleClicked()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("LeaderboardEntryDoubleClicked");
+		Func = Class->GetFunction("EventLeaderboardEntryDetails_C", "LeaderboardEntryDoubleClicked");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.Set Leaderboard Key
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.BndEvt__IconTextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// class FString                           LeaderboardInstanceId_0                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           LeaderboardGroupingId                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventLeaderboardEntryDetails_C::Set_Leaderboard_Key(const class FString& LeaderboardInstanceId_0, const class FString& LeaderboardGroupingId)
+void UEventLeaderboardEntryDetails_C::BndEvt__IconTextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Set Leaderboard Key");
+		Func = Class->GetFunction("EventLeaderboardEntryDetails_C", "BndEvt__IconTextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
 
-	Params::EventLeaderboardEntryDetails_C_Set_Leaderboard_Key Parms{};
+	Params::EventLeaderboardEntryDetails_C_BndEvt__IconTextButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
 
-	Parms.LeaderboardInstanceId_0 = std::move(LeaderboardInstanceId_0);
-	Parms.LeaderboardGroupingId = std::move(LeaderboardGroupingId);
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.Set Points Breakdown
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ETournamentDisplayType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.EventIntro
+// (BlueprintCallable, BlueprintEvent)
 
-void UEventLeaderboardEntryDetails_C::Set_Points_Breakdown(ETournamentDisplayType EventType)
+void UEventLeaderboardEntryDetails_C::EventIntro()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Set Points Breakdown");
+		Func = Class->GetFunction("EventLeaderboardEntryDetails_C", "EventIntro");
 
-	Params::EventLeaderboardEntryDetails_C_Set_Points_Breakdown Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EventType = EventType;
+
+// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.EventColorize
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FFortTournamentDisplayInfo&TournamentDisplayInfo                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UEventLeaderboardEntryDetails_C::EventColorize(const struct FFortTournamentDisplayInfo& TournamentDisplayInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardEntryDetails_C", "EventColorize");
+
+	Params::EventLeaderboardEntryDetails_C_EventColorize Parms{};
+
+	Parms.TournamentDisplayInfo = std::move(TournamentDisplayInfo);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.Set Stats Rows
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ETournamentDisplayType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UEventLeaderboardEntryDetails_C::Set_Stats_Rows(ETournamentDisplayType EventType)
+void UEventLeaderboardEntryDetails_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Set Stats Rows");
+		Func = Class->GetFunction("EventLeaderboardEntryDetails_C", "Construct");
 
-	Params::EventLeaderboardEntryDetails_C_Set_Stats_Rows Parms{};
-
-	Parms.EventType = EventType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.SetTournamentValues
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           InTournamentId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           InEventWindowId                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UEventLeaderboardEntryDetails_C::SetTournamentValues(const class FString& InTournamentId, const class FString& InEventWindowId)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetTournamentValues");
-
-	Params::EventLeaderboardEntryDetails_C_SetTournamentValues Parms{};
-
-	Parms.InTournamentId = std::move(InTournamentId);
-	Parms.InEventWindowId = std::move(InEventWindowId);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.Show Details
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFortEventLeaderboardEntryData*   EntryData                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UFortEventLeaderboardEntryData*   EntryData                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // ETournamentDisplayType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UEventLeaderboardEntryDetails_C::Show_Details(class UFortEventLeaderboardEntryData* EntryData, ETournamentDisplayType EventType)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Show Details");
+		Func = Class->GetFunction("EventLeaderboardEntryDetails_C", "Show Details");
 
 	Params::EventLeaderboardEntryDetails_C_Show_Details Parms{};
 
@@ -325,17 +241,25 @@ void UEventLeaderboardEntryDetails_C::Show_Details(class UFortEventLeaderboardEn
 }
 
 
-// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.Update Alt Leaderboard Tracked Stat
+// Function EventLeaderboardEntryDetails.EventLeaderboardEntryDetails_C.SetTournamentValues
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    InTournamentId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    InEventWindowId                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UEventLeaderboardEntryDetails_C::Update_Alt_Leaderboard_Tracked_Stat()
+void UEventLeaderboardEntryDetails_C::SetTournamentValues(const class FString& InTournamentId, const class FString& InEventWindowId)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Update Alt Leaderboard Tracked Stat");
 
-	UObject::ProcessEvent(Func, nullptr);
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardEntryDetails_C", "SetTournamentValues");
+
+	Params::EventLeaderboardEntryDetails_C_SetTournamentValues Parms{};
+
+	Parms.InTournamentId = std::move(InTournamentId);
+	Parms.InEventWindowId = std::move(InEventWindowId);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

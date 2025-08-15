@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function Tiered_Safe_Athena_NonPhysics.Tiered_Safe_Athena_NonPhysics_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ATiered_Safe_Athena_NonPhysics_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Safe_Athena_NonPhysics_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Tiered_Safe_Athena_NonPhysics.Tiered_Safe_Athena_NonPhysics_C.ExecuteUbergraph_Tiered_Safe_Athena_NonPhysics
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void ATiered_Safe_Athena_NonPhysics_C::ExecuteUbergraph_Tiered_Safe_Athena_NonPh
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Tiered_Safe_Athena_NonPhysics.Tiered_Safe_Athena_NonPhysics_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void ATiered_Safe_Athena_NonPhysics_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Safe_Athena_NonPhysics_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

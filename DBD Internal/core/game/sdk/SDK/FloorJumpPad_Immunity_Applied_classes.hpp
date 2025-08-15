@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UFloorJumpPad_Immunity_Applied_C>();
 	}
 };
+static_assert(alignof(UFloorJumpPad_Immunity_Applied_C) == 0x000008, "Wrong alignment on UFloorJumpPad_Immunity_Applied_C");
+static_assert(sizeof(UFloorJumpPad_Immunity_Applied_C) == 0x000800, "Wrong size on UFloorJumpPad_Immunity_Applied_C");
 
 }
 

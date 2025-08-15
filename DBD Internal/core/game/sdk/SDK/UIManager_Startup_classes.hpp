@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass UIManager_Startup.UIManager_Startup_C
-// 0x0000 (0x0130 - 0x0130)
+// 0x0000 (0x0140 - 0x0140)
 class UUIManager_Startup_C final : public UFortUIManager_Startup
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UUIManager_Startup_C>();
 	}
 };
+static_assert(alignof(UUIManager_Startup_C) == 0x000008, "Wrong alignment on UUIManager_Startup_C");
+static_assert(sizeof(UUIManager_Startup_C) == 0x000140, "Wrong size on UUIManager_Startup_C");
 
 }
 

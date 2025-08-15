@@ -17,48 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Athena_TillLandFallDamageImmunity_Parent.GA_Athena_TillLandFallDamageImmunity_Parent_C.Added_15DBA1504E74C72F22BBCBAD8E3CD31E
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_TillLandFallDamageImmunity_Parent_C::Added_15DBA1504E74C72F22BBCBAD8E3CD31E()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_TillLandFallDamageImmunity_Parent_C", "Added_15DBA1504E74C72F22BBCBAD8E3CD31E");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_TillLandFallDamageImmunity_Parent.GA_Athena_TillLandFallDamageImmunity_Parent_C.Added_3DBE819D4ED6A0A0909A7690321F9B09
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_TillLandFallDamageImmunity_Parent_C::Added_3DBE819D4ED6A0A0909A7690321F9B09()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_TillLandFallDamageImmunity_Parent_C", "Added_3DBE819D4ED6A0A0909A7690321F9B09");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_TillLandFallDamageImmunity_Parent.GA_Athena_TillLandFallDamageImmunity_Parent_C.CallEnd
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_TillLandFallDamageImmunity_Parent_C::CallEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_TillLandFallDamageImmunity_Parent_C", "CallEnd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_Athena_TillLandFallDamageImmunity_Parent.GA_Athena_TillLandFallDamageImmunity_Parent_C.ExecuteUbergraph_GA_Athena_TillLandFallDamageImmunity_Parent
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -74,40 +32,6 @@ void UGA_Athena_TillLandFallDamageImmunity_Parent_C::ExecuteUbergraph_GA_Athena_
 	Params::GA_Athena_TillLandFallDamageImmunity_Parent_C_ExecuteUbergraph_GA_Athena_TillLandFallDamageImmunity_Parent Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Athena_TillLandFallDamageImmunity_Parent.GA_Athena_TillLandFallDamageImmunity_Parent_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_Athena_TillLandFallDamageImmunity_Parent_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_TillLandFallDamageImmunity_Parent_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_TillLandFallDamageImmunity_Parent.GA_Athena_TillLandFallDamageImmunity_Parent_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_TillLandFallDamageImmunity_Parent_C::K2_OnEndAbility(bool bWasCancelled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_TillLandFallDamageImmunity_Parent_C", "K2_OnEndAbility");
-
-	Params::GA_Athena_TillLandFallDamageImmunity_Parent_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -156,6 +80,82 @@ void UGA_Athena_TillLandFallDamageImmunity_Parent_C::SetUpWaits()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GA_Athena_TillLandFallDamageImmunity_Parent_C", "SetUpWaits");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_TillLandFallDamageImmunity_Parent.GA_Athena_TillLandFallDamageImmunity_Parent_C.CallEnd
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_TillLandFallDamageImmunity_Parent_C::CallEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_TillLandFallDamageImmunity_Parent_C", "CallEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_TillLandFallDamageImmunity_Parent.GA_Athena_TillLandFallDamageImmunity_Parent_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGA_Athena_TillLandFallDamageImmunity_Parent_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_TillLandFallDamageImmunity_Parent_C", "K2_OnEndAbility");
+
+	Params::GA_Athena_TillLandFallDamageImmunity_Parent_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_TillLandFallDamageImmunity_Parent.GA_Athena_TillLandFallDamageImmunity_Parent_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Athena_TillLandFallDamageImmunity_Parent_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_TillLandFallDamageImmunity_Parent_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_TillLandFallDamageImmunity_Parent.GA_Athena_TillLandFallDamageImmunity_Parent_C.Added_15DBA1504E74C72F22BBCBAD8E3CD31E
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_TillLandFallDamageImmunity_Parent_C::Added_15DBA1504E74C72F22BBCBAD8E3CD31E()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_TillLandFallDamageImmunity_Parent_C", "Added_15DBA1504E74C72F22BBCBAD8E3CD31E");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_TillLandFallDamageImmunity_Parent.GA_Athena_TillLandFallDamageImmunity_Parent_C.Added_3DBE819D4ED6A0A0909A7690321F9B09
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_TillLandFallDamageImmunity_Parent_C::Added_3DBE819D4ED6A0A0909A7690321F9B09()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_TillLandFallDamageImmunity_Parent_C", "Added_3DBE819D4ED6A0A0909A7690321F9B09");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

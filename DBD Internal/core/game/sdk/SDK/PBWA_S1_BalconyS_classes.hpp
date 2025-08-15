@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PBWA_S1_BalconyS.PBWA_S1_BalconyS_C
-// 0x0000 (0x0C60 - 0x0C60)
+// 0x0000 (0x0AC8 - 0x0AC8)
 class APBWA_S1_BalconyS_C final : public ABuildingFloor
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<APBWA_S1_BalconyS_C>();
 	}
 };
+static_assert(alignof(APBWA_S1_BalconyS_C) == 0x000008, "Wrong alignment on APBWA_S1_BalconyS_C");
+static_assert(sizeof(APBWA_S1_BalconyS_C) == 0x000AC8, "Wrong size on APBWA_S1_BalconyS_C");
 
 }
 

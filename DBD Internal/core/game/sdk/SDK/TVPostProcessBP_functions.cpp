@@ -17,31 +17,17 @@
 namespace SDK
 {
 
-// Function TVPostProcessBP.TVPostProcessBP_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ATVPostProcessBP_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function TVPostProcessBP.TVPostProcessBP_C.IsEnabledForCurrentSubgame
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    bEnabled                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bEnabled                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ATVPostProcessBP_C::IsEnabledForCurrentSubgame(bool* bEnabled)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("IsEnabledForCurrentSubgame");
+		Func = Class->GetFunction("TVPostProcessBP_C", "IsEnabledForCurrentSubgame");
 
 	Params::TVPostProcessBP_C_IsEnabledForCurrentSubgame Parms{};
 
@@ -52,15 +38,57 @@ void ATVPostProcessBP_C::IsEnabledForCurrentSubgame(bool* bEnabled)
 }
 
 
+// Function TVPostProcessBP.TVPostProcessBP_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ATVPostProcessBP_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TVPostProcessBP_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TVPostProcessBP.TVPostProcessBP_C.Camera_DisableEffects
+// (BlueprintCallable, BlueprintEvent)
+
+void ATVPostProcessBP_C::Camera_DisableEffects()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TVPostProcessBP_C", "Camera_DisableEffects");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function TVPostProcessBP.TVPostProcessBP_C.FrontEndCameraSwitch
 // (BlueprintCallable, BlueprintEvent)
 
 void ATVPostProcessBP_C::FrontEndCameraSwitch()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("FrontEndCameraSwitch");
+		Func = Class->GetFunction("TVPostProcessBP_C", "FrontEndCameraSwitch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TVPostProcessBP.TVPostProcessBP_C.ExecuteCameraSwitch
+// (BlueprintCallable, BlueprintEvent)
+
+void ATVPostProcessBP_C::ExecuteCameraSwitch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TVPostProcessBP_C", "ExecuteCameraSwitch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -74,43 +102,15 @@ void ATVPostProcessBP_C::FrontEndCameraSwitch()
 void ATVPostProcessBP_C::ExecuteUbergraph_TVPostProcessBP(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_TVPostProcessBP");
+		Func = Class->GetFunction("TVPostProcessBP_C", "ExecuteUbergraph_TVPostProcessBP");
 
 	Params::TVPostProcessBP_C_ExecuteUbergraph_TVPostProcessBP Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TVPostProcessBP.TVPostProcessBP_C.ExecuteCameraSwitch
-// (BlueprintCallable, BlueprintEvent)
-
-void ATVPostProcessBP_C::ExecuteCameraSwitch()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteCameraSwitch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TVPostProcessBP.TVPostProcessBP_C.Camera_DisableEffects
-// (BlueprintCallable, BlueprintEvent)
-
-void ATVPostProcessBP_C::Camera_DisableEffects()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Camera_DisableEffects");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

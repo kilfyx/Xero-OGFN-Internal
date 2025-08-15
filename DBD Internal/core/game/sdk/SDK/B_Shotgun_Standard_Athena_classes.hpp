@@ -17,8 +17,9 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Shotgun_Standard_Athena.B_Shotgun_Standard_Athena_C
-// 0x0000 (0x1AB0 - 0x1AB0)
-class AB_Shotgun_Standard_Athena_C : public AB_Shotgun_Generic_C
+// 0x0000 (0x12A8 - 0x12A8)
+#pragma pack(push, 0x1)
+class alignas(0x08) AB_Shotgun_Standard_Athena_C : public AB_Shotgun_Generic_C
 {
 public:
 	static class UClass* StaticClass()
@@ -30,6 +31,9 @@ public:
 		return GetDefaultObjImpl<AB_Shotgun_Standard_Athena_C>();
 	}
 };
+#pragma pack(pop)
+static_assert(alignof(AB_Shotgun_Standard_Athena_C) == 0x000008, "Wrong alignment on AB_Shotgun_Standard_Athena_C");
+static_assert(sizeof(AB_Shotgun_Standard_Athena_C) == 0x0012A8, "Wrong size on AB_Shotgun_Standard_Athena_C");
 
 }
 

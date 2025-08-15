@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SettingsRotator.SettingsRotator_C
-// 0x0010 (0x0F20 - 0x0F10)
+// 0x0010 (0x0C08 - 0x0BF8)
 class USettingsRotator_C final : public UFortSettingsRotator
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBorder*                                Background;                                        // 0x0F18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BF8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBorder*                                Background;                                        // 0x0C00(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnDefaultOptionSpecified(int32 DefaultOptionIndex);
-	void BP_OnOptionSelected(int32 Index_0);
 	void BP_OnOptionsPopulated(int32 Count);
+	void BP_OnOptionSelected(int32 Index_0);
+	void BP_OnDefaultOptionSpecified(int32 DefaultOptionIndex);
 	void ExecuteUbergraph_SettingsRotator(int32 EntryPoint);
 
 public:
@@ -41,6 +41,10 @@ public:
 		return GetDefaultObjImpl<USettingsRotator_C>();
 	}
 };
+static_assert(alignof(USettingsRotator_C) == 0x000008, "Wrong alignment on USettingsRotator_C");
+static_assert(sizeof(USettingsRotator_C) == 0x000C08, "Wrong size on USettingsRotator_C");
+static_assert(offsetof(USettingsRotator_C, UberGraphFrame) == 0x000BF8, "Member 'USettingsRotator_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USettingsRotator_C, Background) == 0x000C00, "Member 'USettingsRotator_C::Background' has a wrong offset!");
 
 }
 

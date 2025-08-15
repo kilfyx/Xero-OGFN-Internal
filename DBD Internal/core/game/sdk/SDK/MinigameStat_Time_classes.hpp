@@ -21,9 +21,9 @@ namespace SDK
 class UMinigameStat_Time_C : public UFortMinigameStatFilter
 {
 public:
-	int32 Accumulate(int32 A, int32 B) const;
-	int32 Compare(int32 FirstScore, int32 SecondScore) const;
 	class FText FormatStat(int32 InCount) const;
+	int32 Compare(int32 FirstScore, int32 SecondScore) const;
+	int32 Accumulate(int32 A, int32 B) const;
 
 public:
 	static class UClass* StaticClass()
@@ -35,6 +35,8 @@ public:
 		return GetDefaultObjImpl<UMinigameStat_Time_C>();
 	}
 };
+static_assert(alignof(UMinigameStat_Time_C) == 0x000008, "Wrong alignment on UMinigameStat_Time_C");
+static_assert(sizeof(UMinigameStat_Time_C) == 0x000190, "Wrong size on UMinigameStat_Time_C");
 
 }
 

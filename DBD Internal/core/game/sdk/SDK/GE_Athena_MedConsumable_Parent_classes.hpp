@@ -18,7 +18,7 @@ namespace SDK
 
 // BlueprintGeneratedClass GE_Athena_MedConsumable_Parent.GE_Athena_MedConsumable_Parent_C
 // 0x0000 (0x0800 - 0x0800)
-class UGE_Athena_MedConsumable_Parent_C : public UGameplayEffect
+class UGE_Athena_MedConsumable_Parent_C final : public UGameplayEffect
 {
 public:
 	static class UClass* StaticClass()
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Athena_MedConsumable_Parent_C>();
 	}
 };
+static_assert(alignof(UGE_Athena_MedConsumable_Parent_C) == 0x000008, "Wrong alignment on UGE_Athena_MedConsumable_Parent_C");
+static_assert(sizeof(UGE_Athena_MedConsumable_Parent_C) == 0x000800, "Wrong size on UGE_Athena_MedConsumable_Parent_C");
 
 }
 

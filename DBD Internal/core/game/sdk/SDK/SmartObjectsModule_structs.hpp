@@ -10,12 +10,42 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
+
+// Enum SmartObjectsModule.ESmartObjectTagPolicy
+// NumValues: 0x0003
+enum class ESmartObjectTagPolicy : uint8
+{
+	Any                                      = 0,
+	All                                      = 1,
+	MAX                                      = 2,
+};
+
+// Enum SmartObjectsModule.ESOReferenceDrawingMode
+// NumValues: 0x0003
+enum class ESOReferenceDrawingMode : uint8
+{
+	Default                                  = 0,
+	Sequence                                 = 1,
+	MAX                                      = 2,
+};
+
+// Enum SmartObjectsModule.ESmartObjectRequiredTagsPolicy
+// NumValues: 0x0006
+enum class ESmartObjectRequiredTagsPolicy : uint8
+{
+	RequireAny                               = 0,
+	RequireAnyExact                          = 1,
+	RequireAll                               = 2,
+	RequireAllExact                          = 3,
+	RequireNone                              = 4,
+	ESmartObjectRequiredTagsPolicy_MAX       = 5,
+};
 
 // Enum SmartObjectsModule.ESmartObjectSlotState
 // NumValues: 0x0004
@@ -27,103 +57,100 @@ enum class ESmartObjectSlotState : uint8
 	MAX                                      = 3,
 };
 
-// ScriptStruct SmartObjectsModule.SmartObjectID
-// 0x0004 (0x0004 - 0x0000)
-struct FSmartObjectID final
-{
-public:
-	uint32                                        ID;                                                // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct SmartObjectsModule.SmartObjectCollectionEntry
-// 0x0070 (0x0070 - 0x0000)
-struct FSmartObjectCollectionEntry final
-{
-public:
-	struct FSmartObjectID                         ID;                                                // 0x0000(0x0004)(Edit, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        Path;                                              // 0x0008(0x0018)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FTransform                             Transform;                                         // 0x0020(0x0030)(IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FBox                                   Bounds;                                            // 0x0050(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint32                                        DefinitionIdx;                                     // 0x006C(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-};
-
 // ScriptStruct SmartObjectsModule.SmartObjectSlot
-// 0x0070 (0x0070 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct FSmartObjectSlot final
 {
 public:
-	struct FGameplayTagQuery                      UserTagFilter;                                     // 0x0000(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FVector                                Offset;                                            // 0x0048(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Direction;                                         // 0x0054(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class USmartObjectBehaviorDefinition*> BehaviorDefinitions;                               // 0x0060(0x0010)(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FVector                                Offset;                                            // 0x0000(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Direction;                                         // 0x000C(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGameplayBehaviorConfig*                BehaviorConfig;                                    // 0x0018(0x0008)(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FSmartObjectSlot) == 0x000008, "Wrong alignment on FSmartObjectSlot");
+static_assert(sizeof(FSmartObjectSlot) == 0x000020, "Wrong size on FSmartObjectSlot");
+static_assert(offsetof(FSmartObjectSlot, Offset) == 0x000000, "Member 'FSmartObjectSlot::Offset' has a wrong offset!");
+static_assert(offsetof(FSmartObjectSlot, Direction) == 0x00000C, "Member 'FSmartObjectSlot::Direction' has a wrong offset!");
+static_assert(offsetof(FSmartObjectSlot, BehaviorConfig) == 0x000018, "Member 'FSmartObjectSlot::BehaviorConfig' has a wrong offset!");
 
-// ScriptStruct SmartObjectsModule.SmartObjectSlotIndex
-// 0x0004 (0x0004 - 0x0000)
-struct FSmartObjectSlotIndex final
+// ScriptStruct SmartObjectsModule.SmartObjectUseConfig
+// 0x00D0 (0x00D0 - 0x0000)
+struct FSmartObjectUseConfig final
 {
 public:
-	int32                                         Index;                                             // 0x0000(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FGameplayTagQuery                      AvatarTagFilter;                                   // 0x0000(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FGameplayTagQuery                      ObjectTagFilter;                                   // 0x0048(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  ActivityTags;                                      // 0x0090(0x0020)(Edit, NativeAccessSpecifierPublic)
+	TArray<struct FSmartObjectSlot>               Slots;                                             // 0x00B0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGameplayBehaviorConfig*                DefaultBehavior;                                   // 0x00C0(0x0008)(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        MaxConcurrentUsers;                                // 0x00C8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        DefaultExecutionPriority;                          // 0x00CC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FSmartObjectUseConfig) == 0x000008, "Wrong alignment on FSmartObjectUseConfig");
+static_assert(sizeof(FSmartObjectUseConfig) == 0x0000D0, "Wrong size on FSmartObjectUseConfig");
+static_assert(offsetof(FSmartObjectUseConfig, AvatarTagFilter) == 0x000000, "Member 'FSmartObjectUseConfig::AvatarTagFilter' has a wrong offset!");
+static_assert(offsetof(FSmartObjectUseConfig, ObjectTagFilter) == 0x000048, "Member 'FSmartObjectUseConfig::ObjectTagFilter' has a wrong offset!");
+static_assert(offsetof(FSmartObjectUseConfig, ActivityTags) == 0x000090, "Member 'FSmartObjectUseConfig::ActivityTags' has a wrong offset!");
+static_assert(offsetof(FSmartObjectUseConfig, Slots) == 0x0000B0, "Member 'FSmartObjectUseConfig::Slots' has a wrong offset!");
+static_assert(offsetof(FSmartObjectUseConfig, DefaultBehavior) == 0x0000C0, "Member 'FSmartObjectUseConfig::DefaultBehavior' has a wrong offset!");
+static_assert(offsetof(FSmartObjectUseConfig, MaxConcurrentUsers) == 0x0000C8, "Member 'FSmartObjectUseConfig::MaxConcurrentUsers' has a wrong offset!");
+static_assert(offsetof(FSmartObjectUseConfig, DefaultExecutionPriority) == 0x0000CC, "Member 'FSmartObjectUseConfig::DefaultExecutionPriority' has a wrong offset!");
 
-// ScriptStruct SmartObjectsModule.SmartObjectClaimHandle
-// 0x000C (0x000C - 0x0000)
-struct FSmartObjectClaimHandle final
-{
-public:
-	struct FSmartObjectID                         SmartObjectID;                                     // 0x0000(0x0004)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSmartObjectSlotIndex                  SlotIndex;                                         // 0x0004(0x0004)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x4];                                        // 0x0008(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct SmartObjectsModule.SmartObjectSlotRuntimeData
+// ScriptStruct SmartObjectsModule.SmartObjectExecutionSlot
 // 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FSmartObjectSlotRuntimeData final
+struct FSmartObjectExecutionSlot final
 {
 public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	ESmartObjectSlotState                         State;                                             // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 UserAvatar;                                        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGameplayBehavior*                      AssignedBehavior;                                  // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SlotIndex;                                         // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FSmartObjectExecutionSlot) == 0x000008, "Wrong alignment on FSmartObjectExecutionSlot");
+static_assert(sizeof(FSmartObjectExecutionSlot) == 0x000020, "Wrong size on FSmartObjectExecutionSlot");
+static_assert(offsetof(FSmartObjectExecutionSlot, State) == 0x000000, "Member 'FSmartObjectExecutionSlot::State' has a wrong offset!");
+static_assert(offsetof(FSmartObjectExecutionSlot, UserAvatar) == 0x000008, "Member 'FSmartObjectExecutionSlot::UserAvatar' has a wrong offset!");
+static_assert(offsetof(FSmartObjectExecutionSlot, AssignedBehavior) == 0x000010, "Member 'FSmartObjectExecutionSlot::AssignedBehavior' has a wrong offset!");
+static_assert(offsetof(FSmartObjectExecutionSlot, SlotIndex) == 0x000018, "Member 'FSmartObjectExecutionSlot::SlotIndex' has a wrong offset!");
+
+// ScriptStruct SmartObjectsModule.SmartObjectUse
+// 0x0030 (0x0030 - 0x0000)
+struct FSmartObjectUse final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectExecutionSlot              Slot;                                              // 0x0008(0x0020)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FSmartObjectUse) == 0x000008, "Wrong alignment on FSmartObjectUse");
+static_assert(sizeof(FSmartObjectUse) == 0x000030, "Wrong size on FSmartObjectUse");
+static_assert(offsetof(FSmartObjectUse, Slot) == 0x000008, "Member 'FSmartObjectUse::Slot' has a wrong offset!");
 
 // ScriptStruct SmartObjectsModule.SmartObjectRuntime
-// 0x00B0 (0x00B0 - 0x0000)
-struct alignas(0x10) FSmartObjectRuntime final
+// 0x0028 (0x0028 - 0x0000)
+struct FSmartObjectRuntime final
 {
 public:
-	TArray<struct FSmartObjectSlotRuntimeData>    SlotsRuntimeData;                                  // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	class USmartObjectDefinition*                 Definition;                                        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_18[0x98];                                      // 0x0018(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class USmartObjectComponent*                  SOComponent;                                       // 0x0000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TScriptInterface<class IRichSmartObjectInterface> AsRichSO;                                      // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<struct FSmartObjectUse>                ActiveUses;                                        // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FSmartObjectRuntime) == 0x000008, "Wrong alignment on FSmartObjectRuntime");
+static_assert(sizeof(FSmartObjectRuntime) == 0x000028, "Wrong size on FSmartObjectRuntime");
+static_assert(offsetof(FSmartObjectRuntime, SOComponent) == 0x000000, "Member 'FSmartObjectRuntime::SOComponent' has a wrong offset!");
+static_assert(offsetof(FSmartObjectRuntime, AsRichSO) == 0x000008, "Member 'FSmartObjectRuntime::AsRichSO' has a wrong offset!");
+static_assert(offsetof(FSmartObjectRuntime, ActiveUses) == 0x000018, "Member 'FSmartObjectRuntime::ActiveUses' has a wrong offset!");
 
-// ScriptStruct SmartObjectsModule.SmartObjectRequestFilter
-// 0x00B0 (0x00B0 - 0x0000)
-struct alignas(0x10) FSmartObjectRequestFilter final
+// ScriptStruct SmartObjectsModule.SmartObjectID
+// 0x0004 (0x0004 - 0x0000)
+struct alignas(0x04) FSmartObjectID final
 {
 public:
-	struct FGameplayTagContainer                  UserTags;                                          // 0x0000(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FGameplayTagQuery                      ActivityRequirements;                              // 0x0020(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TSubclassOf<class USmartObjectBehaviorDefinition> BehaviorDefinitionClass;                       // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_70[0x40];                                      // 0x0070(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x4];                                        // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// ScriptStruct SmartObjectsModule.SmartObjectRequest
-// 0x00D0 (0x00D0 - 0x0000)
-struct FSmartObjectRequest final
-{
-public:
-	struct FBox                                   QueryBox;                                          // 0x0000(0x001C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSmartObjectRequestFilter              Filter;                                            // 0x0020(0x00B0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct SmartObjectsModule.SmartObjectRequestResult
-// 0x0008 (0x0008 - 0x0000)
-struct FSmartObjectRequestResult final
-{
-public:
-	struct FSmartObjectID                         SmartObjectID;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSmartObjectSlotIndex                  SlotIndex;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+static_assert(alignof(FSmartObjectID) == 0x000004, "Wrong alignment on FSmartObjectID");
+static_assert(sizeof(FSmartObjectID) == 0x000004, "Wrong size on FSmartObjectID");
 
 }
 

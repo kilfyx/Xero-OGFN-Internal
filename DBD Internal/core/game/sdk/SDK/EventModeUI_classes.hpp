@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // Class EventModeUI.FocusButton
-// 0x0010 (0x03C8 - 0x03B8)
+// 0x0010 (0x03E0 - 0x03D0)
 class UFocusButton final : public UBacchusActionButton
 {
 public:
-	class UPaperSprite*                           StartFocusingSprite;                               // 0x03B8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPaperSprite*                           StopFocusingSprite;                                // 0x03C0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperSprite*                           StartFocusingSprite;                               // 0x03D0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperSprite*                           StopFocusingSprite;                                // 0x03D8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void HandleCanUseEventModeFocusChanged(bool bCanUseEventModeFocus);
@@ -38,21 +38,25 @@ public:
 		return GetDefaultObjImpl<UFocusButton>();
 	}
 };
+static_assert(alignof(UFocusButton) == 0x000008, "Wrong alignment on UFocusButton");
+static_assert(sizeof(UFocusButton) == 0x0003E0, "Wrong size on UFocusButton");
+static_assert(offsetof(UFocusButton, StartFocusingSprite) == 0x0003D0, "Member 'UFocusButton::StartFocusingSprite' has a wrong offset!");
+static_assert(offsetof(UFocusButton, StopFocusingSprite) == 0x0003D8, "Member 'UFocusButton::StopFocusingSprite' has a wrong offset!");
 
 // Class EventModeUI.FortEventModeEmotesWidget
-// 0x00B0 (0x0360 - 0x02B0)
+// 0x00B0 (0x0378 - 0x02C8)
 class UFortEventModeEmotesWidget final : public UFortHUDElementWidget
 {
 public:
-	TSoftObjectPtr<class UFortMontageItemDefinitionBase> Emote1;                                     // 0x02B0(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftObjectPtr<class UFortMontageItemDefinitionBase> Emote2;                                     // 0x02D8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftObjectPtr<class UFortMontageItemDefinitionBase> Emote3;                                     // 0x0300(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<TSoftObjectPtr<class UFortMontageItemDefinitionBase>> RandomEmotes;                       // 0x0328(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_338[0x8];                                      // 0x0338(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class URichTextBlock*                         Text_Emote1;                                       // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class URichTextBlock*                         Text_Emote2;                                       // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class URichTextBlock*                         Text_Emote3;                                       // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class URichTextBlock*                         Text_EmoteRandom;                                  // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftObjectPtr<class UFortMontageItemDefinitionBase> Emote1;                                     // 0x02C8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftObjectPtr<class UFortMontageItemDefinitionBase> Emote2;                                     // 0x02F0(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftObjectPtr<class UFortMontageItemDefinitionBase> Emote3;                                     // 0x0318(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<TSoftObjectPtr<class UFortMontageItemDefinitionBase>> RandomEmotes;                       // 0x0340(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_350[0x8];                                      // 0x0350(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class URichTextBlock*                         Text_Emote1;                                       // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class URichTextBlock*                         Text_Emote2;                                       // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class URichTextBlock*                         Text_Emote3;                                       // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class URichTextBlock*                         Text_EmoteRandom;                                  // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void OnFocusAvailableChanged(bool bIsFocusAvailable);
@@ -68,6 +72,16 @@ public:
 		return GetDefaultObjImpl<UFortEventModeEmotesWidget>();
 	}
 };
+static_assert(alignof(UFortEventModeEmotesWidget) == 0x000008, "Wrong alignment on UFortEventModeEmotesWidget");
+static_assert(sizeof(UFortEventModeEmotesWidget) == 0x000378, "Wrong size on UFortEventModeEmotesWidget");
+static_assert(offsetof(UFortEventModeEmotesWidget, Emote1) == 0x0002C8, "Member 'UFortEventModeEmotesWidget::Emote1' has a wrong offset!");
+static_assert(offsetof(UFortEventModeEmotesWidget, Emote2) == 0x0002F0, "Member 'UFortEventModeEmotesWidget::Emote2' has a wrong offset!");
+static_assert(offsetof(UFortEventModeEmotesWidget, Emote3) == 0x000318, "Member 'UFortEventModeEmotesWidget::Emote3' has a wrong offset!");
+static_assert(offsetof(UFortEventModeEmotesWidget, RandomEmotes) == 0x000340, "Member 'UFortEventModeEmotesWidget::RandomEmotes' has a wrong offset!");
+static_assert(offsetof(UFortEventModeEmotesWidget, Text_Emote1) == 0x000358, "Member 'UFortEventModeEmotesWidget::Text_Emote1' has a wrong offset!");
+static_assert(offsetof(UFortEventModeEmotesWidget, Text_Emote2) == 0x000360, "Member 'UFortEventModeEmotesWidget::Text_Emote2' has a wrong offset!");
+static_assert(offsetof(UFortEventModeEmotesWidget, Text_Emote3) == 0x000368, "Member 'UFortEventModeEmotesWidget::Text_Emote3' has a wrong offset!");
+static_assert(offsetof(UFortEventModeEmotesWidget, Text_EmoteRandom) == 0x000370, "Member 'UFortEventModeEmotesWidget::Text_EmoteRandom' has a wrong offset!");
 
 // Class EventModeUI.FortMobileActionButtonBehavior_Focus
 // 0x0008 (0x0100 - 0x00F8)
@@ -90,6 +104,9 @@ public:
 		return GetDefaultObjImpl<UFortMobileActionButtonBehavior_Focus>();
 	}
 };
+static_assert(alignof(UFortMobileActionButtonBehavior_Focus) == 0x000008, "Wrong alignment on UFortMobileActionButtonBehavior_Focus");
+static_assert(sizeof(UFortMobileActionButtonBehavior_Focus) == 0x000100, "Wrong size on UFortMobileActionButtonBehavior_Focus");
+static_assert(offsetof(UFortMobileActionButtonBehavior_Focus, StopFocusingSprite) == 0x0000F8, "Member 'UFortMobileActionButtonBehavior_Focus::StopFocusingSprite' has a wrong offset!");
 
 }
 

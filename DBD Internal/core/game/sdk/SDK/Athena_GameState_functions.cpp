@@ -50,5 +50,33 @@ void AAthena_GameState_C::OnWinnerAnnounced()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function Athena_GameState.Athena_GameState_C.Timeline_0__UpdateFunc
+// (BlueprintEvent)
+
+void AAthena_GameState_C::Timeline_0__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Athena_GameState_C", "Timeline_0__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Athena_GameState.Athena_GameState_C.Timeline_0__FinishedFunc
+// (BlueprintEvent)
+
+void AAthena_GameState_C::Timeline_0__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Athena_GameState_C", "Timeline_0__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 }
 

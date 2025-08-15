@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // Class Hotfix.OnlineHotfixManager
-// 0x0210 (0x0238 - 0x0028)
+// 0x0200 (0x0228 - 0x0028)
 class UOnlineHotfixManager : public UObject
 {
 public:
-	uint8                                         Pad_28[0x1D0];                                     // 0x0028(0x01D0)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 OSSName;                                           // 0x01F8(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 HotfixManagerClassName;                            // 0x0208(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DebugPrefix;                                       // 0x0218(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UObject*>                        AssetsHotfixedFromIniFiles;                        // 0x0228(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28[0x1C0];                                     // 0x0028(0x01C0)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 OSSName;                                           // 0x01E8(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 HotfixManagerClassName;                            // 0x01F8(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DebugPrefix;                                       // 0x0208(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        AssetsHotfixedFromIniFiles;                        // 0x0218(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	void StartHotfixProcess();
@@ -42,9 +42,15 @@ public:
 		return GetDefaultObjImpl<UOnlineHotfixManager>();
 	}
 };
+static_assert(alignof(UOnlineHotfixManager) == 0x000008, "Wrong alignment on UOnlineHotfixManager");
+static_assert(sizeof(UOnlineHotfixManager) == 0x000228, "Wrong size on UOnlineHotfixManager");
+static_assert(offsetof(UOnlineHotfixManager, OSSName) == 0x0001E8, "Member 'UOnlineHotfixManager::OSSName' has a wrong offset!");
+static_assert(offsetof(UOnlineHotfixManager, HotfixManagerClassName) == 0x0001F8, "Member 'UOnlineHotfixManager::HotfixManagerClassName' has a wrong offset!");
+static_assert(offsetof(UOnlineHotfixManager, DebugPrefix) == 0x000208, "Member 'UOnlineHotfixManager::DebugPrefix' has a wrong offset!");
+static_assert(offsetof(UOnlineHotfixManager, AssetsHotfixedFromIniFiles) == 0x000218, "Member 'UOnlineHotfixManager::AssetsHotfixedFromIniFiles' has a wrong offset!");
 
 // Class Hotfix.UpdateManager
-// 0x00F0 (0x0118 - 0x0028)
+// 0x00E8 (0x0110 - 0x0028)
 class UUpdateManager : public UObject
 {
 public:
@@ -66,9 +72,9 @@ public:
 	uint8                                         Pad_B5[0x23];                                      // 0x00B5(0x0023)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              LastUpdateCheck[0x2];                              // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EUpdateCompletionStatus                       LastCompletionResult[0x2];                         // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_EA[0x1E];                                      // 0x00EA(0x001E)(Fixing Size After Last Property [ Dumper-7 ])
-	class UEnum*                                  UpdateStateEnum;                                   // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UEnum*                                  UpdateCompletionEnum;                              // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_EA[0x16];                                      // 0x00EA(0x0016)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEnum*                                  UpdateStateEnum;                                   // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UEnum*                                  UpdateCompletionEnum;                              // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -80,6 +86,23 @@ public:
 		return GetDefaultObjImpl<UUpdateManager>();
 	}
 };
+static_assert(alignof(UUpdateManager) == 0x000008, "Wrong alignment on UUpdateManager");
+static_assert(sizeof(UUpdateManager) == 0x000110, "Wrong size on UUpdateManager");
+static_assert(offsetof(UUpdateManager, HotfixCheckCompleteDelay) == 0x000088, "Member 'UUpdateManager::HotfixCheckCompleteDelay' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, UpdateCheckCompleteDelay) == 0x00008C, "Member 'UUpdateManager::UpdateCheckCompleteDelay' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, HotfixAvailabilityCheckCompleteDelay) == 0x000090, "Member 'UUpdateManager::HotfixAvailabilityCheckCompleteDelay' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, UpdateCheckAvailabilityCompleteDelay) == 0x000094, "Member 'UUpdateManager::UpdateCheckAvailabilityCompleteDelay' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, AppSuspendedUpdateCheckTimeSeconds) == 0x00009C, "Member 'UUpdateManager::AppSuspendedUpdateCheckTimeSeconds' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, bPlatformEnvironmentDetected) == 0x0000A8, "Member 'UUpdateManager::bPlatformEnvironmentDetected' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, bInitialUpdateFinished) == 0x0000A9, "Member 'UUpdateManager::bInitialUpdateFinished' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, bCheckHotfixAvailabilityOnly) == 0x0000AA, "Member 'UUpdateManager::bCheckHotfixAvailabilityOnly' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, CurrentUpdateState) == 0x0000AB, "Member 'UUpdateManager::CurrentUpdateState' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, WorstNumFilesPendingLoadViewed) == 0x0000AC, "Member 'UUpdateManager::WorstNumFilesPendingLoadViewed' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, LastHotfixResult) == 0x0000B4, "Member 'UUpdateManager::LastHotfixResult' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, LastUpdateCheck) == 0x0000D8, "Member 'UUpdateManager::LastUpdateCheck' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, LastCompletionResult) == 0x0000E8, "Member 'UUpdateManager::LastCompletionResult' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, UpdateStateEnum) == 0x000100, "Member 'UUpdateManager::UpdateStateEnum' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, UpdateCompletionEnum) == 0x000108, "Member 'UUpdateManager::UpdateCompletionEnum' has a wrong offset!");
 
 }
 

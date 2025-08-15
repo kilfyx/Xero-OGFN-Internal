@@ -20,50 +20,43 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C
-// 0x01B0 (0x16B0 - 0x1500)
+// 0x0140 (0x0DA8 - 0x0C68)
 class UAthenaCustomizationSlotButton_C final : public UAthenaCustomizationSlotSelectorButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1500(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       QuickSaveConfirmation;                             // 0x1508(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Modified;                                          // 0x1510(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       WarningPulse;                                      // 0x1518(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnBackedOutFromSelection;                          // 0x1520(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnConfirmedSelection;                              // 0x1528(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnSelected;                                        // 0x1530(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnHover;                                           // 0x1538(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 ConfirmSelectionFlash;                             // 0x1540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ConfirmSelectionShine;                             // 0x1548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ExclusiveFill;                                     // 0x1550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               ExclusiveWarningOvr;                               // 0x1558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortLazyImage*                         Image_Archived;                                    // 0x1560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortLazyImage*                         Image_empty;                                       // 0x1568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 InactiveFilledSlot;                                // 0x1570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 QuickSaveShine;                                    // 0x1578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_Plus;                                         // 0x1580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   TooltipBody;                                       // 0x1588(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   TooltipHeader;                                     // 0x15A0(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	bool                                          ShowSubTypeIcon;                                   // 0x15B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_15B9[0x7];                                     // 0x15B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            SubTypeIcon;                                       // 0x15C0(0x00C0)(Edit, BlueprintVisible, ExposeOnSpawn)
-	bool                                          bSuppressTooltip;                                  // 0x1680(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_1681[0x7];                                     // 0x1681(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        TypeIconVerticalOffset;                            // 0x1688(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               ImageEmptyMID;                                     // 0x1690(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        WidthThreshold;                                    // 0x1698(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsModified;                                        // 0x16A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       WarningPulse;                                      // 0x0C70(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnBackedOutFromSelection;                          // 0x0C78(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnConfirmedSelection;                              // 0x0C80(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnSelected;                                        // 0x0C88(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnHover;                                           // 0x0C90(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 ConfirmSelectionFlash;                             // 0x0C98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ConfirmSelectionShine;                             // 0x0CA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ExclusiveFill;                                     // 0x0CA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               ExclusiveWarningOvr;                               // 0x0CB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortLazyImage*                         Image_empty;                                       // 0x0CB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 InactiveFilledSlot;                                // 0x0CC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_Plus;                                         // 0x0CC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   TooltipBody;                                       // 0x0CD0(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   TooltipHeader;                                     // 0x0CE8(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	bool                                          ShowSubTypeIcon;                                   // 0x0D00(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_D01[0x7];                                      // 0x0D01(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            SubTypeIcon;                                       // 0x0D08(0x0088)(Edit, BlueprintVisible, ExposeOnSpawn)
+	bool                                          bSuppressTooltip;                                  // 0x0D90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_D91[0x3];                                      // 0x0D91(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TypeIconVerticalOffset;                            // 0x0D94(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               ImageEmptyMID;                                     // 0x0D98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         WidthThreshold;                                    // 0x0DA0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Construct();
 	void ExecuteUbergraph_AthenaCustomizationSlotButton(int32 EntryPoint);
-	class FString GetSlotDebugName();
-	void HandleActiveStateChanged(bool CosmeticAvailable, bool Active);
-	void HandleWidthChanged(double Width);
-	void OnArchivedStatusUpdated(bool bArchived);
+	void OnUpdateExclusiveWarning(bool bShouldWarn);
 	void OnCardImageAndWidthChanged(const TSoftObjectPtr<class UTexture2D>& Image, float Width);
 	void OnCustomizationSlotActiveStateChanged(bool bInAttachableCosmeticAvailable, bool bInActive);
-	void OnModifiedStatusUpdated(bool bIsModified);
-	void OnUpdateExclusiveWarning(bool bShouldWarn);
+	void Construct();
+	void HandleActiveStateChanged(bool CosmeticAvailable, bool Active);
+	class FString GetSlotDebugName();
+	void HandleWidthChanged(float Width);
 
 public:
 	static class UClass* StaticClass()
@@ -75,34 +68,29 @@ public:
 		return GetDefaultObjImpl<UAthenaCustomizationSlotButton_C>();
 	}
 };
-static_assert(alignof(UAthenaCustomizationSlotButton_C) == 0x000010, "Wrong alignment on UAthenaCustomizationSlotButton_C");
-static_assert(sizeof(UAthenaCustomizationSlotButton_C) == 0x0016B0, "Wrong size on UAthenaCustomizationSlotButton_C");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, UberGraphFrame) == 0x001500, "Member 'UAthenaCustomizationSlotButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, QuickSaveConfirmation) == 0x001508, "Member 'UAthenaCustomizationSlotButton_C::QuickSaveConfirmation' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, Modified) == 0x001510, "Member 'UAthenaCustomizationSlotButton_C::Modified' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, WarningPulse) == 0x001518, "Member 'UAthenaCustomizationSlotButton_C::WarningPulse' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, OnBackedOutFromSelection) == 0x001520, "Member 'UAthenaCustomizationSlotButton_C::OnBackedOutFromSelection' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, OnConfirmedSelection) == 0x001528, "Member 'UAthenaCustomizationSlotButton_C::OnConfirmedSelection' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, OnSelected) == 0x001530, "Member 'UAthenaCustomizationSlotButton_C::OnSelected' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, OnHover) == 0x001538, "Member 'UAthenaCustomizationSlotButton_C::OnHover' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, ConfirmSelectionFlash) == 0x001540, "Member 'UAthenaCustomizationSlotButton_C::ConfirmSelectionFlash' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, ConfirmSelectionShine) == 0x001548, "Member 'UAthenaCustomizationSlotButton_C::ConfirmSelectionShine' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, ExclusiveFill) == 0x001550, "Member 'UAthenaCustomizationSlotButton_C::ExclusiveFill' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, ExclusiveWarningOvr) == 0x001558, "Member 'UAthenaCustomizationSlotButton_C::ExclusiveWarningOvr' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, Image_Archived) == 0x001560, "Member 'UAthenaCustomizationSlotButton_C::Image_Archived' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, Image_empty) == 0x001568, "Member 'UAthenaCustomizationSlotButton_C::Image_empty' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, InactiveFilledSlot) == 0x001570, "Member 'UAthenaCustomizationSlotButton_C::InactiveFilledSlot' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, QuickSaveShine) == 0x001578, "Member 'UAthenaCustomizationSlotButton_C::QuickSaveShine' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, Text_Plus) == 0x001580, "Member 'UAthenaCustomizationSlotButton_C::Text_Plus' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, TooltipBody) == 0x001588, "Member 'UAthenaCustomizationSlotButton_C::TooltipBody' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, TooltipHeader) == 0x0015A0, "Member 'UAthenaCustomizationSlotButton_C::TooltipHeader' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, ShowSubTypeIcon) == 0x0015B8, "Member 'UAthenaCustomizationSlotButton_C::ShowSubTypeIcon' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, SubTypeIcon) == 0x0015C0, "Member 'UAthenaCustomizationSlotButton_C::SubTypeIcon' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, bSuppressTooltip) == 0x001680, "Member 'UAthenaCustomizationSlotButton_C::bSuppressTooltip' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, TypeIconVerticalOffset) == 0x001688, "Member 'UAthenaCustomizationSlotButton_C::TypeIconVerticalOffset' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, ImageEmptyMID) == 0x001690, "Member 'UAthenaCustomizationSlotButton_C::ImageEmptyMID' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, WidthThreshold) == 0x001698, "Member 'UAthenaCustomizationSlotButton_C::WidthThreshold' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButton_C, IsModified) == 0x0016A0, "Member 'UAthenaCustomizationSlotButton_C::IsModified' has a wrong offset!");
+static_assert(alignof(UAthenaCustomizationSlotButton_C) == 0x000008, "Wrong alignment on UAthenaCustomizationSlotButton_C");
+static_assert(sizeof(UAthenaCustomizationSlotButton_C) == 0x000DA8, "Wrong size on UAthenaCustomizationSlotButton_C");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, UberGraphFrame) == 0x000C68, "Member 'UAthenaCustomizationSlotButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, WarningPulse) == 0x000C70, "Member 'UAthenaCustomizationSlotButton_C::WarningPulse' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, OnBackedOutFromSelection) == 0x000C78, "Member 'UAthenaCustomizationSlotButton_C::OnBackedOutFromSelection' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, OnConfirmedSelection) == 0x000C80, "Member 'UAthenaCustomizationSlotButton_C::OnConfirmedSelection' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, OnSelected) == 0x000C88, "Member 'UAthenaCustomizationSlotButton_C::OnSelected' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, OnHover) == 0x000C90, "Member 'UAthenaCustomizationSlotButton_C::OnHover' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, ConfirmSelectionFlash) == 0x000C98, "Member 'UAthenaCustomizationSlotButton_C::ConfirmSelectionFlash' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, ConfirmSelectionShine) == 0x000CA0, "Member 'UAthenaCustomizationSlotButton_C::ConfirmSelectionShine' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, ExclusiveFill) == 0x000CA8, "Member 'UAthenaCustomizationSlotButton_C::ExclusiveFill' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, ExclusiveWarningOvr) == 0x000CB0, "Member 'UAthenaCustomizationSlotButton_C::ExclusiveWarningOvr' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, Image_empty) == 0x000CB8, "Member 'UAthenaCustomizationSlotButton_C::Image_empty' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, InactiveFilledSlot) == 0x000CC0, "Member 'UAthenaCustomizationSlotButton_C::InactiveFilledSlot' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, Text_Plus) == 0x000CC8, "Member 'UAthenaCustomizationSlotButton_C::Text_Plus' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, TooltipBody) == 0x000CD0, "Member 'UAthenaCustomizationSlotButton_C::TooltipBody' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, TooltipHeader) == 0x000CE8, "Member 'UAthenaCustomizationSlotButton_C::TooltipHeader' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, ShowSubTypeIcon) == 0x000D00, "Member 'UAthenaCustomizationSlotButton_C::ShowSubTypeIcon' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, SubTypeIcon) == 0x000D08, "Member 'UAthenaCustomizationSlotButton_C::SubTypeIcon' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, bSuppressTooltip) == 0x000D90, "Member 'UAthenaCustomizationSlotButton_C::bSuppressTooltip' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, TypeIconVerticalOffset) == 0x000D94, "Member 'UAthenaCustomizationSlotButton_C::TypeIconVerticalOffset' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, ImageEmptyMID) == 0x000D98, "Member 'UAthenaCustomizationSlotButton_C::ImageEmptyMID' has a wrong offset!");
+static_assert(offsetof(UAthenaCustomizationSlotButton_C, WidthThreshold) == 0x000DA0, "Member 'UAthenaCustomizationSlotButton_C::WidthThreshold' has a wrong offset!");
 
 }
 

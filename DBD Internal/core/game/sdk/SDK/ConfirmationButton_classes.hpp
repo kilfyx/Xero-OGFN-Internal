@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ConfirmationButton.ConfirmationButton_C
-// 0x0000 (0x1040 - 0x1040)
+// 0x0000 (0x0CB0 - 0x0CB0)
 class UConfirmationButton_C final : public UIconTextButton_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UConfirmationButton_C>();
 	}
 };
+static_assert(alignof(UConfirmationButton_C) == 0x000008, "Wrong alignment on UConfirmationButton_C");
+static_assert(sizeof(UConfirmationButton_C) == 0x000CB0, "Wrong size on UConfirmationButton_C");
 
 }
 

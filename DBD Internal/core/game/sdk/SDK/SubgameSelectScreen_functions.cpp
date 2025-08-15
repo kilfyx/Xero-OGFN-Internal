@@ -17,20 +17,100 @@
 namespace SDK
 {
 
+// Function SubgameSelectScreen.SubgameSelectScreen_C.ExecuteUbergraph_SubgameSelectScreen
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USubgameSelectScreen_C::ExecuteUbergraph_SubgameSelectScreen(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubgameSelectScreen_C", "ExecuteUbergraph_SubgameSelectScreen");
+
+	Params::SubgameSelectScreen_C_ExecuteUbergraph_SubgameSelectScreen Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SubgameSelectScreen.SubgameSelectScreen_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void USubgameSelectScreen_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubgameSelectScreen_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SubgameSelectScreen.SubgameSelectScreen_C.BndEvt__ButtonExit_K2Node_ComponentBoundEvent_193_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USubgameSelectScreen_C::BndEvt__ButtonExit_K2Node_ComponentBoundEvent_193_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubgameSelectScreen_C", "BndEvt__ButtonExit_K2Node_ComponentBoundEvent_193_CommonButtonClicked__DelegateSignature");
+
+	Params::SubgameSelectScreen_C_BndEvt__ButtonExit_K2Node_ComponentBoundEvent_193_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SubgameSelectScreen.SubgameSelectScreen_C.OnEventActive_57187EC14A536D0960088EB25BDF39E5
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FTimespan&                 TimeUntilEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FTimespan&                 TimeSinceBegin                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   TimespanRatio                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USubgameSelectScreen_C::OnEventActive_57187EC14A536D0960088EB25BDF39E5(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubgameSelectScreen_C", "OnEventActive_57187EC14A536D0960088EB25BDF39E5");
+
+	Params::SubgameSelectScreen_C_OnEventActive_57187EC14A536D0960088EB25BDF39E5 Parms{};
+
+	Parms.EventName = std::move(EventName);
+	Parms.TimeUntilEnd = std::move(TimeUntilEnd);
+	Parms.TimeSinceBegin = std::move(TimeSinceBegin);
+	Parms.TimespanRatio = TimespanRatio;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function SubgameSelectScreen.SubgameSelectScreen_C.OnEventUpdated_57187EC14A536D0960088EB25BDF39E5
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// struct FTimespan                        TimeUntilEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FTimespan                        TimeSinceBegin                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FTimespan&                 TimeUntilEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FTimespan&                 TimeSinceBegin                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // float                                   TimespanRatio                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void USubgameSelectScreen_C::OnEventUpdated_57187EC14A536D0960088EB25BDF39E5(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnEventUpdated_57187EC14A536D0960088EB25BDF39E5");
+		Func = Class->GetFunction("SubgameSelectScreen_C", "OnEventUpdated_57187EC14A536D0960088EB25BDF39E5");
 
 	Params::SubgameSelectScreen_C_OnEventUpdated_57187EC14A536D0960088EB25BDF39E5 Parms{};
 
@@ -46,17 +126,17 @@ void USubgameSelectScreen_C::OnEventUpdated_57187EC14A536D0960088EB25BDF39E5(con
 // Function SubgameSelectScreen.SubgameSelectScreen_C.OnEventEnded_57187EC14A536D0960088EB25BDF39E5
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// struct FTimespan                        TimeUntilEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FTimespan                        TimeSinceBegin                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FTimespan&                 TimeUntilEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FTimespan&                 TimeSinceBegin                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // float                                   TimespanRatio                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void USubgameSelectScreen_C::OnEventEnded_57187EC14A536D0960088EB25BDF39E5(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnEventEnded_57187EC14A536D0960088EB25BDF39E5");
+		Func = Class->GetFunction("SubgameSelectScreen_C", "OnEventEnded_57187EC14A536D0960088EB25BDF39E5");
 
 	Params::SubgameSelectScreen_C_OnEventEnded_57187EC14A536D0960088EB25BDF39E5 Parms{};
 
@@ -69,43 +149,67 @@ void USubgameSelectScreen_C::OnEventEnded_57187EC14A536D0960088EB25BDF39E5(const
 }
 
 
-// Function SubgameSelectScreen.SubgameSelectScreen_C.OnEventActive_57187EC14A536D0960088EB25BDF39E5
+// Function SubgameSelectScreen.SubgameSelectScreen_C.DialogResult_FE9F49084346A08B6F02BA99FB50F5CD
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// struct FTimespan                        TimeUntilEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FTimespan                        TimeSinceBegin                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   TimespanRatio                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFortDialogResult                       Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             ResultName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USubgameSelectScreen_C::OnEventActive_57187EC14A536D0960088EB25BDF39E5(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio)
+void USubgameSelectScreen_C::DialogResult_FE9F49084346A08B6F02BA99FB50F5CD(EFortDialogResult Result, class FName ResultName)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnEventActive_57187EC14A536D0960088EB25BDF39E5");
+		Func = Class->GetFunction("SubgameSelectScreen_C", "DialogResult_FE9F49084346A08B6F02BA99FB50F5CD");
 
-	Params::SubgameSelectScreen_C_OnEventActive_57187EC14A536D0960088EB25BDF39E5 Parms{};
+	Params::SubgameSelectScreen_C_DialogResult_FE9F49084346A08B6F02BA99FB50F5CD Parms{};
 
-	Parms.EventName = std::move(EventName);
-	Parms.TimeUntilEnd = std::move(TimeUntilEnd);
-	Parms.TimeSinceBegin = std::move(TimeSinceBegin);
-	Parms.TimespanRatio = TimespanRatio;
+	Parms.Result = Result;
+	Parms.ResultName = ResultName;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SubgameSelectScreen.SubgameSelectScreen_C.InitializeTextureCycle
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void USubgameSelectScreen_C::InitializeTextureCycle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubgameSelectScreen_C", "InitializeTextureCycle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SubgameSelectScreen.SubgameSelectScreen_C.AdvanceTextureCycle
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void USubgameSelectScreen_C::AdvanceTextureCycle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubgameSelectScreen_C", "AdvanceTextureCycle");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function SubgameSelectScreen.SubgameSelectScreen_C.IsBusyMatchmaking
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool USubgameSelectScreen_C::IsBusyMatchmaking()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("IsBusyMatchmaking");
+		Func = Class->GetFunction("SubgameSelectScreen_C", "IsBusyMatchmaking");
 
 	Params::SubgameSelectScreen_C_IsBusyMatchmaking Parms{};
 
@@ -118,14 +222,14 @@ bool USubgameSelectScreen_C::IsBusyMatchmaking()
 // Function SubgameSelectScreen.SubgameSelectScreen_C.IsMinorShutdownWarningEnabled
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Enabled                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Enabled                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void USubgameSelectScreen_C::IsMinorShutdownWarningEnabled(bool* Enabled)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("IsMinorShutdownWarningEnabled");
+		Func = Class->GetFunction("SubgameSelectScreen_C", "IsMinorShutdownWarningEnabled");
 
 	Params::SubgameSelectScreen_C_IsMinorShutdownWarningEnabled Parms{};
 
@@ -133,68 +237,6 @@ void USubgameSelectScreen_C::IsMinorShutdownWarningEnabled(bool* Enabled)
 
 	if (Enabled != nullptr)
 		*Enabled = Parms.Enabled;
-}
-
-
-// Function SubgameSelectScreen.SubgameSelectScreen_C.ExecuteUbergraph_SubgameSelectScreen
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USubgameSelectScreen_C::ExecuteUbergraph_SubgameSelectScreen(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_SubgameSelectScreen");
-
-	Params::SubgameSelectScreen_C_ExecuteUbergraph_SubgameSelectScreen Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SubgameSelectScreen.SubgameSelectScreen_C.InitializeTextureCycle
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void USubgameSelectScreen_C::InitializeTextureCycle()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("InitializeTextureCycle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SubgameSelectScreen.SubgameSelectScreen_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void USubgameSelectScreen_C::BP_OnActivated()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SubgameSelectScreen.SubgameSelectScreen_C.AdvanceTextureCycle
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void USubgameSelectScreen_C::AdvanceTextureCycle()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("AdvanceTextureCycle");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

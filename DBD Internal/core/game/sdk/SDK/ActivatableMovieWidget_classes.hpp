@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -18,16 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ActivatableMovieWidget.ActivatableMovieWidget_C
-// 0x0010 (0x0598 - 0x0588)
+// 0x0008 (0x0580 - 0x0578)
 class UActivatableMovieWidget_C final : public UFortActivatableVideoPanel
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0588(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USafeZone*                              MainSafeZone;                                      // 0x0590(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void Construct();
-	void ExecuteUbergraph_ActivatableMovieWidget(int32 EntryPoint);
+	class USafeZone*                              MainSafeZone;                                      // 0x0578(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -39,6 +33,9 @@ public:
 		return GetDefaultObjImpl<UActivatableMovieWidget_C>();
 	}
 };
+static_assert(alignof(UActivatableMovieWidget_C) == 0x000008, "Wrong alignment on UActivatableMovieWidget_C");
+static_assert(sizeof(UActivatableMovieWidget_C) == 0x000580, "Wrong size on UActivatableMovieWidget_C");
+static_assert(offsetof(UActivatableMovieWidget_C, MainSafeZone) == 0x000578, "Member 'UActivatableMovieWidget_C::MainSafeZone' has a wrong offset!");
 
 }
 

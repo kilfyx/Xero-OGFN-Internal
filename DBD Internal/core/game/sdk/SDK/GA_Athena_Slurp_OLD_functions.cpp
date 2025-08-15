@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.ApplyHealthOrShield
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_Slurp_OLD_C::ApplyHealthOrShield()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Slurp_OLD_C", "ApplyHealthOrShield");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.ExecuteUbergraph_GA_Athena_Slurp_OLD
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -51,15 +37,15 @@ void UGA_Athena_Slurp_OLD_C::ExecuteUbergraph_GA_Athena_Slurp_OLD(int32 EntryPoi
 }
 
 
-// Function GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
+// Function GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.ApplyHealthOrShield
+// (BlueprintCallable, BlueprintEvent)
 
-void UGA_Athena_Slurp_OLD_C::K2_ActivateAbility()
+void UGA_Athena_Slurp_OLD_C::ApplyHealthOrShield()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Slurp_OLD_C", "K2_ActivateAbility");
+		Func = Class->GetFunction("GA_Athena_Slurp_OLD_C", "ApplyHealthOrShield");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -68,7 +54,7 @@ void UGA_Athena_Slurp_OLD_C::K2_ActivateAbility()
 // Function GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.K2_OnEndAbility
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UGA_Athena_Slurp_OLD_C::K2_OnEndAbility(bool bWasCancelled)
 {
@@ -82,6 +68,20 @@ void UGA_Athena_Slurp_OLD_C::K2_OnEndAbility(bool bWasCancelled)
 	Parms.bWasCancelled = bWasCancelled;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Athena_Slurp_OLD_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Slurp_OLD_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

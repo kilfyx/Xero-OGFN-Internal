@@ -17,41 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Athena_FloppingRabbit.GA_Athena_FloppingRabbit_C.Added_BA7C268C4DC490F4C68661A36094112C
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_FloppingRabbit_C::Added_BA7C268C4DC490F4C68661A36094112C()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_FloppingRabbit_C", "Added_BA7C268C4DC490F4C68661A36094112C");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_FloppingRabbit.GA_Athena_FloppingRabbit_C.CheckAndEndForRoofedSeat
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   EndedAbility                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_FloppingRabbit_C::CheckAndEndForRoofedSeat(bool* EndedAbility)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_FloppingRabbit_C", "CheckAndEndForRoofedSeat");
-
-	Params::GA_Athena_FloppingRabbit_C_CheckAndEndForRoofedSeat Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (EndedAbility != nullptr)
-		*EndedAbility = Parms.EndedAbility;
-}
-
-
 // Function GA_Athena_FloppingRabbit.GA_Athena_FloppingRabbit_C.ExecuteUbergraph_GA_Athena_FloppingRabbit
 // (Final, UbergraphFunction)
 // Parameters:
@@ -72,6 +37,20 @@ void UGA_Athena_FloppingRabbit_C::ExecuteUbergraph_GA_Athena_FloppingRabbit(int3
 }
 
 
+// Function GA_Athena_FloppingRabbit.GA_Athena_FloppingRabbit_C.ThrowMontageStarted
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_FloppingRabbit_C::ThrowMontageStarted()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_FloppingRabbit_C", "ThrowMontageStarted");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_Athena_FloppingRabbit.GA_Athena_FloppingRabbit_C.K2_ActivateAbility
 // (Event, Protected, BlueprintEvent)
 
@@ -86,23 +65,17 @@ void UGA_Athena_FloppingRabbit_C::K2_ActivateAbility()
 }
 
 
-// Function GA_Athena_FloppingRabbit.GA_Athena_FloppingRabbit_C.OnBlendOut_27A3BC8E4EB0B07EA2FD509EEE97AFC7
+// Function GA_Athena_FloppingRabbit.GA_Athena_FloppingRabbit_C.Added_5FF18B9B4B9A1DE12D88D68E50AB8A5B
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Athena_FloppingRabbit_C::OnBlendOut_27A3BC8E4EB0B07EA2FD509EEE97AFC7(class FName NotifyName)
+void UGA_Athena_FloppingRabbit_C::Added_5FF18B9B4B9A1DE12D88D68E50AB8A5B()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_FloppingRabbit_C", "OnBlendOut_27A3BC8E4EB0B07EA2FD509EEE97AFC7");
+		Func = Class->GetFunction("GA_Athena_FloppingRabbit_C", "Added_5FF18B9B4B9A1DE12D88D68E50AB8A5B");
 
-	Params::GA_Athena_FloppingRabbit_C_OnBlendOut_27A3BC8E4EB0B07EA2FD509EEE97AFC7 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -119,6 +92,26 @@ void UGA_Athena_FloppingRabbit_C::OnCompleted_27A3BC8E4EB0B07EA2FD509EEE97AFC7(c
 		Func = Class->GetFunction("GA_Athena_FloppingRabbit_C", "OnCompleted_27A3BC8E4EB0B07EA2FD509EEE97AFC7");
 
 	Params::GA_Athena_FloppingRabbit_C_OnCompleted_27A3BC8E4EB0B07EA2FD509EEE97AFC7 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_FloppingRabbit.GA_Athena_FloppingRabbit_C.OnBlendOut_27A3BC8E4EB0B07EA2FD509EEE97AFC7
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_FloppingRabbit_C::OnBlendOut_27A3BC8E4EB0B07EA2FD509EEE97AFC7(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_FloppingRabbit_C", "OnBlendOut_27A3BC8E4EB0B07EA2FD509EEE97AFC7");
+
+	Params::GA_Athena_FloppingRabbit_C_OnBlendOut_27A3BC8E4EB0B07EA2FD509EEE97AFC7 Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -186,41 +179,13 @@ void UGA_Athena_FloppingRabbit_C::OnNotifyEnd_27A3BC8E4EB0B07EA2FD509EEE97AFC7(c
 }
 
 
-// Function GA_Athena_FloppingRabbit.GA_Athena_FloppingRabbit_C.Removed_311A4C2149AD8A3A0CC53BBB97F01E65
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_FloppingRabbit_C::Removed_311A4C2149AD8A3A0CC53BBB97F01E65()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_FloppingRabbit_C", "Removed_311A4C2149AD8A3A0CC53BBB97F01E65");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_FloppingRabbit.GA_Athena_FloppingRabbit_C.ThrowMontageStarted
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_FloppingRabbit_C::ThrowMontageStarted()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_FloppingRabbit_C", "ThrowMontageStarted");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_Athena_FloppingRabbit.GA_Athena_FloppingRabbit_C.K2_CanActivateAbility
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // const struct FGameplayAbilityActorInfo& ActorInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 // const struct FGameplayAbilitySpecHandle&Handle                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // struct FGameplayTagContainer*           RelevantTags                                           (Parm, OutParm)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UGA_Athena_FloppingRabbit_C::K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayAbilitySpecHandle& Handle, struct FGameplayTagContainer* RelevantTags) const
 {

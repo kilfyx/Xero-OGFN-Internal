@@ -23,9 +23,9 @@ namespace SDK
 void ABP_Background_Raytracing_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UserConstructionScript");
+		Func = Class->GetFunction("BP_Background_Raytracing_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass STW_PlayerCameraModeRangedTargeting.STW_PlayerCameraModeRangedTargeting_C
-// 0x0000 (0x0EA0 - 0x0EA0)
+// 0x0000 (0x0DD0 - 0x0DD0)
 class USTW_PlayerCameraModeRangedTargeting_C final : public UAthena_PlayerCameraModeRangedTargeting_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<USTW_PlayerCameraModeRangedTargeting_C>();
 	}
 };
+static_assert(alignof(USTW_PlayerCameraModeRangedTargeting_C) == 0x000010, "Wrong alignment on USTW_PlayerCameraModeRangedTargeting_C");
+static_assert(sizeof(USTW_PlayerCameraModeRangedTargeting_C) == 0x000DD0, "Wrong size on USTW_PlayerCameraModeRangedTargeting_C");
 
 }
 

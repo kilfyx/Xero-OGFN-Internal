@@ -10,35 +10,35 @@
 
 #include "Basic.hpp"
 
-#include "FortniteUI_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass UserListEntry_XS.UserListEntry_XS_C
-// 0x0060 (0x0FF0 - 0x0F90)
+// 0x0058 (0x0C68 - 0x0C10)
 class UUserListEntry_XS_C final : public UFortSocialUserListEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Selected;                                          // 0x0F98(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hovered;                                           // 0x0FA0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Arrow;                                             // 0x0FA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIconTextButton_C*                      EmptyButtonToEatOneMouseUpEvent;                   // 0x0FB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonRichTextBlock*                   Text_DisplayName;                                  // 0x0FB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UUserActionMenuInputButton_C*           UserActionMenuInputButton;                         // 0x0FC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FLinearColor                           EncourageEpicFriend_IdleColor;                     // 0x0FC8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EncourageEpicFriend_HoveredColor;                  // 0x0FD8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Selected;                                          // 0x0C18(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hovered;                                           // 0x0C20(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Arrow;                                             // 0x0C28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIconTextButton_C*                      EmptyButtonToEatOneMouseUpEvent;                   // 0x0C30(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   Text_DisplayName;                                  // 0x0C38(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UUserActionMenuInputButton_C*           UserActionMenuInputButton;                         // 0x0C40(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FLinearColor                           EncourageEpicFriend_IdleColor;                     // 0x0C48(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EncourageEpicFriend_HoveredColor;                  // 0x0C58(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);
-	void BP_OnHovered();
-	void BP_OnUnhovered();
 	void ExecuteUbergraph_UserListEntry_XS(int32 EntryPoint);
 	void OnFocusLost(const struct FFocusEvent& InFocusEvent);
+	void BP_OnHovered();
+	void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);
+	void BP_OnUnhovered();
 
 public:
 	static class UClass* StaticClass()
@@ -50,6 +50,17 @@ public:
 		return GetDefaultObjImpl<UUserListEntry_XS_C>();
 	}
 };
+static_assert(alignof(UUserListEntry_XS_C) == 0x000008, "Wrong alignment on UUserListEntry_XS_C");
+static_assert(sizeof(UUserListEntry_XS_C) == 0x000C68, "Wrong size on UUserListEntry_XS_C");
+static_assert(offsetof(UUserListEntry_XS_C, UberGraphFrame) == 0x000C10, "Member 'UUserListEntry_XS_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UUserListEntry_XS_C, Selected) == 0x000C18, "Member 'UUserListEntry_XS_C::Selected' has a wrong offset!");
+static_assert(offsetof(UUserListEntry_XS_C, Hovered) == 0x000C20, "Member 'UUserListEntry_XS_C::Hovered' has a wrong offset!");
+static_assert(offsetof(UUserListEntry_XS_C, Arrow) == 0x000C28, "Member 'UUserListEntry_XS_C::Arrow' has a wrong offset!");
+static_assert(offsetof(UUserListEntry_XS_C, EmptyButtonToEatOneMouseUpEvent) == 0x000C30, "Member 'UUserListEntry_XS_C::EmptyButtonToEatOneMouseUpEvent' has a wrong offset!");
+static_assert(offsetof(UUserListEntry_XS_C, Text_DisplayName) == 0x000C38, "Member 'UUserListEntry_XS_C::Text_DisplayName' has a wrong offset!");
+static_assert(offsetof(UUserListEntry_XS_C, UserActionMenuInputButton) == 0x000C40, "Member 'UUserListEntry_XS_C::UserActionMenuInputButton' has a wrong offset!");
+static_assert(offsetof(UUserListEntry_XS_C, EncourageEpicFriend_IdleColor) == 0x000C48, "Member 'UUserListEntry_XS_C::EncourageEpicFriend_IdleColor' has a wrong offset!");
+static_assert(offsetof(UUserListEntry_XS_C, EncourageEpicFriend_HoveredColor) == 0x000C58, "Member 'UUserListEntry_XS_C::EncourageEpicFriend_HoveredColor' has a wrong offset!");
 
 }
 

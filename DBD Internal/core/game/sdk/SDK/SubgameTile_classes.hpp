@@ -18,25 +18,25 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SubgameTile.SubgameTile_C
-// 0x0040 (0x15A0 - 0x1560)
+// 0x0038 (0x0CF8 - 0x0CC0)
 class USubgameTile_C final : public UFortSubgameTile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1560(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       RevealCMSKeyArt;                                   // 0x1568(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       UnFocused;                                         // 0x1570(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       FocusedSecondary;                                  // 0x1578(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Focused;                                           // 0x1580(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 FocusPulse;                                        // 0x1588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               PulseMID;                                          // 0x1590(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0CC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       RevealCMSKeyArt;                                   // 0x0CC8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       UnFocused;                                         // 0x0CD0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FocusedSecondary;                                  // 0x0CD8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Focused;                                           // 0x0CE0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 FocusPulse;                                        // 0x0CE8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               PulseMID;                                          // 0x0CF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void PreConstruct(bool IsDesignTime);
-	void BP_OnHovered();
-	void ExecuteUbergraph_SubgameTile(int32 EntryPoint);
-	void BndEvt__Image_KeyArt_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature();
 	void Construct();
+	void BndEvt__Image_KeyArt_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature();
+	void BP_OnHovered();
 	void BP_OnUnhovered();
+	void ExecuteUbergraph_SubgameTile(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -48,15 +48,15 @@ public:
 		return GetDefaultObjImpl<USubgameTile_C>();
 	}
 };
-static_assert(alignof(USubgameTile_C) == 0x000010, "Wrong alignment on USubgameTile_C");
-static_assert(sizeof(USubgameTile_C) == 0x0015A0, "Wrong size on USubgameTile_C");
-static_assert(offsetof(USubgameTile_C, UberGraphFrame) == 0x001560, "Member 'USubgameTile_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USubgameTile_C, RevealCMSKeyArt) == 0x001568, "Member 'USubgameTile_C::RevealCMSKeyArt' has a wrong offset!");
-static_assert(offsetof(USubgameTile_C, UnFocused) == 0x001570, "Member 'USubgameTile_C::UnFocused' has a wrong offset!");
-static_assert(offsetof(USubgameTile_C, FocusedSecondary) == 0x001578, "Member 'USubgameTile_C::FocusedSecondary' has a wrong offset!");
-static_assert(offsetof(USubgameTile_C, Focused) == 0x001580, "Member 'USubgameTile_C::Focused' has a wrong offset!");
-static_assert(offsetof(USubgameTile_C, FocusPulse) == 0x001588, "Member 'USubgameTile_C::FocusPulse' has a wrong offset!");
-static_assert(offsetof(USubgameTile_C, PulseMID) == 0x001590, "Member 'USubgameTile_C::PulseMID' has a wrong offset!");
+static_assert(alignof(USubgameTile_C) == 0x000008, "Wrong alignment on USubgameTile_C");
+static_assert(sizeof(USubgameTile_C) == 0x000CF8, "Wrong size on USubgameTile_C");
+static_assert(offsetof(USubgameTile_C, UberGraphFrame) == 0x000CC0, "Member 'USubgameTile_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(USubgameTile_C, RevealCMSKeyArt) == 0x000CC8, "Member 'USubgameTile_C::RevealCMSKeyArt' has a wrong offset!");
+static_assert(offsetof(USubgameTile_C, UnFocused) == 0x000CD0, "Member 'USubgameTile_C::UnFocused' has a wrong offset!");
+static_assert(offsetof(USubgameTile_C, FocusedSecondary) == 0x000CD8, "Member 'USubgameTile_C::FocusedSecondary' has a wrong offset!");
+static_assert(offsetof(USubgameTile_C, Focused) == 0x000CE0, "Member 'USubgameTile_C::Focused' has a wrong offset!");
+static_assert(offsetof(USubgameTile_C, FocusPulse) == 0x000CE8, "Member 'USubgameTile_C::FocusPulse' has a wrong offset!");
+static_assert(offsetof(USubgameTile_C, PulseMID) == 0x000CF0, "Member 'USubgameTile_C::PulseMID' has a wrong offset!");
 
 }
 

@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TabGameplayOptions_New.TabGameplayOptions_New_C
-// 0x0008 (0x0380 - 0x0378)
+// 0x0008 (0x0370 - 0x0368)
 class UTabGameplayOptions_New_C final : public UFortTabGameplayOptions_TempNew
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void CenterOnTab();
 	void ExecuteUbergraph_TabGameplayOptions_New(int32 EntryPoint);
+	void CenterOnTab();
 	void SettingValueChanged(float Value);
 
 public:
@@ -39,6 +39,9 @@ public:
 		return GetDefaultObjImpl<UTabGameplayOptions_New_C>();
 	}
 };
+static_assert(alignof(UTabGameplayOptions_New_C) == 0x000008, "Wrong alignment on UTabGameplayOptions_New_C");
+static_assert(sizeof(UTabGameplayOptions_New_C) == 0x000370, "Wrong size on UTabGameplayOptions_New_C");
+static_assert(offsetof(UTabGameplayOptions_New_C, UberGraphFrame) == 0x000368, "Member 'UTabGameplayOptions_New_C::UberGraphFrame' has a wrong offset!");
 
 }
 

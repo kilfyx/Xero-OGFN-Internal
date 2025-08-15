@@ -81,15 +81,15 @@ void APlayerPawn_Athena_Generic_Parent_C::K2_OnStartCrouch(float HalfHeightAdjus
 }
 
 
-// Function PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.OnEnteredVehicle
+// Function PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.OnJumped
 // (Event, Public, BlueprintEvent)
 
-void APlayerPawn_Athena_Generic_Parent_C::OnEnteredVehicle()
+void APlayerPawn_Athena_Generic_Parent_C::OnJumped()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawn_Athena_Generic_Parent_C", "OnEnteredVehicle");
+		Func = Class->GetFunction("PlayerPawn_Athena_Generic_Parent_C", "OnJumped");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -109,15 +109,15 @@ void APlayerPawn_Athena_Generic_Parent_C::OnExitedVehicle()
 }
 
 
-// Function PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.OnJumped
+// Function PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.OnEnteredVehicle
 // (Event, Public, BlueprintEvent)
 
-void APlayerPawn_Athena_Generic_Parent_C::OnJumped()
+void APlayerPawn_Athena_Generic_Parent_C::OnEnteredVehicle()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawn_Athena_Generic_Parent_C", "OnJumped");
+		Func = Class->GetFunction("PlayerPawn_Athena_Generic_Parent_C", "OnEnteredVehicle");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

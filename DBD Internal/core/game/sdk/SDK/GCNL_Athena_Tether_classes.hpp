@@ -18,48 +18,49 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCNL_Athena_Tether.GCNL_Athena_Tether_C
-// 0x0078 (0x0880 - 0x0808)
+// 0x0078 (0x0838 - 0x07C0)
 class AGCNL_Athena_Tether_C final : public AFortGameplayCueNotify_Loop
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0808(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UFortLayeredAudioComponent*             FortLayeredAudio;                                  // 0x0810(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      LandFX;                                            // 0x0818(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      WaterFX;                                           // 0x0820(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   RightSki;                                          // 0x0828(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   LeftSki;                                           // 0x0830(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         ScaleInSkis_SkiScalar_93783D4A4F91BF9F887B16977978DDB4; // 0x0838(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            ScaleInSkis__Direction_93783D4A4F91BF9F887B16977978DDB4; // 0x083C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_83D[0x3];                                      // 0x083D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     ScaleInSkis;                                       // 0x0840(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        OwningFPP;                                         // 0x0848(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsInWater;                                         // 0x0850(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_851[0x3];                                      // 0x0851(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         NormalizedSpeed;                                   // 0x0854(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TurnSpeed;                                         // 0x0858(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ForceFeedbackIntensity;                            // 0x085C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           ScaleInSkisTimerHandle;                            // 0x0860(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         SkiScaleInDelay;                                   // 0x0868(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_86C[0x4];                                      // 0x086C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ICameraLensEffectInterface> CameraLensEffectInterface;                    // 0x0870(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UFortLayeredAudioComponent*             FortLayeredAudio;                                  // 0x07C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      LandFX;                                            // 0x07D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      WaterFX;                                           // 0x07D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   RightSki;                                          // 0x07E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   LeftSki;                                           // 0x07E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         ScaleInSkis_SkiScalar_93783D4A4F91BF9F887B16977978DDB4; // 0x07F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            ScaleInSkis__Direction_93783D4A4F91BF9F887B16977978DDB4; // 0x07F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7F5[0x3];                                      // 0x07F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     ScaleInSkis;                                       // 0x07F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawn*                        OwningFPP;                                         // 0x0800(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInWater;                                         // 0x0808(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_809[0x3];                                      // 0x0809(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         NormalizedSpeed;                                   // 0x080C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TurnSpeed;                                         // 0x0810(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_814[0x4];                                      // 0x0814(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AEmitterCameraLensEffectBase*           CameraLensEffect;                                  // 0x0818(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ForceFeedbackIntensity;                            // 0x0820(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_824[0x4];                                      // 0x0824(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           ScaleInSkisTimerHandle;                            // 0x0828(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         SkiScaleInDelay;                                   // 0x0830(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__FortLayeredAudio_K2Node_ComponentBoundEvent_0_OnLayeredAudioComponentOneshot__DelegateSignature(class UAudioComponent* AudioComponent, class FName ParameterName, int32 OneshotIndex);
 	void ExecuteUbergraph_GCNL_Athena_Tether(int32 EntryPoint);
-	void InitializeTetherGCNL(class UObject* Object);
-	void OnApplication(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UMatineeCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
-	void OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UMatineeCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
-	bool OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void ScaleInSkis__FinishedFunc();
-	void ScaleInSkis__UpdateFunc();
 	void ScaleInSkisForPlayer();
-	void StartFF();
+	void ReceiveBeginPlay();
+	void InitializeTetherGCNL(class UObject* Object);
 	void StopFF();
-	void UpdateAudio(int32 Surface);
 	void UpdateFF();
+	void StartFF();
+	void BndEvt__FortLayeredAudio_K2Node_ComponentBoundEvent_0_OnLayeredAudioComponentOneshot__DelegateSignature(class UAudioComponent* AudioComponent, class FName ParameterName, int32 OneshotIndex);
+	void OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UMatineeCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
+	void OnApplication(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UMatineeCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
+	void ReceiveTick(float DeltaSeconds);
+	void ScaleInSkis__UpdateFunc();
+	void ScaleInSkis__FinishedFunc();
+	void UpdateAudio(int32 Surface);
 	bool WhileActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
+	bool OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
 
 public:
 	static class UClass* StaticClass()
@@ -71,6 +72,25 @@ public:
 		return GetDefaultObjImpl<AGCNL_Athena_Tether_C>();
 	}
 };
+static_assert(alignof(AGCNL_Athena_Tether_C) == 0x000008, "Wrong alignment on AGCNL_Athena_Tether_C");
+static_assert(sizeof(AGCNL_Athena_Tether_C) == 0x000838, "Wrong size on AGCNL_Athena_Tether_C");
+static_assert(offsetof(AGCNL_Athena_Tether_C, UberGraphFrame) == 0x0007C0, "Member 'AGCNL_Athena_Tether_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, FortLayeredAudio) == 0x0007C8, "Member 'AGCNL_Athena_Tether_C::FortLayeredAudio' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, LandFX) == 0x0007D0, "Member 'AGCNL_Athena_Tether_C::LandFX' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, WaterFX) == 0x0007D8, "Member 'AGCNL_Athena_Tether_C::WaterFX' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, RightSki) == 0x0007E0, "Member 'AGCNL_Athena_Tether_C::RightSki' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, LeftSki) == 0x0007E8, "Member 'AGCNL_Athena_Tether_C::LeftSki' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, ScaleInSkis_SkiScalar_93783D4A4F91BF9F887B16977978DDB4) == 0x0007F0, "Member 'AGCNL_Athena_Tether_C::ScaleInSkis_SkiScalar_93783D4A4F91BF9F887B16977978DDB4' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, ScaleInSkis__Direction_93783D4A4F91BF9F887B16977978DDB4) == 0x0007F4, "Member 'AGCNL_Athena_Tether_C::ScaleInSkis__Direction_93783D4A4F91BF9F887B16977978DDB4' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, ScaleInSkis) == 0x0007F8, "Member 'AGCNL_Athena_Tether_C::ScaleInSkis' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, OwningFPP) == 0x000800, "Member 'AGCNL_Athena_Tether_C::OwningFPP' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, IsInWater) == 0x000808, "Member 'AGCNL_Athena_Tether_C::IsInWater' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, NormalizedSpeed) == 0x00080C, "Member 'AGCNL_Athena_Tether_C::NormalizedSpeed' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, TurnSpeed) == 0x000810, "Member 'AGCNL_Athena_Tether_C::TurnSpeed' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, CameraLensEffect) == 0x000818, "Member 'AGCNL_Athena_Tether_C::CameraLensEffect' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, ForceFeedbackIntensity) == 0x000820, "Member 'AGCNL_Athena_Tether_C::ForceFeedbackIntensity' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, ScaleInSkisTimerHandle) == 0x000828, "Member 'AGCNL_Athena_Tether_C::ScaleInSkisTimerHandle' has a wrong offset!");
+static_assert(offsetof(AGCNL_Athena_Tether_C, SkiScaleInDelay) == 0x000830, "Member 'AGCNL_Athena_Tether_C::SkiScaleInDelay' has a wrong offset!");
 
 }
 

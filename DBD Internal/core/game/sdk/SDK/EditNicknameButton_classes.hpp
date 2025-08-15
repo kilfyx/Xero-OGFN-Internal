@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EditNicknameButton.EditNicknameButton_C
-// 0x0020 (0x0F50 - 0x0F30)
+// 0x0018 (0x0BF0 - 0x0BD8)
 class UEditNicknameButton_C final : public UFortEditNicknameButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F30(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHovered;                                         // 0x0F38(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                ClickCapture;                                      // 0x0F40(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHovered;                                         // 0x0BE0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                ClickCapture;                                      // 0x0BE8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnHovered();
-	void BP_OnUnhovered();
 	void ExecuteUbergraph_EditNicknameButton(int32 EntryPoint);
+	void BP_OnUnhovered();
+	void BP_OnHovered();
 
 public:
 	static class UClass* StaticClass()
@@ -41,6 +41,11 @@ public:
 		return GetDefaultObjImpl<UEditNicknameButton_C>();
 	}
 };
+static_assert(alignof(UEditNicknameButton_C) == 0x000008, "Wrong alignment on UEditNicknameButton_C");
+static_assert(sizeof(UEditNicknameButton_C) == 0x000BF0, "Wrong size on UEditNicknameButton_C");
+static_assert(offsetof(UEditNicknameButton_C, UberGraphFrame) == 0x000BD8, "Member 'UEditNicknameButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UEditNicknameButton_C, OnHovered) == 0x000BE0, "Member 'UEditNicknameButton_C::OnHovered' has a wrong offset!");
+static_assert(offsetof(UEditNicknameButton_C, ClickCapture) == 0x000BE8, "Member 'UEditNicknameButton_C::ClickCapture' has a wrong offset!");
 
 }
 

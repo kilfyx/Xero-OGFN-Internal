@@ -14,19 +14,6 @@
 namespace SDK
 {
 
-// Enum EntityActor.EEntityActorReplicationOverrideType
-// NumValues: 0x0007
-enum class EEntityActorReplicationOverrideType : uint8
-{
-	AutoReplication                          = 0,
-	DoNotReplicate                           = 1,
-	ReplicateAlways                          = 2,
-	Static_Spatial                           = 3,
-	Dynamic_Spatial                          = 4,
-	Dormancy_Spatial                         = 5,
-	EEntityActorReplicationOverrideType_MAX  = 6,
-};
-
 // Enum EntityActor.EEntityActorReplicationRelevancyBucketType
 // NumValues: 0x0008
 enum class EEntityActorReplicationRelevancyBucketType : uint8
@@ -39,6 +26,19 @@ enum class EEntityActorReplicationRelevancyBucketType : uint8
 	ImportantReplicationRelevancy            = 5,
 	CustomReplicationRelevancy               = 6,
 	EEntityActorReplicationRelevancyBucketType_MAX = 7,
+};
+
+// Enum EntityActor.EEntityActorReplicationOverrideType
+// NumValues: 0x0007
+enum class EEntityActorReplicationOverrideType : uint8
+{
+	AutoReplication                          = 0,
+	DoNotReplicate                           = 1,
+	ReplicateAlways                          = 2,
+	Static_Spatial                           = 3,
+	Dynamic_Spatial                          = 4,
+	Dormancy_Spatial                         = 5,
+	EEntityActorReplicationOverrideType_MAX  = 6,
 };
 
 // Enum EntityActor.EDefaultAnimationMode

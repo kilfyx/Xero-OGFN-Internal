@@ -48,6 +48,8 @@ public:
 		return GetDefaultObjImpl<UGooglePADFunctionLibrary>();
 	}
 };
+static_assert(alignof(UGooglePADFunctionLibrary) == 0x000008, "Wrong alignment on UGooglePADFunctionLibrary");
+static_assert(sizeof(UGooglePADFunctionLibrary) == 0x000028, "Wrong size on UGooglePADFunctionLibrary");
 
 }
 

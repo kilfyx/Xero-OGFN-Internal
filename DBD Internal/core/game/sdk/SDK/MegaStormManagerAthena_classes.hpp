@@ -33,6 +33,9 @@ public:
 		return GetDefaultObjImpl<AMegaStormManagerAthena_C>();
 	}
 };
+static_assert(alignof(AMegaStormManagerAthena_C) == 0x000008, "Wrong alignment on AMegaStormManagerAthena_C");
+static_assert(sizeof(AMegaStormManagerAthena_C) == 0x000260, "Wrong size on AMegaStormManagerAthena_C");
+static_assert(offsetof(AMegaStormManagerAthena_C, DefaultSceneRoot) == 0x000258, "Member 'AMegaStormManagerAthena_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

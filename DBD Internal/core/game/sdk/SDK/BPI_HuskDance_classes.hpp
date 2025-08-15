@@ -43,6 +43,8 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+static_assert(alignof(IBPI_HuskDance_C) == 0x000001, "Wrong alignment on IBPI_HuskDance_C");
+static_assert(sizeof(IBPI_HuskDance_C) == 0x000001, "Wrong size on IBPI_HuskDance_C");
 
 }
 

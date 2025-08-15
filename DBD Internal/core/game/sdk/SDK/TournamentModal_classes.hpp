@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TournamentModal.TournamentModal_C
-// 0x0018 (0x0538 - 0x0520)
+// 0x0018 (0x04B0 - 0x0498)
 class UTournamentModal_C final : public UFortTournamentModal
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0520(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x0528(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_BG;                                          // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0498(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro;                                             // 0x04A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_Bg;                                          // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnActivated();
 	void ExecuteUbergraph_TournamentModal(int32 EntryPoint);
 	void OnTournamentSet(const struct FLinearColor& LeftColor, const struct FLinearColor& RightColor);
+	void BP_OnActivated();
 
 public:
 	static class UClass* StaticClass()
@@ -42,10 +42,10 @@ public:
 	}
 };
 static_assert(alignof(UTournamentModal_C) == 0x000008, "Wrong alignment on UTournamentModal_C");
-static_assert(sizeof(UTournamentModal_C) == 0x000538, "Wrong size on UTournamentModal_C");
-static_assert(offsetof(UTournamentModal_C, UberGraphFrame) == 0x000520, "Member 'UTournamentModal_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTournamentModal_C, Intro) == 0x000528, "Member 'UTournamentModal_C::Intro' has a wrong offset!");
-static_assert(offsetof(UTournamentModal_C, Image_BG) == 0x000530, "Member 'UTournamentModal_C::Image_BG' has a wrong offset!");
+static_assert(sizeof(UTournamentModal_C) == 0x0004B0, "Wrong size on UTournamentModal_C");
+static_assert(offsetof(UTournamentModal_C, UberGraphFrame) == 0x000498, "Member 'UTournamentModal_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UTournamentModal_C, Intro) == 0x0004A0, "Member 'UTournamentModal_C::Intro' has a wrong offset!");
+static_assert(offsetof(UTournamentModal_C, Image_Bg) == 0x0004A8, "Member 'UTournamentModal_C::Image_Bg' has a wrong offset!");
 
 }
 

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "GAB_GenericDeath_classes.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "FortniteGame_structs.hpp"
+#include "GAB_GenericDeath_classes.hpp"
 
 
 namespace SDK
@@ -42,6 +42,11 @@ public:
 		return GetDefaultObjImpl<UGA_DefaultPlayer_Death_C>();
 	}
 };
+static_assert(alignof(UGA_DefaultPlayer_Death_C) == 0x000008, "Wrong alignment on UGA_DefaultPlayer_Death_C");
+static_assert(sizeof(UGA_DefaultPlayer_Death_C) == 0x000C68, "Wrong size on UGA_DefaultPlayer_Death_C");
+static_assert(offsetof(UGA_DefaultPlayer_Death_C, UberGraphFrame_GA_DefaultPlayer_Death_C) == 0x000C50, "Member 'UGA_DefaultPlayer_Death_C::UberGraphFrame_GA_DefaultPlayer_Death_C' has a wrong offset!");
+static_assert(offsetof(UGA_DefaultPlayer_Death_C, FadeCapsuleStWCue) == 0x000C58, "Member 'UGA_DefaultPlayer_Death_C::FadeCapsuleStWCue' has a wrong offset!");
+static_assert(offsetof(UGA_DefaultPlayer_Death_C, FadeCapsuleAthenaCue) == 0x000C60, "Member 'UGA_DefaultPlayer_Death_C::FadeCapsuleAthenaCue' has a wrong offset!");
 
 }
 

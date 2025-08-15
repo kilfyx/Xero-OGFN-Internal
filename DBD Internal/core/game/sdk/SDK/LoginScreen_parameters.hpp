@@ -10,74 +10,82 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
+#include "FortniteUI_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function LoginScreen.LoginScreen_C.SetKeyArtVisibility
-// 0x0004 (0x0004 - 0x0000)
-struct LoginScreen_C_SetKeyArtVisibility final
+// Function LoginScreen.LoginScreen_C.BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct LoginScreen_C_BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature final
 {
 public:
-	int32                                         NewActiveWidgetIndex;                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                ActiveWidget;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ActiveWidgetIndex;                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(LoginScreen_C_SetKeyArtVisibility) == 0x000004, "Wrong alignment on LoginScreen_C_SetKeyArtVisibility");
-static_assert(sizeof(LoginScreen_C_SetKeyArtVisibility) == 0x000004, "Wrong size on LoginScreen_C_SetKeyArtVisibility");
-static_assert(offsetof(LoginScreen_C_SetKeyArtVisibility, NewActiveWidgetIndex) == 0x000000, "Member 'LoginScreen_C_SetKeyArtVisibility::NewActiveWidgetIndex' has a wrong offset!");
+static_assert(alignof(LoginScreen_C_BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature) == 0x000008, "Wrong alignment on LoginScreen_C_BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature");
+static_assert(sizeof(LoginScreen_C_BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature) == 0x000010, "Wrong size on LoginScreen_C_BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature");
+static_assert(offsetof(LoginScreen_C_BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature, ActiveWidget) == 0x000000, "Member 'LoginScreen_C_BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature::ActiveWidget' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature, ActiveWidgetIndex) == 0x000008, "Member 'LoginScreen_C_BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature::ActiveWidgetIndex' has a wrong offset!");
+
+// Function LoginScreen.LoginScreen_C.OnEnterState_1
+// 0x0001 (0x0001 - 0x0000)
+struct LoginScreen_C_OnEnterState_1 final
+{
+public:
+	EFortUIState                                  PreviousUIState;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(LoginScreen_C_OnEnterState_1) == 0x000001, "Wrong alignment on LoginScreen_C_OnEnterState_1");
+static_assert(sizeof(LoginScreen_C_OnEnterState_1) == 0x000001, "Wrong size on LoginScreen_C_OnEnterState_1");
+static_assert(offsetof(LoginScreen_C_OnEnterState_1, PreviousUIState) == 0x000000, "Member 'LoginScreen_C_OnEnterState_1::PreviousUIState' has a wrong offset!");
 
 // Function LoginScreen.LoginScreen_C.ExecuteUbergraph_LoginScreen
-// 0x0068 (0x0068 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct LoginScreen_C_ExecuteUbergraph_LoginScreen final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortRuntimeOptions*                    CallFunc_GetRuntimeOptions_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetGameVersion_ReturnValue;               // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0030(0x0018)()
-	int32                                         K2Node_Event_NewActiveWidgetIndex;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x004E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x004F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_3;          // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53[0x5];                                       // 0x0053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortFrontEndContext*                   CallFunc_GetContext_ReturnValue_1;                 // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsMobileGame_ReturnValue;                 // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortUIState                                  K2Node_Event_PreviousUIState;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AFort_Entry_Music_Controller_BP_C*> CallFunc_GetAllActorsOfClass_OutActors;         // 0x0010(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class UFortFrontEndContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFort_Entry_Music_Controller_BP_C*      CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue_1;                 // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortRuntimeOptions*                    CallFunc_GetRuntimeOptions_ReturnValue;            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                K2Node_ComponentBoundEvent_ActiveWidget;           // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_ComponentBoundEvent_ActiveWidgetIndex;      // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetGameVersion_ReturnValue;               // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0070(0x0018)()
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(LoginScreen_C_ExecuteUbergraph_LoginScreen) == 0x000008, "Wrong alignment on LoginScreen_C_ExecuteUbergraph_LoginScreen");
-static_assert(sizeof(LoginScreen_C_ExecuteUbergraph_LoginScreen) == 0x000068, "Wrong size on LoginScreen_C_ExecuteUbergraph_LoginScreen");
+static_assert(sizeof(LoginScreen_C_ExecuteUbergraph_LoginScreen) == 0x000090, "Wrong size on LoginScreen_C_ExecuteUbergraph_LoginScreen");
 static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, EntryPoint) == 0x000000, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::EntryPoint' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_GetContext_ReturnValue) == 0x000008, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_GetContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, Temp_byte_Variable) == 0x000010, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, Temp_byte_Variable_1) == 0x000011, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_GetRuntimeOptions_ReturnValue) == 0x000018, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_GetRuntimeOptions_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_GetGameVersion_ReturnValue) == 0x000020, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_GetGameVersion_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_Conv_StringToText_ReturnValue) == 0x000030, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, K2Node_Event_NewActiveWidgetIndex) == 0x000048, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::K2Node_Event_NewActiveWidgetIndex' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, Temp_bool_Variable) == 0x00004C, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00004D, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x00004E, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x00004F, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x000050, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_BooleanOR_ReturnValue) == 0x000051, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_BooleanOR_ReturnValue_1) == 0x000052, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_GetContext_ReturnValue_1) == 0x000058, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_GetContext_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_IsMobileGame_ReturnValue) == 0x000060, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_IsMobileGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_BooleanAND_ReturnValue) == 0x000061, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_BooleanOR_ReturnValue_2) == 0x000062, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, K2Node_Select_Default) == 0x000063, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, K2Node_Event_PreviousUIState) == 0x000004, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::K2Node_Event_PreviousUIState' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, Temp_int_Array_Index_Variable) == 0x000008, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_GetAllActorsOfClass_OutActors) == 0x000010, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_GetContext_ReturnValue) == 0x000020, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_GetContext_ReturnValue' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_Array_Get_Item) == 0x000028, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_GetContext_ReturnValue_1) == 0x000038, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_GetContext_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_GetRuntimeOptions_ReturnValue) == 0x000040, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_GetRuntimeOptions_ReturnValue' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, K2Node_ComponentBoundEvent_ActiveWidget) == 0x000048, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::K2Node_ComponentBoundEvent_ActiveWidget' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, K2Node_ComponentBoundEvent_ActiveWidgetIndex) == 0x000050, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::K2Node_ComponentBoundEvent_ActiveWidgetIndex' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_GetGameVersion_ReturnValue) == 0x000058, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_GetGameVersion_ReturnValue' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, Temp_int_Loop_Counter_Variable) == 0x000068, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_Conv_StringToText_ReturnValue) == 0x000070, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_Less_IntInt_ReturnValue) == 0x000088, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(LoginScreen_C_ExecuteUbergraph_LoginScreen, CallFunc_Add_IntInt_ReturnValue) == 0x00008C, "Member 'LoginScreen_C_ExecuteUbergraph_LoginScreen::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 }
 

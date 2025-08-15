@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SettingsListEntry_Header.SettingsListEntry_Header_C
-// 0x0000 (0x02B0 - 0x02B0)
+// 0x0000 (0x02C8 - 0x02C8)
 class USettingsListEntry_Header_C final : public UFortSettingsListEntry_Setting
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<USettingsListEntry_Header_C>();
 	}
 };
+static_assert(alignof(USettingsListEntry_Header_C) == 0x000008, "Wrong alignment on USettingsListEntry_Header_C");
+static_assert(sizeof(USettingsListEntry_Header_C) == 0x0002C8, "Wrong size on USettingsListEntry_Header_C");
 
 }
 

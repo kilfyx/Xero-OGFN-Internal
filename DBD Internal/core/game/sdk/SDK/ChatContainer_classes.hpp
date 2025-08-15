@@ -20,55 +20,43 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ChatContainer.ChatContainer_C
-// 0x00B8 (0x03C0 - 0x0308)
+// 0x0080 (0x0380 - 0x0300)
 class UChatContainer_C final : public UFortChatContainer
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0308(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Hover;                                             // 0x0310(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       SizeAnimation;                                     // 0x0318(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       FadeAnimation;                                     // 0x0320(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorderBackground;                            // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UIKit_Button_Quiet_C*              ConsoleChatShortcut;                               // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        CursorModeSwitcher;                                // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FocusOutline;                                      // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FocusOutline_Glow;                                 // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Glow;                                              // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HBox_Messages;                                     // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               HBox_Tabs;                                         // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HudContentHBox;                                    // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_ChatBorderBackground;                        // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UKeybindWidget_C*                       KeybindWidget;                                     // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_ChatSize;                                  // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_ConsoleButtonSpaceProvider;                // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        Switcher_SendButton;                               // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_Disabled;                                     // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	EUMGSequencePlayMode                          NewVar_0;                                          // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CurrentlyUsingGamepad;                             // 0x03A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AnimationClosing;                                  // 0x03A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A3[0x5];                                      // 0x03A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             WindowCloseSound;                                  // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             WindowOpenSound;                                   // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsChatOpen;                                        // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       SizeAnimation;                                     // 0x0308(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeAnimation;                                     // 0x0310(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonBorder*                          ChatBorder;                                        // 0x0318(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorderBackground;                            // 0x0320(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIconTextButton_C*                      ConsoleChatShortcut;                               // 0x0328(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        CursorModeSwitcher;                                // 0x0330(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HBox_Messages;                                     // 0x0338(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               HBox_Tabs;                                         // 0x0340(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HudContentHBox;                                    // 0x0348(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UKeybindWidget_C*                       KeybindWidget;                                     // 0x0350(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_ChatSize;                                  // 0x0358(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_ConsoleButtonSpaceProvider;                // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        Switcher_SendButton;                               // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_Disabled;                                     // 0x0370(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	EUMGSequencePlayMode                          NewVar_0;                                          // 0x0378(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CurrentlyUsingGamepad;                             // 0x0379(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          AnimationClosing;                                  // 0x037A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void BndEvt__ChatContainer_ChatList_Messages_K2Node_ComponentBoundEvent_1_OnListEntryGeneratedDynamic__DelegateSignature(class UUserWidget* Widget);
-	void BndEvt__ChatContainer_ConsoleChatShortcut_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void Construct();
-	void Destruct();
-	void ExecuteUbergraph_ChatContainer(int32 EntryPoint);
 	void FocusChat();
+	void SetChatBoxStyle();
+	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	void HandleChatOpenChanged(bool bChatShouldBeOpen);
+	void OnSizeAnimationComplete();
 	void HandleCursorModeChanged(bool bEnabled, class FName ActionName, class UUserWidget* Widget);
 	void OnChatOpenChanged(bool bShouldBeOpen);
-	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
 	void OnSendButtonDisplayChanged(bool bShowSendButton);
-	void OnSizeAnimationComplete();
-	void SetChatBoxStyle();
+	void Construct();
+	void BndEvt__ConsoleChatShortcut_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void Destruct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void TransitionState(class UWidgetAnimation* TransitionAnimation, double TransitionTime, bool PlayForward);
+	void ExecuteUbergraph_ChatContainer(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -81,32 +69,25 @@ public:
 	}
 };
 static_assert(alignof(UChatContainer_C) == 0x000008, "Wrong alignment on UChatContainer_C");
-static_assert(sizeof(UChatContainer_C) == 0x0003C0, "Wrong size on UChatContainer_C");
-static_assert(offsetof(UChatContainer_C, UberGraphFrame) == 0x000308, "Member 'UChatContainer_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, Hover) == 0x000310, "Member 'UChatContainer_C::Hover' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, SizeAnimation) == 0x000318, "Member 'UChatContainer_C::SizeAnimation' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, FadeAnimation) == 0x000320, "Member 'UChatContainer_C::FadeAnimation' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, CommonBorderBackground) == 0x000328, "Member 'UChatContainer_C::CommonBorderBackground' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, ConsoleChatShortcut) == 0x000330, "Member 'UChatContainer_C::ConsoleChatShortcut' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, CursorModeSwitcher) == 0x000338, "Member 'UChatContainer_C::CursorModeSwitcher' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, FocusOutline) == 0x000340, "Member 'UChatContainer_C::FocusOutline' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, FocusOutline_Glow) == 0x000348, "Member 'UChatContainer_C::FocusOutline_Glow' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, Glow) == 0x000350, "Member 'UChatContainer_C::Glow' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, HBox_Messages) == 0x000358, "Member 'UChatContainer_C::HBox_Messages' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, HBox_Tabs) == 0x000360, "Member 'UChatContainer_C::HBox_Tabs' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, HudContentHBox) == 0x000368, "Member 'UChatContainer_C::HudContentHBox' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, Image_ChatBorderBackground) == 0x000370, "Member 'UChatContainer_C::Image_ChatBorderBackground' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, KeybindWidget) == 0x000378, "Member 'UChatContainer_C::KeybindWidget' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, SizeBox_ChatSize) == 0x000380, "Member 'UChatContainer_C::SizeBox_ChatSize' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, SizeBox_ConsoleButtonSpaceProvider) == 0x000388, "Member 'UChatContainer_C::SizeBox_ConsoleButtonSpaceProvider' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, Switcher_SendButton) == 0x000390, "Member 'UChatContainer_C::Switcher_SendButton' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, Text_Disabled) == 0x000398, "Member 'UChatContainer_C::Text_Disabled' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, NewVar_0) == 0x0003A0, "Member 'UChatContainer_C::NewVar_0' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, CurrentlyUsingGamepad) == 0x0003A1, "Member 'UChatContainer_C::CurrentlyUsingGamepad' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, AnimationClosing) == 0x0003A2, "Member 'UChatContainer_C::AnimationClosing' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, WindowCloseSound) == 0x0003A8, "Member 'UChatContainer_C::WindowCloseSound' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, WindowOpenSound) == 0x0003B0, "Member 'UChatContainer_C::WindowOpenSound' has a wrong offset!");
-static_assert(offsetof(UChatContainer_C, IsChatOpen) == 0x0003B8, "Member 'UChatContainer_C::IsChatOpen' has a wrong offset!");
+static_assert(sizeof(UChatContainer_C) == 0x000380, "Wrong size on UChatContainer_C");
+static_assert(offsetof(UChatContainer_C, UberGraphFrame) == 0x000300, "Member 'UChatContainer_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, SizeAnimation) == 0x000308, "Member 'UChatContainer_C::SizeAnimation' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, FadeAnimation) == 0x000310, "Member 'UChatContainer_C::FadeAnimation' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, ChatBorder) == 0x000318, "Member 'UChatContainer_C::ChatBorder' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, CommonBorderBackground) == 0x000320, "Member 'UChatContainer_C::CommonBorderBackground' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, ConsoleChatShortcut) == 0x000328, "Member 'UChatContainer_C::ConsoleChatShortcut' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, CursorModeSwitcher) == 0x000330, "Member 'UChatContainer_C::CursorModeSwitcher' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, HBox_Messages) == 0x000338, "Member 'UChatContainer_C::HBox_Messages' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, HBox_Tabs) == 0x000340, "Member 'UChatContainer_C::HBox_Tabs' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, HudContentHBox) == 0x000348, "Member 'UChatContainer_C::HudContentHBox' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, KeybindWidget) == 0x000350, "Member 'UChatContainer_C::KeybindWidget' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, SizeBox_ChatSize) == 0x000358, "Member 'UChatContainer_C::SizeBox_ChatSize' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, SizeBox_ConsoleButtonSpaceProvider) == 0x000360, "Member 'UChatContainer_C::SizeBox_ConsoleButtonSpaceProvider' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, Switcher_SendButton) == 0x000368, "Member 'UChatContainer_C::Switcher_SendButton' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, Text_Disabled) == 0x000370, "Member 'UChatContainer_C::Text_Disabled' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, NewVar_0) == 0x000378, "Member 'UChatContainer_C::NewVar_0' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, CurrentlyUsingGamepad) == 0x000379, "Member 'UChatContainer_C::CurrentlyUsingGamepad' has a wrong offset!");
+static_assert(offsetof(UChatContainer_C, AnimationClosing) == 0x00037A, "Member 'UChatContainer_C::AnimationClosing' has a wrong offset!");
 
 }
 

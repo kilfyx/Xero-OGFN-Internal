@@ -17,18 +17,32 @@
 namespace SDK
 {
 
+// Function EmergencyNoticeWidgetBR.EmergencyNoticeWidgetBR_C.Show Notice
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UEmergencyNoticeWidgetBR_C::Show_Notice()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EmergencyNoticeWidgetBR_C", "Show Notice");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function EmergencyNoticeWidgetBR.EmergencyNoticeWidgetBR_C.ShowNotice
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// class FText                             Title                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class FText                             Body                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      Title                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      Body                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UEmergencyNoticeWidgetBR_C::ShowNotice(const class FText& Title, const class FText& Body)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ShowNotice");
+		Func = Class->GetFunction("EmergencyNoticeWidgetBR_C", "ShowNotice");
 
 	Params::EmergencyNoticeWidgetBR_C_ShowNotice Parms{};
 
@@ -39,29 +53,15 @@ void UEmergencyNoticeWidgetBR_C::ShowNotice(const class FText& Title, const clas
 }
 
 
-// Function EmergencyNoticeWidgetBR.EmergencyNoticeWidgetBR_C.Show Notice
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UEmergencyNoticeWidgetBR_C::Show_Notice()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Show Notice");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function EmergencyNoticeWidgetBR.EmergencyNoticeWidgetBR_C.HideNotice
 // (Event, Protected, BlueprintEvent)
 
 void UEmergencyNoticeWidgetBR_C::HideNotice()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("HideNotice");
+		Func = Class->GetFunction("EmergencyNoticeWidgetBR_C", "HideNotice");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -75,9 +75,9 @@ void UEmergencyNoticeWidgetBR_C::HideNotice()
 void UEmergencyNoticeWidgetBR_C::ExecuteUbergraph_EmergencyNoticeWidgetBR(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_EmergencyNoticeWidgetBR");
+		Func = Class->GetFunction("EmergencyNoticeWidgetBR_C", "ExecuteUbergraph_EmergencyNoticeWidgetBR");
 
 	Params::EmergencyNoticeWidgetBR_C_ExecuteUbergraph_EmergencyNoticeWidgetBR Parms{};
 

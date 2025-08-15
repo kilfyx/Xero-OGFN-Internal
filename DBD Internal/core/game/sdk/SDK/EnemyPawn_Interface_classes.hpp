@@ -22,7 +22,6 @@ class IEnemyPawn_Interface_C final
 {
 public:
 	void Orphaned(bool* IsOrphaned, class AFortPawn** AttachedPawn);
-	void TriggerDeathFX();
 
 public:
 	static class UClass* StaticClass()
@@ -43,6 +42,8 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+static_assert(alignof(IEnemyPawn_Interface_C) == 0x000001, "Wrong alignment on IEnemyPawn_Interface_C");
+static_assert(sizeof(IEnemyPawn_Interface_C) == 0x000001, "Wrong size on IEnemyPawn_Interface_C");
 
 }
 

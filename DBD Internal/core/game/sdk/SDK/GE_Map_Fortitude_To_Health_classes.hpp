@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Map_Fortitude_To_Health_C>();
 	}
 };
+static_assert(alignof(UGE_Map_Fortitude_To_Health_C) == 0x000008, "Wrong alignment on UGE_Map_Fortitude_To_Health_C");
+static_assert(sizeof(UGE_Map_Fortitude_To_Health_C) == 0x000800, "Wrong size on UGE_Map_Fortitude_To_Health_C");
 
 }
 

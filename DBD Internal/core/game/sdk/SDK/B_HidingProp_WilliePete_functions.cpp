@@ -17,6 +17,80 @@
 namespace SDK
 {
 
+// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.ExecuteUbergraph_B_HidingProp_WilliePete
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_HidingProp_WilliePete_C::ExecuteUbergraph_B_HidingProp_WilliePete(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "ExecuteUbergraph_B_HidingProp_WilliePete");
+
+	Params::B_HidingProp_WilliePete_C_ExecuteUbergraph_B_HidingProp_WilliePete Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.ResetGravity
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void AB_HidingProp_WilliePete_C::ResetGravity(const struct FHitResult& Hit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "ResetGravity");
+
+	Params::B_HidingProp_WilliePete_C_ResetGravity Parms{};
+
+	Parms.Hit = std::move(Hit);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.StopHiding
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class AFortPawn*                  Pawn                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_HidingProp_WilliePete_C::StopHiding(const class AFortPawn* Pawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "StopHiding");
+
+	Params::B_HidingProp_WilliePete_C_StopHiding Parms{};
+
+	Parms.Pawn = Pawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.Complete Setup
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_HidingProp_WilliePete_C::Complete_Setup()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "Complete Setup");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.BndEvt__overlapCylinder_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:
@@ -24,7 +98,7 @@ namespace SDK
 // class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
 void AB_HidingProp_WilliePete_C::BndEvt__overlapCylinder_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
@@ -47,55 +121,49 @@ void AB_HidingProp_WilliePete_C::BndEvt__overlapCylinder_K2Node_ComponentBoundEv
 }
 
 
-// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.Complete Setup
+// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.Remove GE
 // (BlueprintCallable, BlueprintEvent)
 
-void AB_HidingProp_WilliePete_C::Complete_Setup()
+void AB_HidingProp_WilliePete_C::Remove_GE()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "Complete Setup");
+		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "Remove GE");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.ExecuteUbergraph_B_HidingProp_WilliePete
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AB_HidingProp_WilliePete_C::ExecuteUbergraph_B_HidingProp_WilliePete(int32 EntryPoint)
+void AB_HidingProp_WilliePete_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "ExecuteUbergraph_B_HidingProp_WilliePete");
+		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "ReceiveBeginPlay");
 
-	Params::B_HidingProp_WilliePete_C_ExecuteUbergraph_B_HidingProp_WilliePete Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.HelperLocationLogger
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.Non Pawn Teleport
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    InString                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class AActor*                           TeleportingActor                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_HidingProp_WilliePete_C::HelperLocationLogger(const class FString& InString)
+void AB_HidingProp_WilliePete_C::Non_Pawn_Teleport(class AActor* TeleportingActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "HelperLocationLogger");
+		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "Non Pawn Teleport");
 
-	Params::B_HidingProp_WilliePete_C_HelperLocationLogger Parms{};
+	Params::B_HidingProp_WilliePete_C_Non_Pawn_Teleport Parms{};
 
-	Parms.InString = std::move(InString);
+	Parms.TeleportingActor = TeleportingActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -116,26 +184,6 @@ void AB_HidingProp_WilliePete_C::Non_Pawn_Actor_Destroyed(class AActor* Destroye
 	Params::B_HidingProp_WilliePete_C_Non_Pawn_Actor_Destroyed Parms{};
 
 	Parms.DestroyedActor = DestroyedActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.Non Pawn Teleport
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           TeleportingActor                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_HidingProp_WilliePete_C::Non_Pawn_Teleport(class AActor* TeleportingActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "Non Pawn Teleport");
-
-	Params::B_HidingProp_WilliePete_C_Non_Pawn_Teleport Parms{};
-
-	Parms.TeleportingActor = TeleportingActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -165,6 +213,38 @@ void AB_HidingProp_WilliePete_C::OnReady_74044DD44988556292500EB8F289359F(class 
 }
 
 
+// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.TeleportExitSpeed
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FVector&                   ExitFVector                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   EnterSpeed                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   OverrideSpeed                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   MinimumSpeed                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ForceSpeedOverride                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FVector*                         TeleportExitVelocity                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_HidingProp_WilliePete_C::TeleportExitSpeed(const struct FVector& ExitFVector, float EnterSpeed, float OverrideSpeed, float MinimumSpeed, bool ForceSpeedOverride, struct FVector* TeleportExitVelocity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "TeleportExitSpeed");
+
+	Params::B_HidingProp_WilliePete_C_TeleportExitSpeed Parms{};
+
+	Parms.ExitFVector = std::move(ExitFVector);
+	Parms.EnterSpeed = EnterSpeed;
+	Parms.OverrideSpeed = OverrideSpeed;
+	Parms.MinimumSpeed = MinimumSpeed;
+	Parms.ForceSpeedOverride = ForceSpeedOverride;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (TeleportExitVelocity != nullptr)
+		*TeleportExitVelocity = std::move(Parms.TeleportExitVelocity);
+}
+
+
 // Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.OnRep_AdjustedLocation
 // (HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -176,6 +256,26 @@ void AB_HidingProp_WilliePete_C::OnRep_AdjustedLocation()
 		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "OnRep_AdjustedLocation");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.HelperLocationLogger
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    inString                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void AB_HidingProp_WilliePete_C::HelperLocationLogger(const class FString& inString)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "HelperLocationLogger");
+
+	Params::B_HidingProp_WilliePete_C_HelperLocationLogger Parms{};
+
+	Parms.inString = std::move(inString);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -204,106 +304,6 @@ void AB_HidingProp_WilliePete_C::OnRep_bSetSpawnedWaterBody()
 		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "OnRep_bSetSpawnedWaterBody");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AB_HidingProp_WilliePete_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.Remove GE
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_HidingProp_WilliePete_C::Remove_GE()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "Remove GE");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.ResetGravity
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void AB_HidingProp_WilliePete_C::ResetGravity(const struct FHitResult& Hit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "ResetGravity");
-
-	Params::B_HidingProp_WilliePete_C_ResetGravity Parms{};
-
-	Parms.Hit = std::move(Hit);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.StopHiding
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class AFortPawn*                  Pawn_0                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_HidingProp_WilliePete_C::StopHiding(const class AFortPawn* Pawn_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "StopHiding");
-
-	Params::B_HidingProp_WilliePete_C_StopHiding Parms{};
-
-	Parms.Pawn_0 = Pawn_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.TeleportExitSpeed
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const struct FVector&                   ExitFVector                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   EnterSpeed                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   OverrideSpeed                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   MinimumSpeed                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ForceSpeedOverride                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector*                         TeleportExitVelocity                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_HidingProp_WilliePete_C::TeleportExitSpeed(const struct FVector& ExitFVector, float EnterSpeed, float OverrideSpeed, float MinimumSpeed, bool ForceSpeedOverride, struct FVector* TeleportExitVelocity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_HidingProp_WilliePete_C", "TeleportExitSpeed");
-
-	Params::B_HidingProp_WilliePete_C_TeleportExitSpeed Parms{};
-
-	Parms.ExitFVector = std::move(ExitFVector);
-	Parms.EnterSpeed = EnterSpeed;
-	Parms.OverrideSpeed = OverrideSpeed;
-	Parms.MinimumSpeed = MinimumSpeed;
-	Parms.ForceSpeedOverride = ForceSpeedOverride;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (TeleportExitVelocity != nullptr)
-		*TeleportExitVelocity = std::move(Parms.TeleportExitVelocity);
 }
 
 }

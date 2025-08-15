@@ -17,76 +17,6 @@
 namespace SDK
 {
 
-// Function Parent_Tree.Parent_Tree_C.ChangeWindIntensity
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Intensity                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Time_It_Takes_To_Reach_New_Intensity                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AParent_Tree_C::ChangeWindIntensity(float Intensity, float Time_It_Takes_To_Reach_New_Intensity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Parent_Tree_C", "ChangeWindIntensity");
-
-	Params::Parent_Tree_C_ChangeWindIntensity Parms{};
-
-	Parms.Intensity = Intensity;
-	Parms.Time_It_Takes_To_Reach_New_Intensity = Time_It_Takes_To_Reach_New_Intensity;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Parent_Tree.Parent_Tree_C.ExecuteUbergraph_Parent_Tree
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AParent_Tree_C::ExecuteUbergraph_Parent_Tree(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Parent_Tree_C", "ExecuteUbergraph_Parent_Tree");
-
-	Params::Parent_Tree_C_ExecuteUbergraph_Parent_Tree Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Parent_Tree.Parent_Tree_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AParent_Tree_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Parent_Tree_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Parent_Tree.Parent_Tree_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void AParent_Tree_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Parent_Tree_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Parent_Tree.Parent_Tree_C.RemoveTestWind
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -118,6 +48,76 @@ void AParent_Tree_C::UserConstructionScript()
 		Func = Class->GetFunction("Parent_Tree_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Parent_Tree.Parent_Tree_C.ChangeWindIntensity
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Intensity                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Time_It_Takes_To_Reach_New_Intensity                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AParent_Tree_C::ChangeWindIntensity(float Intensity, float Time_It_Takes_To_Reach_New_Intensity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Parent_Tree_C", "ChangeWindIntensity");
+
+	Params::Parent_Tree_C_ChangeWindIntensity Parms{};
+
+	Parms.Intensity = Intensity;
+	Parms.Time_It_Takes_To_Reach_New_Intensity = Time_It_Takes_To_Reach_New_Intensity;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Parent_Tree.Parent_Tree_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void AParent_Tree_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Parent_Tree_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Parent_Tree.Parent_Tree_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AParent_Tree_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Parent_Tree_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Parent_Tree.Parent_Tree_C.ExecuteUbergraph_Parent_Tree
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AParent_Tree_C::ExecuteUbergraph_Parent_Tree(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Parent_Tree_C", "ExecuteUbergraph_Parent_Tree");
+
+	Params::Parent_Tree_C_ExecuteUbergraph_Parent_Tree Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

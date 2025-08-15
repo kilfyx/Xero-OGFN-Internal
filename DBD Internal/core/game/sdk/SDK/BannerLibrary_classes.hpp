@@ -35,6 +35,8 @@ public:
 		return GetDefaultObjImpl<UBannerLibrary_C>();
 	}
 };
+static_assert(alignof(UBannerLibrary_C) == 0x000008, "Wrong alignment on UBannerLibrary_C");
+static_assert(sizeof(UBannerLibrary_C) == 0x000028, "Wrong size on UBannerLibrary_C");
 
 }
 

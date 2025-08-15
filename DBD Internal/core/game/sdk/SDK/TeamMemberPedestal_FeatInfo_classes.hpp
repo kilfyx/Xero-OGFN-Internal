@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TeamMemberPedestal_FeatInfo.TeamMemberPedestal_FeatInfo_C
-// 0x0010 (0x1480 - 0x1470)
+// 0x0010 (0x0BF0 - 0x0BE0)
 class UTeamMemberPedestal_FeatInfo_C final : public UFortTeamMemberPedestalFeatInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1470(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FeatInfoSet;                                       // 0x1478(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FeatInfoSet;                                       // 0x0BE8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_TeamMemberPedestal_FeatInfo(int32 EntryPoint);
 	void OnFeatDefinitionSet();
 	void OnAnimationFinished(const class UWidgetAnimation* Animation);
-	void ExecuteUbergraph_TeamMemberPedestal_FeatInfo(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -40,10 +40,10 @@ public:
 		return GetDefaultObjImpl<UTeamMemberPedestal_FeatInfo_C>();
 	}
 };
-static_assert(alignof(UTeamMemberPedestal_FeatInfo_C) == 0x000010, "Wrong alignment on UTeamMemberPedestal_FeatInfo_C");
-static_assert(sizeof(UTeamMemberPedestal_FeatInfo_C) == 0x001480, "Wrong size on UTeamMemberPedestal_FeatInfo_C");
-static_assert(offsetof(UTeamMemberPedestal_FeatInfo_C, UberGraphFrame) == 0x001470, "Member 'UTeamMemberPedestal_FeatInfo_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_FeatInfo_C, FeatInfoSet) == 0x001478, "Member 'UTeamMemberPedestal_FeatInfo_C::FeatInfoSet' has a wrong offset!");
+static_assert(alignof(UTeamMemberPedestal_FeatInfo_C) == 0x000008, "Wrong alignment on UTeamMemberPedestal_FeatInfo_C");
+static_assert(sizeof(UTeamMemberPedestal_FeatInfo_C) == 0x000BF0, "Wrong size on UTeamMemberPedestal_FeatInfo_C");
+static_assert(offsetof(UTeamMemberPedestal_FeatInfo_C, UberGraphFrame) == 0x000BE0, "Member 'UTeamMemberPedestal_FeatInfo_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UTeamMemberPedestal_FeatInfo_C, FeatInfoSet) == 0x000BE8, "Member 'UTeamMemberPedestal_FeatInfo_C::FeatInfoSet' has a wrong offset!");
 
 }
 

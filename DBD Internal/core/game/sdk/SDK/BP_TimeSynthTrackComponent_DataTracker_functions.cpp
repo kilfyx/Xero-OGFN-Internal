@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.AssignDataTrackerComponent
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFortGameplayDataTrackerComponent*DataTrackerComponent_0                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_TimeSynthTrackComponent_DataTracker_C::AssignDataTrackerComponent(class UFortGameplayDataTrackerComponent* DataTrackerComponent_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "AssignDataTrackerComponent");
-
-	Params::BP_TimeSynthTrackComponent_DataTracker_C_AssignDataTrackerComponent Parms{};
-
-	Parms.DataTrackerComponent_0 = DataTrackerComponent_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.ExecuteUbergraph_BP_TimeSynthTrackComponent_DataTracker
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -77,6 +57,100 @@ void UBP_TimeSynthTrackComponent_DataTracker_C::GamePhaseChanged(EAthenaGamePhas
 }
 
 
+// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBP_TimeSynthTrackComponent_DataTracker_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.OnReady_FFC0E068479278E143D010AF8EB81D0D
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFortGameStateAthena*             GameState                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UFortPlaylist*              Playlist                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTagContainer&     PlaylistContextTags                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UBP_TimeSynthTrackComponent_DataTracker_C::OnReady_FFC0E068479278E143D010AF8EB81D0D(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "OnReady_FFC0E068479278E143D010AF8EB81D0D");
+
+	Params::BP_TimeSynthTrackComponent_DataTracker_C_OnReady_FFC0E068479278E143D010AF8EB81D0D Parms{};
+
+	Parms.GameState = GameState;
+	Parms.Playlist = Playlist;
+	Parms.PlaylistContextTags = std::move(PlaylistContextTags);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.OnDataTrackerStart
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_TimeSynthTrackComponent_DataTracker_C::OnDataTrackerStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "OnDataTrackerStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.OnDataTrackerUpdate
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_TimeSynthTrackComponent_DataTracker_C::OnDataTrackerUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "OnDataTrackerUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.OnDataTrackerEnd
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBP_TimeSynthTrackComponent_DataTracker_C::OnDataTrackerEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "OnDataTrackerEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.StopDataTracker
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBP_TimeSynthTrackComponent_DataTracker_C::StopDataTracker()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "StopDataTracker");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.GetDataTrackerComponent
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -98,6 +172,26 @@ void UBP_TimeSynthTrackComponent_DataTracker_C::GetDataTrackerComponent(class UF
 }
 
 
+// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.AssignDataTrackerComponent
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortGameplayDataTrackerComponent*DataTrackerComponent_0                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_TimeSynthTrackComponent_DataTracker_C::AssignDataTrackerComponent(class UFortGameplayDataTrackerComponent* DataTrackerComponent_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "AssignDataTrackerComponent");
+
+	Params::BP_TimeSynthTrackComponent_DataTracker_C_AssignDataTrackerComponent Parms{};
+
+	Parms.DataTrackerComponent_0 = DataTrackerComponent_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.GetDataTrackerComponentManager
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -109,70 +203,6 @@ void UBP_TimeSynthTrackComponent_DataTracker_C::GetDataTrackerComponentManager()
 		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "GetDataTrackerComponentManager");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.GetIsEnabled
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   Enabled                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_TimeSynthTrackComponent_DataTracker_C::GetIsEnabled(bool* Enabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "GetIsEnabled");
-
-	Params::BP_TimeSynthTrackComponent_DataTracker_C_GetIsEnabled Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Enabled != nullptr)
-		*Enabled = Parms.Enabled;
-}
-
-
-// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.GetRemainingEventCooldown
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// float*                                  Cooldown                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_TimeSynthTrackComponent_DataTracker_C::GetRemainingEventCooldown(float* Cooldown)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "GetRemainingEventCooldown");
-
-	Params::BP_TimeSynthTrackComponent_DataTracker_C_GetRemainingEventCooldown Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Cooldown != nullptr)
-		*Cooldown = Parms.Cooldown;
-}
-
-
-// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.OnAnyEventValueChanged
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFortGameplayDataTrackerComponent*Data_Tracker_Component                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Has_Event_Values                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_TimeSynthTrackComponent_DataTracker_C::OnAnyEventValueChanged(class UFortGameplayDataTrackerComponent* Data_Tracker_Component, bool Has_Event_Values)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "OnAnyEventValueChanged");
-
-	Params::BP_TimeSynthTrackComponent_DataTracker_C_OnAnyEventValueChanged Parms{};
-
-	Parms.Data_Tracker_Component = Data_Tracker_Component;
-	Parms.Has_Event_Values = Has_Event_Values;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -216,76 +246,74 @@ void UBP_TimeSynthTrackComponent_DataTracker_C::OnDataTrackerComponentUnRegister
 }
 
 
-// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.OnDataTrackerEnd
+// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.OnAnyEventValueChanged
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UBP_TimeSynthTrackComponent_DataTracker_C::OnDataTrackerEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "OnDataTrackerEnd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.OnDataTrackerStart
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_TimeSynthTrackComponent_DataTracker_C::OnDataTrackerStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "OnDataTrackerStart");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.OnDataTrackerUpdate
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_TimeSynthTrackComponent_DataTracker_C::OnDataTrackerUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "OnDataTrackerUpdate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.OnReady_FFC0E068479278E143D010AF8EB81D0D
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFortGameStateAthena*             GameState                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UFortPlaylist*              Playlist                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTagContainer&     PlaylistContextTags                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UFortGameplayDataTrackerComponent*Data_Tracker_Component                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Has_Event_Values                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UBP_TimeSynthTrackComponent_DataTracker_C::OnReady_FFC0E068479278E143D010AF8EB81D0D(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags)
+void UBP_TimeSynthTrackComponent_DataTracker_C::OnAnyEventValueChanged(class UFortGameplayDataTrackerComponent* Data_Tracker_Component, bool Has_Event_Values)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "OnReady_FFC0E068479278E143D010AF8EB81D0D");
+		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "OnAnyEventValueChanged");
 
-	Params::BP_TimeSynthTrackComponent_DataTracker_C_OnReady_FFC0E068479278E143D010AF8EB81D0D Parms{};
+	Params::BP_TimeSynthTrackComponent_DataTracker_C_OnAnyEventValueChanged Parms{};
 
-	Parms.GameState = GameState;
-	Parms.Playlist = Playlist;
-	Parms.PlaylistContextTags = std::move(PlaylistContextTags);
+	Parms.Data_Tracker_Component = Data_Tracker_Component;
+	Parms.Has_Event_Values = Has_Event_Values;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.GetRemainingEventCooldown
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float*                                  Cooldown                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_TimeSynthTrackComponent_DataTracker_C::GetRemainingEventCooldown(float* Cooldown)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "GetRemainingEventCooldown");
+
+	Params::BP_TimeSynthTrackComponent_DataTracker_C_GetRemainingEventCooldown Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Cooldown != nullptr)
+		*Cooldown = Parms.Cooldown;
+}
+
+
+// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.GetIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   Enabled                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UBP_TimeSynthTrackComponent_DataTracker_C::GetIsEnabled(bool* Enabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "GetIsEnabled");
+
+	Params::BP_TimeSynthTrackComponent_DataTracker_C_GetIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Enabled != nullptr)
+		*Enabled = Parms.Enabled;
 }
 
 
 // Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.QueueTrackStop
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Play_Outro                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Play_Outro                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UBP_TimeSynthTrackComponent_DataTracker_C::QueueTrackStop(bool Play_Outro)
 {
@@ -299,34 +327,6 @@ void UBP_TimeSynthTrackComponent_DataTracker_C::QueueTrackStop(bool Play_Outro)
 	Parms.Play_Outro = Play_Outro;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBP_TimeSynthTrackComponent_DataTracker_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TimeSynthTrackComponent_DataTracker.BP_TimeSynthTrackComponent_DataTracker_C.StopDataTracker
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UBP_TimeSynthTrackComponent_DataTracker_C::StopDataTracker()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthTrackComponent_DataTracker_C", "StopDataTracker");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "FortniteUI_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -19,51 +19,45 @@ namespace SDK::Params
 {
 
 // Function LeaderboardListViewWrapper.LeaderboardListViewWrapper_C.ExecuteUbergraph_LeaderboardListViewWrapper
-// 0x0240 (0x0240 - 0x0000)
+// 0x0200 (0x0200 - 0x0000)
 struct LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELeaderboardDisplayType                       Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_RGBToHSV_H;                               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RGBToHSV_S;                               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RGBToHSV_V;                               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RGBToHSV_A;                               // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_HSVToRGB_ReturnValue;                     // 0x0024(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortTournamentDisplayInfo             K2Node_CustomEvent_DisplayInfo;                    // 0x0038(0x01D0)()
-	class FString                                 K2Node_CustomEvent_EventId;                        // 0x0208(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_EventWindowId;                  // 0x0218(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	ELeaderboardDisplayType                       K2Node_Event_NewDisplayType;                       // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22A[0x6];                                      // 0x022A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FClamp_Value_ImplicitCast;                // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_HSVToRGB_V_ImplicitCast;                  // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortTournamentDisplayInfo             K2Node_CustomEvent_DisplayInfo;                    // 0x0008(0x01A8)()
+	float                                         CallFunc_RGBToHSV_H;                               // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RGBToHSV_S;                               // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RGBToHSV_V;                               // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RGBToHSV_A;                               // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FClamp_ReturnValue;                       // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_HSVToRGB_ReturnValue;                     // 0x01C4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_EventId;                        // 0x01D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_EventWindowId;                  // 0x01E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	ELeaderboardDisplayType                       K2Node_Event_NewDisplayType;                       // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x01F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper) == 0x000008, "Wrong alignment on LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper");
-static_assert(sizeof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper) == 0x000240, "Wrong size on LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper");
+static_assert(sizeof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper) == 0x000200, "Wrong size on LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper");
 static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, EntryPoint) == 0x000000, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::EntryPoint' has a wrong offset!");
 static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, Temp_byte_Variable) == 0x000004, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, Temp_byte_Variable_1) == 0x000005, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_RGBToHSV_H) == 0x000008, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_RGBToHSV_H' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_RGBToHSV_S) == 0x00000C, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_RGBToHSV_S' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_RGBToHSV_V) == 0x000010, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_RGBToHSV_V' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_RGBToHSV_A) == 0x000014, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_RGBToHSV_A' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_FClamp_ReturnValue) == 0x000018, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, Temp_byte_Variable_2) == 0x000020, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_HSVToRGB_ReturnValue) == 0x000024, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_HSVToRGB_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, K2Node_CustomEvent_DisplayInfo) == 0x000038, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::K2Node_CustomEvent_DisplayInfo' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, K2Node_CustomEvent_EventId) == 0x000208, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::K2Node_CustomEvent_EventId' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, K2Node_CustomEvent_EventWindowId) == 0x000218, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::K2Node_CustomEvent_EventWindowId' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, K2Node_Event_NewDisplayType) == 0x000228, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::K2Node_Event_NewDisplayType' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, K2Node_Select_Default) == 0x000229, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_FClamp_Value_ImplicitCast) == 0x000230, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_FClamp_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_HSVToRGB_V_ImplicitCast) == 0x000238, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_HSVToRGB_V_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, Temp_byte_Variable_2) == 0x000006, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::Temp_byte_Variable_2' has a wrong offset!");
+static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, K2Node_CustomEvent_DisplayInfo) == 0x000008, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::K2Node_CustomEvent_DisplayInfo' has a wrong offset!");
+static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_RGBToHSV_H) == 0x0001B0, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_RGBToHSV_H' has a wrong offset!");
+static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_RGBToHSV_S) == 0x0001B4, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_RGBToHSV_S' has a wrong offset!");
+static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_RGBToHSV_V) == 0x0001B8, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_RGBToHSV_V' has a wrong offset!");
+static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_RGBToHSV_A) == 0x0001BC, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_RGBToHSV_A' has a wrong offset!");
+static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_FClamp_ReturnValue) == 0x0001C0, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, CallFunc_HSVToRGB_ReturnValue) == 0x0001C4, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::CallFunc_HSVToRGB_ReturnValue' has a wrong offset!");
+static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, K2Node_CustomEvent_EventId) == 0x0001D8, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::K2Node_CustomEvent_EventId' has a wrong offset!");
+static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, K2Node_CustomEvent_EventWindowId) == 0x0001E8, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::K2Node_CustomEvent_EventWindowId' has a wrong offset!");
+static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, K2Node_Event_NewDisplayType) == 0x0001F8, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::K2Node_Event_NewDisplayType' has a wrong offset!");
+static_assert(offsetof(LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper, K2Node_Select_Default) == 0x0001F9, "Member 'LeaderboardListViewWrapper_C_ExecuteUbergraph_LeaderboardListViewWrapper::K2Node_Select_Default' has a wrong offset!");
 
 // Function LeaderboardListViewWrapper.LeaderboardListViewWrapper_C.OnLeaderboardDisplayTypeChanged
 // 0x0001 (0x0001 - 0x0000)
@@ -75,17 +69,6 @@ public:
 static_assert(alignof(LeaderboardListViewWrapper_C_OnLeaderboardDisplayTypeChanged) == 0x000001, "Wrong alignment on LeaderboardListViewWrapper_C_OnLeaderboardDisplayTypeChanged");
 static_assert(sizeof(LeaderboardListViewWrapper_C_OnLeaderboardDisplayTypeChanged) == 0x000001, "Wrong size on LeaderboardListViewWrapper_C_OnLeaderboardDisplayTypeChanged");
 static_assert(offsetof(LeaderboardListViewWrapper_C_OnLeaderboardDisplayTypeChanged, NewDisplayType) == 0x000000, "Member 'LeaderboardListViewWrapper_C_OnLeaderboardDisplayTypeChanged::NewDisplayType' has a wrong offset!");
-
-// Function LeaderboardListViewWrapper.LeaderboardListViewWrapper_C.Set Display Info
-// 0x01D0 (0x01D0 - 0x0000)
-struct LeaderboardListViewWrapper_C_Set_Display_Info final
-{
-public:
-	struct FFortTournamentDisplayInfo             DisplayInfo_0;                                     // 0x0000(0x01D0)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-static_assert(alignof(LeaderboardListViewWrapper_C_Set_Display_Info) == 0x000008, "Wrong alignment on LeaderboardListViewWrapper_C_Set_Display_Info");
-static_assert(sizeof(LeaderboardListViewWrapper_C_Set_Display_Info) == 0x0001D0, "Wrong size on LeaderboardListViewWrapper_C_Set_Display_Info");
-static_assert(offsetof(LeaderboardListViewWrapper_C_Set_Display_Info, DisplayInfo_0) == 0x000000, "Member 'LeaderboardListViewWrapper_C_Set_Display_Info::DisplayInfo_0' has a wrong offset!");
 
 // Function LeaderboardListViewWrapper.LeaderboardListViewWrapper_C.Set Event
 // 0x0020 (0x0020 - 0x0000)
@@ -99,6 +82,17 @@ static_assert(alignof(LeaderboardListViewWrapper_C_Set_Event) == 0x000008, "Wron
 static_assert(sizeof(LeaderboardListViewWrapper_C_Set_Event) == 0x000020, "Wrong size on LeaderboardListViewWrapper_C_Set_Event");
 static_assert(offsetof(LeaderboardListViewWrapper_C_Set_Event, EventId) == 0x000000, "Member 'LeaderboardListViewWrapper_C_Set_Event::EventId' has a wrong offset!");
 static_assert(offsetof(LeaderboardListViewWrapper_C_Set_Event, EventWindowId) == 0x000010, "Member 'LeaderboardListViewWrapper_C_Set_Event::EventWindowId' has a wrong offset!");
+
+// Function LeaderboardListViewWrapper.LeaderboardListViewWrapper_C.Set Display Info
+// 0x01A8 (0x01A8 - 0x0000)
+struct LeaderboardListViewWrapper_C_Set_Display_Info final
+{
+public:
+	struct FFortTournamentDisplayInfo             DisplayInfo_0;                                     // 0x0000(0x01A8)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+static_assert(alignof(LeaderboardListViewWrapper_C_Set_Display_Info) == 0x000008, "Wrong alignment on LeaderboardListViewWrapper_C_Set_Display_Info");
+static_assert(sizeof(LeaderboardListViewWrapper_C_Set_Display_Info) == 0x0001A8, "Wrong size on LeaderboardListViewWrapper_C_Set_Display_Info");
+static_assert(offsetof(LeaderboardListViewWrapper_C_Set_Display_Info, DisplayInfo_0) == 0x000000, "Member 'LeaderboardListViewWrapper_C_Set_Display_Info::DisplayInfo_0' has a wrong offset!");
 
 }
 

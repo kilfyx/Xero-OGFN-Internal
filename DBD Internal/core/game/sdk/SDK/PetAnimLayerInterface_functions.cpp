@@ -17,22 +17,46 @@
 namespace SDK
 {
 
+// Function PetAnimLayerInterface.PetAnimLayerInterface_C.PetFullOverrideLayer
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       PetFullOverrideLayer_0                                 (Parm, OutParm, NoDestructor)
+
+void IPetAnimLayerInterface_C::PetFullOverrideLayer(const struct FPoseLink& InPose, struct FPoseLink* PetFullOverrideLayer_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("PetAnimLayerInterface_C", "PetFullOverrideLayer");
+
+	Params::PetAnimLayerInterface_C_PetFullOverrideLayer Parms{};
+
+	Parms.InPose = std::move(InPose);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (PetFullOverrideLayer_0 != nullptr)
+		*PetFullOverrideLayer_0 = std::move(Parms.PetFullOverrideLayer_0);
+}
+
+
 // Function PetAnimLayerInterface.PetAnimLayerInterface_C.PetSkeletalControlLayer
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink                        Pose                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// double                                  LookAtOverrideInput                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          LookAtTargetLocationInput                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  LegIKAlphaOverride                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  HandIKAlphaOverride                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FPoseLink                        PetSkeletalControlLayer_0                              (Parm, OutParm, NoDestructor)
+// const struct FPoseLink&                 Pose                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   LookAtOverrideInput                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   LookAtTargetLocationInput                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   LegIKAlphaOverride                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   HandIKAlphaOverride                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       PetSkeletalControlLayer_0                              (Parm, OutParm, NoDestructor)
 
-void IPetAnimLayerInterface_C::PetSkeletalControlLayer(const struct FPoseLink& Pose, double LookAtOverrideInput, const struct FVector& LookAtTargetLocationInput, double LegIKAlphaOverride, double HandIKAlphaOverride, struct FPoseLink* PetSkeletalControlLayer_0)
+void IPetAnimLayerInterface_C::PetSkeletalControlLayer(const struct FPoseLink& Pose, float LookAtOverrideInput, const struct FVector& LookAtTargetLocationInput, float LegIKAlphaOverride, float HandIKAlphaOverride, struct FPoseLink* PetSkeletalControlLayer_0)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PetSkeletalControlLayer");
+		Func = AsUObject()->Class->GetFunction("PetAnimLayerInterface_C", "PetSkeletalControlLayer");
 
 	Params::PetAnimLayerInterface_C_PetSkeletalControlLayer Parms{};
 
@@ -42,34 +66,10 @@ void IPetAnimLayerInterface_C::PetSkeletalControlLayer(const struct FPoseLink& P
 	Parms.LegIKAlphaOverride = LegIKAlphaOverride;
 	Parms.HandIKAlphaOverride = HandIKAlphaOverride;
 
-	UObject::ProcessEvent(Func, &Parms);
+	AsUObject()->ProcessEvent(Func, &Parms);
 
 	if (PetSkeletalControlLayer_0 != nullptr)
 		*PetSkeletalControlLayer_0 = std::move(Parms.PetSkeletalControlLayer_0);
-}
-
-
-// Function PetAnimLayerInterface.PetAnimLayerInterface_C.PetFullOverrideLayer
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FPoseLink                        InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink                        PetFullOverrideLayer_0                                 (Parm, OutParm, NoDestructor)
-
-void IPetAnimLayerInterface_C::PetFullOverrideLayer(const struct FPoseLink& InPose, struct FPoseLink* PetFullOverrideLayer_0)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PetFullOverrideLayer");
-
-	Params::PetAnimLayerInterface_C_PetFullOverrideLayer Parms{};
-
-	Parms.InPose = std::move(InPose);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (PetFullOverrideLayer_0 != nullptr)
-		*PetFullOverrideLayer_0 = std::move(Parms.PetFullOverrideLayer_0);
 }
 
 }

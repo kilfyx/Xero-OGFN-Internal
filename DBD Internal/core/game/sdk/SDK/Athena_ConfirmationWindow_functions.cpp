@@ -17,6 +17,28 @@
 namespace SDK
 {
 
+// Function Athena_ConfirmationWindow.Athena_ConfirmationWindow_C.OnSetButtonText
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UAthena_ConfirmationWindow_C::OnSetButtonText(class UCommonButton* Button, const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Athena_ConfirmationWindow_C", "OnSetButtonText");
+
+	Params::Athena_ConfirmationWindow_C_OnSetButtonText Parms{};
+
+	Parms.Button = Button;
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Athena_ConfirmationWindow.Athena_ConfirmationWindow_C.ExecuteUbergraph_Athena_ConfirmationWindow
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -32,28 +54,6 @@ void UAthena_ConfirmationWindow_C::ExecuteUbergraph_Athena_ConfirmationWindow(in
 	Params::Athena_ConfirmationWindow_C_ExecuteUbergraph_Athena_ConfirmationWindow Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Athena_ConfirmationWindow.Athena_ConfirmationWindow_C.OnSetButtonText
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// class UCommonButtonLegacy*              Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UAthena_ConfirmationWindow_C::OnSetButtonText(class UCommonButtonLegacy* Button, const class FText& Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_ConfirmationWindow_C", "OnSetButtonText");
-
-	Params::Athena_ConfirmationWindow_C_OnSetButtonText Parms{};
-
-	Parms.Button = Button;
-	Parms.Text = std::move(Text);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

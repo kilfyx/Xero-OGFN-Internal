@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass FortVoiceChannelSpeakerContainer.FortVoiceChannelSpeakerContainer_C
-// 0x0010 (0x0340 - 0x0330)
+// 0x0010 (0x0330 - 0x0320)
 class UFortVoiceChannelSpeakerContainer_C final : public UFortVoiceSpeakerContainerWidget
 {
 public:
-	class UFortMobileImage*                       SpeakerIcon;                                       // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SpeakerIcon;                                       // 0x0320(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UFortVoiceChannelSpeakerContainer_C) == 0x000010, "Wrong alignment on UFortVoiceChannelSpeakerContainer_C");
-static_assert(sizeof(UFortVoiceChannelSpeakerContainer_C) == 0x000340, "Wrong size on UFortVoiceChannelSpeakerContainer_C");
-static_assert(offsetof(UFortVoiceChannelSpeakerContainer_C, SpeakerIcon) == 0x000330, "Member 'UFortVoiceChannelSpeakerContainer_C::SpeakerIcon' has a wrong offset!");
+static_assert(sizeof(UFortVoiceChannelSpeakerContainer_C) == 0x000330, "Wrong size on UFortVoiceChannelSpeakerContainer_C");
+static_assert(offsetof(UFortVoiceChannelSpeakerContainer_C, SpeakerIcon) == 0x000320, "Member 'UFortVoiceChannelSpeakerContainer_C::SpeakerIcon' has a wrong offset!");
 
 }
 

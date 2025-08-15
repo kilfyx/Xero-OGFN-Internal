@@ -17,6 +17,68 @@
 namespace SDK
 {
 
+// Function FieldSystemEngine.UniformVector.SetUniformVector
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// float                                   Magnitude_0                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Direction_0                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UUniformVector*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UUniformVector* UUniformVector::SetUniformVector(float Magnitude_0, const struct FVector& Direction_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UniformVector", "SetUniformVector");
+
+	Params::UniformVector_SetUniformVector Parms{};
+
+	Parms.Magnitude_0 = Magnitude_0;
+	Parms.Direction_0 = std::move(Direction_0);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function FieldSystemEngine.CullingField.SetCullingField
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class UFieldNodeBase*             Culling_0                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UFieldNodeBase*             Field_0                                                (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EFieldCullingOperationType              Operation_0                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UCullingField*                    ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UCullingField* UCullingField::SetCullingField(const class UFieldNodeBase* Culling_0, const class UFieldNodeBase* Field_0, EFieldCullingOperationType Operation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CullingField", "SetCullingField");
+
+	Params::CullingField_SetCullingField Parms{};
+
+	Parms.Culling_0 = Culling_0;
+	Parms.Field_0 = Field_0;
+	Parms.Operation_0 = Operation_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function FieldSystemEngine.FieldSystemComponent.AddFieldCommand
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -392,11 +454,9 @@ class UFieldSystemMetaDataProcessingResolution* UFieldSystemMetaDataProcessingRe
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // EFieldFilterType                        FilterType_0                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EFieldObjectType                        ObjectType_0                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EFieldPositionType                      PositionType_0                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UFieldSystemMetaDataFilter*       ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UFieldSystemMetaDataFilter* UFieldSystemMetaDataFilter::SetMetaDataFilterType(EFieldFilterType FilterType_0, EFieldObjectType ObjectType_0, EFieldPositionType PositionType_0)
+class UFieldSystemMetaDataFilter* UFieldSystemMetaDataFilter::SetMetaDataFilterType(EFieldFilterType FilterType_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -406,8 +466,6 @@ class UFieldSystemMetaDataFilter* UFieldSystemMetaDataFilter::SetMetaDataFilterT
 	Params::FieldSystemMetaDataFilter_SetMetaDataFilterType Parms{};
 
 	Parms.FilterType_0 = FilterType_0;
-	Parms.ObjectType_0 = ObjectType_0;
-	Parms.PositionType_0 = PositionType_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -517,14 +575,14 @@ class UUniformScalar* UUniformScalar::SetUniformScalar(float Magnitude_0)
 // Parameters:
 // float                                   Magnitude_0                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector&                   Position_0                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   WaveLength_0                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Wavelength_0                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Period_0                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EWaveFunctionType                       Function_0                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EFieldFalloffType                       Falloff_0                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UWaveScalar*                      ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UWaveScalar* UWaveScalar::SetWaveScalar(float Magnitude_0, const struct FVector& Position_0, float WaveLength_0, float Period_0, float Time, EWaveFunctionType Function_0, EFieldFalloffType Falloff_0)
+class UWaveScalar* UWaveScalar::SetWaveScalar(float Magnitude_0, const struct FVector& Position_0, float Wavelength_0, float Period_0, float Time, EWaveFunctionType Function_0, EFieldFalloffType Falloff_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -535,7 +593,7 @@ class UWaveScalar* UWaveScalar::SetWaveScalar(float Magnitude_0, const struct FV
 
 	Parms.Magnitude_0 = Magnitude_0;
 	Parms.Position_0 = std::move(Position_0);
-	Parms.WaveLength_0 = WaveLength_0;
+	Parms.Wavelength_0 = Wavelength_0;
 	Parms.Period_0 = Period_0;
 	Parms.Time = Time;
 	Parms.Function_0 = Function_0;
@@ -704,36 +762,6 @@ class UNoiseField* UNoiseField::SetNoiseField(float MinRange_0, float MaxRange_0
 }
 
 
-// Function FieldSystemEngine.UniformVector.SetUniformVector
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// float                                   Magnitude_0                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Direction_0                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UUniformVector*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UUniformVector* UUniformVector::SetUniformVector(float Magnitude_0, const struct FVector& Direction_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UniformVector", "SetUniformVector");
-
-	Params::UniformVector_SetUniformVector Parms{};
-
-	Parms.Magnitude_0 = Magnitude_0;
-	Parms.Direction_0 = std::move(Direction_0);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function FieldSystemEngine.RadialVector.SetRadialVector
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -796,12 +824,12 @@ class URandomVector* URandomVector::SetRandomVector(float Magnitude_0)
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                                   Magnitude_0                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class UFieldNodeBase*             LeftField_0                                            (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UFieldNodeBase*             RightField_0                                           (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UFieldNodeBase*             LeftField_0                                            (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EFieldOperationType                     Operation_0                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UOperatorField*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UOperatorField* UOperatorField::SetOperatorField(float Magnitude_0, const class UFieldNodeBase* LeftField_0, const class UFieldNodeBase* RightField_0, EFieldOperationType Operation_0)
+class UOperatorField* UOperatorField::SetOperatorField(float Magnitude_0, const class UFieldNodeBase* RightField_0, const class UFieldNodeBase* LeftField_0, EFieldOperationType Operation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -811,8 +839,8 @@ class UOperatorField* UOperatorField::SetOperatorField(float Magnitude_0, const 
 	Params::OperatorField_SetOperatorField Parms{};
 
 	Parms.Magnitude_0 = Magnitude_0;
-	Parms.LeftField_0 = LeftField_0;
 	Parms.RightField_0 = RightField_0;
+	Parms.LeftField_0 = LeftField_0;
 	Parms.Operation_0 = Operation_0;
 
 	auto Flgs = Func->FunctionFlags;
@@ -870,38 +898,6 @@ class UToFloatField* UToFloatField::SetToFloatField(const class UFieldNodeInt* I
 	Params::ToFloatField_SetToFloatField Parms{};
 
 	Parms.IntegerField = IntegerField;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function FieldSystemEngine.CullingField.SetCullingField
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// const class UFieldNodeBase*             Culling_0                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class UFieldNodeBase*             Field_0                                                (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EFieldCullingOperationType              Operation_0                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UCullingField*                    ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UCullingField* UCullingField::SetCullingField(const class UFieldNodeBase* Culling_0, const class UFieldNodeBase* Field_0, EFieldCullingOperationType Operation_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CullingField", "SetCullingField");
-
-	Params::CullingField_SetCullingField Parms{};
-
-	Parms.Culling_0 = Culling_0;
-	Parms.Field_0 = Field_0;
-	Parms.Operation_0 = Operation_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

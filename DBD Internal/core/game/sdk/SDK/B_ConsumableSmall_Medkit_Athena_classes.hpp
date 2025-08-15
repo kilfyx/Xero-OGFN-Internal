@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ConsumableSmall_Medkit_Athena.B_ConsumableSmall_Medkit_Athena_C
-// 0x0000 (0x1470 - 0x1470)
+// 0x0000 (0x0D18 - 0x0D18)
 class AB_ConsumableSmall_Medkit_Athena_C final : public AB_UtilityItem_Generic_Athena_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AB_ConsumableSmall_Medkit_Athena_C>();
 	}
 };
+static_assert(alignof(AB_ConsumableSmall_Medkit_Athena_C) == 0x000008, "Wrong alignment on AB_ConsumableSmall_Medkit_Athena_C");
+static_assert(sizeof(AB_ConsumableSmall_Medkit_Athena_C) == 0x000D18, "Wrong size on AB_ConsumableSmall_Medkit_Athena_C");
 
 }
 

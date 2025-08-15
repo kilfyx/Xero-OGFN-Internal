@@ -22,6 +22,10 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_Value;                          // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(TabMouseAndKeyboardOptions_New_C_ExecuteUbergraph_TabMouseAndKeyboardOptions_New) == 0x000004, "Wrong alignment on TabMouseAndKeyboardOptions_New_C_ExecuteUbergraph_TabMouseAndKeyboardOptions_New");
+static_assert(sizeof(TabMouseAndKeyboardOptions_New_C_ExecuteUbergraph_TabMouseAndKeyboardOptions_New) == 0x000008, "Wrong size on TabMouseAndKeyboardOptions_New_C_ExecuteUbergraph_TabMouseAndKeyboardOptions_New");
+static_assert(offsetof(TabMouseAndKeyboardOptions_New_C_ExecuteUbergraph_TabMouseAndKeyboardOptions_New, EntryPoint) == 0x000000, "Member 'TabMouseAndKeyboardOptions_New_C_ExecuteUbergraph_TabMouseAndKeyboardOptions_New::EntryPoint' has a wrong offset!");
+static_assert(offsetof(TabMouseAndKeyboardOptions_New_C_ExecuteUbergraph_TabMouseAndKeyboardOptions_New, K2Node_CustomEvent_Value) == 0x000004, "Member 'TabMouseAndKeyboardOptions_New_C_ExecuteUbergraph_TabMouseAndKeyboardOptions_New::K2Node_CustomEvent_Value' has a wrong offset!");
 
 // Function TabMouseAndKeyboardOptions_New.TabMouseAndKeyboardOptions_New_C.SettingValueChanged
 // 0x0004 (0x0004 - 0x0000)
@@ -30,6 +34,9 @@ struct TabMouseAndKeyboardOptions_New_C_SettingValueChanged final
 public:
 	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(TabMouseAndKeyboardOptions_New_C_SettingValueChanged) == 0x000004, "Wrong alignment on TabMouseAndKeyboardOptions_New_C_SettingValueChanged");
+static_assert(sizeof(TabMouseAndKeyboardOptions_New_C_SettingValueChanged) == 0x000004, "Wrong size on TabMouseAndKeyboardOptions_New_C_SettingValueChanged");
+static_assert(offsetof(TabMouseAndKeyboardOptions_New_C_SettingValueChanged, Value) == 0x000000, "Member 'TabMouseAndKeyboardOptions_New_C_SettingValueChanged::Value' has a wrong offset!");
 
 }
 

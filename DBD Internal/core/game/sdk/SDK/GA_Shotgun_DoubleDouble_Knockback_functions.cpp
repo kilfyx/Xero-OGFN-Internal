@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Shotgun_DoubleDouble_Knockback.GA_Shotgun_DoubleDouble_Knockback_C.CheckVel
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Shotgun_DoubleDouble_Knockback_C::CheckVel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Shotgun_DoubleDouble_Knockback_C", "CheckVel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_Shotgun_DoubleDouble_Knockback.GA_Shotgun_DoubleDouble_Knockback_C.ExecuteUbergraph_GA_Shotgun_DoubleDouble_Knockback
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -48,6 +34,20 @@ void UGA_Shotgun_DoubleDouble_Knockback_C::ExecuteUbergraph_GA_Shotgun_DoubleDou
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Shotgun_DoubleDouble_Knockback.GA_Shotgun_DoubleDouble_Knockback_C.CheckVel
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Shotgun_DoubleDouble_Knockback_C::CheckVel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Shotgun_DoubleDouble_Knockback_C", "CheckVel");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

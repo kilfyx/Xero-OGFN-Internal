@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ChallengeTile_EmptyButton.ChallengeTile_EmptyButton_C
-// 0x0000 (0x0730 - 0x0730)
+// 0x0000 (0x0570 - 0x0570)
 class UChallengeTile_EmptyButton_C final : public UCommonButtonStyle
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<UChallengeTile_EmptyButton_C>();
 	}
 };
-static_assert(alignof(UChallengeTile_EmptyButton_C) == 0x000010, "Wrong alignment on UChallengeTile_EmptyButton_C");
-static_assert(sizeof(UChallengeTile_EmptyButton_C) == 0x000730, "Wrong size on UChallengeTile_EmptyButton_C");
+static_assert(alignof(UChallengeTile_EmptyButton_C) == 0x000008, "Wrong alignment on UChallengeTile_EmptyButton_C");
+static_assert(sizeof(UChallengeTile_EmptyButton_C) == 0x000570, "Wrong size on UChallengeTile_EmptyButton_C");
 
 }
 

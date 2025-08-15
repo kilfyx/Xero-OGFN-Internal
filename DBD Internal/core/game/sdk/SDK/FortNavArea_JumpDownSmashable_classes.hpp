@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UFortNavArea_JumpDownSmashable_C>();
 	}
 };
+static_assert(alignof(UFortNavArea_JumpDownSmashable_C) == 0x000008, "Wrong alignment on UFortNavArea_JumpDownSmashable_C");
+static_assert(sizeof(UFortNavArea_JumpDownSmashable_C) == 0x000058, "Wrong size on UFortNavArea_JumpDownSmashable_C");
 
 }
 

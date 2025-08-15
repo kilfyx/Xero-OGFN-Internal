@@ -17,6 +17,17 @@
 namespace SDK::Params
 {
 
+// Function TournamentPayoutThresholdEntry.TournamentPayoutThresholdEntry_C.OnAddedToFocusPath
+// 0x0008 (0x0008 - 0x0000)
+struct TournamentPayoutThresholdEntry_C_OnAddedToFocusPath final
+{
+public:
+	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+static_assert(alignof(TournamentPayoutThresholdEntry_C_OnAddedToFocusPath) == 0x000004, "Wrong alignment on TournamentPayoutThresholdEntry_C_OnAddedToFocusPath");
+static_assert(sizeof(TournamentPayoutThresholdEntry_C_OnAddedToFocusPath) == 0x000008, "Wrong size on TournamentPayoutThresholdEntry_C_OnAddedToFocusPath");
+static_assert(offsetof(TournamentPayoutThresholdEntry_C_OnAddedToFocusPath, InFocusEvent) == 0x000000, "Member 'TournamentPayoutThresholdEntry_C_OnAddedToFocusPath::InFocusEvent' has a wrong offset!");
+
 // Function TournamentPayoutThresholdEntry.TournamentPayoutThresholdEntry_C.OnRemovedFromFocusPath
 // 0x0008 (0x0008 - 0x0000)
 struct TournamentPayoutThresholdEntry_C_OnRemovedFromFocusPath final
@@ -39,24 +50,13 @@ static_assert(alignof(TournamentPayoutThresholdEntry_C_OnPayoutDataSet) == 0x000
 static_assert(sizeof(TournamentPayoutThresholdEntry_C_OnPayoutDataSet) == 0x000004, "Wrong size on TournamentPayoutThresholdEntry_C_OnPayoutDataSet");
 static_assert(offsetof(TournamentPayoutThresholdEntry_C_OnPayoutDataSet, EntryIndex) == 0x000000, "Member 'TournamentPayoutThresholdEntry_C_OnPayoutDataSet::EntryIndex' has a wrong offset!");
 
-// Function TournamentPayoutThresholdEntry.TournamentPayoutThresholdEntry_C.OnAddedToFocusPath
-// 0x0008 (0x0008 - 0x0000)
-struct TournamentPayoutThresholdEntry_C_OnAddedToFocusPath final
-{
-public:
-	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-static_assert(alignof(TournamentPayoutThresholdEntry_C_OnAddedToFocusPath) == 0x000004, "Wrong alignment on TournamentPayoutThresholdEntry_C_OnAddedToFocusPath");
-static_assert(sizeof(TournamentPayoutThresholdEntry_C_OnAddedToFocusPath) == 0x000008, "Wrong size on TournamentPayoutThresholdEntry_C_OnAddedToFocusPath");
-static_assert(offsetof(TournamentPayoutThresholdEntry_C_OnAddedToFocusPath, InFocusEvent) == 0x000000, "Member 'TournamentPayoutThresholdEntry_C_OnAddedToFocusPath::InFocusEvent' has a wrong offset!");
-
 // Function TournamentPayoutThresholdEntry.TournamentPayoutThresholdEntry_C.ExecuteUbergraph_TournamentPayoutThresholdEntry
 // 0x0070 (0x0070 - 0x0000)
 struct TournamentPayoutThresholdEntry_C_ExecuteUbergraph_TournamentPayoutThresholdEntry final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           Temp_struct_Variable;                              // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -64,11 +64,11 @@ public:
 	struct FFocusEvent                            K2Node_Event_InFocusEvent;                         // 0x0030(0x0008)(NoDestructor)
 	int32                                         K2Node_Event_EntryIndex;                           // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x005C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

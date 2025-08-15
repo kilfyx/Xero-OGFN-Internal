@@ -17,40 +17,6 @@
 namespace SDK
 {
 
-// Function TeamMemberPedestal_FeatInfo.TeamMemberPedestal_FeatInfo_C.OnFeatDefinitionSet
-// (Event, Protected, BlueprintEvent)
-
-void UTeamMemberPedestal_FeatInfo_C::OnFeatDefinitionSet()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnFeatDefinitionSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal_FeatInfo.TeamMemberPedestal_FeatInfo_C.OnAnimationFinished
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
-// Parameters:
-// class UWidgetAnimation*                 Animation                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UTeamMemberPedestal_FeatInfo_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnAnimationFinished");
-
-	Params::TeamMemberPedestal_FeatInfo_C_OnAnimationFinished Parms{};
-
-	Parms.Animation = Animation;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function TeamMemberPedestal_FeatInfo.TeamMemberPedestal_FeatInfo_C.ExecuteUbergraph_TeamMemberPedestal_FeatInfo
 // (Final, UbergraphFunction)
 // Parameters:
@@ -59,13 +25,47 @@ void UTeamMemberPedestal_FeatInfo_C::OnAnimationFinished(const class UWidgetAnim
 void UTeamMemberPedestal_FeatInfo_C::ExecuteUbergraph_TeamMemberPedestal_FeatInfo(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_TeamMemberPedestal_FeatInfo");
+		Func = Class->GetFunction("TeamMemberPedestal_FeatInfo_C", "ExecuteUbergraph_TeamMemberPedestal_FeatInfo");
 
 	Params::TeamMemberPedestal_FeatInfo_C_ExecuteUbergraph_TeamMemberPedestal_FeatInfo Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TeamMemberPedestal_FeatInfo.TeamMemberPedestal_FeatInfo_C.OnFeatDefinitionSet
+// (Event, Protected, BlueprintEvent)
+
+void UTeamMemberPedestal_FeatInfo_C::OnFeatDefinitionSet()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_FeatInfo_C", "OnFeatDefinitionSet");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TeamMemberPedestal_FeatInfo.TeamMemberPedestal_FeatInfo_C.OnAnimationFinished
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
+// Parameters:
+// const class UWidgetAnimation*           Animation                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTeamMemberPedestal_FeatInfo_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_FeatInfo_C", "OnAnimationFinished");
+
+	Params::TeamMemberPedestal_FeatInfo_C_OnAnimationFinished Parms{};
+
+	Parms.Animation = Animation;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

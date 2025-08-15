@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TabVideoOptions_New.TabVideoOptions_New_C
-// 0x0008 (0x0380 - 0x0378)
+// 0x0008 (0x0370 - 0x0368)
 class UTabVideoOptions_New_C final : public UFortTabVideoOptions_TempNew
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature(class UFortSetting* Setting, class FName Action);
-	void CenterOnTab();
 	void ExecuteUbergraph_TabVideoOptions_New(int32 EntryPoint);
-	void OnComplete_7E19F26B42A808FDADDB569CFB68CCB7(class UUserWidget* UserWidget);
+	void BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature(class UFortSetting* Setting, class FName Action);
 	void SettingValueChanged(float Value);
+	void CenterOnTab();
+	void OnComplete_7E19F26B42A808FDADDB569CFB68CCB7(class UUserWidget* UserWidget);
 
 public:
 	static class UClass* StaticClass()
@@ -41,6 +41,9 @@ public:
 		return GetDefaultObjImpl<UTabVideoOptions_New_C>();
 	}
 };
+static_assert(alignof(UTabVideoOptions_New_C) == 0x000008, "Wrong alignment on UTabVideoOptions_New_C");
+static_assert(sizeof(UTabVideoOptions_New_C) == 0x000370, "Wrong size on UTabVideoOptions_New_C");
+static_assert(offsetof(UTabVideoOptions_New_C, UberGraphFrame) == 0x000368, "Member 'UTabVideoOptions_New_C::UberGraphFrame' has a wrong offset!");
 
 }
 

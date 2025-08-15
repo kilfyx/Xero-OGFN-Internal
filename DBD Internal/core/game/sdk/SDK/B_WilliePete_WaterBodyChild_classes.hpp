@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WilliePete_WaterBodyChild.B_WilliePete_WaterBodyChild_C
-// 0x0010 (0x02F0 - 0x02E0)
+// 0x0010 (0x0F50 - 0x0F40)
 class AB_WilliePete_WaterBodyChild_C final : public AFortWaterBodyActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UArrowComponent*                        Debug;                                             // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UArrowComponent*                        Debug;                                             // 0x0F48(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_WilliePete_WaterBodyChild(int32 EntryPoint);
@@ -39,6 +39,10 @@ public:
 		return GetDefaultObjImpl<AB_WilliePete_WaterBodyChild_C>();
 	}
 };
+static_assert(alignof(AB_WilliePete_WaterBodyChild_C) == 0x000010, "Wrong alignment on AB_WilliePete_WaterBodyChild_C");
+static_assert(sizeof(AB_WilliePete_WaterBodyChild_C) == 0x000F50, "Wrong size on AB_WilliePete_WaterBodyChild_C");
+static_assert(offsetof(AB_WilliePete_WaterBodyChild_C, UberGraphFrame) == 0x000F40, "Member 'AB_WilliePete_WaterBodyChild_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_WilliePete_WaterBodyChild_C, Debug) == 0x000F48, "Member 'AB_WilliePete_WaterBodyChild_C::Debug' has a wrong offset!");
 
 }
 

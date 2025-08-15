@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AccountLinkingWindow.AccountLinkingWindow_C
-// 0x0000 (0x05E0 - 0x05E0)
+// 0x0000 (0x0558 - 0x0558)
 class UAccountLinkingWindow_C final : public UFortAccountLinkingWindow
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UAccountLinkingWindow_C) == 0x000008, "Wrong alignment on UAccountLinkingWindow_C");
-static_assert(sizeof(UAccountLinkingWindow_C) == 0x0005E0, "Wrong size on UAccountLinkingWindow_C");
+static_assert(sizeof(UAccountLinkingWindow_C) == 0x000558, "Wrong size on UAccountLinkingWindow_C");
 
 }
 

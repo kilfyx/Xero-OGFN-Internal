@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGet_DirectDamageParent_C>();
 	}
 };
+static_assert(alignof(UGet_DirectDamageParent_C) == 0x000008, "Wrong alignment on UGet_DirectDamageParent_C");
+static_assert(sizeof(UGet_DirectDamageParent_C) == 0x000800, "Wrong size on UGet_DirectDamageParent_C");
 
 }
 

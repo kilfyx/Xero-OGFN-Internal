@@ -104,15 +104,13 @@ enum class ESleepFamily : uint8
 	ESleepFamily_MAX                         = 3,
 };
 
-// Enum PhysicsCore.ECollisionTraceFlag
-// NumValues: 0x0005
-enum class ECollisionTraceFlag : uint8
+// Enum PhysicsCore.EBodyCollisionResponse
+// NumValues: 0x0003
+enum class EBodyCollisionResponse : uint8
 {
-	CTF_UseDefault                           = 0,
-	CTF_UseSimpleAndComplex                  = 1,
-	CTF_UseSimpleAsComplex                   = 2,
-	CTF_UseComplexAsSimple                   = 3,
-	CTF_MAX                                  = 4,
+	BodyCollision_Enabled                    = 0,
+	BodyCollision_Disabled                   = 1,
+	BodyCollision_MAX                        = 2,
 };
 
 // Enum PhysicsCore.EPhysicsType
@@ -125,23 +123,25 @@ enum class EPhysicsType : uint8
 	PhysType_MAX                             = 3,
 };
 
-// Enum PhysicsCore.EBodyCollisionResponse
-// NumValues: 0x0003
-enum class EBodyCollisionResponse : uint8
+// Enum PhysicsCore.ECollisionTraceFlag
+// NumValues: 0x0005
+enum class ECollisionTraceFlag : uint8
 {
-	BodyCollision_Enabled                    = 0,
-	BodyCollision_Disabled                   = 1,
-	BodyCollision_MAX                        = 2,
+	CTF_UseDefault                           = 0,
+	CTF_UseSimpleAndComplex                  = 1,
+	CTF_UseSimpleAsComplex                   = 2,
+	CTF_UseComplexAsSimple                   = 3,
+	CTF_MAX                                  = 4,
 };
 
-// Enum PhysicsCore.EAngularConstraintMotion
+// Enum PhysicsCore.ELinearConstraintMotion
 // NumValues: 0x0004
-enum class EAngularConstraintMotion : uint8
+enum class ELinearConstraintMotion : uint8
 {
-	ACM_Free                                 = 0,
-	ACM_Limited                              = 1,
-	ACM_Locked                               = 2,
-	ACM_MAX                                  = 3,
+	LCM_Free                                 = 0,
+	LCM_Limited                              = 1,
+	LCM_Locked                               = 2,
+	LCM_MAX                                  = 3,
 };
 
 // Enum PhysicsCore.EConstraintFrame
@@ -153,24 +153,14 @@ enum class EConstraintFrame : uint8
 	EConstraintFrame_MAX                     = 2,
 };
 
-// Enum PhysicsCore.EConstraintPlasticityType
+// Enum PhysicsCore.EAngularConstraintMotion
 // NumValues: 0x0004
-enum class EConstraintPlasticityType : uint8
+enum class EAngularConstraintMotion : uint8
 {
-	CCPT_Free                                = 0,
-	CCPT_Shrink                              = 1,
-	CCPT_Grow                                = 2,
-	CCPT_MAX                                 = 3,
-};
-
-// Enum PhysicsCore.ELinearConstraintMotion
-// NumValues: 0x0004
-enum class ELinearConstraintMotion : uint8
-{
-	LCM_Free                                 = 0,
-	LCM_Limited                              = 1,
-	LCM_Locked                               = 2,
-	LCM_MAX                                  = 3,
+	ACM_Free                                 = 0,
+	ACM_Limited                              = 1,
+	ACM_Locked                               = 2,
+	ACM_MAX                                  = 3,
 };
 
 // Enum PhysicsCore.EFrictionCombineMode
@@ -195,9 +185,11 @@ public:
 	uint8                                         bAutoWeld : 1;                                     // 0x0010(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bStartAwake : 1;                                   // 0x0010(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bGenerateWakeEvents : 1;                           // 0x0010(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUpdateMassWhenScaleChanges : 1;                   // 0x0010(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUpdateMassWhenScaleChanges : 1;                   // 0x0010(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+static_assert(alignof(FBodyInstanceCore) == 0x000008, "Wrong alignment on FBodyInstanceCore");
+static_assert(sizeof(FBodyInstanceCore) == 0x000018, "Wrong size on FBodyInstanceCore");
 
 }
 

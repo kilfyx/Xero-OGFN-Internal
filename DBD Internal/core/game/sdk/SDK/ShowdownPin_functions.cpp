@@ -17,144 +17,15 @@
 namespace SDK
 {
 
-// Function ShowdownPin.ShowdownPin_C.ChooseScoreToDisplay
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   ScoreToDisplay                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UShowdownPin_C::ChooseScoreToDisplay(int32* ScoreToDisplay)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ChooseScoreToDisplay");
-
-	Params::ShowdownPin_C_ChooseScoreToDisplay Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ScoreToDisplay != nullptr)
-		*ScoreToDisplay = Parms.ScoreToDisplay;
-}
-
-
-// Function ShowdownPin.ShowdownPin_C.EventColorize
-// (BlueprintCallable, BlueprintEvent)
-
-void UShowdownPin_C::EventColorize()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventColorize");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ShowdownPin.ShowdownPin_C.EventFixPts
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Points                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UShowdownPin_C::EventFixPts(int32 Points)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventFixPts");
-
-	Params::ShowdownPin_C_EventFixPts Parms{};
-
-	Parms.Points = Points;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ShowdownPin.ShowdownPin_C.EventRevealAnim
-// (BlueprintCallable, BlueprintEvent)
-
-void UShowdownPin_C::EventRevealAnim()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventRevealAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ShowdownPin.ShowdownPin_C.EventSetTier
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Score                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UShowdownPin_C::EventSetTier(int32 Score)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("EventSetTier");
-
-	Params::ShowdownPin_C_EventSetTier Parms{};
-
-	Parms.Score = Score;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ShowdownPin.ShowdownPin_C.ExecuteUbergraph_ShowdownPin
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UShowdownPin_C::ExecuteUbergraph_ShowdownPin(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_ShowdownPin");
-
-	Params::ShowdownPin_C_ExecuteUbergraph_ShowdownPin Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ShowdownPin.ShowdownPin_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UShowdownPin_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("PreConstruct");
-
-	Params::ShowdownPin_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ShowdownPin.ShowdownPin_C.Refresh
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UShowdownPin_C::Refresh()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Refresh");
+		Func = Class->GetFunction("ShowdownPin_C", "Refresh");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -166,11 +37,119 @@ void UShowdownPin_C::Refresh()
 void UShowdownPin_C::RefreshDataBP()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("RefreshDataBP");
+		Func = Class->GetFunction("ShowdownPin_C", "RefreshDataBP");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShowdownPin.ShowdownPin_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UShowdownPin_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownPin_C", "PreConstruct");
+
+	Params::ShowdownPin_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ShowdownPin.ShowdownPin_C.EventSetTier
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Score                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UShowdownPin_C::EventSetTier(int32 Score)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownPin_C", "EventSetTier");
+
+	Params::ShowdownPin_C_EventSetTier Parms{};
+
+	Parms.Score = Score;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ShowdownPin.ShowdownPin_C.EventFixPts
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Points                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UShowdownPin_C::EventFixPts(int32 Points)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownPin_C", "EventFixPts");
+
+	Params::ShowdownPin_C_EventFixPts Parms{};
+
+	Parms.Points = Points;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ShowdownPin.ShowdownPin_C.EventColorize
+// (BlueprintCallable, BlueprintEvent)
+
+void UShowdownPin_C::EventColorize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownPin_C", "EventColorize");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShowdownPin.ShowdownPin_C.EventRevealAnim
+// (BlueprintCallable, BlueprintEvent)
+
+void UShowdownPin_C::EventRevealAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownPin_C", "EventRevealAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShowdownPin.ShowdownPin_C.ExecuteUbergraph_ShowdownPin
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UShowdownPin_C::ExecuteUbergraph_ShowdownPin(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownPin_C", "ExecuteUbergraph_ShowdownPin");
+
+	Params::ShowdownPin_C_ExecuteUbergraph_ShowdownPin Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

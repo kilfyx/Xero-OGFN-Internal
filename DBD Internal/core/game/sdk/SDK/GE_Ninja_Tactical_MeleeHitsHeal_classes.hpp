@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Ninja_Tactical_MeleeHitsHeal_C>();
 	}
 };
+static_assert(alignof(UGE_Ninja_Tactical_MeleeHitsHeal_C) == 0x000008, "Wrong alignment on UGE_Ninja_Tactical_MeleeHitsHeal_C");
+static_assert(sizeof(UGE_Ninja_Tactical_MeleeHitsHeal_C) == 0x000800, "Wrong size on UGE_Ninja_Tactical_MeleeHitsHeal_C");
 
 }
 

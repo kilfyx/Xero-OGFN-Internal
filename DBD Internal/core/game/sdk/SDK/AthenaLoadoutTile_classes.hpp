@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaLoadoutTile.AthenaLoadoutTile_C
-// 0x0010 (0x1460 - 0x1450)
+// 0x0008 (0x0BC0 - 0x0BB8)
 class UAthenaLoadoutTile_C final : public UFortCosmeticLoadoutListEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1450(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
+	void ExecuteUbergraph_AthenaLoadoutTile(int32 EntryPoint);
 	void BP_OnEntryReleased();
-	void BP_OnHovered();
 	void BP_OnItemSelectionChanged(bool bIsSelected);
 	void BP_OnUnhovered();
-	void ExecuteUbergraph_AthenaLoadoutTile(int32 EntryPoint);
+	void BP_OnHovered();
 
 public:
 	static class UClass* StaticClass()
@@ -41,9 +41,9 @@ public:
 		return GetDefaultObjImpl<UAthenaLoadoutTile_C>();
 	}
 };
-static_assert(alignof(UAthenaLoadoutTile_C) == 0x000010, "Wrong alignment on UAthenaLoadoutTile_C");
-static_assert(sizeof(UAthenaLoadoutTile_C) == 0x001460, "Wrong size on UAthenaLoadoutTile_C");
-static_assert(offsetof(UAthenaLoadoutTile_C, UberGraphFrame) == 0x001450, "Member 'UAthenaLoadoutTile_C::UberGraphFrame' has a wrong offset!");
+static_assert(alignof(UAthenaLoadoutTile_C) == 0x000008, "Wrong alignment on UAthenaLoadoutTile_C");
+static_assert(sizeof(UAthenaLoadoutTile_C) == 0x000BC0, "Wrong size on UAthenaLoadoutTile_C");
+static_assert(offsetof(UAthenaLoadoutTile_C, UberGraphFrame) == 0x000BB8, "Member 'UAthenaLoadoutTile_C::UberGraphFrame' has a wrong offset!");
 
 }
 

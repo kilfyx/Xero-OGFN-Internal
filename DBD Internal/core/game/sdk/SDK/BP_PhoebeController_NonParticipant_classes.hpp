@@ -17,9 +17,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PhoebeController_NonParticipant.BP_PhoebeController_NonParticipant_C
-// 0x0000 (0x13D0 - 0x13D0)
-#pragma pack(push, 0x1)
-class alignas(0x10) ABP_PhoebeController_NonParticipant_C : public ABP_PhoebePlayerController_C
+// 0x0000 (0x0DF8 - 0x0DF8)
+class ABP_PhoebeController_NonParticipant_C : public ABP_PhoebePlayerController_C
 {
 public:
 	static class UClass* StaticClass()
@@ -31,9 +30,8 @@ public:
 		return GetDefaultObjImpl<ABP_PhoebeController_NonParticipant_C>();
 	}
 };
-#pragma pack(pop)
-static_assert(alignof(ABP_PhoebeController_NonParticipant_C) == 0x000010, "Wrong alignment on ABP_PhoebeController_NonParticipant_C");
-static_assert(sizeof(ABP_PhoebeController_NonParticipant_C) == 0x0013D0, "Wrong size on ABP_PhoebeController_NonParticipant_C");
+static_assert(alignof(ABP_PhoebeController_NonParticipant_C) == 0x000008, "Wrong alignment on ABP_PhoebeController_NonParticipant_C");
+static_assert(sizeof(ABP_PhoebeController_NonParticipant_C) == 0x000DF8, "Wrong size on ABP_PhoebeController_NonParticipant_C");
 
 }
 

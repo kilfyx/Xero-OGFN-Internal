@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "FortniteUI_classes.hpp"
-#include "FortniteGame_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "FortniteUI_classes.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -21,74 +21,74 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaMatchmakingTile.AthenaMatchmakingTile_C
-// 0x0190 (0x1170 - 0x0FE0)
+// 0x0188 (0x0E08 - 0x0C80)
 class UAthenaMatchmakingTile_C final : public UFortAthenaMatchmakingTile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0FE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Focused;                                           // 0x0FE8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       FlareName;                                         // 0x0FF0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       NewModeIntro_1_Setup;                              // 0x0FF8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       NewModeIntro_0;                                    // 0x1000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       NewModeSetup;                                      // 0x1008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       NewModeIntro;                                      // 0x1010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       GameModeSelection_NoOpacity;                       // 0x1018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       IntroAndOutro;                                     // 0x1020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ConfirmSelection;                                  // 0x1028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       GameModeSelection;                                 // 0x1030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            AdSpaceSwitcher;                                   // 0x1038(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ConfirmSelectionFlash;                             // 0x1040(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ConfirmSelectionShine;                             // 0x1048(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 DisabledGray;                                      // 0x1050(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fill;                                              // 0x1058(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FocusPulse;                                        // 0x1060(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 GameModeIcon;                                      // 0x1068(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScaleBox*                              GameModeImageScale;                                // 0x1070(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               GameModeSB;                                        // 0x1078(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               HeistLTMTileBacking;                               // 0x1080(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USpacer*                                IconSpacer;                                        // 0x1088(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_4;                                           // 0x1090(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Flare_Btm;                                   // 0x1098(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LoadingImage;                                      // 0x10A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               LoadingImageOvr;                                   // 0x10A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            LoadSwitcher;                                      // 0x10B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LTMModeSubIcon;                                    // 0x10B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PanelBorder;                                       // 0x10C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_Tile;                                      // 0x10C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          SpecialAdSpace;                                    // 0x10D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcherLegacy*            SpecialLTMUnderlay;                                // 0x10D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         SubGameModeNameHB;                                 // 0x10E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_TimeRemaining;                                // 0x10E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                TileReveal;                                        // 0x10F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                TimeRemainingBoarder;                              // 0x10F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         TimeRemainingBox;                                  // 0x1100(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 UnhoveredVignette;                                 // 0x1108(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UObject*                                MyPlaylist;                                        // 0x1110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHasTileReveal;                                    // 0x1118(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1119[0x7];                                     // 0x1119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPlaylistFrontEndData                  RepresentedPlaylist;                               // 0x1120(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         NumTilesInRow;                                     // 0x1148(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114C[0x4];                                     // 0x114C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CountdownTimer;                                    // 0x1150(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           DisabledColor;                                     // 0x1158(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C80(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Focused;                                           // 0x0C88(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FlareName;                                         // 0x0C90(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       NewModeIntro_1_Setup;                              // 0x0C98(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       NewModeIntro_0;                                    // 0x0CA0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       NewModeSetup;                                      // 0x0CA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       NewModeIntro;                                      // 0x0CB0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       GameModeSelection_NoOpacity;                       // 0x0CB8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       IntroAndOutro;                                     // 0x0CC0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ConfirmSelection;                                  // 0x0CC8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       GameModeSelection;                                 // 0x0CD0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  AdSpaceSwitcher;                                   // 0x0CD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ConfirmSelectionFlash;                             // 0x0CE0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ConfirmSelectionShine;                             // 0x0CE8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 DisabledGray;                                      // 0x0CF0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fill;                                              // 0x0CF8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 FocusPulse;                                        // 0x0D00(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 GameModeIcon;                                      // 0x0D08(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                              GameModeImageScale;                                // 0x0D10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               GameModeSB;                                        // 0x0D18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               HeistLTMTileBacking;                               // 0x0D20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USpacer*                                IconSpacer;                                        // 0x0D28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_4;                                           // 0x0D30(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Flare_Btm;                                   // 0x0D38(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LoadingImage;                                      // 0x0D40(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               LoadingImageOvr;                                   // 0x0D48(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  LoadSwitcher;                                      // 0x0D50(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LTMModeSubIcon;                                    // 0x0D58(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PanelBorder;                                       // 0x0D60(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_Tile;                                      // 0x0D68(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          SpecialAdSpace;                                    // 0x0D70(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  SpecialLTMUnderlay;                                // 0x0D78(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         SubGameModeNameHB;                                 // 0x0D80(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_TimeRemaining;                                // 0x0D88(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                TileReveal;                                        // 0x0D90(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                TimeRemainingBoarder;                              // 0x0D98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         TimeRemainingBox;                                  // 0x0DA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 UnhoveredVignette;                                 // 0x0DA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UObject*                                MyPlaylist;                                        // 0x0DB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHasTileReveal;                                    // 0x0DB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_DB9[0x7];                                      // 0x0DB9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPlaylistFrontEndData                  RepresentedPlaylist;                               // 0x0DC0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         NumTilesInRow;                                     // 0x0DE8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DEC[0x4];                                      // 0x0DEC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CountdownTimer;                                    // 0x0DF0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           DisabledColor;                                     // 0x0DF8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_OnClicked();
-	void BP_OnDeselected();
-	void BP_OnHovered();
-	void BP_OnSelected();
-	void Construct();
-	void ExecuteUbergraph_AthenaMatchmakingTile(int32 EntryPoint);
-	void OnCMSDataUpdated();
-	void OnImageLoadingComplete();
 	void PlayIntroOrOutro(bool PlayIntro);
-	void PlaylistChanged(const struct FPlaylistFrontEndData& PlaylistToRepresent);
-	void PlayTileReveal();
-	void SetDefaultImage();
+	void BP_OnDeselected();
 	void SetTileSize(int32 NumRowTiles);
+	void PlaylistChanged(const struct FPlaylistFrontEndData& PlaylistToRepresent);
 	void TilePlaylistSetAsMatchmakingPlaylist();
-	void UpdateDateTime();
+	void OnImageLoadingComplete();
+	void BP_OnHovered();
 	void UpdateTileAvailability(bool Available);
+	void SetDefaultImage();
+	void BP_OnClicked();
+	void Construct();
+	void OnCMSDataUpdated();
+	void PlayTileReveal();
+	void UpdateDateTime();
+	void BP_OnSelected();
+	void ExecuteUbergraph_AthenaMatchmakingTile(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -100,6 +100,52 @@ public:
 		return GetDefaultObjImpl<UAthenaMatchmakingTile_C>();
 	}
 };
+static_assert(alignof(UAthenaMatchmakingTile_C) == 0x000008, "Wrong alignment on UAthenaMatchmakingTile_C");
+static_assert(sizeof(UAthenaMatchmakingTile_C) == 0x000E08, "Wrong size on UAthenaMatchmakingTile_C");
+static_assert(offsetof(UAthenaMatchmakingTile_C, UberGraphFrame) == 0x000C80, "Member 'UAthenaMatchmakingTile_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, Focused) == 0x000C88, "Member 'UAthenaMatchmakingTile_C::Focused' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, FlareName) == 0x000C90, "Member 'UAthenaMatchmakingTile_C::FlareName' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, NewModeIntro_1_Setup) == 0x000C98, "Member 'UAthenaMatchmakingTile_C::NewModeIntro_1_Setup' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, NewModeIntro_0) == 0x000CA0, "Member 'UAthenaMatchmakingTile_C::NewModeIntro_0' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, NewModeSetup) == 0x000CA8, "Member 'UAthenaMatchmakingTile_C::NewModeSetup' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, NewModeIntro) == 0x000CB0, "Member 'UAthenaMatchmakingTile_C::NewModeIntro' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, GameModeSelection_NoOpacity) == 0x000CB8, "Member 'UAthenaMatchmakingTile_C::GameModeSelection_NoOpacity' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, IntroAndOutro) == 0x000CC0, "Member 'UAthenaMatchmakingTile_C::IntroAndOutro' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, ConfirmSelection) == 0x000CC8, "Member 'UAthenaMatchmakingTile_C::ConfirmSelection' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, GameModeSelection) == 0x000CD0, "Member 'UAthenaMatchmakingTile_C::GameModeSelection' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, AdSpaceSwitcher) == 0x000CD8, "Member 'UAthenaMatchmakingTile_C::AdSpaceSwitcher' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, ConfirmSelectionFlash) == 0x000CE0, "Member 'UAthenaMatchmakingTile_C::ConfirmSelectionFlash' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, ConfirmSelectionShine) == 0x000CE8, "Member 'UAthenaMatchmakingTile_C::ConfirmSelectionShine' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, DisabledGray) == 0x000CF0, "Member 'UAthenaMatchmakingTile_C::DisabledGray' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, Fill) == 0x000CF8, "Member 'UAthenaMatchmakingTile_C::Fill' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, FocusPulse) == 0x000D00, "Member 'UAthenaMatchmakingTile_C::FocusPulse' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, GameModeIcon) == 0x000D08, "Member 'UAthenaMatchmakingTile_C::GameModeIcon' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, GameModeImageScale) == 0x000D10, "Member 'UAthenaMatchmakingTile_C::GameModeImageScale' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, GameModeSB) == 0x000D18, "Member 'UAthenaMatchmakingTile_C::GameModeSB' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, HeistLTMTileBacking) == 0x000D20, "Member 'UAthenaMatchmakingTile_C::HeistLTMTileBacking' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, IconSpacer) == 0x000D28, "Member 'UAthenaMatchmakingTile_C::IconSpacer' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, Image_4) == 0x000D30, "Member 'UAthenaMatchmakingTile_C::Image_4' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, Image_Flare_Btm) == 0x000D38, "Member 'UAthenaMatchmakingTile_C::Image_Flare_Btm' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, LoadingImage) == 0x000D40, "Member 'UAthenaMatchmakingTile_C::LoadingImage' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, LoadingImageOvr) == 0x000D48, "Member 'UAthenaMatchmakingTile_C::LoadingImageOvr' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, LoadSwitcher) == 0x000D50, "Member 'UAthenaMatchmakingTile_C::LoadSwitcher' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, LTMModeSubIcon) == 0x000D58, "Member 'UAthenaMatchmakingTile_C::LTMModeSubIcon' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, PanelBorder) == 0x000D60, "Member 'UAthenaMatchmakingTile_C::PanelBorder' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, SizeBox_Tile) == 0x000D68, "Member 'UAthenaMatchmakingTile_C::SizeBox_Tile' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, SpecialAdSpace) == 0x000D70, "Member 'UAthenaMatchmakingTile_C::SpecialAdSpace' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, SpecialLTMUnderlay) == 0x000D78, "Member 'UAthenaMatchmakingTile_C::SpecialLTMUnderlay' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, SubGameModeNameHB) == 0x000D80, "Member 'UAthenaMatchmakingTile_C::SubGameModeNameHB' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, Text_TimeRemaining) == 0x000D88, "Member 'UAthenaMatchmakingTile_C::Text_TimeRemaining' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, TileReveal) == 0x000D90, "Member 'UAthenaMatchmakingTile_C::TileReveal' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, TimeRemainingBoarder) == 0x000D98, "Member 'UAthenaMatchmakingTile_C::TimeRemainingBoarder' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, TimeRemainingBox) == 0x000DA0, "Member 'UAthenaMatchmakingTile_C::TimeRemainingBox' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, UnhoveredVignette) == 0x000DA8, "Member 'UAthenaMatchmakingTile_C::UnhoveredVignette' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, MyPlaylist) == 0x000DB0, "Member 'UAthenaMatchmakingTile_C::MyPlaylist' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, bHasTileReveal) == 0x000DB8, "Member 'UAthenaMatchmakingTile_C::bHasTileReveal' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, RepresentedPlaylist) == 0x000DC0, "Member 'UAthenaMatchmakingTile_C::RepresentedPlaylist' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, NumTilesInRow) == 0x000DE8, "Member 'UAthenaMatchmakingTile_C::NumTilesInRow' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, CountdownTimer) == 0x000DF0, "Member 'UAthenaMatchmakingTile_C::CountdownTimer' has a wrong offset!");
+static_assert(offsetof(UAthenaMatchmakingTile_C, DisabledColor) == 0x000DF8, "Member 'UAthenaMatchmakingTile_C::DisabledColor' has a wrong offset!");
 
 }
 

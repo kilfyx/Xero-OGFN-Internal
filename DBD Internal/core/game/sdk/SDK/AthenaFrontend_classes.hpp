@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "FortniteGame_structs.hpp"
 #include "S12_CineTransitionData_structs.hpp"
 #include "FortniteUI_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "FortniteGame_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -22,51 +22,46 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaFrontend.AthenaFrontend_C
-// 0x00A8 (0x09F8 - 0x0950)
+// 0x0090 (0x0798 - 0x0708)
 class UAthenaFrontend_C final : public UAthenaUIStateWidget_Frontend
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0950(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAthenaFPS_C*                           AthenaFPS;                                         // 0x0958(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaTemperature_C*                   AthenaTemperature;                                 // 0x0960(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBuildWatermark_C*                      BuildWatermark;                                    // 0x0968(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_PTT;                                        // 0x0970(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_FrontendFlowDebug;                 // 0x0978(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UContentOnDemand_C*                     ContentOnDemand;                                   // 0x0980(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortVoiceChannelSpeakerContainer_C*    FortVoiceChannelSpeakerContainer;                  // 0x0988(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFrontendEventNotifications_C*          FrontendEventNotifications;                        // 0x0990(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PTT_Image;                                         // 0x0998(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_1;                                        // 0x09A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_Bottom;                                   // 0x09A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBoxPTT;                                        // 0x09B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          StartedPlayingVideo;                               // 0x09B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9B9[0x3];                                      // 0x09B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TransitionIndex;                                   // 0x09BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FS12_CineTransitionData>        TransitionAudioData;                               // 0x09C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UMediaPlayer*                           MovieMediaPlayer;                                  // 0x09D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             TransitionSound01;                                 // 0x09D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             TransitionSound02;                                 // 0x09E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FTimerHandle>                   AudioTimerHandles;                                 // 0x09E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0708(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAthenaFPS_C*                           AthenaFPS;                                         // 0x0710(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaTemperature_C*                   AthenaTemperature;                                 // 0x0718(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBuildWatermark_C*                      BuildWatermark;                                    // 0x0720(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_PTT;                                        // 0x0728(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortVoiceChannelSpeakerContainer_C*    FortVoiceChannelSpeakerContainer;                  // 0x0730(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PTT_Image;                                         // 0x0738(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_1;                                        // 0x0740(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_Bottom;                                   // 0x0748(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBoxPTT;                                        // 0x0750(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          StartedPlayingVideo;                               // 0x0758(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_759[0x3];                                      // 0x0759(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TransitionIndex;                                   // 0x075C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FS12_CineTransitionData>        TransitionAudioData;                               // 0x0760(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UMediaPlayer*                           MovieMediaPlayer;                                  // 0x0770(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             TransitionSound01;                                 // 0x0778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             TransitionSound02;                                 // 0x0780(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FTimerHandle>                   AudioTimerHandles;                                 // 0x0788(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__Button_PTT_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__ButtonToggleChat_K2Node_ComponentBoundEvent_39_CommonSelectedStateChanged__DelegateSignature(class UCommonButtonLegacy* Button, bool Selected);
-	void Construct();
-	void DisplayDebugFlowText(const class FText& DebugFlowText);
 	void ExecuteUbergraph_AthenaFrontend(int32 EntryPoint);
-	void HideDebugFlowText();
-	void InitChatVisibilityButton();
-	void On_Can_PTT();
+	void StopTrailerTransitionAudioCheck();
+	void StartTrailerTransitionAudioCheck(class UMediaPlayer* MediaPlayer);
 	void OnSetFrontendVisibilityMode(EFrontendVisibilityMode InFrontendVisibilityMode);
-	void OnTrailerMediaEnded();
-	void OnTrailerMediaOpened(const class FString& OpenedUrl);
-	void OnTrailerTransitionAudioCheck();
-	void PlayTrailer();
+	void BndEvt__Button_PTT_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void Construct();
+	void On_Can_PTT();
+	void BndEvt__ButtonToggleChat_K2Node_ComponentBoundEvent_39_CommonSelectedStateChanged__DelegateSignature(class UCommonButton* Button, bool Selected);
 	void SetChatWidgetVisibility(bool Visible);
 	void SetOverlayTitleBarVisibility(bool Visible);
-	void StartTrailerTransitionAudioCheck(class UMediaPlayer* MediaPlayer);
-	void StopTrailerTransitionAudioCheck();
 	void UpdatePttVisibility(EPTTState PTTState);
+	void InitChatVisibilityButton();
+	void PlayTrailer();
+	void OnTrailerTransitionAudioCheck();
+	void OnTrailerMediaOpened(const class FString& OpenedUrl);
+	void OnTrailerMediaEnded();
 
 public:
 	static class UClass* StaticClass()
@@ -79,27 +74,24 @@ public:
 	}
 };
 static_assert(alignof(UAthenaFrontend_C) == 0x000008, "Wrong alignment on UAthenaFrontend_C");
-static_assert(sizeof(UAthenaFrontend_C) == 0x0009F8, "Wrong size on UAthenaFrontend_C");
-static_assert(offsetof(UAthenaFrontend_C, UberGraphFrame) == 0x000950, "Member 'UAthenaFrontend_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, AthenaFPS) == 0x000958, "Member 'UAthenaFrontend_C::AthenaFPS' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, AthenaTemperature) == 0x000960, "Member 'UAthenaFrontend_C::AthenaTemperature' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, BuildWatermark) == 0x000968, "Member 'UAthenaFrontend_C::BuildWatermark' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, Button_PTT) == 0x000970, "Member 'UAthenaFrontend_C::Button_PTT' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, CommonTextBlock_FrontendFlowDebug) == 0x000978, "Member 'UAthenaFrontend_C::CommonTextBlock_FrontendFlowDebug' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, ContentOnDemand) == 0x000980, "Member 'UAthenaFrontend_C::ContentOnDemand' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, FortVoiceChannelSpeakerContainer) == 0x000988, "Member 'UAthenaFrontend_C::FortVoiceChannelSpeakerContainer' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, FrontendEventNotifications) == 0x000990, "Member 'UAthenaFrontend_C::FrontendEventNotifications' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, PTT_Image) == 0x000998, "Member 'UAthenaFrontend_C::PTT_Image' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, SafeZone_1) == 0x0009A0, "Member 'UAthenaFrontend_C::SafeZone_1' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, SafeZone_Bottom) == 0x0009A8, "Member 'UAthenaFrontend_C::SafeZone_Bottom' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, SizeBoxPTT) == 0x0009B0, "Member 'UAthenaFrontend_C::SizeBoxPTT' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, StartedPlayingVideo) == 0x0009B8, "Member 'UAthenaFrontend_C::StartedPlayingVideo' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, TransitionIndex) == 0x0009BC, "Member 'UAthenaFrontend_C::TransitionIndex' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, TransitionAudioData) == 0x0009C0, "Member 'UAthenaFrontend_C::TransitionAudioData' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, MovieMediaPlayer) == 0x0009D0, "Member 'UAthenaFrontend_C::MovieMediaPlayer' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, TransitionSound01) == 0x0009D8, "Member 'UAthenaFrontend_C::TransitionSound01' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, TransitionSound02) == 0x0009E0, "Member 'UAthenaFrontend_C::TransitionSound02' has a wrong offset!");
-static_assert(offsetof(UAthenaFrontend_C, AudioTimerHandles) == 0x0009E8, "Member 'UAthenaFrontend_C::AudioTimerHandles' has a wrong offset!");
+static_assert(sizeof(UAthenaFrontend_C) == 0x000798, "Wrong size on UAthenaFrontend_C");
+static_assert(offsetof(UAthenaFrontend_C, UberGraphFrame) == 0x000708, "Member 'UAthenaFrontend_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, AthenaFPS) == 0x000710, "Member 'UAthenaFrontend_C::AthenaFPS' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, AthenaTemperature) == 0x000718, "Member 'UAthenaFrontend_C::AthenaTemperature' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, BuildWatermark) == 0x000720, "Member 'UAthenaFrontend_C::BuildWatermark' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, Button_PTT) == 0x000728, "Member 'UAthenaFrontend_C::Button_PTT' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, FortVoiceChannelSpeakerContainer) == 0x000730, "Member 'UAthenaFrontend_C::FortVoiceChannelSpeakerContainer' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, PTT_Image) == 0x000738, "Member 'UAthenaFrontend_C::PTT_Image' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, SafeZone_1) == 0x000740, "Member 'UAthenaFrontend_C::SafeZone_1' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, SafeZone_Bottom) == 0x000748, "Member 'UAthenaFrontend_C::SafeZone_Bottom' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, SizeBoxPTT) == 0x000750, "Member 'UAthenaFrontend_C::SizeBoxPTT' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, StartedPlayingVideo) == 0x000758, "Member 'UAthenaFrontend_C::StartedPlayingVideo' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, TransitionIndex) == 0x00075C, "Member 'UAthenaFrontend_C::TransitionIndex' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, TransitionAudioData) == 0x000760, "Member 'UAthenaFrontend_C::TransitionAudioData' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, MovieMediaPlayer) == 0x000770, "Member 'UAthenaFrontend_C::MovieMediaPlayer' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, TransitionSound01) == 0x000778, "Member 'UAthenaFrontend_C::TransitionSound01' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, TransitionSound02) == 0x000780, "Member 'UAthenaFrontend_C::TransitionSound02' has a wrong offset!");
+static_assert(offsetof(UAthenaFrontend_C, AudioTimerHandles) == 0x000788, "Member 'UAthenaFrontend_C::AudioTimerHandles' has a wrong offset!");
 
 }
 

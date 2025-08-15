@@ -17,63 +17,99 @@
 namespace SDK
 {
 
-// Function SquadMemberTile.SquadMemberTile_C.BP_OnDeselected
-// (Event, Protected, BlueprintEvent)
-
-void USquadMemberTile_C::BP_OnDeselected()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnDeselected");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SquadMemberTile.SquadMemberTile_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void USquadMemberTile_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SquadMemberTile.SquadMemberTile_C.BP_OnSelected
-// (Event, Protected, BlueprintEvent)
-
-void USquadMemberTile_C::BP_OnSelected()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnSelected");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SquadMemberTile.SquadMemberTile_C.BP_OnTeamMemberEstablished
-// (Event, Protected, BlueprintEvent)
+// Function SquadMemberTile.SquadMemberTile_C.SetVisuals
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bHasValidMember                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGameReadiness                          Member_Readiness                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Is_In_Frontend                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void USquadMemberTile_C::BP_OnTeamMemberEstablished(bool bHasValidMember)
+void USquadMemberTile_C::SetVisuals(EGameReadiness Member_Readiness, bool Is_In_Frontend)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnTeamMemberEstablished");
+		Func = Class->GetFunction("SquadMemberTile_C", "SetVisuals");
 
-	Params::SquadMemberTile_C_BP_OnTeamMemberEstablished Parms{};
+	Params::SquadMemberTile_C_SetVisuals Parms{};
 
-	Parms.bHasValidMember = bHasValidMember;
+	Parms.Member_Readiness = Member_Readiness;
+	Parms.Is_In_Frontend = Is_In_Frontend;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SquadMemberTile.SquadMemberTile_C.SetEmptyVisuals
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void USquadMemberTile_C::SetEmptyVisuals()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SquadMemberTile_C", "SetEmptyVisuals");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SquadMemberTile.SquadMemberTile_C.SetSitOutVisuals
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void USquadMemberTile_C::SetSitOutVisuals()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SquadMemberTile_C", "SetSitOutVisuals");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SquadMemberTile.SquadMemberTile_C.SetReadyVisuals
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void USquadMemberTile_C::SetReadyVisuals()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SquadMemberTile_C", "SetReadyVisuals");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SquadMemberTile.SquadMemberTile_C.SetNotReadyVisuals
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void USquadMemberTile_C::SetNotReadyVisuals()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SquadMemberTile_C", "SetNotReadyVisuals");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SquadMemberTile.SquadMemberTile_C.OnLoaded_A3B69DDA4214DBAA66546FAB9F43D5E7
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USquadMemberTile_C::OnLoaded_A3B69DDA4214DBAA66546FAB9F43D5E7(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SquadMemberTile_C", "OnLoaded_A3B69DDA4214DBAA66546FAB9F43D5E7");
+
+	Params::SquadMemberTile_C_OnLoaded_A3B69DDA4214DBAA66546FAB9F43D5E7 Parms{};
+
+	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -85,9 +121,37 @@ void USquadMemberTile_C::BP_OnTeamMemberEstablished(bool bHasValidMember)
 void USquadMemberTile_C::BP_OnUnhovered()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnUnhovered");
+		Func = Class->GetFunction("SquadMemberTile_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SquadMemberTile.SquadMemberTile_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void USquadMemberTile_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SquadMemberTile_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SquadMemberTile.SquadMemberTile_C.OnSquadAssigned
+// (Event, Protected, BlueprintEvent)
+
+void USquadMemberTile_C::OnSquadAssigned()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SquadMemberTile_C", "OnSquadAssigned");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -99,49 +163,29 @@ void USquadMemberTile_C::BP_OnUnhovered()
 void USquadMemberTile_C::Construct()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Construct");
+		Func = Class->GetFunction("SquadMemberTile_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function SquadMemberTile.SquadMemberTile_C.ExecuteUbergraph_SquadMemberTile
-// (Final, UbergraphFunction, HasDefaults)
+// Function SquadMemberTile.SquadMemberTile_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void USquadMemberTile_C::ExecuteUbergraph_SquadMemberTile(int32 EntryPoint)
+void USquadMemberTile_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_SquadMemberTile");
+		Func = Class->GetFunction("SquadMemberTile_C", "PreConstruct");
 
-	Params::SquadMemberTile_C_ExecuteUbergraph_SquadMemberTile Parms{};
+	Params::SquadMemberTile_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SquadMemberTile.SquadMemberTile_C.OnLoaded_A3B69DDA4214DBAA66546FAB9F43D5E7
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void USquadMemberTile_C::OnLoaded_A3B69DDA4214DBAA66546FAB9F43D5E7(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnLoaded_A3B69DDA4214DBAA66546FAB9F43D5E7");
-
-	Params::SquadMemberTile_C_OnLoaded_A3B69DDA4214DBAA66546FAB9F43D5E7 Parms{};
-
-	Parms.Loaded = Loaded;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -155,9 +199,9 @@ void USquadMemberTile_C::OnLoaded_A3B69DDA4214DBAA66546FAB9F43D5E7(class UObject
 void USquadMemberTile_C::OnMemberGameReadinessChanged(EGameReadiness ReadyStatus)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnMemberGameReadinessChanged");
+		Func = Class->GetFunction("SquadMemberTile_C", "OnMemberGameReadinessChanged");
 
 	Params::SquadMemberTile_C_OnMemberGameReadinessChanged Parms{};
 
@@ -167,17 +211,65 @@ void USquadMemberTile_C::OnMemberGameReadinessChanged(EGameReadiness ReadyStatus
 }
 
 
+// Function SquadMemberTile.SquadMemberTile_C.BP_OnSelected
+// (Event, Protected, BlueprintEvent)
+
+void USquadMemberTile_C::BP_OnSelected()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SquadMemberTile_C", "BP_OnSelected");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SquadMemberTile.SquadMemberTile_C.BP_OnDeselected
+// (Event, Protected, BlueprintEvent)
+
+void USquadMemberTile_C::BP_OnDeselected()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SquadMemberTile_C", "BP_OnDeselected");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SquadMemberTile.SquadMemberTile_C.BP_OnTeamMemberEstablished
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bHasValidMember                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void USquadMemberTile_C::BP_OnTeamMemberEstablished(bool bHasValidMember)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SquadMemberTile_C", "BP_OnTeamMemberEstablished");
+
+	Params::SquadMemberTile_C_BP_OnTeamMemberEstablished Parms{};
+
+	Parms.bHasValidMember = bHasValidMember;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function SquadMemberTile.SquadMemberTile_C.OnMemberIsInFrontendChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsInFrontEnd                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsInFrontEnd                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void USquadMemberTile_C::OnMemberIsInFrontendChanged(bool bIsInFrontEnd)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnMemberIsInFrontendChanged");
+		Func = Class->GetFunction("SquadMemberTile_C", "OnMemberIsInFrontendChanged");
 
 	Params::SquadMemberTile_C_OnMemberIsInFrontendChanged Parms{};
 
@@ -187,113 +279,21 @@ void USquadMemberTile_C::OnMemberIsInFrontendChanged(bool bIsInFrontEnd)
 }
 
 
-// Function SquadMemberTile.SquadMemberTile_C.OnSquadAssigned
-// (Event, Protected, BlueprintEvent)
-
-void USquadMemberTile_C::OnSquadAssigned()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnSquadAssigned");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SquadMemberTile.SquadMemberTile_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function SquadMemberTile.SquadMemberTile_C.ExecuteUbergraph_SquadMemberTile
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USquadMemberTile_C::PreConstruct(bool IsDesignTime)
+void USquadMemberTile_C::ExecuteUbergraph_SquadMemberTile(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("PreConstruct");
+		Func = Class->GetFunction("SquadMemberTile_C", "ExecuteUbergraph_SquadMemberTile");
 
-	Params::SquadMemberTile_C_PreConstruct Parms{};
+	Params::SquadMemberTile_C_ExecuteUbergraph_SquadMemberTile Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SquadMemberTile.SquadMemberTile_C.SetEmptyVisuals
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void USquadMemberTile_C::SetEmptyVisuals()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetEmptyVisuals");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SquadMemberTile.SquadMemberTile_C.SetNotReadyVisuals
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void USquadMemberTile_C::SetNotReadyVisuals()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetNotReadyVisuals");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SquadMemberTile.SquadMemberTile_C.SetReadyVisuals
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void USquadMemberTile_C::SetReadyVisuals()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetReadyVisuals");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SquadMemberTile.SquadMemberTile_C.SetSitOutVisuals
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void USquadMemberTile_C::SetSitOutVisuals()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetSitOutVisuals");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SquadMemberTile.SquadMemberTile_C.SetVisuals
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EGameReadiness                          Member_Readiness                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Is_In_Frontend                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USquadMemberTile_C::SetVisuals(EGameReadiness Member_Readiness, bool Is_In_Frontend)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("SetVisuals");
-
-	Params::SquadMemberTile_C_SetVisuals Parms{};
-
-	Parms.Member_Readiness = Member_Readiness;
-	Parms.Is_In_Frontend = Is_In_Frontend;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

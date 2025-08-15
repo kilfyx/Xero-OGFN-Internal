@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "FortniteAI_classes.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass AI_skill_phoebe_bot_inventory.AI_skill_phoebe_bot_inventory_C
-// 0x0000 (0x02B0 - 0x02B0)
-class UAI_skill_phoebe_bot_inventory_C final : public UFortAthenaAIBotInventorySkillSet
+// 0x0000 (0x0188 - 0x0188)
+class UAI_skill_phoebe_bot_inventory_C : public UFortAthenaAIBotInventorySkillSet
 {
 public:
 	static class UClass* StaticClass()
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UAI_skill_phoebe_bot_inventory_C) == 0x000008, "Wrong alignment on UAI_skill_phoebe_bot_inventory_C");
-static_assert(sizeof(UAI_skill_phoebe_bot_inventory_C) == 0x0002B0, "Wrong size on UAI_skill_phoebe_bot_inventory_C");
+static_assert(sizeof(UAI_skill_phoebe_bot_inventory_C) == 0x000188, "Wrong size on UAI_skill_phoebe_bot_inventory_C");
 
 }
 

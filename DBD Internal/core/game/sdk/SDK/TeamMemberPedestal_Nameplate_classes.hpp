@@ -11,62 +11,43 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "FortniteGame_structs.hpp"
-#include "CommonInput_structs.hpp"
-#include "FortniteUI_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteUI_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C
-// 0x0340 (0x1840 - 0x1500)
+// 0x0268 (0x0EC0 - 0x0C58)
 class UTeamMemberPedestal_Nameplate_C final : public UFortTeamMemberPedestalNameplate
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1500(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       NotReadyTextColor;                                 // 0x1508(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ReadyTextColor;                                    // 0x1510(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       On_Ready_Change_Text;                              // 0x1518(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UFortHUDElementWrapper_C*               FortHUDElementWrapper;                             // 0x1520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SB_InputAction;                                    // 0x1528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScaleBox*                              ScaleBox_0;                                        // 0x1530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTeamMemberPedestal_ActivatableContainer_C* TeamMemberPedestal_ActivatableContainer;           // 0x1538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               Widget_PlayerLevel;                                // 0x1540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	uint8                                         Pad_1548[0x8];                                     // 0x1548(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortTeamMemberInfo                    TeamMemberInfo;                                    // 0x1550(0x0250)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          bHovered;                                          // 0x17A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17A1[0x3];                                     // 0x17A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           ReadyColor;                                        // 0x17A4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           NotReadyColor;                                     // 0x17B4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17C4[0x4];                                     // 0x17C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             UnReadySound;                                      // 0x17C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             ReadySound;                                        // 0x17D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FText                                   AddFriendText;                                     // 0x17D8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   AcceptedInviteText;                                // 0x17F0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   AcceptFriendRequestText;                           // 0x1808(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   SentInviteText;                                    // 0x1820(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	ESlateVisibility                              FALSE_0;                                           // 0x1838(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFrontEndCamera                               DefaultOldCameraValue;                             // 0x1839(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C58(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       NotReadyTextColor;                                 // 0x0C60(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ReadyTextColor;                                    // 0x0C68(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       On_Ready_Change_Text;                              // 0x0C70(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class USizeBox*                               SB_InputAction;                                    // 0x0C78(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               Widget_PlayerLevel;                                // 0x0C80(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FFortTeamMemberInfo                    TeamMemberInfo;                                    // 0x0C88(0x0200)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          bHovered;                                          // 0x0E88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E89[0x3];                                      // 0x0E89(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           ReadyColor;                                        // 0x0E8C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           NotReadyColor;                                     // 0x0E9C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EAC[0x4];                                      // 0x0EAC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             UnReadySound;                                      // 0x0EB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             ReadySound;                                        // 0x0EB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateInputActionVisibility();
-	void Update_Add_Friend_Button_Visuals(bool IsUsingTouch);
-	void OnReadyStatusChanged(EGameReadiness GameReadiness, bool bIsDownloading);
-	void OnPlayReadyAudio(bool bIsReadyForMatchmaking);
-	void OnInputChanged(ECommonInputType bNewInputType);
-	void OnInitialized();
-	void OnFrontEndCameraChanged(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera);
-	void OnFriendStatusUpdated(const EFortFriendRequestStatus FriendRequestStatus);
-	void OnCurrentSubGameChanged(ESubGame NewSubGame);
-	void HandleInputMethodChanged(ECommonInputType bNewInputType);
-	ESlateVisibility GetInputActionVisibility();
 	void ExecuteUbergraph_TeamMemberPedestal_Nameplate(int32 EntryPoint);
-	void Destruct();
+	void OnCurrentSubGameChanged(ESubGame NewSubGame);
+	void OnPlayReadyAudio(bool bIsReadyForMatchmaking);
+	void OnFrontEndCameraChanged(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera);
 	void Construct();
 	void BP_OnTeamMemberEstablished(bool bHasValidMember);
+	void OnReadyStatusChanged(EGameReadiness GameReadiness);
 
 public:
 	static class UClass* StaticClass()
@@ -78,29 +59,20 @@ public:
 		return GetDefaultObjImpl<UTeamMemberPedestal_Nameplate_C>();
 	}
 };
-static_assert(alignof(UTeamMemberPedestal_Nameplate_C) == 0x000010, "Wrong alignment on UTeamMemberPedestal_Nameplate_C");
-static_assert(sizeof(UTeamMemberPedestal_Nameplate_C) == 0x001840, "Wrong size on UTeamMemberPedestal_Nameplate_C");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, UberGraphFrame) == 0x001500, "Member 'UTeamMemberPedestal_Nameplate_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, NotReadyTextColor) == 0x001508, "Member 'UTeamMemberPedestal_Nameplate_C::NotReadyTextColor' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, ReadyTextColor) == 0x001510, "Member 'UTeamMemberPedestal_Nameplate_C::ReadyTextColor' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, On_Ready_Change_Text) == 0x001518, "Member 'UTeamMemberPedestal_Nameplate_C::On_Ready_Change_Text' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, FortHUDElementWrapper) == 0x001520, "Member 'UTeamMemberPedestal_Nameplate_C::FortHUDElementWrapper' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, SB_InputAction) == 0x001528, "Member 'UTeamMemberPedestal_Nameplate_C::SB_InputAction' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, ScaleBox_0) == 0x001530, "Member 'UTeamMemberPedestal_Nameplate_C::ScaleBox_0' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, TeamMemberPedestal_ActivatableContainer) == 0x001538, "Member 'UTeamMemberPedestal_Nameplate_C::TeamMemberPedestal_ActivatableContainer' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, Widget_PlayerLevel) == 0x001540, "Member 'UTeamMemberPedestal_Nameplate_C::Widget_PlayerLevel' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, TeamMemberInfo) == 0x001550, "Member 'UTeamMemberPedestal_Nameplate_C::TeamMemberInfo' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, bHovered) == 0x0017A0, "Member 'UTeamMemberPedestal_Nameplate_C::bHovered' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, ReadyColor) == 0x0017A4, "Member 'UTeamMemberPedestal_Nameplate_C::ReadyColor' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, NotReadyColor) == 0x0017B4, "Member 'UTeamMemberPedestal_Nameplate_C::NotReadyColor' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, UnReadySound) == 0x0017C8, "Member 'UTeamMemberPedestal_Nameplate_C::UnReadySound' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, ReadySound) == 0x0017D0, "Member 'UTeamMemberPedestal_Nameplate_C::ReadySound' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, AddFriendText) == 0x0017D8, "Member 'UTeamMemberPedestal_Nameplate_C::AddFriendText' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, AcceptedInviteText) == 0x0017F0, "Member 'UTeamMemberPedestal_Nameplate_C::AcceptedInviteText' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, AcceptFriendRequestText) == 0x001808, "Member 'UTeamMemberPedestal_Nameplate_C::AcceptFriendRequestText' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, SentInviteText) == 0x001820, "Member 'UTeamMemberPedestal_Nameplate_C::SentInviteText' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, FALSE_0) == 0x001838, "Member 'UTeamMemberPedestal_Nameplate_C::FALSE_0' has a wrong offset!");
-static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, DefaultOldCameraValue) == 0x001839, "Member 'UTeamMemberPedestal_Nameplate_C::DefaultOldCameraValue' has a wrong offset!");
+static_assert(alignof(UTeamMemberPedestal_Nameplate_C) == 0x000008, "Wrong alignment on UTeamMemberPedestal_Nameplate_C");
+static_assert(sizeof(UTeamMemberPedestal_Nameplate_C) == 0x000EC0, "Wrong size on UTeamMemberPedestal_Nameplate_C");
+static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, UberGraphFrame) == 0x000C58, "Member 'UTeamMemberPedestal_Nameplate_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, NotReadyTextColor) == 0x000C60, "Member 'UTeamMemberPedestal_Nameplate_C::NotReadyTextColor' has a wrong offset!");
+static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, ReadyTextColor) == 0x000C68, "Member 'UTeamMemberPedestal_Nameplate_C::ReadyTextColor' has a wrong offset!");
+static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, On_Ready_Change_Text) == 0x000C70, "Member 'UTeamMemberPedestal_Nameplate_C::On_Ready_Change_Text' has a wrong offset!");
+static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, SB_InputAction) == 0x000C78, "Member 'UTeamMemberPedestal_Nameplate_C::SB_InputAction' has a wrong offset!");
+static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, Widget_PlayerLevel) == 0x000C80, "Member 'UTeamMemberPedestal_Nameplate_C::Widget_PlayerLevel' has a wrong offset!");
+static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, TeamMemberInfo) == 0x000C88, "Member 'UTeamMemberPedestal_Nameplate_C::TeamMemberInfo' has a wrong offset!");
+static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, bHovered) == 0x000E88, "Member 'UTeamMemberPedestal_Nameplate_C::bHovered' has a wrong offset!");
+static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, ReadyColor) == 0x000E8C, "Member 'UTeamMemberPedestal_Nameplate_C::ReadyColor' has a wrong offset!");
+static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, NotReadyColor) == 0x000E9C, "Member 'UTeamMemberPedestal_Nameplate_C::NotReadyColor' has a wrong offset!");
+static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, UnReadySound) == 0x000EB0, "Member 'UTeamMemberPedestal_Nameplate_C::UnReadySound' has a wrong offset!");
+static_assert(offsetof(UTeamMemberPedestal_Nameplate_C, ReadySound) == 0x000EB8, "Member 'UTeamMemberPedestal_Nameplate_C::ReadySound' has a wrong offset!");
 
 }
 

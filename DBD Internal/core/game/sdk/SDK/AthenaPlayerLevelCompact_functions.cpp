@@ -17,43 +17,23 @@
 namespace SDK
 {
 
-// Function AthenaPlayerLevelCompact.AthenaPlayerLevelCompact_C.ExecuteUbergraph_AthenaPlayerLevelCompact
-// (Final, UbergraphFunction, HasDefaults)
+// Function AthenaPlayerLevelCompact.AthenaPlayerLevelCompact_C.OnUpdateRewardIcon
+// (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaPlayerLevelCompact_C::ExecuteUbergraph_AthenaPlayerLevelCompact(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_AthenaPlayerLevelCompact");
-
-	Params::AthenaPlayerLevelCompact_C_ExecuteUbergraph_AthenaPlayerLevelCompact Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaPlayerLevelCompact.AthenaPlayerLevelCompact_C.OnUpdateRewardIcon_1
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFortItem*                        RewardItem                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TSoftObjectPtr<class UTexture2D>        RewardTexture                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash)
-// bool                                    bHasAdditionalStylesToDisplay                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UFortItem*                  RewardItem                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TSoftObjectPtr<class UTexture2D>& RewardTexture                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash)
+// bool                                    bHasAdditionalStylesToDisplay                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // int32                                   RewardLevel                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bRequiresBattlePass                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bRequiresBattlePass                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaPlayerLevelCompact_C::OnUpdateRewardIcon_1(const class UFortItem* RewardItem, const TSoftObjectPtr<class UTexture2D>& RewardTexture, bool bHasAdditionalStylesToDisplay, int32 RewardLevel, bool bRequiresBattlePass)
+void UAthenaPlayerLevelCompact_C::OnUpdateRewardIcon(const class UFortItem* RewardItem, const TSoftObjectPtr<class UTexture2D>& RewardTexture, bool bHasAdditionalStylesToDisplay, int32 RewardLevel, bool bRequiresBattlePass)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateRewardIcon_1");
 
-	Params::AthenaPlayerLevelCompact_C_OnUpdateRewardIcon_1 Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaPlayerLevelCompact_C", "OnUpdateRewardIcon");
+
+	Params::AthenaPlayerLevelCompact_C_OnUpdateRewardIcon Parms{};
 
 	Parms.RewardItem = RewardItem;
 	Parms.RewardTexture = RewardTexture;
@@ -65,23 +45,43 @@ void UAthenaPlayerLevelCompact_C::OnUpdateRewardIcon_1(const class UFortItem* Re
 }
 
 
-// Function AthenaPlayerLevelCompact.AthenaPlayerLevelCompact_C.OnUpdateXpBar_1
-// (BlueprintCallable, BlueprintEvent)
+// Function AthenaPlayerLevelCompact.AthenaPlayerLevelCompact_C.OnUpdateXpBar
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// double                                  Progress                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsMaxLevel                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Progress                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsMaxLevel                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaPlayerLevelCompact_C::OnUpdateXpBar_1(double Progress, bool bIsMaxLevel)
+void UAthenaPlayerLevelCompact_C::OnUpdateXpBar(float Progress, bool bIsMaxLevel)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdateXpBar_1");
 
-	Params::AthenaPlayerLevelCompact_C_OnUpdateXpBar_1 Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaPlayerLevelCompact_C", "OnUpdateXpBar");
+
+	Params::AthenaPlayerLevelCompact_C_OnUpdateXpBar Parms{};
 
 	Parms.Progress = Progress;
 	Parms.bIsMaxLevel = bIsMaxLevel;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaPlayerLevelCompact.AthenaPlayerLevelCompact_C.ExecuteUbergraph_AthenaPlayerLevelCompact
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaPlayerLevelCompact_C::ExecuteUbergraph_AthenaPlayerLevelCompact(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaPlayerLevelCompact_C", "ExecuteUbergraph_AthenaPlayerLevelCompact");
+
+	Params::AthenaPlayerLevelCompact_C_ExecuteUbergraph_AthenaPlayerLevelCompact Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

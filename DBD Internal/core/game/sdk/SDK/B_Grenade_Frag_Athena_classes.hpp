@@ -17,8 +17,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Grenade_Frag_Athena.B_Grenade_Frag_Athena_C
-// 0x0000 (0x1470 - 0x1470)
-class AB_Grenade_Frag_Athena_C final : public AB_ConsumableSmall_Athena_C
+// 0x0000 (0x0D18 - 0x0D18)
+class AB_Grenade_Frag_Athena_C : public AB_ConsumableSmall_Athena_C
 {
 public:
 	static class UClass* StaticClass()
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AB_Grenade_Frag_Athena_C>();
 	}
 };
+static_assert(alignof(AB_Grenade_Frag_Athena_C) == 0x000008, "Wrong alignment on AB_Grenade_Frag_Athena_C");
+static_assert(sizeof(AB_Grenade_Frag_Athena_C) == 0x000D18, "Wrong size on AB_Grenade_Frag_Athena_C");
 
 }
 

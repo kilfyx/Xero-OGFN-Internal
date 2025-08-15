@@ -17,19 +17,39 @@
 namespace SDK
 {
 
-// Function SpecialEventsCamera_Blueprint.SpecialEventsCamera_Blueprint_C.BP_OnDeactivated
+// Function SpecialEventsCamera_Blueprint.SpecialEventsCamera_Blueprint_C.OnActivated
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ASpecialEventsCamera_Blueprint_C::BP_OnDeactivated(class AFortPlayerController* PlayerController)
+void ASpecialEventsCamera_Blueprint_C::OnActivated(class AFortPlayerController* PlayerController)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnDeactivated");
 
-	Params::SpecialEventsCamera_Blueprint_C_BP_OnDeactivated Parms{};
+	if (Func == nullptr)
+		Func = Class->GetFunction("SpecialEventsCamera_Blueprint_C", "OnActivated");
+
+	Params::SpecialEventsCamera_Blueprint_C_OnActivated Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SpecialEventsCamera_Blueprint.SpecialEventsCamera_Blueprint_C.OnDeactivated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ASpecialEventsCamera_Blueprint_C::OnDeactivated(class AFortPlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SpecialEventsCamera_Blueprint_C", "OnDeactivated");
+
+	Params::SpecialEventsCamera_Blueprint_C_OnDeactivated Parms{};
 
 	Parms.PlayerController = PlayerController;
 
@@ -45,33 +65,13 @@ void ASpecialEventsCamera_Blueprint_C::BP_OnDeactivated(class AFortPlayerControl
 void ASpecialEventsCamera_Blueprint_C::ExecuteUbergraph_SpecialEventsCamera_Blueprint(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_SpecialEventsCamera_Blueprint");
+		Func = Class->GetFunction("SpecialEventsCamera_Blueprint_C", "ExecuteUbergraph_SpecialEventsCamera_Blueprint");
 
 	Params::SpecialEventsCamera_Blueprint_C_ExecuteUbergraph_SpecialEventsCamera_Blueprint Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SpecialEventsCamera_Blueprint.SpecialEventsCamera_Blueprint_C.BP_OnActivated
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ASpecialEventsCamera_Blueprint_C::BP_OnActivated(class AFortPlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
-
-	Params::SpecialEventsCamera_Blueprint_C_BP_OnActivated Parms{};
-
-	Parms.PlayerController = PlayerController;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

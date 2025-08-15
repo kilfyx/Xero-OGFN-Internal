@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GE_Patrolling.GE_Patrolling_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x0800 - 0x0800)
 class UGE_Patrolling_C final : public UGameplayEffect
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UGE_Patrolling_C) == 0x000008, "Wrong alignment on UGE_Patrolling_C");
-static_assert(sizeof(UGE_Patrolling_C) == 0x000858, "Wrong size on UGE_Patrolling_C");
+static_assert(sizeof(UGE_Patrolling_C) == 0x000800, "Wrong size on UGE_Patrolling_C");
 
 }
 

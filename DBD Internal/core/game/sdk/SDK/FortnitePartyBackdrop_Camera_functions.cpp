@@ -17,21 +17,41 @@
 namespace SDK
 {
 
-// Function FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.ExecuteUbergraph_FortnitePartyBackdrop_Camera
-// (Final, UbergraphFunction, HasDefaults)
+// Function FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.OnActivated
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AFortnitePartyBackdrop_Camera_C::ExecuteUbergraph_FortnitePartyBackdrop_Camera(int32 EntryPoint)
+void AFortnitePartyBackdrop_Camera_C::OnActivated(class AFortPlayerController* PlayerController)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_FortnitePartyBackdrop_Camera");
+		Func = Class->GetFunction("FortnitePartyBackdrop_Camera_C", "OnActivated");
 
-	Params::FortnitePartyBackdrop_Camera_C_ExecuteUbergraph_FortnitePartyBackdrop_Camera Parms{};
+	Params::FortnitePartyBackdrop_Camera_C_OnActivated Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.OnDeactivated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AFortnitePartyBackdrop_Camera_C::OnDeactivated(class AFortPlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortnitePartyBackdrop_Camera_C", "OnDeactivated");
+
+	Params::FortnitePartyBackdrop_Camera_C_OnDeactivated Parms{};
+
+	Parms.PlayerController = PlayerController;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -43,31 +63,11 @@ void AFortnitePartyBackdrop_Camera_C::ExecuteUbergraph_FortnitePartyBackdrop_Cam
 void AFortnitePartyBackdrop_Camera_C::Reset_Location()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Reset Location");
+		Func = Class->GetFunction("FortnitePartyBackdrop_Camera_C", "Reset Location");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.BP_OnDeactivated
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AFortnitePartyBackdrop_Camera_C::BP_OnDeactivated(class AFortPlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnDeactivated");
-
-	Params::FortnitePartyBackdrop_Camera_C_BP_OnDeactivated Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -77,29 +77,29 @@ void AFortnitePartyBackdrop_Camera_C::BP_OnDeactivated(class AFortPlayerControll
 void AFortnitePartyBackdrop_Camera_C::ManualActivate()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ManualActivate");
+		Func = Class->GetFunction("FortnitePartyBackdrop_Camera_C", "ManualActivate");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.BP_OnActivated
-// (Event, Public, BlueprintEvent)
+// Function FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.ExecuteUbergraph_FortnitePartyBackdrop_Camera
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AFortnitePartyBackdrop_Camera_C::BP_OnActivated(class AFortPlayerController* PlayerController)
+void AFortnitePartyBackdrop_Camera_C::ExecuteUbergraph_FortnitePartyBackdrop_Camera(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
+		Func = Class->GetFunction("FortnitePartyBackdrop_Camera_C", "ExecuteUbergraph_FortnitePartyBackdrop_Camera");
 
-	Params::FortnitePartyBackdrop_Camera_C_BP_OnActivated Parms{};
+	Params::FortnitePartyBackdrop_Camera_C_ExecuteUbergraph_FortnitePartyBackdrop_Camera Parms{};
 
-	Parms.PlayerController = PlayerController;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

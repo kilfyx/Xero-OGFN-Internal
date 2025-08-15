@@ -23,23 +23,9 @@ namespace SDK
 void ACameraAnimationTransition_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CameraAnimationTransition.CameraAnimationTransition_C.Timeline_0__UpdateFunc
-// (BlueprintEvent)
-
-void ACameraAnimationTransition_C::Timeline_0__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("Timeline_0__UpdateFunc");
+		Func = Class->GetFunction("CameraAnimationTransition_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,9 +37,23 @@ void ACameraAnimationTransition_C::Timeline_0__UpdateFunc()
 void ACameraAnimationTransition_C::Timeline_0__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("Timeline_0__FinishedFunc");
+		Func = Class->GetFunction("CameraAnimationTransition_C", "Timeline_0__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CameraAnimationTransition.CameraAnimationTransition_C.Timeline_0__UpdateFunc
+// (BlueprintEvent)
+
+void ACameraAnimationTransition_C::Timeline_0__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CameraAnimationTransition_C", "Timeline_0__UpdateFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,9 +65,9 @@ void ACameraAnimationTransition_C::Timeline_0__FinishedFunc()
 void ACameraAnimationTransition_C::MoveCameraUp()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("MoveCameraUp");
+		Func = Class->GetFunction("CameraAnimationTransition_C", "MoveCameraUp");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -79,9 +79,9 @@ void ACameraAnimationTransition_C::MoveCameraUp()
 void ACameraAnimationTransition_C::MoveCameraDown()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("MoveCameraDown");
+		Func = Class->GetFunction("CameraAnimationTransition_C", "MoveCameraDown");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -95,9 +95,9 @@ void ACameraAnimationTransition_C::MoveCameraDown()
 void ACameraAnimationTransition_C::ExecuteUbergraph_CameraAnimationTransition(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_CameraAnimationTransition");
+		Func = Class->GetFunction("CameraAnimationTransition_C", "ExecuteUbergraph_CameraAnimationTransition");
 
 	Params::CameraAnimationTransition_C_ExecuteUbergraph_CameraAnimationTransition Parms{};
 

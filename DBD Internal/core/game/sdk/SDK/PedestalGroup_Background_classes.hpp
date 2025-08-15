@@ -17,14 +17,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PedestalGroup_Background.PedestalGroup_Background_C
-// 0x0020 (0x02D8 - 0x02B8)
+// 0x0020 (0x0270 - 0x0250)
 class APedestalGroup_Background_C final : public AAthenaSquadPedestalGroup
 {
 public:
-	class UChildActorComponent*                   CAC_Pedestal3;                                     // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   CAC_Pedestal2;                                     // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   CAC_Pedestal1;                                     // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   CAC_Pedestal0;                                     // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   CAC_Pedestal3;                                     // 0x0250(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   CAC_Pedestal2;                                     // 0x0258(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   CAC_Pedestal1;                                     // 0x0260(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   CAC_Pedestal0;                                     // 0x0268(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,11 +37,11 @@ public:
 	}
 };
 static_assert(alignof(APedestalGroup_Background_C) == 0x000008, "Wrong alignment on APedestalGroup_Background_C");
-static_assert(sizeof(APedestalGroup_Background_C) == 0x0002D8, "Wrong size on APedestalGroup_Background_C");
-static_assert(offsetof(APedestalGroup_Background_C, CAC_Pedestal3) == 0x0002B8, "Member 'APedestalGroup_Background_C::CAC_Pedestal3' has a wrong offset!");
-static_assert(offsetof(APedestalGroup_Background_C, CAC_Pedestal2) == 0x0002C0, "Member 'APedestalGroup_Background_C::CAC_Pedestal2' has a wrong offset!");
-static_assert(offsetof(APedestalGroup_Background_C, CAC_Pedestal1) == 0x0002C8, "Member 'APedestalGroup_Background_C::CAC_Pedestal1' has a wrong offset!");
-static_assert(offsetof(APedestalGroup_Background_C, CAC_Pedestal0) == 0x0002D0, "Member 'APedestalGroup_Background_C::CAC_Pedestal0' has a wrong offset!");
+static_assert(sizeof(APedestalGroup_Background_C) == 0x000270, "Wrong size on APedestalGroup_Background_C");
+static_assert(offsetof(APedestalGroup_Background_C, CAC_Pedestal3) == 0x000250, "Member 'APedestalGroup_Background_C::CAC_Pedestal3' has a wrong offset!");
+static_assert(offsetof(APedestalGroup_Background_C, CAC_Pedestal2) == 0x000258, "Member 'APedestalGroup_Background_C::CAC_Pedestal2' has a wrong offset!");
+static_assert(offsetof(APedestalGroup_Background_C, CAC_Pedestal1) == 0x000260, "Member 'APedestalGroup_Background_C::CAC_Pedestal1' has a wrong offset!");
+static_assert(offsetof(APedestalGroup_Background_C, CAC_Pedestal0) == 0x000268, "Member 'APedestalGroup_Background_C::CAC_Pedestal0' has a wrong offset!");
 
 }
 

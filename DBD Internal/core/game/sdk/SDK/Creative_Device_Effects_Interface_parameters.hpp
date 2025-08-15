@@ -23,6 +23,9 @@ struct Creative_Device_Effects_Interface_C_Get_Creative_Effect_Data final
 public:
 	struct FFCreativeEffectColorIndex             Effect_Color;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+static_assert(alignof(Creative_Device_Effects_Interface_C_Get_Creative_Effect_Data) == 0x000004, "Wrong alignment on Creative_Device_Effects_Interface_C_Get_Creative_Effect_Data");
+static_assert(sizeof(Creative_Device_Effects_Interface_C_Get_Creative_Effect_Data) == 0x000008, "Wrong size on Creative_Device_Effects_Interface_C_Get_Creative_Effect_Data");
+static_assert(offsetof(Creative_Device_Effects_Interface_C_Get_Creative_Effect_Data, Effect_Color) == 0x000000, "Member 'Creative_Device_Effects_Interface_C_Get_Creative_Effect_Data::Effect_Color' has a wrong offset!");
 
 }
 

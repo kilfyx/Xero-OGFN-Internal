@@ -23,6 +23,9 @@ struct ItemCostComponent_C_GetCost final
 public:
 	TMap<EFortResourceType, int32>                Cost;                                              // 0x0000(0x0050)(Parm, OutParm)
 };
+static_assert(alignof(ItemCostComponent_C_GetCost) == 0x000008, "Wrong alignment on ItemCostComponent_C_GetCost");
+static_assert(sizeof(ItemCostComponent_C_GetCost) == 0x000050, "Wrong size on ItemCostComponent_C_GetCost");
+static_assert(offsetof(ItemCostComponent_C_GetCost, Cost) == 0x000000, "Member 'ItemCostComponent_C_GetCost::Cost' has a wrong offset!");
 
 }
 

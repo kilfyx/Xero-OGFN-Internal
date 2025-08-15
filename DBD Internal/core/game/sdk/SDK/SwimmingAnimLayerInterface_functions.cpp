@@ -17,6 +17,156 @@
 namespace SDK
 {
 
+// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingLayer
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPoseLink&                 MainPlayerAnimBP                                       (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       SwimmingLayer_0                                        (Parm, OutParm, NoDestructor)
+
+void ISwimmingAnimLayerInterface_C::SwimmingLayer(const struct FPoseLink& MainPlayerAnimBP, struct FPoseLink* SwimmingLayer_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingLayer");
+
+	Params::SwimmingAnimLayerInterface_C_SwimmingLayer Parms{};
+
+	Parms.MainPlayerAnimBP = std::move(MainPlayerAnimBP);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (SwimmingLayer_0 != nullptr)
+		*SwimmingLayer_0 = std::move(Parms.SwimmingLayer_0);
+}
+
+
+// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingMovementAdditiveLayerPose
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPoseLink&                 PassThroughSwimmingMovementAdditive                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       SwimmingMovementAdditiveLayerPose_0                    (Parm, OutParm, NoDestructor)
+
+void ISwimmingAnimLayerInterface_C::SwimmingMovementAdditiveLayerPose(const struct FPoseLink& PassThroughSwimmingMovementAdditive, struct FPoseLink* SwimmingMovementAdditiveLayerPose_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingMovementAdditiveLayerPose");
+
+	Params::SwimmingAnimLayerInterface_C_SwimmingMovementAdditiveLayerPose Parms{};
+
+	Parms.PassThroughSwimmingMovementAdditive = std::move(PassThroughSwimmingMovementAdditive);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (SwimmingMovementAdditiveLayerPose_0 != nullptr)
+		*SwimmingMovementAdditiveLayerPose_0 = std::move(Parms.SwimmingMovementAdditiveLayerPose_0);
+}
+
+
+// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingSprintLayer
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPoseLink&                 PassThroughSwimmingSprint                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// bool                                    IsHidingInPropLayer                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FPoseLink*                       SwimmingSprintLayer_0                                  (Parm, OutParm, NoDestructor)
+
+void ISwimmingAnimLayerInterface_C::SwimmingSprintLayer(const struct FPoseLink& PassThroughSwimmingSprint, bool IsHidingInPropLayer, struct FPoseLink* SwimmingSprintLayer_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingSprintLayer");
+
+	Params::SwimmingAnimLayerInterface_C_SwimmingSprintLayer Parms{};
+
+	Parms.PassThroughSwimmingSprint = std::move(PassThroughSwimmingSprint);
+	Parms.IsHidingInPropLayer = IsHidingInPropLayer;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (SwimmingSprintLayer_0 != nullptr)
+		*SwimmingSprintLayer_0 = std::move(Parms.SwimmingSprintLayer_0);
+}
+
+
+// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingUpperBodyPoseTargetingLayer
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPoseLink&                 PassThroughSwimmingUpperBodyPoseTargeting              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       SwimmingUpperBodyPoseTargetingLayer_0                  (Parm, OutParm, NoDestructor)
+
+void ISwimmingAnimLayerInterface_C::SwimmingUpperBodyPoseTargetingLayer(const struct FPoseLink& PassThroughSwimmingUpperBodyPoseTargeting, struct FPoseLink* SwimmingUpperBodyPoseTargetingLayer_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingUpperBodyPoseTargetingLayer");
+
+	Params::SwimmingAnimLayerInterface_C_SwimmingUpperBodyPoseTargetingLayer Parms{};
+
+	Parms.PassThroughSwimmingUpperBodyPoseTargeting = std::move(PassThroughSwimmingUpperBodyPoseTargeting);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (SwimmingUpperBodyPoseTargetingLayer_0 != nullptr)
+		*SwimmingUpperBodyPoseTargetingLayer_0 = std::move(Parms.SwimmingUpperBodyPoseTargetingLayer_0);
+}
+
+
+// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingUpperBodyPoseNonTargetingLayer
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPoseLink&                 PassThroughSwimmingUpperBodyPoseNonTargeting           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       SwimmingUpperBodyPoseNonTargetingLayer_0               (Parm, OutParm, NoDestructor)
+
+void ISwimmingAnimLayerInterface_C::SwimmingUpperBodyPoseNonTargetingLayer(const struct FPoseLink& PassThroughSwimmingUpperBodyPoseNonTargeting, struct FPoseLink* SwimmingUpperBodyPoseNonTargetingLayer_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingUpperBodyPoseNonTargetingLayer");
+
+	Params::SwimmingAnimLayerInterface_C_SwimmingUpperBodyPoseNonTargetingLayer Parms{};
+
+	Parms.PassThroughSwimmingUpperBodyPoseNonTargeting = std::move(PassThroughSwimmingUpperBodyPoseNonTargeting);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (SwimmingUpperBodyPoseNonTargetingLayer_0 != nullptr)
+		*SwimmingUpperBodyPoseNonTargetingLayer_0 = std::move(Parms.SwimmingUpperBodyPoseNonTargetingLayer_0);
+}
+
+
+// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingLowerBodyLayer
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPoseLink&                 UpperBody_Cache                                        (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 PreUpperBodySlot_Cache                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 PassThroughSwimmingLowerBody                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       SwimmingLowerBodyLayer_0                               (Parm, OutParm, NoDestructor)
+
+void ISwimmingAnimLayerInterface_C::SwimmingLowerBodyLayer(const struct FPoseLink& UpperBody_Cache, const struct FPoseLink& PreUpperBodySlot_Cache, const struct FPoseLink& PassThroughSwimmingLowerBody, struct FPoseLink* SwimmingLowerBodyLayer_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingLowerBodyLayer");
+
+	Params::SwimmingAnimLayerInterface_C_SwimmingLowerBodyLayer Parms{};
+
+	Parms.UpperBody_Cache = std::move(UpperBody_Cache);
+	Parms.PreUpperBodySlot_Cache = std::move(PreUpperBodySlot_Cache);
+	Parms.PassThroughSwimmingLowerBody = std::move(PassThroughSwimmingLowerBody);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (SwimmingLowerBodyLayer_0 != nullptr)
+		*SwimmingLowerBodyLayer_0 = std::move(Parms.SwimmingLowerBodyLayer_0);
+}
+
+
 // Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingAdditiveLayer
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -59,36 +209,6 @@ void ISwimmingAnimLayerInterface_C::SwimmingAdditiveLayer(const struct FPoseLink
 }
 
 
-// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingDiveJumpingLayer
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FPoseLink&                 PassThroughSwimmingDiveJumping                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// bool                                    IsHidingInPropLayer2                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   MainInstanceDiveJumpLayerAlpha                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EFortPlayerAnimBodyType                 AnimBodyTypePassThrough                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FPoseLink*                       SwimmingDiveJumpingLayer_0                             (Parm, OutParm, NoDestructor)
-
-void ISwimmingAnimLayerInterface_C::SwimmingDiveJumpingLayer(const struct FPoseLink& PassThroughSwimmingDiveJumping, bool IsHidingInPropLayer2, float MainInstanceDiveJumpLayerAlpha, EFortPlayerAnimBodyType AnimBodyTypePassThrough, struct FPoseLink* SwimmingDiveJumpingLayer_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingDiveJumpingLayer");
-
-	Params::SwimmingAnimLayerInterface_C_SwimmingDiveJumpingLayer Parms{};
-
-	Parms.PassThroughSwimmingDiveJumping = std::move(PassThroughSwimmingDiveJumping);
-	Parms.IsHidingInPropLayer2 = IsHidingInPropLayer2;
-	Parms.MainInstanceDiveJumpLayerAlpha = MainInstanceDiveJumpLayerAlpha;
-	Parms.AnimBodyTypePassThrough = AnimBodyTypePassThrough;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (SwimmingDiveJumpingLayer_0 != nullptr)
-		*SwimmingDiveJumpingLayer_0 = std::move(Parms.SwimmingDiveJumpingLayer_0);
-}
-
-
 // Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingFullBodyAdditiveLayer
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -113,153 +233,33 @@ void ISwimmingAnimLayerInterface_C::SwimmingFullBodyAdditiveLayer(const struct F
 }
 
 
-// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingLayer
+// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingDiveJumpingLayer
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FPoseLink&                 MainPlayerAnimBP                                       (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink*                       SwimmingLayer_0                                        (Parm, OutParm, NoDestructor)
+// const struct FPoseLink&                 PassThroughSwimmingDiveJumping                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// bool                                    IsHidingInPropLayer2                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float                                   MainInstanceDiveJumpLayerAlpha                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFortPlayerAnimBodyType                 AnimBodyTypePassThrough                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       SwimmingDiveJumpingLayer_0                             (Parm, OutParm, NoDestructor)
 
-void ISwimmingAnimLayerInterface_C::SwimmingLayer(const struct FPoseLink& MainPlayerAnimBP, struct FPoseLink* SwimmingLayer_0)
+void ISwimmingAnimLayerInterface_C::SwimmingDiveJumpingLayer(const struct FPoseLink& PassThroughSwimmingDiveJumping, bool IsHidingInPropLayer2, float MainInstanceDiveJumpLayerAlpha, EFortPlayerAnimBodyType AnimBodyTypePassThrough, struct FPoseLink* SwimmingDiveJumpingLayer_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingLayer");
+		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingDiveJumpingLayer");
 
-	Params::SwimmingAnimLayerInterface_C_SwimmingLayer Parms{};
+	Params::SwimmingAnimLayerInterface_C_SwimmingDiveJumpingLayer Parms{};
 
-	Parms.MainPlayerAnimBP = std::move(MainPlayerAnimBP);
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (SwimmingLayer_0 != nullptr)
-		*SwimmingLayer_0 = std::move(Parms.SwimmingLayer_0);
-}
-
-
-// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingLowerBodyLayer
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FPoseLink&                 UpperBody_Cache                                        (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// const struct FPoseLink&                 PreUpperBodySlot_Cache                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// const struct FPoseLink&                 PassThroughSwimmingLowerBody                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink*                       SwimmingLowerBodyLayer_0                               (Parm, OutParm, NoDestructor)
-
-void ISwimmingAnimLayerInterface_C::SwimmingLowerBodyLayer(const struct FPoseLink& UpperBody_Cache, const struct FPoseLink& PreUpperBodySlot_Cache, const struct FPoseLink& PassThroughSwimmingLowerBody, struct FPoseLink* SwimmingLowerBodyLayer_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingLowerBodyLayer");
-
-	Params::SwimmingAnimLayerInterface_C_SwimmingLowerBodyLayer Parms{};
-
-	Parms.UpperBody_Cache = std::move(UpperBody_Cache);
-	Parms.PreUpperBodySlot_Cache = std::move(PreUpperBodySlot_Cache);
-	Parms.PassThroughSwimmingLowerBody = std::move(PassThroughSwimmingLowerBody);
+	Parms.PassThroughSwimmingDiveJumping = std::move(PassThroughSwimmingDiveJumping);
+	Parms.IsHidingInPropLayer2 = IsHidingInPropLayer2;
+	Parms.MainInstanceDiveJumpLayerAlpha = MainInstanceDiveJumpLayerAlpha;
+	Parms.AnimBodyTypePassThrough = AnimBodyTypePassThrough;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 
-	if (SwimmingLowerBodyLayer_0 != nullptr)
-		*SwimmingLowerBodyLayer_0 = std::move(Parms.SwimmingLowerBodyLayer_0);
-}
-
-
-// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingMovementAdditiveLayerPose
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FPoseLink&                 PassThroughSwimmingMovementAdditive                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink*                       SwimmingMovementAdditiveLayerPose_0                    (Parm, OutParm, NoDestructor)
-
-void ISwimmingAnimLayerInterface_C::SwimmingMovementAdditiveLayerPose(const struct FPoseLink& PassThroughSwimmingMovementAdditive, struct FPoseLink* SwimmingMovementAdditiveLayerPose_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingMovementAdditiveLayerPose");
-
-	Params::SwimmingAnimLayerInterface_C_SwimmingMovementAdditiveLayerPose Parms{};
-
-	Parms.PassThroughSwimmingMovementAdditive = std::move(PassThroughSwimmingMovementAdditive);
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (SwimmingMovementAdditiveLayerPose_0 != nullptr)
-		*SwimmingMovementAdditiveLayerPose_0 = std::move(Parms.SwimmingMovementAdditiveLayerPose_0);
-}
-
-
-// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingSprintLayer
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FPoseLink&                 PassThroughSwimmingSprint                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// bool                                    IsHidingInPropLayer                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FPoseLink*                       SwimmingSprintLayer_0                                  (Parm, OutParm, NoDestructor)
-
-void ISwimmingAnimLayerInterface_C::SwimmingSprintLayer(const struct FPoseLink& PassThroughSwimmingSprint, bool IsHidingInPropLayer, struct FPoseLink* SwimmingSprintLayer_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingSprintLayer");
-
-	Params::SwimmingAnimLayerInterface_C_SwimmingSprintLayer Parms{};
-
-	Parms.PassThroughSwimmingSprint = std::move(PassThroughSwimmingSprint);
-	Parms.IsHidingInPropLayer = IsHidingInPropLayer;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (SwimmingSprintLayer_0 != nullptr)
-		*SwimmingSprintLayer_0 = std::move(Parms.SwimmingSprintLayer_0);
-}
-
-
-// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingUpperBodyPoseNonTargetingLayer
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FPoseLink&                 PassThroughSwimmingUpperBodyPoseNonTargeting           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink*                       SwimmingUpperBodyPoseNonTargetingLayer_0               (Parm, OutParm, NoDestructor)
-
-void ISwimmingAnimLayerInterface_C::SwimmingUpperBodyPoseNonTargetingLayer(const struct FPoseLink& PassThroughSwimmingUpperBodyPoseNonTargeting, struct FPoseLink* SwimmingUpperBodyPoseNonTargetingLayer_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingUpperBodyPoseNonTargetingLayer");
-
-	Params::SwimmingAnimLayerInterface_C_SwimmingUpperBodyPoseNonTargetingLayer Parms{};
-
-	Parms.PassThroughSwimmingUpperBodyPoseNonTargeting = std::move(PassThroughSwimmingUpperBodyPoseNonTargeting);
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (SwimmingUpperBodyPoseNonTargetingLayer_0 != nullptr)
-		*SwimmingUpperBodyPoseNonTargetingLayer_0 = std::move(Parms.SwimmingUpperBodyPoseNonTargetingLayer_0);
-}
-
-
-// Function SwimmingAnimLayerInterface.SwimmingAnimLayerInterface_C.SwimmingUpperBodyPoseTargetingLayer
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FPoseLink&                 PassThroughSwimmingUpperBodyPoseTargeting              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink*                       SwimmingUpperBodyPoseTargetingLayer_0                  (Parm, OutParm, NoDestructor)
-
-void ISwimmingAnimLayerInterface_C::SwimmingUpperBodyPoseTargetingLayer(const struct FPoseLink& PassThroughSwimmingUpperBodyPoseTargeting, struct FPoseLink* SwimmingUpperBodyPoseTargetingLayer_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SwimmingAnimLayerInterface_C", "SwimmingUpperBodyPoseTargetingLayer");
-
-	Params::SwimmingAnimLayerInterface_C_SwimmingUpperBodyPoseTargetingLayer Parms{};
-
-	Parms.PassThroughSwimmingUpperBodyPoseTargeting = std::move(PassThroughSwimmingUpperBodyPoseTargeting);
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (SwimmingUpperBodyPoseTargetingLayer_0 != nullptr)
-		*SwimmingUpperBodyPoseTargetingLayer_0 = std::move(Parms.SwimmingUpperBodyPoseTargetingLayer_0);
+	if (SwimmingDiveJumpingLayer_0 != nullptr)
+		*SwimmingDiveJumpingLayer_0 = std::move(Parms.SwimmingDiveJumpingLayer_0);
 }
 
 }

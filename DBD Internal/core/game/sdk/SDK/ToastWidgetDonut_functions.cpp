@@ -17,6 +17,74 @@
 namespace SDK
 {
 
+// Function ToastWidgetDonut.ToastWidgetDonut_C.SetupAnimBindings
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Unbind                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UToastWidgetDonut_C::SetupAnimBindings(bool Unbind)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ToastWidgetDonut_C", "SetupAnimBindings");
+
+	Params::ToastWidgetDonut_C_SetupAnimBindings Parms{};
+
+	Parms.Unbind = Unbind;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ToastWidgetDonut.ToastWidgetDonut_C.ApplyAdditionalStyling
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UToastWidgetDonut_C::ApplyAdditionalStyling()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ToastWidgetDonut_C", "ApplyAdditionalStyling");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ToastWidgetDonut.ToastWidgetDonut_C.SetImage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UToastWidgetDonut_C::SetImage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ToastWidgetDonut_C", "SetImage");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ToastWidgetDonut.ToastWidgetDonut_C.GetOpenButtonVisibility
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+ESlateVisibility UToastWidgetDonut_C::GetOpenButtonVisibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ToastWidgetDonut_C", "GetOpenButtonVisibility");
+
+	Params::ToastWidgetDonut_C_GetOpenButtonVisibility Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ToastWidgetDonut.ToastWidgetDonut_C.StartIntro
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -73,60 +141,6 @@ void UToastWidgetDonut_C::SetToast(class UFortUINotification* Toast)
 }
 
 
-// Function ToastWidgetDonut.ToastWidgetDonut_C.SetupAnimBindings
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Unbind                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UToastWidgetDonut_C::SetupAnimBindings(bool Unbind)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToastWidgetDonut_C", "SetupAnimBindings");
-
-	Params::ToastWidgetDonut_C_SetupAnimBindings Parms{};
-
-	Parms.Unbind = Unbind;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ToastWidgetDonut.ToastWidgetDonut_C.SetImage
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UToastWidgetDonut_C::SetImage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToastWidgetDonut_C", "SetImage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ToastWidgetDonut.ToastWidgetDonut_C.OnSetToast
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UFortUINotification*              ToastNotification_0                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UToastWidgetDonut_C::OnSetToast(class UFortUINotification* ToastNotification_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToastWidgetDonut_C", "OnSetToast");
-
-	Params::ToastWidgetDonut_C_OnSetToast Parms{};
-
-	Parms.ToastNotification_0 = ToastNotification_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ToastWidgetDonut.ToastWidgetDonut_C.PlayOutro
 // (BlueprintCallable, BlueprintEvent)
 
@@ -141,37 +155,23 @@ void UToastWidgetDonut_C::PlayOutro()
 }
 
 
-// Function ToastWidgetDonut.ToastWidgetDonut_C.OnPlayOpenAnimation
-// (Event, Protected, BlueprintEvent)
-
-void UToastWidgetDonut_C::OnPlayOpenAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToastWidgetDonut_C", "OnPlayOpenAnimation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ToastWidgetDonut.ToastWidgetDonut_C.GetOpenButtonVisibility
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function ToastWidgetDonut.ToastWidgetDonut_C.BndEvt__OpenButton_K2Node_ComponentBoundEvent_5_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-ESlateVisibility UToastWidgetDonut_C::GetOpenButtonVisibility()
+void UToastWidgetDonut_C::BndEvt__OpenButton_K2Node_ComponentBoundEvent_5_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ToastWidgetDonut_C", "GetOpenButtonVisibility");
+		Func = Class->GetFunction("ToastWidgetDonut_C", "BndEvt__OpenButton_K2Node_ComponentBoundEvent_5_CommonButtonClicked__DelegateSignature");
 
-	Params::ToastWidgetDonut_C_GetOpenButtonVisibility Parms{};
+	Params::ToastWidgetDonut_C_BndEvt__OpenButton_K2Node_ComponentBoundEvent_5_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
@@ -203,23 +203,17 @@ void UToastWidgetDonut_C::HandleIntroFinished()
 }
 
 
-// Function ToastWidgetDonut.ToastWidgetDonut_C.ExecuteUbergraph_ToastWidgetDonut
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ToastWidgetDonut.ToastWidgetDonut_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UToastWidgetDonut_C::ExecuteUbergraph_ToastWidgetDonut(int32 EntryPoint)
+void UToastWidgetDonut_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ToastWidgetDonut_C", "ExecuteUbergraph_ToastWidgetDonut");
+		Func = Class->GetFunction("ToastWidgetDonut_C", "Construct");
 
-	Params::ToastWidgetDonut_C_ExecuteUbergraph_ToastWidgetDonut Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -237,31 +231,57 @@ void UToastWidgetDonut_C::Destruct()
 }
 
 
-// Function ToastWidgetDonut.ToastWidgetDonut_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function ToastWidgetDonut.ToastWidgetDonut_C.OnSetToast
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UFortUINotification*              ToastNotification_0                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UToastWidgetDonut_C::Construct()
+void UToastWidgetDonut_C::OnSetToast(class UFortUINotification* ToastNotification_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ToastWidgetDonut_C", "Construct");
+		Func = Class->GetFunction("ToastWidgetDonut_C", "OnSetToast");
+
+	Params::ToastWidgetDonut_C_OnSetToast Parms{};
+
+	Parms.ToastNotification_0 = ToastNotification_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ToastWidgetDonut.ToastWidgetDonut_C.OnPlayOpenAnimation
+// (Event, Protected, BlueprintEvent)
+
+void UToastWidgetDonut_C::OnPlayOpenAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ToastWidgetDonut_C", "OnPlayOpenAnimation");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ToastWidgetDonut.ToastWidgetDonut_C.ApplyAdditionalStyling
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function ToastWidgetDonut.ToastWidgetDonut_C.ExecuteUbergraph_ToastWidgetDonut
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UToastWidgetDonut_C::ApplyAdditionalStyling()
+void UToastWidgetDonut_C::ExecuteUbergraph_ToastWidgetDonut(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ToastWidgetDonut_C", "ApplyAdditionalStyling");
+		Func = Class->GetFunction("ToastWidgetDonut_C", "ExecuteUbergraph_ToastWidgetDonut");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::ToastWidgetDonut_C_ExecuteUbergraph_ToastWidgetDonut Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

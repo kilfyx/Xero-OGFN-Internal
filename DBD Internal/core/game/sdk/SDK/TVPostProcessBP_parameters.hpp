@@ -19,7 +19,7 @@ namespace SDK::Params
 struct TVPostProcessBP_C_IsEnabledForCurrentSubgame final
 {
 public:
-	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(TVPostProcessBP_C_IsEnabledForCurrentSubgame) == 0x000001, "Wrong alignment on TVPostProcessBP_C_IsEnabledForCurrentSubgame");
 static_assert(sizeof(TVPostProcessBP_C_IsEnabledForCurrentSubgame) == 0x000001, "Wrong size on TVPostProcessBP_C_IsEnabledForCurrentSubgame");
@@ -31,7 +31,7 @@ struct TVPostProcessBP_C_ExecuteUbergraph_TVPostProcessBP final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEnabledForCurrentSubgame_bEnabled;      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEnabledForCurrentSubgame_bEnabled;      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(TVPostProcessBP_C_ExecuteUbergraph_TVPostProcessBP) == 0x000004, "Wrong alignment on TVPostProcessBP_C_ExecuteUbergraph_TVPostProcessBP");
 static_assert(sizeof(TVPostProcessBP_C_ExecuteUbergraph_TVPostProcessBP) == 0x000008, "Wrong size on TVPostProcessBP_C_ExecuteUbergraph_TVPostProcessBP");

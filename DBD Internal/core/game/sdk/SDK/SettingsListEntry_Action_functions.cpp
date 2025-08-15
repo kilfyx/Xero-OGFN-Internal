@@ -37,23 +37,23 @@ void USettingsListEntry_Action_C::ExecuteUbergraph_SettingsListEntry_Action(int3
 }
 
 
-// Function SettingsListEntry_Action.SettingsListEntry_Action_C.GetPrimaryGamepadFocusWidget
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function SettingsListEntry_Action.SettingsListEntry_Action_C.OnMouseLeave
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-class UWidget* USettingsListEntry_Action_C::GetPrimaryGamepadFocusWidget()
+void USettingsListEntry_Action_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsListEntry_Action_C", "GetPrimaryGamepadFocusWidget");
+		Func = Class->GetFunction("SettingsListEntry_Action_C", "OnMouseLeave");
 
-	Params::SettingsListEntry_Action_C_GetPrimaryGamepadFocusWidget Parms{};
+	Params::SettingsListEntry_Action_C_OnMouseLeave Parms{};
+
+	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
@@ -79,26 +79,6 @@ void USettingsListEntry_Action_C::OnMouseEnter(const struct FGeometry& MyGeometr
 }
 
 
-// Function SettingsListEntry_Action.SettingsListEntry_Action_C.OnMouseLeave
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void USettingsListEntry_Action_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SettingsListEntry_Action_C", "OnMouseLeave");
-
-	Params::SettingsListEntry_Action_C_OnMouseLeave Parms{};
-
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function SettingsListEntry_Action.SettingsListEntry_Action_C.OnSettingAssigned
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -116,6 +96,26 @@ void USettingsListEntry_Action_C::OnSettingAssigned(const class FText& ActionTex
 	Parms.ActionText = std::move(ActionText);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SettingsListEntry_Action.SettingsListEntry_Action_C.GetPrimaryGamepadFocusWidget
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* USettingsListEntry_Action_C::GetPrimaryGamepadFocusWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SettingsListEntry_Action_C", "GetPrimaryGamepadFocusWidget");
+
+	Params::SettingsListEntry_Action_C_GetPrimaryGamepadFocusWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

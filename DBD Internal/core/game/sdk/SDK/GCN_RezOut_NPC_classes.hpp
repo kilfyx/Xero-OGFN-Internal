@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_RezOut_NPC.GCN_RezOut_NPC_C
-// 0x0010 (0x0728 - 0x0718)
+// 0x0010 (0x0600 - 0x05F0)
 class AGCN_RezOut_NPC_C final : public AGCN_RezOut_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_RezOut_NPC_C;                   // 0x0718(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USoundBase*                             SoundOnNPCDeath;                                   // 0x0720(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_RezOut_NPC_C;                   // 0x05F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USoundBase*                             SoundOnNPCDeath;                                   // 0x05F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GCN_RezOut_NPC(int32 EntryPoint);
@@ -40,9 +40,9 @@ public:
 	}
 };
 static_assert(alignof(AGCN_RezOut_NPC_C) == 0x000008, "Wrong alignment on AGCN_RezOut_NPC_C");
-static_assert(sizeof(AGCN_RezOut_NPC_C) == 0x000728, "Wrong size on AGCN_RezOut_NPC_C");
-static_assert(offsetof(AGCN_RezOut_NPC_C, UberGraphFrame_GCN_RezOut_NPC_C) == 0x000718, "Member 'AGCN_RezOut_NPC_C::UberGraphFrame_GCN_RezOut_NPC_C' has a wrong offset!");
-static_assert(offsetof(AGCN_RezOut_NPC_C, SoundOnNPCDeath) == 0x000720, "Member 'AGCN_RezOut_NPC_C::SoundOnNPCDeath' has a wrong offset!");
+static_assert(sizeof(AGCN_RezOut_NPC_C) == 0x000600, "Wrong size on AGCN_RezOut_NPC_C");
+static_assert(offsetof(AGCN_RezOut_NPC_C, UberGraphFrame_GCN_RezOut_NPC_C) == 0x0005F0, "Member 'AGCN_RezOut_NPC_C::UberGraphFrame_GCN_RezOut_NPC_C' has a wrong offset!");
+static_assert(offsetof(AGCN_RezOut_NPC_C, SoundOnNPCDeath) == 0x0005F8, "Member 'AGCN_RezOut_NPC_C::SoundOnNPCDeath' has a wrong offset!");
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "TVPostProcessBP_classes.hpp"
+#include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
 
 
@@ -19,25 +19,25 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TVPostProcessBPAthena.TVPostProcessBPAthena_C
-// 0x0028 (0x02D0 - 0x02A8)
+// 0x0028 (0x0268 - 0x0240)
 class ATVPostProcessBPAthena_C final : public ATVPostProcessBP_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_TVPostProcessBPAthena_C;            // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UPostProcessComponent*                  FullScreenTVPP_OnlyMaterialModified;               // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         FrontEndCameraSwitchFadeAthena_SwipeLines_Animation_8828A7EA43DFA9153F986F805918F9F7; // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FrontEndCameraSwitchFadeAthena_PostProcessVisibility_8828A7EA43DFA9153F986F805918F9F7; // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            FrontEndCameraSwitchFadeAthena__Direction_8828A7EA43DFA9153F986F805918F9F7; // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     FrontEndCameraSwitchFadeAthena;                    // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_TVPostProcessBPAthena_C;            // 0x0240(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UPostProcessComponent*                  FullScreenTVPP_OnlyMaterialModified;               // 0x0248(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         FrontEndCameraSwitchFadeAthena_SwipeLines_Animation_8828A7EA43DFA9153F986F805918F9F7; // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FrontEndCameraSwitchFadeAthena_PostProcessVisibility_8828A7EA43DFA9153F986F805918F9F7; // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            FrontEndCameraSwitchFadeAthena__Direction_8828A7EA43DFA9153F986F805918F9F7; // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_259[0x7];                                      // 0x0259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     FrontEndCameraSwitchFadeAthena;                    // 0x0260(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void IsEnabledForCurrentSubgame(bool* bEnabled);
-	void FrontEndCameraSwitchFadeAthena__UpdateFunc();
 	void FrontEndCameraSwitchFadeAthena__FinishedFunc();
-	void ExecuteUbergraph_TVPostProcessBPAthena(int32 EntryPoint);
+	void FrontEndCameraSwitchFadeAthena__UpdateFunc();
 	void ExecuteCameraSwitch();
 	void Camera_DisableEffects();
+	void ExecuteUbergraph_TVPostProcessBPAthena(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -50,13 +50,13 @@ public:
 	}
 };
 static_assert(alignof(ATVPostProcessBPAthena_C) == 0x000008, "Wrong alignment on ATVPostProcessBPAthena_C");
-static_assert(sizeof(ATVPostProcessBPAthena_C) == 0x0002D0, "Wrong size on ATVPostProcessBPAthena_C");
-static_assert(offsetof(ATVPostProcessBPAthena_C, UberGraphFrame_TVPostProcessBPAthena_C) == 0x0002A8, "Member 'ATVPostProcessBPAthena_C::UberGraphFrame_TVPostProcessBPAthena_C' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBPAthena_C, FullScreenTVPP_OnlyMaterialModified) == 0x0002B0, "Member 'ATVPostProcessBPAthena_C::FullScreenTVPP_OnlyMaterialModified' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBPAthena_C, FrontEndCameraSwitchFadeAthena_SwipeLines_Animation_8828A7EA43DFA9153F986F805918F9F7) == 0x0002B8, "Member 'ATVPostProcessBPAthena_C::FrontEndCameraSwitchFadeAthena_SwipeLines_Animation_8828A7EA43DFA9153F986F805918F9F7' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBPAthena_C, FrontEndCameraSwitchFadeAthena_PostProcessVisibility_8828A7EA43DFA9153F986F805918F9F7) == 0x0002BC, "Member 'ATVPostProcessBPAthena_C::FrontEndCameraSwitchFadeAthena_PostProcessVisibility_8828A7EA43DFA9153F986F805918F9F7' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBPAthena_C, FrontEndCameraSwitchFadeAthena__Direction_8828A7EA43DFA9153F986F805918F9F7) == 0x0002C0, "Member 'ATVPostProcessBPAthena_C::FrontEndCameraSwitchFadeAthena__Direction_8828A7EA43DFA9153F986F805918F9F7' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBPAthena_C, FrontEndCameraSwitchFadeAthena) == 0x0002C8, "Member 'ATVPostProcessBPAthena_C::FrontEndCameraSwitchFadeAthena' has a wrong offset!");
+static_assert(sizeof(ATVPostProcessBPAthena_C) == 0x000268, "Wrong size on ATVPostProcessBPAthena_C");
+static_assert(offsetof(ATVPostProcessBPAthena_C, UberGraphFrame_TVPostProcessBPAthena_C) == 0x000240, "Member 'ATVPostProcessBPAthena_C::UberGraphFrame_TVPostProcessBPAthena_C' has a wrong offset!");
+static_assert(offsetof(ATVPostProcessBPAthena_C, FullScreenTVPP_OnlyMaterialModified) == 0x000248, "Member 'ATVPostProcessBPAthena_C::FullScreenTVPP_OnlyMaterialModified' has a wrong offset!");
+static_assert(offsetof(ATVPostProcessBPAthena_C, FrontEndCameraSwitchFadeAthena_SwipeLines_Animation_8828A7EA43DFA9153F986F805918F9F7) == 0x000250, "Member 'ATVPostProcessBPAthena_C::FrontEndCameraSwitchFadeAthena_SwipeLines_Animation_8828A7EA43DFA9153F986F805918F9F7' has a wrong offset!");
+static_assert(offsetof(ATVPostProcessBPAthena_C, FrontEndCameraSwitchFadeAthena_PostProcessVisibility_8828A7EA43DFA9153F986F805918F9F7) == 0x000254, "Member 'ATVPostProcessBPAthena_C::FrontEndCameraSwitchFadeAthena_PostProcessVisibility_8828A7EA43DFA9153F986F805918F9F7' has a wrong offset!");
+static_assert(offsetof(ATVPostProcessBPAthena_C, FrontEndCameraSwitchFadeAthena__Direction_8828A7EA43DFA9153F986F805918F9F7) == 0x000258, "Member 'ATVPostProcessBPAthena_C::FrontEndCameraSwitchFadeAthena__Direction_8828A7EA43DFA9153F986F805918F9F7' has a wrong offset!");
+static_assert(offsetof(ATVPostProcessBPAthena_C, FrontEndCameraSwitchFadeAthena) == 0x000260, "Member 'ATVPostProcessBPAthena_C::FrontEndCameraSwitchFadeAthena' has a wrong offset!");
 
 }
 

@@ -22,7 +22,7 @@ namespace SDK
 class UExternalAccountProvider final : public UObject
 {
 public:
-	TArray<struct FExternalAccountServiceConfig>  Services;                                          // 0x0028(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
+	TArray<struct FExternalAccountServiceConfig>  Services;                                          // 0x0028(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -34,6 +34,9 @@ public:
 		return GetDefaultObjImpl<UExternalAccountProvider>();
 	}
 };
+static_assert(alignof(UExternalAccountProvider) == 0x000008, "Wrong alignment on UExternalAccountProvider");
+static_assert(sizeof(UExternalAccountProvider) == 0x000038, "Wrong size on UExternalAccountProvider");
+static_assert(offsetof(UExternalAccountProvider, Services) == 0x000028, "Member 'UExternalAccountProvider::Services' has a wrong offset!");
 
 // Class Account.OnlineAccountCommon
 // 0x0728 (0x0750 - 0x0028)
@@ -48,7 +51,7 @@ public:
 	TMap<class FString, class FString>            EulaKeyMapping;                                    // 0x0060(0x0050)(Config, Protected, NativeAccessSpecifierProtected)
 	bool                                          bEnableWaitingRoom;                                // 0x00B0(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FWebEnvUrl>                     WebCreateEpicAccountUrl;                           // 0x00B8(0x0010)(ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FWebEnvUrl>                     WebCreateEpicAccountUrl;                           // 0x00B8(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bAllowLocalLogout;                                 // 0x00C8(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bAllowLocalLogoutKairos;                           // 0x00C9(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_CA[0x36];                                      // 0x00CA(0x0036)(Fixing Size After Last Property [ Dumper-7 ])
@@ -79,6 +82,27 @@ public:
 		return GetDefaultObjImpl<UOnlineAccountCommon>();
 	}
 };
+static_assert(alignof(UOnlineAccountCommon) == 0x000008, "Wrong alignment on UOnlineAccountCommon");
+static_assert(sizeof(UOnlineAccountCommon) == 0x000750, "Wrong size on UOnlineAccountCommon");
+static_assert(offsetof(UOnlineAccountCommon, AvailabilityServiceGameName) == 0x000038, "Member 'UOnlineAccountCommon::AvailabilityServiceGameName' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, bRequireLightswitchAtStartup) == 0x000048, "Member 'UOnlineAccountCommon::bRequireLightswitchAtStartup' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, EulaKey) == 0x000050, "Member 'UOnlineAccountCommon::EulaKey' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, EulaKeyMapping) == 0x000060, "Member 'UOnlineAccountCommon::EulaKeyMapping' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, bEnableWaitingRoom) == 0x0000B0, "Member 'UOnlineAccountCommon::bEnableWaitingRoom' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, WebCreateEpicAccountUrl) == 0x0000B8, "Member 'UOnlineAccountCommon::WebCreateEpicAccountUrl' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, bAllowLocalLogout) == 0x0000C8, "Member 'UOnlineAccountCommon::bAllowLocalLogout' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, bAllowLocalLogoutKairos) == 0x0000C9, "Member 'UOnlineAccountCommon::bAllowLocalLogoutKairos' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, RedeemAccessUrl) == 0x000100, "Member 'UOnlineAccountCommon::RedeemAccessUrl' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, RequestFreeAccessUrl) == 0x000110, "Member 'UOnlineAccountCommon::RequestFreeAccessUrl' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, RealGameAccessUrl) == 0x000120, "Member 'UOnlineAccountCommon::RealGameAccessUrl' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, SkipRedeemOfflinePurchasesChance) == 0x000130, "Member 'UOnlineAccountCommon::SkipRedeemOfflinePurchasesChance' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, bUseFreeAccessInsteadOfGameAccess) == 0x000134, "Member 'UOnlineAccountCommon::bUseFreeAccessInsteadOfGameAccess' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, bShouldGrantFreeAccess) == 0x000135, "Member 'UOnlineAccountCommon::bShouldGrantFreeAccess' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, bAllowHomeSharingAccess) == 0x000137, "Member 'UOnlineAccountCommon::bAllowHomeSharingAccess' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, bRequireUGCPrivilege) == 0x000138, "Member 'UOnlineAccountCommon::bRequireUGCPrivilege' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, AccessGrantDelaySeconds) == 0x0003D8, "Member 'UOnlineAccountCommon::AccessGrantDelaySeconds' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, WaitingRoomState) == 0x0003E0, "Member 'UOnlineAccountCommon::WaitingRoomState' has a wrong offset!");
+static_assert(offsetof(UOnlineAccountCommon, bAutoCreateHeadlessAccount) == 0x000718, "Member 'UOnlineAccountCommon::bAutoCreateHeadlessAccount' has a wrong offset!");
 
 // Class Account.WaitingRoomState
 // 0x0060 (0x0088 - 0x0028)
@@ -99,6 +123,9 @@ public:
 		return GetDefaultObjImpl<UWaitingRoomState>();
 	}
 };
+static_assert(alignof(UWaitingRoomState) == 0x000008, "Wrong alignment on UWaitingRoomState");
+static_assert(sizeof(UWaitingRoomState) == 0x000088, "Wrong size on UWaitingRoomState");
+static_assert(offsetof(UWaitingRoomState, GracePeriodMins) == 0x00005C, "Member 'UWaitingRoomState::GracePeriodMins' has a wrong offset!");
 
 }
 

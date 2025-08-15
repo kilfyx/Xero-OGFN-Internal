@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.VisualUpdateEverySecond
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.ExecuteUbergraph_BP_Generic_TimerManager_Lobby
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Generic_TimerManager_Lobby_C::VisualUpdateEverySecond()
+void ABP_Generic_TimerManager_Lobby_C::ExecuteUbergraph_BP_Generic_TimerManager_Lobby(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("VisualUpdateEverySecond");
 
-	UObject::ProcessEvent(Func, nullptr);
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Generic_TimerManager_Lobby_C", "ExecuteUbergraph_BP_Generic_TimerManager_Lobby");
+
+	Params::BP_Generic_TimerManager_Lobby_C_ExecuteUbergraph_BP_Generic_TimerManager_Lobby Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -37,28 +43,124 @@ void ABP_Generic_TimerManager_Lobby_C::VisualUpdateEverySecond()
 void ABP_Generic_TimerManager_Lobby_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_Generic_TimerManager_Lobby_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.CountDownTimer_AccuracyFix
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Generic_TimerManager_Lobby_C::CountDownTimer_AccuracyFix()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Generic_TimerManager_Lobby_C", "CountDownTimer_AccuracyFix");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.ClearTimerVisuals
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Generic_TimerManager_Lobby_C::ClearTimerVisuals()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Generic_TimerManager_Lobby_C", "ClearTimerVisuals");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.ContinueClockCountdown
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Generic_TimerManager_Lobby_C::ContinueClockCountdown()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Generic_TimerManager_Lobby_C", "ContinueClockCountdown");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.VisualUpdateEverySecond
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Generic_TimerManager_Lobby_C::VisualUpdateEverySecond()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Generic_TimerManager_Lobby_C", "VisualUpdateEverySecond");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.CountdownTimer_New
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Generic_TimerManager_Lobby_C::CountdownTimer_New()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Generic_TimerManager_Lobby_C", "CountdownTimer_New");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.OnEventActive_2CA6194447CC90E72CA40FB1A2CD843E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FTimespan&                 TimeUntilEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FTimespan&                 TimeSinceBegin                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   TimespanRatio_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Generic_TimerManager_Lobby_C::OnEventActive_2CA6194447CC90E72CA40FB1A2CD843E(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Generic_TimerManager_Lobby_C", "OnEventActive_2CA6194447CC90E72CA40FB1A2CD843E");
+
+	Params::BP_Generic_TimerManager_Lobby_C_OnEventActive_2CA6194447CC90E72CA40FB1A2CD843E Parms{};
+
+	Parms.EventName = std::move(EventName);
+	Parms.TimeUntilEnd = std::move(TimeUntilEnd);
+	Parms.TimeSinceBegin = std::move(TimeSinceBegin);
+	Parms.TimespanRatio_0 = TimespanRatio_0;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.OnEventUpdated_2CA6194447CC90E72CA40FB1A2CD843E
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// struct FTimespan                        TimeUntilEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FTimespan                        TimeSinceBegin                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FTimespan&                 TimeUntilEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FTimespan&                 TimeSinceBegin                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // float                                   TimespanRatio_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_Generic_TimerManager_Lobby_C::OnEventUpdated_2CA6194447CC90E72CA40FB1A2CD843E(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio_0)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnEventUpdated_2CA6194447CC90E72CA40FB1A2CD843E");
+		Func = Class->GetFunction("BP_Generic_TimerManager_Lobby_C", "OnEventUpdated_2CA6194447CC90E72CA40FB1A2CD843E");
 
 	Params::BP_Generic_TimerManager_Lobby_C_OnEventUpdated_2CA6194447CC90E72CA40FB1A2CD843E Parms{};
 
@@ -74,17 +176,17 @@ void ABP_Generic_TimerManager_Lobby_C::OnEventUpdated_2CA6194447CC90E72CA40FB1A2
 // Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.OnEventEnded_2CA6194447CC90E72CA40FB1A2CD843E
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// struct FTimespan                        TimeUntilEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FTimespan                        TimeSinceBegin                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FTimespan&                 TimeUntilEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FTimespan&                 TimeSinceBegin                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // float                                   TimespanRatio_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_Generic_TimerManager_Lobby_C::OnEventEnded_2CA6194447CC90E72CA40FB1A2CD843E(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio_0)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnEventEnded_2CA6194447CC90E72CA40FB1A2CD843E");
+		Func = Class->GetFunction("BP_Generic_TimerManager_Lobby_C", "OnEventEnded_2CA6194447CC90E72CA40FB1A2CD843E");
 
 	Params::BP_Generic_TimerManager_Lobby_C_OnEventEnded_2CA6194447CC90E72CA40FB1A2CD843E Parms{};
 
@@ -94,108 +196,6 @@ void ABP_Generic_TimerManager_Lobby_C::OnEventEnded_2CA6194447CC90E72CA40FB1A2CD
 	Parms.TimespanRatio_0 = TimespanRatio_0;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.OnEventActive_2CA6194447CC90E72CA40FB1A2CD843E
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// struct FTimespan                        TimeUntilEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FTimespan                        TimeSinceBegin                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   TimespanRatio_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Generic_TimerManager_Lobby_C::OnEventActive_2CA6194447CC90E72CA40FB1A2CD843E(const class FString& EventName, const struct FTimespan& TimeUntilEnd, const struct FTimespan& TimeSinceBegin, float TimespanRatio_0)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnEventActive_2CA6194447CC90E72CA40FB1A2CD843E");
-
-	Params::BP_Generic_TimerManager_Lobby_C_OnEventActive_2CA6194447CC90E72CA40FB1A2CD843E Parms{};
-
-	Parms.EventName = std::move(EventName);
-	Parms.TimeUntilEnd = std::move(TimeUntilEnd);
-	Parms.TimeSinceBegin = std::move(TimeSinceBegin);
-	Parms.TimespanRatio_0 = TimespanRatio_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.ExecuteUbergraph_BP_Generic_TimerManager_Lobby
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Generic_TimerManager_Lobby_C::ExecuteUbergraph_BP_Generic_TimerManager_Lobby(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_BP_Generic_TimerManager_Lobby");
-
-	Params::BP_Generic_TimerManager_Lobby_C_ExecuteUbergraph_BP_Generic_TimerManager_Lobby Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.CountdownTimer_New
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Generic_TimerManager_Lobby_C::CountdownTimer_New()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("CountdownTimer_New");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.CountDownTimer_AccuracyFix
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Generic_TimerManager_Lobby_C::CountDownTimer_AccuracyFix()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("CountDownTimer_AccuracyFix");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.ContinueClockCountdown
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Generic_TimerManager_Lobby_C::ContinueClockCountdown()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ContinueClockCountdown");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Generic_TimerManager_Lobby.BP_Generic_TimerManager_Lobby_C.ClearTimerVisuals
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Generic_TimerManager_Lobby_C::ClearTimerVisuals()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("ClearTimerVisuals");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

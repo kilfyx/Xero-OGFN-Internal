@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function SocialConfirmationButton.SocialConfirmationButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void USocialConfirmationButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialConfirmationButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialConfirmationButton.SocialConfirmationButton_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void USocialConfirmationButton_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialConfirmationButton_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function SocialConfirmationButton.SocialConfirmationButton_C.ExecuteUbergraph_SocialConfirmationButton
 // (Final, UbergraphFunction)
 // Parameters:
@@ -68,7 +40,7 @@ void USocialConfirmationButton_C::ExecuteUbergraph_SocialConfirmationButton(int3
 // Function SocialConfirmationButton.SocialConfirmationButton_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void USocialConfirmationButton_C::PreConstruct(bool IsDesignTime)
 {
@@ -82,6 +54,34 @@ void USocialConfirmationButton_C::PreConstruct(bool IsDesignTime)
 	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SocialConfirmationButton.SocialConfirmationButton_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void USocialConfirmationButton_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialConfirmationButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialConfirmationButton.SocialConfirmationButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void USocialConfirmationButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialConfirmationButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

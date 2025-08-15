@@ -16,21 +16,32 @@
 namespace SDK::Params
 {
 
+// Function TournamentLiveGamesEntry.TournamentLiveGamesEntry_C.OnEntrySet
+// 0x0004 (0x0004 - 0x0000)
+struct TournamentLiveGamesEntry_C_OnEntrySet final
+{
+public:
+	int32                                         EntryIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(TournamentLiveGamesEntry_C_OnEntrySet) == 0x000004, "Wrong alignment on TournamentLiveGamesEntry_C_OnEntrySet");
+static_assert(sizeof(TournamentLiveGamesEntry_C_OnEntrySet) == 0x000004, "Wrong size on TournamentLiveGamesEntry_C_OnEntrySet");
+static_assert(offsetof(TournamentLiveGamesEntry_C_OnEntrySet, EntryIndex) == 0x000000, "Member 'TournamentLiveGamesEntry_C_OnEntrySet::EntryIndex' has a wrong offset!");
+
 // Function TournamentLiveGamesEntry.TournamentLiveGamesEntry_C.ExecuteUbergraph_TournamentLiveGamesEntry
 // 0x0058 (0x0058 - 0x0000)
 struct TournamentLiveGamesEntry_C_ExecuteUbergraph_TournamentLiveGamesEntry final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           Temp_struct_Variable;                              // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_EntryIndex;                           // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x0044(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -46,17 +57,6 @@ static_assert(offsetof(TournamentLiveGamesEntry_C_ExecuteUbergraph_TournamentLiv
 static_assert(offsetof(TournamentLiveGamesEntry_C_ExecuteUbergraph_TournamentLiveGamesEntry, CallFunc_Percent_IntInt_ReturnValue) == 0x00003C, "Member 'TournamentLiveGamesEntry_C_ExecuteUbergraph_TournamentLiveGamesEntry::CallFunc_Percent_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(TournamentLiveGamesEntry_C_ExecuteUbergraph_TournamentLiveGamesEntry, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000040, "Member 'TournamentLiveGamesEntry_C_ExecuteUbergraph_TournamentLiveGamesEntry::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(TournamentLiveGamesEntry_C_ExecuteUbergraph_TournamentLiveGamesEntry, K2Node_Select_Default) == 0x000044, "Member 'TournamentLiveGamesEntry_C_ExecuteUbergraph_TournamentLiveGamesEntry::K2Node_Select_Default' has a wrong offset!");
-
-// Function TournamentLiveGamesEntry.TournamentLiveGamesEntry_C.OnEntrySet
-// 0x0004 (0x0004 - 0x0000)
-struct TournamentLiveGamesEntry_C_OnEntrySet final
-{
-public:
-	int32                                         EntryIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(TournamentLiveGamesEntry_C_OnEntrySet) == 0x000004, "Wrong alignment on TournamentLiveGamesEntry_C_OnEntrySet");
-static_assert(sizeof(TournamentLiveGamesEntry_C_OnEntrySet) == 0x000004, "Wrong size on TournamentLiveGamesEntry_C_OnEntrySet");
-static_assert(offsetof(TournamentLiveGamesEntry_C_OnEntrySet, EntryIndex) == 0x000000, "Member 'TournamentLiveGamesEntry_C_OnEntrySet::EntryIndex' has a wrong offset!");
 
 }
 

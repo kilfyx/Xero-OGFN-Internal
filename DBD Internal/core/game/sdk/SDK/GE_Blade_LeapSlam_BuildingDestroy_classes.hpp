@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGE_Blade_LeapSlam_BuildingDestroy_C>();
 	}
 };
+static_assert(alignof(UGE_Blade_LeapSlam_BuildingDestroy_C) == 0x000008, "Wrong alignment on UGE_Blade_LeapSlam_BuildingDestroy_C");
+static_assert(sizeof(UGE_Blade_LeapSlam_BuildingDestroy_C) == 0x000800, "Wrong size on UGE_Blade_LeapSlam_BuildingDestroy_C");
 
 }
 

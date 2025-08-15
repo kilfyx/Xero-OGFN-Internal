@@ -17,113 +17,6 @@
 namespace SDK
 {
 
-// Function FancyToastWidget.FancyToastWidget_C.Clicked
-// (BlueprintCallable, BlueprintEvent)
-
-void UFancyToastWidget_C::Clicked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FancyToastWidget_C", "Clicked");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FancyToastWidget.FancyToastWidget_C.CompleteToast
-// (BlueprintCallable, BlueprintEvent)
-
-void UFancyToastWidget_C::CompleteToast()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FancyToastWidget_C", "CompleteToast");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FancyToastWidget.FancyToastWidget_C.ExecuteUbergraph_FancyToastWidget
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UFancyToastWidget_C::ExecuteUbergraph_FancyToastWidget(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FancyToastWidget_C", "ExecuteUbergraph_FancyToastWidget");
-
-	Params::FancyToastWidget_C_ExecuteUbergraph_FancyToastWidget Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FancyToastWidget.FancyToastWidget_C.On Idle Finished
-// (BlueprintCallable, BlueprintEvent)
-
-void UFancyToastWidget_C::On_Idle_Finished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FancyToastWidget_C", "On Idle Finished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FancyToastWidget.FancyToastWidget_C.OnLoaded_9A8F5ACC4328AC430C10CEB22D17B3C8
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UFancyToastWidget_C::OnLoaded_9A8F5ACC4328AC430C10CEB22D17B3C8(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FancyToastWidget_C", "OnLoaded_9A8F5ACC4328AC430C10CEB22D17B3C8");
-
-	Params::FancyToastWidget_C_OnLoaded_9A8F5ACC4328AC430C10CEB22D17B3C8 Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FancyToastWidget.FancyToastWidget_C.OnMouseButtonDown
-// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-struct FEventReply UFancyToastWidget_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FancyToastWidget_C", "OnMouseButtonDown");
-
-	Params::FancyToastWidget_C_OnMouseButtonDown Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function FancyToastWidget.FancyToastWidget_C.OnMouseButtonUp
 // (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -149,37 +42,28 @@ struct FEventReply UFancyToastWidget_C::OnMouseButtonUp(const struct FGeometry& 
 }
 
 
-// Function FancyToastWidget.FancyToastWidget_C.OnShowToast
-// (BlueprintCallable, BlueprintEvent)
+// Function FancyToastWidget.FancyToastWidget_C.OnMouseButtonDown
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FFortToastDisplayInfo&     DispalyInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void UFancyToastWidget_C::OnShowToast(const struct FFortToastDisplayInfo& DispalyInfo)
+struct FEventReply UFancyToastWidget_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FancyToastWidget_C", "OnShowToast");
+		Func = Class->GetFunction("FancyToastWidget_C", "OnMouseButtonDown");
 
-	Params::FancyToastWidget_C_OnShowToast Parms{};
+	Params::FancyToastWidget_C_OnMouseButtonDown Parms{};
 
-	Parms.DispalyInfo = std::move(DispalyInfo);
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function FancyToastWidget.FancyToastWidget_C.RemoveWidget
-// (BlueprintCallable, BlueprintEvent)
-
-void UFancyToastWidget_C::RemoveWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FancyToastWidget_C", "RemoveWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
+	return Parms.ReturnValue;
 }
 
 
@@ -225,6 +109,74 @@ void UFancyToastWidget_C::ShowToast(const struct FFortToastDisplayInfo& DisplayI
 }
 
 
+// Function FancyToastWidget.FancyToastWidget_C.OnLoaded_9A8F5ACC4328AC430C10CEB22D17B3C8
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UFancyToastWidget_C::OnLoaded_9A8F5ACC4328AC430C10CEB22D17B3C8(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FancyToastWidget_C", "OnLoaded_9A8F5ACC4328AC430C10CEB22D17B3C8");
+
+	Params::FancyToastWidget_C_OnLoaded_9A8F5ACC4328AC430C10CEB22D17B3C8 Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FancyToastWidget.FancyToastWidget_C.OnShowToast
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FFortToastDisplayInfo&     DispalyInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UFancyToastWidget_C::OnShowToast(const struct FFortToastDisplayInfo& DispalyInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FancyToastWidget_C", "OnShowToast");
+
+	Params::FancyToastWidget_C_OnShowToast Parms{};
+
+	Parms.DispalyInfo = std::move(DispalyInfo);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FancyToastWidget.FancyToastWidget_C.Start Toast Animation
+// (BlueprintCallable, BlueprintEvent)
+
+void UFancyToastWidget_C::Start_Toast_Animation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FancyToastWidget_C", "Start Toast Animation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FancyToastWidget.FancyToastWidget_C.On Idle Finished
+// (BlueprintCallable, BlueprintEvent)
+
+void UFancyToastWidget_C::On_Idle_Finished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FancyToastWidget_C", "On Idle Finished");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function FancyToastWidget.FancyToastWidget_C.SimulateAthenaStoreToast
 // (BlueprintCallable, BlueprintEvent)
 
@@ -239,15 +191,43 @@ void UFancyToastWidget_C::SimulateAthenaStoreToast()
 }
 
 
-// Function FancyToastWidget.FancyToastWidget_C.Start Toast Animation
+// Function FancyToastWidget.FancyToastWidget_C.Clicked
 // (BlueprintCallable, BlueprintEvent)
 
-void UFancyToastWidget_C::Start_Toast_Animation()
+void UFancyToastWidget_C::Clicked()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FancyToastWidget_C", "Start Toast Animation");
+		Func = Class->GetFunction("FancyToastWidget_C", "Clicked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FancyToastWidget.FancyToastWidget_C.CompleteToast
+// (BlueprintCallable, BlueprintEvent)
+
+void UFancyToastWidget_C::CompleteToast()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FancyToastWidget_C", "CompleteToast");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FancyToastWidget.FancyToastWidget_C.RemoveWidget
+// (BlueprintCallable, BlueprintEvent)
+
+void UFancyToastWidget_C::RemoveWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FancyToastWidget_C", "RemoveWidget");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -292,6 +272,26 @@ void UFancyToastWidget_C::WidgetAnimationEvt_Outro_K2Node_WidgetAnimationEvent_2
 		Func = Class->GetFunction("FancyToastWidget_C", "WidgetAnimationEvt_Outro_K2Node_WidgetAnimationEvent_2");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FancyToastWidget.FancyToastWidget_C.ExecuteUbergraph_FancyToastWidget
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UFancyToastWidget_C::ExecuteUbergraph_FancyToastWidget(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FancyToastWidget_C", "ExecuteUbergraph_FancyToastWidget");
+
+	Params::FancyToastWidget_C_ExecuteUbergraph_FancyToastWidget Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

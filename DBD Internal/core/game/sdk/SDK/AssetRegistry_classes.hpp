@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // Class AssetRegistry.AssetRegistryImpl
-// 0x08C8 (0x08F0 - 0x0028)
+// 0x0828 (0x0850 - 0x0028)
 class UAssetRegistryImpl final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x8C8];                                     // 0x0028(0x08C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x828];                                     // 0x0028(0x0828)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -33,6 +33,8 @@ public:
 		return GetDefaultObjImpl<UAssetRegistryImpl>();
 	}
 };
+static_assert(alignof(UAssetRegistryImpl) == 0x000008, "Wrong alignment on UAssetRegistryImpl");
+static_assert(sizeof(UAssetRegistryImpl) == 0x000850, "Wrong size on UAssetRegistryImpl");
 
 // Class AssetRegistry.AssetRegistryHelpers
 // 0x0000 (0x0028 - 0x0028)
@@ -63,6 +65,8 @@ public:
 		return GetDefaultObjImpl<UAssetRegistryHelpers>();
 	}
 };
+static_assert(alignof(UAssetRegistryHelpers) == 0x000008, "Wrong alignment on UAssetRegistryHelpers");
+static_assert(sizeof(UAssetRegistryHelpers) == 0x000028, "Wrong size on UAssetRegistryHelpers");
 
 // Class AssetRegistry.AssetRegistry
 // 0x0000 (0x0000 - 0x0000)
@@ -72,10 +76,9 @@ public:
 	void PrioritizeSearchPath(const class FString& PathToPrioritize);
 	void ScanFilesSynchronous(const TArray<class FString>& InFilePaths, bool bForceRescan);
 	void ScanModifiedAssetFiles(const TArray<class FString>& InFilePaths);
-	void ScanPathsSynchronous(const TArray<class FString>& InPaths, bool bForceRescan, bool bIgnoreDenyListScanFilters);
+	void ScanPathsSynchronous(const TArray<class FString>& InPaths, bool bForceRescan);
 	void SearchAllAssets(bool bSynchronousSearch);
 	void WaitForCompletion();
-	void WaitForPackage(const class FString& PackageName);
 
 	bool GetAllAssets(TArray<struct FAssetData>* OutAssetData, bool bIncludeOnlyOnDiskAssets) const;
 	void GetAllCachedPaths(TArray<class FString>* OutPathList) const;
@@ -84,12 +87,9 @@ public:
 	bool GetAssetsByClass(class FName ClassName, TArray<struct FAssetData>* OutAssetData, bool bSearchSubClasses) const;
 	bool GetAssetsByPackageName(class FName PackageName, TArray<struct FAssetData>* OutAssetData, bool bIncludeOnlyOnDiskAssets) const;
 	bool GetAssetsByPath(class FName PackagePath, TArray<struct FAssetData>* OutAssetData, bool bRecursive, bool bIncludeOnlyOnDiskAssets) const;
-	bool GetAssetsByPaths(const TArray<class FName>& PackagePaths, TArray<struct FAssetData>* OutAssetData, bool bRecursive, bool bIncludeOnlyOnDiskAssets) const;
 	void GetSubPaths(const class FString& InBasePath, TArray<class FString>* OutPathList, bool bInRecurse) const;
 	bool HasAssets(const class FName PackagePath, const bool bRecursive) const;
 	bool IsLoadingAssets() const;
-	bool IsSearchAllAssets() const;
-	bool IsSearchAsync() const;
 	bool K2_GetDependencies(class FName PackageName, const struct FAssetRegistryDependencyOptions& DependencyOptions, TArray<class FName>* OutDependencies) const;
 	bool K2_GetReferencers(class FName PackageName, const struct FAssetRegistryDependencyOptions& ReferenceOptions, TArray<class FName>* OutReferencers) const;
 	void RunAssetsThroughFilter(TArray<struct FAssetData>& AssetDataList, const struct FARFilter& Filter) const;
@@ -114,6 +114,8 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+static_assert(alignof(IAssetRegistry) == 0x000001, "Wrong alignment on IAssetRegistry");
+static_assert(sizeof(IAssetRegistry) == 0x000001, "Wrong size on IAssetRegistry");
 
 }
 

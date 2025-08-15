@@ -37,6 +37,11 @@ public:
 		return GetDefaultObjImpl<URejoinCheck>();
 	}
 };
+static_assert(alignof(URejoinCheck) == 0x000008, "Wrong alignment on URejoinCheck");
+static_assert(sizeof(URejoinCheck) == 0x000170, "Wrong size on URejoinCheck");
+static_assert(offsetof(URejoinCheck, LastKnownStatus) == 0x000028, "Member 'URejoinCheck::LastKnownStatus' has a wrong offset!");
+static_assert(offsetof(URejoinCheck, bRejoinAfterCheck) == 0x000029, "Member 'URejoinCheck::bRejoinAfterCheck' has a wrong offset!");
+static_assert(offsetof(URejoinCheck, bAttemptingRejoin) == 0x00002A, "Member 'URejoinCheck::bAttemptingRejoin' has a wrong offset!");
 
 }
 

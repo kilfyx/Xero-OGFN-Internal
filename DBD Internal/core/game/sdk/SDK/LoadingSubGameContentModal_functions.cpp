@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function LoadingSubGameContentModal.LoadingSubGameContentModal_C.SetCancelButtonText
-// (Event, Public, HasOutParams, BlueprintEvent)
+// Function LoadingSubGameContentModal.LoadingSubGameContentModal_C.OnUpdatedProgress
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// class FText                             InText                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// float                                   Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULoadingSubGameContentModal_C::SetCancelButtonText(const class FText& InText)
+void ULoadingSubGameContentModal_C::OnUpdatedProgress(float Percent)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("SetCancelButtonText");
+		Func = Class->GetFunction("LoadingSubGameContentModal_C", "OnUpdatedProgress");
 
-	Params::LoadingSubGameContentModal_C_SetCancelButtonText Parms{};
+	Params::LoadingSubGameContentModal_C_OnUpdatedProgress Parms{};
 
-	Parms.InText = std::move(InText);
+	Parms.Percent = Percent;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -43,29 +43,63 @@ void ULoadingSubGameContentModal_C::SetCancelButtonText(const class FText& InTex
 void ULoadingSubGameContentModal_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnInitialized");
+		Func = Class->GetFunction("LoadingSubGameContentModal_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function LoadingSubGameContentModal.LoadingSubGameContentModal_C.OnUpdatedProgress
-// (Event, Protected, BlueprintEvent)
+// Function LoadingSubGameContentModal.LoadingSubGameContentModal_C.SetCancelButtonText
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// float                                   Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      InText                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ULoadingSubGameContentModal_C::OnUpdatedProgress(float Percent)
+void ULoadingSubGameContentModal_C::SetCancelButtonText(const class FText& InText)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("OnUpdatedProgress");
+		Func = Class->GetFunction("LoadingSubGameContentModal_C", "SetCancelButtonText");
 
-	Params::LoadingSubGameContentModal_C_OnUpdatedProgress Parms{};
+	Params::LoadingSubGameContentModal_C_SetCancelButtonText Parms{};
 
-	Parms.Percent = Percent;
+	Parms.InText = std::move(InText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LoadingSubGameContentModal.LoadingSubGameContentModal_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void ULoadingSubGameContentModal_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LoadingSubGameContentModal_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LoadingSubGameContentModal.LoadingSubGameContentModal_C.OnAnimationFinished
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
+// Parameters:
+// const class UWidgetAnimation*           Animation                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULoadingSubGameContentModal_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LoadingSubGameContentModal_C", "OnAnimationFinished");
+
+	Params::LoadingSubGameContentModal_C_OnAnimationFinished Parms{};
+
+	Parms.Animation = Animation;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -79,49 +113,15 @@ void ULoadingSubGameContentModal_C::OnUpdatedProgress(float Percent)
 void ULoadingSubGameContentModal_C::ExecuteUbergraph_LoadingSubGameContentModal(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
-	
+
 	if (Func == nullptr)
-		Func = Class->FindFunction("ExecuteUbergraph_LoadingSubGameContentModal");
+		Func = Class->GetFunction("LoadingSubGameContentModal_C", "ExecuteUbergraph_LoadingSubGameContentModal");
 
 	Params::LoadingSubGameContentModal_C_ExecuteUbergraph_LoadingSubGameContentModal Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LoadingSubGameContentModal.LoadingSubGameContentModal_C.OnAnimationFinished
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
-// Parameters:
-// class UWidgetAnimation*                 Animation                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ULoadingSubGameContentModal_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("OnAnimationFinished");
-
-	Params::LoadingSubGameContentModal_C_OnAnimationFinished Parms{};
-
-	Parms.Animation = Animation;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LoadingSubGameContentModal.LoadingSubGameContentModal_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void ULoadingSubGameContentModal_C::BP_OnActivated()
-{
-	static class UFunction* Func = nullptr;
-	
-	if (Func == nullptr)
-		Func = Class->FindFunction("BP_OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

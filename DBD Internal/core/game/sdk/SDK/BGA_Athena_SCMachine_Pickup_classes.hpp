@@ -10,74 +10,69 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C
-// 0x0150 (0x0AD0 - 0x0980)
+// 0x0128 (0x09B0 - 0x0888)
 class ABGA_Athena_SCMachine_Pickup_C final : public ABuildingGameplayActorSpawnChip
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0980(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        SC_Machine_Memory_Card_Loop_Cue;                   // 0x0988(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               SpawnInEffect;                                     // 0x0990(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                      Collision;                                         // 0x0998(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   BackgroundGlow;                                    // 0x09A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Card;                                              // 0x09A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	int32                                         UnHide;                                            // 0x09B0(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	float                                         DelayBeforeUnhide;                                 // 0x09B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         OwnerTeam;                                         // 0x09B8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_9B9[0x7];                                      // 0x09B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         FoundBuildingOnDied;                               // 0x09C0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	struct FVector                                Impact_Loc;                                        // 0x09D0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                HitNormal;                                         // 0x09DC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MaxSlope;                                          // 0x09E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9EC[0x4];                                      // 0x09EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           Timer_DestroyPickup;                               // 0x09F0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         Row_PickupLife;                                    // 0x09F8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   InteractText;                                      // 0x0A20(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UParticleSystem*                        SpawnOutParticle;                                  // 0x0A38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             PickupSound;                                       // 0x0A40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               SpawnFX;                                           // 0x0A48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SpawnSoundPlayed;                                  // 0x0A50(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A51[0x7];                                      // 0x0A51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             SpawnInSound;                                      // 0x0A58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPendingKill;                                     // 0x0A60(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A61[0x3];                                      // 0x0A61(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                StopLocation;                                      // 0x0A64(0x000C)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HideAndKill;                                       // 0x0A70(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A71[0x7];                                      // 0x0A71(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         Row_PickUpInteractTime;                            // 0x0A78(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          IsDelayingDeath;                                   // 0x0AA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OwnerDiedInVortex;                                 // 0x0AA1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AA2[0x6];                                      // 0x0AA2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         Auto_Collect_Active_Row;                           // 0x0AA8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0888(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        SC_Machine_Memory_Card_Loop_Cue;                   // 0x0890(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               SpawnInEffect;                                     // 0x0898(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      Collision;                                         // 0x08A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   BackgroundGlow;                                    // 0x08A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Card;                                              // 0x08B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         UnHide;                                            // 0x08B8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	float                                         DelayBeforeUnhide;                                 // 0x08BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         OwnerTeam;                                         // 0x08C0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_8C1[0x7];                                      // 0x08C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         FoundBuildingOnDied;                               // 0x08C8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FVector                                Impact_Loc;                                        // 0x08D8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                HitNormal;                                         // 0x08E4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MaxSlope;                                          // 0x08F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8F4[0x4];                                      // 0x08F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           Timer_DestroyPickup;                               // 0x08F8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         Row_PickupLife;                                    // 0x0900(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   InteractText;                                      // 0x0928(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UParticleSystem*                        SpawnOutParticle;                                  // 0x0940(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             PickupSound;                                       // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               SpawnFX;                                           // 0x0950(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpawnSoundPlayed;                                  // 0x0958(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_959[0x7];                                      // 0x0959(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             SpawnInSound;                                      // 0x0960(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPendingKill;                                     // 0x0968(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_969[0x3];                                      // 0x0969(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                StopLocation;                                      // 0x096C(0x000C)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HideAndKill;                                       // 0x0978(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
+	uint8                                         Pad_979[0x7];                                      // 0x0979(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         Row_PickUpInteractTime;                            // 0x0980(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          IsDelayingDeath;                                   // 0x09A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void AutoCollectCards();
-	void BlueprintOnInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted);
-	void BndEvt__Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void CollectPickup();
-	void ConsiderPositionCorrection();
-	void DelayDestroyPickup();
-	void DestroyPickup();
-	void DetermineStopLocation();
 	void ExecuteUbergraph_BGA_Athena_SCMachine_Pickup(int32 EntryPoint);
+	void DelayDestroyPickup();
 	void HideAndKillPickup();
 	void OnDeathServer(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
-	void OnDestroyPickup();
-	void OnRep_HideAndKill();
-	void OnRep_UnHide();
-	void ReceiveBeginPlay();
-	bool ShouldDie(float Damage, class AController* EventInstigator, class AActor* DamageCauser);
 	void SpawnSound();
+	void OnDestroyPickup();
+	void CollectPickup();
+	void BlueprintOnInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted);
+	void DestroyPickup();
+	void ReceiveBeginPlay();
+	void OnRep_UnHide();
+	bool ShouldDie(float Damage, class AController* EventInstigator, class AActor* DamageCauser);
+	void DetermineStopLocation();
+	void ConsiderPositionCorrection();
+	void OnRep_HideAndKill();
 
 	bool BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const;
 	class FText BlueprintGetInteractionString(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted) const;
@@ -92,6 +87,34 @@ public:
 		return GetDefaultObjImpl<ABGA_Athena_SCMachine_Pickup_C>();
 	}
 };
+static_assert(alignof(ABGA_Athena_SCMachine_Pickup_C) == 0x000008, "Wrong alignment on ABGA_Athena_SCMachine_Pickup_C");
+static_assert(sizeof(ABGA_Athena_SCMachine_Pickup_C) == 0x0009B0, "Wrong size on ABGA_Athena_SCMachine_Pickup_C");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, UberGraphFrame) == 0x000888, "Member 'ABGA_Athena_SCMachine_Pickup_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, SC_Machine_Memory_Card_Loop_Cue) == 0x000890, "Member 'ABGA_Athena_SCMachine_Pickup_C::SC_Machine_Memory_Card_Loop_Cue' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, SpawnInEffect) == 0x000898, "Member 'ABGA_Athena_SCMachine_Pickup_C::SpawnInEffect' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, Collision) == 0x0008A0, "Member 'ABGA_Athena_SCMachine_Pickup_C::Collision' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, BackgroundGlow) == 0x0008A8, "Member 'ABGA_Athena_SCMachine_Pickup_C::BackgroundGlow' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, Card) == 0x0008B0, "Member 'ABGA_Athena_SCMachine_Pickup_C::Card' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, UnHide) == 0x0008B8, "Member 'ABGA_Athena_SCMachine_Pickup_C::UnHide' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, DelayBeforeUnhide) == 0x0008BC, "Member 'ABGA_Athena_SCMachine_Pickup_C::DelayBeforeUnhide' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, OwnerTeam) == 0x0008C0, "Member 'ABGA_Athena_SCMachine_Pickup_C::OwnerTeam' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, FoundBuildingOnDied) == 0x0008C8, "Member 'ABGA_Athena_SCMachine_Pickup_C::FoundBuildingOnDied' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, Impact_Loc) == 0x0008D8, "Member 'ABGA_Athena_SCMachine_Pickup_C::Impact_Loc' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, HitNormal) == 0x0008E4, "Member 'ABGA_Athena_SCMachine_Pickup_C::HitNormal' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, MaxSlope) == 0x0008F0, "Member 'ABGA_Athena_SCMachine_Pickup_C::MaxSlope' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, Timer_DestroyPickup) == 0x0008F8, "Member 'ABGA_Athena_SCMachine_Pickup_C::Timer_DestroyPickup' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, Row_PickupLife) == 0x000900, "Member 'ABGA_Athena_SCMachine_Pickup_C::Row_PickupLife' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, InteractText) == 0x000928, "Member 'ABGA_Athena_SCMachine_Pickup_C::InteractText' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, SpawnOutParticle) == 0x000940, "Member 'ABGA_Athena_SCMachine_Pickup_C::SpawnOutParticle' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, PickupSound) == 0x000948, "Member 'ABGA_Athena_SCMachine_Pickup_C::PickupSound' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, SpawnFX) == 0x000950, "Member 'ABGA_Athena_SCMachine_Pickup_C::SpawnFX' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, SpawnSoundPlayed) == 0x000958, "Member 'ABGA_Athena_SCMachine_Pickup_C::SpawnSoundPlayed' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, SpawnInSound) == 0x000960, "Member 'ABGA_Athena_SCMachine_Pickup_C::SpawnInSound' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, IsPendingKill) == 0x000968, "Member 'ABGA_Athena_SCMachine_Pickup_C::IsPendingKill' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, StopLocation) == 0x00096C, "Member 'ABGA_Athena_SCMachine_Pickup_C::StopLocation' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, HideAndKill) == 0x000978, "Member 'ABGA_Athena_SCMachine_Pickup_C::HideAndKill' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, Row_PickUpInteractTime) == 0x000980, "Member 'ABGA_Athena_SCMachine_Pickup_C::Row_PickUpInteractTime' has a wrong offset!");
+static_assert(offsetof(ABGA_Athena_SCMachine_Pickup_C, IsDelayingDeath) == 0x0009A8, "Member 'ABGA_Athena_SCMachine_Pickup_C::IsDelayingDeath' has a wrong offset!");
 
 }
 

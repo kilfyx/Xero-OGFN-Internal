@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Prj_Athena_Consumable_Thrown_Apple.Prj_Athena_Consumable_Thrown_Apple_C
-// 0x0000 (0x0968 - 0x0968)
+// 0x0000 (0x0900 - 0x0900)
 class APrj_Athena_Consumable_Thrown_Apple_C final : public AB_Prj_Athena_Consumable_Thrown_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<APrj_Athena_Consumable_Thrown_Apple_C>();
 	}
 };
+static_assert(alignof(APrj_Athena_Consumable_Thrown_Apple_C) == 0x000008, "Wrong alignment on APrj_Athena_Consumable_Thrown_Apple_C");
+static_assert(sizeof(APrj_Athena_Consumable_Thrown_Apple_C) == 0x000900, "Wrong size on APrj_Athena_Consumable_Thrown_Apple_C");
 
 }
 

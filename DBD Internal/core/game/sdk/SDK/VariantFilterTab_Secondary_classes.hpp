@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -18,18 +17,9 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass VariantFilterTab_Secondary.VariantFilterTab_Secondary_C
-// 0x0010 (0x14E0 - 0x14D0)
+// 0x0000 (0x0C28 - 0x0C28)
 class UVariantFilterTab_Secondary_C final : public UFortVariantFilterTab
 {
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x14D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USizeBox*                               SizeBox_Mobile;                                    // 0x14D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void BP_OnClicked();
-	void Construct();
-	void ExecuteUbergraph_VariantFilterTab_Secondary(int32 EntryPoint);
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -40,10 +30,8 @@ public:
 		return GetDefaultObjImpl<UVariantFilterTab_Secondary_C>();
 	}
 };
-static_assert(alignof(UVariantFilterTab_Secondary_C) == 0x000010, "Wrong alignment on UVariantFilterTab_Secondary_C");
-static_assert(sizeof(UVariantFilterTab_Secondary_C) == 0x0014E0, "Wrong size on UVariantFilterTab_Secondary_C");
-static_assert(offsetof(UVariantFilterTab_Secondary_C, UberGraphFrame) == 0x0014D0, "Member 'UVariantFilterTab_Secondary_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UVariantFilterTab_Secondary_C, SizeBox_Mobile) == 0x0014D8, "Member 'UVariantFilterTab_Secondary_C::SizeBox_Mobile' has a wrong offset!");
+static_assert(alignof(UVariantFilterTab_Secondary_C) == 0x000008, "Wrong alignment on UVariantFilterTab_Secondary_C");
+static_assert(sizeof(UVariantFilterTab_Secondary_C) == 0x000C28, "Wrong size on UVariantFilterTab_Secondary_C");
 
 }
 

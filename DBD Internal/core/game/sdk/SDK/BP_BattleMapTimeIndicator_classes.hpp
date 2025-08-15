@@ -34,6 +34,10 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapTimeIndicator_C>();
 	}
 };
+static_assert(alignof(ABP_BattleMapTimeIndicator_C) == 0x000008, "Wrong alignment on ABP_BattleMapTimeIndicator_C");
+static_assert(sizeof(ABP_BattleMapTimeIndicator_C) == 0x000298, "Wrong size on ABP_BattleMapTimeIndicator_C");
+static_assert(offsetof(ABP_BattleMapTimeIndicator_C, Arrow) == 0x000288, "Member 'ABP_BattleMapTimeIndicator_C::Arrow' has a wrong offset!");
+static_assert(offsetof(ABP_BattleMapTimeIndicator_C, DefaultSceneRoot) == 0x000290, "Member 'ABP_BattleMapTimeIndicator_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

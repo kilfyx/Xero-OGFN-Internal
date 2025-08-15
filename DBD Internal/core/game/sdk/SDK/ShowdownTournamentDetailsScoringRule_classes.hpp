@@ -17,15 +17,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ShowdownTournamentDetailsScoringRule.ShowdownTournamentDetailsScoringRule_C
-// 0x0028 (0x02B8 - 0x0290)
+// 0x0030 (0x02B8 - 0x0288)
 class UShowdownTournamentDetailsScoringRule_C final : public UCommonUserWidget
 {
 public:
-	class UCommonBorder*                          CommonBorder_BG;                                   // 0x0290(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_TextContainer;                        // 0x0298(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonLazyImage*                       RuleIcon;                                          // 0x02A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       RuleNameText;                                      // 0x02A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       RuleValueText;                                     // 0x02B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_BG;                                   // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_TextContainer;                        // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonLazyImage*                       RuleIcon;                                          // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       RuleNameText;                                      // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       RuleValueText;                                     // 0x02A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UDataTable*                             ScoringRuleDisplayData;                            // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void SetData(const struct FFortShowdownScoringRuleInfo& ScoreRule, const struct FFortTournamentDisplayInfo& TournamentDisplayInfo);
@@ -42,11 +43,12 @@ public:
 };
 static_assert(alignof(UShowdownTournamentDetailsScoringRule_C) == 0x000008, "Wrong alignment on UShowdownTournamentDetailsScoringRule_C");
 static_assert(sizeof(UShowdownTournamentDetailsScoringRule_C) == 0x0002B8, "Wrong size on UShowdownTournamentDetailsScoringRule_C");
-static_assert(offsetof(UShowdownTournamentDetailsScoringRule_C, CommonBorder_BG) == 0x000290, "Member 'UShowdownTournamentDetailsScoringRule_C::CommonBorder_BG' has a wrong offset!");
-static_assert(offsetof(UShowdownTournamentDetailsScoringRule_C, CommonBorder_TextContainer) == 0x000298, "Member 'UShowdownTournamentDetailsScoringRule_C::CommonBorder_TextContainer' has a wrong offset!");
-static_assert(offsetof(UShowdownTournamentDetailsScoringRule_C, RuleIcon) == 0x0002A0, "Member 'UShowdownTournamentDetailsScoringRule_C::RuleIcon' has a wrong offset!");
-static_assert(offsetof(UShowdownTournamentDetailsScoringRule_C, RuleNameText) == 0x0002A8, "Member 'UShowdownTournamentDetailsScoringRule_C::RuleNameText' has a wrong offset!");
-static_assert(offsetof(UShowdownTournamentDetailsScoringRule_C, RuleValueText) == 0x0002B0, "Member 'UShowdownTournamentDetailsScoringRule_C::RuleValueText' has a wrong offset!");
+static_assert(offsetof(UShowdownTournamentDetailsScoringRule_C, CommonBorder_BG) == 0x000288, "Member 'UShowdownTournamentDetailsScoringRule_C::CommonBorder_BG' has a wrong offset!");
+static_assert(offsetof(UShowdownTournamentDetailsScoringRule_C, CommonBorder_TextContainer) == 0x000290, "Member 'UShowdownTournamentDetailsScoringRule_C::CommonBorder_TextContainer' has a wrong offset!");
+static_assert(offsetof(UShowdownTournamentDetailsScoringRule_C, RuleIcon) == 0x000298, "Member 'UShowdownTournamentDetailsScoringRule_C::RuleIcon' has a wrong offset!");
+static_assert(offsetof(UShowdownTournamentDetailsScoringRule_C, RuleNameText) == 0x0002A0, "Member 'UShowdownTournamentDetailsScoringRule_C::RuleNameText' has a wrong offset!");
+static_assert(offsetof(UShowdownTournamentDetailsScoringRule_C, RuleValueText) == 0x0002A8, "Member 'UShowdownTournamentDetailsScoringRule_C::RuleValueText' has a wrong offset!");
+static_assert(offsetof(UShowdownTournamentDetailsScoringRule_C, ScoringRuleDisplayData) == 0x0002B0, "Member 'UShowdownTournamentDetailsScoringRule_C::ScoringRuleDisplayData' has a wrong offset!");
 
 }
 

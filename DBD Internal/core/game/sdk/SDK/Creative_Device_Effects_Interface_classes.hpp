@@ -42,6 +42,8 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+static_assert(alignof(ICreative_Device_Effects_Interface_C) == 0x000001, "Wrong alignment on ICreative_Device_Effects_Interface_C");
+static_assert(sizeof(ICreative_Device_Effects_Interface_C) == 0x000001, "Wrong size on ICreative_Device_Effects_Interface_C");
 
 }
 

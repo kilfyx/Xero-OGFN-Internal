@@ -10,44 +10,44 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C
-// 0x0090 (0x0500 - 0x0470)
-class AGCN_Athena_Interrogation_Reveal_Latent_C final : public AFortGameplayCueNotify_BurstLatent
+// 0x0090 (0x04F0 - 0x0460)
+class AGCN_Athena_Interrogation_Reveal_Latent_C : public AFortGameplayCueNotify_BurstLatent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0470(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UPostProcessComponent*                  PostProcess;                                       // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         SweepDuration;                                     // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           SweepDelayHandle;                                  // 0x0488(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         SweepRadius;                                       // 0x0490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                SourceObjectLocation;                              // 0x0494(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerPawn_Athena_C*                   PlayerPawnAthena;                                  // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DelayBeforeSweep;                                  // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC[0x4];                                      // 0x04AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           DelayBeforeSweepHandle;                            // 0x04B0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ParticleRelativeLocation;                          // 0x04B8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C4[0x4];                                      // 0x04C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundMix*                              RevealSoundMix;                                    // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         StencilDuration;                                   // 0x04D0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bShouldPlayParticleEffectOnHand;                   // 0x04F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0460(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UPostProcessComponent*                  PostProcess;                                       // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         SweepDuration;                                     // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_474[0x4];                                      // 0x0474(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           SweepDelayHandle;                                  // 0x0478(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         SweepRadius;                                       // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LocalPlayerLocation;                               // 0x0484(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerPawn_Athena_C*                   PlayerPawnAthena;                                  // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DelayBeforeSweep;                                  // 0x0498(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49C[0x4];                                      // 0x049C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           DelayBeforeSweepHandle;                            // 0x04A0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ParticleRelativeLocation;                          // 0x04A8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B4[0x4];                                      // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundMix*                              RevealSoundMix;                                    // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         StencilDuration;                                   // 0x04C0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bShouldPlayParticleEffectOnHand;                   // 0x04E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void BeginSweepFX();
-	void EndSweepFX();
 	void ExecuteUbergraph_GCN_Athena_Interrogation_Reveal_Latent(int32 EntryPoint);
-	bool OnExecute(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
 	void PlayWorldSweep();
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void EndSweepFX();
+	void BeginSweepFX();
+	bool OnExecute(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
 
 public:
 	static class UClass* StaticClass()
@@ -59,6 +59,21 @@ public:
 		return GetDefaultObjImpl<AGCN_Athena_Interrogation_Reveal_Latent_C>();
 	}
 };
+static_assert(alignof(AGCN_Athena_Interrogation_Reveal_Latent_C) == 0x000008, "Wrong alignment on AGCN_Athena_Interrogation_Reveal_Latent_C");
+static_assert(sizeof(AGCN_Athena_Interrogation_Reveal_Latent_C) == 0x0004F0, "Wrong size on AGCN_Athena_Interrogation_Reveal_Latent_C");
+static_assert(offsetof(AGCN_Athena_Interrogation_Reveal_Latent_C, UberGraphFrame) == 0x000460, "Member 'AGCN_Athena_Interrogation_Reveal_Latent_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AGCN_Athena_Interrogation_Reveal_Latent_C, PostProcess) == 0x000468, "Member 'AGCN_Athena_Interrogation_Reveal_Latent_C::PostProcess' has a wrong offset!");
+static_assert(offsetof(AGCN_Athena_Interrogation_Reveal_Latent_C, SweepDuration) == 0x000470, "Member 'AGCN_Athena_Interrogation_Reveal_Latent_C::SweepDuration' has a wrong offset!");
+static_assert(offsetof(AGCN_Athena_Interrogation_Reveal_Latent_C, SweepDelayHandle) == 0x000478, "Member 'AGCN_Athena_Interrogation_Reveal_Latent_C::SweepDelayHandle' has a wrong offset!");
+static_assert(offsetof(AGCN_Athena_Interrogation_Reveal_Latent_C, SweepRadius) == 0x000480, "Member 'AGCN_Athena_Interrogation_Reveal_Latent_C::SweepRadius' has a wrong offset!");
+static_assert(offsetof(AGCN_Athena_Interrogation_Reveal_Latent_C, LocalPlayerLocation) == 0x000484, "Member 'AGCN_Athena_Interrogation_Reveal_Latent_C::LocalPlayerLocation' has a wrong offset!");
+static_assert(offsetof(AGCN_Athena_Interrogation_Reveal_Latent_C, PlayerPawnAthena) == 0x000490, "Member 'AGCN_Athena_Interrogation_Reveal_Latent_C::PlayerPawnAthena' has a wrong offset!");
+static_assert(offsetof(AGCN_Athena_Interrogation_Reveal_Latent_C, DelayBeforeSweep) == 0x000498, "Member 'AGCN_Athena_Interrogation_Reveal_Latent_C::DelayBeforeSweep' has a wrong offset!");
+static_assert(offsetof(AGCN_Athena_Interrogation_Reveal_Latent_C, DelayBeforeSweepHandle) == 0x0004A0, "Member 'AGCN_Athena_Interrogation_Reveal_Latent_C::DelayBeforeSweepHandle' has a wrong offset!");
+static_assert(offsetof(AGCN_Athena_Interrogation_Reveal_Latent_C, ParticleRelativeLocation) == 0x0004A8, "Member 'AGCN_Athena_Interrogation_Reveal_Latent_C::ParticleRelativeLocation' has a wrong offset!");
+static_assert(offsetof(AGCN_Athena_Interrogation_Reveal_Latent_C, RevealSoundMix) == 0x0004B8, "Member 'AGCN_Athena_Interrogation_Reveal_Latent_C::RevealSoundMix' has a wrong offset!");
+static_assert(offsetof(AGCN_Athena_Interrogation_Reveal_Latent_C, StencilDuration) == 0x0004C0, "Member 'AGCN_Athena_Interrogation_Reveal_Latent_C::StencilDuration' has a wrong offset!");
+static_assert(offsetof(AGCN_Athena_Interrogation_Reveal_Latent_C, bShouldPlayParticleEffectOnHand) == 0x0004E8, "Member 'AGCN_Athena_Interrogation_Reveal_Latent_C::bShouldPlayParticleEffectOnHand' has a wrong offset!");
 
 }
 

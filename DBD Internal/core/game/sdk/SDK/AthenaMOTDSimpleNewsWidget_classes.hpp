@@ -11,39 +11,39 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "FortniteUI_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaMOTDSimpleNewsWidget.AthenaMOTDSimpleNewsWidget_C
-// 0x0058 (0x0438 - 0x03E0)
+// 0x0058 (0x03B0 - 0x0358)
 class UAthenaMOTDSimpleNewsWidget_C final : public UFortAthenaMOTDSimpleNewsWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x03E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Backplate;                                         // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 GlowBackground;                                    // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Background;                                  // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Border;                                      // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_ColorFade;                                   // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBoxButtonSize;                                 // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FColor                                 DarkDefaultColor;                                  // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FColor                                 LightDefaultColor;                                 // 0x0424(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FColor                                 PreviewDarkColor;                                  // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TestPreviewColors;                                 // 0x042C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42D[0x3];                                      // 0x042D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FColor                                 PreviewLightColor;                                 // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0358(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro;                                             // 0x0360(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Backplate;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 GlowBackground;                                    // 0x0370(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Background;                                  // 0x0378(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Border;                                      // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_ColorFade;                                   // 0x0388(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBoxButtonSize;                                 // 0x0390(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FColor                                 DarkDefaultColor;                                  // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FColor                                 LightDefaultColor;                                 // 0x039C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FColor                                 PreviewDarkColor;                                  // 0x03A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TestPreviewColors;                                 // 0x03A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3A5[0x3];                                      // 0x03A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FColor                                 PreviewLightColor;                                 // 0x03A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void SetDynamicColors(const struct FColor& Dark, const struct FColor& Light);
+	void PreConstruct(bool IsDesignTime);
+	void OnPopulateNews(const struct FAthenaMOTDBase& NewsEntry);
 	void BP_OnActivated();
 	void ExecuteUbergraph_AthenaMOTDSimpleNewsWidget(int32 EntryPoint);
-	void OnPopulateNews(const struct FAthenaMOTDBase& NewsEntry);
-	void PreConstruct(bool IsDesignTime);
-	void SetDynamicColors(const struct FColor& Dark, const struct FColor& Light);
 
 public:
 	static class UClass* StaticClass()
@@ -56,20 +56,20 @@ public:
 	}
 };
 static_assert(alignof(UAthenaMOTDSimpleNewsWidget_C) == 0x000008, "Wrong alignment on UAthenaMOTDSimpleNewsWidget_C");
-static_assert(sizeof(UAthenaMOTDSimpleNewsWidget_C) == 0x000438, "Wrong size on UAthenaMOTDSimpleNewsWidget_C");
-static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, UberGraphFrame) == 0x0003E0, "Member 'UAthenaMOTDSimpleNewsWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, Intro) == 0x0003E8, "Member 'UAthenaMOTDSimpleNewsWidget_C::Intro' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, Backplate) == 0x0003F0, "Member 'UAthenaMOTDSimpleNewsWidget_C::Backplate' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, GlowBackground) == 0x0003F8, "Member 'UAthenaMOTDSimpleNewsWidget_C::GlowBackground' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, Image_Background) == 0x000400, "Member 'UAthenaMOTDSimpleNewsWidget_C::Image_Background' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, Image_Border) == 0x000408, "Member 'UAthenaMOTDSimpleNewsWidget_C::Image_Border' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, Image_ColorFade) == 0x000410, "Member 'UAthenaMOTDSimpleNewsWidget_C::Image_ColorFade' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, SizeBoxButtonSize) == 0x000418, "Member 'UAthenaMOTDSimpleNewsWidget_C::SizeBoxButtonSize' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, DarkDefaultColor) == 0x000420, "Member 'UAthenaMOTDSimpleNewsWidget_C::DarkDefaultColor' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, LightDefaultColor) == 0x000424, "Member 'UAthenaMOTDSimpleNewsWidget_C::LightDefaultColor' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, PreviewDarkColor) == 0x000428, "Member 'UAthenaMOTDSimpleNewsWidget_C::PreviewDarkColor' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, TestPreviewColors) == 0x00042C, "Member 'UAthenaMOTDSimpleNewsWidget_C::TestPreviewColors' has a wrong offset!");
-static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, PreviewLightColor) == 0x000430, "Member 'UAthenaMOTDSimpleNewsWidget_C::PreviewLightColor' has a wrong offset!");
+static_assert(sizeof(UAthenaMOTDSimpleNewsWidget_C) == 0x0003B0, "Wrong size on UAthenaMOTDSimpleNewsWidget_C");
+static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, UberGraphFrame) == 0x000358, "Member 'UAthenaMOTDSimpleNewsWidget_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, Intro) == 0x000360, "Member 'UAthenaMOTDSimpleNewsWidget_C::Intro' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, Backplate) == 0x000368, "Member 'UAthenaMOTDSimpleNewsWidget_C::Backplate' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, GlowBackground) == 0x000370, "Member 'UAthenaMOTDSimpleNewsWidget_C::GlowBackground' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, Image_Background) == 0x000378, "Member 'UAthenaMOTDSimpleNewsWidget_C::Image_Background' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, Image_Border) == 0x000380, "Member 'UAthenaMOTDSimpleNewsWidget_C::Image_Border' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, Image_ColorFade) == 0x000388, "Member 'UAthenaMOTDSimpleNewsWidget_C::Image_ColorFade' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, SizeBoxButtonSize) == 0x000390, "Member 'UAthenaMOTDSimpleNewsWidget_C::SizeBoxButtonSize' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, DarkDefaultColor) == 0x000398, "Member 'UAthenaMOTDSimpleNewsWidget_C::DarkDefaultColor' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, LightDefaultColor) == 0x00039C, "Member 'UAthenaMOTDSimpleNewsWidget_C::LightDefaultColor' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, PreviewDarkColor) == 0x0003A0, "Member 'UAthenaMOTDSimpleNewsWidget_C::PreviewDarkColor' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, TestPreviewColors) == 0x0003A4, "Member 'UAthenaMOTDSimpleNewsWidget_C::TestPreviewColors' has a wrong offset!");
+static_assert(offsetof(UAthenaMOTDSimpleNewsWidget_C, PreviewLightColor) == 0x0003A8, "Member 'UAthenaMOTDSimpleNewsWidget_C::PreviewLightColor' has a wrong offset!");
 
 }
 

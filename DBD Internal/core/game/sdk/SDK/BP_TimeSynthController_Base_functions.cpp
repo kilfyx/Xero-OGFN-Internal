@@ -17,108 +17,23 @@
 namespace SDK
 {
 
-// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.CalculateMaxClipDuration
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.OnTimeSynthTrackComponentRegistered
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UBP_TimeSynthTrackComponent_C*    Track                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32*                                  Duration                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UBP_TimeSynthTrackComponent_C*&Track                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_TimeSynthController_Base_C::CalculateMaxClipDuration(class UBP_TimeSynthTrackComponent_C* Track, int32* Duration)
+void ABP_TimeSynthController_Base_C::OnTimeSynthTrackComponentRegistered(const class UBP_TimeSynthTrackComponent_C*& Track)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "CalculateMaxClipDuration");
+		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "OnTimeSynthTrackComponentRegistered");
 
-	Params::BP_TimeSynthController_Base_C_CalculateMaxClipDuration Parms{};
+	Params::BP_TimeSynthController_Base_C_OnTimeSynthTrackComponentRegistered Parms{};
 
 	Parms.Track = Track;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Duration != nullptr)
-		*Duration = Parms.Duration;
-}
-
-
-// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.ChangeTrack
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UBP_TimeSynthTrackComponent_C*    New_Track                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_TimeSynthController_Base_C::ChangeTrack(class UBP_TimeSynthTrackComponent_C* New_Track)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "ChangeTrack");
-
-	Params::BP_TimeSynthController_Base_C_ChangeTrack Parms{};
-
-	Parms.New_Track = New_Track;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.ExecuteUbergraph_BP_TimeSynthController_Base
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_TimeSynthController_Base_C::ExecuteUbergraph_BP_TimeSynthController_Base(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "ExecuteUbergraph_BP_TimeSynthController_Base");
-
-	Params::BP_TimeSynthController_Base_C_ExecuteUbergraph_BP_TimeSynthController_Base Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.FlushExtraClips
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Exclude_Current                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_TimeSynthController_Base_C::FlushExtraClips(bool Exclude_Current)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "FlushExtraClips");
-
-	Params::BP_TimeSynthController_Base_C_FlushExtraClips Parms{};
-
-	Parms.Exclude_Current = Exclude_Current;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.GetIsPlaying
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   IsPlaying_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_TimeSynthController_Base_C::GetIsPlaying(bool* IsPlaying_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "GetIsPlaying");
-
-	Params::BP_TimeSynthController_Base_C_GetIsPlaying Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsPlaying_0 != nullptr)
-		*IsPlaying_0 = Parms.IsPlaying_0;
 }
 
 
@@ -143,6 +58,85 @@ void ABP_TimeSynthController_Base_C::GetTimeSynthComponent(class UTimeSynthCompo
 }
 
 
+// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.RegisterTrackComponents
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_TimeSynthController_Base_C::RegisterTrackComponents()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "RegisterTrackComponents");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.GetIsPlaying
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   IsPlaying_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_TimeSynthController_Base_C::GetIsPlaying(bool* IsPlaying_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "GetIsPlaying");
+
+	Params::BP_TimeSynthController_Base_C_GetIsPlaying Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsPlaying_0 != nullptr)
+		*IsPlaying_0 = Parms.IsPlaying_0;
+}
+
+
+// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.CalculateMaxClipDuration
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UBP_TimeSynthTrackComponent_C*    Track                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  Duration                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TimeSynthController_Base_C::CalculateMaxClipDuration(class UBP_TimeSynthTrackComponent_C* Track, int32* Duration)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "CalculateMaxClipDuration");
+
+	Params::BP_TimeSynthController_Base_C_CalculateMaxClipDuration Parms{};
+
+	Parms.Track = Track;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Duration != nullptr)
+		*Duration = Parms.Duration;
+}
+
+
+// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.QueueTrackStartInternal
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UBP_TimeSynthTrackComponent_C*    NewTrack                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TimeSynthController_Base_C::QueueTrackStartInternal(class UBP_TimeSynthTrackComponent_C* NewTrack)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "QueueTrackStartInternal");
+
+	Params::BP_TimeSynthController_Base_C_QueueTrackStartInternal Parms{};
+
+	Parms.NewTrack = NewTrack;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.OnQuantizationBar
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -162,6 +156,26 @@ void ABP_TimeSynthController_Base_C::OnQuantizationBar(ETimeSynthEventQuantizati
 	Parms.QuantizationType = QuantizationType;
 	Parms.NumBars = NumBars;
 	Parms.Beat = Beat;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.FlushExtraClips
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Exclude_Current                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_TimeSynthController_Base_C::FlushExtraClips(bool Exclude_Current)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "FlushExtraClips");
+
+	Params::BP_TimeSynthController_Base_C_FlushExtraClips Parms{};
+
+	Parms.Exclude_Current = Exclude_Current;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -191,26 +205,6 @@ void ABP_TimeSynthController_Base_C::OnQuantizationBeat(ETimeSynthEventQuantizat
 }
 
 
-// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.OnTimeSynthTrackComponentRegistered
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class UBP_TimeSynthTrackComponent_C*&Track                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_TimeSynthController_Base_C::OnTimeSynthTrackComponentRegistered(const class UBP_TimeSynthTrackComponent_C*& Track)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "OnTimeSynthTrackComponentRegistered");
-
-	Params::BP_TimeSynthController_Base_C_OnTimeSynthTrackComponentRegistered Parms{};
-
-	Parms.Track = Track;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.PlayTransition
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -233,51 +227,43 @@ void ABP_TimeSynthController_Base_C::PlayTransition(const struct FTimeSynth_Tran
 }
 
 
-// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.QueueTrackStartInternal
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.StopAllMusic
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UBP_TimeSynthTrackComponent_C*    NewTrack                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Play_Outro                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_TimeSynthController_Base_C::QueueTrackStartInternal(class UBP_TimeSynthTrackComponent_C* NewTrack)
+void ABP_TimeSynthController_Base_C::StopAllMusic(bool Play_Outro)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "QueueTrackStartInternal");
+		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "StopAllMusic");
 
-	Params::BP_TimeSynthController_Base_C_QueueTrackStartInternal Parms{};
+	Params::BP_TimeSynthController_Base_C_StopAllMusic Parms{};
 
-	Parms.NewTrack = NewTrack;
+	Parms.Play_Outro = Play_Outro;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.ChangeTrack
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UBP_TimeSynthTrackComponent_C*    New_Track                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_TimeSynthController_Base_C::ReceiveBeginPlay()
+void ABP_TimeSynthController_Base_C::ChangeTrack(class UBP_TimeSynthTrackComponent_C* New_Track)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "ChangeTrack");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::BP_TimeSynthController_Base_C_ChangeTrack Parms{};
 
+	Parms.New_Track = New_Track;
 
-// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.RegisterTrackComponents
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_TimeSynthController_Base_C::RegisterTrackComponents()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "RegisterTrackComponents");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -285,7 +271,7 @@ void ABP_TimeSynthController_Base_C::RegisterTrackComponents()
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBP_TimeSynthTrackComponent_C*    TrackRequesting                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   CanChangeTrack                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   CanChangeTrack                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABP_TimeSynthController_Base_C::RequestTrackChange(class UBP_TimeSynthTrackComponent_C* TrackRequesting, bool* CanChangeTrack)
 {
@@ -302,6 +288,40 @@ void ABP_TimeSynthController_Base_C::RequestTrackChange(class UBP_TimeSynthTrack
 
 	if (CanChangeTrack != nullptr)
 		*CanChangeTrack = Parms.CanChangeTrack;
+}
+
+
+// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.OnReady_F7375C2B4721EA41B01B64B1D1823052
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AGameStateBase*                   GameState                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TimeSynthController_Base_C::OnReady_F7375C2B4721EA41B01B64B1D1823052(class AGameStateBase* GameState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "OnReady_F7375C2B4721EA41B01B64B1D1823052");
+
+	Params::BP_TimeSynthController_Base_C_OnReady_F7375C2B4721EA41B01B64B1D1823052 Parms{};
+
+	Parms.GameState = GameState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_TimeSynthController_Base_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -327,21 +347,61 @@ void ABP_TimeSynthController_Base_C::SetVolumeGroup(int32 Index_0, float Volume_
 }
 
 
-// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.StopAllMusic
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.ReceiveEndPlay
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    Play_Outro                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_TimeSynthController_Base_C::StopAllMusic(bool Play_Outro)
+void ABP_TimeSynthController_Base_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "StopAllMusic");
+		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "ReceiveEndPlay");
 
-	Params::BP_TimeSynthController_Base_C_StopAllMusic Parms{};
+	Params::BP_TimeSynthController_Base_C_ReceiveEndPlay Parms{};
 
-	Parms.Play_Outro = Play_Outro;
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.On Game Phase Changed
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EAthenaGamePhase                        GamePhase                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TimeSynthController_Base_C::On_Game_Phase_Changed(EAthenaGamePhase GamePhase)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "On Game Phase Changed");
+
+	Params::BP_TimeSynthController_Base_C_On_Game_Phase_Changed Parms{};
+
+	Parms.GamePhase = GamePhase;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TimeSynthController_Base.BP_TimeSynthController_Base_C.ExecuteUbergraph_BP_TimeSynthController_Base
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TimeSynthController_Base_C::ExecuteUbergraph_BP_TimeSynthController_Base(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TimeSynthController_Base_C", "ExecuteUbergraph_BP_TimeSynthController_Base");
+
+	Params::BP_TimeSynthController_Base_C_ExecuteUbergraph_BP_TimeSynthController_Base Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

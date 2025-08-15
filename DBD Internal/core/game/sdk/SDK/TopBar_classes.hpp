@@ -20,26 +20,25 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TopBar.TopBar_C
-// 0x0040 (0x05A0 - 0x0560)
+// 0x0040 (0x0470 - 0x0430)
 class UTopBar_C final : public UAthenaTopBar
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0560(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       IntroTabLabel;                                     // 0x0568(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UGameFeatureStatus_C*                   GameFeatureStatus_HighResTextureDownload;          // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_TopContent;                          // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         MainNav;                                           // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               MobileTabTitle;                                    // 0x0588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_7;                                        // 0x0590(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class Uwindowchromebuttons_C*                 windowchromebuttons;                               // 0x0598(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       IntroTabLabel;                                     // 0x0438(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UGameFeatureStatus_C*                   GameFeatureStatus_HighResTextureDownload;          // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_TopContent;                          // 0x0448(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULetoFrontendJoinPrompt_Side_C*         LetoFrontendJoinPrompt_Side;                       // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               MobileTabTitle;                                    // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_7;                                        // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class Uwindowchromebuttons_C*                 windowchromebuttons;                               // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void Construct();
 	void ExecuteUbergraph_TopBar(int32 EntryPoint);
 	void OnMobileTabLabelChanged();
-	void SetMainNavVisibility(ESlateVisibility NewVisibility);
-	void SetTopTabsVisibility(ESlateVisibility NewVisibility);
+	void Construct();
 	void UpdateMTXButton();
+	void SetTopTabsVisibility(ESlateVisibility NewVisibility);
 
 public:
 	static class UClass* StaticClass()
@@ -52,15 +51,15 @@ public:
 	}
 };
 static_assert(alignof(UTopBar_C) == 0x000008, "Wrong alignment on UTopBar_C");
-static_assert(sizeof(UTopBar_C) == 0x0005A0, "Wrong size on UTopBar_C");
-static_assert(offsetof(UTopBar_C, UberGraphFrame) == 0x000560, "Member 'UTopBar_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, IntroTabLabel) == 0x000568, "Member 'UTopBar_C::IntroTabLabel' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, GameFeatureStatus_HighResTextureDownload) == 0x000570, "Member 'UTopBar_C::GameFeatureStatus_HighResTextureDownload' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, HorizontalBox_TopContent) == 0x000578, "Member 'UTopBar_C::HorizontalBox_TopContent' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, MainNav) == 0x000580, "Member 'UTopBar_C::MainNav' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, MobileTabTitle) == 0x000588, "Member 'UTopBar_C::MobileTabTitle' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, SafeZone_7) == 0x000590, "Member 'UTopBar_C::SafeZone_7' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, windowchromebuttons) == 0x000598, "Member 'UTopBar_C::windowchromebuttons' has a wrong offset!");
+static_assert(sizeof(UTopBar_C) == 0x000470, "Wrong size on UTopBar_C");
+static_assert(offsetof(UTopBar_C, UberGraphFrame) == 0x000430, "Member 'UTopBar_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UTopBar_C, IntroTabLabel) == 0x000438, "Member 'UTopBar_C::IntroTabLabel' has a wrong offset!");
+static_assert(offsetof(UTopBar_C, GameFeatureStatus_HighResTextureDownload) == 0x000440, "Member 'UTopBar_C::GameFeatureStatus_HighResTextureDownload' has a wrong offset!");
+static_assert(offsetof(UTopBar_C, HorizontalBox_TopContent) == 0x000448, "Member 'UTopBar_C::HorizontalBox_TopContent' has a wrong offset!");
+static_assert(offsetof(UTopBar_C, LetoFrontendJoinPrompt_Side) == 0x000450, "Member 'UTopBar_C::LetoFrontendJoinPrompt_Side' has a wrong offset!");
+static_assert(offsetof(UTopBar_C, MobileTabTitle) == 0x000458, "Member 'UTopBar_C::MobileTabTitle' has a wrong offset!");
+static_assert(offsetof(UTopBar_C, SafeZone_7) == 0x000460, "Member 'UTopBar_C::SafeZone_7' has a wrong offset!");
+static_assert(offsetof(UTopBar_C, windowchromebuttons) == 0x000468, "Member 'UTopBar_C::windowchromebuttons' has a wrong offset!");
 
 }
 

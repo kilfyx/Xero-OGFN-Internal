@@ -19,18 +19,19 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FortWaterBodyBP.FortWaterBodyBP_C
-// 0x0058 (0x0338 - 0x02E0)
-class AFortWaterBodyBP_C : public AFortWaterBodyActor
+// 0x0060 (0x0FA0 - 0x0F40)
+class AFortWaterBodyBP_C final : public AFortWaterBodyActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FWaveSpectrumSettings                  Wave_Spectrum_Settings;                            // 0x02E8(0x0048)(Edit, BlueprintVisible, DisableEditOnInstance, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	class ABP_FluidSim_FN_C*                      FluidSimBP;                                        // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FWaveSpectrumSettings                  Wave_Spectrum_Settings;                            // 0x0F48(0x0048)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_FluidSim_FN_C*                      FluidSimBP;                                        // 0x0F90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_FortWaterBodyBP(int32 EntryPoint);
 	void OnReceivedBulletImpact(const struct FHitResult& Hit);
 	void ReceiveBeginPlay();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()
@@ -42,6 +43,11 @@ public:
 		return GetDefaultObjImpl<AFortWaterBodyBP_C>();
 	}
 };
+static_assert(alignof(AFortWaterBodyBP_C) == 0x000010, "Wrong alignment on AFortWaterBodyBP_C");
+static_assert(sizeof(AFortWaterBodyBP_C) == 0x000FA0, "Wrong size on AFortWaterBodyBP_C");
+static_assert(offsetof(AFortWaterBodyBP_C, UberGraphFrame) == 0x000F40, "Member 'AFortWaterBodyBP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AFortWaterBodyBP_C, Wave_Spectrum_Settings) == 0x000F48, "Member 'AFortWaterBodyBP_C::Wave_Spectrum_Settings' has a wrong offset!");
+static_assert(offsetof(AFortWaterBodyBP_C, FluidSimBP) == 0x000F90, "Member 'AFortWaterBodyBP_C::FluidSimBP' has a wrong offset!");
 
 }
 

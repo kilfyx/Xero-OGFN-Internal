@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_BoostJumpPack_Papaya.GA_BoostJumpPack_Papaya_C
-// 0x0000 (0x0C70 - 0x0C70)
+// 0x0000 (0x0C80 - 0x0C80)
 class UGA_BoostJumpPack_Papaya_C final : public UGA_BoostJumpPack_C
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UGA_BoostJumpPack_Papaya_C>();
 	}
 };
+static_assert(alignof(UGA_BoostJumpPack_Papaya_C) == 0x000008, "Wrong alignment on UGA_BoostJumpPack_Papaya_C");
+static_assert(sizeof(UGA_BoostJumpPack_Papaya_C) == 0x000C80, "Wrong size on UGA_BoostJumpPack_Papaya_C");
 
 }
 

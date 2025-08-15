@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GAT_Creative_TriggeredAbility_Pawn.GAT_Creative_TriggeredAbility_Pawn_C
-// 0x0010 (0x0AE8 - 0x0AD8)
+// 0x0010 (0x0AF8 - 0x0AE8)
 class UGAT_Creative_TriggeredAbility_Pawn_C : public UGAT_Creative_TriggeredAbility_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_Creative_TriggeredAbility_Pawn_C; // 0x0AD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPawn*                              AbilityOwner;                                      // 0x0AE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_Creative_TriggeredAbility_Pawn_C; // 0x0AE8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPawn*                              AbilityOwner;                                      // 0x0AF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GAT_Creative_TriggeredAbility_Pawn(int32 EntryPoint);
@@ -40,6 +40,10 @@ public:
 		return GetDefaultObjImpl<UGAT_Creative_TriggeredAbility_Pawn_C>();
 	}
 };
+static_assert(alignof(UGAT_Creative_TriggeredAbility_Pawn_C) == 0x000008, "Wrong alignment on UGAT_Creative_TriggeredAbility_Pawn_C");
+static_assert(sizeof(UGAT_Creative_TriggeredAbility_Pawn_C) == 0x000AF8, "Wrong size on UGAT_Creative_TriggeredAbility_Pawn_C");
+static_assert(offsetof(UGAT_Creative_TriggeredAbility_Pawn_C, UberGraphFrame_GAT_Creative_TriggeredAbility_Pawn_C) == 0x000AE8, "Member 'UGAT_Creative_TriggeredAbility_Pawn_C::UberGraphFrame_GAT_Creative_TriggeredAbility_Pawn_C' has a wrong offset!");
+static_assert(offsetof(UGAT_Creative_TriggeredAbility_Pawn_C, AbilityOwner) == 0x000AF0, "Member 'UGAT_Creative_TriggeredAbility_Pawn_C::AbilityOwner' has a wrong offset!");
 
 }
 

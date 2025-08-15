@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ButtonStyle-TextOnlyBase_EmptyFocus.ButtonStyle-TextOnlyBase_EmptyFocus_C
-// 0x0000 (0x0730 - 0x0730)
+// 0x0000 (0x0570 - 0x0570)
 class UButtonStyle_TextOnlyBase_EmptyFocus_C final : public UButtonStyle_Base_C
 {
 public:
@@ -30,8 +30,8 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_TextOnlyBase_EmptyFocus_C>();
 	}
 };
-static_assert(alignof(UButtonStyle_TextOnlyBase_EmptyFocus_C) == 0x000010, "Wrong alignment on UButtonStyle_TextOnlyBase_EmptyFocus_C");
-static_assert(sizeof(UButtonStyle_TextOnlyBase_EmptyFocus_C) == 0x000730, "Wrong size on UButtonStyle_TextOnlyBase_EmptyFocus_C");
+static_assert(alignof(UButtonStyle_TextOnlyBase_EmptyFocus_C) == 0x000008, "Wrong alignment on UButtonStyle_TextOnlyBase_EmptyFocus_C");
+static_assert(sizeof(UButtonStyle_TextOnlyBase_EmptyFocus_C) == 0x000570, "Wrong size on UButtonStyle_TextOnlyBase_EmptyFocus_C");
 
 }
 

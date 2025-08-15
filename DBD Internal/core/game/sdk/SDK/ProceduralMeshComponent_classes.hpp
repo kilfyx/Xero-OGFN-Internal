@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ProceduralMeshComponent_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ProceduralMeshComponent_structs.hpp"
 
 
 namespace SDK
@@ -45,22 +45,25 @@ public:
 		return GetDefaultObjImpl<UKismetProceduralMeshLibrary>();
 	}
 };
+static_assert(alignof(UKismetProceduralMeshLibrary) == 0x000008, "Wrong alignment on UKismetProceduralMeshLibrary");
+static_assert(sizeof(UKismetProceduralMeshLibrary) == 0x000028, "Wrong size on UKismetProceduralMeshLibrary");
 
 // Class ProceduralMeshComponent.ProceduralMeshComponent
-// 0x0060 (0x04E0 - 0x0480)
+// 0x0070 (0x04E0 - 0x0470)
 class UProceduralMeshComponent final : public UMeshComponent
 {
 public:
-	uint8                                         Pad_478[0x8];                                      // 0x0478(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bUseComplexAsSimpleCollision;                      // 0x0480(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseAsyncCooking;                                  // 0x0481(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_482[0x6];                                      // 0x0482(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBodySetup*                             ProcMeshBodySetup;                                 // 0x0488(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FProcMeshSection>               ProcMeshSections;                                  // 0x0490(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FKConvexElem>                   CollisionConvexElems;                              // 0x04A0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	struct FBoxSphereBounds                       LocalBounds;                                       // 0x04B0(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_4CC[0x4];                                      // 0x04CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UBodySetup*>                     AsyncBodySetupQueue;                               // 0x04D0(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_470[0x8];                                      // 0x0470(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUseComplexAsSimpleCollision;                      // 0x0478(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseAsyncCooking;                                  // 0x0479(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_47A[0x6];                                      // 0x047A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBodySetup*                             ProcMeshBodySetup;                                 // 0x0480(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FProcMeshSection>               ProcMeshSections;                                  // 0x0488(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FKConvexElem>                   CollisionConvexElems;                              // 0x0498(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FBoxSphereBounds                       LocalBounds;                                       // 0x04A8(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_4C4[0x4];                                      // 0x04C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UBodySetup*>                     AsyncBodySetupQueue;                               // 0x04C8(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_4D8[0x8];                                      // 0x04D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddCollisionConvexMesh(const TArray<struct FVector>& ConvexVerts);
@@ -86,6 +89,15 @@ public:
 		return GetDefaultObjImpl<UProceduralMeshComponent>();
 	}
 };
+static_assert(alignof(UProceduralMeshComponent) == 0x000010, "Wrong alignment on UProceduralMeshComponent");
+static_assert(sizeof(UProceduralMeshComponent) == 0x0004E0, "Wrong size on UProceduralMeshComponent");
+static_assert(offsetof(UProceduralMeshComponent, bUseComplexAsSimpleCollision) == 0x000478, "Member 'UProceduralMeshComponent::bUseComplexAsSimpleCollision' has a wrong offset!");
+static_assert(offsetof(UProceduralMeshComponent, bUseAsyncCooking) == 0x000479, "Member 'UProceduralMeshComponent::bUseAsyncCooking' has a wrong offset!");
+static_assert(offsetof(UProceduralMeshComponent, ProcMeshBodySetup) == 0x000480, "Member 'UProceduralMeshComponent::ProcMeshBodySetup' has a wrong offset!");
+static_assert(offsetof(UProceduralMeshComponent, ProcMeshSections) == 0x000488, "Member 'UProceduralMeshComponent::ProcMeshSections' has a wrong offset!");
+static_assert(offsetof(UProceduralMeshComponent, CollisionConvexElems) == 0x000498, "Member 'UProceduralMeshComponent::CollisionConvexElems' has a wrong offset!");
+static_assert(offsetof(UProceduralMeshComponent, LocalBounds) == 0x0004A8, "Member 'UProceduralMeshComponent::LocalBounds' has a wrong offset!");
+static_assert(offsetof(UProceduralMeshComponent, AsyncBodySetupQueue) == 0x0004C8, "Member 'UProceduralMeshComponent::AsyncBodySetupQueue' has a wrong offset!");
 
 }
 

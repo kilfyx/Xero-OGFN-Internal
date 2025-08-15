@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaMainMenuLeaveButton.AthenaMainMenuLeaveButton_C
-// 0x0000 (0x1000 - 0x1000)
+// 0x0000 (0x0C78 - 0x0C78)
 class UAthenaMainMenuLeaveButton_C final : public UFortMainMenuLeaveButton
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UAthenaMainMenuLeaveButton_C>();
 	}
 };
+static_assert(alignof(UAthenaMainMenuLeaveButton_C) == 0x000008, "Wrong alignment on UAthenaMainMenuLeaveButton_C");
+static_assert(sizeof(UAthenaMainMenuLeaveButton_C) == 0x000C78, "Wrong size on UAthenaMainMenuLeaveButton_C");
 
 }
 

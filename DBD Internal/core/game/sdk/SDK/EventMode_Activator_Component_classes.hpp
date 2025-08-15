@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass EventMode_Activator_Component.EventMode_Activator_Component_C
-// 0x0000 (0x0210 - 0x0210)
+// 0x0000 (0x01F8 - 0x01F8)
 class UEventMode_Activator_Component_C final : public UFortGameFrameworkComponent_EventMode
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UEventMode_Activator_Component_C>();
 	}
 };
+static_assert(alignof(UEventMode_Activator_Component_C) == 0x000008, "Wrong alignment on UEventMode_Activator_Component_C");
+static_assert(sizeof(UEventMode_Activator_Component_C) == 0x0001F8, "Wrong size on UEventMode_Activator_Component_C");
 
 }
 

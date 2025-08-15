@@ -54,7 +54,7 @@ void UGA_AthenaInVehicle_C::K2_ActivateAbility()
 // Function GA_AthenaInVehicle.GA_AthenaInVehicle_C.K2_OnEndAbility
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UGA_AthenaInVehicle_C::K2_OnEndAbility(bool bWasCancelled)
 {

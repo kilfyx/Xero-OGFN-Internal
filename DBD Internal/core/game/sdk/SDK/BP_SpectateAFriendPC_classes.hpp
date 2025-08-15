@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SpectateAFriendPC.BP_SpectateAFriendPC_C
-// 0x0000 (0x3690 - 0x3690)
+// 0x0000 (0x3230 - 0x3230)
 class ABP_SpectateAFriendPC_C final : public AFortSpectateAFriendController
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<ABP_SpectateAFriendPC_C>();
 	}
 };
+static_assert(alignof(ABP_SpectateAFriendPC_C) == 0x000010, "Wrong alignment on ABP_SpectateAFriendPC_C");
+static_assert(sizeof(ABP_SpectateAFriendPC_C) == 0x003230, "Wrong size on ABP_SpectateAFriendPC_C");
 
 }
 

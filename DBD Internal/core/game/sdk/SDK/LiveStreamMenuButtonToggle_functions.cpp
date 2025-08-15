@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function LiveStreamMenuButtonToggle.LiveStreamMenuButtonToggle_C.RefreshButton
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    IsLiveStreamEnabled                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ULiveStreamMenuButtonToggle_C::RefreshButton(bool IsLiveStreamEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LiveStreamMenuButtonToggle_C", "RefreshButton");
+
+	Params::LiveStreamMenuButtonToggle_C_RefreshButton Parms{};
+
+	Parms.IsLiveStreamEnabled = IsLiveStreamEnabled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function LiveStreamMenuButtonToggle.LiveStreamMenuButtonToggle_C.BP_OnHovered
 // (Event, Protected, BlueprintEvent)
 
@@ -74,26 +94,6 @@ void ULiveStreamMenuButtonToggle_C::ExecuteUbergraph_LiveStreamMenuButtonToggle(
 	Params::LiveStreamMenuButtonToggle_C_ExecuteUbergraph_LiveStreamMenuButtonToggle Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LiveStreamMenuButtonToggle.LiveStreamMenuButtonToggle_C.RefreshButton
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    IsLiveStreamEnabled                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULiveStreamMenuButtonToggle_C::RefreshButton(bool IsLiveStreamEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LiveStreamMenuButtonToggle_C", "RefreshButton");
-
-	Params::LiveStreamMenuButtonToggle_C_RefreshButton Parms{};
-
-	Parms.IsLiveStreamEnabled = IsLiveStreamEnabled;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

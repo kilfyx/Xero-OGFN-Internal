@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.ExecuteUbergraph_BP_ReplayPC_Athena
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ReplayPC_Athena_C::UserConstructionScript()
+void ABP_ReplayPC_Athena_C::ExecuteUbergraph_BP_ReplayPC_Athena(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "ExecuteUbergraph_BP_ReplayPC_Athena");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_ReplayPC_Athena_C_ExecuteUbergraph_BP_ReplayPC_Athena Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -45,63 +51,63 @@ void ABP_ReplayPC_Athena_C::Update_Sound_Mix()
 }
 
 
-// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.SetSkydivingAudioEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Enabled                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.Looping Audio Update
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_ReplayPC_Athena_C::SetSkydivingAudioEnabled(bool Enabled)
+void ABP_ReplayPC_Athena_C::Looping_Audio_Update()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "SetSkydivingAudioEnabled");
+		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "Looping Audio Update");
 
-	Params::BP_ReplayPC_Athena_C_SetSkydivingAudioEnabled Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Enabled = Enabled;
+
+// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.Handle Parachute Audio State
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_ReplayPC_Athena_C::Handle_Parachute_Audio_State()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "Handle Parachute Audio State");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.On Pause State Changed
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bPaused                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_ReplayPC_Athena_C::On_Pause_State_Changed(bool bPaused)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "On Pause State Changed");
+
+	Params::BP_ReplayPC_Athena_C_On_Pause_State_Changed Parms{};
+
+	Parms.bPaused = bPaused;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_ReplayPC_Athena_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.OnZoomOutEnd
+// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.OnZoomInBegin
 // (Event, Public, BlueprintEvent)
 
-void ABP_ReplayPC_Athena_C::OnZoomOutEnd()
+void ABP_ReplayPC_Athena_C::OnZoomInBegin()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "OnZoomOutEnd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.OnZoomOutBegin
-// (Event, Public, BlueprintEvent)
-
-void ABP_ReplayPC_Athena_C::OnZoomOutBegin()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "OnZoomOutBegin");
+		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "OnZoomInBegin");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -121,15 +127,29 @@ void ABP_ReplayPC_Athena_C::OnZoomInEnd()
 }
 
 
-// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.OnZoomInBegin
+// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.OnZoomOutBegin
 // (Event, Public, BlueprintEvent)
 
-void ABP_ReplayPC_Athena_C::OnZoomInBegin()
+void ABP_ReplayPC_Athena_C::OnZoomOutBegin()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "OnZoomInBegin");
+		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "OnZoomOutBegin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.OnZoomOutEnd
+// (Event, Public, BlueprintEvent)
+
+void ABP_ReplayPC_Athena_C::OnZoomOutEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "OnZoomOutEnd");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -155,81 +175,6 @@ void ABP_ReplayPC_Athena_C::OnReplayHudVisibilityChanged(const EHudVisibilitySta
 }
 
 
-// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.OnNotifyNewPlaybackMultiplier
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   NewMultiplier                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ReplayPC_Athena_C::OnNotifyNewPlaybackMultiplier(float NewMultiplier)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "OnNotifyNewPlaybackMultiplier");
-
-	Params::BP_ReplayPC_Athena_C_OnNotifyNewPlaybackMultiplier Parms{};
-
-	Parms.NewMultiplier = NewMultiplier;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.On Pause State Changed
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bPaused                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ReplayPC_Athena_C::On_Pause_State_Changed(bool bPaused)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "On Pause State Changed");
-
-	Params::BP_ReplayPC_Athena_C_On_Pause_State_Changed Parms{};
-
-	Parms.bPaused = bPaused;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.Looping Audio Update
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_ReplayPC_Athena_C::Looping_Audio_Update()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "Looping Audio Update");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.IsGameplayCamera
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   IsGameplayCamera_0                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ReplayPC_Athena_C::IsGameplayCamera(bool* IsGameplayCamera_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "IsGameplayCamera");
-
-	Params::BP_ReplayPC_Athena_C_IsGameplayCamera Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsGameplayCamera_0 != nullptr)
-		*IsGameplayCamera_0 = Parms.IsGameplayCamera_0;
-}
-
-
 // Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C. Speedup Loops
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -250,15 +195,49 @@ void ABP_ReplayPC_Athena_C::_Speedup_Loops(float Playback_Multiplier)
 }
 
 
-// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.Handle Parachute Audio State
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.OnNotifyNewPlaybackMultiplier
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   NewMultiplier                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ReplayPC_Athena_C::Handle_Parachute_Audio_State()
+void ABP_ReplayPC_Athena_C::OnNotifyNewPlaybackMultiplier(float NewMultiplier)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "Handle Parachute Audio State");
+		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "OnNotifyNewPlaybackMultiplier");
+
+	Params::BP_ReplayPC_Athena_C_OnNotifyNewPlaybackMultiplier Parms{};
+
+	Parms.NewMultiplier = NewMultiplier;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_ReplayPC_Athena_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_ReplayPC_Athena_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -284,23 +263,44 @@ class USoundBase* ABP_ReplayPC_Athena_C::GetSkydivingSound()
 }
 
 
-// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.ExecuteUbergraph_BP_ReplayPC_Athena
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.SetSkydivingAudioEnabled
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Enabled                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_ReplayPC_Athena_C::ExecuteUbergraph_BP_ReplayPC_Athena(int32 EntryPoint)
+void ABP_ReplayPC_Athena_C::SetSkydivingAudioEnabled(bool Enabled)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "ExecuteUbergraph_BP_ReplayPC_Athena");
+		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "SetSkydivingAudioEnabled");
 
-	Params::BP_ReplayPC_Athena_C_ExecuteUbergraph_BP_ReplayPC_Athena Parms{};
+	Params::BP_ReplayPC_Athena_C_SetSkydivingAudioEnabled Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Enabled = Enabled;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.IsGameplayCamera
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   IsGameplayCamera_0                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_ReplayPC_Athena_C::IsGameplayCamera(bool* IsGameplayCamera_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "IsGameplayCamera");
+
+	Params::BP_ReplayPC_Athena_C_IsGameplayCamera Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsGameplayCamera_0 != nullptr)
+		*IsGameplayCamera_0 = Parms.IsGameplayCamera_0;
 }
 
 }

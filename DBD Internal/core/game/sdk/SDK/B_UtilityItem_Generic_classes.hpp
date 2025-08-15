@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_UtilityItem_Generic.B_UtilityItem_Generic_C
-// 0x0000 (0x1460 - 0x1460)
+// 0x0000 (0x0D08 - 0x0D08)
 class AB_UtilityItem_Generic_C : public AFortWeapon
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<AB_UtilityItem_Generic_C>();
 	}
 };
+static_assert(alignof(AB_UtilityItem_Generic_C) == 0x000008, "Wrong alignment on AB_UtilityItem_Generic_C");
+static_assert(sizeof(AB_UtilityItem_Generic_C) == 0x000D08, "Wrong size on AB_UtilityItem_Generic_C");
 
 }
 

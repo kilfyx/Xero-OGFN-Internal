@@ -14,16 +14,6 @@
 namespace SDK
 {
 
-// Enum AudioSynesthesia.EConstantQNormalizationEnum
-// NumValues: 0x0004
-enum class EConstantQNormalizationEnum : uint8
-{
-	EqualEuclideanNorm                       = 0,
-	EqualEnergy                              = 1,
-	EqualAmplitude                           = 2,
-	EConstantQNormalizationEnum_MAX          = 3,
-};
-
 // Enum AudioSynesthesia.EConstantQFFTSizeEnum
 // NumValues: 0x0009
 enum class EConstantQFFTSizeEnum : uint8
@@ -39,16 +29,14 @@ enum class EConstantQFFTSizeEnum : uint8
 	Max                                      = 8,
 };
 
-// Enum AudioSynesthesia.ELoudnessCurveTypeEnum
-// NumValues: 0x0006
-enum class ELoudnessCurveTypeEnum : uint8
+// Enum AudioSynesthesia.EConstantQNormalizationEnum
+// NumValues: 0x0004
+enum class EConstantQNormalizationEnum : uint8
 {
-	A                                        = 0,
-	B                                        = 1,
-	C                                        = 2,
-	D                                        = 3,
-	None                                     = 4,
-	ELoudnessCurveTypeEnum_MAX               = 5,
+	EqualEuclideanNorm                       = 0,
+	EqualEnergy                              = 1,
+	EqualAmplitude                           = 2,
+	EConstantQNormalizationEnum_MAX          = 3,
 };
 
 // Enum AudioSynesthesia.ELoudnessNRTCurveTypeEnum
@@ -61,40 +49,6 @@ enum class ELoudnessNRTCurveTypeEnum : uint8
 	D                                        = 3,
 	None                                     = 4,
 	ELoudnessNRTCurveTypeEnum_MAX            = 5,
-};
-
-// Enum AudioSynesthesia.EMeterPeakType
-// NumValues: 0x0005
-enum class EMeterPeakType : uint8
-{
-	MeanSquared                              = 0,
-	RootMeanSquared                          = 1,
-	Peak                                     = 2,
-	Count                                    = 3,
-	EMeterPeakType_MAX                       = 4,
-};
-
-// ScriptStruct AudioSynesthesia.LoudnessResults
-// 0x0010 (0x0010 - 0x0000)
-struct FLoudnessResults final
-{
-public:
-	float                                         Loudness;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NormalizedLoudness;                                // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PerceptualEnergy;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeSeconds;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct AudioSynesthesia.MeterResults
-// 0x0014 (0x0014 - 0x0000)
-struct FMeterResults final
-{
-public:
-	float                                         TimeSeconds;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MeterValue;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PeakValue;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumSamplesClipping;                                // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ClippingValue;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

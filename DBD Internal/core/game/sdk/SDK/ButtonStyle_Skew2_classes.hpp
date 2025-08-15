@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ButtonStyle-Skew2.ButtonStyle-Skew2_C
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0000 (0x0570 - 0x0570)
 class UButtonStyle_Skew2_C final : public UCommonButtonStyle
 {
 public:
@@ -30,6 +30,8 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_Skew2_C>();
 	}
 };
+static_assert(alignof(UButtonStyle_Skew2_C) == 0x000008, "Wrong alignment on UButtonStyle_Skew2_C");
+static_assert(sizeof(UButtonStyle_Skew2_C) == 0x000570, "Wrong size on UButtonStyle_Skew2_C");
 
 }
 

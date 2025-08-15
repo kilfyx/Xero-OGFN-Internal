@@ -37,40 +37,6 @@ void UGA_SurfaceChange_Ice_IceCheckOnTimer_C::ExecuteUbergraph_GA_SurfaceChange_
 }
 
 
-// Function GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_SurfaceChange_Ice_IceCheckOnTimer_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_SurfaceChange_Ice_IceCheckOnTimer_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_SurfaceChange_Ice_IceCheckOnTimer_C::K2_OnEndAbility(bool bWasCancelled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_SurfaceChange_Ice_IceCheckOnTimer_C", "K2_OnEndAbility");
-
-	Params::GA_SurfaceChange_Ice_IceCheckOnTimer_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.RemoveIceGE
 // (BlueprintCallable, BlueprintEvent)
 
@@ -94,6 +60,40 @@ void UGA_SurfaceChange_Ice_IceCheckOnTimer_C::TraceForTerrain()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GA_SurfaceChange_Ice_IceCheckOnTimer_C", "TraceForTerrain");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGA_SurfaceChange_Ice_IceCheckOnTimer_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_SurfaceChange_Ice_IceCheckOnTimer_C", "K2_OnEndAbility");
+
+	Params::GA_SurfaceChange_Ice_IceCheckOnTimer_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_SurfaceChange_Ice_IceCheckOnTimer_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_SurfaceChange_Ice_IceCheckOnTimer_C", "K2_ActivateAbility");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

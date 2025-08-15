@@ -135,7 +135,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\dndsp\OneDrive\Documents\GitHub\Gooch\DBD Internal\core\game\sdk;C:\Users\dndsp\OneDrive\Documents\GitHub\Gooch\DBD Internal;C:\Users\Jeremy\Desktop\OGFN\DBD Internal\core\game\sdk;C:\Users\Jeremy\Desktop\OGFN\DBD Internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dndsp\Downloads\Gooch-main\Gooch-main\DBD Internal\core\game\sdk;C:\Users\dndsp\Downloads\Gooch-main\Gooch-main\DBD Internal;C:\Users\Jeremy\Desktop\OGFN\DBD Internal\core\game\sdk;C:\Users\Jeremy\Desktop\OGFN\DBD Internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -148,6 +148,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="aimbot.hpp" />
     <ClInclude Include="core\features\weaponstats\weaponstats.hpp" />
     <ClInclude Include="core\game\offsets\offsets.hpp" />
     <ClInclude Include="core\game\sdk\PropertyFixup.hpp" />
@@ -192,6 +193,7 @@
     <ClInclude Include="xor.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="aimbot.cpp" />
     <ClCompile Include="core\features\weaponstats\weaponstats.cpp" />
     <ClCompile Include="core\game\sdk\SDK\Basic.cpp" />
     <ClCompile Include="core\game\sdk\SDK\CoreUObject_functions.cpp" />
