@@ -22,6 +22,7 @@ namespace jew
 		bool bBulletTeleport = false;
 		bool bNoEquipAnimation = false;
 		bool bFOVChanger = false;
+		bool bVis = true;
 		float fFOVChangerValue = 100;
 		bool bReloadWhileAiming = false;
 		bool bAutoWeapons = false;
@@ -30,6 +31,7 @@ namespace jew
 		bool bEditEnemyBuilds = false;
 		bool bNoRecoil = false;
 		bool bSAIM = false;
+		bool Memoryaim = false;
 		bool bNoReload = false;
 		bool bOnbro = false;
 		bool bFa = false;

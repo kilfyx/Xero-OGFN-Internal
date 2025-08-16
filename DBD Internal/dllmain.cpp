@@ -47,7 +47,7 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 	UE->PlayerController = PlayerController;
 
 
-	if (GetAsyncKeyState(jew::settings.iMenukey))
+	if (PlayerController->WasInputKeyJustPressed(UE->Insert))
 	{
 		jew::settings.bShowMenu = !jew::settings.bShowMenu;
 	}
@@ -130,13 +130,13 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 		float TopLeftX = (float)vHeadScreen.X - BoxWidth / 2;
 		float TopLeftY = (float)vHeadScreen.Y;
 
-		FLinearColor iColor = IsVisible ? FLinearColor(1.0f, 1.0f, 1.0f, 1.0f) : FLinearColor(0.3f, 0.3f, 0.3f, 1.0f);
+		FLinearColor iColor = IsVisible ? FLinearColor(1.0f, 1.0f, 1.0f, 1.0f) : FLinearColor(0.1f, 0.1f, 0.1f, 1.0f);
 
 		if (jew::settings.bPlayerName)
 		{
 			auto PlayerName = Player->PlayerState->GetPlayerName();
 
-			Canvas->K2_DrawText(UE->DrawingFont, PlayerName, FVector2D(vHeadScreen.X, vHeadScreen.Y - 15), FVector2D(1.0, 1.0), FLinearColor(1.0f, 1.0f, 1.0f, 1.0f), 0, FLinearColor(0.0f, 0.f, 0.f, 0.f), FVector2D(0, 0), true, false, true, FLinearColor(0.0f, 0.0f, 0.0f, 0.6f));
+			Canvas->K2_DrawText(UE->DrawingFont, PlayerName, FVector2D(vHeadScreen.X, vHeadScreen.Y - 15), FVector2D(1.0, 1.0), iColor, 0, FLinearColor(0.0f, 0.f, 0.f, 0.f), FVector2D(0, 0), true, false, true, FLinearColor(0.0f, 0.0f, 0.0f, 0.6f));
 		}
 
 
@@ -146,7 +146,7 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 
 			auto DistanceText = UE->KismetStringLibrary->BuildString_Float(L"[", L"", UE->KismetMathLibrary->Round(Distance), L"m]");
 
-			Canvas->K2_DrawText(UE->DrawingFont, DistanceText, FVector2D(vRootScreen.X, vRootScreen.Y + 25), FVector2D(1.0, 1.0), FLinearColor(1.0f, 1.0f, 1.0f, 1.0f), 0, FLinearColor(0.0f, 0.f, 0.f, 0.f), FVector2D(0, 0), true, false, true, FLinearColor(0.0f, 0.0f, 0.0f, 0.6f));
+			Canvas->K2_DrawText(UE->DrawingFont, DistanceText, FVector2D(vRootScreen.X, vRootScreen.Y + 25), FVector2D(1.0, 1.0), iColor, 0, FLinearColor(0.0f, 0.f, 0.f, 0.f), FVector2D(0, 0), true, false, true, FLinearColor(0.0f, 0.0f, 0.0f, 0.6f));
 		}
 
 		if (jew::settings.bGun)
@@ -192,7 +192,7 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 				FVector2D FirstBone2D = Utils::Project(Mesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(BonePairs[i].first)), Canvas);
 				FVector2D SecondBone2D = Utils::Project(Mesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(BonePairs[i].second)), Canvas);
 
-				ZeroGUI::Draw_Line(FirstBone2D, SecondBone2D, 1.3f, iColor);
+				ZeroGUI::Draw_Line(FirstBone2D, SecondBone2D, 2.0f, iColor);
 			}
 		}
 
@@ -228,7 +228,7 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 			float BoxWidth = BottomRightX - TopLeftX;
 			float BoxHeight = BottomRightY - TopLeftY;
 
-			FLinearColor FillColor = IsVisible ? FLinearColor(1.0f, 1.0f, 1.0f, 0.3f) : FLinearColor(0.3f, 0.3f, 0.3f, 0.3f);
+			FLinearColor FillColor = IsVisible ? FLinearColor(1.0f, 1.0f, 1.0f, 0.3f) : FLinearColor(0.1f, 0.1f, 0.1f, 0.3f);
 
 			for (float y = 0.0f; y < BoxHeight; y++)
 			{
@@ -323,7 +323,7 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 			FVector2D point1 = FVector2D(center.X + cosf(angle1) * radius, center.Y + sinf(angle1) * radius);
 			FVector2D point2 = FVector2D(center.X + cosf(angle2) * radius, center.Y + sinf(angle2) * radius);
 
-			ZeroGUI::Draw_Line(point1, point2, 1.8f, FLinearColor(1.0f, 1.0f, 1.0f, 1.0f));
+			ZeroGUI::Draw_Line(point1, point2, 1.9f, FLinearColor(0.0f, 0.0f, 0.0f, 1.0f));
 		}
 	}
 
@@ -393,22 +393,22 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 		}
 	}
 
-	if (jew::settings.bEditEnemyBuilds)
-	{
-		if (AcknowledgedPawn)
-		{
-			auto PlayerController = reinterpret_cast<AFortPlayerController*>(UE->World->OwningGameInstance->LocalPlayers[0]->PlayerController);
+	//if (jew::settings.)
+	//{
+	//	if (AcknowledgedPawn)
+	//	{
+	//		auto PlayerController = reinterpret_cast<AFortPlayerController*>(UE->World->OwningGameInstance->LocalPlayers[0]->PlayerController);
 
-			auto PlayerState = reinterpret_cast<SDK::AFortPlayerStateAthena*>(AcknowledgedPawn->PlayerState);
+	//		auto PlayerState = reinterpret_cast<SDK::AFortPlayerStateAthena*>(AcknowledgedPawn->PlayerState);
 
-			SDK::ABuildingActor* TargetedBuilding = PlayerController->TargetedBuilding;
+	//		SDK::ABuildingActor* TargetedBuilding = PlayerController->TargetedBuilding;
 
-			if (TargetedBuilding)
-			{
-				TargetedBuilding->TeamIndex = PlayerState->TeamIndex;
-			}
-		}
-	}
+	//		if (TargetedBuilding)
+	//		{
+	//			TargetedBuilding->TeamIndex = PlayerState->TeamIndex;
+	//		}
+	//	}
+	//}
 
 	/*bool bHasResetEquipAnimation = false;
 
@@ -478,6 +478,49 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 		}
 	}
 
+	if (jew::settings.bEditEnemyBuilds && ClosestPlayer)
+	{
+		if (auto CurrentWeapon = AcknowledgedPawn->CurrentWeapon)
+		{
+			if (!CurrentWeapon->IsA(AFortWeaponRanged::StaticClass()))
+				return;
+
+			auto ClosestMesh = ClosestPlayer->Mesh;
+
+			if (jew::settings.bVischeck)
+			{
+
+				auto IsVisible = ClosestPlayer->WasRecentlyRendered(0.f);
+
+				if (!IsVisible)
+					return;
+			}
+
+
+			auto ChestBone = ClosestMesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(L"head"));
+
+			float Distance = Utils::Vector_Distance(CameraLocation, ChestBone);
+
+			auto WorldSecondsDelta = UE->GameplayStatics->GetWorldDeltaSeconds(GWorld);
+
+			if (CurrentWeapon->IsProjectileWeapon() && jew::settings.bPrediction)
+			{
+				ChestBone = Utils::Predict(CameraLocation, ChestBone, ClosestPlayer->GetVelocity(), CurrentWeapon);
+			}
+
+			auto ChestRotation = UE->KismetMathLibrary->FindLookAtRotation(CameraLocation, ChestBone);
+
+			ChestRotation = Utils::SmoothMe(CameraRotation, ChestRotation, jew::settings.fSmooth);
+
+			if (GetAsyncKeyState(jew::settings.iAimbotKey))
+			{
+				UE->PlayerController->SetControlRotation(ChestRotation);
+			}
+
+
+		}
+	}
+
 	if (jew::settings.bAimbot && ClosestPlayer)
 	{
 		if (auto CurrentWeapon = AcknowledgedPawn->CurrentWeapon)
@@ -486,9 +529,14 @@ void PostRender(SDK::UGameViewportClient* Viewport, SDK::UCanvas* Canvas)
 				return;
 
 			auto ClosestMesh = ClosestPlayer->Mesh;
+
 			auto IsVisible = ClosestPlayer->WasRecentlyRendered(0.f);
-			if (!IsVisible)
-				return;
+
+			if (jew::settings.bVischeck)
+			{
+				if (!IsVisible)
+					return;
+			}
 
 			auto HeadBone = ClosestMesh->GetSocketLocation(UE->KismetStringLibrary->Conv_StringToName(L"head"));
 			if (CurrentWeapon->IsProjectileWeapon() && jew::settings.bPrediction)

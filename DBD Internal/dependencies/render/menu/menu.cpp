@@ -25,8 +25,9 @@ auto jew::menu_c::DrawMenu(UCanvas* Canvas, bool ShowMenu) -> void
         if (CurrentTab == 0)
         {
             ZeroGUI::Checkbox("Mouse Aimbot", &jew::settings.bAimbot);
-            ZeroGUI::Checkbox("Memory Aimbot (not bothered to work on)", &jew::settings.bPenisaim);
+            ZeroGUI::Checkbox("Memory Aimbot (not bothered to work on)", &jew::settings.bEditEnemyBuilds);
             ZeroGUI::Checkbox("Skip Knocked", &jew::settings.bSkipKnocked);
+            ZeroGUI::Checkbox("Vis Check", &jew::settings.bVischeck);
             ZeroGUI::Checkbox("Fov Circle", &jew::settings.bSkid);
             ZeroGUI::Checkbox("Prediction", &jew::settings.bPrediction);
 
@@ -52,6 +53,7 @@ auto jew::menu_c::DrawMenu(UCanvas* Canvas, bool ShowMenu) -> void
         if (CurrentTab == 2)
         {
             ZeroGUI::Checkbox("Debug", &jew::settings.bDebug);
+            ZeroGUI::Checkbox("Magic Bullet", &jew::settings.bBulletTeleport);
             ZeroGUI::Checkbox("Peformance Mode (Doesnt Disable)", &jew::settings.bStorm);
             ZeroGUI::Text("i shot pdiddy");
         } 

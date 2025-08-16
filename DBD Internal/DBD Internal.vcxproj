@@ -135,7 +135,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\dndsp\Downloads\Gooch-main\Gooch-main\DBD Internal\core\game\sdk;C:\Users\dndsp\Downloads\Gooch-main\Gooch-main\DBD Internal;C:\Users\Jeremy\Desktop\OGFN\DBD Internal\core\game\sdk;C:\Users\Jeremy\Desktop\OGFN\DBD Internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dndsp\Documents\GitHub\Gooch\DBD Internal\core\game\sdk;C:\Users\dndsp\Downloads\Gooch-main\Gooch-main\DBD Internal;C:\Users\Jeremy\Desktop\OGFN\DBD Internal\core\game\sdk;C:\Users\Jeremy\Desktop\OGFN\DBD Internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
