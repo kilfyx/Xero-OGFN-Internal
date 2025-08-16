@@ -25,7 +25,7 @@ auto jew::menu_c::DrawMenu(UCanvas* Canvas, bool ShowMenu) -> void
         if (CurrentTab == 0)
         {
             ZeroGUI::Checkbox("Mouse Aimbot", &jew::settings.bAimbot);
-            ZeroGUI::Checkbox("Memory Aimbot (not bothered to work on)", &jew::settings.bEditEnemyBuilds);
+            ZeroGUI::Checkbox("Memory Aimbot", &jew::settings.bEditEnemyBuilds);
             ZeroGUI::Checkbox("Skip Knocked", &jew::settings.bSkipKnocked);
             ZeroGUI::Checkbox("Vis Check", &jew::settings.bVischeck);
             ZeroGUI::Checkbox("Fov Circle", &jew::settings.bSkid);
