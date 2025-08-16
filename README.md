@@ -2,9 +2,9 @@
 
 took some time to make and u can change game patches by replacing sdk and postrender vft.
 
-## Features 
+# Features 
 
-Combat:
+## Combat:
 
 Mouse Aim
 
@@ -23,7 +23,7 @@ Smooting (0 - 5)
 Fov Radius (5 - 300)
 
 
-Visuals:
+## Visuals:
 
 Skeleton
 
@@ -42,7 +42,7 @@ Weapon
 Tracers
 
 
-Misc:
+##  Misc:
 
 Magic Bullet (In the works)
 
